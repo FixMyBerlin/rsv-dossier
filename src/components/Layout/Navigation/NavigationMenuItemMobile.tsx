@@ -16,7 +16,7 @@ export const NavigationMenuItemMobile: React.FC<Props> = ({
   return (
     <Disclosure.Button
       as="a"
-      href={`#${name}`}
+      href={to}
       className={classNames(
         { 'bg-indigo-50 border-indigo-500 text-indigo-700': active },
         {

@@ -2,12 +2,12 @@ import { PageProps } from 'gatsby';
 import React from 'react';
 import { Layout } from '~/components/Layout/Layout';
 
-export const IndexPage: React.FC<PageProps> = ({ location }) => {
+export const BestPracticePage: React.FC<PageProps> = ({ location }) => {
   return (
     <Layout location={location}>
-      <h1 className="text-3xl font-bold underline">Bike bike bike</h1>
+      <h1>Best Practise</h1>
     </Layout>
   );
 };
 
-export default IndexPage;
+export default BestPracticePage;

@@ -5,19 +5,15 @@ import {
   NavigationMenuItemMobile,
   NavigationMobileMenuButton,
 } from '.';
+import { navigationLinks } from './navigationLinks.const';
 
-export const Navigation = () => {
-  const menuItems = [
-    'Startseite',
-    'Übersicht Radschnellverbindungen',
-    'Best practise',
-    'Fachmaterial',
-    'Kontakt',
-  ];
-
+export const Navigation = ({ location }) => {
   // https://tailwindui.com/components/application-ui/navigation/navbars
   return (
-    <Disclosure as="nav" className="bg-white shadow-md mb-5">
+    <Disclosure
+      as="nav"
+      className="bg-white shadow-md shadow-green-800/20 z-20"
+    >
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,11 +32,11 @@ export const Navigation = () => {
                   />{' '}
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                  {menuItems.map((menuItem) => (
+                  {navigationLinks.map((link) => (
                     <NavigationMenuItemDesktop
-                      name={menuItem}
-                      to={'#todo'}
-                      currentPage="tod"
+                      name={link.name}
+                      to={link.to}
+                      currentPage={location?.pathname}
                     />
                   ))}
                 </div>
@@ -52,11 +48,11 @@ export const Navigation = () => {
 
           <Disclosure.Panel className="sm:hidden">
             <nav className="pt-2 pb-3 space-y-1">
-              {menuItems.map((menuItem) => (
+              {navigationLinks.map((link) => (
                 <NavigationMenuItemMobile
-                  name={menuItem}
-                  to={'#todo'}
-                  currentPage="todo"
+                  name={link.name}
+                  to={link.to}
+                  currentPage={location?.pathname}
                 />
               ))}
             </nav>

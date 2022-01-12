@@ -13,7 +13,7 @@ export const NavigationMenuItemDesktop: React.FC<Props> = ({
 
   return (
     <Link
-      to={`#${to}`}
+      to={to}
       className={classNames(
         { 'border-indigo-500 text-gray-900': active },
         {

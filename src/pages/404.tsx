@@ -1,7 +1,8 @@
+import { PageProps } from 'gatsby';
 import React from 'react';
 import { Layout } from '~/components/Layout/Layout';
 
-const NotFound = () => {
+export const NotFound: React.FC<PageProps> = () => {
   return (
     <Layout>
       <div className="bg-white min-h-full px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
