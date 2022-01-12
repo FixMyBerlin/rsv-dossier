@@ -24,6 +24,7 @@
     "plugin:jest/recommended",
     "plugin:jest/style"
   ],
+  // Docs: off=0, warn=1, error=2, see https://eslint.org/docs/user-guide/configuring/rules
   "rules": {
     "jest/prefer-strict-equal": "error",
     "jest/prefer-to-have-length": "warn",
@@ -77,9 +78,9 @@
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-var-requires": "off",
-        "no-use-before-define": [0],
-        "@typescript-eslint/no-use-before-define": [1],
-        "import/no-unresolved": 0,
+        "no-use-before-define": ["off"],
+        "@typescript-eslint/no-use-before-define": ["warn"],
+        "import/no-unresolved": "off",
         "import/no-extraneous-dependencies": [
           "error",
           {
@@ -92,14 +93,24 @@
           }
         ],
         "quotes": "off",
+        "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
         "@typescript-eslint/quotes": [
-          2,
-          "backtick",
+          "error",
+          "single",
           {
-            "avoidEscape": true
+            "avoidEscape": true,
+            "allowTemplateLiterals": true
           }
-        ],
-        "@typescript-eslint/no-unused-vars": [2, { "argsIgnorePattern": "^_" }]
+        ], // Modified rule
+        "react/function-component-definition": [
+          "error",
+          {
+            "namedComponents": "arrow-function",
+            "unnamedComponents": "arrow-function"
+          }
+        ], // Modified rule (Bugfix, see  https://stackoverflow.com/a/69931909/729221)
+        "react/require-default-props": false, // Added rule
+        "arrow-body-style": [2, "as-needed"] // Added rule
       }
     }
   ],
