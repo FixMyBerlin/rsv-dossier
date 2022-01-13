@@ -3,5 +3,6 @@ module.exports = {
   // don't need to define it here (just if you need to change the options)
 
   // TailwindCSS needs PostCSS, https://tailwindcss.com/docs/guides/gatsby
-  plugins: ['gatsby-plugin-postcss'],
+  // Netlify-Redirects need(?) https://github.com/netlify/gatsby-plugin-netlify
+  plugins: ['gatsby-plugin-postcss', 'gatsby-plugin-netlify'],
 };
