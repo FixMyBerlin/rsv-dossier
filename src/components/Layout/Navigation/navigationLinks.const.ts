@@ -5,8 +5,8 @@ export const navigationLinks: navigationMenuItemProps[] = [
   { name: 'Best Practice', to: '/best-practice/' },
   { name: 'Fachinformationen', to: '/fachinformationen/' },
   {
-    name: 'Radschnellverbindungen',
-    to: '/radschnellverbindungen/',
+    name: 'Radschnellwege',
+    to: '/radschnellwege/',
   },
   { name: 'Kontakt', to: '/kontakt/' },
 ];

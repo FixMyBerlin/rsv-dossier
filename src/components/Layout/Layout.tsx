@@ -6,6 +6,7 @@ import classNames from 'classnames';
 type Props = {
   className?: string;
   location?: any; // TODO: define type
+  padding?: boolean;
   navigation?: boolean;
 };
 
@@ -14,6 +15,7 @@ export const Layout: React.FC<Props> = ({
   className = '',
   navigation = true,
   location,
+  padding = true,
   children,
 }) => {
   return (
@@ -31,7 +33,8 @@ export const Layout: React.FC<Props> = ({
         <main
           className={classNames(
             className,
-            'p-5 pt-14 bg-green-50 flex-grow shadow-md shadow-green-900/20 z-0'
+            { 'p-5 pt-14': padding },
+            'bg-green-50 flex-grow shadow-md shadow-green-900/20 z-0'
           )}
         >
           {children}

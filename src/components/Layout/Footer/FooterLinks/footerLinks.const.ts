@@ -8,8 +8,8 @@ export const footerLinks: footerMenuProp = {
     { name: 'Best Practice', to: '/best-practice/' },
     { name: 'Fachinformationen', to: '/fachinformationen/' },
     {
-      name: 'Übersicht Radschnellverbindungen',
-      to: '/radschnellverbindungen/',
+      name: 'Übersicht Radschnellwege',
+      to: '/radschnellwege/',
     },
   ],
   formal: [
