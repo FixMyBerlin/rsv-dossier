@@ -36,17 +36,19 @@ export default Radschnellweg;
 export const query = graphql`
   query ($id: String!) {
     radschnellweg(id: { eq: $id }) {
-      from
-      to
-      accuracy
-      pilot_study
-      state
-      website
-      coordinates
-      length
-      finished
-      ref
-      via
+      properties {
+        from
+        to
+        accuracy
+        pilot_study
+        state
+        website
+        coordinates
+        length
+        finished
+        ref
+        via
+      }
     }
   }
 `;

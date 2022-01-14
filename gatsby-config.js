@@ -9,15 +9,27 @@ module.exports = {
   // TailwindCSS needs PostCSS, https://tailwindcss.com/docs/guides/gatsby
   plugins: [
     'gatsby-plugin-postcss',
+    // {
+    //   resolve: 'gatsby-transformer-yaml',
+    //   options: {
+    //     typeName: ({ node }) => {
+    //       const name = node.sourceInstanceName
+    //       if (name === 'radschnellwege') {
+    //         return 'Radschnellweg'
+    //       }
+    //       return name
+    //     },
+    //   },
+    // },
     {
-      resolve: 'gatsby-transformer-yaml',
+      resolve: 'gatsby-transformer-json',
       options: {
         typeName: ({ node }) => {
-          const name = node.sourceInstanceName
+          const name = node.sourceInstanceName;
           if (name === 'radschnellwege') {
-            return 'Radschnellweg'
+            return 'Radschnellweg';
           }
-          return name
+          return name;
         },
       },
     },

@@ -3,6 +3,13 @@ import React from 'react';
 import { Layout } from '~/components/Layout';
 
 const RadschnellwegIndex = ({ data }) => {
+  console.log('GraphQL `data`', data);
+  console.log(
+    'GraphQL `data.radschnellwege.nodes[0].features`',
+    data.radschnellwege.nodes[0].features
+  );
+  const radschnellwege = data.radschnellwege.nodes[0].features;
+
   return (
     <Layout padding={false}>
       <div className="bg-white">
@@ -39,7 +46,7 @@ const RadschnellwegIndex = ({ data }) => {
             Alle Radschnellwege
           </h2>
           <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
-            {data.radschnellwege.nodes.map((radschnellweg) => (
+            {radschnellwege.map((radschnellweg) => (
               <div
                 key={radschnellweg.name}
                 className="flex flex-col bg-white rounded-2xl shadow-xl"
@@ -96,11 +103,16 @@ export default RadschnellwegIndex;
 export const query = graphql`
   {
     radschnellwege: allRadschnellweg {
+      totalCount
       nodes {
-        from
-        to
-        state
-        fromSlug: gatsbyPath(filePath: "/radschnellwege/{Radschnellweg.from}")
+        properties {
+          ref
+          to
+          from
+          fromSlug: gatsbyPath(
+            filePath: "/radschnellwege/{Radschnellweg.properties__from}"
+          )
+        }
       }
     }
   }
