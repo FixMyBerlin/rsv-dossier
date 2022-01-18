@@ -4,7 +4,8 @@ import React from 'react';
 
 type Props = { to: string; className?: string; newWindow?: boolean };
 
-export const TextLink: React.FC<Props> = ({
+// TODO: Refactor all those link components to share more logic
+export const ButtonLink: React.FC<Props> = ({
   to,
   className = '',
   newWindow = false,
@@ -12,7 +13,7 @@ export const TextLink: React.FC<Props> = ({
 }) => {
   const styles = classNames(
     className,
-    'text-emerald-500 hover:text-emerald-600 hover:underline active:underline'
+    'inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
   );
 
   if (newWindow) {

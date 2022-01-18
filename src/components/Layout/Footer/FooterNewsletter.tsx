@@ -1,3 +1,9 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+// ^--- Even after reading https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/718 I don't get why this is an error.
+// The default should already be, that one (id or nesting) is enough.
+// Disabling for now…
+// Docs: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/label-has-associated-control.md
+// Airbnb Defaults: https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react-a11y.js
 import React from 'react';
 
 export const FooterNewsletter = () => {

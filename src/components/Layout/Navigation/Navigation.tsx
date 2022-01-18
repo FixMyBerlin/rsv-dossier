@@ -8,8 +8,8 @@ import {
 import { navigationLinks } from './navigationLinks.const';
 
 export const Navigation = ({ location }) => {
-  // https://tailwindui.com/components/application-ui/navigation/navbars
   return (
+    // https://tailwindui.com/components/application-ui/navigation/navbars
     <Disclosure
       as="nav"
       className="bg-white shadow-md shadow-green-800/20 z-20"

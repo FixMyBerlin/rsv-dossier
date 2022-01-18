@@ -5,6 +5,7 @@
 - Use asdf or nvm to install NodeJS
 - Use `npm run` to see a list of commands like `npm run start`
 - Use `npm run build && npx serve public` to test the build
+- Use `npx eslint --print-config .eslintrc` to check the `.eslintrc` for errors
 
 ### Gatsby KnowHow
 

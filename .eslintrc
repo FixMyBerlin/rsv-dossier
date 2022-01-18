@@ -22,7 +22,9 @@
     "airbnb",
     "prettier",
     "plugin:jest/recommended",
-    "plugin:jest/style"
+    "plugin:jest/style",
+    // Keep it last
+    "plugin:prettier/recommended"
   ],
   // Docs: off=0, warn=1, error=2, see https://eslint.org/docs/user-guide/configuring/rules
   "rules": {
@@ -72,7 +74,9 @@
       "extends": [
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "prettier"
+        "prettier",
+        // Keep it last
+        "plugin:prettier/recommended"
       ],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "off",
@@ -93,7 +97,10 @@
           }
         ],
         "quotes": "off",
-        "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          { "argsIgnorePattern": "^_" }
+        ],
         "@typescript-eslint/quotes": [
           "error",
           "single",
@@ -109,8 +116,8 @@
             "unnamedComponents": "arrow-function"
           }
         ], // Modified rule (Bugfix, see  https://stackoverflow.com/a/69931909/729221)
-        "react/require-default-props": false, // Added rule
-        "arrow-body-style": [2, "as-needed"] // Added rule
+        "react/require-default-props": "off", // Added rule
+        "arrow-body-style": ["error", "as-needed"] // Added rule
       }
     }
   ],

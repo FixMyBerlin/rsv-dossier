@@ -3,10 +3,7 @@ import React from 'react';
 import { Layout } from '~/components/Layout';
 import { TextLink } from '~/components/Links/TextLink';
 
-function Radschnellweg(props) {
-  const radschnellweg = props.data.radschnellweg;
-  console.log('TODO props: ', props);
-
+const Radschnellweg = ({ data: { radschnellweg } }) => {
   return (
     <Layout padding={false}>
       <div className="bg-white">
@@ -16,11 +13,7 @@ function Radschnellweg(props) {
               {radschnellweg.from} &rarr; {radschnellweg.to}
             </h2>
             <p>
-              (
-              <TextLink to={'/radschnellwege'}>
-                {'<-'} Zurück zur Übersicht
-              </TextLink>
-              )
+              (<TextLink to="/radschnellwege">Zurück zur Übersicht</TextLink>)
             </p>
             <p className="mt-1 text-4xl font-extrabold text-slate-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
               {radschnellweg.ref || radschnellweg.from}
@@ -34,10 +27,9 @@ function Radschnellweg(props) {
           </div>
         </div>
       </div>
-      <h1></h1>
     </Layout>
   );
-}
+};
 
 export default Radschnellweg;
 
