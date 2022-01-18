@@ -1,6 +1,5 @@
 import React from 'react';
 import { Footer, Navigation } from '.';
-import Helmet from 'react-helmet';
 import classNames from 'classnames';
 
 type Props = {
@@ -20,14 +19,6 @@ export const Layout: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <Helmet
-        htmlAttributes={{
-          class: 'h-full',
-        }}
-        bodyAttributes={{
-          class: 'h-full',
-        }}
-      />
       <div className="h-full flex flex-col">
         {navigation && <Navigation location={location} />}
         <main
