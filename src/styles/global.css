@@ -7,4 +7,8 @@
   #gatsby-focus-wrapper {
     @apply h-full;
   }
+
+  body {
+    @apply text-slate-800;
+  }
 }

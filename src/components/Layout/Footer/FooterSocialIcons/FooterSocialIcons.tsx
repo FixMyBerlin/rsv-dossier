@@ -9,7 +9,7 @@ export const FooterSocialIcons = () => {
         <ExternalLink
           key={item.name}
           href={item.href}
-          className="text-gray-400 hover:text-gray-300"
+          className="text-slate-400 hover:text-slate-300"
         >
           <span className="sr-only">{item.name}</span>
           <item.icon className="h-6 w-6" aria-hidden="true" />

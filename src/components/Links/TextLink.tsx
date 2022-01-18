@@ -10,7 +10,7 @@ export const TextLink: React.FC<Props> = ({ to, children, className = '' }) => {
       to={to}
       className={classNames(
         className,
-        'text-blue-500 hover:text-blue-600 hover:underline active:underline'
+        'text-emerald-500 hover:text-emerald-600 hover:underline active:underline'
       )}
     >
       {children}

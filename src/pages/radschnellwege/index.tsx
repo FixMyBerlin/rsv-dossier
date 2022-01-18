@@ -23,7 +23,7 @@ function RadschnellwegIndex({ data }) {
             <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
               Bundesweit
             </h1>
-            <p className="mt-6 max-w-3xl text-xl text-gray-300">
+            <p className="mt-6 max-w-3xl text-xl text-slate-300">
               Eine Übersicht aller Radschnellverbindngen bundesweit. Lorem ipsum
               dolor sit amet consectetur adipisicing elit. Dolore molestiae hic
               nesciunt ab odio magnam itaque aperiam quo est modi dignissimos.
@@ -63,21 +63,21 @@ function RadschnellwegIndex({ data }) {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-medium text-gray-900">
+                  <h3 className="text-xl font-medium text-slate-900">
                     {radschnellweg.from} &rarr; {radschnellweg.to}{' '}
                     {/* https://tailwindui.com/components/application-ui/elements/badges */}
                     <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
                       {radschnellweg.state}
                     </span>
                   </h3>
-                  <p className="mt-4 text-base text-gray-500">
+                  <p className="mt-4 text-base text-slate-500">
                     {radschnellweg.description}
                   </p>
                 </div>
                 <div className="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
                   <Link
                     to={radschnellweg.fromSlug}
-                    className="text-base font-medium text-indigo-700 hover:text-indigo-600"
+                    className="text-base font-medium text-indigo-700 hover:text-emerald-400"
                   >
                     Mehr erfahren<span aria-hidden="true"> &rarr;</span>
                   </Link>
