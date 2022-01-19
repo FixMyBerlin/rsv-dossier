@@ -1,7 +1,7 @@
 import React from 'react';
 import { LayoutArticle } from '~/components/Layout';
 
-export default function DatenschutzPage() {
+export const DatenschutzPage = () => {
   return (
     <LayoutArticle>
       <h1>Datenschutz</h1>
@@ -13,4 +13,6 @@ export default function DatenschutzPage() {
       </p>
     </LayoutArticle>
   );
-}
+};
+
+export default DatenschutzPage;
