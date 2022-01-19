@@ -2,7 +2,7 @@ import { graphql, Link } from 'gatsby';
 import React from 'react';
 import { Layout } from '~/components/Layout';
 
-export const RadschnellwegIndex = ({ data }) => {
+const RadschnellwegIndex = ({ data }) => {
   return (
     <Layout padding={false}>
       <div className="bg-white">

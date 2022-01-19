@@ -1,7 +1,7 @@
 import React from 'react';
 import { LayoutArticle } from '~/components/Layout';
 
-export const DatenschutzPage = () => {
+const DatenschutzPage = () => {
   return (
     <LayoutArticle>
       <h1>Datenschutz</h1>

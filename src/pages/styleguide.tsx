@@ -6,7 +6,7 @@ import { ButtonLink } from '~/components/Links/ButtonLink';
 import { ExternalLink } from '~/components/Links/ExternalLink';
 import { TextLink } from '~/components/Links/TextLink';
 
-export const KontaktPage: React.FC<PageProps> = () => {
+const KontaktPage: React.FC<PageProps> = () => {
   return (
     <>
       <Helmet>

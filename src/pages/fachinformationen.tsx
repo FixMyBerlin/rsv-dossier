@@ -2,7 +2,7 @@ import { PageProps } from 'gatsby';
 import React from 'react';
 import { LayoutArticle } from '~/components/Layout';
 
-export const FachinformationenPage: React.FC<PageProps> = ({ location }) => {
+const FachinformationenPage: React.FC<PageProps> = ({ location }) => {
   return (
     <LayoutArticle location={location}>
       <h1>Fachinformationen</h1>

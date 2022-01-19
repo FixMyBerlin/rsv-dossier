@@ -2,7 +2,7 @@ import { PageProps } from 'gatsby';
 import React from 'react';
 import { LayoutArticle } from '~/components/Layout';
 
-export const KontaktPage: React.FC<PageProps> = ({ location }) => {
+const KontaktPage: React.FC<PageProps> = ({ location }) => {
   return (
     <LayoutArticle location={location}>
       <h1>Kontakt</h1>
