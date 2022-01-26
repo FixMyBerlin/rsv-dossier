@@ -15,7 +15,7 @@ export const FooterLinks: React.FC<Props> = ({
 }) => {
   return (
     <div className={className}>
-      <h3 className="text-sm font-semibold text-slate-400 tracking-wider uppercase">
+      <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-400">
         {title}
       </h3>
       <ul className="mt-4 space-y-4">

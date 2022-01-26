@@ -12,21 +12,21 @@ export const Navigation = ({ location }) => {
     // https://tailwindui.com/components/application-ui/navigation/navbars
     <Disclosure
       as="nav"
-      className="bg-white shadow-md shadow-green-800/20 z-20"
+      className="z-20 bg-white shadow-md shadow-green-800/20"
     >
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16">
-              <nav className="flex justify-between w-full">
-                <div className="flex-shrink-0 flex items-center">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex h-16 justify-between">
+              <nav className="flex w-full justify-between">
+                <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="block lg:hidden h-8 w-auto"
+                    className="block h-8 w-auto lg:hidden"
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                     alt="Workflow"
                   />
                   <img
-                    className="hidden lg:block h-8 w-auto"
+                    className="hidden h-8 w-auto lg:block"
                     src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
                     alt="Workflow"
                   />{' '}
@@ -47,7 +47,7 @@ export const Navigation = ({ location }) => {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <nav className="pt-2 pb-3 space-y-1">
+            <nav className="space-y-1 pt-2 pb-3">
               {navigationLinks.map((link) => (
                 <NavigationMenuItemMobile
                   name={link.name}

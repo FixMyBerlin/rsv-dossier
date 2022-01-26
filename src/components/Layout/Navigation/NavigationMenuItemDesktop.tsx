@@ -20,7 +20,7 @@ export const NavigationMenuItemDesktop: React.FC<Props> = ({
           'border-transparent text-slate-500 hover:border-emerald-300 hover:text-slate-700':
             !active,
         },
-        'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+        'inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium'
       )}
     >
       {name}

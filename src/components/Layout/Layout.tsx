@@ -18,13 +18,13 @@ export const Layout: React.FC<Props> = ({
   children,
 }) => {
   return (
-    <div className="h-full flex flex-col">
+    <div className="flex h-full flex-col">
       {navigation && <Navigation location={location} />}
       <main
         className={classNames(
           className,
           { 'p-5 pt-14': padding },
-          'bg-green-50 flex-grow shadow-md shadow-green-900/20 z-0'
+          'z-0 flex-grow bg-green-50 shadow-md shadow-green-900/20'
         )}
       >
         {children}
