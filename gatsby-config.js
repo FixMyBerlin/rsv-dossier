@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
+    title: 'Radschnellverbindungen',
     siteURL: 'https://radschnellverbindungen.info',
+    description:
+      'Informationen über Planungen von Radschnellverbindungen in Deutschland.',
   },
 
   // Since `gatsby-plugin-typescript` is automatically included in Gatsby you
@@ -13,11 +16,11 @@ module.exports = {
       resolve: 'gatsby-transformer-yaml',
       options: {
         typeName: ({ node }) => {
-          const name = node.sourceInstanceName
+          const name = node.sourceInstanceName;
           if (name === 'radschnellwege') {
-            return 'Radschnellweg'
+            return 'Radschnellweg';
           }
-          return name
+          return name;
         },
       },
     },
