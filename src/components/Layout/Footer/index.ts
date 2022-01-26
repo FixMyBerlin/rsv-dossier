@@ -1,3 +1,3 @@
-export { FooterNewsletter } from './FooterNewsletter';
-export { FooterSocialIcons } from './FooterSocialIcons/FooterSocialIcons';
-export { FooterLinks } from './FooterLinks/FooterLinks';
+export * from './FooterNewsletter';
+export * from './FooterSocialIcons/FooterSocialIcons';
+export * from './FooterLinks/FooterLinks';

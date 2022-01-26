@@ -1,3 +1,3 @@
-export { NavigationMenuItemDesktop } from './NavigationMenuItemDesktop';
-export { NavigationMenuItemMobile } from './NavigationMenuItemMobile';
-export { NavigationMobileMenuButton } from './NavigationMobileMenuButton';
+export * from './NavigationMenuItemDesktop';
+export * from './NavigationMenuItemMobile';
+export * from './NavigationMobileMenuButton';

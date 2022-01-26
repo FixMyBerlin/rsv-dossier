@@ -1,4 +1,4 @@
-export { Navigation } from './Navigation/Navigation';
-export { Footer } from './Footer/Footer';
-export { Layout } from './Layout';
-export { LayoutArticle } from './LayoutArticle';
+export * from './Navigation/Navigation';
+export * from './Footer/Footer';
+export * from './Layout';
+export * from './LayoutArticle';
