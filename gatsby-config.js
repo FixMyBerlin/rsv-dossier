@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Radschnellverbindungen',
-    siteURL: 'https://radschnellverbindungen.info',
+    siteUrl: 'https://radschnellverbindungen.info',
     description:
       'Informationen über Planungen von Radschnellverbindungen in Deutschland.',
   },
@@ -29,6 +29,15 @@ module.exports = {
       options: {
         path: './src/radschnellwege',
         name: 'radschnellwege',
+      },
+    },
+    {
+      // Docs https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/
+      // https://radschnellverbindungen.info/sitemap/sitemap-index.xml // only links
+      // https://radschnellverbindungen.info/sitemap/sitemap-0.xml // content
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        excludes: ['/kontakt/', '/datenschutz/'],
       },
     },
   ],
