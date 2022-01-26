@@ -1,11 +1,17 @@
 import { graphql } from 'gatsby';
 import React from 'react';
+import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { TextLink } from '~/components/Links/TextLink';
 
 const Radschnellweg = ({ data: { radschnellweg } }) => {
   return (
     <Layout padding={false}>
+      <HelmetSeo
+        title={`Radschnellwege ${radschnellweg.from} &rarr; {radschnellweg.to}`}
+        description="TODO"
+        image="TODO"
+      />
       <div className="bg-white">
         <div className="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="text-center">

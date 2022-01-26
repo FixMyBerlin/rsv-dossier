@@ -1,10 +1,12 @@
 import { PageProps } from 'gatsby';
 import React from 'react';
+import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { LayoutArticle } from '~/components/Layout';
 
 const FachinformationenPage: React.FC<PageProps> = ({ location }) => {
   return (
     <LayoutArticle location={location}>
+      <HelmetSeo title="Fachinformationen" description="TODO" image="TODO" />
       <h1>Fachinformationen</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate

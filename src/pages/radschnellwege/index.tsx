@@ -1,10 +1,12 @@
 import { graphql, Link } from 'gatsby';
 import React from 'react';
+import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 
 const RadschnellwegIndex = ({ data }) => {
   return (
     <Layout padding={false}>
+      <HelmetSeo title="Radschnellwege" description="TODO" image="TODO" />
       <div className="bg-white">
         {/* Header */}
         <div className="relative bg-gray-800 pb-32">

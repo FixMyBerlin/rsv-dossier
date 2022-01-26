@@ -1,6 +1,6 @@
 import { PageProps } from 'gatsby';
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { LayoutArticle } from '~/components/Layout';
 import { ButtonLink } from '~/components/Links/ButtonLink';
 import { ExternalLink } from '~/components/Links/ExternalLink';
@@ -9,9 +9,7 @@ import { TextLink } from '~/components/Links/TextLink';
 const KontaktPage: React.FC<PageProps> = () => {
   return (
     <>
-      <Helmet>
-        <meta name="robots" content="noindex" />
-      </Helmet>
+      <HelmetSeo noindex title="Kontakt" />
       {/* <Layout>
       <h1>Layout</h1>
     </Layout> */}
