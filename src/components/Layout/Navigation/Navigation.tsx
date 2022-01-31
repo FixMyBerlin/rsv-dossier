@@ -35,7 +35,7 @@ export const Navigation = ({ location }) => {
                     RSV
                   </Link>
                   */}{' '}
-                  <Link to="/" className="w-auto font-bold">
+                  <Link to="/" className="w-auto text-lg font-bold">
                     Radschnellverbindungen
                   </Link>
                 </div>
