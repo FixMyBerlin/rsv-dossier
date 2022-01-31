@@ -2,8 +2,8 @@ import { PageProps } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout/Layout';
-import ConstructionIcon from '/static/construction-icon.svg';
-import FixMyCityLogo from '/static/FixMyCity_Logo.svg';
+import ConstructionIcon from '~/static/construction-icon.svg';
+import FixMyCityLogo from '~/static/FixMyCity_Logo.svg';
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
