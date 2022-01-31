@@ -28,4 +28,9 @@
     font-weight: 100 900;
     font-style: italic;
   }
+
+  /* Default brand button */
+  .btn-brand {
+    @apply bg-emerald-300 py-2 px-4  hover:bg-slate-800 font-bold rounded-full text-slate-600 hover:text-emerald-300;
+  }
 }
