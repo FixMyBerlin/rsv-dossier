@@ -13,7 +13,9 @@
     "type-check": "tsc",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "lint-staged": {
     "./src/**/*.{ts,js,jsx,tsx}": [
@@ -39,8 +41,16 @@
     "tsconfig-paths-webpack-plugin": "^3.5.2"
   },
   "devDependencies": {
+    "@babel/core": "7.16.12",
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
+    "@storybook/addon-actions": "6.4.17",
+    "@storybook/addon-essentials": "6.4.17",
+    "@storybook/addon-links": "6.4.17",
+    "@storybook/addon-postcss": "2.0.0",
+    "@storybook/builder-webpack5": "6.4.17",
+    "@storybook/manager-webpack5": "6.4.17",
+    "@storybook/react": "6.4.17",
     "@testing-library/dom": "^8.11.1",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
@@ -53,6 +63,7 @@
     "@typescript-eslint/parser": "^5.5.0",
     "autoprefixer": "^10.4.2",
     "babel-jest": "^27.3.1",
+    "babel-loader": "8.2.3",
     "babel-preset-gatsby": "^2.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.7.0",
@@ -65,7 +76,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "gatsby-plugin-postcss": "^5.5.0",
+    "gatsby-plugin-postcss": "5.6.0",
+    "html-webpack-plugin": "5.5.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.3.1",
     "postcss": "^8.4.5",
