@@ -57,7 +57,7 @@ const ImprintPage = () => {
       </p>
       <p>
         Sofern du Bugs oder Verbesserungsvorschläge hast, gib uns gerne{' '}
-        <ExternalLink href="https://github.com/FixMyBerlin/fixmy.platform/issues/new/choose">
+        <ExternalLink href="https://github.com/FixMyBerlin/fixmy.rsv/issues/new/choose">
           auf github.com Feedback
         </ExternalLink>
         .
@@ -67,38 +67,13 @@ const ImprintPage = () => {
         Wir setzen Open Source Software ein und veröffentlichen auch unsere
         eigenen Software-Produkte unter Open Source-Lizenzen. Unseren Quellcode
         unter der AGPL v3 Lizenz finden Sie unter{' '}
-        <ExternalLink href="https://github.com/FixMyBerlin/">
-          github.com/FixMyBerlin/
+        <ExternalLink href="https://github.com/FixMyBerlin">
+          github.com/FixMyBerlin
         </ExternalLink>
-      </p>
-      <p>
-        Falls Sie Interesse haben, etwas beizutragen, melden Sie sich gerne. Ein
-        englischsprachiges Einstiegsdokument hierfür finden Sie auch{' '}
-        <ExternalLink href="https://github.com/FixMyBerlin/fixmy.frontend/blob/develop/CONTRIBUTING.md">
-          auf Github
-        </ExternalLink>
-        .
-      </p>
-      <h3>Dienstleister</h3>
-      <p>
-        Frontend &amp; UX Beratung: Webkid GmbH,{' '}
-        <ExternalLink href="https://webkid.io/">webkid.io</ExternalLink>
-        <br />
-        UX-Konzeption: Philipp Schiedel
-        <br />
-        Backend &amp; Beratung: Agaric e.K. Stefan Freudenberg
-        <br />
-        3D-Visualisierungen: David Wegner
-      </p>
-      <h3>Quellenvermerk</h3>
-      <p>
-        Die von FixMyCity entwickelten Karten basieren auf Daten des Geoportal
-        Berlin / Detailnetz Berlin und wurden für die Dienste von FixMyCity
-        entsprechend angepasst.
       </p>
       <h3>Urheberrechte Fotos</h3>
       <p>
-        Wenn nicht anders angegeben stehen die auf fixmyberlin.de verwendeten
+        Wenn nicht anders angegeben stehen die auf dieser Website verwendeten
         Fotos unter{' '}
         <ExternalLink
           href="https://creativecommons.org/licenses/by-nc/4.0/deed.de"
@@ -111,7 +86,7 @@ const ImprintPage = () => {
       <h3>Förderung</h3>
       <p>
         FixMyCity wird vom BMDV im Rahmen des NRVP gefördert (Förderkennzeichen{' '}
-        <b>????</b>).
+        <b>VB2025</b>).
         <br />
         <ExternalLink href="https://nationaler-radverkehrsplan.de/de/praxis/modulares-system-fuer-radschnellverbindungen">
           <b>Projektsteckbrief</b> Baukasten-RSV: Modulares System für
@@ -120,7 +95,7 @@ const ImprintPage = () => {
       </p>
 
       <div className="partner">
-        <a href="http://bmdv.bund.de/" target="_blank" rel="noreferrer">
+        <a href="https://bmdv.bund.de/" target="_blank" rel="noreferrer">
           <BmdvFundingImage alt="Förderung durch BMDV" />
         </a>
       </div>
