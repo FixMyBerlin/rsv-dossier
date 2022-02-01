@@ -22,8 +22,11 @@
     "airbnb",
     "prettier",
     "plugin:jest/recommended",
-    "plugin:jest/style"
+    "plugin:jest/style",
+    // Keep it last
+    "plugin:prettier/recommended"
   ],
+  // Docs: off=0, warn=1, error=2, see https://eslint.org/docs/user-guide/configuring/rules
   "rules": {
     "jest/prefer-strict-equal": "error",
     "jest/prefer-to-have-length": "warn",
@@ -71,15 +74,17 @@
       "extends": [
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "prettier"
+        "prettier",
+        // Keep it last
+        "plugin:prettier/recommended"
       ],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-var-requires": "off",
-        "no-use-before-define": [0],
-        "@typescript-eslint/no-use-before-define": [1],
-        "import/no-unresolved": 0,
+        "no-use-before-define": ["off"],
+        "@typescript-eslint/no-use-before-define": ["warn"],
+        "import/no-unresolved": "off",
         "import/no-extraneous-dependencies": [
           "error",
           {
@@ -92,14 +97,27 @@
           }
         ],
         "quotes": "off",
-        "@typescript-eslint/quotes": [
-          2,
-          "backtick",
-          {
-            "avoidEscape": true
-          }
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          { "argsIgnorePattern": "^_" }
         ],
-        "@typescript-eslint/no-unused-vars": [2, { "argsIgnorePattern": "^_" }]
+        "@typescript-eslint/quotes": [
+          "error",
+          "single",
+          {
+            "avoidEscape": true,
+            "allowTemplateLiterals": true
+          }
+        ], // Modified rule
+        "react/function-component-definition": [
+          "error",
+          {
+            "namedComponents": "arrow-function",
+            "unnamedComponents": "arrow-function"
+          }
+        ], // Modified rule (Bugfix, see  https://stackoverflow.com/a/69931909/729221)
+        "react/require-default-props": "off", // Added rule
+        "arrow-body-style": "off" // Modified rule
       }
     }
   ],
