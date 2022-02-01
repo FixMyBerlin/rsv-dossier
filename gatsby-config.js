@@ -40,5 +40,13 @@ module.exports = {
         excludes: ['/kontakt/', '/datenschutz/'],
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /static/,
+        },
+      },
+    },
   ],
 };
