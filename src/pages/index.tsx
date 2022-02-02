@@ -25,7 +25,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Zur Karte
           </ButtonLink>
         </div>
-        <div className="mt-3 rounded-full  sm:mt-0 sm:ml-3">
+        <div className="mt-3 rounded-full sm:mt-0 sm:ml-3">
           <ButtonLink
             to="/projekte"
             className="btn-brand-outline w-full px-8 py-3 shadow md:text-lg"
