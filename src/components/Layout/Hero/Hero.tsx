@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Link } from 'gatsby';
-import { ButtonLink } from '~/components/Links/ButtonLink';
 import { Logo } from '~/components/Layout/Logo';
 import { navigationLinks } from '~/components/Layout/Navigation/navigationLinks.const';
 
@@ -158,9 +157,7 @@ export const Hero = (props) => {
               <span className="block text-emerald-500 xl:inline">
                 {highlightedTitle}
               </span>{' '}
-              <span className="block xl:inline">
-                {title}
-              </span>
+              <span className="block xl:inline">{title}</span>
             </h1>
             <p className="mx-auto mt-3 max-w-md text-base text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
               Durch gute Beteiligungsprozesse können Planungen von
