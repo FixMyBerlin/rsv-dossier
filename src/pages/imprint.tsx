@@ -2,15 +2,15 @@ import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { LayoutArticle } from '~/components/Layout';
 import { ExternalLink, MailToLink } from '~/components/Links';
-import BmdvFundingImage from '~/static/BMDV_Foerderung.svg';
+import BmdvFundingImage from '~/static/BMDV-Foerderung.svg';
 
 const ImprintPage = () => {
   return (
     <LayoutArticle>
       <HelmetSeo noindex title="Impressum" />
-      <h2>Impressum</h2>
+      <h1>Impressum</h1>
       <p>
-        <b>FixMyCity GmbH</b>
+        <strong>FixMyCity GmbH</strong>
         <br />
         Karlsgartenstraße 12
         <br />
@@ -32,7 +32,7 @@ const ImprintPage = () => {
       <p>
         Verantwortlicher i.S.v. § 55 Rundfunkstaatsvertrag (RStV): Boris Hekele
       </p>
-      <h3>Feedback &amp; Kontakt</h3>
+      <h2>Feedback &amp; Kontakt</h2>
       <p>
         Wir freuen uns über Kommentare Anregungen und Unterstützung an{' '}
         <MailToLink mailto="feedback@fixmycity.de">
@@ -60,11 +60,11 @@ const ImprintPage = () => {
       <p>
         Sofern du Bugs oder Verbesserungsvorschläge hast, gib uns gerne{' '}
         <ExternalLink href="https://github.com/FixMyBerlin/fixmy.rsv/issues/new/choose">
-          auf github.com Feedback
+          auf GitHub Feedback
         </ExternalLink>
         .
       </p>
-      <h3>Open Source</h3>
+      <h2>Open Source</h2>
       <p>
         Wir setzen Open Source Software ein und veröffentlichen auch unsere
         eigenen Software-Produkte unter Open Source-Lizenzen. Unseren Quellcode
@@ -73,7 +73,7 @@ const ImprintPage = () => {
           github.com/FixMyBerlin
         </ExternalLink>
       </p>
-      <h3>Urheberrechte Fotos</h3>
+      <h2>Urheberrechte Fotos</h2>
       <p>
         Wenn nicht anders angegeben stehen die auf dieser Website verwendeten
         Fotos unter{' '}
@@ -85,13 +85,13 @@ const ImprintPage = () => {
         </ExternalLink>
         .
       </p>
-      <h3>Förderung</h3>
+      <h2>Förderung</h2>
       <p>
         FixMyCity wird vom BMDV im Rahmen des NRVP gefördert (Förderkennzeichen{' '}
-        <b>VB2025</b>).
+        <strong>VB2025</strong>).
         <br />
         <ExternalLink href="https://nationaler-radverkehrsplan.de/de/praxis/modulares-system-fuer-radschnellverbindungen">
-          <b>Projektsteckbrief</b> Baukasten-RSV: Modulares System für
+          <strong>Projektsteckbrief</strong> Baukasten-RSV: Modulares System für
           Radschnellverbindungen
         </ExternalLink>
       </p>
