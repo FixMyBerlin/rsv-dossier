@@ -2,29 +2,23 @@ import classNames from 'classnames';
 import React from 'react';
 
 type Props = {
-  href: string;
+  mailto: string;
+  subject?: string;
   className?: string;
-  newWindow?: boolean;
   title?: string;
 };
 
-export const ExternalLink: React.FC<Props> = ({
-  href,
+export const MailToLink: React.FC<Props> = ({
+  mailto,
   children,
   className = '',
-  newWindow = true,
   title = '',
+  subject = '',
 }) => {
-  const props = newWindow && {
-    target: '_blank',
-    rel: 'noreferrer',
-  };
-
   return (
     <a
-      href={href}
+      href={`mailto:${mailto}${subject ? `?subject=${subject}` : ''}`}
       rel="noopener noreferrer"
-      {...props}
       className={classNames(className, 'hover:underline active:underline')}
       title={title}
     >

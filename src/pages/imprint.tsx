@@ -1,7 +1,7 @@
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { LayoutArticle } from '~/components/Layout';
-import { ExternalLink } from '~/components/Links/ExternalLink';
+import { ExternalLink, MailToLink } from '~/components/Links';
 import BmdvFundingImage from '~/static/BMDV_Foerderung.svg';
 
 const ImprintPage = () => {
@@ -17,7 +17,7 @@ const ImprintPage = () => {
         12049 Berlin
         <br />
         E-Mail-Adresse:{' '}
-        <a href="mailto:hello@fixmycity.de">hello@fixmycity.de</a>
+        <MailToLink mailto="hello@fixmycity.de">hello@fixmycity.de</MailToLink>
         <br />
         Telefon: 030 / 549 08 665
         <br />
@@ -35,7 +35,9 @@ const ImprintPage = () => {
       <h3>Feedback &amp; Kontakt</h3>
       <p>
         Wir freuen uns über Kommentare Anregungen und Unterstützung an{' '}
-        <a href="mailto:feedback@fixmycity.de">feedback@fixmycity.de</a>
+        <MailToLink mailto="feedback@fixmycity.de">
+          feedback@fixmycity.de
+        </MailToLink>
       </p>
       <p>
         Du findest uns auch auf{' '}
@@ -95,9 +97,9 @@ const ImprintPage = () => {
       </p>
 
       <div className="partner">
-        <a href="https://bmdv.bund.de/" target="_blank" rel="noreferrer">
+        <ExternalLink href="https://bmdv.bund.de/" newWindow>
           <BmdvFundingImage alt="Förderung durch BMDV" />
-        </a>
+        </ExternalLink>
       </div>
     </LayoutArticle>
   );
