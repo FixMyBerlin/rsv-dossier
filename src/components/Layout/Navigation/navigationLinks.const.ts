@@ -2,11 +2,11 @@ export type navigationMenuItemProps = { name: string; to: string };
 
 export const navigationLinks: navigationMenuItemProps[] = [
   { name: 'Start', to: '/' },
-  { name: 'Best Practice', to: '/best-practice/' },
-  { name: 'Fachinformationen', to: '/fachinformationen/' },
+  { name: 'Karte', to: '/karte/' },
+  { name: 'Projekte', to: '/projekte/' },
   {
-    name: 'Radschnellwege',
-    to: '/radschnellwege/',
+    name: 'Förderübersicht',
+    to: '/foerderuebersicht/',
   },
-  { name: 'Kontakt', to: '/kontakt/' },
+  { name: 'Über uns', to: '/ueber-uns/' },
 ];
