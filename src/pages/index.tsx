@@ -1,38 +1,41 @@
 import { PageProps } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
+import { Footer } from '~/components/Layout';
+import { Hero } from '~/components/Layout/Hero/Hero';
 import { Layout } from '~/components/Layout/Layout';
-import ConstructionIcon from '~/static/construction-icon.svg';
-import FixMyCityLogo from '~/static/FixMyCity_Logo.svg';
+import { SplitContent } from '~/components/Layout/Section/SplitContent';
+import { ButtonLink } from '~/components/Links/ButtonLink';
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
-    <Layout location={location}>
+    <Layout location={location} navigation={false}>
       <HelmetSeo
         title="Radschnellwege"
         description="Hier entsteht die Informationsstelle für Radschnellverbindungen in Deutschland"
       />
-      <div className="">
-        <ConstructionIcon className="m-auto flex h-24 w-24" />
-      </div>
-      <h1 className="mt-5 text-center text-3xl font-bold">
-        Hier ist Baustelle
-      </h1>
-      <div className="text-center">
-        Sie werden hier in Zukunft Informationen über Radschnellverbindungen in
-        Deutschland finden. <br /> Diese Plattform wird von FixMyCity
-        entwickelt.
-      </div>
-      <div className="mt-5 text-center">
-        <a
-          href="https://www.fixmycity.de"
-          role="button"
-          className="btn-brand m-auto inline-flex items-center"
-        >
-          Zur &nbsp; <FixMyCityLogo className="h-5 w-5" />
-          FixMyCity Website
-        </a>
-      </div>
+      <Hero
+        highlightedTitle="Radschnellverbindungen"
+        title="schneller planen und bauen"
+      >
+        <div className="rounded-full">
+          <ButtonLink
+            to="/karte"
+            className="w-full px-8 py-3 shadow md:text-lg"
+          >
+            Zur Karte
+          </ButtonLink>
+        </div>
+        <div className="mt-3 rounded-full  sm:mt-0 sm:ml-3">
+          <ButtonLink
+            to="/projekte"
+            className="btn-brand-outline w-full px-8 py-3 shadow md:text-lg"
+          >
+            Beteiligen
+          </ButtonLink>
+        </div>
+      </Hero>
+      <SplitContent />
     </Layout>
   );
 };
