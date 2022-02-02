@@ -31,7 +31,8 @@ export const Layout: React.FC<Props> = ({
           {children}
         </main>
       )}
-      {!navigation && <main
+      {!navigation && (
+        <main
           className={classNames(
             className,
             { 'p-5': padding },
@@ -39,7 +40,8 @@ export const Layout: React.FC<Props> = ({
           )}
         >
           {children}
-        </main>}
+        </main>
+      )}
       <Footer />
     </div>
   );

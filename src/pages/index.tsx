@@ -1,7 +1,6 @@
 import { PageProps } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
-import { Footer } from '~/components/Layout';
 import { Hero } from '~/components/Layout/Hero/Hero';
 import { Layout } from '~/components/Layout/Layout';
 import { SplitContent } from '~/components/Layout/Section/SplitContent';
