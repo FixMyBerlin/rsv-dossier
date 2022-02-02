@@ -17,7 +17,7 @@ export const ExternalLink: React.FC<Props> = ({
 }) => {
   const props = newWindow && {
     target: '_blank',
-    rel: 'noreferrer',
+    rel: 'noopener noreferrer',
   };
 
   return (
