@@ -7,10 +7,3 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     },
   });
 };
-
-const pathsToPublish = ['/'];
-exports.onCreatePage = ({ page, actions: { deletePage }}) => {
-  if (!pathsToPublish.includes(page.path)) {
-    deletePage(page);
-  }
-};
