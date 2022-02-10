@@ -1,7 +1,11 @@
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { LayoutArticle } from '~/components/Layout';
-import { ExternalLink, MailToLink } from '~/components/Links';
+import {
+  ExternalLink,
+  ExternalImageLink,
+  MailToLink,
+} from '~/components/Links';
 import BmdvFundingImage from '~/static/BMDV-Foerderung.svg';
 
 const ImprintPage = () => {
@@ -48,10 +52,6 @@ const ImprintPage = () => {
         <ExternalLink href="https://www.instagram.com/fixmycity/">
           instagram
         </ExternalLink>{' '}
-        |{' '}
-        <ExternalLink href="https://www.facebook.com/FixMyCityApp/">
-          facebook
-        </ExternalLink>{' '}
         und{' '}
         <ExternalLink href="https://www.linkedin.com/company/fixmycity">
           linkedIn
@@ -63,15 +63,6 @@ const ImprintPage = () => {
           auf GitHub Feedback
         </ExternalLink>
         .
-      </p>
-      <h2>Open Source</h2>
-      <p>
-        Wir setzen Open Source Software ein und veröffentlichen auch unsere
-        eigenen Software-Produkte unter Open Source-Lizenzen. Unseren Quellcode
-        unter der AGPL v3 Lizenz finden Sie unter{' '}
-        <ExternalLink href="https://github.com/FixMyBerlin">
-          github.com/FixMyBerlin
-        </ExternalLink>
       </p>
       <h2>Urheberrechte Fotos</h2>
       <p>
@@ -96,11 +87,9 @@ const ImprintPage = () => {
         </ExternalLink>
       </p>
 
-      <div className="partner">
-        <ExternalLink href="https://bmdv.bund.de/" newWindow>
-          <BmdvFundingImage alt="Förderung durch BMDV" />
-        </ExternalLink>
-      </div>
+      <ExternalImageLink href="https://bmdv.bund.de/" newWindow>
+        <BmdvFundingImage alt="Förderung durch BMDV" />
+      </ExternalImageLink>
     </LayoutArticle>
   );
 };
