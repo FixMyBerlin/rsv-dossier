@@ -1,18 +1,11 @@
 export type navigationMenuItemProps = { name: string; to: string };
 
 export const navigationLinks: navigationMenuItemProps[] = [
-  { name: 'Baustelle', to: '/' },
-];
-
-/* Disable temporarily for showing construction site
-export const navigationLinks: navigationMenuItemProps[] = [
-  { name: 'Start', to: '/' },
-  { name: 'Best Practice', to: '/best-practice/' },
-  { name: 'Fachinformationen', to: '/fachinformationen/' },
+  { name: 'Karte', to: '/karte/' },
+  { name: 'Projekte', to: '/radschnellwege/' },
   {
-    name: 'Radschnellwege',
-    to: '/radschnellwege/',
+    name: 'Förderübersicht',
+    to: '/foerderungen/',
   },
-  { name: 'Kontakt', to: '/kontakt/' },
+  { name: 'Über uns', to: '/ueber-uns/' },
 ];
-*/
