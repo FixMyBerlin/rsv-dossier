@@ -18,8 +18,9 @@
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more information.
+This project is licensed under the AGPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for more information.
+It contains dependencies which have different Licenses, see [`package.json`](./package.json).
 
 ## Thanks
 
-- Gatsby starter by João Pedro Schmitz, https://github.com/jpedroschmitz/gatsby-starter-ts
+- This page is based on `gatsby-starter-ts` by João Pedro Schmitz, https://github.com/jpedroschmitz/gatsby-starter-ts (License: MIT)
