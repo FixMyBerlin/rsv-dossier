@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink } from '~/components/Links/ExternalLink';
+import { FooterSocialIcons } from '.';
 import { FooterLinks } from './FooterLinks/FooterLinks';
 import { footerLinks } from './FooterLinks/footerLinks.const';
 
@@ -24,7 +25,7 @@ export const Footer: React.FC = () => {
           {/* <FooterNewsletter /> */}
         </div>
         <div className="mt-8 border-t border-orange-600 pt-8 md:flex md:items-center md:justify-between">
-          {/* <FooterSocialIcons /> */}
+          <FooterSocialIcons />
           <p className="mt-8 text-base text-slate-800 md:order-1 md:mt-0">
             Gebaut mit{' '}
             <svg
