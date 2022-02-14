@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React from 'react';
 
 type Props = {
@@ -8,7 +7,7 @@ type Props = {
   title?: string;
 };
 
-export const ExternalLink: React.FC<Props> = ({
+export const ExternalImageLink: React.FC<Props> = ({
   href,
   children,
   className = '',
@@ -25,7 +24,7 @@ export const ExternalLink: React.FC<Props> = ({
       href={href}
       rel="noopener noreferrer"
       {...props}
-      className={classNames(className, 'hover:underline active:underline')}
+      className={className}
       title={title}
     >
       {children}
