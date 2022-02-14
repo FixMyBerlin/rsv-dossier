@@ -31,7 +31,7 @@ const footerSocialIcons = [
     icon: (props) => (
       // https://tailwindcss.com/docs/fill
       <svg className="fill-slate-800" viewBox="0 0 8 8" {...props}>
-        <rect  height="8" rx="1.5" width="8" />
+        <rect height="8" rx="1.5" width="8" />
         <g className="fill-green-800" fill="white">
           <circle cx="2" cy="6" r="1" />
           <path d="m1 4a3 3 0 0 1 3 3h1a4 4 0 0 0 -4-4z" />
