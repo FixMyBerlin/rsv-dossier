@@ -1,11 +1,11 @@
 import React from 'react';
 import { ExternalLink } from '~/components/Links/ExternalLink';
-import { footerSocialIcons } from './footerSocialIcons.const';
+import { activeFooterSocialIcons } from './footerSocialIcons.const';
 
 export const FooterSocialIcons = () => {
   return (
     <div className="flex space-x-6 md:order-2">
-      {footerSocialIcons.map((item) => (
+      {activeFooterSocialIcons.map((item) => (
         <ExternalLink
           key={item.name}
           href={item.href}
