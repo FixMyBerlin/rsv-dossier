@@ -11,13 +11,13 @@ const DatenschutzPage = () => {
       <p>
         Mit der folgenden Datenschutzerklärung möchten wir Sie darüber
         aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch
-        kurz als "Daten“ bezeichnet) wir zu welchen Zwecken und in welchem
-        Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns
-        durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen
-        der Erbringung unserer Leistungen als auch insbesondere auf unseren
-        Webseiten, in mobilen Applikationen sowie innerhalb externer
+        kurz als &ldquo;Daten&rdquo; bezeichnet) wir zu welchen Zwecken und in
+        welchem Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von
+        uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im
+        Rahmen der Erbringung unserer Leistungen als auch insbesondere auf
+        unseren Webseiten, in mobilen Applikationen sowie innerhalb externer
         Onlinepräsenzen, wie z.B. unserer Social-Media-Profile (nachfolgend
-        zusammenfassend bezeichnet als "Onlineangebot“).
+        zusammenfassend bezeichnet als &ldquo;Onlineangebot&rdquo;.
       </p>
       <p>Die verwendeten Begriffe sind nicht geschlechtsspezifisch.</p>
       <p>Stand: 1. Februar 2022</p>
@@ -432,11 +432,11 @@ const DatenschutzPage = () => {
       <h2 id="m17">Newsletter und elektronische Benachrichtigungen</h2>
       <p>
         Wir versenden Newsletter, E-Mails und weitere elektronische
-        Benachrichtigungen (nachfolgend "Newsletter“) nur mit der Einwilligung
-        der Empfänger oder einer gesetzlichen Erlaubnis. Sofern im Rahmen einer
-        Anmeldung zum Newsletter dessen Inhalte konkret umschrieben werden, sind
-        sie für die Einwilligung der Nutzer maßgeblich. Im Übrigen enthalten
-        unsere Newsletter Informationen zu unseren Leistungen und uns.
+        Benachrichtigungen (nachfolgend &ldquo;Newsletter&rdquo; nur mit der
+        Einwilligung der Empfänger oder einer gesetzlichen Erlaubnis. Sofern im
+        Rahmen einer Anmeldung zum Newsletter dessen Inhalte konkret umschrieben
+        werden, sind sie für die Einwilligung der Nutzer maßgeblich. Im Übrigen
+        enthalten unsere Newsletter Informationen zu unseren Leistungen und uns.
       </p>
       <p>
         Um sich zu unseren Newslettern anzumelden, reicht es grundsätzlich aus,
@@ -468,8 +468,8 @@ const DatenschutzPage = () => {
         möglich, sofern zugleich das ehemalige Bestehen einer Einwilligung
         bestätigt wird. Im Fall von Pflichten zur dauerhaften Beachtung von
         Widersprüchen behalten wir uns die Speicherung der E-Mail-Adresse
-        alleine zu diesem Zweck in einer Sperrliste (sogenannte "Blocklist")
-        vor.
+        alleine zu diesem Zweck in einer Sperrliste (sogenannte
+        &ldquo;Blocklist&rdquo;) vor.
       </p>
       <p>
         Die Protokollierung des Anmeldeverfahrens erfolgt auf Grundlage unserer
@@ -530,18 +530,18 @@ const DatenschutzPage = () => {
       <ul>
         <li>
           <strong>Messung von Öffnungs- und Klickraten: </strong>Die Newsletter
-          enthalten einen sogenannte "web-beacon“, d.h., eine pixelgroße Datei,
-          die beim Öffnen des Newsletters von unserem Server, bzw., sofern wir
-          einen Versanddienstleister einsetzen, von dessen Server abgerufen
-          wird. Im Rahmen dieses Abrufs werden zunächst technische
-          Informationen, wie Informationen zum Browser und Ihrem System, als
-          auch Ihre IP-Adresse und der Zeitpunkt des Abrufs, erhoben. Diese
-          Informationen werden zur technischen Verbesserung unseres Newsletters
-          anhand der technischen Daten oder der Zielgruppen und ihres
-          Leseverhaltens auf Basis ihrer Abruforte (die mit Hilfe der IP-Adresse
-          bestimmbar sind) oder der Zugriffszeiten genutzt. Diese Analyse
-          beinhaltet ebenfalls die Feststellung, ob die Newsletter geöffnet
-          werden und wann sie geöffnet werden.
+          enthalten einen sogenannte &ldquo;web-beacon&rdquo;, d.h., eine
+          pixelgroße Datei, die beim Öffnen des Newsletters von unserem Server,
+          bzw., sofern wir einen Versanddienstleister einsetzen, von dessen
+          Server abgerufen wird. Im Rahmen dieses Abrufs werden zunächst
+          technische Informationen, wie Informationen zum Browser und Ihrem
+          System, als auch Ihre IP-Adresse und der Zeitpunkt des Abrufs,
+          erhoben. Diese Informationen werden zur technischen Verbesserung
+          unseres Newsletters anhand der technischen Daten oder der Zielgruppen
+          und ihres Leseverhaltens auf Basis ihrer Abruforte (die mit Hilfe der
+          IP-Adresse bestimmbar sind) oder der Zugriffszeiten genutzt. Diese
+          Analyse beinhaltet ebenfalls die Feststellung, ob die Newsletter
+          geöffnet werden und wann sie geöffnet werden.
         </li>
         <li>
           <strong>Mailjet: </strong>E-Mail-Versand- und
@@ -564,8 +564,8 @@ const DatenschutzPage = () => {
       </ul>
       <h2 id="m263">Webanalyse, Monitoring und Optimierung</h2>
       <p>
-        Die Webanalyse (auch als "Reichweitenmessung" bezeichnet) dient der
-        Auswertung der Besucherströme unseres Onlineangebotes und kann
+        Die Webanalyse (auch als &ldquo;Reichweitenmessung&rdquo; bezeichnet)
+        dient der Auswertung der Besucherströme unseres Onlineangebotes und kann
         Verhalten, Interessen oder demographische Informationen zu den
         Besuchern, wie z.B. das Alter oder das Geschlecht, als pseudonyme Werte
         umfassen. Mit Hilfe der Reichweitenanalyse können wir z.B. erkennen, zu
@@ -645,15 +645,15 @@ const DatenschutzPage = () => {
           <strong>Matomo (ohne Cookies): </strong>Bei Matomo handelt es sich um
           eine datenschutzfreundliche Webanalysesoftware, die ohne Cookies
           eingesetzt wird und bei der die Erkennnung wiederkehrender Nutzer mit
-          Hilfe eines so genannten "digitalen Fingerabdrucks" erfolgt, der
-          anonymisiert gespeichert und alle 24 Stunden geändert wird; Beim
-          "digitalen Fingerabdruck" werden Nutzerbewegungen innerhalb unseres
-          Onlineangebotes mit Hilfe von pseudonymisierten IP-Adressen in
-          Kombination mit nutzerseitige Browsereinstellungen so erfasst, dass
-          Rückschlüsse auf die Identität einzelner Nutzer nicht möglich sind.
-          Die im Rahmen der Nutzung von Matomo erhobenen Daten der Nutzer werden
-          nur von uns verarbeitet und nicht mit Dritten geteilt;{' '}
-          <strong>Website:</strong>{' '}
+          Hilfe eines so genannten &ldquo;digitalen Fingerabdrucks&rdquo;
+          erfolgt, der anonymisiert gespeichert und alle 24 Stunden geändert
+          wird; Beim &ldquo;digitalen Fingerabdruck&rdquo; werden
+          Nutzerbewegungen innerhalb unseres Onlineangebotes mit Hilfe von
+          pseudonymisierten IP-Adressen in Kombination mit nutzerseitige
+          Browsereinstellungen so erfasst, dass Rückschlüsse auf die Identität
+          einzelner Nutzer nicht möglich sind. Die im Rahmen der Nutzung von
+          Matomo erhobenen Daten der Nutzer werden nur von uns verarbeitet und
+          nicht mit Dritten geteilt; <strong>Website:</strong>{' '}
           <a href="https://matomo.org/" target="_blank" rel="noreferrer">
             https://matomo.org/
           </a>
@@ -750,32 +750,32 @@ const DatenschutzPage = () => {
       </p>
       <ul>
         <li>
-          <strong>Personenbezogene Daten:</strong> "Personenbezogene Daten“ sind
-          alle Informationen, die sich auf eine identifizierte oder
-          identifizierbare natürliche Person (im Folgenden "betroffene Person“)
-          beziehen; als identifizierbar wird eine natürliche Person angesehen,
-          die direkt oder indirekt, insbesondere mittels Zuordnung zu einer
-          Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu
-          einer Online-Kennung (z.B. Cookie) oder zu einem oder mehreren
-          besonderen Merkmalen identifiziert werden kann, die Ausdruck der
-          physischen, physiologischen, genetischen, psychischen,
-          wirtschaftlichen, kulturellen oder sozialen Identität dieser
-          natürlichen Person sind.{' '}
+          <strong>Personenbezogene Daten:</strong> &ldquo;Personenbezogene
+          Daten&rdquo; sind alle Informationen, die sich auf eine identifizierte
+          oder identifizierbare natürliche Person (im Folgenden
+          &ldquo;betroffene Person&rdquo; beziehen; als identifizierbar wird
+          eine natürliche Person angesehen, die direkt oder indirekt,
+          insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu
+          einer Kennnummer, zu Standortdaten, zu einer Online-Kennung (z.B.
+          Cookie) oder zu einem oder mehreren besonderen Merkmalen identifiziert
+          werden kann, die Ausdruck der physischen, physiologischen,
+          genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen
+          Identität dieser natürlichen Person sind.{' '}
         </li>
         <li>
           <strong>Profile mit nutzerbezogenen Informationen:</strong> Die
-          Verarbeitung von "Profilen mit nutzerbezogenen Informationen", bzw.
-          kurz "Profilen" umfasst jede Art der automatisierten Verarbeitung
-          personenbezogener Daten, die darin besteht, dass diese
-          personenbezogenen Daten verwendet werden, um bestimmte persönliche
-          Aspekte, die sich auf eine natürliche Person beziehen (je nach Art der
-          Profilbildung können dazu unterschiedliche Informationen betreffend
-          die Demographie, Verhalten und Interessen, wie z.B. die Interaktion
-          mit Webseiten und deren Inhalten, etc.) zu analysieren, zu bewerten
-          oder, um sie vorherzusagen (z.B. die Interessen an bestimmten Inhalten
-          oder Produkten, das Klickverhalten auf einer Webseite oder den
-          Aufenthaltsort). Zu Zwecken des Profilings werden häufig Cookies und
-          Web-Beacons eingesetzt.{' '}
+          Verarbeitung von &ldquo;Profilen mit nutzerbezogenen
+          Informationen&rdquo;, bzw. kurz &ldquo;Profilen&rdquo; umfasst jede
+          Art der automatisierten Verarbeitung personenbezogener Daten, die
+          darin besteht, dass diese personenbezogenen Daten verwendet werden, um
+          bestimmte persönliche Aspekte, die sich auf eine natürliche Person
+          beziehen (je nach Art der Profilbildung können dazu unterschiedliche
+          Informationen betreffend die Demographie, Verhalten und Interessen,
+          wie z.B. die Interaktion mit Webseiten und deren Inhalten, etc.) zu
+          analysieren, zu bewerten oder, um sie vorherzusagen (z.B. die
+          Interessen an bestimmten Inhalten oder Produkten, das Klickverhalten
+          auf einer Webseite oder den Aufenthaltsort). Zu Zwecken des Profilings
+          werden häufig Cookies und Web-Beacons eingesetzt.{' '}
         </li>
         <li>
           <strong>Reichweitenmessung:</strong> Die Reichweitenmessung (auch als
@@ -792,19 +792,19 @@ const DatenschutzPage = () => {
           erhalten.{' '}
         </li>
         <li>
-          <strong>Verantwortlicher:</strong> Als "Verantwortlicher“ wird die
-          natürliche oder juristische Person, Behörde, Einrichtung oder andere
-          Stelle, die allein oder gemeinsam mit anderen über die Zwecke und
-          Mittel der Verarbeitung von personenbezogenen Daten entscheidet,
+          <strong>Verantwortlicher:</strong> Als &ldquo;Verantwortlicher&rdquo;
+          wird die natürliche oder juristische Person, Behörde, Einrichtung oder
+          andere Stelle, die allein oder gemeinsam mit anderen über die Zwecke
+          und Mittel der Verarbeitung von personenbezogenen Daten entscheidet,
           bezeichnet.{' '}
         </li>
         <li>
-          <strong>Verarbeitung:</strong> "Verarbeitung" ist jeder mit oder ohne
-          Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede solche
-          Vorgangsreihe im Zusammenhang mit personenbezogenen Daten. Der Begriff
-          reicht weit und umfasst praktisch jeden Umgang mit Daten, sei es das
-          Erheben, das Auswerten, das Speichern, das Übermitteln oder das
-          Löschen.{' '}
+          <strong>Verarbeitung:</strong> &ldquo;Verarbeitung&rdquo; ist jeder
+          mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder
+          jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten.
+          Der Begriff reicht weit und umfasst praktisch jeden Umgang mit Daten,
+          sei es das Erheben, das Auswerten, das Speichern, das Übermitteln oder
+          das Löschen.{' '}
         </li>
       </ul>
       <p>
