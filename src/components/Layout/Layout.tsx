@@ -24,7 +24,7 @@ export const Layout: React.FC<Props> = ({
         <main
           className={classNames(
             className,
-            'z-0 flex-grow bg-green-50 shadow-md shadow-green-900/20'
+            'z-0 flex-grow bg-white shadow-md shadow-green-900/20'
           )}
         >
           {children}
@@ -34,7 +34,7 @@ export const Layout: React.FC<Props> = ({
         <main
           className={classNames(
             className,
-            'z-0 flex-grow bg-green-50 shadow-md shadow-green-900/20'
+            'z-0 flex-grow bg-white shadow-md shadow-green-900/20'
           )}
         >
           {children}

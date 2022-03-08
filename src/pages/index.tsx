@@ -125,7 +125,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           Informationen zu Förderprogrammen im Kontext von
           Radschnellverbindungen und Partizipation in Bund und Land.
         </p>
-        <ButtonLink to="/förderungen" className="btn-brand-outline mt-5">
+        <ButtonLink to="/foerderungen" className="btn-brand-outline mt-5">
           Zur Förderübersicht
         </ButtonLink>
       </TextWithImage>
