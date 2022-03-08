@@ -1,4 +1,0 @@
-[[headers]]
-  for = "/datenschutz"
-  [headers.values]
-    X-Frame-Options = "allow-from https://s.radschnellverbindungen.info/"
