@@ -48,5 +48,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-matomo',
+      options: {
+        siteId: '5',
+        matomoUrl: 'https://s.radschnellverbindungen.info',
+        siteUrl: 'https://radschnellverbindungen.info',
+      },
+    },
   ],
 };
