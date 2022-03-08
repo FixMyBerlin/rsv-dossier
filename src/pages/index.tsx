@@ -16,6 +16,8 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
       <Hero
         highlightedTitle="Radschnellverbindungen"
         title="schneller planen und bauen"
+        description="Wir helfen Koordinator:innen durch frühzeitig ansetzende
+        Partizipation bei Radschnellverbindungen und beschleunigen deren Umsetzung erheblich."
       >
         <div className="rounded-full">
           <ButtonLink

@@ -4,75 +4,15 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Link } from 'gatsby';
 import { Logo } from '~/components/Layout/Logo';
 import { navigationLinks } from '~/components/Layout/Navigation/navigationLinks.const';
+import HeroGraphic from '~/images/hero_bg.png';
 
 export const Hero = (props) => {
-  const { highlightedTitle, title, children } = props;
+  const { highlightedTitle, title, description, children } = props;
   return (
     <div className="relative overflow-hidden bg-gray-50">
-      <div
-        className="hidden sm:absolute sm:inset-y-0 sm:block sm:h-full sm:w-full"
-        aria-hidden="true"
-      >
-        <div className="relative mx-auto h-full max-w-7xl">
-          <svg
-            className="absolute right-full translate-y-24 -translate-x-1/3 transform lg:-translate-x-5"
-            fill="none"
-            viewBox="0 0 604 250"
-            width={604}
-            height={250}
-          >
-            <defs>
-              <pattern
-                id="doodad"
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                patternUnits="userSpaceOnUse"
-                patternTransform="rotate(135)"
-              >
-                <rect width="100%" height="100%" fill="rgba(171, 171, 171,0)" />
-                <circle cx="20" cy="20" r="2" fill="rgba(252, 146, 60,1)" />
-                <path
-                  d="M18 20aInfinityInfinity 0 0 0InfinityNaNaInfinityInfinity 0 0 0-InfinityNaNm0.5 0aInfinityInfinity 0 0 1InfinityNaNaInfinityInfinity 0 0 1-InfinityNaNz"
-                  fill="rgba(52, 211, 153,1)"
-                />
-              </pattern>
-            </defs>
-            <rect fill="url(#doodad)" height="200%" width="200%" />
-          </svg>
-
-          <svg
-            className="absolute left-full -translate-y-3/4 -translate-x-1/4 transform md:translate-y-1/3 lg:-translate-x-1/2"
-            width={404}
-            height={784}
-            fill="none"
-            viewBox="0 0 404 784"
-          >
-            <defs>
-              <pattern
-                id="doodad"
-                width="32"
-                height="32"
-                viewBox="0 0 40 40"
-                patternUnits="userSpaceOnUse"
-                patternTransform="rotate(135)"
-              >
-                <rect width="100%" height="100%" fill="rgba(171, 171, 171,0)" />
-                <circle cx="20" cy="20" r="1" fill="rgba(252, 146, 60,1)" />
-                <path
-                  d="M19 20aInfinityInfinity 0 0 0InfinityNaNaInfinityInfinity 0 0 0-InfinityNaN"
-                  fill="rgba(52, 211, 153,1)"
-                />
-              </pattern>
-            </defs>
-            <rect fill="url(#doodad)" height="200%" width="200%" />
-          </svg>
-        </div>
-      </div>
-
-      <div className="relative pt-6 pb-16 sm:pb-24">
+      <div className="relative pt-6 pb-10 sm:pb-24">
         <Popover>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mx-auto max-w-7xl px-4 pb-6 sm:px-6">
             <nav
               className="relative flex items-center justify-end sm:h-10"
               aria-label="Global"
@@ -92,7 +32,7 @@ export const Hero = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="hidden md:flex md:space-x-10">
+              <div className="mx-auto hidden md:flex md:space-x-10">
                 {navigationLinks.map((item) => (
                   <a
                     key={item.name}
@@ -147,18 +87,19 @@ export const Hero = (props) => {
           </Transition>
         </Popover>
 
-        <main className="mx-auto mt-16 max-w-7xl px-4 sm:mt-24">
-          <div className="text-center">
+        <main
+          className="min-h-[600px] bg-emerald-400 bg-bottom bg-no-repeat px-4 pb-10"
+          style={{ backgroundImage: `url("${HeroGraphic}")` }}
+        >
+          <div className="mx-auto max-w-7xl pt-16 text-center sm:pt-24">
             <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-              <span className="block text-emerald-500 xl:inline">
+              <span className="block text-white xl:inline">
                 {highlightedTitle}
               </span>{' '}
               <span className="block xl:inline">{title}</span>
             </h1>
             <p className="mx-auto mt-3 max-w-md text-base text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
-              Durch gute Beteiligungsprozesse können Planungen von
-              Radschnellverbindungen deutlich verschnellert und erleichert
-              werden.
+              {description}
             </p>
             <div className="mx-auto mt-5 max-w-md sm:flex sm:justify-center md:mt-8">
               {children}

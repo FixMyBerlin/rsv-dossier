@@ -24,7 +24,6 @@ export const Layout: React.FC<Props> = ({
         <main
           className={classNames(
             className,
-            { 'p-5 pt-14': padding },
             'z-0 flex-grow bg-green-50 shadow-md shadow-green-900/20'
           )}
         >
@@ -35,7 +34,6 @@ export const Layout: React.FC<Props> = ({
         <main
           className={classNames(
             className,
-            { 'p-5': padding },
             'z-0 flex-grow bg-green-50 shadow-md shadow-green-900/20'
           )}
         >
