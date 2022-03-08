@@ -10,7 +10,7 @@ export const Hero = (props) => {
   const { highlightedTitle, title, description, children } = props;
   return (
     <div className="relative overflow-hidden bg-gray-50">
-      <div className="relative pt-6 pb-10 sm:pb-24">
+      <div className="relative pt-6">
         <Popover>
           <div className="mx-auto max-w-7xl px-4 pb-6 sm:px-6">
             <nav
@@ -88,12 +88,12 @@ export const Hero = (props) => {
         </Popover>
 
         <main
-          className="min-h-[600px] bg-emerald-400 bg-bottom bg-no-repeat px-4 pb-10"
+          className="min-h-[600px] bg-emerald-400 bg-contain bg-bottom bg-no-repeat px-4"
           style={{ backgroundImage: `url("${HeroGraphic}")` }}
         >
           <div className="mx-auto max-w-7xl pt-16 text-center sm:pt-24">
             <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-              <span className="block text-white xl:inline">
+              <span className="block break-words text-white xl:inline">
                 {highlightedTitle}
               </span>{' '}
               <span className="block xl:inline">{title}</span>
