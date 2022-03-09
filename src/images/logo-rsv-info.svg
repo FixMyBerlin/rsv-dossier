@@ -1,0 +1,28 @@
+<svg data-name="Ebene 1" width="559.982" height="245.166" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#34d399" stroke-linecap="square" stroke-width="5">
+    <path d="m214.898 63.729 32.48-32.48a7.1 7.1 0 0 1 10.041-.003l.003.003L295 68.828" />
+    <path d="M287.9 63.729v37.05H216.9v-37.05" />
+  </g><text font-size="64.47" font-family="Overpass-Black, Overpass" font-weight="800" letter-spacing=".008em"
+    x="18.517" y="103.189">R<tspan x="64.355" y="103.189" letter-spacing=".012em">A</tspan>
+    <tspan x="112.644" y="103.189" letter-spacing=".017em">D</tspan>
+    <tspan letter-spacing=".017em">
+      <tspan x="18.517" y="163.791">SCHNELL</tspan>
+    </tspan>
+    <tspan letter-spacing="-.011em">
+      <tspan x="18.517" y="224.392">V</tspan>
+      <tspan x="62.808" y="224.392" letter-spacing=".017em">ERBINDUNGEN</tspan>
+    </tspan>
+  </text>
+  <path d="M194.965 100.778h90.788a95.581 95.581 0 0 1 71.607 32.272v0a82.08 82.08 0 0 0 61.492 27.712h116.23"
+    fill="none" stroke="#34d399" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+  <g fill="none" stroke="#34d399" stroke-linecap="square" stroke-width="5">
+    <path
+      d="M404.895 157.408V57.094a4.622 4.622 0 0 1 2.435-4.079l50.98-27.436a4.635 4.635 0 0 1 6.833 4.066V157.89M535.742 160.616v-45.814a4.634 4.634 0 0 0-1.792-3.659l-32.441-25.23a4.628 4.628 0 0 0-7.477 3.659v70.25M463.074 70.997h-27.807M465.144 95.745h-37.076M418.799 44.684V22.5M494.032 113.582h13.903M494.032 133.19h23.172M526.473 104.328V88.94" />
+  </g>
+  <g fill="none" stroke="#34d399" stroke-linecap="square" stroke-width="5">
+    <path
+      d="M215.483 66.68a6.822 6.822 0 0 1-5.922 10.232h-30.698a6.822 6.822 0 0 1-5.9-10.233l14.64-32.362a6.822 6.822 0 0 1 13.2-.1z" />
+    <path
+      d="M194.212 88.85a11.938 11.938 0 0 0 11.938-11.938M194.212 51.32v49.459M194.212 66.68a8.527 8.527 0 0 1-8.527-8.528" />
+  </g>
+</svg>

@@ -1,12 +1,12 @@
 import React from 'react';
-
-/* <span className="sr-only">Radschnellverbindungen Logo</span>
-<img
-  className="h-8 w-auto sm:h-10"
-  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-  alt="Logo Radschnellverbindungen"
-/> */
+import RsvLogo from '~/images/logo-rsv-info.svg';
 
 export const Logo = () => {
-  return <span>Radschnellverbindungen</span>;
+  return (
+    <img
+      className="hidden h-16 w-auto lg:block"
+      src={RsvLogo}
+      alt="Radschnellverbindungen.info Logo"
+    />
+  );
 };
