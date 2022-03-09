@@ -23,7 +23,7 @@ export const FooterLinks: React.FC<Props> = ({
           <li key={item.name}>
             <Link
               to={item.to}
-              className="text-base text-slate-600 hover:text-white"
+              className="text-base text-slate-600 hover:text-slate-900"
             >
               {item.name}
             </Link>
