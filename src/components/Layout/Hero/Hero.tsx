@@ -4,7 +4,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Link } from 'gatsby';
 import { Logo } from '~/components/Layout/Logo';
 import { navigationLinks } from '~/components/Layout/Navigation/navigationLinks.const';
-import HeroGraphic from '~/images/hero_bg.png';
+import HeroGraphic from '~/images/hero_bg.svg';
 
 export const Hero = (props) => {
   const { highlightedTitle, title, description, children } = props;
@@ -88,7 +88,7 @@ export const Hero = (props) => {
         </Popover>
 
         <main
-          className="min-h-[600px] bg-emerald-400 bg-contain bg-bottom bg-no-repeat px-4"
+          className="min-h-[530px] bg-emerald-400 bg-contain bg-bottom bg-no-repeat px-4 md:min-h-[600px]"
           style={{ backgroundImage: `url("${HeroGraphic}")` }}
         >
           <div className="mx-auto max-w-7xl pt-16 text-center sm:pt-24">
