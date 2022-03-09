@@ -30,7 +30,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         </div>
         <div className="mt-3 rounded-full sm:mt-0 sm:ml-3">
           <ButtonLink
-            to="/projekte"
+            to="/radschnellwege"
             className="btn-brand-outline w-full px-8 py-3 shadow md:text-lg"
           >
             Beteiligen
