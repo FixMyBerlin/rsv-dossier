@@ -1,6 +1,7 @@
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { LayoutArticle } from '~/components/Layout';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const DatenschutzPage = () => {
   return (
@@ -814,7 +815,7 @@ const DatenschutzPage = () => {
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
-          <img
+          <StaticImage
             src="https://datenschutz-generator.de/wp-content/plugins/ts-dsg/images/dsg-seal/dsg-seal-pp-de.png"
             alt="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."
             width="250"
