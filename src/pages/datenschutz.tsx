@@ -825,7 +825,7 @@ const DatenschutzPage = () => {
       <h2>Tracking Opt-Out (Matomo)</h2>
       <iframe
         title="Matomo Opt Out Tracking"
-        style={{ border: '0', height: '200px', width: '600px' }}
+        className="h-52 w-full border-0"
         src="https://s.radschnellverbindungen.info/index.php?module=CoreAdminHome&action=optOut&language=de&backgroundColor=f0fdf4&fontColor=374151&fontSize=16px&fontFamily=Overpass"
       />
     </LayoutArticle>
