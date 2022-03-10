@@ -7,7 +7,6 @@ import { Layout } from '~/components/Layout/Layout';
 import { SplitContent } from '~/components/Layout/Section/SplitContent';
 import { ButtonLink } from '~/components/Links/ButtonLink';
 
-
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
     <Layout location={location} navigation={false}>
@@ -39,10 +38,10 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
       <div className="p-5">
         <SplitContent
           image={
-          <StaticImage
-            className="h-full w-full object-cover"
-            src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/RS1_Radschnellweg_Ruhr_in_M%C3%BClheim_2.jpg/800px-RS1_Radschnellweg_Ruhr_in_M%C3%BClheim_2.jpg?uselang=de"
-            alt="Support team"
+            <StaticImage
+              className="h-full w-full object-cover"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/RS1_Radschnellweg_Ruhr_in_M%C3%BClheim_2.jpg/800px-RS1_Radschnellweg_Ruhr_in_M%C3%BClheim_2.jpg?uselang=de"
+              alt="Support team"
             />
           }
           mainStory="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore nihil ea rerum ipsa. Nostrum consectetur sequi culpa doloribus omnis, molestiae esse placeat, exercitationem magnam quod molestias quia aspernatur deserunt voluptatibus."
@@ -52,11 +51,11 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
       </div>
       <div className="p-5">
         <SplitContent
-        image={
-          <StaticImage
-            className="h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1541687664971-639c2f8b63f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-            alt="Support team"
+          image={
+            <StaticImage
+              className="h-full w-full object-cover"
+              src="https://images.unsplash.com/photo-1541687664971-639c2f8b63f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+              alt="Support team"
             />
           }
           mainStory="Als Radschnellwege werden in Baden-Württemberg Radschnellverbindungen bezeichnet und wie folgt definiert:[1]
