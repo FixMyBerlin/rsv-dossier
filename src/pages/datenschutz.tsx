@@ -818,8 +818,8 @@ const DatenschutzPage = () => {
           <StaticImage
             src="https://datenschutz-generator.de/wp-content/plugins/ts-dsg/images/dsg-seal/dsg-seal-pp-de.png"
             alt="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."
-            width="250"
-            height="250"
+            width={250}
+            height={250}
           />
         </a>
       </p>
