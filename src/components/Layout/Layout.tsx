@@ -5,7 +5,6 @@ import { Footer, Navigation } from '.';
 type Props = {
   className?: string;
   location?: any; // TODO: define type
-  padding?: boolean;
   navigation?: boolean;
 };
 
@@ -13,8 +12,7 @@ type Props = {
 export const Layout: React.FC<Props> = ({
   className = '',
   navigation = true,
-  location,
-  padding = true,
+  location = '',
   children,
 }) => {
   return (

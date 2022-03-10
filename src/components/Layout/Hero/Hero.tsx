@@ -6,8 +6,19 @@ import { Logo } from '~/components/Layout/Logo';
 import { navigationLinks } from '~/components/Layout/Navigation/navigationLinks.const';
 import HeroGraphic from '~/images/hero_bg.svg';
 
-export const Hero = (props) => {
-  const { highlightedTitle, title, description, children } = props;
+type Props = {
+  highlightedTitle: string;
+  title: string;
+  description: string;
+  children: JSX.Element;
+};
+
+export const Hero: React.FC<Props> = ({
+  highlightedTitle,
+  title,
+  description,
+  children,
+}) => {
   return (
     <div className="relative overflow-hidden bg-gray-50">
       <div className="relative pt-6">

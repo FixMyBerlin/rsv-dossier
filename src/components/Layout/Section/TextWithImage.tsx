@@ -1,23 +1,23 @@
 import React from 'react';
 import { CameraIcon } from '@heroicons/react/solid';
 
-interface Props {
+type Props = {
+  title: string;
   imageUrl: string;
   imageCredits?: string;
   imageAlt?: string;
-  title: string;
   caption?: string;
-  children: any;
+  children: JSX.Element;
   mutedText?: string;
-}
+};
 
 export const TextWithImage: React.FC<Props> = ({
   imageUrl,
   children,
   title,
-  imageCredits,
-  imageAlt,
-  caption,
+  imageCredits = '',
+  imageAlt = '',
+  caption = '',
   mutedText,
 }) => {
   return (
@@ -62,7 +62,7 @@ export const TextWithImage: React.FC<Props> = ({
           </div>
           <div className="mt-8 lg:mt-0">
             <div className="mx-auto max-w-prose text-base lg:max-w-none">
-              <p className="text-lg text-gray-500">{children}</p>
+              <div className="text-lg text-gray-500">{children}</div>
             </div>
             {mutedText && (
               <div className="prose prose-emerald mx-auto mt-5 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">

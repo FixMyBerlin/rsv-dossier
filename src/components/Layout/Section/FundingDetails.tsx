@@ -1,19 +1,19 @@
 import React from 'react';
 import { Stats } from '~/types/Stats';
 
-interface Props {
+type Props = {
   title: string;
   imageUrl?: string;
   imageAlt?: string;
-  children: any;
   stats?: Stats[];
-}
+  children: JSX.Element;
+};
 
 export const FundingDetails: React.FC<Props> = ({
   title,
-  imageUrl,
-  imageAlt,
-  stats,
+  imageUrl = '',
+  imageAlt = '',
+  stats = [],
   children,
 }) => {
   return (
@@ -45,13 +45,15 @@ export const FundingDetails: React.FC<Props> = ({
           )}
         </div>
       </div>
-      <div className="relative h-56 bg-emerald-300 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
-        <img
-          className="h-full w-full object-cover"
-          src={imageUrl}
-          alt={imageAlt}
-        />
-      </div>
+      {imageUrl && (
+        <div className="relative h-56 bg-emerald-300 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
+          <img
+            className="h-full w-full object-cover"
+            src={imageUrl}
+            alt={imageAlt}
+          />
+        </div>
+      )}
     </div>
   );
 };

@@ -20,22 +20,24 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         description="Wir helfen Koordinator:innen durch frühzeitig ansetzende
         Partizipation bei Radschnellverbindungen und beschleunigen deren Umsetzung erheblich."
       >
-        <div className="rounded-full">
-          <ButtonLink
-            to="/karte"
-            className="w-full px-8 py-3 shadow md:text-lg"
-          >
-            Zur Karte
-          </ButtonLink>
-        </div>
-        <div className="mt-3 rounded-full sm:mt-0 sm:ml-3">
-          <ButtonLink
-            to="/radschnellwege"
-            className="btn-brand-outline w-full px-8 py-3 shadow md:text-lg"
-          >
-            Beteiligen
-          </ButtonLink>
-        </div>
+        <>
+          <div className="rounded-full">
+            <ButtonLink
+              to="/karte"
+              className="w-full px-8 py-3 shadow md:text-lg"
+            >
+              Zur Karte
+            </ButtonLink>
+          </div>
+          <div className="mt-3 rounded-full sm:mt-0 sm:ml-3">
+            <ButtonLink
+              to="/radschnellwege"
+              className="btn-brand-outline w-full px-8 py-3 shadow md:text-lg"
+            >
+              Beteiligen
+            </ButtonLink>
+          </div>
+        </>
       </Hero>
 
       <TextWithImage
@@ -67,31 +69,36 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         title="RSV-Baukasten"
         caption="Projektansatz"
       >
-        <p>
-          Mit dem RSV-Baukasten entsteht ein modulares System zur Durchführung
-          von Online-Beteiligungsformaten und Bürgerinformation zu
-          Radschnellverbindungen, das Bedarfe und Wissen konstruktiv in
-          Planungsprozesse einfließen lässt. Grundlage ist ein dynamisches
-          Online-Kartenformat das Informationen zu den geplanten
-          Radschnellverbindungen übersichtlich aufbereitet und
-          Beteiligungsinstrumente daran anbindet.
-        </p>
-        <b>Zentrale Ziele des geplanten RSV-Baukastens:</b>
-        <ul className="list-inside list-disc">
-          <li>
-            Passgenaue Online-Beteiligungsformate zur effektiven Einbindung der
-            Bürger:innen bei RSV-Planungen.
-          </li>
-          <li>
-            Verbesserte Kommunikation von RSV-Planungen in der Öffentlichkeit
-            und Steigerung der Akzeptanz von Planungsprojekten.
-          </li>
-          <li>
-            Beschleunigung der Errichtung von Radschnellverbindungen durch
-            zentralen Informationsaustausch und Kommunikationsschnittstellen auf
-            Ebene der Planenden.
-          </li>
-        </ul>
+        <>
+          <p>
+            Mit dem RSV-Baukasten entsteht ein modulares System zur Durchführung
+            von Online-Beteiligungsformaten und Bürgerinformation zu
+            Radschnellverbindungen, das Bedarfe und Wissen konstruktiv in
+            Planungsprozesse einfließen lässt. Grundlage ist ein dynamisches
+            Online-Kartenformat das Informationen zu den geplanten
+            Radschnellverbindungen übersichtlich aufbereitet und
+            Beteiligungsinstrumente daran anbindet.
+          </p>
+          <div className="mt-5">
+            <strong>Zentrale Ziele des geplanten RSV-Baukastens:</strong>
+            <ul className="list-inside list-disc">
+              <li>
+                Passgenaue Online-Beteiligungsformate zur effektiven Einbindung
+                der Bürger:innen bei RSV-Planungen.
+              </li>
+              <li>
+                Verbesserte Kommunikation von RSV-Planungen in der
+                Öffentlichkeit und Steigerung der Akzeptanz von
+                Planungsprojekten.
+              </li>
+              <li>
+                Beschleunigung der Errichtung von Radschnellverbindungen durch
+                zentralen Informationsaustausch und Kommunikationsschnittstellen
+                auf Ebene der Planenden.
+              </li>
+            </ul>
+          </div>
+        </>
       </TextWithImage>
       <TextWithImage
         imageUrl="https://images.unsplash.com/photo-1520923642038-b4259acecbd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80"
@@ -100,18 +107,20 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         title="Kontakt"
         caption="Hintergrund"
       >
-        <p>
-          Wenn Sie Interesse an einer Zusammenarbeit im Rahmen des Projektes
-          oder sich weitere Hintergründe zum Projekt wünschen, schreiben Sie mir
-          an{' '}
-          <ExternalLink href="mailto:hekele@radschnellverbindungen.info">
-            <b>hekele@radschnellverbindungen.info</b>
-          </ExternalLink>
-        </p>
+        <>
+          <p>
+            Wenn Sie Interesse an einer Zusammenarbeit im Rahmen des Projektes
+            oder sich weitere Hintergründe zum Projekt wünschen, schreiben Sie
+            mir an{' '}
+            <ExternalLink href="mailto:hekele@radschnellverbindungen.info">
+              <strong>hekele@radschnellverbindungen.info</strong>
+            </ExternalLink>
+          </p>
 
-        <p className="mt-5 text-black">
-          <b>Boris Hekele, Projektleiter</b>
-        </p>
+          <p className="mt-5 text-slate-800">
+            <strong>Boris Hekele, Projektleiter</strong>
+          </p>
+        </>
       </TextWithImage>
       <TextWithImage
         imageUrl="https://images.unsplash.com/photo-1579170053380-58064b2dee67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZXVyb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
@@ -120,14 +129,16 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         title="Förderübersicht"
         caption=""
       >
-        <p>
-          Auf der Übersichtsseite zu Fördermitteln finden Sie die wichtigsten
-          Informationen zu Förderprogrammen im Kontext von
-          Radschnellverbindungen und Partizipation in Bund und Land.
-        </p>
-        <ButtonLink to="/foerderungen" className="btn-brand-outline mt-5">
-          Zur Förderübersicht
-        </ButtonLink>
+        <>
+          <p>
+            Auf der Übersichtsseite zu Fördermitteln finden Sie die wichtigsten
+            Informationen zu Förderprogrammen im Kontext von
+            Radschnellverbindungen und Partizipation in Bund und Land.
+          </p>
+          <ButtonLink to="/foerderungen" className="btn-brand-outline mt-5">
+            Zur Förderübersicht
+          </ButtonLink>
+        </>
       </TextWithImage>
     </Layout>
   );
