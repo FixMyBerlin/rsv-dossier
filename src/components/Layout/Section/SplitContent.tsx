@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapIcon } from '@heroicons/react/outline';
-import { StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const stats = [
   { title: 'Radschnellwege in Planung', number: '102' },
@@ -16,7 +16,7 @@ export const SplitContent = (props) => {
   return (
     <div className="relative bg-white">
       <div className="h-56 bg-emerald-300 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
-        <StaticImage
+        <img
           className="h-full w-full object-cover"
           src={imageUrl}
           alt="Support team"
