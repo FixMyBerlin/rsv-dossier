@@ -10,9 +10,9 @@ import BmdvFundingImage from '~/static/BMDV-Foerderung.svg';
 
 export const BMDVFunding = () => {
   return (
-    <div className="display:flex">
+    <div>
       <h2 className="mt-6 text-lg font-bold text-gray-500">Förderprogramm</h2>
-      <div>
+      <div className="flex flex-row">
         <div>
           <BmdvFundingImage alt="Förderung durch BMDV" />
         </div>
