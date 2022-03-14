@@ -18,34 +18,34 @@ const stats: Stats[][] = [
     {
       title: 'Wo ist das Projekt',
       number: 'Berlin - Potsdam',
-      icon: <LocationMarkerIcon width={25} />,
+      icon: <LocationMarkerIcon />,
     },
     {
       title: 'Vorraussichtliche Fertigstellung',
       number: 'Juli 2025',
-      icon: <CalendarIcon width={25} />,
+      icon: <CalendarIcon />,
     },
     {
       title: 'Information',
       number: 'Lorem ipsum',
-      icon: <InformationCircleIcon width={25} />,
+      icon: <InformationCircleIcon />,
     },
   ],
   [
     {
       title: 'Region',
       number: 'Baden-Württemberg',
-      icon: <LocationMarkerIcon width={25} />,
+      icon: <LocationMarkerIcon />,
     },
     {
       title: 'Vorraussichtliche Fertigstellung',
       number: 'August 2028',
-      icon: <CalendarIcon width={25} />,
+      icon: <CalendarIcon />,
     },
     {
       title: 'Information',
       number: 'Lorem ipsum',
-      icon: <InformationCircleIcon width={25} />,
+      icon: <InformationCircleIcon />,
     },
   ],
 ];

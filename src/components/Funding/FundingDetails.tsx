@@ -29,8 +29,10 @@ export const FundingDetails: React.FC<Props> = ({
               <dl className="-mx-8 -mt-8 flex flex-wrap">
                 {stats.map((stat) => (
                   <div className="flex">
-                    <div className="flex flex-col px-8 pt-8">
-                      {stat.icon}
+                    <div className="flex flex-col px-8 pt-8 ">
+                      <span className="w-5 object-cover  md:w-10 ">
+                        {stat.icon}
+                      </span>
                       <dt className="text-base font-medium text-gray-500">
                         {stat.title}
                       </dt>

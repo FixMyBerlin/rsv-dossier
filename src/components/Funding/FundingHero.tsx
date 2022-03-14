@@ -16,19 +16,21 @@ export const FundingHero: React.VFC<Props> = ({
     <div className="relative overflow-hidden bg-gray-50">
       <div className="relative">
         <div className="bg-emerald-400 px-4">
-          <div className="mx-auto max-w-7xl py-5 text-center md:py-10">
+          <div className="mx-auto max-w-7xl py-10 text-center md:py-16">
             <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
               {title}
             </h1>
             {stats && (
-              <div className="mx-auto flex max-w-xl flex-col items-center justify-around py-5 text-xl sm:max-w-2xl md:flex-row lg:max-w-4xl lg:text-3xl">
+              <div className="mx-auto flex max-w-xl flex-col items-center justify-around py-5 text-xl sm:max-w-3xl md:flex-row lg:max-w-5xl lg:text-3xl">
                 {stats.map((stat) => (
                   <div className="flex items-center">
                     <span className="sr-only">{stat.title}</span>
                     <span className="m-1 w-6 object-cover sm:w-10 md:m-5 md:w-16">
                       {stat.icon}
                     </span>
-                    <span className="font-bold text-white">{stat.number}</span>
+                    <span className="m-auto font-bold text-white">
+                      {stat.number}
+                    </span>
                   </div>
                 ))}
               </div>
