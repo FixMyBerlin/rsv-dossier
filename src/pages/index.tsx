@@ -19,6 +19,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         title="schneller planen und bauen"
         description="Wir helfen Koordinator:innen durch frühzeitig ansetzende
         Partizipation bei Radschnellverbindungen und beschleunigen deren Umsetzung erheblich."
+        location={location}
       >
         <>
           <div className="rounded-full">

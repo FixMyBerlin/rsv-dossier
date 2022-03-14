@@ -1,6 +1,7 @@
 import { Disclosure } from '@headlessui/react';
 import { Link } from 'gatsby';
 import React from 'react';
+import { isHome } from '~/utils';
 import {
   NavigationMenuItemDesktop,
   NavigationMenuItemMobile,
@@ -10,23 +11,27 @@ import { Logo } from '../Logo';
 import { navigationLinks } from './navigationLinks.const';
 
 export const Navigation = ({ location }) => {
+  console.error(location);
   return (
     // https://tailwindui.com/components/application-ui/navigation/navbars
     <Disclosure
       as="nav"
-      className="z-20 bg-orange-400 shadow-md shadow-green-800/20"
+      className="z-20 bg-gray-50 shadow-md shadow-gray-400/5"
     >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex h-16 justify-between">
-              <nav className="flex w-full justify-between">
-                <div className="flex flex-shrink-0 items-center">
-                  <Link to="/" className="w-auto">
-                    <Logo />
-                  </Link>
+            <div className="flex h-20 justify-between">
+              <nav className="flex w-full items-center">
+                <div className="flex flex-shrink-0 items-center md:absolute">
+                  {!isHome(location) && (
+                    <Link to="/" className="w-auto">
+                      <Logo />
+                    </Link>
+                  )}
+                  {isHome(location) && <Logo />}
                 </div>
-                <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+                <div className="mx-auto hidden md:flex md:space-x-10">
                   {navigationLinks.map((link) => (
                     <NavigationMenuItemDesktop
                       name={link.name}
