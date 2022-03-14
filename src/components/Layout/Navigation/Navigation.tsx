@@ -11,7 +11,6 @@ import { Logo } from '../Logo';
 import { navigationLinks } from './navigationLinks.const';
 
 export const Navigation = ({ location }) => {
-  console.error(location);
   return (
     // https://tailwindui.com/components/application-ui/navigation/navbars
     <Disclosure
