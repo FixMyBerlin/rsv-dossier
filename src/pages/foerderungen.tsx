@@ -12,6 +12,7 @@ import {
   MapIcon,
   ClipboardCheckIcon,
 } from '@heroicons/react/outline';
+import BmdvLogo from '~/static/bmdv-logo.svg';
 
 const stats: Stats[][] = [
   [
@@ -83,7 +84,17 @@ const FundingPage: React.VFC<PageProps> = ({ location }) => {
         stats={heroStats}
       />
 
-      <FundingDetails stats={stats[0]} title="Name des Förderprogramms">
+      <FundingDetails
+        stats={stats[0]}
+        title="Stadt und Land"
+        svg={<BmdvLogo />}
+        categories={{
+          Machbarkeitsstudie: true,
+          Kommunikation: true,
+          Infrastruktur: false,
+          Personal: false,
+        }}
+      >
         <p>
           Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum
           urna sed consectetur neque tristique pellentesque. Blandit amet, sed
@@ -92,7 +103,16 @@ const FundingPage: React.VFC<PageProps> = ({ location }) => {
         </p>
       </FundingDetails>
 
-      <FundingDetails stats={stats[1]} title="Name des Förderprogramms">
+      <FundingDetails
+        stats={stats[1]}
+        title="Name des Förderprogramms"
+        categories={{
+          Machbarkeitsstudie: true,
+          Kommunikation: false,
+          Infrastruktur: false,
+          Personal: true,
+        }}
+      >
         <p>
           Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum
           urna sed consectetur neque tristique pellentesque. Blandit amet, sed
