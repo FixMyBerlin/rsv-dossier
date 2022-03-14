@@ -15,7 +15,7 @@ const Radschnellweg = ({ data: { radschnellweg } }) => {
       <div className="bg-white">
         <div className="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-base font-semibold uppercase tracking-wide text-orange-400">
+            <h2 className="text-base font-semibold uppercase tracking-wide text-emerald-400">
               {radschnellweg.from} &rarr; {radschnellweg.to}
             </h2>
             <p>

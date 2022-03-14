@@ -47,7 +47,7 @@ const RadschnellwegIndex = ({ data }) => {
                 className="flex flex-col rounded-2xl bg-white shadow-xl"
               >
                 <div className="relative flex-1 px-6 pt-16 pb-8 md:px-8">
-                  <div className="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-indigo-600 p-5 shadow-lg">
+                  <div className="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-emerald-400 p-5 shadow-lg">
                     {/* <!-- Heroicon name: outline/phone --> */}
                     <svg
                       className="h-6 w-6 text-white"

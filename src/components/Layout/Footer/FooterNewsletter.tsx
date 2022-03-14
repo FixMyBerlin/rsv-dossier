@@ -31,7 +31,7 @@ export const FooterNewsletter = () => {
         <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
           <button
             type="submit"
-            className="flex w-full items-center justify-center rounded-md border border-transparent bg-orange-500 py-2 px-4 text-base font-medium text-white hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-800"
+            className="flex w-full items-center justify-center rounded-md border border-transparent bg-emerald-500 py-2 px-4 text-base font-medium text-white hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-gray-800"
           >
             Anmelden
           </button>

@@ -15,12 +15,11 @@ export const NavigationMenuItemDesktop: React.FC<Props> = ({
     <Link
       to={to}
       className={classNames(
-        { 'border-orange-500 text-slate-900': active },
+        { 'font-bold text-emerald-500': active },
         {
-          'border-transparent text-slate-500 hover:border-emerald-300 hover:text-slate-700':
-            !active,
+          ' text-slate-500  hover:text-slate-700': !active,
         },
-        'inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium'
+        'text-md inline-flex items-center px-1 pt-1 font-medium'
       )}
     >
       {name}
