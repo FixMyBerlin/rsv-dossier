@@ -8,6 +8,9 @@ import {
   InformationCircleIcon,
   CalendarIcon,
   LocationMarkerIcon,
+  CurrencyEuroIcon,
+  MapIcon,
+  ClipboardCheckIcon,
 } from '@heroicons/react/outline';
 
 const stats: Stats[][] = [
@@ -47,6 +50,29 @@ const stats: Stats[][] = [
   ],
 ];
 
+const heroStats: Stats[] = [
+  {
+    title: 'Wo ist das Projekt',
+    number: '16 Mio. €',
+    icon: <CurrencyEuroIcon />,
+  },
+  {
+    title: 'Vorraussichtliche Fertigstellung',
+    number: '120 km',
+    icon: <MapIcon />,
+  },
+  {
+    title: 'Information',
+    number: '34 Anträge',
+    icon: <ClipboardCheckIcon />,
+  },
+  {
+    title: 'Information',
+    number: '57 Gemeinden',
+    icon: <LocationMarkerIcon />,
+  },
+];
+
 const FundingPage: React.VFC<PageProps> = ({ location }) => {
   return (
     <Layout location={location}>
@@ -54,6 +80,7 @@ const FundingPage: React.VFC<PageProps> = ({ location }) => {
       <FundingHero
         title="Förderübersicht"
         description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat laudantium."
+        stats={heroStats}
       />
 
       <FundingDetails stats={stats[0]} title="Name des Förderprogramms">
