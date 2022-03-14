@@ -2,7 +2,7 @@ import React from 'react';
 import { PageProps } from 'gatsby';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
-import { FundingDetails } from '~/components/Layout/Section';
+import { FundingDetails, FundingHero } from '~/components/Funding';
 import { Stats } from '~/types/Stats';
 import {
   InformationCircleIcon,
@@ -51,6 +51,10 @@ const FundingPage: React.VFC<PageProps> = ({ location }) => {
   return (
     <Layout location={location}>
       <HelmetSeo title="Förderübersicht" description="" image="" />
+      <FundingHero
+        title="Förderübersicht"
+        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat laudantium."
+      />
 
       <FundingDetails stats={stats[0]} title="Name des Förderprogramms">
         <p>

@@ -18,7 +18,7 @@ export const FundingDetails: React.FC<Props> = ({
 }) => {
   return (
     <div className="relative bg-white">
-      <div className="relative mt-10 max-w-4xl rounded-r-xl bg-slate-100 px-4 py-8 sm:py-12 sm:px-6 lg:py-10">
+      <div className="relative mt-10 max-w-4xl rounded-r-xl bg-gray-50 px-4 py-8 sm:py-12 sm:px-6 lg:py-10">
         <div className="mx-auto max-w-2xl lg:mr-0 lg:ml-auto lg:w-2/3 lg:max-w-none lg:pl-10">
           <h2 className="mt-3 text-3xl font-extrabold text-gray-900 sm:text-4xl">
             {title}
