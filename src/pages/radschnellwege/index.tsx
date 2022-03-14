@@ -5,7 +5,7 @@ import { Layout } from '~/components/Layout';
 
 const RadschnellwegIndex = ({ data }) => {
   return (
-    <Layout padding={false}>
+    <Layout>
       <HelmetSeo title="Radschnellwege" description="TODO" image="TODO" />
       <div className="bg-white">
         {/* Header */}

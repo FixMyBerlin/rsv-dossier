@@ -6,7 +6,7 @@ import { TextLink } from '~/components/Links/TextLink';
 
 const Radschnellweg = ({ data: { radschnellweg } }) => {
   return (
-    <Layout padding={false}>
+    <Layout>
       <HelmetSeo
         title={`Radschnellwege ${radschnellweg.from} &rarr; {radschnellweg.to}`}
         description="TODO"
