@@ -6,7 +6,7 @@ import { footerLinks } from './FooterLinks/footerLinks.const';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="z-0 bg-orange-400" aria-labelledby="footer-heading">
+    <footer className="z-0 bg-emerald-100" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
           </div>
           {/* <FooterNewsletter /> */}
         </div>
-        <div className="mt-8 border-t border-orange-600 pt-8 md:flex md:items-center md:justify-between">
+        <div className="mt-8 border-t border-emerald-400 pt-8 md:flex md:items-center md:justify-between">
           <FooterSocialIcons />
           <p className="mt-8 text-base text-slate-800 md:order-1 md:mt-0">
             Gebaut mit{' '}

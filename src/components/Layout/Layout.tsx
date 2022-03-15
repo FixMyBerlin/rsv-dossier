@@ -5,7 +5,6 @@ import { Footer, Navigation } from '.';
 type Props = {
   className?: string;
   location?: any; // TODO: define type
-  padding?: boolean;
   navigation?: boolean;
 };
 
@@ -13,32 +12,19 @@ type Props = {
 export const Layout: React.FC<Props> = ({
   className = '',
   navigation = true,
-  location,
-  padding = true,
+  location = '',
   children,
 }) => {
   return (
     <div className="flex h-full flex-col">
       {navigation && <Navigation location={location} />}
       {navigation && (
-        <main
-          className={classNames(
-            className,
-            { 'p-5 pt-14': padding },
-            'z-0 flex-grow bg-green-50 shadow-md shadow-green-900/20'
-          )}
-        >
+        <main className={classNames(className, 'z-0 mb-5 flex-grow bg-white')}>
           {children}
         </main>
       )}
       {!navigation && (
-        <main
-          className={classNames(
-            className,
-            { 'p-5': padding },
-            'z-0 flex-grow bg-green-50 shadow-md shadow-green-900/20'
-          )}
-        >
+        <main className={classNames(className, 'z-0 mb-5 flex-grow bg-white')}>
           {children}
         </main>
       )}
