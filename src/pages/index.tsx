@@ -6,6 +6,10 @@ import { Layout } from '~/components/Layout/Layout';
 import { TextWithImage } from '~/components/Layout/Section/';
 import { ExternalLink } from '~/components/Links';
 import { ButtonLink } from '~/components/Links/ButtonLink';
+import RadschnellverbindungStockImage from './index/rs1-Radschnellweg_Ruhr_in_Muelheim.jpg';
+import CyclingStockImage from './index/stock-netherland-cycling.avif';
+import EuroNotesStockImage from './index/stock-euro.avif';
+import TelephoneStockImage from './index/stock-telephone.avif';
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
@@ -42,9 +46,9 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
       </Hero>
 
       <TextWithImage
-        imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/RS1_Radschnellweg_Ruhr_in_M%C3%BClheim_2.jpg/800px-RS1_Radschnellweg_Ruhr_in_M%C3%BClheim_2.jpg?uselang=de"
+        imageUrl={RadschnellverbindungStockImage}
         imageAlt="Zeigt den RS1 in NRW"
-        imageCredits="Wikimedia"
+        imageCredits="Mmflooki - Wikimedia Commons (CC BY-SA 4.0)"
         title="Deutschland wird Fahrradland"
         caption="Hintergrund"
       >
@@ -64,8 +68,8 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         </p>
       </TextWithImage>
       <TextWithImage
-        imageUrl="https://images.unsplash.com/photo-1541687664971-639c2f8b63f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-        imageAlt="TestAlt"
+        imageUrl={CyclingStockImage}
+        imageAlt="Zwei Fahrradfahrende Menschen"
         imageCredits=""
         title="RSV-Baukasten"
         caption="Projektansatz"
@@ -102,8 +106,8 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         </>
       </TextWithImage>
       <TextWithImage
-        imageUrl="https://images.unsplash.com/photo-1520923642038-b4259acecbd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80"
-        imageAlt=""
+        imageUrl={TelephoneStockImage}
+        imageAlt="Altes Telefon mit Wählscheibe"
         imageCredits=""
         title="Kontakt"
         caption="Hintergrund"
@@ -124,8 +128,8 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         </>
       </TextWithImage>
       <TextWithImage
-        imageUrl="https://images.unsplash.com/photo-1579170053380-58064b2dee67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZXVyb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        imageAlt=""
+        imageUrl={EuroNotesStockImage}
+        imageAlt="Euro Geldscheine"
         imageCredits=""
         title="Förderübersicht"
         caption=""
