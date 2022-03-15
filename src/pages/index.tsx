@@ -86,7 +86,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           </p>
           <div className="mt-5">
             <strong>Zentrale Ziele des geplanten RSV-Baukastens:</strong>
-            <ul className="list-inside list-disc">
+            <ul className="ml-5 list-disc">
               <li>
                 Passgenaue Online-Beteiligungsformate zur effektiven Einbindung
                 der Bürger:innen bei RSV-Planungen.
