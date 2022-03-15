@@ -59,19 +59,6 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           title="Hintergrund"
         />
       </div>
-      <div className="p-5">
-        <RSVDetails
-          imageUrl="https://images.unsplash.com/photo-1541687664971-639c2f8b63f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-          summary="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          title="RSV 1: Hamburg - Lübeck"
-          stats={{
-            costs: 'Kosten',
-            length: 'Länge',
-            community: 'Gemeinde',
-            duration: 'Zeitraum',
-          }}
-        />
-      </div>
     </Layout>
   );
 };

@@ -9,29 +9,39 @@ const statsIcons = {
   community: MapIcon,
   duration: MapIcon,
 };
+const stats = {
+  costs: 'Kosten',
+  length: 'Länge',
+  community: 'Gemeinde',
+  duration: 'Zeitraum',
+};
 
+const summary =
+  'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.';
 export const RSVDetails = (props) => {
-  const { title, summary, stats, imageUrl, projectUrl } = props;
+  const { radschnellweg } = props;
   return (
     <div className="relative bg-white">
-      <div className="h-56 bg-emerald-300 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
+      <div className="h-56 rounded-br-lg bg-emerald-300 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
         {/* TODO: replace with actual map */}
         <img
-          className="h-full w-full object-cover"
-          src={imageUrl}
+          className="h-full w-full rounded-br-lg object-cover"
+          src={
+            'https://images.unsplash.com/photo-1541687664971-639c2f8b63f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+          }
           alt="Support team"
         />
       </div>
       <div className="relative mx-auto max-w-7xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
         <div className="mx-auto max-w-2xl lg:mr-0 lg:ml-auto lg:w-1/2 lg:max-w-none lg:pl-10">
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            {title}
+            RSV: {radschnellweg.from} &rarr; {radschnellweg.to}
           </h2>
           <h2 className="mt-6 text-lg font-bold text-gray-500">Kurzfassung</h2>
           <p className="text-lg text-gray-500">{summary}</p>
           <div className="mt-4 rounded-full">
             <ButtonLink
-              to={projectUrl}
+              to={radschnellweg.website}
               className="btn-brand-outline px-8 py-3 shadow md:text-lg"
             >
               Projektwebsite
