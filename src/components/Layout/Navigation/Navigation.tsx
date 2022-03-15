@@ -9,6 +9,7 @@ import {
 } from '.';
 import { Logo } from '../Logo';
 import { navigationLinks } from './navigationLinks.const';
+// import { StaticImage } from 'gatsby-plugin-image';
 
 export const Navigation = ({ location }) => {
   return (

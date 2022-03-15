@@ -1,6 +1,7 @@
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { LayoutArticle } from '~/components/Layout';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const DatenschutzPage = () => {
   return (
@@ -814,18 +815,18 @@ const DatenschutzPage = () => {
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
-          <img
+          <StaticImage
             src="https://datenschutz-generator.de/wp-content/plugins/ts-dsg/images/dsg-seal/dsg-seal-pp-de.png"
             alt="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."
-            width="250"
-            height="250"
+            width={250}
+            height={250}
           />
         </a>
       </p>
       <h2>Tracking Opt-Out (Matomo)</h2>
       <iframe
         title="Matomo Opt Out Tracking"
-        style={{ border: '0', height: '200px', width: '600px' }}
+        className="h-52 w-full border-0"
         src="https://s.radschnellverbindungen.info/index.php?module=CoreAdminHome&action=optOut&language=de&backgroundColor=f0fdf4&fontColor=374151&fontSize=16px&fontFamily=Overpass"
       />
     </LayoutArticle>

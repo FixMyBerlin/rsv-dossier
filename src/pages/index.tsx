@@ -1,4 +1,5 @@
 import { PageProps } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Hero } from '~/components/Layout/Hero/Hero';
@@ -44,7 +45,6 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           </div>
         </>
       </Hero>
-
       <TextWithImage
         imageUrl={RadschnellverbindungStockImage}
         imageAlt="Zeigt den RS1 in NRW"
@@ -148,5 +148,4 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
     </Layout>
   );
 };
-
 export default IndexPage;
