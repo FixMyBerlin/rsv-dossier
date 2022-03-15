@@ -2,7 +2,7 @@ import React from 'react';
 import { MapIcon } from '@heroicons/react/outline';
 
 const stats = [
-  { title: 'Radschnellwege in Planung', number: '102' },
+  { title: 'Radschnellverbindungen in Planung', number: '102' },
   { title: 'Förderumfang', number: '16 Mio. €' },
   {
     title: 'Planungskilometer',

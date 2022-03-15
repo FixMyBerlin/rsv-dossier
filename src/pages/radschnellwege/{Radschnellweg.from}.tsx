@@ -8,7 +8,7 @@ const Radschnellweg = ({ data: { radschnellweg } }) => {
   return (
     <Layout>
       <HelmetSeo
-        title={`Radschnellwege ${radschnellweg.from} &rarr; {radschnellweg.to}`}
+        title={`Radschnellverbindung ${radschnellweg.from} &rarr; {radschnellweg.to}`}
         description="TODO"
         image="TODO"
       />

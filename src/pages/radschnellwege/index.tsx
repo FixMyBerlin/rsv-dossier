@@ -38,7 +38,7 @@ const RadschnellwegIndex = ({ data }) => {
           aria-labelledby="contact-heading"
         >
           <h2 className="sr-only" id="contact-heading">
-            Alle Radschnellwege
+            Alle Radschnellverbindungen
           </h2>
           <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
             {data.radschnellwege.nodes.map((radschnellweg) => (

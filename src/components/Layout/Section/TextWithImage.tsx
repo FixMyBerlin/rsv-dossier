@@ -65,9 +65,9 @@ export const TextWithImage: React.FC<Props> = ({
               <div className="text-lg text-gray-500">{children}</div>
             </div>
             {mutedText && (
-              <div className="prose prose-emerald mx-auto mt-5 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">
+              <p className="prose prose-emerald mx-auto mt-5 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">
                 {mutedText}
-              </div>
+              </p>
             )}
           </div>
         </div>
