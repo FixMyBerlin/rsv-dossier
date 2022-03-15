@@ -4,10 +4,10 @@ import { ButtonLink } from '~/components/Links/ButtonLink';
 import { BMDVFunding } from '~/components/Layout/BMDVFunding';
 
 const statsIcons = {
-  costs: MapIcon,
-  length: MapIcon,
-  community: MapIcon,
-  duration: MapIcon,
+  costs: <MapIcon className="h-6 w-6" aria-hidden="true" />,
+  length: <MapIcon className="h-6 w-6" aria-hidden="true" />,
+  community: <MapIcon className="h-6 w-6" aria-hidden="true" />,
+  duration: <MapIcon className="h-6 w-6" aria-hidden="true" />,
 };
 const stats = {
   costs: 'Kosten',
@@ -16,9 +16,21 @@ const stats = {
   duration: 'Zeitraum',
 };
 
+type Props = {
+  radschnellweg: {
+    ref: string;
+    name: string;
+    website: string;
+    status: string;
+    to: string;
+    from: string;
+    finished?: string;
+    costs?: number;
+  };
+};
 const summary =
   'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.';
-export const RSVDetails = (props) => {
+export const RSVDetails: React.VFC<Props> = (props) => {
   const { radschnellweg } = props;
   return (
     <div className="relative bg-white">
@@ -33,7 +45,8 @@ export const RSVDetails = (props) => {
       <div className="relative mx-auto max-w-7xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
         <div className="mx-auto max-w-2xl lg:mr-0 lg:ml-auto lg:w-1/2 lg:max-w-none lg:pl-10">
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            RSV: {radschnellweg.from} &rarr; {radschnellweg.to}
+            {radschnellweg.ref && `${radschnellweg.ref}: `} {radschnellweg.from}{' '}
+            &rarr; {radschnellweg.to}
           </h2>
           <h2 className="mt-6 text-lg font-bold text-gray-500">Kurzfassung</h2>
           <p className="text-lg text-gray-500">{summary}</p>
@@ -50,10 +63,9 @@ export const RSVDetails = (props) => {
               {Object.keys(stats).map((stat) => (
                 <div className="flex flex-col px-8 pt-8">
                   <div className="flex h-12 w-12 items-center justify-center rounded-md bg-emerald-500 text-white">
-                    <MapIcon className="h-6 w-6" aria-hidden="true" />
+                    {statsIcons[stat]}
                   </div>
-                  {statsIcons[stat]}
-                  <dt className="order-2 text-base font-medium text-gray-500">
+                  <dt className="mt-3 text-base font-medium text-gray-500">
                     {stats[stat]}
                   </dt>
                 </div>
