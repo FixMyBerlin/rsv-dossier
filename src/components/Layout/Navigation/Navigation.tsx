@@ -7,6 +7,7 @@ import {
   NavigationMobileMenuButton,
 } from '.';
 import { navigationLinks } from './navigationLinks.const';
+// import { StaticImage } from 'gatsby-plugin-image';
 
 export const Navigation = ({ location }) => {
   return (
@@ -21,12 +22,12 @@ export const Navigation = ({ location }) => {
             <div className="flex h-16 justify-between">
               <nav className="flex w-full justify-between">
                 <div className="flex flex-shrink-0 items-center">
-                  {/* <img
+                  {/* <StaticImage
                     className="block lg:hidden h-8 w-auto"
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                     alt="Workflow"
                   />
-                  <img
+                  <StaticImage
                     className="hidden h-8 w-auto lg:block"
                     src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
                     alt="Workflow"

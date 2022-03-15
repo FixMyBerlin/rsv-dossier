@@ -12,6 +12,8 @@ module.exports = {
   // TailwindCSS needs PostCSS, https://tailwindcss.com/docs/guides/gatsby
   plugins: [
     'gatsby-plugin-postcss',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-yaml',
       options: {
