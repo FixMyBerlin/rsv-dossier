@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroGraphic from '~/images/hero_bg.svg';
+import HeroGraphic from './hero_bg.svg';
 import { Navigation } from '../Navigation/Navigation';
 
 type Props = {
