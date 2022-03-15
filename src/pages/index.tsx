@@ -1,5 +1,4 @@
 import { PageProps } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Hero } from '~/components/Layout/Hero/Hero';
@@ -7,16 +6,13 @@ import { Layout } from '~/components/Layout/Layout';
 import { TextWithImage } from '~/components/Layout/Section/';
 import { ExternalLink } from '~/components/Links';
 import { ButtonLink } from '~/components/Links/ButtonLink';
-import RadschnellverbindungStockImage from './index/rs1-Radschnellweg_Ruhr_in_Muelheim.jpg';
-import CyclingStockImage from './index/stock-netherland-cycling.avif';
-import EuroNotesStockImage from './index/stock-euro.avif';
-import TelephoneStockImage from './index/stock-telephone.avif';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
     <Layout location={location} navigation={false}>
       <HelmetSeo
-        title="Radschnellwege"
+        title="Radschnellverbindungen"
         description="Hier entsteht die Informationsstelle für Radschnellverbindungen in Deutschland"
       />
       <Hero
@@ -46,8 +42,12 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         </>
       </Hero>
       <TextWithImage
-        imageUrl={RadschnellverbindungStockImage}
-        imageAlt="Zeigt den RS1 in NRW"
+        image={
+          <StaticImage
+            src="./index/rs1-Radschnellweg_Ruhr_in_Muelheim.jpg"
+            alt="Zeigt den RS1 in NRW"
+          />
+        }
         imageCredits="Mmflooki - Wikimedia Commons (CC BY-SA 4.0)"
         title="Deutschland wird Fahrradland"
         caption="Hintergrund"
@@ -68,8 +68,12 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         </p>
       </TextWithImage>
       <TextWithImage
-        imageUrl={CyclingStockImage}
-        imageAlt="Zwei Fahrradfahrende Menschen"
+        image={
+          <StaticImage
+            src="./index/stock-netherland-cycling.jpg"
+            alt="Zwei Fahrradfahrende Menschen"
+          />
+        }
         imageCredits=""
         title="RSV-Baukasten"
         caption="Projektansatz"
@@ -106,8 +110,12 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         </>
       </TextWithImage>
       <TextWithImage
-        imageUrl={TelephoneStockImage}
-        imageAlt="Altes Telefon mit Wählscheibe"
+        image={
+          <StaticImage
+            src="./index/stock-telephone.jpg"
+            alt="Altes Telefon mit Wählscheibe"
+          />
+        }
         imageCredits=""
         title="Kontakt"
         caption="Hintergrund"
@@ -128,8 +136,9 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         </>
       </TextWithImage>
       <TextWithImage
-        imageUrl={EuroNotesStockImage}
-        imageAlt="Euro Geldscheine"
+        image={
+          <StaticImage src="./index/stock-euro.jpg" alt="Euro Geldscheine" />
+        }
         imageCredits=""
         title="Förderübersicht"
         caption=""

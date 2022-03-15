@@ -3,20 +3,18 @@ import { CameraIcon } from '@heroicons/react/solid';
 
 type Props = {
   title: string;
-  imageUrl: string;
+  image: JSX.Element;
   imageCredits?: string;
-  imageAlt?: string;
   caption?: string;
   children: JSX.Element;
   mutedText?: string;
 };
 
 export const TextWithImage: React.FC<Props> = ({
-  imageUrl,
+  image,
   children,
   title,
   imageCredits = '',
-  imageAlt = '',
   caption = '',
   mutedText,
 }) => {
@@ -39,14 +37,8 @@ export const TextWithImage: React.FC<Props> = ({
           <div className="relative ">
             <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
               <figure>
-                <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
-                  <img
-                    className="rounded-lg object-cover object-center shadow-lg"
-                    src={imageUrl}
-                    alt={imageAlt}
-                    width={450}
-                    height={600}
-                  />
+                <div className="max-h-full max-w-[80%] overflow-hidden rounded-lg object-cover object-center shadow-lg">
+                  {image}
                 </div>
                 {imageCredits && (
                   <figcaption className="mt-3 flex text-sm text-gray-500">
