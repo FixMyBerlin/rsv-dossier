@@ -26,9 +26,7 @@ export const RSVDetails = (props) => {
         {/* TODO: replace with actual map */}
         <img
           className="h-full w-full rounded-br-lg object-cover shadow-xl"
-          src={
-            'https://images.unsplash.com/photo-1541687664971-639c2f8b63f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
-          }
+          src="https://images.unsplash.com/photo-1541687664971-639c2f8b63f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
           alt="Support team"
         />
       </div>

@@ -4,7 +4,6 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Hero } from '~/components/Layout/Hero/Hero';
 import { Layout } from '~/components/Layout/Layout';
 import { SplitContent } from '~/components/Layout/Section/SplitContent';
-import { RSVDetails } from '~/components/Layout/Section/RSVDetails';
 import { ButtonLink } from '~/components/Links/ButtonLink';
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
