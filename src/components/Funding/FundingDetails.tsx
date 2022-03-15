@@ -31,7 +31,7 @@ export const FundingDetails: React.FC<Props> = ({
 }) => {
   return (
     <div className="flex flex-col bg-white pt-10 md:flex-row">
-      <div className="order-2 max-w-4xl bg-gray-50 px-4 py-8 sm:py-12 sm:px-6 md:order-none md:rounded-r-xl lg:py-10">
+      <div className="max-w-4xl bg-gray-50 px-4 py-8 sm:py-12 sm:px-6 md:rounded-r-xl lg:max-w-6xl lg:py-10">
         <div className="mx-auto max-w-2xl lg:mr-0 lg:ml-auto lg:w-2/3 lg:max-w-none lg:pl-10">
           <h2 className="mt-3 text-3xl font-extrabold text-gray-900 sm:text-4xl">
             {title}
@@ -40,17 +40,17 @@ export const FundingDetails: React.FC<Props> = ({
           {stats && <FundingStats stats={stats} />}
         </div>
       </div>
-      <div className="order-1 mx-10 flex md:order-none md:block">
+      <div className="mx-10 flex flex-col sm:flex-row md:block">
         {imageUrl && (
-          <div className="h-50 mb-5 bg-emerald-300 sm:h-72 lg:left-0 lg:h-full lg:w-1/2">
+          <div className="max-h-50 mb-5 w-full">
             <img
-              className="h-full w-full object-cover"
+              className="mx-auto h-full w-full object-cover"
               src={imageUrl}
               alt={imageAlt}
             />
           </div>
         )}
-        {svg && <div className="max-h-30 mb-5 object-cover">{svg}</div>}
+        {svg && <div className="max-h-50 mx-auto mb-5 object-cover">{svg}</div>}
         {categories && (
           <ul className="mx-auto my-5 text-center">
             {Object.keys(categories).map((category) => (

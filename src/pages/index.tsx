@@ -26,20 +26,20 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         location={location}
       >
         <>
-          <div className="rounded-full">
+          {/* <div className="rounded-full">
             <ButtonLink
               to="/karte"
               className="w-full px-8 py-3 shadow md:text-lg"
             >
               Zur Karte
             </ButtonLink>
-          </div>
+          </div> */}
           <div className="mt-3 rounded-full sm:mt-0 sm:ml-3">
             <ButtonLink
-              to="/radschnellwege"
+              to="/projekt-hintergrund"
               className="btn-brand-outline w-full px-8 py-3 shadow md:text-lg"
             >
-              Beteiligen
+              Projekt-Hintergrund
             </ButtonLink>
           </div>
         </>
