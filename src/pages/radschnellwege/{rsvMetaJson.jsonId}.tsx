@@ -4,17 +4,12 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { TextLink } from '~/components/Links/TextLink';
 
-const Radschnellweg = ({
-  data: {
-    geoJson: { features },
-  },
-}) => {
-  console.log(features);
-  var radschnellweg = features[1];
+const Radschnellweg = ({ data }) => {
+  const { radschnellweg, geometries } = data;
   return (
     <Layout>
       <HelmetSeo
-        title={`Radschnellverbindung ${radschnellweg.from} &rarr; {radschnellweg.to}`}
+        title={`Radschnellverbindung ${radschnellweg.from} &rarr; ${radschnellweg.to}`}
         description="TODO"
         image="TODO"
       />
@@ -47,21 +42,34 @@ export default Radschnellweg;
 
 export const query = graphql`
   query ($id: String!) {
-    geoJson(features: { elemMatch: { id: { eq: $id } } }) {
-      features {
+    geometries: allRsvGeoJson(filter: { properties: { id_rsv: { eq: $id } } }) {
+      nodes {
         geometry {
           coordinates
         }
         properties {
-          from
-          name
+          id_rsv
+          id_segment
           length
-          state
-          ref
-          to
-          website
+          planning_phase
+          status
+          variants
+          detail_level
         }
       }
+    }
+    radschnellweg: rsvMetaJson(jsonId: { eq: $id }) {
+      general {
+        description
+        from
+        name
+        ref
+        slug
+        to
+      }
+      finished
+      cost
+      state
     }
   }
 `;

@@ -14,12 +14,19 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
-    'gatsby-transformer-geojson',
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: './src/radschnellwege',
-        name: 'strecken',
+        path: './src/radschnellwege/metadata',
+        name: 'rsv_meta',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './src/radschnellwege/geojson',
+        name: 'rsv_geo',
       },
     },
     {
