@@ -14,23 +14,12 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-transformer-yaml',
-      options: {
-        typeName: ({ node }) => {
-          const name = node.sourceInstanceName;
-          if (name === 'radschnellwege') {
-            return 'Radschnellweg';
-          }
-          return name;
-        },
-      },
-    },
+    'gatsby-transformer-geojson',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: './src/radschnellwege',
-        name: 'radschnellwege',
+        name: 'strecken',
       },
     },
     {
