@@ -37,7 +37,7 @@ export const TextWithImage: React.FC<Props> = ({
           <div className="relative ">
             <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
               <figure>
-                <div className="max-h-full max-w-[80%] overflow-hidden rounded-lg object-cover object-center shadow-lg">
+                <div className="max-h-full max-w-[500px] overflow-hidden rounded-lg object-cover object-center shadow-lg">
                   {image}
                 </div>
                 {imageCredits && (
