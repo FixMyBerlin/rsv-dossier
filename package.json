@@ -6,7 +6,7 @@
   "license": "AGPL,MIT",
   "keywords": [],
   "scripts": {
-    "start": "gatsby develop",
+    "start": "gatsby develop -p 9000",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
