@@ -22,8 +22,8 @@ export const Navigation = ({ location }) => {
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-20 justify-between">
-              <nav className="flex w-full items-center">
-                <div className="flex flex-shrink-0 items-center md:absolute">
+              <nav className="flex w-full items-center justify-between">
+                <div className="flex flex-shrink-0 items-center">
                   {!isHome(location) && (
                     <Link to="/" className="w-auto">
                       <Logo />
@@ -31,7 +31,7 @@ export const Navigation = ({ location }) => {
                   )}
                   {isHome(location) && <Logo />}
                 </div>
-                <div className="mx-auto hidden md:flex md:space-x-10">
+                <div className="hidden md:flex md:space-x-10">
                   {navigationLinks.map((link) => (
                     <NavigationMenuItemDesktop
                       name={link.name}
