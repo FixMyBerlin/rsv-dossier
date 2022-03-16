@@ -58,5 +58,17 @@ module.exports = {
         siteUrl: 'https://radschnellverbindungen.info',
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Radschnellverbindungen.info`,
+        short_name: `RSV.info`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#34d399`,
+        display: `minimal-ui`,
+        icon: 'src/images/favicon.png',
+      },
+    },
   ],
 };
