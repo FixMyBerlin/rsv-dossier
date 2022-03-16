@@ -4,7 +4,13 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { TextLink } from '~/components/Links/TextLink';
 
-const Radschnellweg = ({ data: { radschnellweg } }) => {
+const Radschnellweg = ({
+  data: {
+    geoJson: { features },
+  },
+}) => {
+  console.log(features);
+  var radschnellweg = features[1];
   return (
     <Layout>
       <HelmetSeo
@@ -41,18 +47,21 @@ export default Radschnellweg;
 
 export const query = graphql`
   query ($id: String!) {
-    radschnellweg(id: { eq: $id }) {
-      from
-      to
-      accuracy
-      pilot_study
-      state
-      website
-      coordinates
-      length
-      finished
-      ref
-      via
+    geoJson(features: { elemMatch: { id: { eq: $id } } }) {
+      features {
+        geometry {
+          coordinates
+        }
+        properties {
+          from
+          name
+          length
+          state
+          ref
+          to
+          website
+        }
+      }
     }
   }
 `;
