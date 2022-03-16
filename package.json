@@ -1,10 +1,9 @@
 {
   "name": "radschnellverbindungen.info",
-  "description": "The website for https://radschnellverbindungen.info, build with Gatsby.",
+  "description": "The website for https://radschnellverbindungen.info.",
   "version": "0.1.0",
   "author": "FixMyCity <hello@fixmycity.de>",
-  "license": "AGPL,MIT",
-  "keywords": [],
+  "license": "AGPL-3.0",
   "scripts": {
     "start": "gatsby develop -p 9000",
     "build": "gatsby build",
