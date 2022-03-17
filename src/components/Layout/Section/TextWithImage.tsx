@@ -21,7 +21,7 @@ export const TextWithImage: React.FC<Props> = ({
   return (
     <div className="overflow-hidden bg-white">
       <div className="relative mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
+        <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none ">
           <div>
             {caption && (
               <h2 className="text-base font-semibold uppercase tracking-wide text-emerald-400">
@@ -33,11 +33,11 @@ export const TextWithImage: React.FC<Props> = ({
             </h3>
           </div>
         </div>
-        <div className="mt-5 lg:grid lg:grid-cols-2 lg:gap-8">
+        <div className="mt-5 lg:grid lg:grid-cols-[1fr_2fr] lg:gap-8">
           <div className="relative ">
             <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
               <figure>
-                <div className="max-h-full max-w-[500px] overflow-hidden rounded-lg object-cover object-center shadow-lg">
+                <div className="max-h-full overflow-hidden rounded-lg object-cover object-center shadow-lg">
                   {image}
                 </div>
                 {imageCredits && (
