@@ -5,7 +5,6 @@ import { Layout } from '~/components/Layout';
 import { RSVDetails } from '~/components/Layout/Section/RSVDetails';
 
 const Radschnellweg = ({ data: { meta, geometries } }) => {
-  console.log(meta, geometries);
   return (
     <Layout>
       <HelmetSeo title={meta.general.name} description="TODO" image="TODO" />
