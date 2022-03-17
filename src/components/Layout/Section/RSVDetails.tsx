@@ -3,7 +3,7 @@ import { MapIcon } from '@heroicons/react/outline';
 import { ButtonLink } from '~/components/Links/ButtonLink';
 import { BMDVFunding } from '~/components/Layout/BMDVFunding';
 import Map, { Source, Layer, NavigationControl } from 'react-map-gl';
-import maplibregl from 'maplibre-gl';
+import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { LineLayer } from 'mapbox-gl';
 
@@ -55,8 +55,30 @@ type Props = {
   };
 };
 
-const lineWidth = 10;
-
+const colors = [
+  '#e6194B',
+  '#3cb44b',
+  '#ffe119',
+  '#4363d8',
+  '#f58231',
+  '#911eb4',
+  '#42d4f4',
+  '#f032e6',
+  '#bfef45',
+  '#fabed4',
+  '#469990',
+  '#dcbeff',
+  '#9A6324',
+  '#fffac8',
+  '#800000',
+  '#aaffc3',
+  '#808000',
+  '#ffd8b1',
+  '#000075',
+];
+const mapBounds: LngLatBoundsLike = [
+  5.98865807458, 47.3024876979, 15.0169958839, 54.983104153,
+];
 export const RSVDetails: React.VFC<Props> = ({ meta, geometries }) => {
   return (
     <div className="relative bg-white">
@@ -70,14 +92,15 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometries }) => {
           mapLib={maplibregl}
           style={{ display: 'cover' }}
           mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
+          maxBounds={mapBounds}
         >
-          {geometries.nodes.map((geom) => {
+          {geometries.nodes.map((geom, index) => {
             const layerStyle: LineLayer = {
               id: geom.properties.id_segment,
               type: 'line',
               paint: {
-                'line-width': 10,
-                'line-color': '#000000',
+                'line-width': 6,
+                'line-color': colors[index],
               },
             };
             return (
