@@ -16,9 +16,7 @@ export const NavigationMenuItemDesktop: React.FC<Props> = ({
       to={to}
       className={classNames(
         { 'font-bold text-emerald-500': active },
-        {
-          ' text-slate-500  hover:text-slate-700': !active,
-        },
+        { ' text-slate-500  hover:text-slate-700': !active },
         'text-md inline-flex items-center px-1 pt-1 font-medium'
       )}
     >

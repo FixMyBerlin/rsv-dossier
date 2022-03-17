@@ -60,6 +60,8 @@ export const HelmetSeo: React.FC<SeoProps> = ({
 
       {(article ? true : null) && <meta property="og:type" content="article" />}
       <meta name="twitter:card" content="summary_large_image" />
+
+      <meta name="theme-color" content="#34d399" />
     </Helmet>
   );
 };

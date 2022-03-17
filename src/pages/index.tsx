@@ -16,7 +16,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         description="Hier entsteht die Informationsstelle für Radschnellverbindungen in Deutschland"
       />
       <Hero
-        highlightedTitle="Radschnellverbindungen"
+        highlightedTitle="Rad&shy;schnell&shy;verbindungen"
         title="schneller planen und bauen"
         description="Wir helfen Koordinator:innen durch frühzeitig ansetzende
         Partizipation bei Radschnellverbindungen und beschleunigen deren Umsetzung erheblich."
