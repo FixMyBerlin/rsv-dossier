@@ -4,10 +4,7 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const SteckbriefeIndex = ({
-  data: { radschnellwege },
-  location: { pathname },
-}) => {
+const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
   return (
     <Layout>
       <HelmetSeo title="Radschnellwege" description="TODO" image="TODO" />
@@ -83,7 +80,8 @@ const SteckbriefeIndex = ({
                 </div>
                 <div className="rounded-bl-2xl rounded-br-2xl bg-gray-50 p-6 md:px-8">
                   <Link
-                    to={`${pathname}/${radschnellweg.jsonId}`}
+                    // to={`${pathname}/${radschnellweg.jsonId}`}
+                    to={`./${radschnellweg.jsonId}`}
                     className="text-base font-medium text-indigo-700 hover:text-emerald-400"
                   >
                     Mehr erfahren<span aria-hidden="true"> &rarr;</span>
