@@ -5,7 +5,7 @@ import { BMDVFunding } from '~/components/Layout/BMDVFunding';
 import Map, { Source, Layer, NavigationControl } from 'react-map-gl';
 import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { LineLayer, maxParallelImageRequests } from 'mapbox-gl';
+import { LineLayer } from 'mapbox-gl';
 
 const statsIcons = {
   costs: <MapIcon className="h-6 w-6" aria-hidden="true" />,
@@ -81,16 +81,12 @@ const mapBounds: LngLatBoundsLike = [
   5.98865807458, 47.3024876979, 15.0169958839, 54.983104153,
 ];
 function bounds(geometries) {
-  var maxLat = -Infinity;
-  var maxLon = -Infinity;
-  var minLat = Infinity;
-  var minLon = Infinity;
-  geometries.nodes.map(({ geometry: { coordinates } }) => {
-    coordinates.map((line) => {
+  let [maxLat, maxLon] = [-Infinity, -Infinity];
+  let [minLat, minLon] = [Infinity, Infinity];
+  geometries.nodes.forEach(({ geometry: { coordinates } }) => {
+    coordinates.forEach((line) => {
       const Xs = line.map((x) => x[1]);
       const Ys = line.map((x) => x[0]);
-      console.log(Xs);
-      console.log(Ys);
       maxLat = Math.max(...Xs, maxLat);
       maxLon = Math.max(...Ys, maxLon);
       minLat = Math.min(...Xs, minLat);
