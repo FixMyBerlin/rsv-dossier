@@ -21,11 +21,11 @@ export const Navigation = ({ location }) => {
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex h-20 justify-between">
+            <div className="flex h-24 justify-between py-2">
               <nav className="flex w-full items-center justify-between">
                 <div className="flex flex-shrink-0 items-center">
                   {!isHome(location) && (
-                    <Link to="/" className="w-auto">
+                    <Link to="/">
                       <Logo />
                     </Link>
                   )}
