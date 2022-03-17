@@ -29,13 +29,16 @@ export const Hero: React.FC<Props> = ({
               </div>{' '}
               <span className="block xl:inline">{title}</span>
             </h1>
-            <p className="mx-auto mt-3 max-w-md text-base text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
+            <p className="relative z-10 mx-auto mt-3 max-w-md text-base text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
               {description}
             </p>
-            <div className="mx-auto max-w-md py-5 sm:flex sm:justify-center md:mt-8">
+
+            <div className="relative z-10 mx-auto max-w-md py-5 sm:flex sm:justify-center md:mt-8">
               {children}
             </div>
-            <img src={HeroGraphic} alt="Hero Grafik" className="sm:-mt-[10%]" />
+            <div className="relative z-0 -mt-[8%]">
+              <img src={HeroGraphic} alt="Hero Grafik" className="" />
+            </div>
           </div>
         </main>
       </div>
