@@ -78,7 +78,7 @@ const colors = [
 ];
 
 const mapBounds: LngLatBoundsLike = [
-  5.98865807458, 47.3024876979, 15.0169958839, 54.983104153,
+  4.98865807458, 47.3024876979, 16.0169958839, 54.983104153,
 ];
 function bounds(geometries) {
   let [maxLat, maxLon] = [-Infinity, -Infinity];
@@ -122,7 +122,7 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometries }) => {
               type: 'line',
               paint: {
                 'line-width': 6,
-                'line-color': colors[index],
+                'line-color': colors[index % colors.length],
               },
             };
             return (
