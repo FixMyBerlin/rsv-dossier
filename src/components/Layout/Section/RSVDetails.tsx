@@ -2,10 +2,10 @@ import React from 'react';
 import { MapIcon } from '@heroicons/react/outline';
 import { ButtonLink } from '~/components/Links/ButtonLink';
 import { BMDVFunding } from '~/components/Layout/BMDVFunding';
-import Map, { Source, Layer, NavigationControl, useMap } from 'react-map-gl';
+import Map, { Source, Layer, NavigationControl } from 'react-map-gl';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { LineLayer, CircleLayer, MercatorCoordinate } from 'mapbox-gl';
+import { LineLayer } from 'mapbox-gl';
 
 const statsIcons = {
   costs: <MapIcon className="h-6 w-6" aria-hidden="true" />,
@@ -41,10 +41,7 @@ type Props = {
     nodes: Array<{
       id: string;
       type: 'Feature';
-      geometry: {
-        type: string;
-        coordinates: Array<Array<number>>;
-      };
+      geometry: GeoJSON.Geometry;
       properties: {
         id_rsv: string;
         id_segment: string;
