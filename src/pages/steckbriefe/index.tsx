@@ -80,7 +80,7 @@ const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
                 </div>
                 <div className="rounded-bl-2xl rounded-br-2xl bg-gray-50 p-6 md:px-8">
                   <Link
-                    to={`/radschnellwege/${radschnellweg.jsonId}`}
+                    to={`/steckbriefe/${radschnellweg.jsonId}`}
                     className="text-base font-medium text-indigo-700 hover:text-emerald-400"
                   >
                     Mehr erfahren<span aria-hidden="true"> &rarr;</span>

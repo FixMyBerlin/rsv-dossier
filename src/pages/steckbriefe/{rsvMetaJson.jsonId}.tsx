@@ -4,20 +4,17 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { RSVDetails } from '~/components/Layout/Section/RSVDetails';
 
-const Radschnellweg = ({ data: { radschnellweg, geometries } }) => {
+const Radschnellweg = ({ data: { meta, geometries } }) => {
+  console.log(meta, geometries);
   return (
     <Layout>
-      <HelmetSeo
-        title={`Radschnellverbindung ${radschnellweg.from} &rarr; ${radschnellweg.to}`}
-        description="TODO"
-        image="TODO"
-      />
-      <RSVDetails radschnellweg={radschnellweg} />
+      <HelmetSeo title={meta.general.name} description="TODO" image="TODO" />
+      <RSVDetails meta={meta} geometries={geometries} />
       <div className="bg-white">
         <div className="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="text-center">
             <textarea className="mt-20 h-60 w-full">
-              {JSON.stringify(radschnellweg)}
+              {JSON.stringify(meta) + JSON.stringify(geometries)}
             </textarea>
           </div>
         </div>
@@ -34,7 +31,10 @@ export const query = graphql`
       filter: { properties: { id_rsv: { eq: $jsonId } } }
     ) {
       nodes {
+        id
+        type
         geometry {
+          type
           coordinates
         }
         properties {
@@ -48,7 +48,7 @@ export const query = graphql`
         }
       }
     }
-    radschnellweg: rsvMetaJson(jsonId: { eq: $jsonId }) {
+    meta: rsvMetaJson(jsonId: { eq: $jsonId }) {
       general {
         description
         from
@@ -56,6 +56,9 @@ export const query = graphql`
         ref
         slug
         to
+      }
+      references {
+        website
       }
       finished
       cost
