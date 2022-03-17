@@ -5,7 +5,7 @@ import { BMDVFunding } from '~/components/Layout/BMDVFunding';
 import Map, { Source, Layer, NavigationControl } from 'react-map-gl';
 import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { LineLayer } from 'mapbox-gl';
+import { LineLayer, maxParallelImageRequests } from 'mapbox-gl';
 
 const statsIcons = {
   costs: <MapIcon className="h-6 w-6" aria-hidden="true" />,
@@ -76,21 +76,47 @@ const colors = [
   '#ffd8b1',
   '#000075',
 ];
+
 const mapBounds: LngLatBoundsLike = [
   5.98865807458, 47.3024876979, 15.0169958839, 54.983104153,
 ];
+function bounds(geometries) {
+  var maxLat = -Infinity;
+  var maxLon = -Infinity;
+  var minLat = Infinity;
+  var minLon = Infinity;
+  geometries.nodes.map(({ geometry: { coordinates } }) => {
+    coordinates.map((line) => {
+      const Xs = line.map((x) => x[1]);
+      const Ys = line.map((x) => x[0]);
+      console.log(Xs);
+      console.log(Ys);
+      maxLat = Math.max(...Xs, maxLat);
+      maxLon = Math.max(...Ys, maxLon);
+      minLat = Math.min(...Xs, minLat);
+      minLon = Math.min(...Ys, minLon);
+    });
+  });
+  return [minLat, minLon, maxLat, maxLon];
+}
+function center(geometries) {
+  const [minLat, minLon, maxLat, maxLon] = bounds(geometries);
+  return [minLon / 2 + maxLon / 2, minLat / 2 + maxLat / 2];
+}
+
 export const RSVDetails: React.VFC<Props> = ({ meta, geometries }) => {
+  const [lon, lat] = center(geometries);
   return (
     <div className="relative bg-white">
-      <div className="h-56 bg-emerald-300 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
+      <div className="h-56 rounded-br-2xl bg-emerald-300 shadow-xl sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
         <Map
           initialViewState={{
-            longitude: 8.3,
-            latitude: 49.4,
+            longitude: lon,
+            latitude: lat,
             zoom: 8,
           }}
           mapLib={maplibregl}
-          style={{ display: 'cover' }}
+          style={{ display: 'cover', borderRadius: '0 0 1rem' }}
           mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
           maxBounds={mapBounds}
         >
