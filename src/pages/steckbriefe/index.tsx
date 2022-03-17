@@ -4,10 +4,14 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const RadschnellwegIndex = ({ data }) => {
+const SteckbriefeIndex = ({ data }) => {
   return (
     <Layout padding={false}>
-      <HelmetSeo title="Radschnellwege" description="TODO" image="TODO" />
+      <HelmetSeo
+        title="Radschnellverbindungen"
+        description="TODO"
+        image="TODO"
+      />
       <div className="bg-white">
         {/* Header */}
         <div className="relative bg-gray-800 pb-32">
@@ -39,7 +43,7 @@ const RadschnellwegIndex = ({ data }) => {
           aria-labelledby="contact-heading"
         >
           <h2 className="sr-only" id="contact-heading">
-            Alle Radschnellwege
+            Alle Radschnellverbindungen
           </h2>
           <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
             {data.radschnellwege.nodes.map((radschnellweg) => (
@@ -94,7 +98,7 @@ const RadschnellwegIndex = ({ data }) => {
   );
 };
 
-export default RadschnellwegIndex;
+export default SteckbriefeIndex;
 
 export const query = graphql`
   {
@@ -103,7 +107,7 @@ export const query = graphql`
         from
         to
         state
-        fromSlug: gatsbyPath(filePath: "/radschnellwege/{Radschnellweg.from}")
+        fromSlug: gatsbyPath(filePath: "/steckbriefe/{Radschnellweg.from}")
       }
     }
   }
