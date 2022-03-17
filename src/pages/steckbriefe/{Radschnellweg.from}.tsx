@@ -5,9 +5,9 @@ import { Layout } from '~/components/Layout';
 import { RSVDetails } from '~/components/Layout/Section/RSVDetails';
 const Radschnellweg = ({ data: { radschnellweg } }) => {
   return (
-    <Layout padding={false}>
+    <Layout>
       <HelmetSeo
-        title={`Radschnellwege ${radschnellweg.from} - ${radschnellweg.to}`}
+        title={`Radschnellverbindung ${radschnellweg.from} &rarr; {radschnellweg.to}`}
         description="TODO"
         image="TODO"
       />

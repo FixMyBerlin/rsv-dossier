@@ -1,20 +1,126 @@
-import { PageProps } from 'gatsby';
 import React from 'react';
+import { PageProps } from 'gatsby';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
-import { LayoutArticle } from '~/components/Layout';
+import { Layout } from '~/components/Layout';
+import { FundingDetails, FundingHero } from '~/components/Funding';
+import { Stats } from '~/types/Stats';
+import {
+  InformationCircleIcon,
+  CalendarIcon,
+  LocationMarkerIcon,
+  CurrencyEuroIcon,
+  MapIcon,
+  ClipboardCheckIcon,
+} from '@heroicons/react/outline';
+import BmdvLogo from '~/static/bmdv-logo.svg';
 
-const FundingPage: React.FC<PageProps> = ({ location }) => {
+const stats: Stats[][] = [
+  [
+    {
+      title: 'Wo ist das Projekt',
+      number: 'Berlin - Potsdam',
+      icon: <LocationMarkerIcon />,
+    },
+    {
+      title: 'Vorraussichtliche Fertigstellung',
+      number: 'Juli 2025',
+      icon: <CalendarIcon />,
+    },
+    {
+      title: 'Information',
+      number: 'Lorem ipsum',
+      icon: <InformationCircleIcon />,
+    },
+  ],
+  [
+    {
+      title: 'Region',
+      number: 'Baden-Württemberg',
+      icon: <LocationMarkerIcon />,
+    },
+    {
+      title: 'Vorraussichtliche Fertigstellung',
+      number: 'August 2028',
+      icon: <CalendarIcon />,
+    },
+    {
+      title: 'Information',
+      number: 'Lorem ipsum',
+      icon: <InformationCircleIcon />,
+    },
+  ],
+];
+
+const heroStats: Stats[] = [
+  {
+    title: 'Wo ist das Projekt',
+    number: '16 Mio. €',
+    icon: <CurrencyEuroIcon />,
+  },
+  {
+    title: 'Vorraussichtliche Fertigstellung',
+    number: '120 km',
+    icon: <MapIcon />,
+  },
+  {
+    title: 'Information',
+    number: '34 Anträge',
+    icon: <ClipboardCheckIcon />,
+  },
+  {
+    title: 'Information',
+    number: '57 Gemeinden',
+    icon: <LocationMarkerIcon />,
+  },
+];
+
+const FundingPage: React.VFC<PageProps> = ({ location }) => {
   return (
-    <LayoutArticle location={location}>
-      <HelmetSeo title="Fachinformationen" description="TODO" image="TODO" />
-      <h1>Förderungen</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-        dolorem fuga excepturi expedita delectus neque, soluta in vitae
-        perspiciatis amet provident a quaerat nemo suscipit quasi debitis
-        impedit, fugiat officiis.
-      </p>
-    </LayoutArticle>
+    <Layout location={location}>
+      <HelmetSeo title="Förderübersicht" description="" image="" />
+      <FundingHero
+        title="Förderübersicht"
+        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat laudantium."
+        stats={heroStats}
+      />
+
+      <FundingDetails
+        stats={stats[0]}
+        title="Stadt und Land"
+        svg={<BmdvLogo />}
+        categories={{
+          Machbarkeitsstudie: true,
+          Kommunikation: true,
+          Infrastruktur: false,
+          Personal: false,
+        }}
+      >
+        <p>
+          Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum
+          urna sed consectetur neque tristique pellentesque. Blandit amet, sed
+          aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel
+          porttitor vitae ut. Amet vitae fames senectus vitae.
+        </p>
+      </FundingDetails>
+
+      <FundingDetails
+        stats={stats[1]}
+        title="Name des Förderprogramms"
+        categories={{
+          Machbarkeitsstudie: true,
+          Kommunikation: false,
+          Infrastruktur: false,
+          Personal: true,
+        }}
+      >
+        <p>
+          Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum
+          urna sed consectetur neque tristique pellentesque. Blandit amet, sed
+          aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel
+          porttitor vitae ut. Amet vitae fames senectus vitae.
+        </p>
+      </FundingDetails>
+    </Layout>
   );
 };
 
