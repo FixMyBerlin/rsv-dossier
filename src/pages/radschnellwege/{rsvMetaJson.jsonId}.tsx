@@ -4,8 +4,7 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { TextLink } from '~/components/Links/TextLink';
 
-const Radschnellweg = ({ data }) => {
-  const { radschnellweg, geometries } = data;
+const Radschnellweg = ({ data: { radschnellweg, geometries } }) => {
   return (
     <Layout>
       <HelmetSeo
@@ -41,8 +40,10 @@ const Radschnellweg = ({ data }) => {
 export default Radschnellweg;
 
 export const query = graphql`
-  query ($id: String!) {
-    geometries: allRsvGeoJson(filter: { properties: { id_rsv: { eq: $id } } }) {
+  query ($jsonId: String!) {
+    geometries: allRsvGeoJson(
+      filter: { properties: { id_rsv: { eq: $jsonId } } }
+    ) {
       nodes {
         geometry {
           coordinates
@@ -58,7 +59,7 @@ export const query = graphql`
         }
       }
     }
-    radschnellweg: rsvMetaJson(jsonId: { eq: $id }) {
+    radschnellweg: rsvMetaJson(jsonId: { eq: $jsonId }) {
       general {
         description
         from
