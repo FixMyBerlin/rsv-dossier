@@ -129,7 +129,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Stauzeiten vom Kosten-Nutzen-Verhältnis immer weniger rechnet.
           </p>
           <ButtonLink to="/foerderungen" className="btn-brand-outline mt-5">
-            Mehr unter "Hintergrund"
+            Mehr unter &ldquo;Hintergrund&rdquo;
           </ButtonLink>
           <br />
           <br />
@@ -151,7 +151,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             alt="Altes Telefon mit Wählscheibe"
           />
         }
-        imageCredits=""
+        noImageDropShadow
         title="Projektpartner und Kontakt"
         caption="Informiert bleiben"
       >

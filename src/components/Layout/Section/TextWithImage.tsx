@@ -1,5 +1,6 @@
 import React from 'react';
 import { CameraIcon } from '@heroicons/react/solid';
+import classNames from 'classnames';
 
 type Props = {
   title: string;
@@ -8,6 +9,7 @@ type Props = {
   caption?: string;
   children: JSX.Element;
   mutedText?: string;
+  noImageDropShadow?: boolean;
 };
 
 export const TextWithImage: React.FC<Props> = ({
@@ -17,6 +19,7 @@ export const TextWithImage: React.FC<Props> = ({
   imageCredits = '',
   caption = '',
   mutedText,
+  noImageDropShadow = false,
 }) => {
   return (
     <div className="overflow-hidden bg-white">
@@ -37,7 +40,12 @@ export const TextWithImage: React.FC<Props> = ({
           <div className="relative ">
             <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
               <figure>
-                <div className="max-h-full overflow-hidden rounded-lg object-cover object-center shadow-lg">
+                <div
+                  className={classNames(
+                    { 'shadow-lg': noImageDropShadow },
+                    'max-h-full overflow-hidden rounded-lg object-cover object-center'
+                  )}
+                >
                   {image}
                 </div>
                 {imageCredits && (
