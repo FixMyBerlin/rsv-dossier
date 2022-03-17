@@ -17,11 +17,11 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
       <Hero
         highlightedTitle="Rad&shy;schnell&shy;verbindungen"
         title="schneller planen durch konstruktive Beteiligungs&shy;formate"
-        description="Koordinator:innen von RSV-Projekten stehen vor der
+        description="Verantwortliche von RSV-Projekten stehen vor der
         Herausforderung mit einer Vielzahl von internen und externen
         Stakeholdern in Kommunikation zu stehen.
-        Das NRVP-Forschungsprojekt RSV-Baukasten will deren Wissen konstruktiv
-        einbinden und sie auf einem Kenntnisstand halten.
+        Das NRVP-Forschungsprojekt RSV-Baukasten will Wissen konstruktiv
+        einbinden und alle Beteiligten auf einem Kenntnisstand halten.
         "
         location={location}
       >
@@ -44,141 +44,74 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
       <TextWithImage
         image={
           <StaticImage
-            src="./index/rs1-Radschnellweg_Ruhr_in_Muelheim.jpg"
-            alt="Zeigt den RS1 in NRW"
+            src="./index/map4.png"
+            alt="Zeigt eine Karte mit einer Planung"
           />
         }
-        imageCredits="Mmflooki - Wikimedia Commons (CC BY-SA 4.0)"
+        imageCredits=""
         title="Projektansatz und Zielsetzung"
-        caption="Mehr zum Forschungsprojekt"
+        caption="Forschungsprojekt"
       >
         <p>
           Mit dem RSV-Baukasten entsteht ein modulares System zur Durchführung
-          von Beteiligungsformaten für interne und externe Stakeholder sowie zur
-          Bürgerinformation für die verschiedenen Planungsphasen von
+          von Beteiligungsformaten zu den einzelnen Planungsphasen mit internen
+          und externen Stakeholdern sowie zur Bürgerinformation von
           Radschnellverbindungen.
         </p>
+        <br />
         <p>
+          <strong>
+            Kartengestützte Formate für interne und externe Kommunikation
+          </strong>
+          <br />
           Durch eine anschauliche und verständliche Kommunikation mittels
           kartengestützter Formate soll die Akzeptanz von RSV-Planungsprojekten
           erhöht werden. Das System soll die behörden- und gemeindeübergreifende
           interne Kommunikation und Abstimmung zu Machbarkeitsstudien und
-          Vorplanungen unterstützen und damit für eine frühzeitige
-          Beschleunigung des Prozesses sorgen.
+          Vorplanungen unterstützen und damit bereits in der Frühphase für eine
+          Beschleunigung des Prozesses sorgen. Grundlage ist ein dynamisches
+          Online-Kartenformat das Informationen zu Radschnellverbindungen
+          übersichtlich aufbereitet und Beteiligungsinstrumente daran anbindet.
+        </p>
+        <br />
+        <p>
+          <strong>Steckbriefe aller deutschen Radschnellverbindungen</strong>
+          <br />
+          In unseren Steckbriefen finden Sie eine systematische Übersicht aller
+          aktuell geplanten Radschnellverbindungen sowie deren Trassenverläufe
+          bzw. -korridore. Sie bekommen so Einblick welche Städte und Gemeinden
+          durch Radschnellverbindungen miteinander verbunden werden oder in
+          Korridoren verbunden werden könnten.
+        </p>
+        <br />
+        <p>
+          <strong>
+            Förderprogramme zu Radschnellverbindungen und Partizipation
+          </strong>
+          <br />
+          Radschnellverbindungen entwickeln sich mit dem verstärkten Aufkommen
+          der Elektromobilität und dem akuten Handlungsbedarf zur Erreichung von
+          Klimaschutzzielen rasant zu einem politischen und planerischen
+          Instrument mit hohem Potential und großer Akzeptanz. In der{' '}
+          <a href="/foerderungen">Förderübersicht</a> finden Sie aktuelle
+          Förderprogramme zu Planung und Bau von RSV-Projekten sowie zu
+          Partizipation.
+        </p>
+        <br />
+        <p>
+          <strong>Kontakt</strong>
+          <br />
+          Wenn Sie sich mehr Informationen zum Forschungsprojekt RSV-Baukasten
+          wünschen oder stärker involviert sein wollen, kontaktieren Sie uns.
         </p>
         <p>
-          Grundlage ist ein dynamisches Online-Kartenformat das Informationen zu
-          Radschnellverbindungen übersichtlich aufbereitet und
-          Beteiligungsinstrumente daran anbindet.
+          <ButtonLink
+            to="mailto:hello@fixmycity.de?subject=Anliegen zum RSV-Baukasten"
+            className="btn-brand-outline mt-5"
+          >
+            Mail an hello@fixmycity.de
+          </ButtonLink>
         </p>
-      </TextWithImage>
-      <TextWithImage
-        image={
-          <StaticImage
-            src="./index/stock-netherland-cycling.jpg"
-            alt="Zwei Fahrradfahrende Menschen"
-          />
-        }
-        imageCredits=""
-        title="RSV-Steckbriefe"
-        caption="Übersicht"
-      >
-        <>
-          <p>
-            In Deutschland werden aktuell eine Vielzahl von
-            Radschnellverbindungen geplant und sind in Teilen bereits umgesetzt.
-          </p>
-          <p>
-            In unseren Steckbriefen finden Sie eine systematische Übersicht
-            aller Radschnellverbindungen sowie deren geplante Trassenverläufe
-            bzw. -korridore. Sie bekommen so Einblick welche Städte und
-            Gemeinden durch Radschnellverbindungen miteinander verbunden werden
-            bzw. in Planungskorridoren liegen.
-          </p>
-          <p>
-            <ButtonLink to="/steckbriefe" className="btn-brand-outline mt-5">
-              Zu den Steckbriefen
-            </ButtonLink>
-          </p>
-        </>
-      </TextWithImage>
-      <TextWithImage
-        image={
-          <StaticImage
-            src="./index/stock-netherland-cycling.jpg"
-            alt="Zwei Fahrradfahrende Menschen"
-          />
-        }
-        imageCredits=""
-        title="Klimaziele und Förderungen"
-        caption="Hintergrund"
-      >
-        <>
-          <p>
-            Radschnellverbindungen sind in Deutschland als Infrastrukturelement
-            verhältnismäßig neu. Sie entwickeln sich seit dem verstärkten
-            Aufkommen der Elektromobilität bei Fahrrädern und dem akuten
-            Handlungsbedarf zur Erreichung von Klimaschutzzielen jedoch rasant
-            zu einem politischen und planerischen Instrument mit hohem Potential
-            und großer Akzeptanz. Die hohe Zahl von Machbarkeitsstudien und
-            Vorplanungen in Kommunen in Deutschland bestätigt dies.
-          </p>
-          <p>
-            Das Fahrrad wird für Pendler:innen immer stärker zur Alternative zum
-            individuellem Kfz, das sich durch steigende Energiekosten und
-            Stauzeiten vom Kosten-Nutzen-Verhältnis immer weniger rechnet.
-          </p>
-          <ButtonLink to="/foerderungen" className="btn-brand-outline mt-5">
-            Mehr unter &ldquo;Hintergrund&rdquo;
-          </ButtonLink>
-          <br />
-          <br />
-          <hr />
-          <br />
-          <p>
-            Auf der Übersichtsseite zu Fördermitteln finden Sie die wichtigsten
-            Förderprogramme in Bund und Ländern.
-          </p>
-          <ButtonLink to="/foerderungen" className="btn-brand-outline mt-5">
-            Zur Förderübersicht
-          </ButtonLink>
-        </>
-      </TextWithImage>
-      <TextWithImage
-        image={
-          <StaticImage
-            src="./index/stock-telephone.jpg"
-            alt="Altes Telefon mit Wählscheibe"
-          />
-        }
-        noImageDropShadow
-        title="Projektpartner und Kontakt"
-        caption="Informiert bleiben"
-      >
-        <>
-          <p>
-            LOGO FIXMYCITY
-            <br />
-            LOGO PARTNER1
-            <br />
-            LOGO PARTNER2
-            <br />
-            <br />
-          </p>
-          <p>
-            Wenn Sie sich mehr Informationen zum Projekt wünschen oder stärker
-            im Forschungsprojekt involviert sein wollen, kontaktieren Sie uns
-            gerne.
-          </p>
-          <p>
-            <ButtonLink
-              to="mailto:hello@fixmycity.de?subject=Anliegen zum RSV-Baukasten"
-              className="btn-brand-outline mt-5"
-            >
-              Mail an hello@fixmycity.de schreiben
-            </ButtonLink>
-          </p>
-        </>
       </TextWithImage>
     </Layout>
   );
