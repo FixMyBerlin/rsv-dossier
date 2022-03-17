@@ -36,7 +36,7 @@ export const Hero: React.FC<Props> = ({
             <div className="relative z-10 mx-auto max-w-md py-5 sm:flex sm:justify-center md:mt-8">
               {children}
             </div>
-            <div className="relative z-0 -mt-[8%]">
+            <div className="relative z-0 md:-mt-[8%]">
               <img src={HeroGraphic} alt="Hero Grafik" className="" />
             </div>
           </div>
