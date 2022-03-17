@@ -4,8 +4,7 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const RadschnellwegIndex = ({ data: { radschnellwege } }) => {
-  console.log(radschnellwege);
+const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
   return (
     <Layout>
       <HelmetSeo title="Radschnellwege" description="TODO" image="TODO" />
@@ -96,7 +95,7 @@ const RadschnellwegIndex = ({ data: { radschnellwege } }) => {
   );
 };
 
-export default RadschnellwegIndex;
+export default SteckbriefeIndex;
 
 export const query = graphql`
   {
