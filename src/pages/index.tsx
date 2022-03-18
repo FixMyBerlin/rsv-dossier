@@ -17,7 +17,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
       <Hero
         highlightedTitle="Rad&shy;schnell&shy;verbindungen"
         title="schneller planen durch konstruktive Beteiligungs&shy;formate"
-        description="Verantwortliche von RSV-Projekten stehen vor der
+        description="Koordinator:innen von RSV-Projekten stehen vor der
         Herausforderung mit einer Vielzahl von internen und externen
         Stakeholdern in Kommunikation zu stehen.
         Das NRVP-Forschungsprojekt RSV-Baukasten will Wissen konstruktiv
@@ -49,14 +49,14 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           />
         }
         imageCredits=""
-        title="Projektansatz und Zielsetzung"
+        title="Projektansatz und Zielsetzung des RSV-Baukastens"
         caption="Forschungsprojekt"
       >
         <p>
           Mit dem RSV-Baukasten entsteht ein modulares System zur Durchführung
-          von Beteiligungsformaten zu den einzelnen Planungsphasen mit internen
-          und externen Stakeholdern sowie zur Bürgerinformation von
-          Radschnellverbindungen.
+          von Beteiligungsformaten zu den einzelnen Planungsphasen von
+          Radschnellverbindungen, um interne und externe Stakeholder konstruktiv
+          einzubinden.
         </p>
         <br />
         <p>
@@ -65,13 +65,14 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           </strong>
           <br />
           Durch eine anschauliche und verständliche Kommunikation mittels
-          kartengestützter Formate soll die Akzeptanz von RSV-Planungsprojekten
-          erhöht werden. Das System soll die behörden- und gemeindeübergreifende
-          interne Kommunikation und Abstimmung zu Machbarkeitsstudien und
-          Vorplanungen unterstützen und damit bereits in der Frühphase für eine
-          Beschleunigung des Prozesses sorgen. Grundlage ist ein dynamisches
-          Online-Kartenformat das Informationen zu Radschnellverbindungen
-          übersichtlich aufbereitet und Beteiligungsinstrumente daran anbindet.
+          kartengestützter Formate sollen RSV-Planungsprojekten effizienter
+          durchgeführt und ihre Akzeptanz erhöht werden. Das System soll die
+          behörden- und gemeindeübergreifende interne Kommunikation und
+          Abstimmung zu Machbarkeitsstudien und Vorplanungen unterstützen und
+          damit bereits in der Frühphase für eine Beschleunigung des Prozesses
+          sorgen. Grundlage ist ein dynamisches Online-Kartenformat das
+          Informationen zu Radschnellverbindungen übersichtlich aufbereitet und
+          Beteiligungsinstrumente daran anbindet.
         </p>
         <br />
         <p>
@@ -79,23 +80,22 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           <br />
           In unseren Steckbriefen finden Sie eine systematische Übersicht aller
           aktuell geplanten Radschnellverbindungen sowie deren Trassenverläufe
-          bzw. -korridore. Sie bekommen so Einblick welche Städte und Gemeinden
-          durch Radschnellverbindungen miteinander verbunden werden oder in
-          Korridoren verbunden werden könnten.
+          bzw. -korridore. Sie erhalten so einen Überblick welche Städte und
+          Gemeinden durch Radschnellverbindungen miteinander verbunden werden
+          oder in Korridoren verbunden werden könnten. Zielsetzung des BMDV ist
+          ein lückenloses Radnetz in Deutschland zu schaffen.
+          Radschnellverbindungen sind dafür elementar.
         </p>
         <br />
         <p>
           <strong>
-            Förderprogramme zu Radschnellverbindungen und Partizipation
+            Hintergrund zum Thema Radschnellverbindungen
           </strong>
           <br />
           Radschnellverbindungen entwickeln sich mit dem verstärkten Aufkommen
           der Elektromobilität und dem akuten Handlungsbedarf zur Erreichung von
           Klimaschutzzielen rasant zu einem politischen und planerischen
-          Instrument mit hohem Potential und großer Akzeptanz. In der{' '}
-          <a href="/foerderungen">Förderübersicht</a> finden Sie aktuelle
-          Förderprogramme zu Planung und Bau von RSV-Projekten sowie zu
-          Partizipation.
+          Instrument mit hohem Potential.
         </p>
         <br />
         <p>
@@ -103,13 +103,14 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           <br />
           Wenn Sie sich mehr Informationen zum Forschungsprojekt RSV-Baukasten
           wünschen oder stärker involviert sein wollen, kontaktieren Sie uns.
+          Die Laufzeit ist 2021-2023.
         </p>
         <p>
           <ButtonLink
             to="mailto:hello@fixmycity.de?subject=Anliegen zum RSV-Baukasten"
             className="btn-brand-outline mt-5"
           >
-            Mail an hello@fixmycity.de
+            Mail an hello@fixmycity.de schreiben
           </ButtonLink>
         </p>
       </TextWithImage>
