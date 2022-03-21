@@ -30,6 +30,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           <StaticImage
             src="./index/map4.png"
             alt="Zeigt eine Karte mit einer Planung"
+            className="h-72 lg:h-full"
           />
         }
         imageCredits=""
