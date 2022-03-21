@@ -7,7 +7,7 @@ type Props = {
   title: string;
   description: string;
   location: Location;
-  children: JSX.Element;
+  children?: JSX.Element;
 };
 
 export const Hero: React.FC<Props> = ({
@@ -33,9 +33,11 @@ export const Hero: React.FC<Props> = ({
               {description}
             </p>
 
-            <div className="relative z-10 mx-auto max-w-md py-5 sm:flex sm:justify-center md:mt-8">
-              {children}
-            </div>
+            {children && (
+              <div className="relative z-10 mx-auto max-w-md py-5 sm:flex sm:justify-center md:mt-8">
+                {children}
+              </div>
+            )}
             <div className="relative z-0 md:-mt-[8%]">
               <img src={HeroGraphic} alt="Hero Grafik" className="" />
             </div>
