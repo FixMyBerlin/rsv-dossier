@@ -4,8 +4,8 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Hero } from '~/components/Layout/Hero/Hero';
 import { Layout } from '~/components/Layout/Layout';
 import { TextWithImage } from '~/components/Layout/Section/';
-import { ButtonLink } from '~/components/Links/ButtonLink';
 import { StaticImage } from 'gatsby-plugin-image';
+import { MailToButtonLink } from '~/components/Links';
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
@@ -89,12 +89,15 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Die Laufzeit ist 2021-2023.
           </p>
           <p>
-            <ButtonLink
-              to="mailto:hello@fixmycity.de?subject=Anliegen zum RSV-Baukasten"
+            Mail an{' '}
+            <MailToButtonLink
+              mailto="hello@fixmycity.de"
+              subject="Anliegen zum RSV-Baukasten"
               className="btn-brand-outline mt-5"
             >
-              Mail an hello@fixmycity.de schreiben
-            </ButtonLink>
+              hello@fixmycity.de
+            </MailToButtonLink>{' '}
+            schreiben
           </p>
         </>
       </TextWithImage>
