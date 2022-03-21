@@ -32,7 +32,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             </ButtonLink>
           </div> */}
           <div className="mt-3 rounded-full sm:mt-0 sm:ml-3">
-            <ButtonLink to="/projekt-hintergrund" outline size="lg">
+            <ButtonLink to="/projekt-hintergrund" outline large>
               Projekt-Hintergrund
             </ButtonLink>
           </div>

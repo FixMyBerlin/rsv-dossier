@@ -12,11 +12,11 @@ type Props = {
 };
 
 const button =
-  'inline-flex items-center justify-center rounded-full py-2 px-4  drop-shadow';
+  'inline-flex items-center justify-center rounded-full py-2 px-4 drop-shadow border-2 border-emerald-300';
 const defaultButtonStyle =
-  'btn border-2 border-emerald-300 bg-emerald-300 font-bold text-slate-600 transition-colors hover:bg-slate-800 hover:text-emerald-300 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2';
+  'bg-emerald-300 text-slate-600 transition-colors hover:bg-slate-800 hover:text-emerald-300 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2';
 const outlineButtonStyle =
-  'btn-brand  border-emerald-300 bg-white text-slate-600 hover:bg-emerald-300 hover:text-slate-600';
+  'bg-white font-bold text-slate-600 transition-colors hover:bg-emerald-300 hover:text-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2';
 
 // TODO: Refactor all those link components to share more logic
 export const ButtonLink: React.FC<Props> = ({
@@ -31,7 +31,7 @@ export const ButtonLink: React.FC<Props> = ({
   const styles = classNames(
     className,
     button,
-    defaultButtonStyle,
+    !outline && defaultButtonStyle,
     outline && outlineButtonStyle,
     { 'w-full px-8 py-3 md:text-lg': large },
     { 'px-3 py-1 text-sm font-medium': small }
