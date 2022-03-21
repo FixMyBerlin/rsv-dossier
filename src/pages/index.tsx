@@ -32,10 +32,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             </ButtonLink>
           </div> */}
           <div className="mt-3 rounded-full sm:mt-0 sm:ml-3">
-            <ButtonLink
-              to="/projekt-hintergrund"
-              className="btn-brand-outline w-full px-8 py-3 shadow md:text-lg"
-            >
+            <ButtonLink to="/projekt-hintergrund" outline large>
               Projekt-Hintergrund
             </ButtonLink>
           </div>
@@ -149,7 +146,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Informationen zu Förderprogrammen im Kontext von
             Radschnellverbindungen und Partizipation in Bund und Land.
           </p>
-          <ButtonLink to="/foerderungen" className="btn-brand-outline mt-5">
+          <ButtonLink to="/foerderungen" outline className="mt-5">
             Zur Förderübersicht
           </ButtonLink>
         </>
