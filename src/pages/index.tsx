@@ -6,6 +6,7 @@ import { Layout } from '~/components/Layout/Layout';
 import { TextWithImage } from '~/components/Layout/Section/';
 import { StaticImage } from 'gatsby-plugin-image';
 import { MailToButtonLink } from '~/components/Links';
+import { Heading2 } from '~/components/Text';
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
@@ -44,12 +45,10 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Radschnellverbindungen, um interne und externe Stakeholder
             konstruktiv einzubinden.
           </p>
-          <br />
           <p>
-            <strong>
+            <Heading2>
               Kartengestützte Formate für interne und externe Kommunikation
-            </strong>
-            <br />
+            </Heading2>
             Durch eine anschauliche und verständliche Kommunikation mittels
             kartengestützter Formate sollen RSV-Planungsprojekten effizienter
             durchgeführt und ihre Akzeptanz erhöht werden. Das System soll die
@@ -60,10 +59,10 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Informationen zu Radschnellverbindungen übersichtlich aufbereitet
             und Beteiligungsinstrumente daran anbindet.
           </p>
-          <br />
           <p>
-            <strong>Steckbriefe aller deutschen Radschnellverbindungen</strong>
-            <br />
+            <Heading2>
+              Steckbriefe aller deutschen Radschnellverbindungen
+            </Heading2>
             In unseren Steckbriefen finden Sie eine systematische Übersicht
             aller aktuell geplanten Radschnellverbindungen sowie deren
             Trassenverläufe bzw. -korridore. Sie erhalten so einen Überblick
@@ -72,19 +71,15 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Zielsetzung des BMDV ist ein lückenloses Radnetz in Deutschland zu
             schaffen. Radschnellverbindungen sind dafür elementar.
           </p>
-          <br />
           <p>
-            <strong>Hintergrund zum Thema Radschnellverbindungen</strong>
-            <br />
+            <Heading2>Hintergrund zum Thema Radschnellverbindungen</Heading2>
             Radschnellverbindungen entwickeln sich mit dem verstärkten Aufkommen
             der Elektromobilität und dem akuten Handlungsbedarf zur Erreichung
             von Klimaschutzzielen rasant zu einem politischen und planerischen
             Instrument mit hohem Potential.
           </p>
-          <br />
           <p>
-            <strong>Kontakt</strong>
-            <br />
+            <Heading2>Kontakt</Heading2>
             Wenn Sie sich mehr Informationen zum Forschungsprojekt RSV-Baukasten
             wünschen oder stärker involviert sein wollen, kontaktieren Sie uns.
             Die Laufzeit ist 2021-2023.
