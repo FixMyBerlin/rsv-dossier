@@ -97,7 +97,7 @@ function bounds(geometries) {
 }
 function center(geometries) {
   const [minLat, minLon, maxLat, maxLon] = bounds(geometries);
-  return [minLon / 2 + maxLon / 2, minLat / 2 + maxLat / 2];
+  return [(minLon + maxLon) / 2, (minLat + maxLat) / 2];
 }
 
 export const RSVDetails: React.VFC<Props> = ({ meta, geometries }) => {
@@ -145,14 +145,16 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometries }) => {
           </h2>
           <h2 className="mt-6 text-lg font-bold text-gray-500">Kurzfassung</h2>
           <p className="text-lg text-gray-500">{meta.general.description}</p>
-          <div className="mt-4 rounded-full">
-            <ButtonLink
-              to={meta.references.website}
-              className="btn-brand-outline px-8 py-3 shadow md:text-lg"
-            >
-              Projektwebsite
-            </ButtonLink>
-          </div>
+          {meta.references.website && (
+            <div className="mt-4 rounded-full">
+              <ButtonLink
+                to={meta.references.website}
+                className="btn-brand-outline px-8 py-3 shadow md:text-lg"
+              >
+                Projektwebsite
+              </ButtonLink>
+            </div>
+          )}
           <div className="mt-8 overflow-hidden">
             <dl className="-mx-8 -mt-8 flex flex-wrap">
               {Object.keys(stats).map((stat) => (
