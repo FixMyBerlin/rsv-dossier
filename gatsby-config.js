@@ -18,14 +18,14 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: './src/radschnellwege/metadata',
+        path: `${__dirname}/src/radschnellwege/metadata`,
         name: 'rsv_meta',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: './src/radschnellwege/geojson',
+        path: `${__dirname}/src/radschnellwege/geojson`,
         name: 'rsv_geo',
       },
     },
