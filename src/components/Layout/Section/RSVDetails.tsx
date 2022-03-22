@@ -101,18 +101,17 @@ function center(geometries) {
 }
 
 export const RSVDetails: React.VFC<Props> = ({ meta, geometries }) => {
-  const [lon, lat] = center(geometries);
+  const [longitude, latitude] = center(geometries);
   return (
     <div className="relative bg-white">
-      <div className="h-56 rounded-br-2xl bg-emerald-300 shadow-xl sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
+      <div className="h-56 overflow-hidden bg-emerald-300 shadow-xl sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2 lg:rounded-br-2xl">
         <Map
           initialViewState={{
-            longitude: lon,
-            latitude: lat,
+            longitude,
+            latitude,
             zoom: 8,
           }}
           mapLib={maplibregl}
-          style={{ display: 'cover', borderRadius: '0 0 1rem' }}
           mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
           maxBounds={mapBounds}
         >
