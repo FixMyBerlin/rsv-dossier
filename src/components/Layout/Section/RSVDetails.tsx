@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
-import { MapIcon } from '@heroicons/react/outline';
 import { ButtonLink } from '~/components/Links/ButtonLink';
 import { BMDVFunding } from '~/components/Layout/BMDVFunding';
 import Map, { Source, Layer, Popup } from 'react-map-gl';
 import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { LineLayer, LineLayout, LinePaint } from 'mapbox-gl';
-
-const stateColors = {
-  idea: '#ffe119',
-  agreed: '#4363d8',
-  planning: '#f58231',
-  in_progress: '#dcbeff',
-  done: '#800000',
-};
+import { RSVSegment } from './RSVSegment';
+import { features } from 'process';
 
 type Props = {
   meta: {
@@ -41,14 +33,6 @@ const mapBounds: LngLatBoundsLike = [
   4.98865807458, 47.3024876979, 16.0169958839, 54.983104153,
 ];
 
-const paint: LinePaint = {
-  'line-opacity': 0.8,
-  'line-width': 6,
-  'line-color': '#0000aa',
-  'line-blur': 0.7,
-};
-const layout: LineLayout = { 'line-cap': 'round', 'line-join': 'round' };
-
 export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
   const [info, setInfo] = useState({
     show: false,
@@ -56,19 +40,19 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
     lat: 0,
     content: null,
   });
-  const [bounds, setBounds] = useState(geometry.bbox);
+  const [selected, setSelected] = useState(-1);
   const updateInfo = (event) => {
     const { lng, lat } = event.lngLat;
-    const feature = event.features[0];
+    const [feature] = event.features;
     setInfo({ lng, lat, show: true, content: feature.properties });
-    setBounds(feature.bbox);
+    setSelected(feature.properties.id);
   };
   return (
     <div className="relative bg-white">
       <div className="h-56 overflow-hidden bg-emerald-300 shadow-xl sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2 lg:rounded-br-2xl">
         <Map
           initialViewState={{
-            bounds,
+            bounds: geometry.bbox,
           }}
           mapLib={maplibregl}
           mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
@@ -78,28 +62,18 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
             (feature) => feature.properties.id
           )}
         >
-          {geometry.features.map((geom) => {
-            const layerStyle: LineLayer = {
-              id: geom.properties.id,
-              type: 'line',
-              layout,
-              paint: {
-                ...paint,
-                'line-color': stateColors[geom.properties.state],
-              },
-            };
-            return (
-              <Source id={geom.properties.id} type="geojson" data={geom}>
-                <Layer {...layerStyle} />
-              </Source>
-            );
+          {geometry.features.map((feature) => {
+            return <RSVSegment feature={feature} selected={selected} />;
           })}
           {info.show && (
             <Popup
               longitude={info.lng}
               latitude={info.lat}
               anchor="bottom"
-              onClose={() => setInfo({ ...info, show: false })}
+              onClose={() => {
+                setInfo({ ...info, show: false });
+                setSelected(-1);
+              }}
             >
               {JSON.stringify(info.content)}
             </Popup>
