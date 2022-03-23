@@ -1,5 +1,5 @@
 import React from 'react';
-import { LineLayer, LineLayout, LinePaint } from 'mapbox-gl';
+import { LineLayer, LineLayout } from 'mapbox-gl';
 import { Source, Layer } from 'react-map-gl';
 
 const stateColors = {
@@ -15,10 +15,6 @@ type Props = {
   selected: number;
 };
 
-const paint: LinePaint = {
-  'line-width': 6,
-  'line-blur': 0.7,
-};
 const layout: LineLayout = { 'line-cap': 'round', 'line-join': 'round' };
 
 export const RSVSegment: React.VFC<Props> = ({ feature, selected }) => {
@@ -28,9 +24,10 @@ export const RSVSegment: React.VFC<Props> = ({ feature, selected }) => {
     type: 'line',
     layout,
     paint: {
-      ...paint,
+      'line-blur': 0.7,
       'line-color': stateColors[feature.properties.state],
-      'line-opacity': selected === id ? 1 : 0.65,
+      'line-opacity': selected === id ? 1 : 0.8,
+      'line-width': selected === id ? 7 : 6,
     },
   };
   return (

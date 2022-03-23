@@ -9,15 +9,6 @@ const Radschnellweg = ({ data: { meta, geometry } }) => {
     <Layout>
       <HelmetSeo title={meta.general.name} description="TODO" image="TODO" />
       <RSVDetails meta={meta} geometry={geometry} />
-      <div className="bg-white">
-        <div className="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-          {/* <div className="text-center">
-            <textarea className="mt-20 h-60 w-full">
-              {JSON.stringify(meta) + JSON.stringify(geometry)}
-            </textarea>
-          </div> */}
-        </div>
-      </div>
     </Layout>
   );
 };
