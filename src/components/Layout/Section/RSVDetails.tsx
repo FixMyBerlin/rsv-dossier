@@ -1,24 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MapIcon } from '@heroicons/react/outline';
 import { ButtonLink } from '~/components/Links/ButtonLink';
 import { BMDVFunding } from '~/components/Layout/BMDVFunding';
-import Map, { Source, Layer, NavigationControl } from 'react-map-gl';
+import Map, { Source, Layer, Popup } from 'react-map-gl';
 import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { LineLayer } from 'mapbox-gl';
+import { LineLayer, LineLayout, LinePaint } from 'mapbox-gl';
 
-const statsIcons = {
-  costs: <MapIcon className="h-6 w-6" aria-hidden="true" />,
-  length: <MapIcon className="h-6 w-6" aria-hidden="true" />,
-  community: <MapIcon className="h-6 w-6" aria-hidden="true" />,
-  duration: <MapIcon className="h-6 w-6" aria-hidden="true" />,
-};
-
-const stats = {
-  costs: 'Kosten',
-  length: 'Länge',
-  community: 'Gemeinde',
-  duration: 'Zeitraum',
+const stateColors = {
+  idea: '#ffe119',
+  agreed: '#4363d8',
+  planning: '#f58231',
+  in_progress: '#dcbeff',
+  done: '#800000',
 };
 
 type Props = {
@@ -38,86 +32,78 @@ type Props = {
     };
   };
   geometry: {
-    bbox: Array<number>;
+    bbox: [number, number, number, number];
     features: Array<GeoJSON.Feature>;
-    properties: {
-      id_rsv: string;
-      id_segment: string;
-      length: string;
-      planning_phase: string;
-      status: string;
-      variants: string;
-      detail_level: string;
-    };
   };
 };
-
-const colors = [
-  '#e6194B',
-  '#3cb44b',
-  '#ffe119',
-  '#4363d8',
-  '#f58231',
-  '#911eb4',
-  '#42d4f4',
-  '#f032e6',
-  '#bfef45',
-  '#fabed4',
-  '#469990',
-  '#dcbeff',
-  '#9A6324',
-  '#fffac8',
-  '#800000',
-  '#aaffc3',
-  '#808000',
-  '#ffd8b1',
-  '#000075',
-];
 
 const mapBounds: LngLatBoundsLike = [
   4.98865807458, 47.3024876979, 16.0169958839, 54.983104153,
 ];
 
+const paint: LinePaint = {
+  'line-opacity': 0.8,
+  'line-width': 6,
+  'line-color': '#0000aa',
+  'line-blur': 0.7,
+};
+const layout: LineLayout = { 'line-cap': 'round', 'line-join': 'round' };
+
 export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
-  const [west, south, east, north] = geometry.bbox;
-  const [longitude, latitude] = [(west + east) / 2, (north + south) / 2];
+  const [info, setInfo] = useState({
+    show: false,
+    lng: 0,
+    lat: 0,
+    content: null,
+  });
+  const [bounds, setBounds] = useState(geometry.bbox);
+  const updateInfo = (event) => {
+    const { lng, lat } = event.lngLat;
+    const feature = event.features[0];
+    setInfo({ lng, lat, show: true, content: feature.properties });
+    setBounds(feature.bbox);
+  };
   return (
     <div className="relative bg-white">
       <div className="h-56 overflow-hidden bg-emerald-300 shadow-xl sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2 lg:rounded-br-2xl">
         <Map
           initialViewState={{
-            longitude,
-            latitude,
-            zoom: 8,
+            bounds,
           }}
           mapLib={maplibregl}
           mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
           maxBounds={mapBounds}
-          onClick={(event) => console.log(event.features)}
+          onClick={updateInfo}
           interactiveLayerIds={geometry.features.map(
-            (geom) => geom.properties.id_segment
+            (feature) => feature.properties.id
           )}
         >
-          {geometry.features.map((geom, index) => {
-            console.log('mapping geometry: ', geom);
+          {geometry.features.map((geom) => {
             const layerStyle: LineLayer = {
-              id: geom.properties.id_segment,
+              id: geom.properties.id,
               type: 'line',
+              layout,
               paint: {
-                'line-width': 6,
-                'line-color': colors[index % colors.length],
+                ...paint,
+                'line-color': stateColors[geom.properties.state],
               },
             };
             return (
-              <Source
-                id={geom.properties.id_segment}
-                type="geojson"
-                data={geom}
-              >
+              <Source id={geom.properties.id} type="geojson" data={geom}>
                 <Layer {...layerStyle} />
               </Source>
             );
           })}
+          {info.show && (
+            <Popup
+              longitude={info.lng}
+              latitude={info.lat}
+              anchor="bottom"
+              onClose={() => setInfo({ ...info, show: false })}
+            >
+              {JSON.stringify(info.content)}
+            </Popup>
+          )}
         </Map>
       </div>
       <div className="relative mx-auto max-w-7xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
@@ -139,7 +125,7 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
           )}
           <div className="mt-8 overflow-hidden">
             <dl className="-mx-8 -mt-8 flex flex-wrap">
-              {Object.keys(stats).map((stat) => (
+              {/* {Object.keys(stats).map((stat) => (
                 <div className="flex flex-col px-8 pt-8">
                   <div className="flex h-12 w-12 items-center justify-center rounded-md bg-emerald-500 text-white">
                     {statsIcons[stat]}
@@ -148,7 +134,7 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
                     {stats[stat]}
                   </dt>
                 </div>
-              ))}
+              ))} */}
             </dl>
           </div>
           <div>

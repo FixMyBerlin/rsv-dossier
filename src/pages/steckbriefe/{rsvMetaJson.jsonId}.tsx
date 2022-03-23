@@ -30,13 +30,14 @@ export const query = graphql`
       bbox
       features {
         type
+        bbox
         geometry {
           coordinates
           type
         }
         properties {
           variants
-          status
+          state
           planning_phase
           length
           id_rsv

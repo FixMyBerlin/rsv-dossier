@@ -103,6 +103,8 @@ export const query = graphql`
   {
     radschnellwege: allRsvMetaJson {
       nodes {
+        state
+        jsonId
         general {
           to
           from
@@ -110,8 +112,6 @@ export const query = graphql`
           slug
           description
         }
-        state
-        jsonId
       }
     }
   }
