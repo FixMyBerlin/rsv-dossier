@@ -67,6 +67,7 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
           })}
           {info.show && (
             <Popup
+              closeOnClick={false}
               longitude={info.lng}
               latitude={info.lat}
               anchor="bottom"
