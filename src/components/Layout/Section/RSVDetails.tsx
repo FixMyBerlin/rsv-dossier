@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { ButtonLink } from '~/components/Links/ButtonLink';
 import { BMDVFunding } from '~/components/Layout/BMDVFunding';
-import Map, { Source, Layer, Popup } from 'react-map-gl';
+import Map, { Popup } from 'react-map-gl';
 import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { RSVSegment } from './RSVSegment';
-import { features } from 'process';
 
 type Props = {
   meta: {

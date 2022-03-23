@@ -5,7 +5,6 @@ import { Layout } from '~/components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
-  console.log(radschnellwege.nodes);
   return (
     <Layout>
       <HelmetSeo title="Radschnellwege" description="TODO" image="TODO" />

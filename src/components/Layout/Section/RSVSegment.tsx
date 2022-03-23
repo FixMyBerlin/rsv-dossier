@@ -1,7 +1,6 @@
 import React from 'react';
 import { LineLayer, LineLayout, LinePaint } from 'mapbox-gl';
-import Map, { Source, Layer, Popup } from 'react-map-gl';
-import { GeoJSON } from 'geojson';
+import { Source, Layer } from 'react-map-gl';
 
 const stateColors = {
   idea: '#ffe119',
@@ -23,15 +22,15 @@ const paint: LinePaint = {
 const layout: LineLayout = { 'line-cap': 'round', 'line-join': 'round' };
 
 export const RSVSegment: React.VFC<Props> = ({ feature, selected }) => {
-  const id = feature.properties.id;
+  const { id } = feature.properties;
   const layerStyle: LineLayer = {
-    id: id,
+    id,
     type: 'line',
     layout,
     paint: {
       ...paint,
       'line-color': stateColors[feature.properties.state],
-      'line-opacity': selected == id ? 1 : 0.65,
+      'line-opacity': selected === id ? 1 : 0.65,
     },
   };
   return (
