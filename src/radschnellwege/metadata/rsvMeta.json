@@ -1,6 +1,6 @@
 [
   {
-    "id": "frm1-hessen",
+    "id": "frm1_hessen",
     "cost": "",
     "finished": "",
     "state": "in_progress",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "id": "frm2-hessen",
+    "id": "frm2_hessen",
     "cost": "",
     "finished": "",
     "state": "planning",
@@ -54,7 +54,7 @@
     }
   },
   {
-    "id": "frm3-hessen",
+    "id": "frm3_hessen",
     "cost": "",
     "finished": "",
     "state": "planning",
@@ -81,7 +81,7 @@
     }
   },
   {
-    "id": "frm4-hessen",
+    "id": "frm4_hessen",
     "cost": "",
     "finished": "",
     "state": "planning",
@@ -108,7 +108,7 @@
     }
   },
   {
-    "id": "frm5-hessen",
+    "id": "frm5_hessen",
     "cost": "",
     "finished": "",
     "state": "planning",
@@ -135,7 +135,7 @@
     }
   },
   {
-    "id": "frm6-hessen",
+    "id": "frm6_hessen",
     "cost": "",
     "finished": "",
     "state": "idea",
@@ -162,7 +162,7 @@
     }
   },
   {
-    "id": "frm7-hessen",
+    "id": "frm7_hessen",
     "cost": "",
     "finished": "",
     "state": "planning",
@@ -189,7 +189,7 @@
     }
   },
   {
-    "id": "frm8-hessen",
+    "id": "frm8_hessen",
     "cost": "",
     "finished": "",
     "state": "planning",
@@ -216,7 +216,7 @@
     }
   },
   {
-    "id": "frm9-hessen",
+    "id": "frm9_hessen",
     "cost": "",
     "finished": "",
     "state": "planning",

@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "frm4_hessen",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"bbox": [ 8.50180043501069, 50.1335900387945, 8.56982339896068, 50.1493327688073 ],                                                
+"features": [
+{ "type": "Feature", "properties": { "id": "1", "id_rsv": "frm4_hessen", "status": "planning", "planning_phase": "pilot study", "detail_level": "corridor", "variants": "Vorzugstrasse", "length": "6466.783618830881" }, "bbox": [ 8.501800435010692, 50.133590038794523, 8.569823398960676, 50.149332768807348 ], "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 8.501800435010692, 50.143795501932111 ], [ 8.528318974852382, 50.133590038794523 ], [ 8.537789087922816, 50.149332768807348 ], [ 8.569823398960676, 50.14350543487916 ] ] ] } }
+]
+}

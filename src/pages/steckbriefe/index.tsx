@@ -5,6 +5,7 @@ import { Layout } from '~/components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
+  console.log(radschnellwege.nodes);
   return (
     <Layout>
       <HelmetSeo title="Radschnellwege" description="TODO" image="TODO" />
@@ -71,7 +72,7 @@ const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
                     {radschnellweg.general.to}{' '}
                     {/* https://tailwindui.com/components/application-ui/elements/badges */}
                     <span className="inline-flex items-center rounded-full bg-yellow-100 px-3 py-0.5 text-sm font-medium text-yellow-800">
-                      {radschnellweg.general.state}
+                      {radschnellweg.state}
                     </span>
                   </h3>
                   <p className="mt-4 text-base text-slate-500">
@@ -107,6 +108,7 @@ export const query = graphql`
           from
           name
           slug
+          description
         }
         state
         jsonId

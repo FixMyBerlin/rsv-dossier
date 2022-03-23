@@ -37,21 +37,18 @@ type Props = {
       website: string;
     };
   };
-  geometries: {
-    nodes: Array<{
-      id: string;
-      type: 'Feature';
-      geometry: GeoJSON.Geometry;
-      properties: {
-        id_rsv: string;
-        id_segment: string;
-        length: string;
-        planning_phase: string;
-        status: string;
-        variants: string;
-        detail_level: string;
-      };
-    }>;
+  geometry: {
+    bbox: Array<number>;
+    features: Array<GeoJSON.Feature>;
+    properties: {
+      id_rsv: string;
+      id_segment: string;
+      length: string;
+      planning_phase: string;
+      status: string;
+      variants: string;
+      detail_level: string;
+    };
   };
 };
 
@@ -80,28 +77,10 @@ const colors = [
 const mapBounds: LngLatBoundsLike = [
   4.98865807458, 47.3024876979, 16.0169958839, 54.983104153,
 ];
-function bounds(geometries) {
-  let [maxLat, maxLon] = [-Infinity, -Infinity];
-  let [minLat, minLon] = [Infinity, Infinity];
-  geometries.nodes.forEach(({ geometry: { coordinates } }) => {
-    coordinates.forEach((line) => {
-      const Xs = line.map((x) => x[1]);
-      const Ys = line.map((x) => x[0]);
-      maxLat = Math.max(...Xs, maxLat);
-      maxLon = Math.max(...Ys, maxLon);
-      minLat = Math.min(...Xs, minLat);
-      minLon = Math.min(...Ys, minLon);
-    });
-  });
-  return [minLat, minLon, maxLat, maxLon];
-}
-function center(geometries) {
-  const [minLat, minLon, maxLat, maxLon] = bounds(geometries);
-  return [(minLon + maxLon) / 2, (minLat + maxLat) / 2];
-}
 
-export const RSVDetails: React.VFC<Props> = ({ meta, geometries }) => {
-  const [longitude, latitude] = center(geometries);
+export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
+  const [west, south, east, north] = geometry.bbox;
+  const [longitude, latitude] = [(west + east) / 2, (north + south) / 2];
   return (
     <div className="relative bg-white">
       <div className="h-56 overflow-hidden bg-emerald-300 shadow-xl sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2 lg:rounded-br-2xl">
@@ -114,8 +93,13 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometries }) => {
           mapLib={maplibregl}
           mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
           maxBounds={mapBounds}
+          onClick={(event) => console.log(event.features)}
+          interactiveLayerIds={geometry.features.map(
+            (geom) => geom.properties.id_segment
+          )}
         >
-          {geometries.nodes.map((geom, index) => {
+          {geometry.features.map((geom, index) => {
+            console.log('mapping geometry: ', geom);
             const layerStyle: LineLayer = {
               id: geom.properties.id_segment,
               type: 'line',
@@ -134,8 +118,6 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometries }) => {
               </Source>
             );
           })}
-
-          <NavigationControl />
         </Map>
       </div>
       <div className="relative mx-auto max-w-7xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16">

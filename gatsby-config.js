@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/radschnellwege/geojson`,
+        path: `${__dirname}/src/radschnellwege/geometries`,
         name: 'rsv_geo',
       },
     },
