@@ -6,7 +6,6 @@ import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { RSVSegment } from './RSVSegment';
 import { RSVPopup } from './RSVPopup';
-import { features } from 'process';
 
 type Props = {
   meta: {

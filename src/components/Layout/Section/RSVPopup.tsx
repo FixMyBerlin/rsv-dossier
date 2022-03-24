@@ -1,5 +1,6 @@
 import React from 'react';
 import { Popup } from 'react-map-gl';
+
 type Props = {
   info: {
     show: boolean;
@@ -17,6 +18,13 @@ type Props = {
   };
   setInfo: Function;
   setSelected: Function;
+  // setInfo: (info: {
+  //   show: boolean;
+  //   lng: number;
+  //   lat: number;
+  //   properties?: any;
+  // }) => void;
+  // setSelected: (selected: number) => void;
 };
 
 export const RSVPopup: React.VFC<Props> = ({ info, setInfo, setSelected }) => {
