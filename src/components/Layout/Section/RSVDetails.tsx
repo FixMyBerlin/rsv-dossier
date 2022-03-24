@@ -68,7 +68,7 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
           maxBounds={mapBounds}
           onClick={updateInfo}
           interactiveLayerIds={geometry.features.map(
-            (feature) => feature.properties.id
+            ({ properties }) => properties.id
           )}
         >
           {geometry.features.map((feature) => {
