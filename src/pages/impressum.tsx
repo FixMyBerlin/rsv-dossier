@@ -39,7 +39,7 @@ const ImprintPage = () => {
       <h2>Feedback &amp; Kontakt</h2>
       <p>
         Wir freuen uns über Kommentare Anregungen und Unterstützung an{' '}
-        <MailToLink mailto="feedback@fixmycity.de">
+        <MailToLink mailto="feedback@fixmycity.de?subject=Feedback Radschnellverbindungen">
           feedback@fixmycity.de
         </MailToLink>
       </p>
