@@ -79,8 +79,8 @@ const ImprintPage = () => {
       <h2>Förderung</h2>
       <p>
         Diese Website wird im Rahmen des NRVP-Projektes "Baukasten-RSV" vom
-        Bundesministerium für Digitales und Verkehr (BMDV) gefördert
-        (Förderkennzeichen VB2025,{' '}
+        Bundesministerium für Digitales und Verkehr (BMDV) gef&#246;rdert
+        (F&#246;rderkennzeichen VB2025,{' '}
         <ExternalLink href="https://nationaler-radverkehrsplan.de/de/praxis/modulares-system-fuer-radschnellverbindungen">
           <strong>Projektsteckbrief</strong>)
         </ExternalLink>
