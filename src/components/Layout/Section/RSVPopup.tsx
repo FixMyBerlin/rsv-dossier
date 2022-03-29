@@ -3,7 +3,6 @@ import { Popup } from 'react-map-gl';
 
 type Props = {
   info: {
-    show: boolean;
     lng: number;
     lat: number;
     properties?: {
@@ -16,33 +15,22 @@ type Props = {
       detail_level: string;
     };
   };
-  setInfo: Function;
-  setSelected: Function;
-  // setInfo: (info: {
-  //   show: boolean;
-  //   lng: number;
-  //   lat: number;
-  //   properties?: any;
-  // }) => void;
-  // setSelected: (selected: number) => void;
+  setSelected: (selected: number) => void;
 };
 
-export const RSVPopup: React.VFC<Props> = ({ info, setInfo, setSelected }) => {
+export const RSVPopup: React.VFC<Props> = ({ info, setSelected }) => {
   return (
-    info.show && (
-      <Popup
-        className="opacity-90"
-        closeOnClick={false}
-        longitude={info.lng}
-        latitude={info.lat}
-        anchor="bottom"
-        onClose={() => {
-          setInfo({ ...info, show: false });
-          setSelected(-1);
-        }}
-      >
-        {`segment_id: ${info.properties.id} state: ${info.properties.state}`}
-      </Popup>
-    )
+    <Popup
+      className="opacity-90"
+      closeOnClick={false}
+      longitude={info.lng}
+      latitude={info.lat}
+      anchor="bottom"
+      onClose={() => {
+        setSelected(-1);
+      }}
+    >
+      {`segment_id: ${info.properties.id} state: ${info.properties.state}`}
+    </Popup>
   );
 };

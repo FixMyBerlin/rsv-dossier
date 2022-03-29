@@ -35,7 +35,6 @@ const mapBounds: LngLatBoundsLike = [
 
 export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
   const [info, setInfo] = useState({
-    show: false,
     lng: 0,
     lat: 0,
     properties: null,
@@ -48,7 +47,6 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
     setInfo({
       lng,
       lat,
-      show: true,
       properties: feature.properties,
     });
     setSelected(feature.properties.id);
@@ -73,7 +71,9 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
           {geometry.features.map((feature) => {
             return <RSVSegment feature={feature} selected={selected} />;
           })}
-          <RSVPopup info={info} setInfo={setInfo} setSelected={setSelected} />
+          {selected !== -1 && (
+            <RSVPopup info={info} setSelected={setSelected} />
+          )}
         </Map>
       </div>
       <div className=" mx-auto max-w-7xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
