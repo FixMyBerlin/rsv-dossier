@@ -20,7 +20,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         title="schneller planen durch konstruktive Beteiligungs&shy;formate"
         description="Koordinator:innen von RSV-Projekten stehen vor der
         Herausforderung mit einer Vielzahl von internen und externen
-        Stakeholdern in Kommunikation zu stehen.
+        Akteuren in Kommunikation zu stehen.
         Das NRVP-Forschungsprojekt RSV-Baukasten will Wissen konstruktiv
         einbinden und alle Beteiligten auf einem Kenntnisstand halten.
         "
@@ -42,8 +42,8 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           <p>
             Mit dem RSV-Baukasten entsteht ein modulares System zur Durchführung
             von Beteiligungsformaten zu den einzelnen Planungsphasen von
-            Radschnellverbindungen, um interne und externe Stakeholder
-            konstruktiv einzubinden.
+            Radschnellverbindungen, um interne und externe Akteure konstruktiv
+            einzubinden.
           </p>
           <p>
             <Heading2>
