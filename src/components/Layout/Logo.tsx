@@ -1,10 +1,15 @@
+import classNames from 'classnames';
 import React from 'react';
 import RsvLogo from '~/images/logo-rsv-info.svg';
 
-export const Logo = () => {
+type Props = {
+  className?: string;
+};
+
+export const Logo: React.VFC<Props> = ({ className }) => {
   return (
     <img
-      className=" h-12 w-auto md:h-16"
+      className={classNames('h-24 w-auto', className)}
       src={RsvLogo}
       alt="Radschnellverbindungen.info Logo"
     />

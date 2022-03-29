@@ -39,7 +39,7 @@ const ImprintPage = () => {
       <h2>Feedback &amp; Kontakt</h2>
       <p>
         Wir freuen uns über Kommentare Anregungen und Unterstützung an{' '}
-        <MailToLink mailto="feedback@fixmycity.de">
+        <MailToLink mailto="feedback@fixmycity.de?subject=Feedback Radschnellverbindungen">
           feedback@fixmycity.de
         </MailToLink>
       </p>
@@ -78,12 +78,11 @@ const ImprintPage = () => {
       </p>
       <h2>Förderung</h2>
       <p>
-        FixMyCity wird vom BMDV im Rahmen des NRVP gef&#246;rdert
-        (F&#246;rderkennzeichen <strong>VB2025</strong>).
-        <br />
+        Diese Website wird im Rahmen des NRVP-Projektes "Baukasten-RSV" vom
+        Bundesministerium für Digitales und Verkehr (BMDV) gefördert
+        (Förderkennzeichen VB2025,{' '}
         <ExternalLink href="https://nationaler-radverkehrsplan.de/de/praxis/modulares-system-fuer-radschnellverbindungen">
-          <strong>Projektsteckbrief</strong> Baukasten-RSV: Modulares System für
-          Radschnellverbindungen
+          <strong>Projektsteckbrief</strong>)
         </ExternalLink>
       </p>
 

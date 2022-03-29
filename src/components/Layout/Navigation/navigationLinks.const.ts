@@ -7,5 +7,5 @@ export const navigationLinks: navigationMenuItemProps[] = [
     name: 'Förderübersicht',
     to: '/foerderungen/',
   },
-  { name: 'Hintergrund', to: '/projekt-hintergrund/' },
+  // { name: 'Hintergrund', to: '/projekt-hintergrund/' },
 ];
