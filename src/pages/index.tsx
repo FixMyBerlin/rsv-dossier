@@ -63,26 +63,28 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             <Heading2>
               Steckbriefe aller deutschen Radschnellverbindungen
             </Heading2>
-            In unseren Steckbriefen finden Sie eine systematische Übersicht
-            aller aktuell geplanten Radschnellverbindungen sowie deren
-            Trassenverläufe bzw. -korridore. Sie erhalten so einen Überblick
-            welche Städte und Gemeinden durch Radschnellverbindungen miteinander
-            verbunden werden oder in Korridoren verbunden werden könnten.
-            Zielsetzung des BMDV ist ein lückenloses Radnetz in Deutschland zu
-            schaffen. Radschnellverbindungen sind dafür elementar.
+            In unseren Steckbriefen aller Radschnellverbindungen (in Arbeit)
+            finden Sie eine systematische Übersicht aller aktuell geplanten
+            Radschnellverbindungen sowie deren Trassenverläufe bzw. -korridore.
+            Sie erhalten so einen Überblick welche Städte und Gemeinden durch
+            Radschnellverbindungen miteinander verbunden werden oder in
+            Korridoren verbunden werden könnten. Zielsetzung von Bund und
+            Ländern ist ein lückenloses Radnetz in Deutschland zu schaffen.
+            Radschnellverbindungen sind dafür elementar.
           </p>
           <p>
-            <Heading2>Hintergrund zum Thema Radschnellverbindungen</Heading2>
+            <Heading2>Hintergründe und Grundlagen</Heading2>
             Radschnellverbindungen entwickeln sich mit dem verstärkten Aufkommen
             der Elektromobilität und dem akuten Handlungsbedarf zur Erreichung
             von Klimaschutzzielen rasant zu einem politischen und planerischen
-            Instrument mit hohem Potential.
+            Instrument mit hohem Potential. Zu Hintergründen und Grundlagen bald
+            mehr auf dieser Website.
           </p>
           <p>
             <Heading2>Kontakt</Heading2>
             Wenn Sie sich mehr Informationen zum Forschungsprojekt RSV-Baukasten
             wünschen oder stärker involviert sein wollen, kontaktieren Sie uns.
-            Die Laufzeit ist 2021-2023.
+            Die Laufzeit des Projektes ist von 2021 bis Ende 2023 angesetzt.
           </p>
           <p>
             Mail an{' '}
