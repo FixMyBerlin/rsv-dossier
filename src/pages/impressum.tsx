@@ -78,8 +78,8 @@ const ImprintPage = () => {
       </p>
       <h2>Förderung</h2>
       <p>
-        FixMyCity wird vom BMDV im Rahmen des NRVP gef&oumlrdert
-        (F&oumlrderkennzeichen <strong>VB2025</strong>).
+        FixMyCity wird vom BMDV im Rahmen des NRVP gef&#246;rdert
+        (F&#246;rderkennzeichen <strong>VB2025</strong>).
         <br />
         <ExternalLink href="https://nationaler-radverkehrsplan.de/de/praxis/modulares-system-fuer-radschnellverbindungen">
           <strong>Projektsteckbrief</strong> Baukasten-RSV: Modulares System für
