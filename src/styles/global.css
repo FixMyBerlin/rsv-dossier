@@ -16,21 +16,33 @@
 
   /* Set custom brand font */
   @font-face {
-    font-family: "Overpass";
-    src: url("../fonts/Overpass-VariableFont_wght.ttf") format('truetype-variations');
+    font-family: 'Overpass';
+    src: url('../fonts/Overpass-VariableFont_wght.ttf')
+      format('truetype-variations');
     font-weight: 100 900;
     font-style: normal;
   }
 
   @font-face {
-    font-family: "Overpass";
-    src: url("../fonts/Overpass-Italic-VariableFont_wght.ttf") format('truetype-variations');
+    font-family: 'Overpass';
+    src: url('../fonts/Overpass-Italic-VariableFont_wght.ttf')
+      format('truetype-variations');
     font-weight: 100 900;
     font-style: italic;
   }
+}
 
+@layer components {
   /* Default brand button */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full py-2 px-4  drop-shadow;
+  }
+
   .btn-brand {
-    @apply bg-emerald-300 py-2 px-4  hover:bg-slate-800 font-bold rounded-full text-slate-600 hover:text-emerald-300;
+    @apply btn border-2 border-emerald-300 bg-emerald-300 font-bold text-slate-600 transition-colors hover:bg-slate-800 hover:text-emerald-300 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2;
+  }
+
+  .btn-brand-outline {
+    @apply btn-brand  border-emerald-300 bg-white text-slate-600 hover:bg-emerald-300 hover:text-slate-600;
   }
 }

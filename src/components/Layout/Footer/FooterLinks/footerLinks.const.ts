@@ -1,19 +1,19 @@
+import { navigationLinks } from '../../Navigation/navigationLinks.const';
+
 export type footerMenuItemProps = { name: string; to: string };
 type footerMenuProp = {
   [key: string]: footerMenuItemProps[];
 };
 
 export const footerLinks: footerMenuProp = {
-  content: [
-    { name: 'Best Practice', to: '/best-practice/' },
-    { name: 'Fachinformationen', to: '/fachinformationen/' },
-    {
-      name: 'Übersicht Radschnellwege',
-      to: '/radschnellwege/',
-    },
-  ],
+  content: navigationLinks,
   formal: [
-    { name: 'Kontakt', to: '/kontakt/' },
-    { name: 'Datenschuzt', to: '/datenschutz/' },
+    // { name: 'Kontakt', to: '/kontakt/' },
+    { name: 'Datenschutz', to: '/datenschutz/' },
+    { name: 'Impressum', to: '/impressum/' },
+    {
+      name: 'Feedback geben',
+      to: 'mailto:feedback@fixmycity.de?subject=Feedback Radschnellverbindungen',
+    },
   ],
 };

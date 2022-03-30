@@ -1,12 +1,12 @@
 import React from 'react';
 import { ExternalLink } from '~/components/Links/ExternalLink';
-import { FooterNewsletter, FooterSocialIcons } from '.';
+import { FooterSocialIcons } from '.';
 import { FooterLinks } from './FooterLinks/FooterLinks';
 import { footerLinks } from './FooterLinks/footerLinks.const';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="z-0 bg-green-800" aria-labelledby="footer-heading">
+    <footer className="z-0 bg-emerald-100" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -14,19 +14,19 @@ export const Footer: React.FC = () => {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="grid grid-cols-2 gap-8 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-8">
-              <FooterLinks title="Angebote" linkList={footerLinks.content} />
+              {/* <FooterLinks title="Seiten" linkList={footerLinks.content} /> */}
               <FooterLinks
-                title="Formales"
+                title="Seiten"
                 linkList={footerLinks.formal}
                 className="mt-12 md:mt-0"
               />
             </div>
           </div>
-          <FooterNewsletter />
+          {/* <FooterNewsletter /> */}
         </div>
-        <div className="mt-8 border-t border-green-900 pt-8 md:flex md:items-center md:justify-between">
+        <div className="mt-8 border-t border-emerald-400 pt-8 md:flex md:items-center md:justify-between">
           <FooterSocialIcons />
-          <p className="mt-8 text-base text-slate-400 md:order-1 md:mt-0">
+          <p className="mt-8 text-base text-slate-800 md:order-1 md:mt-0">
             Gebaut mit{' '}
             <svg
               xmlns="http://www.w3.org/2000/svg"
