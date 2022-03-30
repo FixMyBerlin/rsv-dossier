@@ -39,7 +39,7 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
     lat: 0,
     properties: null,
   });
-  const [selected, setSelected] = useState(-1);
+  const [selected, setSelected] = useState(undefined);
 
   const updateInfo = (event) => {
     const { lng, lat } = event.lngLat;
@@ -71,9 +71,7 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
           {geometry.features.map((feature) => {
             return <RSVSegment feature={feature} selected={selected} />;
           })}
-          {selected !== -1 && (
-            <RSVPopup info={info} setSelected={setSelected} />
-          )}
+          <RSVPopup info={info} selected={selected} setSelected={setSelected} />
         </Map>
       </div>
       <div className=" mx-auto max-w-7xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
