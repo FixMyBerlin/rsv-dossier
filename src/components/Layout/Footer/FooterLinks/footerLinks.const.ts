@@ -13,7 +13,7 @@ export const footerLinks: footerMenuProp = {
     { name: 'Impressum', to: '/impressum/' },
     {
       name: 'Feedback geben',
-      to: 'mailto:feedback@fixmycity.de?subject=Feedback RSV',
+      to: 'mailto:feedback@fixmycity.de?subject=Feedback Radschnellverbindungen',
     },
   ],
 };
