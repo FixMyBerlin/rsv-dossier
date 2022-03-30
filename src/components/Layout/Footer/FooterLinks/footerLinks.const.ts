@@ -11,5 +11,9 @@ export const footerLinks: footerMenuProp = {
     // { name: 'Kontakt', to: '/kontakt/' },
     { name: 'Datenschutz', to: '/datenschutz/' },
     { name: 'Impressum', to: '/impressum/' },
+    {
+      name: 'Feedback geben',
+      to: 'mailto:feedback@fixmycity.de?subject=Feedback RSV',
+    },
   ],
 };

@@ -14,9 +14,9 @@ export const Footer: React.FC = () => {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="grid grid-cols-2 gap-8 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-8">
-              <FooterLinks title="Seiten" linkList={footerLinks.content} />
+              {/* <FooterLinks title="Seiten" linkList={footerLinks.content} /> */}
               <FooterLinks
-                title="Weiteres"
+                title="Seiten"
                 linkList={footerLinks.formal}
                 className="mt-12 md:mt-0"
               />
