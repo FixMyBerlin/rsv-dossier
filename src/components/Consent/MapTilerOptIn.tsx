@@ -28,6 +28,7 @@ export const MapTilerOptIn = ({ setConsent }) => {
         </div>
         <div className="mt-5">
           <button
+            type="button"
             className="btn-brand-outline px-8 py-3 shadow md:text-lg"
             onClick={giveConsent}
           >

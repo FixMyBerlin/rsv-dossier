@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Map from 'react-map-gl';
 import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import { MapTilerOptIn } from '~/components/Consent/';
 import { RSVSegment } from './RSVSegment';
 import { RSVPopup } from './RSVPopup';
-import { MapTilerOptIn } from '~/components/Consent/';
 
 type Props = {
   geometry: {
@@ -28,11 +28,7 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
   const updateInfo = (event) => {
     const { lng, lat } = event.lngLat;
     const [{ properties }] = event.features;
-    setInfo({
-      lng,
-      lat,
-      properties: properties,
-    });
+    setInfo({ lng, lat, properties });
     setSelected(properties.id);
   };
   const [consent, setConsent] = useState(

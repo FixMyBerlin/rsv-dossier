@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ButtonLink } from '~/components/Links/ButtonLink';
 import { BMDVFunding } from '~/components/Layout/BMDVFunding';
 import { RSVMap } from '~/components/Map';

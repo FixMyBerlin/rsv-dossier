@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, TextLink } from '~/components/Links';
+import { ExternalLink } from '~/components/Links';
 
 export const MapTilerOptOut = () => {
   const [consent, setConsent] = useState(
@@ -32,6 +32,7 @@ export const MapTilerOptOut = () => {
             zugestimmt.
           </p>
           <button
+            type="button"
             className="btn-brand-outline px-8 py-3 shadow md:text-lg"
             onClick={revokeConsent}
           >
