@@ -15,25 +15,27 @@ type Props = {
       detail_level: string;
     };
   };
-  selected: any;
-  setSelected: (selected: any) => void;
+  selected?: number;
+  setSelected: (selected?: number) => void;
 };
 
 export const RSVPopup: React.VFC<Props> = ({ info, selected, setSelected }) => {
   return (
-    selected && (
-      <Popup
-        className="opacity-90"
-        closeOnClick={false}
-        longitude={info.lng}
-        latitude={info.lat}
-        anchor="bottom"
-        onClose={() => {
-          setSelected(undefined);
-        }}
-      >
-        {`segment_id: ${info.properties.id} state: ${info.properties.state}`}
-      </Popup>
-    )
+    <div>
+      {selected && (
+        <Popup
+          className="opacity-90"
+          closeOnClick={false}
+          longitude={info.lng}
+          latitude={info.lat}
+          anchor="bottom"
+          onClose={() => {
+            setSelected(undefined);
+          }}
+        >
+          {`segment_id: ${info.properties.id} state: ${info.properties.state}`}
+        </Popup>
+      )}
+    </div>
   );
 };
