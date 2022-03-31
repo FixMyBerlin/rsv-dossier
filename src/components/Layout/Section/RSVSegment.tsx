@@ -1,13 +1,14 @@
 import React from 'react';
 import { LineLayer, LineLayout } from 'mapbox-gl';
 import { Source, Layer } from 'react-map-gl';
+import colors from 'tailwindcss/colors';
 
 const stateColors = {
-  idea: '#ffe119',
-  agreed: '#4363d8',
-  planning: '#f58231',
-  in_progress: '#dcbeff',
-  done: '#800000',
+  idea: colors.emerald[900],
+  agreed: colors.emerald[700],
+  planning: colors.emerald[500],
+  in_progress: colors.emerald[300],
+  done: colors.emerald[100],
 };
 
 type Props = {
