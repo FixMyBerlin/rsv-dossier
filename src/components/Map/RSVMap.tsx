@@ -4,7 +4,7 @@ import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { RSVSegment } from './RSVSegment';
 import { RSVPopup } from './RSVPopup';
-import { MapTilerOptIn } from './MapTilerOptIn';
+import { MapTilerOptIn } from '~/components/Consent/';
 
 type Props = {
   geometry: {
@@ -38,29 +38,27 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
   const [consent, setConsent] = useState(
     new Date(localStorage.getItem('MAPTILER_CONSENT') || undefined) < new Date()
   );
-  return (
-    <div>
-      {consent && (
-        <Map
-          initialViewState={{
-            zoom: 8,
-            bounds: geometry.bbox,
-          }}
-          mapLib={maplibregl}
-          mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
-          maxBounds={mapBounds}
-          onClick={updateInfo}
-          interactiveLayerIds={geometry.features.map(
-            ({ properties }) => properties.id
-          )}
-        >
-          {geometry.features.map((feature) => {
-            return <RSVSegment feature={feature} selected={selected} />;
-          })}
-          <RSVPopup info={info} selected={selected} setSelected={setSelected} />
-        </Map>
-      )}
-      {!consent && <MapTilerOptIn setConsent={setConsent} />}
-    </div>
-  );
+  if (consent) {
+    return (
+      <Map
+        initialViewState={{
+          zoom: 8,
+          bounds: geometry.bbox,
+        }}
+        mapLib={maplibregl}
+        mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
+        maxBounds={mapBounds}
+        onClick={updateInfo}
+        interactiveLayerIds={geometry.features.map(
+          ({ properties }) => properties.id
+        )}
+      >
+        {geometry.features.map((feature) => {
+          return <RSVSegment feature={feature} selected={selected} />;
+        })}
+        <RSVPopup info={info} selected={selected} setSelected={setSelected} />
+      </Map>
+    );
+  }
+  return <MapTilerOptIn setConsent={setConsent} />;
 };
