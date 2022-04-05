@@ -29,7 +29,7 @@ export const MapTilerOptIn = ({ setConsent }) => {
             className="btn-brand-outline px-8 py-3 shadow md:text-lg"
             onClick={giveConsent}
           >
-            Akzeptieren{' '}
+            Ja, ich stimme zu
           </button>
         </div>
       </div>
