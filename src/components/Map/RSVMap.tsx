@@ -24,6 +24,7 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
     lat: 0,
     properties: null,
   });
+  const [cursorStyle, setCursorStyle] = useState('grab');
   const [selected, setSelected] = useState(undefined);
   const updateInfo = (event) => {
     const { lng, lat } = event.lngLat;
@@ -42,12 +43,15 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
           bounds: geometry.bbox,
         }}
         mapLib={maplibregl}
+        cursor={cursorStyle}
         mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
         maxBounds={mapBounds}
         onClick={updateInfo}
         interactiveLayerIds={geometry.features.map(
           ({ properties }) => properties.id
         )}
+        onMouseEnter={() => setCursorStyle('pointer')}
+        onMouseLeave={() => setCursorStyle('grab')}
       >
         {geometry.features.map((feature) => {
           return <RSVSegment feature={feature} selected={selected} />;
