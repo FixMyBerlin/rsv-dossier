@@ -44,7 +44,7 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
         }}
         mapLib={maplibregl}
         cursor={cursorStyle}
-        mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
+        mapStyle="https://api.maptiler.com/maps/a4824657-3edd-4fbd-925e-1af40ab06e9c/style.json?key=ECOoUBmpqklzSCASXxcu"
         maxBounds={mapBounds}
         onClick={updateInfo}
         interactiveLayerIds={geometry.features.map(
