@@ -28,7 +28,7 @@ export const MapTilerOptOut = () => {
             <ExternalLink href="https://www.maptiler.com/consent-policy/">
               Datenschutzbestimmungen von MapTiler
             </ExternalLink>{' '}
-            zugestimmt.
+           und dieser Datenschutzerklärung zugestimmt.
           </p>
           <button
             type="button"
