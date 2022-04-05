@@ -36,7 +36,7 @@ export const MapTilerOptOut = () => {
             className="btn-brand-outline px-8 py-3 shadow md:text-lg"
             onClick={revokeConsent}
           >
-            Zurückziehen
+           Einwilligung Zurückziehen
           </button>
         </div>
       )}
