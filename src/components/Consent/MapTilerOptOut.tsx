@@ -24,25 +24,28 @@ export const MapTilerOptOut = () => {
           Angemessenheitsbeschluss der EU Kommission nach Artikel 45 DSGVO,
           welcher der Schweiz im Allgemeinen ein angemessenes, der DSGVO
           entsprechendes Datenschutzniveau attestiert. Bitte lesen Sie vor einer
-          Nutzung von MapTiler den Compliance-Hinweis von MapTiler unter
-          https://www.maptiler.com/privacy-policy/ durch. Danach erhebt die
-          MapTiler AG zur Nutzung der Kartenfunktion und aus Gründen der
-          IT-Sicherheit Ihre IP- Adresse. Bitte nutzen Sie MapTiler nur, wenn
-          Sie dem Tool trauen. Im Verhältnis zu uns erfolgt Ihre Nutzung von
-          MapTiler völlig anonym. Wir fragen keine personenbezogenen oder
-          personenbeziehbaren Daten ab. Sofern wir solche freiwillig erhalten,
-          löschen wir diese unverzüglich und unwiederbringlich. Hier können Sie
-          Ihre Einwilligung zurückziehen.
+          Nutzung von MapTiler den{' '}
+          <ExternalLink href="https://www.maptiler.com/privacy-policy/">
+            Compliance-Hinweis von MapTiler
+          </ExternalLink>{' '}
+          durch. Danach erhebt die MapTiler AG zur Nutzung der Kartenfunktion
+          und aus Gründen der IT-Sicherheit Ihre IP- Adresse. Bitte nutzen Sie
+          MapTiler nur, wenn Sie dem Tool trauen. Im Verhältnis zu uns erfolgt
+          Ihre Nutzung von MapTiler völlig anonym. Wir fragen keine
+          personenbezogenen oder personenbeziehbaren Daten ab. Sofern wir solche
+          freiwillig erhalten, löschen wir diese unverzüglich und
+          unwiederbringlich.
         </p>
       </div>
       {consent && (
         <div className="mt-5">
           <p>
-            Du hast der{' '}
-            <ExternalLink href="https://www.maptiler.com/consent-policy/">
+            Sie haben der{' '}
+            <ExternalLink href="https://www.maptiler.com/privacy-policy/">
               Datenschutzbestimmungen von MapTiler
             </ExternalLink>{' '}
-            und dieser Datenschutzerklärung zugestimmt.
+            und dieser Datenschutzerklärung zugestimmt. Hier können Sie Ihre
+            Einwilligung zurückziehen.
           </p>
           <button
             type="button"
