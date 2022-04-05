@@ -2,6 +2,7 @@ import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { LayoutArticle } from '~/components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
+import { MapTilerOptOut } from '~/components/Consent/';
 
 const DatenschutzPage = () => {
   return (
@@ -70,6 +71,9 @@ const DatenschutzPage = () => {
         </li>
         <li>
           <a href="#m42">Begriffsdefinitionen</a>
+        </li>
+        <li>
+          <a href="#m29">Datenschutzbestimmung</a>
         </li>
       </ul>
       <h2 id="m3">Verantwortlicher</h2>
@@ -829,6 +833,8 @@ const DatenschutzPage = () => {
         className="h-52 w-full border-0"
         src="https://s.radschnellverbindungen.info/index.php?module=CoreAdminHome&action=optOut&language=de&backgroundColor=f0fdf4&fontColor=374151&fontSize=16px&fontFamily=Overpass"
       />
+      <h2 id="m29">Datenschutzbestimmung (MapTiler)</h2>
+      <MapTilerOptOut />
     </LayoutArticle>
   );
 };
