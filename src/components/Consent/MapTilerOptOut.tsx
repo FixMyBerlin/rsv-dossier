@@ -56,6 +56,11 @@ export const MapTilerOptOut = () => {
           </button>
         </div>
       )}
+      {!consent && (
+        <div className="mt-5">
+          <p>Sie haben Ihre Zustimmung zur Datenverarbeitung zurückgerufen.</p>
+        </div>
+      )}
     </div>
   );
 };
