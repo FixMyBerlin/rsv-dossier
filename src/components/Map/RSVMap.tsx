@@ -13,8 +13,8 @@ type Props = {
   };
 };
 
-// bbox of germany (slightly extended)
-const mapBounds: LngLatBoundsLike = [
+//(slightly extended)
+const bboxGermany: LngLatBoundsLike = [
   4.98865807458, 47.3024876979, 16.0169958839, 54.983104153,
 ];
 
@@ -33,7 +33,9 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
     setSelected(properties.id);
   };
   const [consent, setConsent] = useState(
-    new Date(localStorage.getItem('MAPTILER_CONSENT') || undefined) < new Date()
+    window &&
+      new Date(localStorage.getItem('MAPTILER_CONSENT') || undefined) <
+        new Date()
   );
   if (consent) {
     return (
@@ -45,7 +47,7 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
         mapLib={maplibregl}
         cursor={cursorStyle}
         mapStyle="https://api.maptiler.com/maps/a4824657-3edd-4fbd-925e-1af40ab06e9c/style.json?key=ECOoUBmpqklzSCASXxcu"
-        maxBounds={mapBounds}
+        maxBounds={bboxGermany}
         onClick={updateInfo}
         interactiveLayerIds={geometry.features.map(
           ({ properties }) => properties.id

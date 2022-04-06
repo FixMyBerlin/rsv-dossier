@@ -3,7 +3,9 @@ import { ExternalLink } from '~/components/Links';
 
 export const MapTilerOptOut = () => {
   const [consent, setConsent] = useState(
-    new Date(localStorage.getItem('MAPTILER_CONSENT') || undefined) < new Date()
+    window &&
+      new Date(localStorage.getItem('MAPTILER_CONSENT') || undefined) <
+        new Date()
   );
   const revokeConsent = () => {
     setConsent(false);
