@@ -7,7 +7,11 @@ import { RSVDetails } from '~/components/Layout/Section/RSVDetails';
 const Radschnellweg = ({ data: { meta, geometry } }) => {
   return (
     <Layout>
-      <HelmetSeo title={meta.general.name} description="TODO" image="TODO" />
+      <HelmetSeo
+        title={meta.general.name}
+        description={meta.general.description}
+        image="TODO"
+      />
       <RSVDetails meta={meta} geometry={geometry} />
     </Layout>
   );
