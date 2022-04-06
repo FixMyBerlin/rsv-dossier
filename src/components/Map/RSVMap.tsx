@@ -33,7 +33,7 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
     setSelected(properties.id);
   };
   const [consent, setConsent] = useState(
-    window &&
+    typeof window != 'undefined' &&
       new Date(localStorage.getItem('MAPTILER_CONSENT') || undefined) <
         new Date()
   );
