@@ -1,21 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ExternalLink } from '~/components/Links/';
-import { setOptInCookie } from '~/components/CookieConsent';
+import { setOptInCookie, getOptInCookie } from '~/components/CookieConsent';
 
 export const OptOut: React.VFC = () => {
-  const [consent, setConsent] = useState<boolean | null>(null);
-  const initialState = consent;
-  if (!initialState) {
-    return (
-      <div className="mt-5">
-        <p>Sie haben der Datenverarbeitung durch MapTiler nicht zugestimmt.</p>
-      </div>
-    );
-  }
+  const [consent, setConsent] = useState(false);
+  useEffect(() => setConsent(getOptInCookie()));
   if (!consent) {
     return (
       <div className="mt-5">
-        <p>Sie haben Ihre Zustimmung zur Datenverarbeitung zurückgerufen.</p>
+        <p>Sie haben der Datenverarbeitung durch MapTiler nicht zugestimmt.</p>
       </div>
     );
   }

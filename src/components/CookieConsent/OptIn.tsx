@@ -3,7 +3,7 @@ import { ExternalLink, TextLink } from '~/components/Links';
 import { setOptInCookie } from '~/components/CookieConsent';
 
 type Props = {
-  setConsent: (boolean) => void;
+  setConsent: (val: boolean | null) => void;
 };
 
 export const OptIn: React.FC<Props> = ({ setConsent }) => {
