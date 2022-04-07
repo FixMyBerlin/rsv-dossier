@@ -6,6 +6,7 @@ export const getOptInCookie = () =>
 export const setOptInCookie = (val: boolean) => {
   if (val) {
     localStorage.setItem(OPTIN_KEY, new Date().toDateString());
+  } else {
+    localStorage.setItem(OPTIN_KEY, new Date(undefined).toDateString());
   }
-  localStorage.setItem(OPTIN_KEY, new Date(undefined).toDateString());
 };
