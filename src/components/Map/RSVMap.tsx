@@ -13,7 +13,7 @@ type Props = {
   };
 };
 
-//(slightly extended)
+// (slightly extended)
 const bboxGermany: LngLatBoundsLike = [
   4.98865807458, 47.3024876979, 16.0169958839, 54.983104153,
 ];
@@ -35,7 +35,7 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
   const [consent, setConsent] = useState<boolean | null>(null);
   useEffect(() => setConsent(getOptInCookie()));
   if (consent === null) {
-    return <div></div>;
+    return null;
   }
   if (consent === false) {
     return <OptIn setConsent={setConsent} />;
