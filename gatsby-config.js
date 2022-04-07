@@ -64,7 +64,7 @@ module.exports = {
         theme_color: `#34d399`,
         display: `minimal-ui`,
         icon: 'src/images/favicon.svg',
-        land: 'de',
+        lang: 'de',
       },
     },
   ],
