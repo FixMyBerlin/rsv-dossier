@@ -6,7 +6,7 @@
   "license": "AGPL-3.0",
   "browserslist": [
     "defaults",
-    "not ie 11"
+    "not IE 11"
   ],
   "scripts": {
     "start": "gatsby develop -p 9000",
