@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Map from 'react-map-gl';
 import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { MapTilerOptIn } from '~/components/Consent/';
+import { getOptInCookie, OptIn } from '~/components/CookieConsent/';
 import { RSVSegment } from './RSVSegment';
 import { RSVPopup } from './RSVPopup';
 
@@ -32,35 +32,35 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
     setInfo({ lng, lat, properties });
     setSelected(properties.id);
   };
-  const [consent, setConsent] = useState(
-    typeof window != 'undefined' &&
-      new Date(localStorage.getItem('MAPTILER_CONSENT') || undefined) <
-        new Date()
-  );
-  if (consent) {
-    return (
-      <Map
-        initialViewState={{
-          zoom: 8,
-          bounds: geometry.bbox,
-        }}
-        mapLib={maplibregl}
-        cursor={cursorStyle}
-        mapStyle="https://api.maptiler.com/maps/a4824657-3edd-4fbd-925e-1af40ab06e9c/style.json?key=ECOoUBmpqklzSCASXxcu"
-        maxBounds={bboxGermany}
-        onClick={updateInfo}
-        interactiveLayerIds={geometry.features.map(
-          ({ properties }) => properties.id
-        )}
-        onMouseEnter={() => setCursorStyle('pointer')}
-        onMouseLeave={() => setCursorStyle('grab')}
-      >
-        {geometry.features.map((feature) => {
-          return <RSVSegment feature={feature} selected={selected} />;
-        })}
-        <RSVPopup info={info} selected={selected} setSelected={setSelected} />
-      </Map>
-    );
+  const [consent, setConsent] = useState<boolean | null>(null);
+  useEffect(() => setConsent(getOptInCookie()));
+  if (consent === null) {
+    return <div></div>;
   }
-  return <MapTilerOptIn setConsent={setConsent} />;
+  if (consent === false) {
+    return <OptIn setConsent={setConsent} />;
+  }
+  return (
+    <Map
+      initialViewState={{
+        zoom: 8,
+        bounds: geometry.bbox,
+      }}
+      mapLib={maplibregl}
+      cursor={cursorStyle}
+      mapStyle="https://api.maptiler.com/maps/a4824657-3edd-4fbd-925e-1af40ab06e9c/style.json?key=ECOoUBmpqklzSCASXxcu"
+      maxBounds={bboxGermany}
+      onClick={updateInfo}
+      interactiveLayerIds={geometry.features.map(
+        ({ properties }) => properties.id
+      )}
+      onMouseEnter={() => setCursorStyle('pointer')}
+      onMouseLeave={() => setCursorStyle('grab')}
+    >
+      {geometry.features.map((feature) => {
+        return <RSVSegment feature={feature} selected={selected} />;
+      })}
+      <RSVPopup info={info} selected={selected} setSelected={setSelected} />
+    </Map>
+  );
 };
