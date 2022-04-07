@@ -4,6 +4,10 @@
   "version": "0.1.0",
   "author": "FixMyCity <hello@fixmycity.de>",
   "license": "AGPL-3.0",
+  "browserslist": [
+    "defaults",
+    "not ie 11"
+  ],
   "scripts": {
     "start": "gatsby develop -p 9000",
     "build": "gatsby build",
@@ -53,7 +57,6 @@
     "@typescript-eslint/parser": "^5.5.0",
     "autoprefixer": "^10.4.2",
     "babel-jest": "^27.3.1",
-    "babel-preset-gatsby": "^2.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.7.0",
     "eslint-config-airbnb": "^19.0.4",
