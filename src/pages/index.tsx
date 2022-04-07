@@ -52,12 +52,12 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Durch eine anschauliche und verständliche Kommunikation mittels
             kartengestützter Formate sollen RSV-Planungsprojekten effizienter
             durchgeführt und ihre Akzeptanz erhöht werden. Das System soll die
-            behörden- und gemeindeübergreifende interne Kommunikation und
-            Abstimmung zu Machbarkeitsstudien und Vorplanungen unterstützen und
-            damit bereits in der Frühphase für eine Beschleunigung des Prozesses
-            sorgen. Grundlage ist ein dynamisches Online-Kartenformat das
-            Informationen zu Radschnellverbindungen übersichtlich aufbereitet
-            und Beteiligungsinstrumente daran anbindet.
+            behörden- und gemeindeübergreifende Kommunikation und Abstimmung zu
+            Machbarkeitsstudien und Vorplanungen unterstützen und damit bereits
+            in der Frühphase für eine Beschleunigung des Prozesses sorgen.
+            Grundlage ist ein dynamisches Online-Kartenformat das Informationen
+            zu Radschnellverbindungen übersichtlich aufbereitet und
+            Beteiligungsinstrumente daran anbindet.
           </p>
           <p>
             <Heading2>
