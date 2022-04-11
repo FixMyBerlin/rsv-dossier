@@ -2,16 +2,17 @@ import { graphql, Link } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const RadschnellwegIndex = ({ data }) => {
   return (
-    <Layout padding={false}>
+    <Layout>
       <HelmetSeo title="Radschnellwege" description="TODO" image="TODO" />
       <div className="bg-white">
         {/* Header */}
         <div className="relative bg-gray-800 pb-32">
           <div className="absolute inset-0">
-            <img
+            <StaticImage
               className="h-full w-full object-cover"
               src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
               alt=""
@@ -38,7 +39,7 @@ const RadschnellwegIndex = ({ data }) => {
           aria-labelledby="contact-heading"
         >
           <h2 className="sr-only" id="contact-heading">
-            Alle Radschnellwege
+            Alle Radschnellverbindungen
           </h2>
           <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
             {data.radschnellwege.nodes.map((radschnellweg) => (
@@ -47,7 +48,7 @@ const RadschnellwegIndex = ({ data }) => {
                 className="flex flex-col rounded-2xl bg-white shadow-xl"
               >
                 <div className="relative flex-1 px-6 pt-16 pb-8 md:px-8">
-                  <div className="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-indigo-600 p-5 shadow-lg">
+                  <div className="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-emerald-400 p-5 shadow-lg">
                     {/* <!-- Heroicon name: outline/phone --> */}
                     <svg
                       className="h-6 w-6 text-white"

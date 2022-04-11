@@ -12,6 +12,8 @@ module.exports = {
   // TailwindCSS needs PostCSS, https://tailwindcss.com/docs/guides/gatsby
   plugins: [
     'gatsby-plugin-postcss',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-yaml',
       options: {
@@ -46,6 +48,27 @@ module.exports = {
         rule: {
           include: /static/,
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-matomo',
+      options: {
+        siteId: '5',
+        matomoUrl: 'https://s.radschnellverbindungen.info',
+        siteUrl: 'https://radschnellverbindungen.info',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Radschnellverbindungen.info`,
+        short_name: `RSV.info`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#34d399`,
+        display: `minimal-ui`,
+        icon: 'src/images/favicon.svg',
+        land: 'de',
       },
     },
   ],

@@ -1,12 +1,11 @@
 {
   "name": "radschnellverbindungen.info",
-  "description": "The website for https://radschnellverbindungen.info, build with Gatsby.",
+  "description": "The website for https://radschnellverbindungen.info.",
   "version": "0.1.0",
   "author": "FixMyCity <hello@fixmycity.de>",
-  "license": "AGPL,MIT",
-  "keywords": [],
+  "license": "AGPL-3.0",
   "scripts": {
-    "start": "gatsby develop",
+    "start": "gatsby develop -p 9000",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -17,12 +16,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "lint-staged": {
-    "./src/**/*.{ts,js,jsx,tsx}": [
-      "yarn lint --fix",
-      "yarn format"
-    ]
-  },
   "dependencies": {
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
@@ -30,14 +23,18 @@
     "@tailwindcss/line-clamp": "^0.3.0",
     "@tailwindcss/typography": "^0.5.0",
     "classnames": "^2.3.1",
-    "gatsby": "~4.6.0",
-    "gatsby-plugin-react-svg": "3.1.0",
-    "gatsby-plugin-sitemap": "5.6.0",
+    "gatsby": "^4.9.0",
+    "gatsby-plugin-image": "2.9.1",
+    "gatsby-plugin-manifest": "4.9.1",
+    "gatsby-plugin-matomo": "0.11.0",
+    "gatsby-plugin-react-svg": "^3.1.0",
+    "gatsby-plugin-sharp": "4.9.1",
+    "gatsby-plugin-sitemap": "^5.6.0",
     "gatsby-source-filesystem": "^4.6.0",
     "gatsby-transformer-yaml": "^4.6.0",
-    "react": "~17.0.2",
-    "react-dom": "~17.0.2",
-    "react-helmet": "~6.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
     "tsconfig-paths-webpack-plugin": "^3.5.2"
   },
   "devDependencies": {

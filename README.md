@@ -1,11 +1,26 @@
-# [radschnellverbindungen.info](https://radschnellverbindungen.info/)
+<div align="center">
+  <img src="src/images/logo-rsv-info.svg" height="80" />
+  <h1 align="center">Radschnellverbindungen.info</h1>
+  <!-- Deployment status -->
+  <a href="https://app.netlify.com/sites/fixmyrsv/deploys"><img src="https://api.netlify.com/api/v1/badges/7ac0f9fe-a196-4ef9-b372-2e4bbe53c074/deploy-status" alt="Netlify deployment status" /></a>
+  <!--  -->
+</div>
 
-## Develop
+This site show's general information about Radschnellverbindungen (cycle highways) in Germany and specific about specific highways which are planned or build.
 
-- Use asdf or nvm to install NodeJS
-- Use `npm run` to see a list of commands like `npm run start`
+## Developing
+
+If you found any bugs feel free to create an issue.
+
+### Getting Started
+
+For starting developing, the following steps could be helpful for getting started:
+
+- Use or nvm to install Node.js: `nvm use`
+- Install dependenices: `npm install`
+- Start gatsby develop service: `npm start`
+- Use `npm run` to see a list of commands
 - Use `npm run build && npx serve public` to test the build
-- Use `npx eslint --print-config .eslintrc` to check the `.eslintrc` for errors
 
 ### Gatsby KnowHow
 
@@ -18,8 +33,9 @@
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more information.
+This project is licensed under the AGPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for more information.
+It contains dependencies which have different Licenses, see [`package.json`](./package.json).
 
 ## Thanks
 
-- Gatsby starter by João Pedro Schmitz, https://github.com/jpedroschmitz/gatsby-starter-ts
+- This page is based on `gatsby-starter-ts` by João Pedro Schmitz, https://github.com/jpedroschmitz/gatsby-starter-ts (License: MIT)
