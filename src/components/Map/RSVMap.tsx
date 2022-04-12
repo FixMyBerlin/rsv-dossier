@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Map from 'react-map-gl';
 import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
+import { StaticImage } from 'gatsby-plugin-image';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { getOptInCookie, OptIn } from '~/components/CookieConsent/';
 import { RSVSegment } from './RSVSegment';
@@ -34,16 +35,24 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
   };
   const [consent, setConsent] = useState<boolean | null>(null);
   useEffect(() => setConsent(getOptInCookie()));
-  if (consent === null) {
-    return null;
-  }
-  if (consent === false) {
-    return <OptIn setConsent={setConsent} />;
+  if (!consent) {
+    return (
+      <div className="relative">
+        {consent === false && (
+          <div className="absolute top-1/2 z-10 mx-2 -translate-y-1/2">
+            <OptIn setConsent={setConsent} />
+          </div>
+        )}
+        <StaticImage
+          src="./map.png"
+          alt="Accept the Privacy Policy to view the map"
+        />
+      </div>
+    );
   }
   return (
     <Map
       initialViewState={{
-        zoom: 8,
         bounds: geometry.bbox,
       }}
       mapLib={maplibregl}
@@ -56,6 +65,7 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
       )}
       onMouseEnter={() => setCursorStyle('pointer')}
       onMouseLeave={() => setCursorStyle('grab')}
+      attributionControl={false}
     >
       {geometry.features.map((feature) => {
         return <RSVSegment feature={feature} selected={selected} />;
