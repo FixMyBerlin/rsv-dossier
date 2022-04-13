@@ -20,7 +20,7 @@ const bboxGermany: LngLatBoundsLike = [
 ];
 
 export const RSVMap: React.VFC<Props> = ({ geometry }) => {
-  const [info, setInfo] = useState({
+  const [info] = useState({
     lng: 0,
     lat: 0,
     properties: null,
