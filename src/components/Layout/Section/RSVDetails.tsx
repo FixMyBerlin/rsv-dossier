@@ -1,6 +1,5 @@
 import React from 'react';
 import { ButtonLink } from '~/components/Links/ButtonLink';
-import { BMDVFunding } from '~/components/Layout/BMDVFunding';
 import { RSVMap } from '~/components/Map';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
@@ -49,9 +48,6 @@ export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
               </ButtonLink>
             </div>
           )}
-          <div>
-            <BMDVFunding />
-          </div>
         </div>
       </div>
     </div>
