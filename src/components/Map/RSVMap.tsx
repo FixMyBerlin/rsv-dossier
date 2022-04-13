@@ -25,14 +25,15 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
     lat: 0,
     properties: null,
   });
-  const [cursorStyle, setCursorStyle] = useState('grab');
   const [selected, setSelected] = useState(undefined);
-  const updateInfo = (event) => {
-    const { lng, lat } = event.lngLat;
-    const [{ properties }] = event.features;
-    setInfo({ lng, lat, properties });
-    setSelected(properties.id);
-  };
+  // disabled until popup has real content
+  // const updateInfo = (event) => {
+  //   const { lng, lat } = event.lngLat;
+  //   const [{ properties }] = event.features;
+  //   setInfo({ lng, lat, properties });
+  //   setSelected(properties.id);
+  // };
+  // const [cursorStyle, setCursorStyle] = useState('grab');
   const [consent, setConsent] = useState<boolean | null>(null);
   useEffect(() => setConsent(getOptInCookie()));
   if (!consent) {
@@ -60,15 +61,16 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
         },
       }}
       mapLib={maplibregl}
-      cursor={cursorStyle}
       mapStyle="https://api.maptiler.com/maps/a4824657-3edd-4fbd-925e-1af40ab06e9c/style.json?key=ECOoUBmpqklzSCASXxcu"
       maxBounds={bboxGermany}
-      onClick={updateInfo}
       interactiveLayerIds={geometry.features.map(
         ({ properties }) => properties.id
       )}
-      onMouseEnter={() => setCursorStyle('pointer')}
-      onMouseLeave={() => setCursorStyle('grab')}
+      // disabled until popup has real content
+      // onClick={updateInfo}
+      // cursor={cursorStyle}
+      // onMouseEnter={() => setCursorStyle('pointer')}
+      // onMouseLeave={() => setCursorStyle('grab')}
     >
       {geometry.features.map((feature) => {
         return <RSVSegment feature={feature} selected={selected} />;
