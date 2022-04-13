@@ -46,6 +46,7 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
         <StaticImage
           src="./map.png"
           alt="Accept the Privacy Policy to view the map"
+          className="blur-sm"
         />
       </div>
     );
@@ -54,6 +55,9 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
     <Map
       initialViewState={{
         bounds: geometry.bbox,
+        fitBoundsOptions: {
+          padding: 20,
+        },
       }}
       mapLib={maplibregl}
       cursor={cursorStyle}
@@ -65,7 +69,6 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
       )}
       onMouseEnter={() => setCursorStyle('pointer')}
       onMouseLeave={() => setCursorStyle('grab')}
-      attributionControl={false}
     >
       {geometry.features.map((feature) => {
         return <RSVSegment feature={feature} selected={selected} />;
