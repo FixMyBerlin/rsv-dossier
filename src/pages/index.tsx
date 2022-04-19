@@ -3,7 +3,7 @@ import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Hero } from '~/components/Layout/Hero/Hero';
 import { Layout } from '~/components/Layout/Layout';
-import { TextWithImage } from '~/components/Layout/Section/';
+import { TextWithImage } from '~/components/Layout/ContentSection';
 import { StaticImage } from 'gatsby-plugin-image';
 import { MailToButtonLink } from '~/components/Links';
 import { Heading2 } from '~/components/Text';

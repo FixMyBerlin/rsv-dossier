@@ -1,3 +1,4 @@
+// This component is stale
 import React from 'react';
 import BmdvFundingImage from '~/static/BMDV-Foerderung.svg';
 

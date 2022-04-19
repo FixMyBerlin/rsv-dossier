@@ -2,7 +2,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
-import { RSVDetails } from '~/components/Layout/Section/RSVDetails';
+import { RSVDetails } from '~/components/Layout/ContentSection/RsvDetails';
 
 const Radschnellweg = ({ data: { meta, geometry } }) => {
   return (
