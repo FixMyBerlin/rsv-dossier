@@ -74,7 +74,10 @@ const DatenschutzPage = () => {
           <a href="#m42">Begriffsdefinitionen</a>
         </li>
         <li>
-          <a href="#m29">Datenschutzbestimmung</a>
+          <a href="#m54">Tracking Opt-Out (Matomo)</a>
+        </li>
+        <li>
+          <a href="#m29">Datenschutzbestimmung (Maptiler)</a>
         </li>
       </ul>
       <h2 id="m3">Verantwortlicher</h2>
@@ -828,7 +831,7 @@ const DatenschutzPage = () => {
           />
         </a>
       </p>
-      <h2>Tracking Opt-Out (Matomo)</h2>
+      <h2 id="m54">Tracking Opt-Out (Matomo)</h2>
       <iframe
         title="Matomo Opt Out Tracking"
         className="h-52 w-full border-0"
