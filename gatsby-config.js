@@ -17,10 +17,6 @@ module.exports = {
     'gatsby-transformer-json',
     {
       resolve: '@sentry/gatsby',
-      options: {
-        dsn: 'https://5cc2dffb1c2c436fa3e34580af998942@o1174824.ingest.sentry.io/6272556',
-        sampleRate: 0.0, // Adjust this value in production
-      },
     },
     {
       resolve: 'gatsby-source-filesystem',
