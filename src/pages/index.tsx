@@ -7,8 +7,14 @@ import { TextWithImage } from '~/components/Layout/ContentSection';
 import { StaticImage } from 'gatsby-plugin-image';
 import { MailToButtonLink } from '~/components/Links';
 import { Heading2 } from '~/components/Text';
+import * as Sentry from '@sentry/gatsby';
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
+  try {
+    throw Error('TEST');
+  } catch (err) {
+    Sentry.captureException(err);
+  }
   return (
     <Layout location={location} navigation={false}>
       <HelmetSeo
@@ -95,7 +101,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             >
               hello@fixmycity.de
             </MailToButtonLink>{' '}
-            schreiben
+            schreibens
           </p>
         </>
       </TextWithImage>
