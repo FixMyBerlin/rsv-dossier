@@ -1,6 +1,8 @@
+import { LngLatBoundsLike } from 'maplibre-gl';
+
 export type geometryJson = {
   geometry: {
-    bbox: GeoJSON.BBox;
+    bbox: LngLatBoundsLike;
     features: Array<GeoJSON.Feature>;
   };
 };
