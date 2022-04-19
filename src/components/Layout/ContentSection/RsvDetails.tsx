@@ -2,33 +2,14 @@ import React from 'react';
 import { ButtonLink } from '~/components/Links/ButtonLink';
 import { RSVMap } from '~/components/Map';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import { geometryJson, metaJson } from '~/types/steckbrief';
 
-type Props = {
-  meta: {
-    finished: string;
-    state: string;
-    cost: string;
-    general: {
-      name: string;
-      description: string;
-      to: string;
-      from: string;
-      ref: string;
-    };
-    references: {
-      website: string;
-    };
-  };
-  geometry: {
-    bbox: [number, number, number, number];
-    features: Array<GeoJSON.Feature>;
-  };
-};
+type Props = metaJson & geometryJson;
 
 export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
   return (
     <div className="relative max-h-[1080px] bg-white lg:min-h-[calc(100vh-theme(space.24)-1rem)]">
-      <div className="flex h-80 max-h-[1300px] max-w-[960px] overflow-hidden shadow-xl lg:absolute lg:left-0 lg:h-full lg:w-1/2 lg:rounded-br-2xl">
+      <div className="flex h-80 max-h-[1080px] max-w-[960px] overflow-hidden shadow-xl lg:absolute lg:left-0 lg:h-full lg:w-1/2 lg:rounded-br-2xl">
         <RSVMap geometry={geometry} />
       </div>
       <div className=" mx-auto max-w-7xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16">

@@ -4,14 +4,10 @@ import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
 import { StaticImage } from 'gatsby-plugin-image';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { getOptInCookie, OptIn } from '~/components/CookieConsent/';
+import { geometryJson } from '~/types/steckbrief';
 import { RSVSegment, RSVPopup } from '.';
 
-type Props = {
-  geometry: {
-    bbox: [number, number, number, number];
-    features: Array<GeoJSON.Feature>;
-  };
-};
+type Props = geometryJson;
 
 // (slightly extended)
 const bboxGermany: LngLatBoundsLike = [
