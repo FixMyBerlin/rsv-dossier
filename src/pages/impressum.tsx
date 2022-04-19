@@ -76,7 +76,7 @@ const ImprintPage = () => {
         </ExternalLink>
         .
       </p>
-      <h2>Fö;rderung</h2>
+      <h2>Förderung</h2>
       <p>
         Diese Website wird im Rahmen des NRVP-Projektes
         &ldquo;Baukasten-RSV&rdquo; vom Bundesministerium für Digitales und
