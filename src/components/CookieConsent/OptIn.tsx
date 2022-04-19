@@ -16,13 +16,13 @@ export const OptIn: React.FC<Props> = ({ setConsent }) => {
             <ExternalLink href="https://www.maptiler.com/privacy-policy/">
               Datenschutzbestimmungen von MapTiler
             </ExternalLink>{' '}
-            zu. MapTiler speichert nur kurzfristig notwendige Daten zu Deiner IP
-            Adressse. Du kannst Deine Zustimmung auf unserer{' '}
+            zu. MapTiler speichert nur kurzfristig notwendige Daten zu Deiner
+            IP- Adresse. Du kannst Deine Zustimmung auf unserer{' '}
             <TextLink to="/datenschutz/">Datenschutz-Seite</TextLink>{' '}
             zurückziehen.
           </p>
-          Zur darstellung unserer Karten benutzen wird MapTiler wodurch wir eine
-          Weitergabe von Nutzerinformationen an dritte nicht vermeiden können.
+          Zur Darstellung unserer Karten benutzen wir MapTiler, wodurch wir eine
+          Weitergabe von Nutzerinformationen an Dritte nicht vermeiden können.
         </div>
         <div className="mt-5">
           <button
