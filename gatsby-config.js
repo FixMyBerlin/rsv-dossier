@@ -23,7 +23,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-transformer-yaml',
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/radschnellwege/metadata`,
         name: 'rsv_meta',
