@@ -25,7 +25,7 @@ type Props = {
   };
 };
 
-export const RSVDetails: React.VFC<Props> = ({ meta, geometry }) => {
+export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
   return (
     <div className="relative max-h-[1080px] bg-white lg:min-h-[calc(100vh-theme(space.24)-1rem)]">
       <div className="flex h-80 max-w-[960px] overflow-hidden shadow-xl lg:absolute lg:left-0 lg:h-full lg:w-1/2 lg:rounded-br-2xl">

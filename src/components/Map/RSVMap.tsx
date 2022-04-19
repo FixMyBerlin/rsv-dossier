@@ -19,7 +19,7 @@ const bboxGermany: LngLatBoundsLike = [
   4.98865807458, 47.3024876979, 16.0169958839, 54.983104153,
 ];
 
-export const RSVMap: React.VFC<Props> = ({ geometry }) => {
+export const RSVMap: React.FC<Props> = ({ geometry }) => {
   const [info] = useState({
     lng: 0,
     lat: 0,
@@ -45,6 +45,7 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
           </div>
         )}
         <StaticImage
+          layout="fixed"
           src="./map.png"
           alt="Accept the Privacy Policy to view the map"
           className="blur-sm"
@@ -73,7 +74,9 @@ export const RSVMap: React.VFC<Props> = ({ geometry }) => {
       // onMouseLeave={() => setCursorStyle('grab')}
     >
       {geometry.features.map((feature) => {
-        return <RSVSegment feature={feature} selected={selected} />;
+        return (
+          <RSVSegment key={feature.id} feature={feature} selected={selected} />
+        );
       })}
       <RSVPopup info={info} selected={selected} setSelected={setSelected} />
     </Map>

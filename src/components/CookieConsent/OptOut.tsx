@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ExternalLink } from '~/components/Links/';
 import { setOptInCookie, getOptInCookie } from '~/components/CookieConsent';
 
-export const OptOut: React.VFC = () => {
+export const OptOut: React.FC = () => {
   const [consent, setConsent] = useState(false);
   useEffect(() => setConsent(getOptInCookie()));
   if (!consent) {

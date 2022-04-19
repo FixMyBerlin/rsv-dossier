@@ -19,7 +19,7 @@ type Props = {
   setSelected: (selected?: number) => void;
 };
 
-export const RSVPopup: React.VFC<Props> = ({ info, selected, setSelected }) => {
+export const RSVPopup: React.FC<Props> = ({ info, selected, setSelected }) => {
   return (
     <div>
       {selected && (

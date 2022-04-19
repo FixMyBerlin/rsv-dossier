@@ -28,7 +28,7 @@ type Props = {
 
 const layout: LineLayout = { 'line-cap': 'round', 'line-join': 'round' };
 
-export const RSVSegment: React.VFC<Props> = ({ feature, selected }) => {
+export const RSVSegment: React.FC<Props> = ({ feature, selected }) => {
   const { id } = feature.properties;
   const paint =
     selected === id
