@@ -38,7 +38,7 @@ export const RSVMap: React.FC<Props> = ({ geometry }) => {
   useEffect(() => setConsent(getOptInCookie()));
   if (!consent) {
     return (
-      <div className="relative">
+      <div className="relative max-h-full max-w-full">
         {consent === false && (
           <div className="absolute top-1/2 z-10 mx-2 -translate-y-1/2">
             <OptIn setConsent={setConsent} />
@@ -47,8 +47,8 @@ export const RSVMap: React.FC<Props> = ({ geometry }) => {
         <StaticImage
           layout="fixed"
           src="./map.png"
-          alt="Accept the Privacy Policy to view the map"
-          className="blur-sm"
+          alt="Platzhalter Karte"
+          className="max-h-full max-w-full blur-sm"
         />
       </div>
     );
