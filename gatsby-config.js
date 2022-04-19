@@ -14,23 +14,19 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-json',
     {
-      resolve: 'gatsby-transformer-yaml',
+      resolve: 'gatsby-source-filesystem',
       options: {
-        typeName: ({ node }) => {
-          const name = node.sourceInstanceName;
-          if (name === 'radschnellwege') {
-            return 'Radschnellweg';
-          }
-          return name;
-        },
+        path: `${__dirname}/src/radschnellwege/metadata`,
+        name: 'rsv_meta',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: './src/radschnellwege',
-        name: 'radschnellwege',
+        path: `${__dirname}/src/radschnellwege/geometries`,
+        name: 'rsv_geo',
       },
     },
     {
@@ -68,7 +64,7 @@ module.exports = {
         theme_color: `#34d399`,
         display: `minimal-ui`,
         icon: 'src/images/favicon.svg',
-        land: 'de',
+        lang: 'de',
       },
     },
   ],
