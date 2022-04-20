@@ -10,11 +10,6 @@ import { Heading2 } from '~/components/Text';
 import * as Sentry from '@sentry/gatsby';
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
-  try {
-    throw Error('TEST');
-  } catch (err) {
-    Sentry.captureException(err);
-  }
   return (
     <Layout location={location} navigation={false}>
       <HelmetSeo
