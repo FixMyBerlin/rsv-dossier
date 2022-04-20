@@ -18,15 +18,16 @@ const stateColor = {
   done: '#064E3B',
 };
 
-const buildPath = ({
+const buildPaths = ({
   properties: { state },
   geometry: { coordinates },
 }: GeoJSON.Feature<GeoJSON.MultiLineString>) => {
   const paint = `width:7|stroke:${stateColor[state]}`;
 
+  // flip the coordinate order for encoding
   return coordinates
     .map((linestring) =>
-      encode(linestring.map((latlng) => [...latlng].reverse()))
+      encode(linestring.map((position) => [...position].reverse()))
     )
     .map((polyline) => `${paint}|enc:${polyline}`);
 };
@@ -40,7 +41,7 @@ export const StaticMap: React.FC<Props> = ({
   );
   url.searchParams.append('key', MAPTILER_KEY);
   features.forEach((feature) => {
-    buildPath(feature).forEach((path) => {
+    buildPaths(feature).forEach((path) => {
       url.searchParams.append('path', path);
     });
   });
