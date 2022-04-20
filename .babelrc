@@ -1,0 +1,14 @@
+{
+  "presets": [
+    [
+      "babel-preset-gatsby",
+      {
+        "targets": {
+          "browsers": [
+            "defaults"
+          ]
+        }
+      }
+    ]
+  ]
+}

@@ -4,10 +4,13 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const RadschnellwegIndex = ({ data }) => {
+const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
   return (
     <Layout>
-      <HelmetSeo title="Radschnellwege" description="TODO" image="TODO" />
+      <HelmetSeo
+        title="Radschnellverbindungen"
+        description="Die einzelnen Radschnellverbindungen in den verschiedenen Bundesländern in Deutschland."
+      />
       <div className="bg-white">
         {/* Header */}
         <div className="relative bg-gray-800 pb-32">
@@ -42,9 +45,9 @@ const RadschnellwegIndex = ({ data }) => {
             Alle Radschnellverbindungen
           </h2>
           <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
-            {data.radschnellwege.nodes.map((radschnellweg) => (
+            {radschnellwege.nodes.map((radschnellweg) => (
               <div
-                key={radschnellweg.name}
+                key={radschnellweg.general.name}
                 className="flex flex-col rounded-2xl bg-white shadow-xl"
               >
                 <div className="relative flex-1 px-6 pt-16 pb-8 md:px-8">
@@ -67,19 +70,21 @@ const RadschnellwegIndex = ({ data }) => {
                     </svg>
                   </div>
                   <h3 className="text-xl font-medium text-slate-900">
-                    {radschnellweg.from} &rarr; {radschnellweg.to}{' '}
+                    {radschnellweg.general.from} &rarr;{' '}
+                    {radschnellweg.general.to}{' '}
                     {/* https://tailwindui.com/components/application-ui/elements/badges */}
                     <span className="inline-flex items-center rounded-full bg-yellow-100 px-3 py-0.5 text-sm font-medium text-yellow-800">
                       {radschnellweg.state}
                     </span>
                   </h3>
                   <p className="mt-4 text-base text-slate-500">
-                    {radschnellweg.description}
+                    {radschnellweg.general.description}
                   </p>
                 </div>
                 <div className="rounded-bl-2xl rounded-br-2xl bg-gray-50 p-6 md:px-8">
                   <Link
-                    to={radschnellweg.fromSlug}
+                    // to={`${pathname}/${radschnellweg.jsonId}`}
+                    to={`./${radschnellweg.jsonId}`}
                     className="text-base font-medium text-indigo-700 hover:text-emerald-400"
                   >
                     Mehr erfahren<span aria-hidden="true"> &rarr;</span>
@@ -94,16 +99,21 @@ const RadschnellwegIndex = ({ data }) => {
   );
 };
 
-export default RadschnellwegIndex;
+export default SteckbriefeIndex;
 
 export const query = graphql`
   {
-    radschnellwege: allRadschnellweg {
+    radschnellwege: allRsvMetaJson {
       nodes {
-        from
-        to
         state
-        fromSlug: gatsbyPath(filePath: "/radschnellwege/{Radschnellweg.from}")
+        jsonId
+        general {
+          to
+          from
+          name
+          slug
+          description
+        }
       }
     }
   }

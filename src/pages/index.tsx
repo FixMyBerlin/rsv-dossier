@@ -3,7 +3,7 @@ import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Hero } from '~/components/Layout/Hero/Hero';
 import { Layout } from '~/components/Layout/Layout';
-import { TextWithImage } from '~/components/Layout/Section/';
+import { TextWithImage } from '~/components/Layout/ContentSection';
 import { StaticImage } from 'gatsby-plugin-image';
 import { MailToButtonLink } from '~/components/Links';
 import { Heading2 } from '~/components/Text';
@@ -13,7 +13,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
     <Layout location={location} navigation={false}>
       <HelmetSeo
         title="Radschnellverbindungen"
-        description="Alles zu Radschnellverbindungen in Deutschland"
+        description="Generelle Informationen sowie Informationen über einzelne Radschnellverbindungen in Deutschland."
       />
       <Hero
         highlightedTitle="Rad&shy;schnell&shy;verbindungen"
@@ -95,7 +95,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             >
               hello@fixmycity.de
             </MailToButtonLink>{' '}
-            schreiben
+            schreibens
           </p>
         </>
       </TextWithImage>

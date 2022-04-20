@@ -1,0 +1,245 @@
+[
+  {
+    "id": "frm1-hessen",
+    "cost": "",
+    "finished": "",
+    "state": "in_progress",
+    "planning_phase": "",
+    "detail_level": "",
+    "general": {
+      "ref": "FRM 1",
+      "name": "Radschnellweg Frankfurt \u2013 Darmstadt",
+      "from": "Frankfurt am Main, Hessen",
+      "to": "Darmstadt, Hessen",
+      "description": "Die Strecke soll die Oberzentren Darmstadt und Frankfurt verbinden. Das Projekt soll in f\u00fcnf Bauabschnitten bis 2022 realisiert werden. Der erste, 3,6 Kilometer lange Abschnitt (Egelsbach \u2013 Darmstadt-Wixhausen) wurde am 6. Juni 2019 offiziell er\u00f6ffnet.[15] (Strecke auf Openstreetmap)",
+      "slug": ""
+    },
+    "stakeholders": [
+      {
+        "name": "Nahmobil Hessen",
+        "roles": ["authority"],
+        "description": ""
+      }
+    ],
+    "references": {
+      "website": "",
+      "osm_relation": ""
+    }
+  },
+  {
+    "id": "frm2-hessen",
+    "cost": "",
+    "finished": "",
+    "state": "planning",
+    "planning_phase": "",
+    "detail_level": "",
+    "general": {
+      "ref": "FRM 2",
+      "name": "Radschnellweg Gro\u00df-Gerau \u2013 Frankfurt",
+      "from": "Gro\u00df-Gerau, Hessen",
+      "to": "Frankfurt am Main, Hessen",
+      "description": "Die Strecke soll den Siedlungsg\u00fcrtel entlang der Riedbahn besser an das Oberzentrum Frankfurt am Main anschlie\u00dfen.[16]",
+      "slug": ""
+    },
+    "stakeholders": [
+      {
+        "name": "Nahmobil Hessen",
+        "roles": ["authority"],
+        "description": ""
+      }
+    ],
+    "references": {
+      "website": "",
+      "osm_relation": ""
+    }
+  },
+  {
+    "id": "frm3-hessen",
+    "cost": "",
+    "finished": "",
+    "state": "planning",
+    "planning_phase": "",
+    "detail_level": "",
+    "general": {
+      "ref": "FRM 3",
+      "name": "Radschnellweg Wiesbaden \u2013 Frankfurt",
+      "from": "Wiesbaden, Hessen",
+      "to": "Frankfurt am Main, Hessen",
+      "description": "Die Strecke soll den Siedlungsg\u00fcrtel entlang des Taunus besser untereinander vernetzen, sowie die Anschl\u00fcsse an die Oberzentren Frankfurt am Main und Wiesbaden verbessern.[17]",
+      "slug": ""
+    },
+    "stakeholders": [
+      {
+        "name": "Nahmobil Hessen",
+        "roles": ["authority"],
+        "description": ""
+      }
+    ],
+    "references": {
+      "website": "",
+      "osm_relation": ""
+    }
+  },
+  {
+    "id": "frm4-hessen",
+    "cost": "",
+    "finished": "",
+    "state": "planning",
+    "planning_phase": "",
+    "detail_level": "",
+    "general": {
+      "ref": "FRM 4",
+      "name": "Radschnellweg Bad Soden \u2013 Eschborn",
+      "from": "Gro\u00df-Gerau, Hessen",
+      "to": "Frankfurt am Main, Hessen",
+      "description": "Die Strecke bindet die genannten Orte an das Wirtschaftszentrum Eschborn an. Ab Eschborn besteht \u00fcber den Radschnellweg Vordertaunus Anschluss Richtung Frankfurt (L\u00e4nge der Gesamtstrecke dann gesch\u00e4tzt 15 bis 18 km).[18]",
+      "slug": ""
+    },
+    "stakeholders": [
+      {
+        "name": "Nahmobil Hessen",
+        "roles": ["authority"],
+        "description": ""
+      }
+    ],
+    "references": {
+      "website": "",
+      "osm_relation": ""
+    }
+  },
+  {
+    "id": "frm5-hessen",
+    "cost": "",
+    "finished": "",
+    "state": "planning",
+    "planning_phase": "",
+    "detail_level": "",
+    "general": {
+      "ref": "FRM 5",
+      "name": "Radschnellweg Frankfurt - Vordertaunus",
+      "from": "Frankfurt am Main, Hessen",
+      "to": "Friedrichsdorf, Hessen",
+      "description": "Zwischen den genannten Kommunen soll unter anderem eine Radpendlerverbindung Richtung Frankfurt entstehen. Die beteiligten St\u00e4dte haben einen Machbarkeitsstudie in Auftrag gegeben.[19]",
+      "slug": ""
+    },
+    "stakeholders": [
+      {
+        "name": "Nahmobil Hessen",
+        "roles": ["authority"],
+        "description": ""
+      }
+    ],
+    "references": {
+      "website": "",
+      "osm_relation": ""
+    }
+  },
+  {
+    "id": "frm6-hessen",
+    "cost": "",
+    "finished": "",
+    "state": "idea",
+    "planning_phase": "",
+    "detail_level": "",
+    "general": {
+      "ref": "FRM 6",
+      "name": "Radschnellweg Wetterau \u2013 Frankfurt",
+      "from": "Gie\u00dfen, Hessen",
+      "to": "Frankfurt am Main, Hessen",
+      "description": "Die Strecke soll den Siedlungsg\u00fcrtel besser an das Oberzentrum Frankfurt am Main anschlie\u00dfen. Ferner sollen die Bedingungen zum Radpendeln auch zwischen den genannten Kommunen in der Wetterau im Korridor der Main-Weser-Bahn verbessert werden.[20]",
+      "slug": ""
+    },
+    "stakeholders": [
+      {
+        "name": "Nahmobil Hessen",
+        "roles": ["authority"],
+        "description": ""
+      }
+    ],
+    "references": {
+      "website": "",
+      "osm_relation": ""
+    }
+  },
+  {
+    "id": "frm7-hessen",
+    "cost": "",
+    "finished": "",
+    "state": "planning",
+    "planning_phase": "",
+    "detail_level": "",
+    "general": {
+      "ref": "FRM 7",
+      "name": "Radschnellweg Frankfurt \u2013 Hanau nordmainlisch",
+      "from": "Frankfurt am Main, Hessen",
+      "to": "Hanau, Hessen",
+      "description": "Die Strecke soll Frankfurt und Hanau n\u00f6rdlich des Mains verbinden. Eine Machbarkeitsstudie findet sich in der Erstellung[21]",
+      "slug": ""
+    },
+    "stakeholders": [
+      {
+        "name": "Nahmobil Hessen",
+        "roles": ["authority"],
+        "description": ""
+      }
+    ],
+    "references": {
+      "website": "",
+      "osm_relation": ""
+    }
+  },
+  {
+    "id": "frm8-hessen",
+    "cost": "",
+    "finished": "",
+    "state": "planning",
+    "planning_phase": "",
+    "detail_level": "",
+    "general": {
+      "ref": "FRM 8",
+      "name": "Radschnellweg Hanau \u2013 Frankfurt s\u00fcdmainlisch",
+      "from": "Frankfurt am Main, Hessen",
+      "to": "Hanau, Hessen",
+      "description": "Die Strecke soll Frankfurt und Hanau s\u00fcdlich des Mains verbinden. Eine Machbarkeitsstudie soll mit Stand 09-2019 beauftragt werden[22]",
+      "slug": ""
+    },
+    "stakeholders": [
+      {
+        "name": "Nahmobil Hessen",
+        "roles": ["authority"],
+        "description": ""
+      }
+    ],
+    "references": {
+      "website": "",
+      "osm_relation": ""
+    }
+  },
+  {
+    "id": "frm9-hessen",
+    "cost": "",
+    "finished": "",
+    "state": "planning",
+    "planning_phase": "",
+    "detail_level": "",
+    "general": {
+      "ref": "FRM 9",
+      "name": "Radschnellweg Seligenstadt -Frankfurter Flughafen",
+      "from": "Flughafen Frankfurt, Hessen",
+      "to": "Seligenstadt, Hessen",
+      "description": "Die Strecke soll vom Frankfurter Flughafen durch den Verdichtungsraum des Kreises Offenbach bis nach Seligenstadt f\u00fchren. Eine Machbarkeitsstudie soll mit Stand 09-2019 beauftragt werden[23]",
+      "slug": ""
+    },
+    "stakeholders": [
+      {
+        "name": "Nahmobil Hessen",
+        "roles": ["authority"],
+        "description": ""
+      }
+    ],
+    "references": {
+      "website": "",
+      "osm_relation": ""
+    }
+  }
+]
