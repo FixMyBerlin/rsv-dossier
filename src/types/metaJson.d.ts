@@ -30,14 +30,20 @@ export interface MetaSchemaRSV {
     | [
         {
           name: string;
-          roles: [] | ["communication" | "authority" | "construction_company"];
+          roles: [] | ['communication' | 'authority' | 'construction_company'];
           description?: string;
           [k: string]: unknown;
         }
       ];
-  status: "idea" | "agreed" | "planning" | "in_progress" | "done" | "discarded";
-  planning_phase?: "pilot" | "preliminiary" | "design" | "approval" | "execution" | "building";
-  detail_level?: "exact" | "approximated" | "corridor";
+  status: 'idea' | 'agreed' | 'planning' | 'in_progress' | 'done' | 'discarded';
+  planning_phase?:
+    | 'pilot'
+    | 'preliminiary'
+    | 'design'
+    | 'approval'
+    | 'execution'
+    | 'building';
+  detail_level?: 'exact' | 'approximated' | 'corridor';
   /**
    * Year or date when building of all segments have been done.
    */
@@ -46,7 +52,7 @@ export interface MetaSchemaRSV {
   references?: {
     osm_relation?: number;
     website?: string;
-    "copyright:geometry"?: string;
+    'copyright:geometry'?: string;
     [k: string]: unknown;
   };
   [k: string]: unknown;
