@@ -16,6 +16,9 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-json',
     {
+      resolve: '@sentry/gatsby',
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/radschnellwege/metadata`,

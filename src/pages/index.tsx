@@ -95,7 +95,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             >
               hello@fixmycity.de
             </MailToButtonLink>{' '}
-            schreiben
+            schreibens
           </p>
         </>
       </TextWithImage>

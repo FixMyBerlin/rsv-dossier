@@ -22,6 +22,10 @@ For starting developing, the following steps could be helpful for getting starte
 - Use `npm run` to see a list of commands
 - Use `npm run build && npx serve public` to test the build
 
+Setup your `.env.development` file, for which you can use `.env.defaults` as a start.
+
+For production you will also need a `.env.production` file. Otherwise the modules using the env variables, will not work.
+
 ### Gatsby KnowHow
 
 - Internal links with `<Link>`, external Links with our own `<ExternalLink>` (which uses `<a>`).

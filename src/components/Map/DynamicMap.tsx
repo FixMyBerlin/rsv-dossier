@@ -37,7 +37,7 @@ export const DynamicMap: React.FC<Props> = ({ geometry }) => {
         },
       }}
       mapLib={maplibregl}
-      mapStyle="https://api.maptiler.com/maps/a4824657-3edd-4fbd-925e-1af40ab06e9c/style.json?key=ECOoUBmpqklzSCASXxcu"
+      mapStyle={process.env.GATSBY_MAPTILER_BASEURL}
       maxBounds={bboxGermany}
       interactiveLayerIds={geometry.features.map(
         ({ properties }) => properties.id

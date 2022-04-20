@@ -37,6 +37,7 @@ export const Navigation = ({ location }) => {
                       name={link.name}
                       to={link.to}
                       currentPage={location?.pathname}
+                      key={link.to}
                     />
                   ))}
                 </div>
@@ -53,6 +54,7 @@ export const Navigation = ({ location }) => {
                   name={link.name}
                   to={link.to}
                   currentPage={location?.pathname}
+                  key={link.to}
                 />
               ))}
             </nav>
