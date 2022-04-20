@@ -2,9 +2,8 @@ import React from 'react';
 import { encode } from '@googlemaps/polyline-codec';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
-const baseMap =
-  'https://api.maptiler.com/maps/a4824657-3edd-4fbd-925e-1af40ab06e9c';
-const maptilerKey = 'ECOoUBmpqklzSCASXxcu';
+const MAPTILER_BASEURL = process.env.MAPTILER_BASEURL;
+const MAPTILER_KEY = process.env.MAPTILER_KEY;
 const [width, height] = [960, 540];
 
 type Props = {
@@ -39,6 +38,6 @@ export const StaticMap: React.FC<Props> = ({
 }) => {
   const paths = features.map(buildPath).join('&');
   const format = `${width}x${height}.png`;
-  const url = `${baseMap}/static/${bbox.toString()}/${format}?key=${maptilerKey}&${paths}`;
+  const url = `${MAPTILER_BASEURL}/static/${bbox.toString()}/${format}?key=${MAPTILER_KEY}&${paths}`;
   return <img src={url} alt="static map" />;
 };
