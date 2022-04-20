@@ -13,7 +13,7 @@ const stateColor = {
 const selectedColor = '#475569';
 
 type Props = {
-  feature: GeoJSON.Feature;
+  feature: GeoJSON.Feature<GeoJSON.MultiLineString>;
   selected: number;
 };
 

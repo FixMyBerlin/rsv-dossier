@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Map from 'react-map-gl';
-import maplibregl, { LngLatBounds, LngLatBoundsLike } from 'maplibre-gl';
+import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { RSVSegment, RSVPopup } from '.';
 
@@ -31,7 +31,7 @@ export const DynamicMap: React.FC<Props> = ({ geometry }) => {
   return (
     <Map
       initialViewState={{
-        bounds: geometry.bbox,
+        bounds: geometry.bbox as LngLatBoundsLike,
         fitBoundsOptions: {
           padding: 20,
         },

@@ -1,7 +1,6 @@
 import React from 'react';
-import { encode, polylineEncodeLine } from '@googlemaps/polyline-codec';
+import { encode } from '@googlemaps/polyline-codec';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { geometryJson } from '~/types/steckbrief';
 
 const baseMap =
   'https://api.maptiler.com/maps/a4824657-3edd-4fbd-925e-1af40ab06e9c';

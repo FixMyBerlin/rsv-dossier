@@ -3,8 +3,16 @@ import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { RSVDetails } from '~/components/Layout/ContentSection/RsvDetails';
+import { metaJson } from '~/types/steckbrief';
 
-const Radschnellweg = ({ data: { meta, geometry } }) => {
+type Props = {
+  data: {
+    meta: metaJson;
+    geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString>;
+  };
+};
+
+const Radschnellweg: React.FC<Props> = ({ data: { meta, geometry } }) => {
   return (
     <Layout>
       <HelmetSeo

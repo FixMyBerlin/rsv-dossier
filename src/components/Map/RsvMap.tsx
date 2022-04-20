@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { getOptInCookie, OptIn } from '~/components/CookieConsent/';
-import { geometryJson } from '~/types/steckbrief';
 import { DynamicMap, StaticMap } from '.';
 
 type Props = {
