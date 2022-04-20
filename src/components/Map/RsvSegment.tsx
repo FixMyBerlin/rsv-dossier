@@ -28,12 +28,10 @@ export const RSVSegment: React.FC<Props> = ({ feature, selected }) => {
     selected === id
       ? {
           'line-color': selectedColor,
-          'line-opacity': 1,
           'line-width': 7,
         }
       : {
           'line-color': stateColor[feature.properties.state],
-          'line-opacity': 0.8,
           'line-width': 6,
         };
 

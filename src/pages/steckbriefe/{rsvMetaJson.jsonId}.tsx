@@ -22,6 +22,7 @@ export default Radschnellweg;
 export const query = graphql`
   query ($jsonId: String!) {
     geometry: geometriesJson(name: { eq: $jsonId }) {
+      type
       bbox
       features {
         type
