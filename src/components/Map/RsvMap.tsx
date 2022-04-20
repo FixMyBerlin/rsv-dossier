@@ -41,7 +41,7 @@ export const RSVMap: React.FC<Props> = ({ geometry }) => {
         )}
         <StaticImage
           layout="fixed"
-          src="./map.png"
+          src="./backgroundMapDefault.png"
           alt="Platzhalter Karte"
           className="max-h-full max-w-full blur-sm"
         />
