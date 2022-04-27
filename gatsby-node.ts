@@ -1,5 +1,5 @@
 import { createFileNodeFromBuffer } from 'gatsby-source-filesystem';
-import { get } from 'axios';
+import axios from 'axios';
 import { staticMapRequest } from './src/staticmap';
 
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
@@ -34,8 +34,8 @@ exports.onCreateNode = async ({
   if (node.internal.type === 'GeometryJson') {
     const url = staticMapRequest(node, [1920, 1920]);
 
-    // have to use buffer due to key size limits in createRemoteFileNode :/
-    const response = await get(url.toString(), {
+    // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
+    const response = await axios.get(url.toString(), {
       responseType: 'arraybuffer',
     });
     const fileNode = await createFileNodeFromBuffer({
