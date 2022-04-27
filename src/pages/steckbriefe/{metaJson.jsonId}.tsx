@@ -32,6 +32,7 @@ export const query = graphql`
     geometry: geometryJson(name: { eq: $jsonId }) {
       type
       bbox
+      name
       features {
         type
         bbox
@@ -49,7 +50,11 @@ export const query = graphql`
           detail_level
         }
       }
-      name
+      staticMap {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
     }
     meta: metaJson(jsonId: { eq: $jsonId }) {
       general {
