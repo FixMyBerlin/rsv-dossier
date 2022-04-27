@@ -18,6 +18,9 @@ exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
     type GeometryJson implements Node {
       staticMap: File @link(from: "fields.localFile")
     }
+    type MetaJson implements Node {
+      geoemtry: GeometryJson @link(from: "jsonId", by: "name")
+    }
   `);
 };
 
@@ -44,12 +47,10 @@ exports.onCreateNode = async ({
       cache,
       store,
     });
-    if (fileNode) {
-      createNodeField({
-        node,
-        name: 'localFile',
-        value: fileNode.id,
-      });
-    }
+    createNodeField({
+      node,
+      name: 'localFile',
+      value: fileNode.id,
+    });
   }
 };
