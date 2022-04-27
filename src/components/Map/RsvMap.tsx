@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { getOptInCookie, OptIn } from '~/components/CookieConsent/';
+import { StaticMap } from '~/types/index';
 import { DynamicMap } from '.';
 
 type Props = {
-  geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString> & { staticMap };
+  geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString> & StaticMap;
 };
 
 export const RSVMap: React.FC<Props> = ({ geometry }) => {
   const [consent, setConsent] = useState<boolean | null>(null);
   useEffect(() => setConsent(getOptInCookie()));
   if (!consent) {
-    // return <StaticMap geometry={geometry} />;
     return (
       <div className="relative max-h-full max-w-full">
         {consent === false && (

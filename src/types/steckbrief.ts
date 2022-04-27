@@ -1,4 +1,4 @@
-export type metaJson = {
+export type MetaJson = {
   finished: string;
   state: string;
   cost: string;

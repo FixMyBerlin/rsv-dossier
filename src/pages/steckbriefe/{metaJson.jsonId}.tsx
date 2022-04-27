@@ -3,12 +3,12 @@ import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { RSVDetails } from '~/components/Layout/ContentSection/RsvDetails';
-import { metaJson } from '~/types/steckbrief';
+import { MetaJson, StaticMap } from '~/types/index';
 
 type Props = {
   data: {
-    meta: metaJson;
-    geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString>;
+    meta: MetaJson;
+    geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString> & StaticMap;
   };
 };
 
