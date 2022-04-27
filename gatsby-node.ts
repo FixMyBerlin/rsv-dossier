@@ -19,7 +19,7 @@ exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
       staticMap: File @link(from: "fields.localFile")
     }
     type MetaJson implements Node {
-      geoemtry: GeometryJson @link(from: "jsonId", by: "name")
+      geometry: GeometryJson @link(from: "jsonId", by: "name")
     }
   `);
 };
