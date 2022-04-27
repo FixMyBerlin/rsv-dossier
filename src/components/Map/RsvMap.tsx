@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { getOptInCookie, OptIn } from '~/components/CookieConsent/';
-import { DynamicMap, StaticMap } from '.';
+import { DynamicMap } from '.';
 
 type Props = {
-  geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString>;
+  geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString> & { staticMap };
 };
 
 export const RSVMap: React.FC<Props> = ({ geometry }) => {
@@ -20,11 +20,9 @@ export const RSVMap: React.FC<Props> = ({ geometry }) => {
             <OptIn setConsent={setConsent} />
           </div>
         )}
-        <StaticImage
-          layout="fixed"
-          src="./backgroundMapDefault.png"
-          alt="Platzhalter Karte"
-          className="max-h-full max-w-full blur-sm"
+        <GatsbyImage
+          image={geometry.staticMap.childImageSharp.gatsbyImageData}
+          alt="Statische Karte"
         />
       </div>
     );
