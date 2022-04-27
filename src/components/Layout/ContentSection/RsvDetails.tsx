@@ -2,9 +2,12 @@ import React from 'react';
 import { ButtonLink } from '~/components/Links/ButtonLink';
 import { RSVMap } from '~/components/Map';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { geometryJson, metaJson } from '~/types/steckbrief';
+import { metaJson } from '~/types/steckbrief';
 
-type Props = metaJson & geometryJson;
+type Props = {
+  meta: metaJson;
+  geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString>;
+};
 
 export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
   return (
