@@ -29,7 +29,7 @@ export default Radschnellweg;
 
 export const query = graphql`
   query ($jsonId: String!) {
-    geometry: geometriesJson(name: { eq: $jsonId }) {
+    geometry: geometryJson(name: { eq: $jsonId }) {
       type
       bbox
       features {
@@ -51,7 +51,7 @@ export const query = graphql`
       }
       name
     }
-    meta: rsvMetaJson(jsonId: { eq: $jsonId }) {
+    meta: metaJson(jsonId: { eq: $jsonId }) {
       general {
         description
         from

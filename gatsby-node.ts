@@ -1,4 +1,5 @@
-import { createRemoteFileNode } from 'gatsby-source-filesystem';
+import { createFileNodeFromBuffer } from 'gatsby-source-filesystem';
+import { get } from 'axios';
 import { staticMapRequest } from './src/staticmap';
 
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
@@ -11,36 +12,42 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   });
 };
 
-// Download static maps for every rsv
+// create a static map image for every RSV
+exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
+  createTypes(`
+    type GeometryJson implements Node {
+      staticMap: File @link(from: "fields.localFile")
+    }
+  `);
+};
+
 exports.onCreateNode = async ({
   node,
   actions: { createNode, createNodeField },
   createNodeId,
   cache,
   store,
-  reporter,
 }) => {
-  // For all RSVs create a static map image of the geometries
-  if (
-    node.internal.type === 'GeometriesJson' &&
-    staticMapRequest(node).toString().length < 1960
-  ) {
-    const url = staticMapRequest(node).toString();
-    console.log(`${node.name} len: ${url.length}`);
-    console.log(url);
-    const fileNode = await createRemoteFileNode({
-      url,
+  if (node.internal.type === 'GeometryJson') {
+    const url = staticMapRequest(node, [1920, 1920]);
+
+    // have to use buffer due to key size limits in createRemoteFileNode :/
+    const response = await get(url.toString(), {
+      responseType: 'arraybuffer',
+    });
+    const fileNode = await createFileNodeFromBuffer({
+      buffer: response.data,
+      name: node.name,
       parentNodeId: node.id,
       createNode,
       createNodeId,
       cache,
       store,
-      reporter,
     });
     if (fileNode) {
       createNodeField({
         node,
-        name: 'staticMap',
+        name: 'localFile',
         value: fileNode.id,
       });
     }

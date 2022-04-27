@@ -100,7 +100,7 @@ export default SteckbriefeIndex;
 
 export const query = graphql`
   {
-    radschnellwege: allRsvMetaJson {
+    radschnellwege: allMetaJson {
       nodes {
         state
         jsonId

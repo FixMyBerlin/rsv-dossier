@@ -2,7 +2,6 @@ import { encode, polylineEncodeLine } from '@googlemaps/polyline-codec';
 
 const MAPTILER_BASEURL = process.env.MAPTILER_BASEURL;
 const MAPTILER_KEY = process.env.MAPTILER_KEY;
-const [width, height] = [1920, 1080];
 
 // TODO: source from .const to stay consistent with ~/components/Map/DynamicMap.tsx
 const stateColor = {
@@ -28,10 +27,10 @@ const buildPaths = ({
     .map((polyline) => [...paintArr, `enc:${polyline}`].join('|'));
 };
 
-export const staticMapRequest = ({
-  features,
-  bbox,
-}: GeoJSON.FeatureCollection<GeoJSON.MultiLineString>) => {
+export const staticMapRequest = (
+  { features, bbox }: GeoJSON.FeatureCollection<GeoJSON.MultiLineString>,
+  [width, height]: number[]
+) => {
   const dims = `${width}x${height}.png`;
   const url = new URL(`${MAPTILER_BASEURL}/static/${bbox.toString()}/${dims}`);
 
