@@ -1,7 +1,6 @@
-import { encode, polylineEncodeLine } from '@googlemaps/polyline-codec';
+import { encode } from '@googlemaps/polyline-codec';
 
-const MAPTILER_BASEURL = process.env.MAPTILER_BASEURL;
-const MAPTILER_KEY = process.env.MAPTILER_KEY;
+const { MAPTILER_BASEURL, MAPTILER_KEY } = process.env;
 
 // TODO: source from .const to stay consistent with ~/components/Map/DynamicMap.tsx
 const stateColor = {

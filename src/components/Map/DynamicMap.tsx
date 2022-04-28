@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Map from 'react-map-gl';
 import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -13,8 +13,7 @@ const bboxGermany: LngLatBoundsLike = [
   4.98865807458, 47.3024876979, 16.0169958839, 54.983104153,
 ];
 
-const MAPTILER_BASEURL = process.env.MAPTILER_BASEURL;
-const MAPTILER_KEY = process.env.MAPTILER_KEY;
+const { MAPTILER_BASEURL, MAPTILER_KEY } = process.env;
 
 export const DynamicMap: React.FC<Props> = ({ geometry }) => {
   const [info] = useState({
