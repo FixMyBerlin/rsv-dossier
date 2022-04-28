@@ -8,7 +8,7 @@ type Props = {
 
 export const OptIn: React.FC<Props> = ({ setConsent }) => {
   return (
-    <div className="h-fit rounded-lg bg-white shadow">
+    <div className="h-fit rounded-t-2xl bg-white shadow">
       <div className="px-4 py-5 sm:p-6">
         <div className="mt-2 text-sm text-gray-500">
           <p>
@@ -27,13 +27,23 @@ export const OptIn: React.FC<Props> = ({ setConsent }) => {
         <div className="mt-5">
           <button
             type="button"
-            className="btn-brand-outline px-8 py-3 shadow md:text-lg"
+            className="btn-brand-outline mr-3 px-8 py-3 shadow md:text-lg"
             onClick={() => {
               setConsent(true);
               setOptInCookie(true);
             }}
           >
             Ja, ich stimme zu
+          </button>
+          <button
+            type="button"
+            className="btn-brand-outline px-8 py-3 shadow md:text-lg"
+            onClick={() => {
+              setConsent(false);
+              setOptInCookie(false);
+            }}
+          >
+            Ablehnen
           </button>
         </div>
       </div>
