@@ -51,7 +51,7 @@ const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
               (radschnellweg: MetaJson & GraphQLMeta) => (
                 <div
                   key={radschnellweg.general.name}
-                  className="flex flex-col rounded-2xl bg-white shadow-xl"
+                  className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-xl"
                 >
                   <GatsbyImage
                     image={
