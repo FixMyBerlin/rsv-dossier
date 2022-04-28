@@ -6,9 +6,8 @@ import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
 import { MetaJson, StaticMap } from '~/types/index';
 
 type GraphQLMeta = {
-  geometry: StaticMap;
   jsonId: string;
-};
+} & StaticMap;
 
 const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
   return (
@@ -56,8 +55,7 @@ const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
                 >
                   <GatsbyImage
                     image={
-                      radschnellweg.geometry.staticMap.childImageSharp
-                        .gatsbyImageData
+                      radschnellweg.staticMap.childImageSharp.gatsbyImageData
                     }
                     alt="Thumbnail-Karte"
                   />
@@ -107,11 +105,9 @@ export const query = graphql`
           description
         }
         jsonId
-        geometry {
-          staticMap {
-            childImageSharp {
-              gatsbyImageData(width: 200, height: 150)
-            }
+        staticMap {
+          childImageSharp {
+            gatsbyImageData(width: 200, height: 150)
           }
         }
       }

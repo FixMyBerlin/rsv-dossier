@@ -15,18 +15,16 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 // create a static map image for every RSV
 exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
   createTypes(`
-    type GeometryJson implements Node {
-      staticMap: File @link(from: "fields.localFile")
-    }
     type MetaJson implements Node {
-      geometry: GeometryJson @link(from: "jsonId", by: "name")
+      geoJson: GeometryJson @link(from: "jsonId", by: "name")
+      staticMap: File @link(from: "jsonId", by: "name")
     }
   `);
 };
 
 exports.onCreateNode = async ({
   node,
-  actions: { createNode, createNodeField },
+  actions: { createNode },
   createNodeId,
   cache,
   store,
@@ -38,7 +36,7 @@ exports.onCreateNode = async ({
     const response = await axios.get(url.toString(), {
       responseType: 'arraybuffer',
     });
-    const fileNode = await createFileNodeFromBuffer({
+    createFileNodeFromBuffer({
       buffer: response.data,
       name: node.name,
       parentNodeId: node.id,
@@ -46,11 +44,6 @@ exports.onCreateNode = async ({
       createNodeId,
       cache,
       store,
-    });
-    createNodeField({
-      node,
-      name: 'localFile',
-      value: fileNode.id,
     });
   }
 };

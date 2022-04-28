@@ -7,8 +7,8 @@ import { MetaJson, StaticMap } from '~/types/index';
 
 type Props = {
   data: {
-    meta: MetaJson;
-    geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString> & StaticMap;
+    meta: MetaJson & StaticMap;
+    geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString>;
   };
 };
 
@@ -50,11 +50,6 @@ export const query = graphql`
           detail_level
         }
       }
-      staticMap {
-        childImageSharp {
-          gatsbyImageData
-        }
-      }
     }
     meta: metaJson(jsonId: { eq: $jsonId }) {
       general {
@@ -71,6 +66,11 @@ export const query = graphql`
       finished
       cost
       state
+      staticMap {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
     }
   }
 `;

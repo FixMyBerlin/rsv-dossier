@@ -2,14 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { getOptInCookie, OptIn } from '~/components/CookieConsent/';
-import { StaticMap } from '~/types/index';
+import { MetaJson, StaticMap } from '~/types/index';
 import { DynamicMap } from '.';
 
 type Props = {
-  geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString> & StaticMap;
+  meta: MetaJson & StaticMap;
+  geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString>;
 };
 
-export const RSVMap: React.FC<Props> = ({ geometry }) => {
+export const RSVMap: React.FC<Props> = ({ meta, geometry }) => {
   const [consent, setConsent] = useState<boolean | null>(null);
   useEffect(() => setConsent(getOptInCookie()));
   if (!consent) {
@@ -21,7 +22,7 @@ export const RSVMap: React.FC<Props> = ({ geometry }) => {
           </div>
         )}
         <GatsbyImage
-          image={geometry.staticMap.childImageSharp.gatsbyImageData}
+          image={meta.staticMap.childImageSharp.gatsbyImageData}
           alt="Statische Karte"
         />
       </div>
