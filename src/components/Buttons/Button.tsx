@@ -37,7 +37,7 @@ export const Button: React.FC<Props> = ({
   );
 
   return (
-    /* ts-lint disable react/button-has-type */
+    // eslint-disable-next-line react/button-has-type
     <button onClick={onClick} type={type} className={styles}>
       {children}
     </button>
