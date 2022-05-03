@@ -30,8 +30,7 @@ exports.onCreateNode = async ({
   store,
 }) => {
   if (node.internal.type === 'GeometryJson') {
-    const url = staticMapRequest(node, [1920, 1920]);
-
+    const url = staticMapRequest(node, [800, 800]);
     // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
     const response = await axios.get(url.toString(), {
       responseType: 'arraybuffer',
