@@ -10,6 +10,7 @@ type Props = {
   outline?: boolean;
 };
 
+// TODO: share style with ButtonLink
 const button =
   'inline-flex items-center justify-center rounded-full py-2 px-4 drop-shadow border-2 border-emerald-300';
 const defaultButtonStyle =
@@ -17,7 +18,6 @@ const defaultButtonStyle =
 const outlineButtonStyle =
   'bg-white font-bold text-slate-600 transition-colors hover:bg-emerald-300 hover:text-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2';
 
-// TODO: Refactor all those link components to share more logic
 export const Button: React.FC<Props> = ({
   onClick,
   type = 'button',
@@ -37,6 +37,7 @@ export const Button: React.FC<Props> = ({
   );
 
   return (
+    /* ts-lint disable react/button-has-type */
     <button onClick={onClick} type={type} className={styles}>
       {children}
     </button>
