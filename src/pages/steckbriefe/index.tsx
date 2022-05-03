@@ -46,7 +46,7 @@ const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
           <h2 className="sr-only" id="contact-heading">
             Alle Radschnellverbindungen
           </h2>
-          <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
+          <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-8 lg:gap-x-8">
             {radschnellwege.nodes.map(
               (radschnellweg: MetaJson & GraphQLMeta) => (
                 <div
@@ -107,7 +107,7 @@ export const query = graphql`
         jsonId
         staticMap {
           childImageSharp {
-            gatsbyImageData(width: 200, height: 150)
+            gatsbyImageData(width: 300, height: 200)
           }
         }
       }
