@@ -27,7 +27,6 @@ export const OptIn: React.FC<Props> = ({ setConsent }) => {
         </div>
         <div className="mt-5">
           <Button
-            type="button"
             outline
             onClick={() => {
               setConsent(true);

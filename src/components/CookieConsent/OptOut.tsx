@@ -24,7 +24,6 @@ export const OptOut: React.FC = () => {
         Einwilligung zurückziehen.
       </p>
       <Button
-        type="button"
         outline
         onClick={() => {
           setConsent(false);

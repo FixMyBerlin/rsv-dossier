@@ -3,9 +3,8 @@ import React from 'react';
 
 type Props = {
   onClick: () => void;
-  type: 'button' | 'submit' | 'reset';
+  type?: 'button' | 'submit' | 'reset';
   className?: string;
-  newWindow?: boolean;
   small?: boolean;
   large?: boolean;
   outline?: boolean;
@@ -21,7 +20,7 @@ const outlineButtonStyle =
 // TODO: Refactor all those link components to share more logic
 export const Button: React.FC<Props> = ({
   onClick,
-  type,
+  type = 'button',
   className = '',
   outline = false,
   small = false,
