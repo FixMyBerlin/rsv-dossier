@@ -13,7 +13,10 @@ const bboxGermany: LngLatBoundsLike = [
   4.98865807458, 47.3024876979, 16.0169958839, 54.983104153,
 ];
 
-const { GATSBY_MAPTILER_BASEURL, GATSBY_MAPTILER_KEY } = process.env;
+// somehow can't use object destructuring here
+/* eslint-disable prefer-destructuring */
+const GATSBY_MAPTILER_BASEURL = process.env.GATSBY_MAPTILER_BASEURL;
+const GATSBY_MAPTILER_KEY = process.env.GATSBY_MAPTILER_KEY;
 
 export const DynamicMap: React.FC<Props> = ({ geometry }) => {
   const [info] = useState({
