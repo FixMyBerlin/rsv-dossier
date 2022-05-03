@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ExternalLink } from '~/components/Links/';
 import { setOptInCookie, getOptInCookie } from '~/components/CookieConsent';
+import { Button } from '~/components/Buttons';
 
 export const OptOut: React.FC = () => {
   const [consent, setConsent] = useState(false);
@@ -22,16 +23,16 @@ export const OptOut: React.FC = () => {
         und dieser Datenschutzerklärung zugestimmt. Hier können Sie Ihre
         Einwilligung zurückziehen.
       </p>
-      <button
+      <Button
         type="button"
-        className="btn-brand-outline px-8 py-3 shadow md:text-lg"
+        outline
         onClick={() => {
           setConsent(false);
           setOptInCookie(false);
         }}
       >
         Einwilligung Zurückziehen
-      </button>
+      </Button>
     </div>
   );
 };
