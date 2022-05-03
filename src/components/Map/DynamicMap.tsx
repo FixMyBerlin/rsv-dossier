@@ -13,7 +13,7 @@ const bboxGermany: LngLatBoundsLike = [
   4.98865807458, 47.3024876979, 16.0169958839, 54.983104153,
 ];
 
-const { MAPTILER_BASEURL, MAPTILER_KEY } = process.env;
+const { GATSBY_MAPTILER_BASEURL, GATSBY_MAPTILER_KEY } = process.env;
 
 export const DynamicMap: React.FC<Props> = ({ geometry }) => {
   const [info] = useState({
@@ -39,7 +39,7 @@ export const DynamicMap: React.FC<Props> = ({ geometry }) => {
         },
       }}
       mapLib={maplibregl}
-      mapStyle={`${MAPTILER_BASEURL}/style.json?key=${MAPTILER_KEY}`}
+      mapStyle={`${GATSBY_MAPTILER_BASEURL}/style.json?key=${GATSBY_MAPTILER_KEY}`}
       maxBounds={bboxGermany}
       interactiveLayerIds={geometry.features.map(
         ({ properties }) => properties.id

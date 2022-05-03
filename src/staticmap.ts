@@ -1,6 +1,6 @@
 import { encode } from '@googlemaps/polyline-codec';
 
-const { MAPTILER_BASEURL, MAPTILER_KEY } = process.env;
+const { GATSBY_MAPTILER_BASEURL, GATSBY_MAPTILER_KEY } = process.env;
 
 // TODO: source from .const to stay consistent with ~/components/Map/DynamicMap.tsx
 const stateColor = {
@@ -31,9 +31,11 @@ export const staticMapRequest = (
   [width, height]: number[]
 ) => {
   const dims = `${width}x${height}.png`;
-  const url = new URL(`${MAPTILER_BASEURL}/static/${bbox.toString()}/${dims}`);
+  const url = new URL(
+    `${GATSBY_MAPTILER_BASEURL}/static/${bbox.toString()}/${dims}`
+  );
 
-  url.searchParams.append('key', MAPTILER_KEY);
+  url.searchParams.append('key', GATSBY_MAPTILER_KEY);
   features.forEach((feature) => {
     buildPaths(feature).forEach((path) => {
       url.searchParams.append('path', path);
