@@ -1,9 +1,5 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { ImageDataLike } from 'gatsby-plugin-image';
 
 export type StaticMap = {
-  staticMap: {
-    childImageSharp: {
-      gatsbyImageData: IGatsbyImageData;
-    };
-  };
+  staticMap: ImageDataLike;
 };

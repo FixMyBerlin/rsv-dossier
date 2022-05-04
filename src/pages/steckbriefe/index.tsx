@@ -2,7 +2,7 @@ import { graphql, Link } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
-import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
+import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MetaJson, StaticMap } from '~/types/index';
 
 type GraphQLMeta = {
@@ -54,9 +54,7 @@ const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
                   className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-xl"
                 >
                   <GatsbyImage
-                    image={
-                      radschnellweg.staticMap.childImageSharp.gatsbyImageData
-                    }
+                    image={getImage(radschnellweg.staticMap)}
                     alt="Thumbnail-Karte"
                   />
                   <div className="relative flex-1 px-6 pt-16 pb-8 md:px-8">

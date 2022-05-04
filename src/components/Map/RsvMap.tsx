@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { getOptInCookie, OptIn } from '~/components/CookieConsent/';
 import { MetaJson, StaticMap } from '~/types/index';
@@ -21,10 +21,7 @@ export const RSVMap: React.FC<Props> = ({ meta, geometry }) => {
             <OptIn setConsent={setConsent} />
           </div>
         )}
-        <GatsbyImage
-          image={meta.staticMap.childImageSharp.gatsbyImageData}
-          alt="Statische Karte"
-        />
+        <GatsbyImage image={getImage(meta.staticMap)} alt="Statische Karte" />
       </div>
     );
   }
