@@ -21,7 +21,7 @@ const outlineButtonStyle =
 // TODO: Refactor all those link components to share more logic
 export const ButtonLink: React.FC<Props> = ({
   to,
-  className = '',
+  className,
   newWindow = false,
   outline = false,
   small = false,

@@ -20,8 +20,8 @@ const outlineButtonStyle =
 
 export const Button: React.FC<Props> = ({
   onClick,
+  className,
   type = 'button',
-  className = '',
   outline = false,
   small = false,
   large = false,
@@ -37,6 +37,7 @@ export const Button: React.FC<Props> = ({
   );
 
   return (
+    // mute linter because dynamic type assignment is not allowed
     // eslint-disable-next-line react/button-has-type
     <button onClick={onClick} type={type} className={styles}>
       {children}
