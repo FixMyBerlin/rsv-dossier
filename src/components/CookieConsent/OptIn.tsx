@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink, TextLink } from '~/components/Links';
 import { setOptInCookie } from '~/components/CookieConsent';
+import { Button } from '~/components/Buttons';
 
 type Props = {
   setConsent: (val: boolean | null) => void;
@@ -25,16 +26,16 @@ export const OptIn: React.FC<Props> = ({ setConsent }) => {
           Weitergabe von Nutzerinformationen an Dritte nicht vermeiden können.
         </div>
         <div className="mt-5">
-          <button
-            type="button"
-            className="btn-brand-outline px-8 py-3 shadow md:text-lg"
+          <Button
+            type="submit"
+            outline
             onClick={() => {
               setConsent(true);
               setOptInCookie(true);
             }}
           >
             Ja, ich stimme zu
-          </button>
+          </Button>
         </div>
       </div>
     </div>
