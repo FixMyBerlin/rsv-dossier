@@ -12,7 +12,10 @@ type GraphQLMeta = {
 const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
   return (
     <Layout>
-      <HelmetSeo title="Radschnellwege" description="TODO" image="TODO" />
+      <HelmetSeo
+        title="Radschnellverbindungen"
+        description="Die einzelnen Radschnellverbindungen in den verschiedenen Bundesländern in Deutschland."
+      />
       <div className="bg-white">
         {/* Header */}
         <div className="relative bg-gray-800 pb-32">

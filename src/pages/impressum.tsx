@@ -11,7 +11,11 @@ import BmdvFundingImage from '~/static/BMDV-Foerderung.svg';
 const ImprintPage = () => {
   return (
     <LayoutArticle>
-      <HelmetSeo noindex title="Impressum" />
+      <HelmetSeo
+        noindex
+        title="Impressum"
+        description="Unser Impressum sowie weitere Rechtliche Angaben über Radschnellverbindungen.info"
+      />
       <h1>Impressum</h1>
       <p>
         <strong>FixMyCity GmbH</strong>

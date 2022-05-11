@@ -1,16 +1,16 @@
 import classNames from 'classnames';
-import { Link } from 'gatsby';
 import React from 'react';
 
 type Props = {
-  to: string;
+  onClick: () => void;
+  type?: 'button' | 'submit' | 'reset';
   className?: string;
-  newWindow?: boolean;
   small?: boolean;
   large?: boolean;
   outline?: boolean;
 };
 
+// TODO: share style with ButtonLink
 const button =
   'inline-flex items-center justify-center rounded-full py-2 px-4 drop-shadow border-2 border-emerald-300';
 const defaultButtonStyle =
@@ -18,11 +18,10 @@ const defaultButtonStyle =
 const outlineButtonStyle =
   'bg-white font-bold text-slate-600 transition-colors hover:bg-emerald-300 hover:text-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2';
 
-// TODO: Refactor all those link components to share more logic
-export const ButtonLink: React.FC<Props> = ({
-  to,
+export const Button: React.FC<Props> = ({
+  onClick,
   className,
-  newWindow = false,
+  type = 'button',
   outline = false,
   small = false,
   large = false,
@@ -37,17 +36,11 @@ export const ButtonLink: React.FC<Props> = ({
     { 'px-3 py-1 text-sm font-medium': small }
   );
 
-  if (newWindow) {
-    return (
-      <a href={to} className={styles} target="_blank" rel="noopener noreferrer">
-        {children}
-      </a>
-    );
-  }
-
   return (
-    <Link to={to} className={styles}>
+    // mute linter because dynamic type assignment is not allowed
+    // eslint-disable-next-line react/button-has-type
+    <button onClick={onClick} type={type} className={styles}>
       {children}
-    </Link>
+    </button>
   );
 };

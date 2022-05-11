@@ -13,7 +13,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
     <Layout location={location} navigation={false}>
       <HelmetSeo
         title="Radschnellverbindungen"
-        description="Alles zu Radschnellverbindungen in Deutschland"
+        description="Generelle Informationen sowie Informationen über einzelne Radschnellverbindungen in Deutschland."
       />
       <Hero
         highlightedTitle="Rad&shy;schnell&shy;verbindungen"

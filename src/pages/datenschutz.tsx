@@ -8,7 +8,11 @@ import { ExternalLink } from '~/components/Links';
 const DatenschutzPage = () => {
   return (
     <LayoutArticle>
-      <HelmetSeo noindex title="Datenschutz" />
+      <HelmetSeo
+        noindex
+        title="Datenschutz"
+        description="Informationen über die Handhabung Ihrer Daten und rechtliche Hinweise zur Datenverarbeitung."
+      />
       <h1>Datenschutzerklärung</h1>
       <h2 id="m14">Einleitung</h2>
       <p>

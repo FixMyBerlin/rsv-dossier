@@ -5,6 +5,7 @@
 // Docs: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/label-has-associated-control.md
 // Airbnb Defaults: https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react-a11y.js
 import React from 'react';
+import { Button } from '~/components/Buttons';
 
 export const FooterNewsletter = () => {
   return (
@@ -29,6 +30,9 @@ export const FooterNewsletter = () => {
           placeholder="E-Mail Adresse eingeben"
         />
         <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+          <Button onClick={() => null} type="submit">
+            Anmelden
+          </Button>
           <button
             type="submit"
             className="flex w-full items-center justify-center rounded-md border border-transparent bg-emerald-500 py-2 px-4 text-base font-medium text-white hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-gray-800"
