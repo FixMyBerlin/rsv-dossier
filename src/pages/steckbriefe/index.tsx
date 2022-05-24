@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby';
+import { PageProps, graphql, Link } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
@@ -9,9 +9,15 @@ type GraphQLMeta = {
   jsonId: string;
 } & StaticMap;
 
-const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
+type Props = {
+  data: { radschnellwege: { nodes: Array<GraphQLMeta> } };
+};
+const SteckbriefeIndex: React.FC<PageProps & Props> = ({
+  location,
+  data: { radschnellwege },
+}) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <HelmetSeo
         title="Radschnellverbindungen"
         description="Die einzelnen Radschnellverbindungen in den verschiedenen Bundesländern in Deutschland."
