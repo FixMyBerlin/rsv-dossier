@@ -36,7 +36,7 @@ export const DynamicMap: React.FC<Props> = ({ geometry }) => {
   return (
     <Map
       initialViewState={{
-        bounds: geometry.bbox as LngLatBoundsLike,
+        bounds: geometry.bbox as [number, number, number, number],
         fitBoundsOptions: {
           padding: 20,
         },
@@ -44,6 +44,7 @@ export const DynamicMap: React.FC<Props> = ({ geometry }) => {
       mapLib={maplibregl}
       mapStyle={`${GATSBY_MAPTILER_BASEURL}/style.json?key=${GATSBY_MAPTILER_KEY}`}
       maxBounds={bboxGermany}
+      attributionControl={false}
       interactiveLayerIds={geometry.features.map(
         ({ properties }) => properties.id
       )}

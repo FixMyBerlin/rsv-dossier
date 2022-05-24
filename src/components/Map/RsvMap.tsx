@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { getOptInCookie, OptIn } from '~/components/CookieConsent/';
 import { MetaJson, StaticMap } from '~/types/index';
-import { DynamicMap } from '.';
+import { DynamicMap, Attribution } from '.';
 
 type Props = {
   meta: MetaJson & StaticMap;
@@ -17,10 +17,11 @@ export const RSVMap: React.FC<Props> = ({ meta, geometry }) => {
   return (
     <div className="relative max-h-full max-w-full">
       {consent === null && (
-        <div className="absolute bottom-0 z-10 mx-2 translate-y-1 md:mx-5">
+        <div className="absolute bottom-0 z-20 mx-2 translate-y-1 md:mx-5">
           <OptIn setConsent={setConsent} />
         </div>
       )}
+      <Attribution />
       {consent && <DynamicMap geometry={geometry} />}
       <GatsbyImage image={getImage(meta.staticMap)} alt="Statische Karte" />
     </div>
