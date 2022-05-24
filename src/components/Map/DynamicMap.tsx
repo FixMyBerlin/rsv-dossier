@@ -53,11 +53,9 @@ export const DynamicMap: React.FC<Props> = ({ geometry }) => {
       // onMouseEnter={() => setCursorStyle('pointer')}
       // onMouseLeave={() => setCursorStyle('grab')}
     >
-      {geometry.features.map((feature) => {
-        return (
-          <RSVSegment key={feature.id} feature={feature} selected={selected} />
-        );
-      })}
+      {geometry.features.map((feature) => (
+        <RSVSegment key={feature.id} feature={feature} selected={selected} />
+      ))}
       <RSVPopup info={info} selected={selected} setSelected={setSelected} />
     </Map>
   );
