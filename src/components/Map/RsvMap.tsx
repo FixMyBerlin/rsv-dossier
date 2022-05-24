@@ -11,19 +11,18 @@ type Props = {
 };
 
 export const RSVMap: React.FC<Props> = ({ meta, geometry }) => {
-  const [consent, setConsent] = useState<boolean | null>(null);
+  const [consent, setConsent] = useState<boolean | null>(true);
   useEffect(() => setConsent(getOptInCookie()));
-  if (!consent) {
-    return (
-      <div className="relative max-h-full max-w-full">
-        {consent === null && (
-          <div className="absolute bottom-0 z-10 mx-2 translate-y-1 md:mx-5">
-            <OptIn setConsent={setConsent} />
-          </div>
-        )}
-        <GatsbyImage image={getImage(meta.staticMap)} alt="Statische Karte" />
-      </div>
-    );
-  }
-  return <DynamicMap geometry={geometry} />;
+
+  return (
+    <div className="relative max-h-full max-w-full">
+      {consent === null && (
+        <div className="absolute bottom-0 z-10 mx-2 translate-y-1 md:mx-5">
+          <OptIn setConsent={setConsent} />
+        </div>
+      )}
+      {consent && <DynamicMap geometry={geometry} />}
+      <GatsbyImage image={getImage(meta.staticMap)} alt="Statische Karte" />
+    </div>
+  );
 };
