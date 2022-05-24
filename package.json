@@ -4,6 +4,10 @@
   "version": "0.1.0",
   "author": "FixMyCity <hello@fixmycity.de>",
   "license": "AGPL-3.0",
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
   "scripts": {
     "start": "gatsby develop -p 9000",
     "build": "gatsby build",
@@ -35,7 +39,7 @@
     "gatsby-transformer-json": "4.14.0",
     "gatsby-transformer-sharp": "4.14.0",
     "mapbox-gl": "npm:empty-npm-package@1.0.0",
-    "maplibre-gl": "^1.15.3",
+    "maplibre-gl": "2.1.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
