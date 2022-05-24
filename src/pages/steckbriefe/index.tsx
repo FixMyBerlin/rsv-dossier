@@ -108,7 +108,7 @@ export const query = graphql`
         jsonId
         staticMap {
           childImageSharp {
-            gatsbyImageData(width: 300, height: 200)
+            gatsbyImageData(height: 250)
           }
         }
       }
