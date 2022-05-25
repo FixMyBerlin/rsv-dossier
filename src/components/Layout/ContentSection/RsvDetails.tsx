@@ -3,6 +3,7 @@ import { ButtonLink } from '~/components/Links/ButtonLink';
 import { RSVMap } from '~/components/Map';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { geometryJson, metaJson } from '~/types/steckbrief';
+import { RsvProgressBar } from '~/components/Misc';
 
 type Props = metaJson & geometryJson;
 
@@ -17,6 +18,7 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
             {meta.general.name}
           </h2>
+          <RsvProgressBar current="planning" />
           <h2 className="mt-6 text-lg font-bold text-gray-500">Kurzfassung</h2>
           <p className="text-lg text-gray-500">{meta.general.description}</p>
           {meta.references.website && (
