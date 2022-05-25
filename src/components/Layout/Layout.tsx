@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
-import { Footer, Navigation } from '.';
+import { Footer } from './Footer';
+import { Navigation } from './Navigation';
 
 type Props = {
   className?: string;
