@@ -14,7 +14,7 @@ const states = {
 };
 
 const baseStyle =
-  'inline-flex items-center justify-center py-2 px-3 lg:px-2.5 text-xs lg:text-xs sm:py-2.5 sm:text-base xl:py-2.5 xl:px-4 font-bold mr-1 xl:text-lg hover:cursor-default';
+  'inline-flex items-center justify-center py-3 px-3.5 lg:px-2.5 text-xs lg:text-xs sm:text-base xl:py-2.5 xl:px-4 font-bold mr-1 xl:text-lg hover:cursor-default';
 const selectedStyle = 'bg-slate-900 text-white';
 const unselectedStyle = 'bg-gray-300 text-gray-600';
 
