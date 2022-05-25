@@ -13,12 +13,14 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
       <div className="flex h-80 max-h-[1080px] max-w-[1920px] overflow-hidden shadow-xl lg:absolute lg:left-0 lg:h-full lg:w-1/2 lg:rounded-br-2xl">
         <RSVMap geometry={geometry} />
       </div>
-      <div className=" mx-auto max-w-7xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
-        <div className="mx-auto max-w-2xl lg:mr-0 lg:ml-auto lg:w-1/2 lg:max-w-none lg:pl-10">
-          <h2 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+      <div className="mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
+        <div className="mx-auto max-w-2xl lg:mr-0 lg:w-1/2 lg:max-w-none lg:pl-14">
+          <h1 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
             {meta.general.name}
-          </h2>
-          <RsvProgressBar current="planning" />
+          </h1>
+          <div className="mt-6">
+            <RsvProgressBar current="planning" />
+          </div>
           <h2 className="mt-6 text-lg font-bold text-gray-500">Kurzfassung</h2>
           <p className="text-lg text-gray-500">{meta.general.description}</p>
           {meta.references.website && (
@@ -31,6 +33,19 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
               </ButtonLink>
             </div>
           )}
+          <h2 className="mt-6 text-2xl font-extrabold text-gray-900 sm:text-3xl">
+            Projektdaten
+          </h2>
+          <h3 className="mt-6 text-lg font-bold text-gray-900 sm:text-xl">
+            Trassenführung
+          </h3>
+          <p className="text-lg text-gray-500 sm:text-xl">
+            {`${meta.general.from} - ${meta.general.to}`}
+          </p>
+          <h3 className="mt-6 text-lg font-bold text-gray-900 sm:text-xl">
+            Länge
+          </h3>
+          <p className="text-lg text-gray-500 sm:text-xl"> 10 km</p>
         </div>
       </div>
     </div>
