@@ -7,14 +7,14 @@ type Props = {
 
 const states = {
   idea: 'Idee',
-  agreement_process: 'Machbarkeitsstudie',
+  agreement_process: 'Prüfung',
   planning: 'Entwurf',
   in_progress: 'Umsetzung',
   done: 'Abgeschlossen',
 };
 
 const baseStyle =
-  'inline-flex items-center justify-center py-2 px-4 font-bold mr-1 text-lg hover:cursor-default';
+  'inline-flex items-center justify-center py-2 px-4 font-bold mr-1 text-sm md:text-lg hover:cursor-default';
 const selectedStyle = 'bg-slate-900 text-white';
 const unselectedStyle = 'bg-gray-300 text-gray-600';
 
