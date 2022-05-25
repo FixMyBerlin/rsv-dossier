@@ -16,7 +16,8 @@
     "type-check": "tsc",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@googlemaps/polyline-codec": "1.0.25",
@@ -74,6 +75,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "gatsby-plugin-postcss": "^5.5.0",
+    "husky": "8.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.3.1",
     "postcss": "^8.4.5",
