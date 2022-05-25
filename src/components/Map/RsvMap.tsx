@@ -21,7 +21,9 @@ export const RSVMap: React.FC<Props> = ({ meta, geometry }) => {
           <OptIn setConsent={setConsent} />
         </div>
       )}
-      <Attribution />
+      <div className="absolute bottom-0 right-0 z-10 translate-y-1 translate-x-1 pr-3 pb-1 text-xs">
+        <Attribution />
+      </div>
       {consent && <DynamicMap geometry={geometry} />}
       <GatsbyImage image={getImage(meta.staticMap)} alt="Statische Karte" />
     </div>
