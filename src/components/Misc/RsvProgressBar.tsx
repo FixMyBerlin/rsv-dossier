@@ -14,7 +14,7 @@ const states = {
 };
 
 const baseStyle =
-  'inline-flex items-center justify-center py-1 px-2 md:py-2 md:px-4 font-bold mr-1 text-sm md:text-lg hover:cursor-default';
+  'inline-flex items-center justify-center py-1 px-2 lg:px-2 text-xs lg:text-xs sm:text-base sm:px-3 xl:py-2 xl:px-4 font-bold mr-1 xl:text-lg hover:cursor-default';
 const selectedStyle = 'bg-slate-900 text-white';
 const unselectedStyle = 'bg-gray-300 text-gray-600';
 
@@ -30,7 +30,12 @@ export const RsvProgressBar: React.FC<Props> = ({ current }) => {
           i === 0 && 'rounded-l-full',
           i === nStates - 1 && 'rounded-r-full'
         );
-        return <div className={style}>{states[state]}</div>;
+        return (
+          <div className={style}>
+            <div className="md:pr-1" />
+            {states[state]}
+          </div>
+        );
       })}
     </div>
   );
