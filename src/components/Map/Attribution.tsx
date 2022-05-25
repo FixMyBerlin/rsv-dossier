@@ -12,12 +12,12 @@ export const Attribution = () => {
       {Object.keys(mapAttribution).map((name) => (
         <a
           key={name}
-          className="hover:underline"
+          className="mr-1 hover:underline"
           href={mapAttribution[name]}
           target="_blank"
           rel="noreferrer"
         >
-          &copy; {name} &nbsp;
+          &copy; {name}
         </a>
       ))}
     </>
