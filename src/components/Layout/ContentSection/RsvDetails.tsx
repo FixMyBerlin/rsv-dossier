@@ -21,7 +21,9 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
           <div className="mt-6">
             <RsvProgressBar current="planning" />
           </div>
-          <h2 className="mt-6 text-lg font-bold text-gray-500">Kurzfassung</h2>
+          <h2 className="mt-6 text-lg font-bold text-gray-900 sm:text-xl">
+            Kurzfassung
+          </h2>
           <p className="text-lg text-gray-500">{meta.general.description}</p>
           {meta.references.website && (
             <div className="mt-4 rounded-full">
@@ -36,15 +38,15 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
           <h2 className="mt-6 text-2xl font-extrabold text-gray-900 sm:text-3xl">
             Projektdaten
           </h2>
-          <h3 className="mt-6 text-lg font-bold text-gray-900 sm:text-xl">
+          <h2 className="mt-6 text-lg font-bold text-gray-900 sm:text-xl">
             Trassenführung
-          </h3>
+          </h2>
           <p className="text-lg text-gray-500 sm:text-xl">
             {`${meta.general.from} - ${meta.general.to}`}
           </p>
-          <h3 className="mt-6 text-lg font-bold text-gray-900 sm:text-xl">
+          <h2 className="mt-6 text-lg font-bold text-gray-900 sm:text-xl">
             Länge
-          </h3>
+          </h2>
           <p className="text-lg text-gray-500 sm:text-xl"> 10 km</p>
         </div>
       </div>
