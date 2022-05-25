@@ -13,30 +13,22 @@ const states = {
   done: 'Abgeschlossen',
 };
 
-const baseStyle =
-  'inline-flex items-center justify-center py-3 px-3.5 lg:px-2.5 text-xs lg:text-xs sm:text-base xl:py-2.5 xl:px-4 font-bold mr-1 xl:text-lg hover:cursor-default';
-const selectedStyle = 'bg-slate-900 text-white';
-const unselectedStyle = 'bg-gray-300 text-gray-600';
-
 export const RsvProgressBar: React.FC<Props> = ({ current }) => {
-  const stateList = Object.keys(states);
-  const nStates = stateList.length;
+  const selectedStyle = 'bg-slate-900 text-white';
+  const unselectedStyle = 'bg-gray-300 text-gray-600';
   return (
     <div className="flex flex-row">
-      {stateList.map((state, i) => {
-        const style = classNames(
-          baseStyle,
-          state === current ? selectedStyle : unselectedStyle,
-          i === 0 && 'rounded-l-full',
-          i === nStates - 1 && 'rounded-r-full'
-        );
-        return (
-          <div className={style}>
-            <div className="md:pr-1" />
-            {states[state]}
-          </div>
-        );
-      })}
+      {Object.entries(states).map(([key, title]) => (
+        <div
+          key={key}
+          className={classNames(
+            'mr-1 inline-flex items-center justify-center py-3 px-3.5 text-xs font-bold first:rounded-l-full last:rounded-r-full hover:cursor-default sm:text-base lg:px-2.5 lg:text-xs xl:py-2.5 xl:px-4 xl:text-lg',
+            key === current ? selectedStyle : unselectedStyle
+          )}
+        >
+          {title}
+        </div>
+      ))}
     </div>
   );
 };
