@@ -46,7 +46,7 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
           </p>
           <h2 className="mt-6 text-lg font-bold text-gray-900 sm:text-xl">
             Länge
-          </h3>
+          </h2>
           <p className="text-lg text-gray-500 sm:text-xl">10&thinsp;km</p>
         </div>
       </div>
