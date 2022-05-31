@@ -1,8 +1,8 @@
 import { createFileNodeFromBuffer } from 'gatsby-source-filesystem';
-import { staticMapRequest } from './src/staticmap';
 import fetch from 'node-fetch';
 import { Buffer } from 'buffer';
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
+import { staticMapRequest } from './src/utils';
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
