@@ -9,7 +9,7 @@ type Props = {
 
 export const OptIn: React.FC<Props> = ({ setConsent }) => {
   return (
-    <div className="h-fit rounded-lg bg-white shadow">
+    <div className="h-fit rounded-t-2xl bg-white shadow">
       <div className="px-4 py-5 sm:p-6">
         <div className="mt-2 text-sm text-gray-500">
           <p>
@@ -35,6 +35,17 @@ export const OptIn: React.FC<Props> = ({ setConsent }) => {
             }}
           >
             Ja, ich stimme zu
+          </Button>
+          <Button
+            type="button"
+            className="mx-4"
+            outline
+            onClick={() => {
+              setConsent(false);
+              setOptInCookie(false);
+            }}
+          >
+            Ablehnen
           </Button>
         </div>
       </div>

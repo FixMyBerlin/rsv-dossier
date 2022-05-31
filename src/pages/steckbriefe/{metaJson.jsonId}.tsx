@@ -3,8 +3,16 @@ import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { RSVDetails } from '~/components/Layout/ContentSection/RsvDetails';
+import { MetaJson, StaticMap } from '~/types/index';
 
-const Radschnellweg = ({ data: { meta, geometry } }) => {
+type Props = {
+  data: {
+    meta: MetaJson & StaticMap;
+    geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString>;
+  };
+};
+
+const Radschnellweg: React.FC<Props> = ({ data: { meta, geometry } }) => {
   return (
     <Layout>
       <HelmetSeo
@@ -21,8 +29,10 @@ export default Radschnellweg;
 
 export const query = graphql`
   query ($jsonId: String!) {
-    geometry: geometriesJson(name: { eq: $jsonId }) {
+    geometry: geometryJson(name: { eq: $jsonId }) {
+      type
       bbox
+      name
       features {
         type
         bbox
@@ -40,9 +50,8 @@ export const query = graphql`
           detail_level
         }
       }
-      name
     }
-    meta: rsvMetaJson(jsonId: { eq: $jsonId }) {
+    meta: metaJson(jsonId: { eq: $jsonId }) {
       general {
         description
         from
@@ -57,6 +66,11 @@ export const query = graphql`
       finished
       cost
       state
+      staticMap {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
     }
   }
 `;

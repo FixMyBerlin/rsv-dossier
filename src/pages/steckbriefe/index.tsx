@@ -1,10 +1,20 @@
-import { graphql, Link } from 'gatsby';
+import { PageProps, graphql, Link } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
-import { StaticImage } from 'gatsby-plugin-image';
+import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { MetaJson, StaticMap } from '~/types/index';
 
-const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
+type GraphQLMeta = {
+  jsonId: string;
+} & StaticMap;
+
+type Props = {
+  data: { radschnellwege: { nodes: Array<GraphQLMeta> } };
+};
+const SteckbriefeIndex: React.FC<PageProps & Props> = ({
+  data: { radschnellwege },
+}) => {
   return (
     <Layout>
       <HelmetSeo
@@ -44,54 +54,41 @@ const SteckbriefeIndex = ({ data: { radschnellwege } }) => {
           <h2 className="sr-only" id="contact-heading">
             Alle Radschnellverbindungen
           </h2>
-          <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
-            {radschnellwege.nodes.map((radschnellweg) => (
-              <div
-                key={radschnellweg.general.name}
-                className="flex flex-col rounded-2xl bg-white shadow-xl"
-              >
-                <div className="relative flex-1 px-6 pt-16 pb-8 md:px-8">
-                  <div className="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-emerald-400 p-5 shadow-lg">
-                    {/* <!-- Heroicon name: outline/phone --> */}
-                    <svg
-                      className="h-6 w-6 text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                      />
-                    </svg>
+          <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-8 lg:gap-x-8">
+            {radschnellwege.nodes.map(
+              (radschnellweg: MetaJson & GraphQLMeta) => (
+                <div
+                  key={radschnellweg.general.name}
+                  className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-xl"
+                >
+                  <GatsbyImage
+                    image={getImage(radschnellweg.staticMap)}
+                    alt="Thumbnail-Karte"
+                  />
+                  <div className="relative flex-1 px-6 pt-16 pb-8 md:px-8">
+                    <h3 className="text-xl font-medium text-slate-900">
+                      {radschnellweg.general.from} &rarr;{' '}
+                      {radschnellweg.general.to}{' '}
+                      {/* https://tailwindui.com/components/application-ui/elements/badges */}
+                      <span className="inline-flex items-center rounded-full bg-yellow-100 px-3 py-0.5 text-sm font-medium text-yellow-800">
+                        {radschnellweg.state}
+                      </span>
+                    </h3>
+                    <p className="mt-4 text-base text-slate-500">
+                      {radschnellweg.general.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-medium text-slate-900">
-                    {radschnellweg.general.from} &rarr;{' '}
-                    {radschnellweg.general.to}{' '}
-                    {/* https://tailwindui.com/components/application-ui/elements/badges */}
-                    <span className="inline-flex items-center rounded-full bg-yellow-100 px-3 py-0.5 text-sm font-medium text-yellow-800">
-                      {radschnellweg.state}
-                    </span>
-                  </h3>
-                  <p className="mt-4 text-base text-slate-500">
-                    {radschnellweg.general.description}
-                  </p>
+                  <div className="rounded-bl-2xl rounded-br-2xl bg-gray-50 p-6 md:px-8">
+                    <Link
+                      to={`./${radschnellweg.jsonId}`}
+                      className="text-base font-medium text-indigo-700 hover:text-emerald-400"
+                    >
+                      Mehr erfahren<span aria-hidden="true"> &rarr;</span>
+                    </Link>
+                  </div>
                 </div>
-                <div className="rounded-bl-2xl rounded-br-2xl bg-gray-50 p-6 md:px-8">
-                  <Link
-                    // to={`${pathname}/${radschnellweg.jsonId}`}
-                    to={`./${radschnellweg.jsonId}`}
-                    className="text-base font-medium text-indigo-700 hover:text-emerald-400"
-                  >
-                    Mehr erfahren<span aria-hidden="true"> &rarr;</span>
-                  </Link>
-                </div>
-              </div>
-            ))}
+              )
+            )}
           </div>
         </section>
       </div>
@@ -103,16 +100,21 @@ export default SteckbriefeIndex;
 
 export const query = graphql`
   {
-    radschnellwege: allRsvMetaJson {
+    radschnellwege: allMetaJson {
       nodes {
         state
-        jsonId
         general {
           to
           from
           name
           slug
           description
+        }
+        jsonId
+        staticMap {
+          childImageSharp {
+            gatsbyImageData(height: 250)
+          }
         }
       }
     }
