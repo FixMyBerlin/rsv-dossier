@@ -30,7 +30,7 @@ export const staticMapRequest = (
   { features, bbox }: GeoJSON.FeatureCollection<GeoJSON.MultiLineString>,
   [width, height]: number[]
 ) => {
-  const dims = `${width}x${height}@2x.png`;
+  const dims = `${width / 2}x${height / 2}@2x.png`;
   const url = new URL(
     `${GATSBY_MAPTILER_BASEURL}/static/${bbox.toString()}/${dims}`
   );
