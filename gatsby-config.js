@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: 'Radschnellverbindungen',
@@ -15,20 +19,21 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-json',
+    'gatsby-transformer-sharp',
     {
       resolve: '@sentry/gatsby',
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/radschnellwege/metadata`,
+        path: `${__dirname}/src/radschnellwege/meta`,
         name: 'rsv_meta',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/radschnellwege/geometries`,
+        path: `${__dirname}/src/radschnellwege/geometry`,
         name: 'rsv_geo',
       },
     },
