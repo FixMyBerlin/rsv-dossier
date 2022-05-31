@@ -22,7 +22,7 @@ export const RsvProgressBar: React.FC<Props> = ({ current }) => {
         <div
           key={key}
           className={classNames(
-            'mr-1 inline-flex items-center justify-center py-3 px-3.5 text-xs font-bold first:rounded-l-full last:rounded-r-full hover:cursor-default sm:text-base lg:px-2.5 lg:text-xs xl:py-2.5 xl:px-4 xl:text-lg',
+            'mr-1 inline-flex items-center justify-center py-[1.8vw] px-[1.8vw] text-[1.8vw] font-bold first:rounded-l-full last:rounded-r-full hover:cursor-default lg:py-[1.1vw] lg:px-[1.1vw] lg:text-[1.1vw]',
             key === current ? selectedStyle : unselectedStyle
           )}
         >
