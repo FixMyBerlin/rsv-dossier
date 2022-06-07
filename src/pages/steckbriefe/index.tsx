@@ -1,9 +1,10 @@
-import { PageProps, graphql, Link } from 'gatsby';
+import { PageProps, graphql } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MetaJson, StaticMap } from '~/types/index';
+import { TextLink } from '~/components/Links';
 
 type GraphQLMeta = {
   jsonId: string;
@@ -54,18 +55,20 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
           <h2 className="sr-only" id="contact-heading">
             Alle Radschnellverbindungen
           </h2>
-          <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-8 lg:gap-x-8">
+          <div className="grid grid-cols-1 gap-y-20  md:grid-cols-2 md:gap-y-8 md:gap-x-8 lg:grid-cols-3">
             {radschnellwege.nodes.map(
               (radschnellweg: MetaJson & GraphQLMeta) => (
                 <div
                   key={radschnellweg.general.name}
                   className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-xl"
                 >
-                  <GatsbyImage
-                    image={getImage(radschnellweg.staticMap)}
-                    alt="Thumbnail-Karte"
-                  />
-                  <div className="relative flex-1 px-6 pt-16 pb-8 md:px-8">
+                  <div className="flex max-h-60 overflow-hidden">
+                    <GatsbyImage
+                      image={getImage(radschnellweg.staticMap)}
+                      alt="Thumbnail-Karte"
+                    />
+                  </div>
+                  <div className="relative flex-1 px-6 pt-12 pb-8 md:px-8">
                     <h3 className="text-xl font-medium text-slate-900">
                       {radschnellweg.general.from} &rarr;{' '}
                       {radschnellweg.general.to}{' '}
@@ -78,13 +81,10 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
                       {radschnellweg.general.description}
                     </p>
                   </div>
-                  <div className="rounded-bl-2xl rounded-br-2xl bg-gray-50 p-6 md:px-8">
-                    <Link
-                      to={`./${radschnellweg.jsonId}`}
-                      className="text-base font-medium text-indigo-700 hover:text-emerald-400"
-                    >
+                  <div className="p-6 md:px-8">
+                    <TextLink to={`./${radschnellweg.jsonId}`}>
                       Mehr erfahren<span aria-hidden="true"> &rarr;</span>
-                    </Link>
+                    </TextLink>
                   </div>
                 </div>
               )
@@ -113,7 +113,7 @@ export const query = graphql`
         jsonId
         staticMap {
           childImageSharp {
-            gatsbyImageData(height: 250)
+            gatsbyImageData
           }
         }
       }
