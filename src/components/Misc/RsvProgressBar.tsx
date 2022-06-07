@@ -8,9 +8,9 @@ type Props = {
 const states = {
   idea: 'Idee',
   agreement_process: 'Prüfung',
-  planning: 'Entwurf',
+  planning: 'Planung',
   in_progress: 'Umsetzung',
-  done: 'Abgeschlossen',
+  done: 'Gebaut',
 };
 
 export const RsvProgressBar: React.FC<Props> = ({ current }) => {
@@ -22,7 +22,7 @@ export const RsvProgressBar: React.FC<Props> = ({ current }) => {
         <div
           key={key}
           className={classNames(
-            'mr-1 inline-flex items-center justify-center py-[1.8vw] px-[1.8vw] text-[1.8vw] font-bold first:rounded-l-full last:rounded-r-full hover:cursor-default lg:py-[1.1vw] lg:px-[1.1vw] lg:text-[1.1vw]',
+            'mr-1 inline-flex items-center justify-center py-[2vw] px-[2vw] text-[2vw] font-bold first:rounded-l-full last:rounded-r-full hover:cursor-default sm:py-[0.8rem] sm:px-[0.8rem] sm:text-[0.8rem] lg:py-[1.2vw] lg:px-[1.2vw] lg:text-[1.2vw] xl:py-[1rem] xl:px-[1rem] xl:text-[1rem]',
             key === current ? selectedStyle : unselectedStyle
           )}
         >
