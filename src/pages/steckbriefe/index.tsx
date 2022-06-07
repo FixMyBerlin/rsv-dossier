@@ -28,8 +28,8 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
           <div className="absolute inset-0">
             <StaticImage
               className="h-full w-full object-cover"
-              src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
-              alt=""
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2019Radschnellweg.jpg/799px-2019Radschnellweg.jpg?20190612173516"
+              alt="header image"
             />
             <div
               className="absolute inset-0 bg-gray-800 mix-blend-multiply"
