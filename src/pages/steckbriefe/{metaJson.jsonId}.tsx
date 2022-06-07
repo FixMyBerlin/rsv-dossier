@@ -41,7 +41,7 @@ export const query = graphql`
           type
         }
         properties {
-          variants
+          variant
           state
           planning_phase
           length

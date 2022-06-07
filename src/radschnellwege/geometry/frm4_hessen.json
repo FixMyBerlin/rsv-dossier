@@ -14,11 +14,13 @@
       "properties": {
         "id": "1",
         "id_rsv": "frm4-hessen",
-        "state": "planning",
-        "planning_phase": "pilot study",
+        "state": "agreement_process",
+        "planning_phase": "",
         "detail_level": "corridor",
-        "variants": "Vorzugstrasse",
-        "length": "6466.783618830881"
+        "variant": "Vorzugstrasse",
+        "length": "6466.783618830881",
+        "discarted": "false",
+        "description:planning_phase": null
       },
       "bbox": [
         8.501800435010692, 50.133590038794523, 8.569823398960676,

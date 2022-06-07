@@ -1,27 +1,29 @@
 {
   "type": "FeatureCollection",
-  "name": "frm5-hessen",
+  "name": "frm5-hessen2",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
   },
   "bbox": [
-    4.26872236491324, 44.5501073723026, 8.67677074838274, 50.2533130622912
+    8.57681468955736, 50.1033050434946, 8.67677074838274, 50.2533130622912
   ],
   "features": [
     {
       "type": "Feature",
       "properties": {
-        "id": "2",
+        "id": "1",
         "id_rsv": "frm5-hessen",
-        "state": "planning",
-        "planning_phase": "pilot study",
-        "detail_level": "rough",
-        "variants": "Alternativetrasse",
-        "length": "14705.076693358289"
+        "state": "agreement_process",
+        "planning_phase": "",
+        "detail_level": "approximated",
+        "variant": "Alternativetrasse",
+        "length": "14705.076693358289",
+        "discarted": "false",
+        "description:planning_phase": null
       },
       "bbox": [
-        4.268722364913238, 44.550107372302612, 8.647060332226701,
+        8.576814689557359, 50.133346341527712, 8.647060332226701,
         50.243791911858111
       ],
       "geometry": {
@@ -119,13 +121,15 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "1",
+        "id": "2",
         "id_rsv": "frm5-hessen",
-        "state": "planning",
-        "planning_phase": "pilot study",
-        "detail_level": "rough",
-        "variants": "Vorzugstrasse",
-        "length": "40270.90395316763"
+        "state": "agreement_process",
+        "planning_phase": "",
+        "detail_level": "approximated",
+        "variant": "Vorzugstrasse",
+        "length": "40270.90395316763",
+        "discarted": "false",
+        "description:planning_phase": null
       },
       "bbox": [
         8.578443892536091, 50.103305043494615, 8.67677074838274,
