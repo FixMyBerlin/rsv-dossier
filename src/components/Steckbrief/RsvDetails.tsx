@@ -2,7 +2,7 @@ import React from 'react';
 import { ButtonLink } from '~/components/Links/ButtonLink';
 import { RSVMap } from '~/components/Map';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { RsvProgressBar } from '~/components/Misc';
+import { RsvProgressBar } from '~/components/Steckbrief';
 import { MetaJson, StaticMap } from '~/types/index';
 
 type Props = {
