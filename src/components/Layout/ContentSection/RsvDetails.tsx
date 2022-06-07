@@ -38,9 +38,6 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
               </ButtonLink>
             </div>
           )}
-          <h2 className="mt-6 text-2xl font-extrabold text-gray-900 sm:text-3xl">
-            Projektdaten
-          </h2>
           <h2 className="mt-6 text-lg font-bold text-gray-900 sm:text-xl">
             Trassenführung
           </h2>
