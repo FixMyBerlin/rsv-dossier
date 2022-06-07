@@ -56,17 +56,16 @@ FILES_CHANGED=$(git diff-index --name-only --cached $against | grep -E ".+(tsx|j
 
 for FILE in $FILES_CHANGED
 do
-	OUT=$(npx eslint --max-warnings=0 $FILE)
-	if [ $? -ne 0 ] ; then
-		echo -e "$OUT"
-		exit 1
-	fi
+  if [ -f $FILE ]; then
+    OUT=$(npx eslint --max-warnings=0 $FILE)
+    if [ $? -ne 0 ]; then
+      echo -e "$OUT"
+      exit 1
+    fi
+  fi
 done
-
 # OUT=$(npm run type-check)
 # if [ $? -ne 0 ] ; then
 # 	echo -e "$OUT"
 # 	exit 1
 # fi
-
-
