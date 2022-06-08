@@ -70,12 +70,8 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
                   </div>
                   <div className="relative flex-1 px-6 pt-12 pb-8 md:px-8">
                     <h3 className="text-xl font-medium text-slate-900">
-                      {radschnellweg.general.from} &rarr;{' '}
-                      {radschnellweg.general.to}{' '}
-                      {/* https://tailwindui.com/components/application-ui/elements/badges */}
-                      <span className="inline-flex items-center rounded-full bg-yellow-100 px-3 py-0.5 text-sm font-medium text-yellow-800">
-                        {radschnellweg.state}
-                      </span>
+                      {radschnellweg.general.from} &rarr;&nbsp;
+                      {radschnellweg.general.to}
                     </h3>
                     <p className="mt-4 text-base text-slate-500">
                       {radschnellweg.general.description}
