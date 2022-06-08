@@ -4,29 +4,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "RSV 1",
             "name": "Y-Trasse",
             "from": "Kreuzberg",
             "to": "Adlershof",
             "description": "\"Der Trassenkorridor f\u00fcr die \"Y-Trasse\" verl\u00e4uft im S\u00fcdosten Berlins \nzun\u00e4chst parallel zur Autobahn BAB 113 und dem s\u00fcdlichen Teltowkanal. Am\n Britzer Hafen teilt sich die Trasse in zwei Streckenarme auf. Die \nwestliche Abzweigung f\u00fchrt quer durch Neuk\u00f6lln entlang des Tempelhofer \nFeldes \u00fcber die Hasenheide bis zum Zielpunkt S\u00fcdstern in Kreuzberg. Die \nzweite Abzweigung der Radschnellverbindung verl\u00e4uft \u00f6stlich davon \nentlang der Autobahn BAB 100 auf dem Mauerweg bis zum G\u00f6rlitzer Park in \nKreuzberg\".",
-            "source": "https://www.infravelo.de/projekt/y-trasse/",
-            "slug": ""
+            "source": "https://www.infravelo.de/projekt/y-trasse/"
         },
         "stakeholders": [
             {
                 "name": "infraVelo",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.infravelo.de/projekt/y-trasse/"
         }
     },
     {
@@ -34,29 +29,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "RSV 2",
             "name": "Mitte \u2013 Tegel \u2013 Spandau",
             "from": "Berlin Mitte",
             "to": "Spandau",
             "description": "\"Die Radschnellverbindung \"Mitte \u2013 Tegel \u2013 Spandau\" soll den Bezirk Spandau mit dem Berliner Hauptbahnhof verbinden. Der Trassenkorridor verl\u00e4uft \u00fcberwiegend parallel zum Berlin-Spandauer Schifffahrtskanal. Er kreuzt den n\u00f6rdlichen S-Bahn-Ring sowie die Stadtautobahn A 111. Gute Verkn\u00fcpfungen zum Bereich Flughafen Tegel, der Europacity sowie dem Radfernweg Berlin-Kopenhagen k\u00f6nnen entstehen.\"",
-            "source": "https://www.infravelo.de/projekt/mitte-tegel-spandau/",
-            "slug": ""
+            "source": "https://www.infravelo.de/projekt/mitte-tegel-spandau/"
         },
         "stakeholders": [
             {
                 "name": "infraVelo",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.infravelo.de/projekt/mitte-tegel-spandau/"
         }
     },
     {
@@ -64,29 +54,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "RSV 3",
             "name": "K\u00f6nigsweg \u2013 Kronprinzessinnenweg",
             "from": "Berlin Wannsee",
             "to": "S-Bahnstation Halensee",
             "description": "\"Die Radschnellverbindung soll vom Wannsee aus \u00fcber den \nKronprinzessinnenweg und den K\u00f6nigsweg quer durch den Grunewald bis zur \nMesse Berlin und dem westlichen Ende des Kurf\u00fcrstendamms f\u00fchren. Auf den\n ersten Kilometern f\u00fchrt diese Trasse durch ein Wohngebiet. Der zweite \nAbschnitt verl\u00e4uft parallel zur Avus auf einem Waldst\u00fcck bis zum \nS-Bahnhof Grunewald und geht von dort in den dritten Abschnitt \u00fcber \u2013 \neine Einfamilienhaussiedlung. Voraussichtlicher Endpunkt wird die \nS-Bahnstation Halensee am Kurf\u00fcrstendamm sein.\"",
-            "source": "https://www.infravelo.de/projekt/koenigsweg-kronprinzessinnenweg/",
-            "slug": ""
+            "source": "https://www.infravelo.de/projekt/koenigsweg-kronprinzessinnenweg/"
         },
         "stakeholders": [
             {
                 "name": "infraVelo",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.infravelo.de/projekt/koenigsweg-kronprinzessinnenweg/"
         }
     },
     {
@@ -94,29 +79,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "RSV 4",
             "name": "Panke-Trail",
             "from": "S-Bahnhof Karow",
             "to": "Torstra\u00dfe",
             "description": "\"Der Trassenkorridor f\u00fcr den \"Panke-Trail\" verl\u00e4uft ab dem S-Bahnhof Karow im Bezirk Pankow zun\u00e4chst parallel zur S-Bahn-Trasse in Richtung Zentrum. Im Bereich des S- und U-Bahnhofs Pankow teilt sich die Trasse in zwei Arme: eine Abzweigung f\u00fchrt in Richtung S\u00fcdwesten \u00fcber Gesundbrunnen bis zum Nordbahnhof, die zweite in Richtung S\u00fcden \u00fcber Prenzlauer Berg bis zur Torstra\u00dfe in Berlin Mitte.\"",
-            "source": "https://www.infravelo.de/projekt/panke-trail/",
-            "slug": ""
+            "source": "https://www.infravelo.de/projekt/panke-trail/"
         },
         "stakeholders": [
             {
                 "name": "infraVelo",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.infravelo.de/projekt/panke-trail/"
         }
     },
     {
@@ -124,29 +104,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "RSV 5",
             "name": "West-Route",
             "from": "Spandau",
             "to": "S-Bahnhof Tiergarten",
             "description": "\"Der Trassenkorridor der \"West-Route\" beginnt in Berlin-Spandau an der Landesgrenze zu Dallgow in Brandenburg und endet am S-Bahnhof Tiergarten in Charlottenburg-Wilmersdorf. Die Trasse f\u00fchrt entlang der Heerstra\u00dfe und den U-Bahnh\u00f6fen Theodor-Heuss-Platz, Kaiserdamm, Bismarckstra\u00dfe und Ernst-Reuter-Platz sowie der Stra\u00dfe des 17. Juni bis zum S-Bahnhof Tiergarten. Dabei werden zahlreiche Wohnquartiere mit dem Olympiastadion, der Einkaufsmeile entlang der Wilmersdorfer Stra\u00dfe, der Technischen Universit\u00e4t sowie weiteren Schul- und Ausbildungszentren im und am S-Bahn-Ring verbunden. Ab dem S-Bahnhof Tiergarten verl\u00e4uft die Trasse weiter als \"Ost-Route\" bis an die \u00f6stliche Berliner Stadtgrenze zu Brandenburg.\"",
-            "source": "https://www.infravelo.de/projekt/west-route/",
-            "slug": ""
+            "source": "https://www.infravelo.de/projekt/west-route/"
         },
         "stakeholders": [
             {
                 "name": "infraVelo",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.infravelo.de/projekt/west-route/"
         }
     },
     {
@@ -154,29 +129,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "RSV 6",
             "name": "Teltowkanalroute",
             "from": "Lichterfelde",
             "to": "Bahnhof S\u00fcdkreuz",
             "description": "\"Der Trassenkorridor der \"Teltowkanalroute\" beginnt an der nord\u00f6stlichen \nGrenze der brandenburgischen Stadt Teltow zum Land Berlin. Er verl\u00e4uft \n\u00fcberwiegend entlang des Teltowkanals durch die Stadtteile Lichterfelde, \nLankwitz und Steglitz (Bezirk Steglitz-Zehlendorf). Im \u00f6stlichen Bereich\n von Steglitz verl\u00e4sst der Korridor den Verlauf des Kanals und \ndurchschreitet in n\u00f6rdliche Richtung Wohngebiete in Richtung des Bezirks\n Tempelhof-Sch\u00f6neberg. Im Stadtteil Sch\u00f6neberg verl\u00e4uft der Korridor \nparallel und westlich zur Bahntrasse bis zur Bundesautobahn \n100/S\u00fcdkreuz. \"",
-            "source": "https://www.infravelo.de/projekt/teltowkanalroute/",
-            "slug": ""
+            "source": "https://www.infravelo.de/projekt/teltowkanalroute/"
         },
         "stakeholders": [
             {
                 "name": "infraVelo",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.infravelo.de/projekt/teltowkanalroute/"
         }
     },
     {
@@ -184,29 +154,24 @@
         "cost": "",
         "finished": "",
         "state": "discarted",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "RSV 7",
             "name": "Spandauer Damm \u2013 Freiheit",
             "from": "S-Bahnhof Westend",
             "to": "Altstadt Spandau",
             "description": "\"Der Trassenkorridor der Radschnellverbindung \"Spandauer Damm \u2013 Freiheit\" verl\u00e4uft s\u00fcdlich der Spree, vom S-Bahnhof Westend bis in die Spandauer Altstadt. Durch die Route sollen zahlreiche Wohnquartiere mit dem S-Bahn-Ring und dem Gewerbegebiet Ruhleben verbunden sowie Anschlussm\u00f6glichkeiten an die beiden Radfernwege Havel-Radweg und Spree-Rad- und Wanderweg geschaffen werden.\"",
-            "source": "https://www.infravelo.de/projekt/spandauer-damm-freiheit/",
-            "slug": ""
+            "source": "https://www.infravelo.de/projekt/spandauer-damm-freiheit/"
         },
         "stakeholders": [
             {
                 "name": "infraVelo",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.infravelo.de/projekt/spandauer-damm-freiheit/"
         }
     },
     {
@@ -214,29 +179,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "RSV 8",
             "name": "Nonnendammallee \u2013 Falkenseer Chaussee",
             "from": "Jakob-Kaiser-Platz, Charlottenburg",
             "to": "Altstadt Spandau",
             "description": "\"Der Trassenkorridor f\u00fcr die Radschnellverbindung \"Nonnendammallee \u2013 Falkenseer Chaussee\" f\u00fchrt durch die Bezirke Charlottenburg-Wilmersdorf und Spandau. Die Trasse beginnt am Jakob-Kaiser-Platz, im Norden von Charlottenburg. Von hier verl\u00e4uft sie n\u00f6rdlich des Spreeufers in Richtung Zitadelle Spandau und verkn\u00fcpft dabei zahlreiche Wohnquartiere sowie die Siemensstadt mit der Spandauer Altstadt. Nach Querung der Havel \u00fcber die Juliusturmbr\u00fccke geht es weiter \u00fcber den Falkenseer Damm bis zum Falkenhagener Feld an der Stadtgrenze. Ab hier schlie\u00dft sich der \"Radweg der Sympathie\" an, der bis nach Falkensee f\u00fchrt.\"",
-            "source": "https://www.infravelo.de/projekt/nonnendammallee-falkenseer-chaussee/",
-            "slug": ""
+            "source": "https://www.infravelo.de/projekt/nonnendammallee-falkenseer-chaussee/"
         },
         "stakeholders": [
             {
                 "name": "infraVelo",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.infravelo.de/projekt/nonnendammallee-falkenseer-chaussee/"
         }
     },
     {
@@ -244,29 +204,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "RSV 9",
             "name": "Ost-Route",
             "from": "Marzahn-Hellersdorf",
             "to": "S-Bahn Tiergarten",
             "description": "\"Die \"Ost-Route\" soll die \u00e4u\u00dferen Bezirke Marzahn-Hellersdorf und Lichtenberg mit Mitte verbinden. Der untersuchte Trassenkorridor verl\u00e4uft von Marzahn-Hellersdorf \u00fcber die Karl-Marx-Allee und den Alexanderplatz bis zum S-Bahnhof Tiergarten. Es sollen vor allem Wohn- und Arbeitsquartiere angebunden werden. Die \"West-Route\" ist die Verl\u00e4ngerung der \"Ost-Route\", die von Spandau bis nach Charlottenburg-Wilmersdorf f\u00fchrt. Die Gesamtstrecke der Ost- und West-Route umfasst knapp 38 Kilometer.\"",
-            "source": "https://www.infravelo.de/projekt/ost-route/",
-            "slug": ""
+            "source": "https://www.infravelo.de/projekt/ost-route/"
         },
         "stakeholders": [
             {
                 "name": "infraVelo",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.infravelo.de/projekt/ost-route/"
         }
     },
     {
@@ -274,29 +229,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "RSV 10",
             "name": "Reinickendorf-Route",
             "from": "Reinickendorf",
             "to": "Mitte",
             "description": "\"Der Trassenkorridor \"Reinickendorf-Route\" verbindet die Stadtteile Reinickendorf und Wedding mit dem k\u00fcnftigen Schumacher-Quartier sowie der Urban Tech Republic (UTR) auf dem Gel\u00e4nde des ehemaligen Flughafen Tegel. Ziel ist es, die Reinickendorf-Route mit der geplanten Radschnellverbindung \"Mitte - Tegel - Spandau\" zu verkn\u00fcpfen.\"",
-            "source": "https://www.infravelo.de/projekt/reinickendorf-route-1/",
-            "slug": ""
+            "source": "https://www.infravelo.de/projekt/reinickendorf-route-1/"
         },
         "stakeholders": [
             {
                 "name": "infraVelo",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.infravelo.de/projekt/reinickendorf-route-1/"
         }
     },
     {
@@ -304,29 +254,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "1",
             "name": "Elmshorn \u2013 Hamburg",
             "from": "Elmshorn",
             "to": "Hamburg",
             "description": "\"Der Radschnellweg soll von Elmshorn parallel zur Bahn \u00fcber Tornesch, \nPinneberg und Halstenbek nach Hamburg f\u00fchren. Dort soll er in den \nBezirken Altona und Eimsb\u00fcttel unter anderem an die Velorouten 2 und 14 \nanschlie\u00dfen. So verbindet er gr\u00f6\u00dfere St\u00e4dte und Gemeinden, zwischen \ndenen schon heute starke Pendelbeziehungen bestehen\".",
-            "source": "https://metropolregion.hamburg.de/radschnellwege/15310038/radschnellweg-elmshorn-hamburg/",
-            "slug": ""
+            "source": "https://metropolregion.hamburg.de/radschnellwege/15310038/radschnellweg-elmshorn-hamburg/"
         },
         "stakeholders": [
             {
                 "name": "Metropolregion Hamburg",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://metropolregion.hamburg.de/radschnellwege/15310038/radschnellweg-elmshorn-hamburg/"
         }
     },
     {
@@ -334,29 +279,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "2",
             "name": "Bad Bramstedt \u2013 Hamburg",
             "from": "Bad Bramstedt",
             "to": "Hamburg",
             "description": "\"Der Radschnellweg soll Bad Bramstedt, Kaltenkirchen, Henstedt-Ulzburg \nund Norderstedt\u00a0mit Hamburg verbinden und in der H\u00f6he von \nHamburg-Alsterdorf und Winterhude an\u00a0die\u00a0Velorouten 4 und 5a \nanschlie\u00dfen. Die Route ist eine der l\u00e4ngsten im Gesamtprojekt.\"",
-            "source": "https://metropolregion.hamburg.de/radschnellwege/15303660/radschnellweg-bad-bramstedt-hamburg/",
-            "slug": ""
+            "source": "https://metropolregion.hamburg.de/radschnellwege/15303660/radschnellweg-bad-bramstedt-hamburg/"
         },
         "stakeholders": [
             {
                 "name": "Metropolregion Hamburg",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://metropolregion.hamburg.de/radschnellwege/15303660/radschnellweg-bad-bramstedt-hamburg/"
         }
     },
     {
@@ -364,29 +304,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "3",
             "name": "Ahrensburg \u2013 Hamburg",
             "from": "Ahrensburg",
             "to": "Hamburg",
             "description": "\"Die Route soll Ahrensburg mit Hamburg-Wandsbek verbinden, wo sie in \nVolksdorf an die Veloroute 6 anschlie\u00dfen soll. Sie ist die k\u00fcrzeste der \nuntersuchten Verbindungen, hat aber aufgrund der starken \nPendlerbeziehungen zwischen Ahrensburg und Volksdorf Potenzial.\"",
-            "source": "https://metropolregion.hamburg.de/radschnellwege/15307136/radschnellweg-ahrensburg-hamburg/",
-            "slug": ""
+            "source": "https://metropolregion.hamburg.de/radschnellwege/15307136/radschnellweg-ahrensburg-hamburg/"
         },
         "stakeholders": [
             {
                 "name": "Metropolregion Hamburg",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://metropolregion.hamburg.de/radschnellwege/15307136/radschnellweg-ahrensburg-hamburg/"
         }
     },
     {
@@ -394,29 +329,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "4",
             "name": "Geesthacht \u2013 Hamburg",
             "from": "Geesthacht",
             "to": "Hamburg",
             "description": "\"Obwohl starke Pendlerbeziehungen nach Hamburg bestehen, gibt es keine \nSchienenverbindung nach Geesthacht und der \u00f6ffentliche Nahverkehr ist \nauf Busse angewiesen. Deshalb kann der Radschnellweg von Geesthacht nach\n Hamburg eine besondere Bedeutung entfalten\"",
-            "source": "https://metropolregion.hamburg.de/radschnellwege/15310118/radschnellweg-geesthacht-hamburg/",
-            "slug": ""
+            "source": "https://metropolregion.hamburg.de/radschnellwege/15310118/radschnellweg-geesthacht-hamburg/"
         },
         "stakeholders": [
             {
                 "name": "Metropolregion Hamburg",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://metropolregion.hamburg.de/radschnellwege/15310118/radschnellweg-geesthacht-hamburg/"
         }
     },
     {
@@ -424,29 +354,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "5",
             "name": "L\u00fcneburg \u2013 Hamburg",
             "from": "L\u00fcneburg",
             "to": "Hamburg",
             "description": "\"Dieser Radschnellweg soll von L\u00fcneburg \u00fcber Bardowick, Winsen (Luhe), \nStelle und Seevetal nach Harburg f\u00fchren. Von dort aus geht es \u00fcber die \nElbinsel Wilhelmsburg weiter in die Hamburger Innenstadt. Er soll an die\n Velorouten 10 und 11 anschlie\u00dfen.\"",
-            "source": "https://metropolregion.hamburg.de/radschnellwege/15310310/radschnellweg-lueneburg-hamburg/",
-            "slug": ""
+            "source": "https://metropolregion.hamburg.de/radschnellwege/15310310/radschnellweg-lueneburg-hamburg/"
         },
         "stakeholders": [
             {
                 "name": "Metropolregion Hamburg",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://metropolregion.hamburg.de/radschnellwege/15310310/radschnellweg-lueneburg-hamburg/"
         }
     },
     {
@@ -454,29 +379,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "6",
             "name": "Stade \u2013 Hamburg",
             "from": "Stade",
             "to": "Hamburg",
             "description": "\"Der Radschnellweg von Stade \u00fcber Neu Wulmstorf nach Hamburg soll den \nwestlichen und s\u00fcdwestlichen Bereich der Metropolregion Hamburg zwischen\n Stade, Harburg und Finkenwerder erschlie\u00dfen. Von Neugraben aus soll er \n\u00fcber die Veloroute 10 in das Zentrum von Harburg f\u00fchren. Dort wird er an\n den Radschnellweg aus Richtung L\u00fcneburg anschlie\u00dfen und weiter in \nRichtung Elbinsel und Hamburger Innenstadt f\u00fchren.\"",
-            "source": "https://metropolregion.hamburg.de/radschnellwege/15307278/radschnellweg-stade-hamburg/",
-            "slug": ""
+            "source": "https://metropolregion.hamburg.de/radschnellwege/15307278/radschnellweg-stade-hamburg/"
         },
         "stakeholders": [
             {
                 "name": "Metropolregion Hamburg",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://metropolregion.hamburg.de/radschnellwege/15307278/radschnellweg-stade-hamburg/"
         }
     },
     {
@@ -484,29 +404,24 @@
         "cost": "",
         "finished": "",
         "state": "idea",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "7",
             "name": "Tostedt \u2013 Hamburg",
             "from": "Toestedt",
             "to": "Hamburg",
             "description": "\"Der Radschnellweg von Tostedt soll \u00fcber Buchholz und Harburg nach Hamburg f\u00fchren. Auf einer L\u00e4nge von rund 32 km f\u00fchrt er im s\u00fcdlichen Abschnitt durch ein eher l\u00e4ndlich gepr\u00e4gtes Gebiet. Aber schon in Buchholz und in den Gemeinden Rosengarten und Seevetal gibt es starke Pendlerbeziehungen nach Hamburg.\"",
-            "source": "https://metropolregion.hamburg.de/radschnellwege/15307158/radschnellweg-tostedt-hamburg/",
-            "slug": ""
+            "source": "https://metropolregion.hamburg.de/radschnellwege/15307158/radschnellweg-tostedt-hamburg/"
         },
         "stakeholders": [
             {
                 "name": "Metropolregion Hamburg",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://metropolregion.hamburg.de/radschnellwege/15307158/radschnellweg-tostedt-hamburg/"
         }
     },
     {
@@ -514,29 +429,24 @@
         "cost": "",
         "finished": "",
         "state": "in_progress",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "FRM 1",
             "name": "Radschnellweg Frankfurt \u2013 Darmstadt",
             "from": "Frankfurt am Main",
             "to": "Darmstadt",
             "description": "\"Im Herbst 2015 hatte der Regionalverband eine \nMachbarkeitsstudie f\u00fcr eine Radschnellverbindung vom Holbeinsteg in \nFrankfurt am Main \u00fcber Neu-Isenburg, Dreieich, Langen, Egelsbach und \nErzhausen bis nach Darmstadt vorgelegt. Mit dem Regionalpark RheinMain \nS\u00fcdwest gGmbH gibt es einen engagieren K\u00fcmmerer, der die Umsetzung der \nMachbarkeitsstudie verfolgt. So konnte er bereits erste Bauabschnitte \nfertigstellen. Der Regionalverband ist in einer beratenden und \nunterst\u00fctzenden Rolle beteiligt. Das Vorhaben erh\u00e4lt eine F\u00f6rderung vom \nHessischen Ministerium f\u00fcr Wirtschaft, Energie, Verkehr und Wohnen.\nAm 6. Juni 2019 wurde das erste Teilst\u00fcck mit einer L\u00e4nge von 3,6 \nKilometern zwischen Egelsbach und dem Darmst\u00e4dter Stadtteil Wixhausen \noffiziell eingeweiht. Der zweite Bauabschnitt zwischen Egelsbach und \nLangen ist in der Umsetzung, der 3. Bauabschnitt im Bereich Dreieich ist\n aktuell in der Vorplanung. Die Abschnitte 4 und 5 folgen bis Ende 2023\".",
-            "source": "http://radschnellverbindung-ffm-da.de/kontakt",
-            "slug": ""
+            "source": "http://radschnellverbindung-ffm-da.de/kontakt"
         },
         "stakeholders": [
             {
                 "name": "Nahmobil Hessen",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "http://radschnellverbindung-ffm-da.de/"
         }
     },
     {
@@ -544,29 +454,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "FRM 2",
             "name": "Radschnellweg Gro\u00df-Gerau \u2013 Frankfurt",
             "from": "Gro\u00df-Gerau",
             "to": "Frankfurt am Main",
             "description": "\"2020 hat der Kreis Gro\u00df-Gerau eine Machbarkeitsstudie f\u00fcr die Pr\u00fcfung \nder drei Radschnellverbindungen Gro\u00df-Gerau \u2013 Frankfurt Flughafen, \nDarmstadt \u2013 R\u00fcsselsheim und Mainz \u2013 Kelsterbach beauftragt. Im September\n 2020 fand die erste B\u00fcrgerbeteiligung statt, die es B\u00fcrgerinnern und \nB\u00fcrgern erm\u00f6glichte, Wunschstrecken und wichtige Ziele zu benennen. Im \nMai 2021 fand die zweite Beteiligungsrunde statt, bei der die bisherige \nPlanung diskutiert und bewertet wurde. Die Ergebnisse der drei \nMachbarkeitsstudien wurden im Dezember 2021 ver\u00f6ffentlicht\".",
-            "source": "https://www.nahmobil-hessen.de/projektseite-radschnellverbindungen-in-hessen/",
-            "slug": ""
+            "source": "https://www.nahmobil-hessen.de/projektseite-radschnellverbindungen-in-hessen/"
         },
         "stakeholders": [
             {
                 "name": "Nahmobil Hessen",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.schneller-radfahren-kreisgg.de/"
         }
     },
     {
@@ -574,29 +479,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "FRM 3",
             "name": "Radschnellweg Wiesbaden \u2013 Frankfurt",
             "from": "Wiesbaden",
             "to": "Frankfurt am Main",
             "description": "\"Die Radschnellverbindung soll von Wiesbaden \u00fcber Hattersheim am Main,\n Kriftel und Hofheim am Taunus bis nach Frankfurt verlaufen.\n\nDas Land Hessen unterst\u00fctzt den Regionalverband FrankfurtRheinMain \nmit 49.000 Euro bei der Durchf\u00fchrung einer Machbarkeitsstudie zwischen \nder Landeshauptstadt und Frankfurt. Die Gesamtausgaben belaufen sich auf\n 100.000 Euro\".",
-            "source": "https://www.nahmobil-hessen.de/projektseite-radschnellverbindungen-in-hessen/",
-            "slug": ""
+            "source": "https://www.nahmobil-hessen.de/projektseite-radschnellverbindungen-in-hessen/"
         },
         "stakeholders": [
             {
                 "name": "Nahmobil Hessen",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/-Rennen-der-Radschnellwege/"
         }
     },
     {
@@ -604,29 +504,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "FRM 4",
             "name": "Radschnellweg Bad Soden \u2013 Eschborn",
             "from": "Gro\u00df-Gerau",
             "to": "Frankfurt am Main",
             "description": "\"Diese potenzielle Radschnellverbindung ist - wenn sie umgesetzt ist - \ndie k\u00fcrzeste von allen FRM-Strecken sein. Denn der FRM4 wird in Eschborn\n an die Radschnellverbindung FRM5 anschlie\u00dfen. So soll im Westen \nFrankfurts ein Radschnellwege-Netz entstehen. Startschuss f\u00fcr das \nProjekt war die Unterzeichnung des Kooperationsvertrags am 9. Juli 2020 \ndurch die Kommunen Bad Soden am Taunus, Eschborn, Schwalbach am Taunus, \nSulzbach (Taunus) und der Main-Taunus-Kreis.\n\nIIm M\u00e4rz 2021 ging \nals erster Schritt eine Machbarkeitsstudie in Auftrag. Ihr Ziel ist es, \neine geeignete Trasse zu identifizieren. Um fr\u00fchzeitig die Hinweise und \ndas Wissen der Menschen vor Ort in die Machbarkeitsstudie einflie\u00dfen zu \nlassen, fand von Anfang Oktober bis Mitte November 2021 eine \nOnline-Umfrage statt, an der sich zahlreiche B\u00fcrgerinnen und B\u00fcrger \nbeteiligten. Wir bedanken uns bei allen Teilnehmenden, die so einen \nwichtigen Beitrag f\u00fcr die weitere Planung geleistet haben\".                                                 ",
-            "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/",
-            "slug": ""
+            "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
         },
         "stakeholders": [
             {
                 "name": "Nahmobil Hessen",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
         }
     },
     {
@@ -634,29 +529,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "FRM 5",
             "name": "Radschnellweg Frankfurt - Vordertaunus",
             "from": "Frankfurt am Main",
             "to": "Friedrichsdorf",
             "description": "\"Zwischen den St\u00e4dten und Gemeinden Friedrichsdorf, Bad Homburg vor der \nH\u00f6he, Oberursel (Taunus), Steinbach (Taunus), Eschborn und Frankfurt am \nMain sind t\u00e4glich rund 45.000 Pendlerinnen und Pendler unterwegs. Ziel \ndes FRM5 ist es, mehr Menschen als bisher zum Umstieg aufs Rad zu \nmotivieren. Aus diesem Grund hatten sich die Kommunen \nzusammengeschlossen, um eine Machbarkeitsstudie in Auftrag zu geben. In \ndiesem Erstellungsprozess flossen die Anmerkungen und Erg\u00e4nzungen der \n\u00d6ffentlichkeit, Fachverb\u00e4nde und -institutionen mit ein. Im Dezember \n2020 wurde die Machbarkeitsstudie ver\u00f6ffentlicht. Die weitere Planung \nund den Bau des Radschnellwegs verantwortet federf\u00fchrend der \nRegionalverband\".",
-            "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/",
-            "slug": ""
+            "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
         },
         "stakeholders": [
             {
                 "name": "Nahmobil Hessen",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
         }
     },
     {
@@ -664,29 +554,24 @@
         "cost": "",
         "finished": "",
         "state": "idea",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "FRM 6",
             "name": "Radschnellweg Wetterau \u2013 Frankfurt",
             "from": "Gie\u00dfen",
             "to": "Frankfurt am Main",
             "description": "\"Dieser Radschnellweg in die Wetterau soll zuk\u00fcnftig acht Kommunen \nmiteinander verbinden. Das ist ein absoluter Rekord unter den \nFRM-Radschnellwegen. Hierf\u00fcr haben Bad Nauheim, Butzbach, Bad Vilbel, \nFrankfurt, Friedberg, Karben, W\u00f6llstadt und der Wetteraukreis am 15. \nJuni 2020 einen Kooperationsvertrag unterzeichnet.\nIm M\u00e4rz 2021 ging als erster Schritt eine Machbarkeitsstudie in Auftrag.\n Ihr Ziel ist es, eine geeignete Trasse zu identifizieren. Um fr\u00fchzeitig\n die Hinweise und das Wissen der Menschen vor Ort in die \nMachbarkeitsstudie einflie\u00dfen zu lassen, fand von Anfang Oktober bis \nMitte November 2021 eine Online-Umfrage statt, an der sich zahlreiche \nB\u00fcrgerinnen und B\u00fcrger beteiligten. Wir bedanken uns bei allen \nTeilnehmenden, die so einen wichtigen Beitrag f\u00fcr die weitere Planung \ngeleistet haben\".",
-            "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/",
-            "slug": ""
+            "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
         },
         "stakeholders": [
             {
                 "name": "Nahmobil Hessen",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
         }
     },
     {
@@ -694,29 +579,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "FRM 7",
             "name": "Radschnellweg Frankfurt \u2013 Hanau nordmainlisch",
             "from": "Frankfurt am Main",
             "to": "Hanau",
             "description": "\"Auf einer L\u00e4nge von 15 bis 20 Kilometern soll diese Radschnellverbindung\n die St\u00e4dte Frankfurt am Main, Maintal und Hanau auf nordmainischer \nSeite miteinander verbinden. Zu diesem Zweck hat die interkommunale \nArbeitsgruppe, bestehend aus dem Regionalverband und den drei Kommunen, \nim Februar 2016 eine Absichtserkl\u00e4rung unterschrieben, um eine \nMachbarkeitsstudie zu erstellen. Diese Studie wurde am 20. September \n2019 ver\u00f6ffentlicht. Anschlie\u00dfend \u00fcbernimmt der Regionalverband die \nAufgabe, das Vorhaben umzusetzen\".",
-            "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/",
-            "slug": ""
+            "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
         },
         "stakeholders": [
             {
                 "name": "Nahmobil Hessen",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
         }
     },
     {
@@ -724,29 +604,24 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "FRM 8",
             "name": "Radschnellweg Hanau \u2013 Frankfurt s\u00fcdmainlisch",
             "from": "Frankfurt am Main",
             "to": "Hanau",
             "description": "\"Am 3. M\u00e4rz 2020 haben die St\u00e4dte Frankfurt am Main, Hanau, M\u00fchlheim \nam Main und Offenbach am Main, der Kreis Offenbach und der \nRegionalverband eine Absichtserkl\u00e4rung f\u00fcr die Realisierung einer \nRadschnellverbindung unterzeichnet. F\u00fcr diese s\u00fcdmainische Verbindung \nzwischen Hanau und Frankfurt wurde das h\u00f6chste Radfahrpotenzial in ganz \nHessen ermittelt.\nIm Dezember 2020 gab der Regionalverband als ersten Schritt eine \nMachbarkeitsstudie in Auftrag. Deren Ziel ist es, eine geeignete Trasse \nzu ermitteln. Um fr\u00fchzeitig die Hinweise und das Wissen der Menschen vor\n Ort abzufragen und in die Erarbeitung der Machbarkeitsstudie zu \nintegrieren,\u00a0 fand von Ende M\u00e4rz bis zum 9. Mai 2021 eine Online-Umfrage\n statt, an der sich zahlreiche B\u00fcrgerinnen und B\u00fcrger beteiligten\". [...]\n\"Bei der Machbarkeitsstudie ist ein weiterer Meilenstein erreicht: Eine \nEntscheidung fiel f\u00fcr die Vorzugstrasse. F\u00fcr diese Trasse werden nun \naktuell geeignete Ma\u00dfnahmen entwickelt und mit den Tr\u00e4gern anderer \n\u00f6ffentlicher Planungen abgestimmt. Ziel ist es, den Ausbaustandard einer\n Radschnellverbindung zu erreichen\".",
-            "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/",
-            "slug": ""
+            "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
         },
         "stakeholders": [
             {
                 "name": "Nahmobil Hessen",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
         }
     },
     {
@@ -754,179 +629,274 @@
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
             "ref": "FRM 9",
             "name": "Radschnellweg Seligenstadt -Frankfurter Flughafen",
             "from": "Flughafen Frankfurt",
             "to": "Seligenstadt",
             "description": "\"Die Anbindung des Kreises Offenbach an den Frankfurter Flughafen ist \neines der zentralen Ziele dieser potenziellen Radschnellverbindung, die \nvon Seligenstadt \u00fcber Rodgau, Dietzenbach, Dreieich und Neu-Isenburg bis\n zum Flughafen verlaufen soll. Hierzu haben die genannten Kommunen, der \nKreis Offenbach und der Regionalverband am 20. Februar 2020 eine \nAbsichtserkl\u00e4rung unterzeichnet.\nIm Dezember 2020 gab der Regionalverband als ersten Schritt eine \nMachbarkeitsstudie in Auftrag. Deren Ziel ist es, eine geeignete Trasse \nzu ermitteln. Um fr\u00fchzeitig die Hinweise und das Wissen der Menschen \nVorort abzufragen und in die Erarbeitung der Machbarkeitsstudie zu \nintegrieren, fand von Ende M\u00e4rz bis zum 9. Mai 2021 eine Online-Umfrage \nstatt, an der sich zahlreiche B\u00fcrgerinnen und B\u00fcrger beteiligten. Wir \nbedanken uns bei allen Teilnehmenden, die so einen wichtigen Beitrag f\u00fcr\n die weitere Planung geleistet haben.\nAm 30. M\u00e4rz 2021 fand zudem eine Online-Informationsveranstaltung \nstatt. Hier wurden der Zweck, die Ziele und das Vorgehen der \nMachbarkeitsstudie erl\u00e4utert und Fragen der Teilnehmenden gekl\u00e4rt\".",
-            "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/",
-            "slug": ""
+            "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
         },
         "stakeholders": [
             {
                 "name": "Nahmobil Hessen",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
         }
     },
     {
-        "id": "hessen-1",
+        "id": "1-mecklenburg-vorpommern",
         "cost": "",
         "finished": "",
-        "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
+        "state": "",
         "general": {
-            "ref": "",
-            "name": "Radschnellweg Wiesbaden  \u2013 Kastel",
-            "from": "Wiesbaden Hauptbahnhof",
-            "to": "Mainz-Kastel",
-            "description": "Vom Hauptbahnhof soll eine Radschnellverbindung in den Wiesbadener Stadtteil Mainz-Kastel f\u00fchren. Zum Teil ist eine Trasse parallel der City-Bahn geplant, die ebenfalls komplett neu errichtet werden soll. Ab Kastel k\u00f6nnte die Oberzentrenverbindung \u00fcber den Rhein bis Mainz Stadtmitte fortgef\u00fchrt werden. Baubeginn eventuell ab 2021 bei drei bis vier Jahren Bauzeit.[24]",
-            "source": "",
-            "slug": ""
+            "ref": "1",
+            "name": "Radschnellweg Schwerin-Wismar",
+            "from": "Schwerin, Mecklenburg-Vorpommern",
+            "to": "Wismar, Mecklenburg-Vorpommern",
+            "description": "\"Die Region um Schwerin und Wismar unterscheidet sich deutlich von den anderen untersuchten Regionen. Hier wurde die einzige Verbindung in einem \u00fcberwiegend d\u00fcnn besiedelten l\u00e4ndlichen Raum gesucht. Damit konnte modellhaft gezeigt werden, wie ein Radschnellweg gebaut werden kann, der nur St\u00e4dte und Gemeinden verbindet, in denen weniger als 100.000 Menschen wohnen. Die Ergebnisse lassen sich auf zahlreiche \u00e4hnlich strukturierte R\u00e4ume in der Metropolregion Hamburg \u00fcbertragen.\"",
+            "source": "https://metropolregion.hamburg.de/radschnellwege/15307182/radschnellweg-schwerin-wismar/"
         },
         "stakeholders": [
             {
-                "name": "Nahmobil Hessen",
+                "name": "Metropolregion Hamburg",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://metropolregion.hamburg.de/radschnellwege/15307182/radschnellweg-schwerin-wismar/"
         }
     },
     {
-        "id": "hessen-2",
+        "id": "rs1-nordrhein-westfalen",
         "cost": "",
         "finished": "",
-        "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
+        "state": "in_progress",
         "general": {
-            "ref": "",
-            "name": "Radschnellweg Frankfurt \u2013 Gateway Gardens",
-            "from": "Frankfurt am Main",
-            "to": "Gateway Gardens",
-            "description": "Unter anderem im Rahmen eines F\u00f6rderprojekts zum Thema \u201eFahrradmobilit\u00e4t in gro\u00dfen Gewerbe- und Industriestandorten am Beispiel des Flughafens Frankfurt\u201c wird eine Radschnellverbindung von der Frankfurter Mitte zum Wirtschaftsstandort Gateway Gardens bzw. zum Flughafen geplant.[25] evtl. ist die Strecke im Projekt Gro\u00df-Gerau \u2013 Frankfurt aufgegangen. N\u00e4heres mit Stand 08-2019 nicht bekannt.",
-            "source": "",
-            "slug": ""
+            "ref": "RS1",
+            "name": "Radschnellweg Ruhr",
+            "from": "Duisburg",
+            "to": "Hamm",
+            "description": "\"Zwischen M\u00fclheim an der Ruhr und Essen ist das Radschnellweg-Feeling \nschon zu sp\u00fcren. Als Herzst\u00fcck des neuen Radschnellweges RS1 von \nDuisburg nach Hamm hat der Regionalverband Ruhr (RVR) bereits sechs \nKilometer als Modellstrecke er\u00f6ffnet. Und das ist erst der Anfang \u2013 der \nLandesbetrieb Stra\u00dfen.NRW wird als \u201eBaulasttr\u00e4ger\u201c die Bauarbeiten auf \nden restlichen 95 Kilometern vorantreiben.\"",
+            "source": "https://www.radschnellwege.nrw/rs1-radschnellweg-ruhr"
         },
         "stakeholders": [
             {
-                "name": "Nahmobil Hessen",
+                "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.radschnellwege.nrw/rs1-radschnellweg-ruhr"
         }
     },
     {
-        "id": "hessen-3",
+        "id": "rs7-nordrhein-westfalen",
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
-            "ref": "",
-            "name": "Raddirektroute Baunatal \u2013 Kassel",
-            "from": "Baunatal",
-            "to": "Kassel-Mitte",
-            "description": "Die Strecke soll das Mittelzentrum Baunatal f\u00fcr den Radverkehr besser an die Stadtmitte des Oberzentrums Kassel anschlie\u00dfen.[26]",
-            "source": "",
-            "slug": ""
+            "ref": "RS7",
+            "name": "Radschnellweg Mittleres Ruhrgebiet",
+            "from": "Bottrop",
+            "to": "Essen",
+            "description": "\"Der Radschnellweg Mittleres Ruhrgebiet kann zuk\u00fcnftig die St\u00e4dte Essen, \nBottrop und Gladbeck miteinander verbinden. Die rund 13 Kilometer lange \nStrecke soll eine schnellere und bessere Erreichbarkeit zwischen Nord \nund S\u00fcd im mittleren Ruhrgebiet per Rad schaffen, den Alltagsradverkehr \nim Revier weiter voranbringen und einen Beitrag zur Verbesserung der \nVerkehrssituation rund um die stark frequentierte B 224 leisten.\"",
+            "source": "https://www.radschnellwege.nrw/radschnellweg-mittleres-ruhrgebiet/"
         },
         "stakeholders": [
             {
-                "name": "Nahmobil Hessen",
+                "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.radschnellwege.nrw/radschnellweg-mittleres-ruhrgebiet/"
         }
     },
     {
-        "id": "hessen-4",
+        "id": "rs6-nordrhein-westfalen",
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
-            "ref": "",
-            "name": "Raddirektroute Vellmar \u2013 Kassel",
-            "from": "Vellmar",
-            "to": "Kassel-Mitte",
-            "description": "Die Strecke soll das Mittelzentrum Vellmar f\u00fcr Radpendler besser an die Mitte des Oberzentrums Kassel anschlie\u00dfen.[27]",
-            "source": "",
-            "slug": ""
+            "ref": "RS6",
+            "name": "Radschnellweg K\u00f6ln \u2013 Frechen",
+            "from": "K\u00f6ln",
+            "to": "Frechen",
+            "description": "\"Mit der Strecke K\u00f6ln \u2013 Frechen wird der erste Teil eines gr\u00f6\u00dferen \nRadschnellwegenetzes in der Region Rheinland umgesetzt. Die 8,4 km lange\n Strecke verbindet die Innenstadt von K\u00f6ln mit Frechen und erschlie\u00dft \ndabei wichtige Alltags- und Freizeitziele. Das gr\u00f6\u00dfte Ziel im Verlauf \ndes Radschnellweges ist die K\u00f6lner Universit\u00e4t, aber auch mehrere \nGewerbegebiete sowie der Innere und \u00e4u\u00dfere Gr\u00fcng\u00fcrtel und das \nRheinenergie-Stadion liegen im Verlauf.\"",
+            "source": "https://www.radschnellwege.nrw/radschnellweg-koeln-frechen/"
         },
         "stakeholders": [
             {
-                "name": "Nahmobil Hessen",
+                "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.radschnellwege.nrw/radschnellweg-koeln-frechen/"
         }
     },
     {
-        "id": "hessen-5",
+        "id": "rs3-nordrhein-westfalen",
         "cost": "",
         "finished": "",
         "state": "planning",
-        "planning_phase": "",
-        "detail_level": "",
         "general": {
-            "ref": "",
-            "name": "Raddirektroute Helsa \u2013 Kaufungen \u2013 Kassel",
-            "from": "Helsa",
-            "to": "Kassel-Mitte",
-            "description": "Die Strecke soll die \u00f6stlich des Oberzentrums Kassel gelegenen Umlandgemeinden f\u00fcr den Radverkehr optimaler an die Kasseler Stadtmitte anbinden.[28]",
-            "source": "",
-            "slug": ""
+            "ref": "RS3",
+            "name": "Radschnellweg OWL",
+            "from": "Herford",
+            "to": "Minden",
+            "description": "\"Rund 50 Kilometer non-stop von Herford nach Minden. Ohne Hindernisse, \nohne Absteigen, Schieben oder langes Warten vor der Ampel. Der RS3 \nRadschnellweg OWL verbindet die St\u00e4dte Herford, L\u00f6hne, Bad Oeynhausen, \nPorta Westfalica und Minden mit zusammen 276.000 Einwohnern. Die \nSt\u00e4dtekette zwischen Minden und Herford mit ihren vielen \nSiedlungsschwerpunkten und engen Pendlerbeziehungen bietet ausreichend \nPotenzial (1.500 bis 2.000 Radfahrten t\u00e4glich) f\u00fcr einen breiten \nRadschnellweg.\"",
+            "source": "https://www.radschnellwege.nrw/rs3-radschnellweg-owl/"
         },
         "stakeholders": [
             {
-                "name": "Nahmobil Hessen",
+                "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
                 "roles": [
                     "authority"
-                ],
-                "description": ""
+                ]
             }
         ],
         "references": {
-            "website": "",
-            "osm_relation": ""
+            "website": "https://www.radschnellwege.nrw/rs3-radschnellweg-owl/"
+        }
+    },
+    {
+        "id": "rs5-nordrhein-westfalen",
+        "cost": "",
+        "finished": "",
+        "state": "planning",
+        "general": {
+            "ref": "RS5",
+            "name": "Radschnellweg Neuss, D\u00fcsseldorf Langenfeld/Monheim",
+            "from": "Neuss",
+            "to": "Monheim",
+            "description": "\"Die Strecke von Neuss \u00fcber D\u00fcsseldorf bis nach Langenfeld und Monheim \nist der s\u00fcdliche Teil des Radschnellwegekonzeptes f\u00fcr die Region \nD\u00fcsseldorf. Der knapp 30 Kilometer lange Radschnellweg verbindet die \nZentren der St\u00e4dte miteinander und erschlie\u00dft dabei eine Vielzahl von \nwichtigen Alltags- und Freizeitzielen.\"",
+            "source": "https://www.radschnellwege.nrw/radschnellweg-neuss-duesseldorf-langenfeldmonheim/"
+        },
+        "stakeholders": [
+            {
+                "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
+                "roles": [
+                    "authority"
+                ]
+            }
+        ],
+        "references": {
+            "website": "https://www.radschnellwege.nrw/radschnellweg-neuss-duesseldorf-langenfeldmonheim/"
+        }
+    },
+    {
+        "id": "rs2-nordrhein-westfalen",
+        "cost": "",
+        "finished": "",
+        "state": "planning",
+        "general": {
+            "ref": "RS2",
+            "name": "Radschnellweg Westm\u00fcnsterland",
+            "from": "Isselburg",
+            "to": "Coesfeld",
+            "description": "\"Im Rahmen der Regionale 2016 \"Zukunftsland\" verfolgen die St\u00e4dte \nIsselburg, Bocholt, Rhede, Borken, Velen, Gescher und Coesfeld sowie die\n Kreise Borken und Coesfeld das Projekt \u201eRadschnellweg Westliches \nM\u00fcnsterland REGIO.VELO\u201c. Mit dem Radschnellweg REGIO.VELO soll eine \noptimale Infrastruktur f\u00fcr schnellen Radverkehr entstehen, die die Orte \nan der Strecke weitgehend kreuzungsfrei miteinander verbindet.\"",
+            "source": "https://www.radschnellwege.nrw/rs2-radschnellweg-westmuensterland/"
+        },
+        "stakeholders": [
+            {
+                "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
+                "roles": [
+                    "authority"
+                ]
+            }
+        ],
+        "references": {
+            "website": "https://www.radschnellwege.nrw/rs2-radschnellweg-westmuensterland/"
+        }
+    },
+    {
+        "id": "rs4-nordrhein-westfalen",
+        "cost": "",
+        "finished": "",
+        "state": "planning",
+        "general": {
+            "ref": "RS4",
+            "name": "Radschnellweg Euregio",
+            "from": "Herzogenrath",
+            "to": "Aachen",
+            "description": "\"Der Radschnellweg Euregio zeichnet sich dadurch aus, dass erstmalig von \nniederl\u00e4ndischen und deutschen Kommunen gemeinsam ein Radverkehrsprojekt\n entwickelt und umgesetzt werden soll. Die Trasse soll mit 19 Kilometern\n L\u00e4nge die Stadt Aachen als Oberzentrum mit den Mittelzentren \nHerzogenrath auf deutscher und Kerkrade auf niederl\u00e4ndischer Seite \nverbinden.\"",
+            "source": "https://www.radschnellwege.nrw/rs4-radschnellweg-euregio/"
+        },
+        "stakeholders": [
+            {
+                "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
+                "roles": [
+                    "authority"
+                ]
+            }
+        ],
+        "references": {
+            "website": "https://www.radschnellwege.nrw/rs4-radschnellweg-euregio/"
+        }
+    },
+    {
+        "id": "9-nordrhein-westfalen",
+        "cost": "",
+        "finished": "",
+        "state": "in_progress",
+        "general": {
+            "ref": "9",
+            "name": "Radschnellweg Monheim",
+            "from": "D\u00fcsseldorf",
+            "to": "Leverkusen",
+            "description": "\"Zwischen D\u00fcsseldorf und Leverkusen entsteht auf Monheimer Stadtgebiet ein 5,4 km langer Radschnellweg. Er schlie\u00dft im Norden direkt an den RS5 Neuss-D\u00fcsseldorf-Langenfeld an und stellt damit eine optimale Radverkehrsverbindung zu wichtigen Pendlerzielen im Gro\u00dfraum D\u00fcsseldorf her.\"",
+            "source": "https://www.radschnellwege.nrw/radschnellweg-monheim/"
+        },
+        "stakeholders": [
+            {
+                "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
+                "roles": [
+                    "authority"
+                ]
+            }
+        ],
+        "references": {
+            "website": "https://www.radschnellwege.nrw/radschnellweg-monheim/"
+        }
+    },
+    {
+        "id": "1-schleswig-holstein",
+        "cost": "",
+        "finished": "",
+        "state": "planning",
+        "general": {
+            "ref": "1",
+            "name": "Radschnellweg Bad Schwartau  \u2013 L\u00fcbeck-Mitte  \u2013 Universit\u00e4t",
+            "from": "Bad Schwartau, Schleswig-Holstein",
+            "to": "Universit\u00e4t L\u00fcbeck, Schleswig-Holstein",
+            "description": "\"In der Hansestadt L\u00fcbeck und ihrem Umland kann ein Radschnellweg gro\u00dfe Wirkung entfalten. Zum einen ist das Gebiet dicht besiedelt, zum anderen liegen hier bedeutsame Ziele wie die L\u00fcbecker Altstadt, der Hauptbahnhof, das Universit\u00e4tsklinikum Schleswig-Holstein (UKSH) und das Hochschulviertel.\"",
+            "source": "https://metropolregion.hamburg.de/radschnellwege/15307314/radschnellweg-luebeck/"
+        },
+        "stakeholders": [
+            {
+                "name": "Metropolregion Hamburg",
+                "roles": [
+                    "authority"
+                ]
+            }
+        ],
+        "references": {
+            "website": "https://metropolregion.hamburg.de/radschnellwege/15307314/radschnellweg-luebeck/"
         }
     }
 ]

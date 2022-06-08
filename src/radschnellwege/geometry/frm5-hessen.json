@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "name": "frm5-hessen2",
+  "name": "frm5-hessen",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
