@@ -57,8 +57,8 @@ export const query = graphql`
         from
         name
         ref
-        slug
         to
+        source
       }
       references {
         website

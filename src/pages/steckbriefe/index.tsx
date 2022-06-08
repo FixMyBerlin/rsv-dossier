@@ -107,13 +107,12 @@ export const query = graphql`
           to
           from
           name
-          slug
           description
         }
         jsonId
         staticMap {
           childImageSharp {
-            gatsbyImageData(height: 250)
+            gatsbyImageData
           }
         }
       }
