@@ -12,8 +12,8 @@ type Props = {
 
 export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
   return (
-    <div className="relative max-h-[1080px] bg-white lg:min-h-[calc(100vh-theme(space.24)-1rem)]">
-      <div className="flex h-80 max-h-[1080px] max-w-[1920px] overflow-hidden shadow-xl lg:absolute lg:left-0 lg:h-full lg:w-1/2 lg:rounded-br-2xl">
+    <div className="relative max-h-[1080px] bg-white lg:min-h-[calc(100vh-theme(space.24))]">
+      <div className="flex h-80 max-h-[1080px] max-w-[1920px] overflow-hidden lg:absolute lg:left-0 lg:h-full lg:w-1/2">
         <RSVMap meta={meta} geometry={geometry} />
       </div>
       <div className="mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
