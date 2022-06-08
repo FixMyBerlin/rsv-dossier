@@ -20,29 +20,31 @@ export const Navigation = ({ location }) => {
     >
       {({ open }) => (
         <>
-          <div className="flex h-24 justify-between py-2">
-            <nav className="flex w-full items-center justify-between px-12">
-              <div className="flex flex-shrink-0 items-center">
-                {!isHome(location) && (
-                  <Link to="/">
-                    <Logo />
-                  </Link>
-                )}
-                {isHome(location) && <Logo />}
-              </div>
-              <div className="hidden md:flex md:space-x-10">
-                {navigationLinks.map((link) => (
-                  <NavigationMenuItemDesktop
-                    name={link.name}
-                    to={link.to}
-                    currentPage={location?.pathname}
-                    key={link.to}
-                  />
-                ))}
-              </div>
-            </nav>
+          <div className="px-12">
+            <div className="flex h-24 justify-between py-2">
+              <nav className="flex w-full items-center justify-between">
+                <div className="flex flex-shrink-0 items-center">
+                  {!isHome(location) && (
+                    <Link to="/">
+                      <Logo />
+                    </Link>
+                  )}
+                  {isHome(location) && <Logo />}
+                </div>
+                <div className="hidden md:flex md:space-x-10">
+                  {navigationLinks.map((link) => (
+                    <NavigationMenuItemDesktop
+                      name={link.name}
+                      to={link.to}
+                      currentPage={location?.pathname}
+                      key={link.to}
+                    />
+                  ))}
+                </div>
+              </nav>
 
-            <NavigationMobileMenuButton open={open} />
+              <NavigationMobileMenuButton open={open} />
+            </div>
           </div>
 
           <Disclosure.Panel className="sm:hidden">
