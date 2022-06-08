@@ -20,6 +20,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-json',
     'gatsby-transformer-sharp',
+    `gatsby-plugin-react-helmet`,
     {
       resolve: '@sentry/gatsby',
     },

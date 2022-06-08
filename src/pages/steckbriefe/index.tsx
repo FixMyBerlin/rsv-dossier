@@ -18,7 +18,7 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
   return (
     <Layout>
       <HelmetSeo
-        title="Radschnellverbindungen"
+        title="Steckbriefe"
         description="Die einzelnen Radschnellverbindungen in den verschiedenen Bundesländern in Deutschland."
       />
       <div className="bg-white">
