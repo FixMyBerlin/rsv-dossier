@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@googlemaps/polyline-codec": "1.0.25",
+    "@fontsource/overpass": "4.5.8",
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
     "@sentry/gatsby": "6.19.6",
