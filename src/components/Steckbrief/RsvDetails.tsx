@@ -1,5 +1,6 @@
 import React from 'react';
 import { ButtonLink } from '~/components/Links/ButtonLink';
+import { ExternalLink } from '~/components/Links';
 import { RSVMap } from '~/components/Map';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { RsvProgressBar } from '~/components/Steckbrief';
@@ -27,16 +28,16 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
           <h2 className="mt-6 text-lg font-bold text-gray-900 sm:text-xl">
             Kurzfassung
           </h2>
-          <p className="text-lg text-gray-500">{meta.general.description}</p>
+          <p className="text-lg text-gray-500">
+            {meta.general.description} Quelle:&nbsp;
+            <ExternalLink href={meta.general.source}>
+              {new URL(meta.general.source).hostname}
+            </ExternalLink>
+          </p>
           {meta.references.website && (
-            <div className="mt-4 rounded-full">
-              <ButtonLink
-                to={meta.references.website}
-                className="btn-brand-outline px-8 py-3 shadow md:text-lg"
-              >
-                Projektwebsite
-              </ButtonLink>
-            </div>
+            <ButtonLink to={meta.references.website} className="mt-6">
+              Projektwebsite
+            </ButtonLink>
           )}
           <h2 className="mt-6 text-lg font-bold text-gray-900 sm:text-xl">
             Trassenführung
