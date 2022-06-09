@@ -35,7 +35,7 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
             </ExternalLink>
           </p>
           {meta.references.website && (
-            <ButtonLink to={meta.references.website} className="mt-6">
+            <ButtonLink newWindow to={meta.references.website} className="mt-6">
               Projektwebsite
             </ButtonLink>
           )}
