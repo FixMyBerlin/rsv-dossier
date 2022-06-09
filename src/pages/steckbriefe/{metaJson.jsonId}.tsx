@@ -59,6 +59,7 @@ export const query = graphql`
         ref
         to
         source
+        length
       }
       references {
         website
