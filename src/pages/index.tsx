@@ -5,7 +5,7 @@ import { Hero } from '~/components/Layout/Hero/Hero';
 import { Layout } from '~/components/Layout/Layout';
 import { TextWithImage } from '~/components/Layout/ContentSection';
 import { StaticImage } from 'gatsby-plugin-image';
-import { MailToButtonLink } from '~/components/Links';
+import { ButtonLink, MailToButtonLink } from '~/components/Links';
 import { Heading2 } from '~/components/Text';
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
@@ -71,6 +71,11 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Korridoren verbunden werden könnten. Zielsetzung von Bund und
             Ländern ist ein lückenloses Radnetz in Deutschland zu schaffen.
             Radschnellverbindungen sind dafür elementar.
+            <p className="pt-6">
+              <ButtonLink to="steckbriefe">
+                Hier geht es zu den Steckbriefen
+              </ButtonLink>
+            </p>
           </p>
           <p>
             <Heading2>Hintergründe und Grundlagen</Heading2>
