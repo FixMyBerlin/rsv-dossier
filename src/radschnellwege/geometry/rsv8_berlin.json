@@ -13,7 +13,7 @@
         "id": "1",
         "variant": "Derzeitige Vorzugsvariante",
         "id_rsv": "RSV 8",
-        "state": "agreed",
+        "state": "agreement_process",
         "detail_level": "rough",
         "length": "25755.027854096166",
         "discarted": null,

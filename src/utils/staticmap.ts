@@ -5,10 +5,11 @@ const { GATSBY_MAPTILER_BASEURL, GATSBY_MAPTILER_KEY } = process.env;
 // TODO: source from .const to stay consistent with ~/components/Map/DynamicMap.tsx
 const stateColor = {
   idea: '#A7F3D0',
-  agreed: '#6EE7B7',
+  agreement_process: '#6EE7B7',
   planning: '#10B981',
   in_progress: '#047857',
   done: '#064E3B',
+  discarted: '#000000',
 };
 
 const buildPaths = ({
