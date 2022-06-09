@@ -73,7 +73,7 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
                       {radschnellweg.general.from} &rarr;&nbsp;
                       {radschnellweg.general.to}
                     </h3>
-                    <p className="mt-4 text-base text-slate-500">
+                    <p className="mt-4 text-base text-slate-500 line-clamp-3 md:line-clamp-5">
                       {radschnellweg.general.description}
                     </p>
                   </div>
