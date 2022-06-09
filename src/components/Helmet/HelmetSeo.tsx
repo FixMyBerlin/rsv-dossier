@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import SocialSharingImage from './assets/social-sharing-default.png';
+import { domain } from '~/utils';
 
 // FYI, https://www.gatsbyjs.com/docs/add-seo-component/ suggest to use useStaticQuery but I don't see why, yet
 const seoDefaultValues = {
@@ -25,12 +25,12 @@ export const HelmetSeo: React.FC<SeoProps> = ({
   image,
   article,
 }) => {
-  const { defaultTitle, defaultDescription, baseUrl } = seoDefaultValues;
+  const { defaultTitle, defaultDescription } = seoDefaultValues;
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${baseUrl}${image || SocialSharingImage}`,
+    image: image || `${domain() || ''}/social-sharing/default.png`,
   };
 
   if (noindex === true) {
