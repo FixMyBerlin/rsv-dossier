@@ -1,4 +1,4 @@
-import { PageProps, graphql } from 'gatsby';
+import { PageProps, graphql, Link } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
@@ -63,10 +63,12 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
                   className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-xl"
                 >
                   <div className="flex max-h-60 overflow-hidden">
-                    <GatsbyImage
-                      image={getImage(radschnellweg.staticMap)}
-                      alt="Thumbnail-Karte"
-                    />
+                    <Link to={`./${radschnellweg.jsonId}`}>
+                      <GatsbyImage
+                        image={getImage(radschnellweg.staticMap)}
+                        alt="Thumbnail-Karte"
+                      />
+                    </Link>
                   </div>
                   <div className="relative flex-1 px-6 pt-12 pb-8 md:px-8">
                     <h3 className="text-xl font-medium text-slate-900">
