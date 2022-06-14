@@ -129,7 +129,7 @@
       "properties": {
         "id": "1",
         "detail_level": null,
-        "state": null,
+        "state": "agreed",
         "id_rsv": "RS9",
         "planning_phase": null,
         "variant": "Alternative Vorzugstrasse",

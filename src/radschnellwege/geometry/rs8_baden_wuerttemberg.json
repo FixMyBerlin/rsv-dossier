@@ -102,7 +102,7 @@
       "properties": {
         "id": "4",
         "detail_level": "rough",
-        "state": null,
+        "state": "planning",
         "id_rsv": "RS8",
         "planning_phase": null,
         "variant": "Trasse 2 Vorzugstrasse",
@@ -183,7 +183,7 @@
       "properties": {
         "id": "3",
         "detail_level": "rough",
-        "state": null,
+        "state": "planning",
         "id_rsv": "RS8",
         "planning_phase": null,
         "variant": "Trasse 3",
@@ -287,7 +287,7 @@
       "properties": {
         "id": "2",
         "detail_level": null,
-        "state": null,
+        "state": "planning",
         "id_rsv": "RS8",
         "planning_phase": null,
         "variant": "Trasse 2 Alternativen",
@@ -379,7 +379,7 @@
       "properties": {
         "id": "5",
         "detail_level": null,
-        "state": null,
+        "state": "planning",
         "id_rsv": "RS8",
         "planning_phase": null,
         "variant": "Trasse 1 Varianten",
