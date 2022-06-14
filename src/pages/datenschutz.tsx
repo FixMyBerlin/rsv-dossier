@@ -13,7 +13,7 @@ const DatenschutzPage = () => {
         title="Datenschutz"
         description="Informationen über die Handhabung Ihrer Daten und rechtliche Hinweise zur Datenverarbeitung."
       />
-      <h1>Datenschutzerklärung</h1>
+      <h1>Datenschutz&shy;erklärung</h1>
       <h2 id="m14">Einleitung</h2>
       <p>
         Mit der folgenden Datenschutzerklärung möchten wir Sie darüber
