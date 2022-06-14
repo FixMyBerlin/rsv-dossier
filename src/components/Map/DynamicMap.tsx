@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
 import Map from 'react-map-gl';
-import maplibregl, { LngLatBoundsLike } from 'maplibre-gl';
+import maplibregl from 'maplibre-gl';
+import { transformScale, bboxPolygon, bbox, square } from '@turf/turf';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { RSVSegment, RSVPopup } from '.';
 
 type Props = {
   geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString>;
 };
-
-// (slightly extended)
-const bboxGermany: LngLatBoundsLike = [
-  4.98865807458, 47.3024876979, 16.0169958839, 54.983104153,
-];
+type BBox2d = [number, number, number, number];
 
 // somehow can't use object destructuring here
 /* eslint-disable prefer-destructuring */
@@ -19,6 +16,9 @@ const GATSBY_MAPTILER_BASEURL = process.env.GATSBY_MAPTILER_BASEURL;
 const GATSBY_MAPTILER_KEY = process.env.GATSBY_MAPTILER_KEY;
 
 export const DynamicMap: React.FC<Props> = ({ geometry }) => {
+  const bboxView = bbox(
+    transformScale(bboxPolygon(square(geometry.bbox)), 6)
+  ) as BBox2d;
   const [info] = useState({
     lng: 0,
     lat: 0,
@@ -36,14 +36,14 @@ export const DynamicMap: React.FC<Props> = ({ geometry }) => {
   return (
     <Map
       initialViewState={{
-        bounds: geometry.bbox as [number, number, number, number],
+        bounds: geometry.bbox as BBox2d,
         fitBoundsOptions: {
           padding: 20,
         },
       }}
       mapLib={maplibregl}
       mapStyle={`${GATSBY_MAPTILER_BASEURL}/style.json?key=${GATSBY_MAPTILER_KEY}`}
-      maxBounds={bboxGermany}
+      maxBounds={bboxView}
       attributionControl={false}
       interactiveLayerIds={geometry.features.map(
         ({ properties }) => properties.id
