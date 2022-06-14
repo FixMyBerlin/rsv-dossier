@@ -1,0 +1,48 @@
+{
+  "type": "FeatureCollection",
+  "name": "rs12-baden-wuerttemberg",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "bbox": [7.929935, 48.403263, 8.010766, 48.479151],
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1",
+        "detail_level": "rough",
+        "state": "planning",
+        "id_rsv": "RS12",
+        "planning_phase": null,
+        "variant": null,
+        "discarted": null,
+        "stand": null,
+        "length": "11184.982",
+        "description:planning_phase": null
+      },
+      "bbox": [7.929935, 48.403263, 8.010766, 48.479151],
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [7.929935, 48.479151],
+            [7.934677, 48.467011],
+            [7.942266, 48.45192],
+            [7.943821, 48.449545],
+            [7.947044, 48.448046],
+            [7.947668, 48.449011],
+            [7.949056, 48.44887],
+            [7.95364, 48.44942],
+            [7.958304, 48.448524],
+            [7.961534, 48.44653],
+            [7.971038, 48.432774],
+            [7.97679, 48.425972],
+            [8.008144, 48.403263],
+            [8.010766, 48.403986]
+          ]
+        ]
+      }
+    }
+  ]
+}

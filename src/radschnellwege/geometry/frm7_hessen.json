@@ -14,11 +14,13 @@
       "properties": {
         "id": "2",
         "id_rsv": "frm7-hessen",
-        "state": "planning",
-        "planning_phase": "pilot study",
-        "detail_level": "rough",
-        "variants": "Vorzugstrasse",
-        "length": "16824.35809542094"
+        "state": "agreement_process",
+        "planning_phase": "",
+        "detail_level": "approximated",
+        "variant": "Vorzugstrasse",
+        "length": "16824.35809542094",
+        "discarted": "false",
+        "description:planning_phase": null
       },
       "bbox": [
         8.707854695855051, 50.113156995699896, 8.910139586072312,
@@ -82,11 +84,13 @@
       "properties": {
         "id": "1",
         "id_rsv": "frm7-hessen",
-        "state": "planning",
-        "planning_phase": "pilot study",
-        "detail_level": "rough",
-        "variants": "Alternativetrasse",
-        "length": "7678.76101147117"
+        "state": "agreement_process",
+        "planning_phase": "",
+        "detail_level": "approximated",
+        "variant": "Alternativetrasse",
+        "length": "7678.76101147117",
+        "discarted": "false",
+        "description:planning_phase": null
       },
       "bbox": [
         8.717210282500311, 50.118117803862191, 8.876440150403491,

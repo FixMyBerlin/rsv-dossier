@@ -30,7 +30,7 @@ exports.onCreateNode = async ({
   store,
 }) => {
   if (node.internal.type === 'GeometryJson') {
-    const url = staticMapRequest(node, [1600, 1600]);
+    const url = staticMapRequest(node, [1920, 1920]);
     // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
     const arrBuffer = await fetch(url.toString()).then((response) =>
       response.arrayBuffer()

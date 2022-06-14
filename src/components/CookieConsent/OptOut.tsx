@@ -25,16 +25,15 @@ export const OptOut: React.FC = () => {
           </ExternalLink>{' '}
           und diese Datenschutzerklärung abgelehnt. Hier können Sie zustimmen.
         </p>
-        <button
-          type="button"
-          className="btn-brand-outline px-8 py-3 shadow md:text-lg"
+        <Button
+          outline
           onClick={() => {
             setConsent(true);
             setOptInCookie(true);
           }}
         >
           Ja, ich stimme zu
-        </button>
+        </Button>
       </div>
     );
   }

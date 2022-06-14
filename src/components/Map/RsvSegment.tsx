@@ -4,10 +4,11 @@ import { Source, Layer } from 'react-map-gl';
 
 const stateColor = {
   idea: '#A7F3D0',
-  agreed: '#6EE7B7',
+  agreement_process: '#6EE7B7',
   planning: '#10B981',
   in_progress: '#047857',
   done: '#064E3B',
+  discarted: '#000000',
 };
 
 const selectedColor = '#475569';
