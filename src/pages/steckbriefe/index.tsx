@@ -80,7 +80,7 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
                   </div>
                   <div className="p-6 md:px-8">
                     <TextLink to={`./${radschnellweg.jsonId}`}>
-                      Mehr erfahren<span aria-hidden="true"> &rarr;</span>
+                      Mehr erfahren
                     </TextLink>
                   </div>
                 </div>
