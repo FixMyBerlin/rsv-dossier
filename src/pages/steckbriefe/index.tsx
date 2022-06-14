@@ -4,7 +4,7 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MetaJson, StaticMap } from '~/types/index';
-import { TextLink } from '~/components/Links';
+import { ButtonLink, MailToButtonLink, TextLink } from '~/components/Links';
 
 type GraphQLMeta = {
   jsonId: string;
@@ -42,7 +42,21 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
             </h1>
             <p className="mt-6 max-w-3xl text-xl text-slate-300">
               Übersicht der aktuell geplanten Radschnellverbindungen sowie deren
-              Trassenverläufe bzw. -korridore.
+              Trassenverläufe bzw. -korridore. Enthalten sind RSV aus Hessen,
+              Baden-Württemberg, Berlin, Niedersachsen, Schleswig-Holstein,
+              Mecklenburg-Vorpommern, Nordrhein-Westfalen und Hamburg. Die Liste
+              wird fortlaufend erweitert.
+              <p>
+                Mail an{' '}
+                <MailToButtonLink
+                  mailto="hello@fixmycity.de"
+                  subject="Anliegen zum RSV-Baukasten"
+                  className="btn-brand-outline mt-5"
+                >
+                  hello@fixmycity.de
+                </MailToButtonLink>{' '}
+                schreiben
+              </p>
             </p>
           </div>
         </div>
