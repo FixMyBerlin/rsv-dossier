@@ -18,7 +18,7 @@ const Radschnellweg: React.FC<Props> = ({ data: { meta, geometry } }) => {
       <HelmetSeo
         title={meta.general.name}
         description={meta.general.description}
-        image="TODO"
+        image={meta.staticMap.publicURL}
       />
       <RSVDetails meta={meta} geometry={geometry} />
     </Layout>
@@ -68,6 +68,7 @@ export const query = graphql`
       cost
       state
       staticMap {
+        publicURL
         childImageSharp {
           gatsbyImageData
         }
