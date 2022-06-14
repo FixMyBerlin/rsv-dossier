@@ -38,12 +38,11 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
           </div>
           <div className="relative mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-              Bundesweit
+              Übersicht über RSV-Planungen
             </h1>
             <p className="mt-6 max-w-3xl text-xl text-slate-300">
-              Eine Übersicht aller Radschnellverbindngen bundesweit. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Dolore molestiae hic
-              nesciunt ab odio magnam itaque aperiam quo est modi dignissimos.
+              Übersicht der aktuell geplanten Radschnellverbindungen sowie deren
+              Trassenverläufe bzw. -korridore.
             </p>
           </div>
         </div>
