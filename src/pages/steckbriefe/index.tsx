@@ -4,7 +4,7 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MetaJson, StaticMap } from '~/types/index';
-import { TextLink } from '~/components/Links';
+import { MailToButtonLink, TextLink } from '~/components/Links';
 
 type GraphQLMeta = {
   jsonId: string;
@@ -38,12 +38,25 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
           </div>
           <div className="relative mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-              Bundesweit
+              Übersicht über RSV-Planungen
             </h1>
             <p className="mt-6 max-w-3xl text-xl text-slate-300">
-              Eine Übersicht aller Radschnellverbindngen bundesweit. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Dolore molestiae hic
-              nesciunt ab odio magnam itaque aperiam quo est modi dignissimos.
+              Übersicht der aktuell geplanten Radschnellverbindungen sowie deren
+              Trassenverläufe bzw. -korridore. Enthalten sind RSV aus Hessen,
+              Baden-Württemberg, Berlin, Niedersachsen, Schleswig-Holstein,
+              Mecklenburg-Vorpommern, Nordrhein-Westfalen, Rheinland-Pfalz und
+              Hamburg. Die Liste wird fortlaufend erweitert.
+              <p>
+                Mail an{' '}
+                <MailToButtonLink
+                  mailto="hello@fixmycity.de"
+                  subject="Anliegen zum RSV-Baukasten"
+                  className="btn-brand-outline mt-5"
+                >
+                  hello@fixmycity.de
+                </MailToButtonLink>{' '}
+                schreiben
+              </p>
             </p>
           </div>
         </div>

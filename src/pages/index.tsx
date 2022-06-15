@@ -63,14 +63,15 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             <Heading2>
               Steckbriefe aller deutschen Radschnellverbindungen
             </Heading2>
-            In unseren Steckbriefen aller Radschnellverbindungen (in Arbeit)
-            finden Sie eine systematische Übersicht aller aktuell geplanten
+            In unseren Steckbriefen aller Radschnellverbindungen finden Sie eine
+            systematische Übersicht aller aktuell geplanten
             Radschnellverbindungen sowie deren Trassenverläufe bzw. -korridore.
             Sie erhalten so einen Überblick welche Städte und Gemeinden durch
             Radschnellverbindungen miteinander verbunden werden oder in
             Korridoren verbunden werden könnten. Zielsetzung von Bund und
             Ländern ist ein lückenloses Radnetz in Deutschland zu schaffen.
             Radschnellverbindungen sind dafür elementar.
+            <br />
             <TextLink to="steckbriefe">
               {' '}
               Hier geht es zu den Steckbriefen &rarr;
