@@ -4,6 +4,8 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { RSVDetails } from '~/components/Steckbrief/';
 import { MetaJson, StaticMap } from '~/types/index';
+import { join } from 'path';
+import { domain } from '~/utils';
 
 type Props = {
   data: {
@@ -18,7 +20,7 @@ const Radschnellweg: React.FC<Props> = ({ data: { meta, geometry } }) => {
       <HelmetSeo
         title={meta.general.name}
         description={meta.general.description}
-        image={meta.staticMap.publicURL}
+        image={join(domain(), meta.staticMap.publicURL)}
       />
       <RSVDetails meta={meta} geometry={geometry} />
     </Layout>
