@@ -12,7 +12,7 @@ export const TextLink: React.FC<Props> = ({
 }) => {
   const styles = classNames(
     className,
-    'text-emerald-500 hover:text-emerald-600 hover:underline active:underline'
+    'text-emerald-700 hover:text-emerald-800 hover:underline active:underline'
   );
 
   if (newWindow) {

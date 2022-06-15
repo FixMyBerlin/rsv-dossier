@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
-import { Footer, Navigation } from '.';
+import { Footer } from './Footer';
+import { Navigation } from './Navigation';
 
 type Props = {
   className?: string;
@@ -19,12 +20,12 @@ export const Layout: React.FC<Props> = ({
     <div className="flex h-full flex-col">
       {navigation && <Navigation location={location} />}
       {navigation && (
-        <main className={classNames(className, 'z-0 mb-5 flex-grow bg-white')}>
+        <main className={classNames(className, 'z-0 flex-grow bg-white')}>
           {children}
         </main>
       )}
       {!navigation && (
-        <main className={classNames(className, 'z-0 mb-5 flex-grow bg-white')}>
+        <main className={classNames(className, 'z-0 flex-grow bg-white')}>
           {children}
         </main>
       )}

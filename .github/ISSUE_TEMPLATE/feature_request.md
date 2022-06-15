@@ -1,17 +1,15 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Suggest a new feature or an idea for this project
 title: ''
 labels: ''
-assignees: '@ohrie'
 ---
 
-**What's the problem you want solved?**
+## The Problem
 
-**Is there a solution you'd like to recommend?**
+## Proposed Solution
 
-**Integration ToDos**
-
-- [ ] Step 1
-- [ ] Step 2
-- [ ] Step 3
+## Tasks
+- [ ]
+- [ ]
+- [ ]

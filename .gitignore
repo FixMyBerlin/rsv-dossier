@@ -14,9 +14,16 @@ public/
 
 # misc
 .DS_Store
+
+# environments
+.env*
+!.env.defaults
 .env\*
 
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log\*
+
+# Local Netlify folder
+.netlify

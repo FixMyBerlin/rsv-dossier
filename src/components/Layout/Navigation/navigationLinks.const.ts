@@ -1,11 +1,9 @@
 export type navigationMenuItemProps = { name: string; to: string };
 
 export const navigationLinks: navigationMenuItemProps[] = [
-  // { name: 'Karte', to: '/karte/' },
-  // { name: 'Projekte', to: '/radschnellwege/' },
-  // {
-  //   name: 'Förderübersicht',
-  //   to: '/foerderungen/',
-  // },
-  // { name: 'Hintergrund', to: '/projekt-hintergrund/' },
+  { name: 'Steckbriefe', to: '/steckbriefe/' },
+  {
+    name: 'Feedback geben',
+    to: 'mailto:feedback@fixmycity.de?subject=Feedback Radschnellverbindungen',
+  },
 ];
