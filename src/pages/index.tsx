@@ -71,9 +71,10 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Korridoren verbunden werden könnten. Zielsetzung von Bund und
             Ländern ist ein lückenloses Radnetz in Deutschland zu schaffen.
             Radschnellverbindungen sind dafür elementar.
-            <p className="pt-6">
-              <ButtonLink to="steckbriefe">Zu den Steckbriefen</ButtonLink>
-            </p>
+            <TextLink to="steckbriefe">
+              {' '}
+              Hier geht es zu den Steckbriefen &rarr;
+            </TextLink>
           </p>
           <p>
             <Heading2>Hintergründe und Grundlagen</Heading2>
