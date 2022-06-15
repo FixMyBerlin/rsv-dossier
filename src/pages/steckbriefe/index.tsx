@@ -1,4 +1,4 @@
-import { PageProps, graphql } from 'gatsby';
+import { PageProps, graphql, Link } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
@@ -75,16 +75,17 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
                   key={radschnellweg.general.name}
                   className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-xl"
                 >
-                  <div className="flex max-h-60 overflow-hidden">
-                    <GatsbyImage
-                      image={getImage(radschnellweg.staticMap)}
-                      alt="Thumbnail-Karte"
-                    />
+                  <div className="flex max-h-fit overflow-hidden">
+                    <Link to={`./${radschnellweg.jsonId}`}>
+                      <GatsbyImage
+                        image={getImage(radschnellweg.staticMap)}
+                        alt={radschnellweg.general.name}
+                      />
+                    </Link>
                   </div>
                   <div className="relative flex-1 px-6 pt-12 pb-8 md:px-8">
                     <h3 className="text-xl font-medium text-slate-900">
-                      {radschnellweg.general.from} &rarr;&nbsp;
-                      {radschnellweg.general.to}
+                      {radschnellweg.general.name}
                     </h3>
                     <p className="mt-4 text-base text-slate-500 line-clamp-3 md:line-clamp-5">
                       {radschnellweg.general.description}
@@ -92,7 +93,7 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
                   </div>
                   <div className="p-6 md:px-8">
                     <TextLink to={`./${radschnellweg.jsonId}`}>
-                      Mehr erfahren<span aria-hidden="true"> &rarr;</span>
+                      Mehr erfahren
                     </TextLink>
                   </div>
                 </div>
@@ -116,7 +117,6 @@ export const query = graphql`
           to
           from
           name
-          slug
           description
         }
         jsonId

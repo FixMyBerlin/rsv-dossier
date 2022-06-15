@@ -8,6 +8,8 @@ export type MetaJson = {
     to: string;
     from: string;
     ref: string;
+    source: string;
+    length: string;
   };
   references: {
     website: string;

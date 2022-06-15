@@ -7,7 +7,6 @@ const seoDefaultValues = {
   defaultTitle: 'Radschnellverbindungen.info',
   defaultDescription:
     'Informationen über Planungen von Radschnellverbindungen in Deutschland.',
-  baseUrl: 'https://radparken.info',
 };
 
 type SeoProps = {
@@ -28,7 +27,7 @@ export const HelmetSeo: React.FC<SeoProps> = ({
   const { defaultTitle, defaultDescription } = seoDefaultValues;
 
   const seo = {
-    title: title || defaultTitle,
+    title: (title && `${title} | ${defaultTitle}`) || defaultTitle,
     description: description || defaultDescription,
     image: image || `${domain() || ''}/social-sharing/default.png`,
   };

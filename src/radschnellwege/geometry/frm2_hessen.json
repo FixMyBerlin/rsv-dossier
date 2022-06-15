@@ -12,13 +12,15 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "2",
+        "id": "1",
         "id_rsv": "frm2-hessen",
-        "state": "planning",
-        "planning_phase": "preliminary planning",
-        "detail_level": "rough",
-        "variants": "Vorzugstrasse",
-        "length": "14269.568252915209"
+        "state": "agreement_process",
+        "planning_phase": "",
+        "detail_level": "approximated",
+        "variant": "Vorzugstrasse",
+        "length": "14269.568252915209",
+        "discarted": "false",
+        "description:planning_phase": "Politische Beschlüsse"
       },
       "bbox": [
         8.484326011661929, 49.924953884720203, 8.593803265920556,
@@ -59,13 +61,15 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "1",
+        "id": "2",
         "id_rsv": "frm2-hessen",
-        "state": "planning",
-        "planning_phase": "preliminary planning",
-        "detail_level": "rough",
-        "variants": "Alternativetrasse",
-        "length": "10455.501545657264"
+        "state": "agreement_process",
+        "planning_phase": "",
+        "detail_level": "approximated",
+        "variant": "Alternativetrasse",
+        "length": "10455.501545657264",
+        "discarted": "false",
+        "description:planning_phase": "Politische Beschlüsse"
       },
       "bbox": [
         8.538207154585635, 49.965392504356807, 8.592133782120653,

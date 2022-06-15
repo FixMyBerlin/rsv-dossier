@@ -12,11 +12,13 @@
       "properties": {
         "id": "1",
         "id_rsv": "frm8-hessen",
-        "state": "planning",
-        "planning_phase": "pilot study",
+        "state": "agreement_process",
+        "planning_phase": "",
         "detail_level": "corridor",
-        "variants": "Vorzugstrasse",
-        "length": "17745.868959088657"
+        "variant": "Vorzugstrasse",
+        "length": "17745.868959088657",
+        "discarted": "false",
+        "description:planning_phase": null
       },
       "bbox": [8.682608, 50.103706, 8.923727, 50.123149],
       "geometry": {
