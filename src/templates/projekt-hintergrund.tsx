@@ -6,7 +6,12 @@ import { LayoutArticle } from '~/components/Layout';
 const ProjectBackground: React.FC<PageProps> = ({ location }) => {
   return (
     <LayoutArticle location={location}>
-      <HelmetSeo title="Projekt Hintergrund" description="TODO" image="TODO" />
+      <HelmetSeo
+        title="Projekt Hintergrund"
+        description="TODO"
+        image="TODO"
+        noindex
+      />
       <h1>Projekt Hintergrund</h1>
     </LayoutArticle>
   );
