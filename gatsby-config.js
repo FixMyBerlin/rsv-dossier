@@ -16,7 +16,12 @@ module.exports = {
   // TailwindCSS needs PostCSS, https://tailwindcss.com/docs/guides/gatsby
   plugins: [
     'gatsby-plugin-postcss',
-    'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-plugin-image',
+      options: {
+        formats: [`auto`, `webp`, `avif`],
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-json',
     'gatsby-transformer-sharp',
