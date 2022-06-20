@@ -14,10 +14,11 @@ type Props = {
   data: { radschnellwege: { nodes: Array<GraphQLMeta> } };
 };
 const SteckbriefeIndex: React.FC<PageProps & Props> = ({
+  location,
   data: { radschnellwege },
 }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <HelmetSeo
         title="Steckbriefe"
         description="Die einzelnen Radschnellverbindungen in den verschiedenen Bundesländern in Deutschland."
