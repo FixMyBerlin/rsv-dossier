@@ -1,6 +1,6 @@
-# This script is based on https://milovantomasevic.com/blog/stackoverflow/2021-04-21-convert-csv-to-json-file-in-python/ and was adapted
+# This script is originally coming from https://milovantomasevic.com/blog/stackoverflow/2021-04-21-convert-csv-to-json-file-in-python/ and was adapted
 
-import csv
+import csv 
 import json
 import time
 import argparse
@@ -15,11 +15,11 @@ args = parser.parse_args()
 def csv_to_json(csvFilePath, jsonFilePath):
     jsonArray = []
     selected_region = args.region.lower()
-
+      
     #read csv file
-    with open(csvFilePath, encoding='utf-8') as csvf:
+    with open(csvFilePath, encoding='utf-8') as csvf: 
         #load csv file data using csv library's dictionary reader
-        csvReader = csv.DictReader(csvf)
+        csvReader = csv.DictReader(csvf) 
 
         # Count RSV per state
         states = {}
@@ -40,7 +40,7 @@ def csv_to_json(csvFilePath, jsonFilePath):
                 if row["Abk\u00fcrzung"] and row["Bundesland"]:
                     rowCopy["id"] = row["Bundesland"].lower() + "_" + ref
                 elif not row["Abk\u00fcrzung"] and row["Bundesland"]:
-                    rowCopy["id"] = row["Bundesland"].lower() + "_" + str(states[row["Bundesland"]+"_count"])
+                    rowCopy["id"] = row["Bundesland"].lower() + "_" + str(states[row["Bundesland"]+"_count"]) 
                     states[row["Bundesland"]+"_count"] += 1
                 else:
                     rowCopy["id"] = row["ID"]
@@ -66,14 +66,14 @@ def csv_to_json(csvFilePath, jsonFilePath):
                     "website": "",
                     "osm_relation": ""
                 }
-
+                
                 jsonArray.append(rowCopy)
-
+  
     #convert python jsonArray to JSON String and write to file
-    with open(jsonFilePath, 'w', encoding='utf-8') as jsonf:
+    with open(jsonFilePath, 'w', encoding='utf-8') as jsonf: 
         jsonString = json.dumps(jsonArray, indent=4)
         jsonf.write(jsonString)
-
+          
 output_filename = args.output
 
 csvFilePath = r'../data/list_rsv.csv'

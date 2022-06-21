@@ -1,4 +1,12 @@
-# RSV Data & Tools
+
+<div align="center">
+    <img src="media/radschnellweg-stvo-sign.svg" width="150">
+    <h1>Radschnellwege Deutschland</h1>
+</div>
+
+> This project is in progress. Accuracy of ways are getting improved as time flows and the Radschnellwege have finished planning.
+
+> There are still Radschnellwege and attributes of them missing. Open a pull-request, an issue or contact me when you want to improve something.
 
 A list, map, database (call it how you like) of planned, currently build and finished cycle highways (Radschnellwege) in Germany. All handmade and updated manually.
 
@@ -18,7 +26,7 @@ You can use the [json-schema-to-typescript](https://www.npmjs.com/package/json-s
 
 Then run:
 ```sh
-npx json2ts -i schema/meta.schema.json -o types/metaJson.d.ts
+npx json2ts -i schema/meta.schema.json -o ../types/meta.d.ts
 ```
 
 For a human readable documentation, you can generate a HTML file using [json-schema-for-humans](https://pypi.org/project/json-schema-for-humans/).
