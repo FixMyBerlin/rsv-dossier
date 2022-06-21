@@ -27,3 +27,10 @@ yarn-error.log\*
 
 # Local Netlify folder
 .netlify
+
+# Schema and Data
+*.csv
+data/data/*.json
+*.schema.html
+schema_doc.css
+schema_doc.min.js
