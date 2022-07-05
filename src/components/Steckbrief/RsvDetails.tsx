@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonLink } from '~/components/Links/ButtonLink';
+import { ButtonLink } from '~/components/Links';
 import { RSVMap } from '~/components/Map';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { RsvProgressBar } from '~/components/Steckbrief';
@@ -26,7 +26,16 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
             <RsvProgressBar current="planning" />
           </div>
           <Heading2>Kurzfassung</Heading2>
-          <p className="text-lg text-gray-500">{meta.general.description}</p>
+          <p className="text-lg text-gray-500">
+            {meta.general.description}
+            <br />
+            <a
+              href={meta.general.source}
+              className="text-sm text-slate-600 hover:text-slate-700 hover:underline active:underline"
+            >
+              Quelle:&nbsp;{new URL(meta.general.source).host}
+            </a>
+          </p>
           {meta.references.website && (
             <ButtonLink newWindow to={meta.references.website} className="mt-6">
               Projektwebsite
