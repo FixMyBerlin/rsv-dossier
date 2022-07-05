@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "8_bayern",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"bbox": [ 10.9855482685465, 49.455201, 11.082503, 49.4767962978552 ],                                                              
+"features": [
+{ "type": "Feature", "properties": { "id": "1", "accuracy": "corridor", "id_rsv": "8-bayern", "state": "agreed", "planning_phase": null, "variant": "Vorzugstrasse", "discarted": null, "length": "7427.575", "stand": "27.06.2022" }, "bbox": [ 10.985548268546541, 49.455201, 11.082503, 49.476796297855238 ], "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 11.082503, 49.455201 ], [ 10.986104, 49.476605 ], [ 10.985548268546541, 49.476796297855238 ] ] ] } }
+]
+}

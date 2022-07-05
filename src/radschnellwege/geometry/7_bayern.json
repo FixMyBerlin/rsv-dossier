@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "7_bayern",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"bbox": [ 11.007587, 49.458943, 11.082417, 49.58866 ],                                                                             
+"features": [
+{ "type": "Feature", "properties": { "id": "1", "accuracy": "rough", "id_rsv": "7-bayern", "state": "agreed", "planning_phase": null, "variant": "Vorzugstrasse", "discarted": null, "length": "16933.714", "stand": "27.06.2022" }, "bbox": [ 11.007587, 49.458943, 11.082417, 49.58866 ], "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 11.082103, 49.458943 ], [ 11.082417, 49.463481 ], [ 11.074625, 49.462961 ], [ 11.072227, 49.476883 ], [ 11.06293, 49.477386 ], [ 11.050076, 49.498775 ], [ 11.035354, 49.511154 ], [ 11.029831, 49.528965 ], [ 11.024435, 49.540082 ], [ 11.030854, 49.546942 ], [ 11.032692, 49.558422 ], [ 11.025681, 49.569824 ], [ 11.007587, 49.58866 ] ] ] } }
+]
+}
