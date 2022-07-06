@@ -32,14 +32,21 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/radschnellwege/meta`,
+        path: `${__dirname}/src/data/images`,
+        name: 'images',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/data/radschnellwege/meta`,
         name: 'rsv_meta',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/radschnellwege/geometry`,
+        path: `${__dirname}/src/data/radschnellwege/geometry`,
         name: 'rsv_geo',
       },
     },

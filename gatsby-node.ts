@@ -4,6 +4,8 @@ import { Buffer } from 'buffer';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import { staticMapRequest } from './src/utils';
 
+console.log(process.env['NODE_ENV']);
+
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
@@ -13,15 +15,6 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 };
 
 // create a static map image for every RSV
-exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
-  createTypes(`
-    type MetaJson implements Node {
-      geoJson: GeometryJson @link(from: "jsonId", by: "name")
-      staticMap: File @link(from: "jsonId", by: "name")
-    }
-  `);
-};
-
 exports.onCreateNode = async ({
   node,
   actions: { createNode },
@@ -45,5 +38,39 @@ exports.onCreateNode = async ({
       cache,
       store,
     });
+  }
+};
+
+// link geometry and staticMap to metaJson nodes
+exports.createSchemaCustomization = ({
+  actions: { createTypes, createFieldExtension },
+}) => {
+  createFieldExtension({
+    name: 'defaultMap',
+    extend(options, prevFieldConfig) {
+      return {
+        type: 'File',
+        resolve(source, args, context, info) {
+          return context.nodeModel.findOne({
+            type: 'File',
+          });
+        },
+      };
+    },
+  });
+  if (process.env['NODE_ENV'] !== 'production') {
+    createTypes(`
+    type MetaJson implements Node {
+      geoJson: GeometryJson @link(from: "jsonId", by: "name")
+      staticMap: File @defaultMap
+    }
+  `);
+  } else {
+    createTypes(`
+    type MetaJson implements Node {
+      geoJson: GeometryJson @link(from: "jsonId", by: "name")
+      staticMap: File @link(from: "jsonId", by: "name")
+    }
+  `);
   }
 };
