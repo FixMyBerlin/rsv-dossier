@@ -28,15 +28,19 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
           <Heading2>Kurzfassung</Heading2>
           <p className="text-lg text-gray-500">
             {meta.general.description}
-            <br />
-            (Quelle:&nbsp;
-            <a
-              href={meta.general.source}
-              className="text-slate-600 hover:text-slate-700 hover:underline active:underline"
-            >
-              {new URL(meta.general.source).host}
-            </a>
-            )
+            {meta.general.source !== '' && (
+              <>
+                <br />
+                (Quelle:&nbsp;
+                <a
+                  href={meta.general.source}
+                  className="text-slate-600 hover:text-slate-700 hover:underline active:underline"
+                >
+                  {new URL(meta.general.source).host}
+                </a>
+                )
+              </>
+            )}
           </p>
           {meta.references.website && (
             <ButtonLink newWindow to={meta.references.website} className="mt-6">
