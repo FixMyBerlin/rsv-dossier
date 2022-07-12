@@ -3,6 +3,7 @@ import fetch from 'node-fetch';
 import { Buffer } from 'buffer';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import { staticMapRequest } from './src/utils';
+import simplify from '@turf/simplify';
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -27,15 +28,22 @@ exports.onCreateNode = async ({
   actions: { createNode },
   createNodeId,
   cache,
-  store,
 }) => {
   if (node.internal.type === 'GeometryJson') {
     const url = staticMapRequest(node, [1920, 1920]);
     // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
-    const arrBuffer = await fetch(url.toString()).then((response) =>
-      response.arrayBuffer()
-    );
+    let response = await fetch(url.toString());
 
+    console.log(url.toString().length);
+    let tolerance = 0.000001;
+    while (response.status === 414) {
+      const simplified = simplify(node, { tolerance, highQuality: true });
+      const simplifiedUrl = staticMapRequest(simplified, [1920, 1920]);
+      response = await fetch(simplifiedUrl.toString());
+      tolerance *= 2;
+    }
+
+    const arrBuffer = await response.arrayBuffer();
     createFileNodeFromBuffer({
       buffer: Buffer.from(arrBuffer),
       name: node.name,
@@ -43,7 +51,6 @@ exports.onCreateNode = async ({
       createNode,
       createNodeId,
       cache,
-      store,
     });
   }
 };
