@@ -4,8 +4,6 @@ import { Buffer } from 'buffer';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import { staticMapRequest } from './src/utils';
 
-console.log(process.env['NODE_ENV']);
-
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
@@ -47,10 +45,10 @@ exports.createSchemaCustomization = ({
 }) => {
   createFieldExtension({
     name: 'defaultMap',
-    extend(options, prevFieldConfig) {
+    extend() {
       return {
         type: 'File',
-        resolve(source, args, context, info) {
+        resolve(source, args, context) {
           return context.nodeModel.findOne({
             type: 'File',
           });
@@ -58,7 +56,7 @@ exports.createSchemaCustomization = ({
       };
     },
   });
-  if (process.env['NODE_ENV'] !== 'production') {
+  if (process.env['CONTEXT'] !== 'production') {
     createTypes(`
     type MetaJson implements Node {
       geoJson: GeometryJson @link(from: "jsonId", by: "name")
