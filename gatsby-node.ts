@@ -34,7 +34,6 @@ exports.onCreateNode = async ({
     // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
     let response = await fetch(url.toString());
 
-    console.log(url.toString().length);
     let tolerance = 0.000001;
     while (response.status === 414) {
       const simplified = simplify(node, { tolerance, highQuality: true });
