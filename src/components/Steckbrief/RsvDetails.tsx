@@ -28,7 +28,7 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
           <Heading2>Kurzfassung</Heading2>
           {meta.general.description !== '' && (
             <p className="text-lg text-gray-500">
-              {meta.general.description}(
+              {meta.general.description}
               <br />
               (Quelle:&nbsp;
               <a
@@ -37,7 +37,7 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
               >
                 {new URL(meta.general.source).host}
               </a>
-              ) )
+              )
             </p>
           )}
           {meta.references.website && (
