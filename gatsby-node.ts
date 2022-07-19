@@ -34,6 +34,7 @@ export const onCreateNode = async ({
     // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
     let response = await fetch(url.toString());
 
+    // if the URL is too long we'll get an `414` from MapTiler
     let tolerance = 0.000001;
     while (response.status === 414) {
       const simplified = simplify(node, { tolerance, highQuality: true });
