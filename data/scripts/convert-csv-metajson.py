@@ -37,19 +37,20 @@ def csv_to_json(csvFilePath, jsonFilePath):
 
         # convert each csv row into python dict
         for row in list(csvReader)[1:]:
+            country = row["Bundesland"].lower()
             if row["GeoJSON"] == "ja" and (
-                selected_regions == ""
-                or (row["Bundesland"].lower() in selected_regions)
+                selected_regions == "" or (country in selected_regions)
             ):
                 ref = row["Abk\u00fcrzung"].lower().replace(" ", "")
 
-                rsv_properties = {}
-                rsv_properties["id"] = ref + "-" + row["Bundesland"].lower()
-                rsv_properties["cost"] = row["Kosten"]
-                rsv_properties["finished"] = row["Fertigstellung"]
-                rsv_properties["state"] = row["Projektstand"]
-                # rsv_properties["planning_phase"] = ""
-                # rsv_properties["detail_level"] = ""
+                rsv_properties = {
+                    "id": f"{ref}-{country}",
+                    "cost": row["Kosten"],
+                    "finished": row["Fertigstellung"],
+                    "state": row["Projektstand"],
+                    # planning_phase: ""
+                    # detail_level: ""
+                }
                 rsv_properties["general"] = {
                     "ref": row["Abkürzung"],
                     "name": row["Titel"],
