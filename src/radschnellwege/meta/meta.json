@@ -75,7 +75,7 @@
     "id": "rs5-baden-wuerttemberg",
     "cost": "",
     "finished": "",
-    "state": "agreed",
+    "state": "agreement_process",
     "general": {
       "ref": "RS5",
       "name": "Radschnellweg Schorndorf - Fellbach",
@@ -507,7 +507,7 @@
     "id": "9-baden-wuerttemberg",
     "cost": "",
     "finished": "",
-    "state": "agreed",
+    "state": "agreement_process",
     "general": {
       "ref": "9",
       "name": "Radschnellverbindung Vaihingen/Enz - Stuttgart",
@@ -819,7 +819,7 @@
     "id": "24-baden-wuerttemberg",
     "cost": "",
     "finished": "",
-    "state": "agreed",
+    "state": "agreement_process",
     "general": {
       "ref": "24",
       "name": "Radschnellweg Offenburg \u2013 Strasbourg",
