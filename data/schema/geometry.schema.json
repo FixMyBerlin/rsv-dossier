@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GeoJSON FeatureCollection RSV",
+  "type": "object",
+  "required": ["type", "features", "bbox"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["FeatureCollection"]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "title": "GeoJSON Feature",
+        "type": "object",
+        "required": ["type", "properties", "geometry", "bbox"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["Feature"]
+          },
+          "id": {
+            "oneOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "properties": {
+            "type": "object",
+            "required": [
+              "id",
+              "detail_level",
+              "state",
+              "id_rsv",
+              "planning_phase",
+              "variant",
+              "discarted",
+              "length",
+              "stand"
+            ],
+            "properties": {
+              "id": { "type": "string" },
+              "detail_level": { "type": "string" },
+              "state": {
+                "type": "string",
+                "enum": [
+                  "idea",
+                  "agreemnet_process",
+                  "planning",
+                  "in_progress",
+                  "done"
+                ]
+              },
+              "id_rsv": { "type": "string" },
+              "planning_phase": {
+                "type": "string",
+                "enum": [
+                  "pilot",
+                  "preliminary",
+                  "design",
+                  "approval",
+                  "execution",
+                  "building"
+                ]
+              },
+              "variant": { "type": "string" },
+              "discarted": { "type": "string" },
+              "stand": { "type": "string" },
+              "length": { "type": "string" },
+              "description:planning_phase": { "type": "string" }
+            }
+          },
+          "geometry": {
+            "oneOf": [
+              {
+                "title": "GeoJSON MultiLineString",
+                "type": "object",
+                "required": ["type", "coordinates"],
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": ["MultiLineString"]
+                  },
+                  "coordinates": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "minItems": 2,
+                      "items": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "bbox": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "bbox": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "number"
+      }
+    }
+  }
+}
