@@ -2,7 +2,10 @@ import { createFileNodeFromBuffer } from 'gatsby-source-filesystem';
 import fetch from 'node-fetch';
 import { Buffer } from 'buffer';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
+import { getGraphqlSchemaFromJsonSchema } from 'get-graphql-from-jsonschema';
 import { staticMapRequest } from './src/utils';
+import metaJsonSchema from './data/schema/meta.schema.json' assert { type: 'json' };
+import geometryJsonSchema from './data/schema/geometry.schema.json' assert { type: 'json' };
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -13,7 +16,20 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 };
 
 // create a static map image for every RSV
-exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
+exports.createSchemaCustomization = ({
+  actions: { createTypes, addThirdPartySchema },
+}) => {
+  const geometrySchema = getGraphqlSchemaFromJsonSchema({
+    rootName: 'GeometryJson',
+    schema: geometryJsonSchema,
+  });
+  // createTypes(geometrySchema.typeDefinitions);
+  // const metaSchema = getGraphqlSchemaFromJsonSchema({
+  //   rootName: 'GeometryJson',
+  //   schema: metaJsonSchema,
+  // });
+  // addThirdPartySchema(geometrySchema);
+  // addThirdPartySchema(metaSchema);
   createTypes(`
     type MetaJson implements Node {
       geoJson: GeometryJson @link(from: "jsonId", by: "name")
