@@ -14,7 +14,7 @@
       "properties": {
         "id": "1",
         "detail_level": "corridor",
-        "state": "agreed",
+        "state": "agreement_process",
         "id_rsv": "RS9",
         "planning_phase": "pilot",
         "variant": "Vorzugstrasse",
@@ -129,7 +129,7 @@
       "properties": {
         "id": "1",
         "detail_level": null,
-        "state": "agreed",
+        "state": "agreement_process",
         "id_rsv": "RS9",
         "planning_phase": null,
         "variant": "Alternative Vorzugstrasse",
