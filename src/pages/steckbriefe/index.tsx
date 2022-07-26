@@ -46,7 +46,8 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
               Trassenverläufe bzw. -korridore. Enthalten sind RSV aus Hessen,
               Baden-Württemberg, Berlin, Niedersachsen, Schleswig-Holstein,
               Mecklenburg-Vorpommern, Nordrhein-Westfalen, Rheinland-Pfalz und
-              Hamburg. Die Liste wird fortlaufend erweitert.
+              Hamburg. Aktuell umfasst die Liste {radschnellwege.nodes.length}{' '}
+              Radschnellverbindungen und wird fortlaufend erweitert.{' '}
               <p>
                 Mail an{' '}
                 <MailToButtonLink
