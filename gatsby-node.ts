@@ -1,9 +1,8 @@
 import { createFileNodeFromBuffer } from 'gatsby-source-filesystem';
 import fetch from 'node-fetch';
-import { Validator } from 'jsonschema';
+import { Validator, ValidationError } from 'jsonschema';
 import { Buffer } from 'buffer';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
-import { getGraphqlSchemaFromJsonSchema } from 'get-graphql-from-jsonschema';
 import { staticMapRequest } from './src/utils';
 import metaJsonSchema from './data/schema/meta.schema.json' assert { type: 'json' };
 import geometryJsonSchema from './data/schema/geometry.schema.json' assert { type: 'json' };
@@ -17,19 +16,11 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 };
 
 // create a static map image for every RSV
-exports.createSchemaCustomization = ({
-  actions: { createTypes, addThirdPartySchema },
-}) => {
-  // const geometrySchema = getGraphqlSchemaFromJsonSchema({
-  //   rootName: 'geometryJson',
-  //   schema: geometryJsonSchema,
-  // });
-  // console.log(geometrySchema);
-  // geometrySchema.typeDefinitions.forEach(createTypes);
+exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
   createTypes(`
     type MetaJson implements Node {
-      geoJson: GeometryJson @link(from: "jsonId", by: "name")
-      staticMap: File @link(from: "jsonId", by: "name")
+      geoJson: GeometryJson! @link(from: "jsonId", by: "name")
+      staticMap: File! @link(from: "jsonId", by: "name")
     }
   `);
 };
@@ -45,24 +36,34 @@ exports.onCreateNode = async ({
 
   if (node.internal.type === 'MetaJson') {
     const { id, jsonId, parent, children, internal, ...metaJson } = node;
-    const result = jsonValidator.validate(
-      { id: jsonId, ...metaJson },
-      metaJsonSchema
-    );
-    if (!result.valid) {
-      console.log(`errors in ${jsonId}:`);
-      console.log(result.errors);
+
+    // validate meta data against JSON schema
+    try {
+      jsonValidator.validate({ id: jsonId, ...metaJson }, metaJsonSchema, {
+        throwError: true,
+      });
+    } catch (e) {
+      if (e instanceof ValidationError) {
+        console.error(e);
+      } else throw e;
     }
   }
 
   if (node.internal.type === 'GeometryJson') {
     const { id, jsonId, parent, children, internal, ...geometryJson } = node;
-    const result = jsonValidator.validate(geometryJson, geometryJsonSchema);
-    if (!result.valid) {
-      console.log(`errors in ${node.name}:`);
-      console.log(result.errors);
+
+    // validate geometry against JSON schema
+    try {
+      jsonValidator.validate(geometryJson, geometryJsonSchema, {
+        throwError: true,
+      });
+    } catch (e) {
+      if (e instanceof ValidationError) {
+        console.error(e);
+      } else throw e;
     }
-    // geometryValidator.validate()
+
+    // generate static map from geometry
     const url = staticMapRequest(node, [1920, 1920]);
     // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
     const arrBuffer = await fetch(url.toString()).then((response) =>
