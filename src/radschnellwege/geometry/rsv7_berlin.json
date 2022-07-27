@@ -15,10 +15,10 @@
         "id": "1",
         "variant": "Vorzugsvariante",
         "id_rsv": "RSV 7",
-        "state": "discarted",
+        "state": "discarded",
         "detail_level": "corridor",
         "length": null,
-        "discarted": "true",
+        "discarded": "true",
         "stand": "26.05.2022",
         "planning_phase": null,
         "description:planning_phase": null

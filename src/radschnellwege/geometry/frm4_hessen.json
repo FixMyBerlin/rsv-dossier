@@ -15,11 +15,11 @@
         "id": "1",
         "id_rsv": "frm4-hessen",
         "state": "agreement_process",
-        "planning_phase": "",
+        "planning_phase": null,
         "detail_level": "corridor",
         "variant": "Vorzugstrasse",
         "length": "6466.783618830881",
-        "discarted": "false",
+        "discarded": "false",
         "description:planning_phase": null
       },
       "bbox": [

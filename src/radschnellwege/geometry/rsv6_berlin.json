@@ -16,7 +16,7 @@
         "state": "agreement_process",
         "detail_level": "rough",
         "length": "11517.020557570384",
-        "discarted": null,
+        "discarded": false,
         "stand": "26.05.2022",
         "planning_phase": "preliminary",
         "description:planning_phase": null

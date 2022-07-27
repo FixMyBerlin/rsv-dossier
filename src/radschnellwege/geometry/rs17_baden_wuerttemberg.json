@@ -12,11 +12,11 @@
       "properties": {
         "id": "1",
         "detail_level": "rough",
-        "state": "agreed",
+        "state": "agreement_process",
         "id_rsv": "RS17",
         "planning_phase": "preliminary",
         "variant": "Vorzugstrasse",
-        "discarted": null,
+        "discarded": false,
         "stand": "07.06.2022",
         "length": "20703.207",
         "description:planning_phase": null

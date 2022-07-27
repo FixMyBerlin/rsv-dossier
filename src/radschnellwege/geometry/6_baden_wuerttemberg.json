@@ -18,7 +18,7 @@
         "id_rsv": "6-baden-wuerttemberg",
         "planning_phase": "pilot",
         "variant": null,
-        "discarted": null,
+        "discarded": false,
         "stand": "02.06.2022",
         "length": "43069.536",
         "description:planning_phase": null

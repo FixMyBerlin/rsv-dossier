@@ -16,7 +16,7 @@
         "planning_phase": "preliminary",
         "detail_level": "corridor",
         "variant": null,
-        "discarted": null,
+        "discarded": false,
         "description:planning_phase": null,
         "stand": "20.04.2022"
       },

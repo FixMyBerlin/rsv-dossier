@@ -18,7 +18,7 @@
         "detail_level": "exact",
         "variant": "Vorzugstrasse",
         "length": "15413.179",
-        "discarted": "false",
+        "discarded": "false",
         "stand": "01.01.2022",
         "planning_phase": null
       },
@@ -284,7 +284,7 @@
         "detail_level": "approximated",
         "variant": "Vorzugstrasse",
         "length": "96441.611",
-        "discarted": "false",
+        "discarded": "false",
         "stand": "01.01.2022",
         "planning_phase": "approval"
       },
@@ -1276,7 +1276,7 @@
         "detail_level": "exact",
         "variant": "Vorzugstrasse",
         "length": "1402.679",
-        "discarted": "false",
+        "discarded": "false",
         "stand": "01.01.2022",
         "planning_phase": "execution"
       },

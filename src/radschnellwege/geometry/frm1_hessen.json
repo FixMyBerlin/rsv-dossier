@@ -17,7 +17,7 @@
         "detail_level": "approximated",
         "variant": "Vorzugstrasse",
         "length": "14867.54284366143",
-        "discarted": "false",
+        "discarded": "false",
         "description:planning_phase": ""
       },
       "bbox": [8.6560976, 49.985483899999984, 8.691262, 50.103305043494636],
@@ -48,7 +48,7 @@
         "detail_level": "approximated",
         "variant": "Vorzugstrasse",
         "length": "455.335272472249",
-        "discarted": "false",
+        "discarded": "false",
         "description:planning_phase": null
       },
       "bbox": [
@@ -76,7 +76,7 @@
         "detail_level": "exact",
         "variant": "Vorzugstrasse",
         "length": "6694.190226483386",
-        "discarted": "false",
+        "discarded": "false",
         "description:planning_phase": null
       },
       "bbox": [8.6481994, 49.931283599999979, 8.6586542, 49.985483899999984],
@@ -402,7 +402,7 @@
         "detail_level": "approximated",
         "variant": "Vorzugstrasse",
         "length": "790.1495400305577",
-        "discarted": "false",
+        "discarded": "false",
         "description:planning_phase": null
       },
       "bbox": [
@@ -431,7 +431,7 @@
         "detail_level": "approximated",
         "variant": "Vorzugstrasse",
         "length": "5676.820359278567",
-        "discarted": "false",
+        "discarded": "false",
         "description:planning_phase": null
       },
       "bbox": [8.624659, 49.872312, 8.646358630330262, 49.92014943652898],

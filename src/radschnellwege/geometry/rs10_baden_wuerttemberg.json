@@ -18,7 +18,7 @@
         "id_rsv": "RS10",
         "planning_phase": "pilot",
         "variant": null,
-        "discarted": null,
+        "discarded": false,
         "stand": "02.06.2022",
         "length": "5086.634",
         "description:planning_phase": null

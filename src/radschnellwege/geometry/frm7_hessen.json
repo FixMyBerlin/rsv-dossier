@@ -15,11 +15,11 @@
         "id": "2",
         "id_rsv": "frm7-hessen",
         "state": "agreement_process",
-        "planning_phase": "",
+        "planning_phase": null,
         "detail_level": "approximated",
         "variant": "Vorzugstrasse",
         "length": "16824.35809542094",
-        "discarted": "false",
+        "discarded": "false",
         "description:planning_phase": null
       },
       "bbox": [
@@ -85,11 +85,11 @@
         "id": "1",
         "id_rsv": "frm7-hessen",
         "state": "agreement_process",
-        "planning_phase": "",
+        "planning_phase": null,
         "detail_level": "approximated",
         "variant": "Alternativetrasse",
         "length": "7678.76101147117",
-        "discarted": "false",
+        "discarded": "false",
         "description:planning_phase": null
       },
       "bbox": [

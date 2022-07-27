@@ -827,7 +827,7 @@
         "state": "agreement_process",
         "detail_level": "corridor",
         "length": "13482.904724048713",
-        "discarted": null,
+        "discarded": false,
         "stand": "26.05.2022",
         "planning_phase": "pilot",
         "description:planning_phase": null

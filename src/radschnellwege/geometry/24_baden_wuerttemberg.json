@@ -12,11 +12,11 @@
       "properties": {
         "id": "1",
         "detail_level": "corridor",
-        "state": "agreed",
+        "state": "agreement_process",
         "id_rsv": "24-baden-wuerttemberg",
         "planning_phase": null,
         "variant": "Vorzugstrasse",
-        "discarted": null,
+        "discarded": false,
         "stand": null,
         "length": "18276.876",
         "description:planning_phase": null

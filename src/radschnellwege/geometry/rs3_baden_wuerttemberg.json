@@ -16,7 +16,7 @@
         "id_rsv": "RS3",
         "planning_phase": "design",
         "variant": "Trasse 1.1  \"Neckar\"",
-        "discarted": null,
+        "discarded": false,
         "stand": "07.06.2022",
         "length": "17596.977",
         "description:planning_phase": null

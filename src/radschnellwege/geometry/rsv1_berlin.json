@@ -166,7 +166,7 @@
         "state": "agreement_process",
         "detail_level": "rough",
         "length": null,
-        "discarted": null,
+        "discarded": false,
         "stand": "26.05.2022",
         "planning_phase": null,
         "description:planning_phase": null
@@ -421,7 +421,7 @@
         "state": "agreement_process",
         "detail_level": "rough",
         "length": "20206.61087631298",
-        "discarted": null,
+        "discarded": false,
         "stand": "26.05.2022",
         "planning_phase": "preliminary",
         "description:planning_phase": null
@@ -633,10 +633,10 @@
         "id": "3",
         "variant": "Weitere Alternative",
         "id_rsv": "RSV 1",
-        "state": "discarted",
+        "state": "discarded",
         "detail_level": "rough",
         "length": null,
-        "discarted": "true",
+        "discarded": "true",
         "stand": "26.05.2022",
         "planning_phase": null,
         "description:planning_phase": null
@@ -744,7 +744,7 @@
         "state": "agreement_process",
         "detail_level": "rough",
         "length": null,
-        "discarted": null,
+        "discarded": false,
         "stand": "26.05.2022",
         "planning_phase": "preliminary",
         "description:planning_phase": null

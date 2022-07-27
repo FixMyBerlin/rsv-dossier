@@ -16,7 +16,7 @@
         "id_rsv": "RS14",
         "planning_phase": null,
         "variant": null,
-        "discarted": null,
+        "discarded": false,
         "stand": null,
         "length": "19906.352",
         "description:planning_phase": null

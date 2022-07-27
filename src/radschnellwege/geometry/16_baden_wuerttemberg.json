@@ -16,7 +16,7 @@
         "id_rsv": "16-baden-wuerttemberg",
         "planning_phase": null,
         "variant": "Vorzugstrasse",
-        "discarted": null,
+        "discarded": false,
         "stand": "07.06.2022",
         "length": "12491.815",
         "description:planning_phase": null

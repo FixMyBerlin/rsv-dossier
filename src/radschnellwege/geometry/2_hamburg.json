@@ -16,7 +16,7 @@
         "planning_phase": "preliminary",
         "detail_level": "rough",
         "variant": "Alternativetrasse",
-        "discarted": null,
+        "discarded": false,
         "description:planning_phase": null,
         "stand": "20.04.2022"
       },
@@ -100,7 +100,7 @@
         "planning_phase": "preliminary",
         "detail_level": "rough",
         "variant": "Vorzugstrasse",
-        "discarted": null,
+        "discarded": false,
         "description:planning_phase": null,
         "stand": "20.04.2022"
       },

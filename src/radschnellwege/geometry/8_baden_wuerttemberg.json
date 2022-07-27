@@ -18,7 +18,7 @@
         "id_rsv": "8-baden-wuerttemberg",
         "planning_phase": "preliminary",
         "variant": "Variante Mitte",
-        "discarted": null,
+        "discarded": false,
         "stand": null,
         "length": "13540.878",
         "description:planning_phase": null

@@ -16,7 +16,7 @@
         "id_rsv": "RS6",
         "planning_phase": "design",
         "variant": "Vorzugstrasse",
-        "discarted": null,
+        "discarded": false,
         "stand": "02.06.2022",
         "length": "21752.763",
         "description:planning_phase": null
