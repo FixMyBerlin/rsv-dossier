@@ -16,7 +16,11 @@
         "from": { "type": "string" },
         "to": { "type": "string" },
         "description": { "type": "string" },
-        "slug": { "type": "string", "description": "Defines an URL slug", "format": "uri-reference" }
+        "slug": {
+          "type": "string",
+          "description": "Defines an URL slug",
+          "format": "uri-reference"
+        }
       },
       "required": ["from", "to", "slug"]
     },
@@ -33,6 +37,7 @@
               "type": "array",
               "items": [
                 {
+                  "type": "string",
                   "enum": ["communication", "authority", "construction_company"]
                 }
               ]
@@ -46,9 +51,12 @@
       ]
     },
     "status": {
-      "enum": ["idea", "agreed", "planning", "in_progress", "done", "discarded"]
+      "type": "string",
+      "enum": ["idea", "agreed", "planning", "in_progress", "done"]
     },
+    "discarded": { "type": "boolean" },
     "planning_phase": {
+      "type": "string",
       "enum": [
         "pilot",
         "preliminiary",
@@ -70,7 +78,7 @@
       "properties": {
         "osm_relation": { "type": "number" },
         "website": { "type": "string", "format": "uri" },
-        "copyright:geometry": { "type": "string" }
+        "copyright_geometry": { "type": "string" }
       }
     }
   },

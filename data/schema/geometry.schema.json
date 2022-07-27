@@ -2,8 +2,26 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "GeoJSON FeatureCollection RSV",
   "type": "object",
-  "required": ["type", "features", "bbox"],
+  "required": ["type", "features", "bbox", "crs"],
+  "additionalProperties": false,
   "properties": {
+    "name": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["name"] },
+        "properties": {
+          "properties": {
+            "name": {
+              "type": "string",
+              "enum": ["urn:ogc:def:crs:OGC:1.3:CRS84"]
+            }
+          }
+        }
+      }
+    },
     "type": {
       "type": "string",
       "enum": ["FeatureCollection"]
@@ -38,71 +56,74 @@
               "id_rsv",
               "planning_phase",
               "variant",
-              "discarted",
+              "discarded",
               "length",
               "stand"
             ],
             "properties": {
               "id": { "type": "string" },
-              "detail_level": { "type": "string" },
+              "detail_level": {
+                "type": "string"
+              },
               "state": {
                 "type": "string",
-                "enum": [
-                  "idea",
-                  "agreemnet_process",
-                  "planning",
-                  "in_progress",
-                  "done"
-                ]
+                "enum": ["idea", "agreement_process", "planning", "done"]
               },
               "id_rsv": { "type": "string" },
               "planning_phase": {
-                "type": "string",
-                "enum": [
-                  "pilot",
-                  "preliminary",
-                  "design",
-                  "approval",
-                  "execution",
-                  "building"
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "pilot",
+                      "preliminary",
+                      "design",
+                      "approval",
+                      "execution",
+                      "building"
+                    ]
+                  },
+                  { "type": "null" } // maybe only conditional nullable
                 ]
               },
-              "variant": { "type": "string" },
-              "discarted": { "type": "string" },
+              "variant": {
+                "oneOf": [{ "type": "string" }, { "type": "null" }]
+              },
+              "discarded": {
+                "type": "boolean"
+              },
               "stand": { "type": "string" },
               "length": { "type": "string" },
-              "description:planning_phase": { "type": "string" }
+              "description:planning_phase": {
+                "oneOf": [{ "type": "string" }, { "type": "null" }]
+              }
             }
           },
           "geometry": {
-            "oneOf": [
-              {
-                "title": "GeoJSON MultiLineString",
-                "type": "object",
-                "required": ["type", "coordinates"],
-                "properties": {
-                  "type": {
-                    "type": "string",
-                    "enum": ["MultiLineString"]
-                  },
-                  "coordinates": {
+            "title": "GeoJSON MultiLineString",
+            "type": "object",
+            "required": ["type", "coordinates"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["MultiLineString"]
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": {
                     "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
                     "items": {
-                      "type": "array",
-                      "minItems": 2,
-                      "items": {
-                        "type": "array",
-                        "minItems": 2,
-                        "maxItems": 2,
-                        "items": {
-                          "type": "number"
-                        }
-                      }
+                      "type": "number"
                     }
                   }
                 }
               }
-            ]
+            }
           },
           "bbox": {
             "type": "array",
