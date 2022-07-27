@@ -1,5 +1,6 @@
 import { createFileNodeFromBuffer } from 'gatsby-source-filesystem';
 import fetch from 'node-fetch';
+import { Validator } from 'jsonschema';
 import { Buffer } from 'buffer';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import { getGraphqlSchemaFromJsonSchema } from 'get-graphql-from-jsonschema';
@@ -19,17 +20,12 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 exports.createSchemaCustomization = ({
   actions: { createTypes, addThirdPartySchema },
 }) => {
-  const geometrySchema = getGraphqlSchemaFromJsonSchema({
-    rootName: 'GeometryJson',
-    schema: geometryJsonSchema,
-  });
-  // createTypes(geometrySchema.typeDefinitions);
-  // const metaSchema = getGraphqlSchemaFromJsonSchema({
-  //   rootName: 'GeometryJson',
-  //   schema: metaJsonSchema,
+  // const geometrySchema = getGraphqlSchemaFromJsonSchema({
+  //   rootName: 'geometryJson',
+  //   schema: geometryJsonSchema,
   // });
-  // addThirdPartySchema(geometrySchema);
-  // addThirdPartySchema(metaSchema);
+  // console.log(geometrySchema);
+  // geometrySchema.typeDefinitions.forEach(createTypes);
   createTypes(`
     type MetaJson implements Node {
       geoJson: GeometryJson @link(from: "jsonId", by: "name")
@@ -45,7 +41,20 @@ exports.onCreateNode = async ({
   cache,
   store,
 }) => {
+  const geometryValidator = new Validator();
+  // geometryValidator.addSchema(geometryJsonSchema, '/geometry');
   if (node.internal.type === 'GeometryJson') {
+    const { id, jsonId, parent, children, internal, ...geometryJson } = node;
+    const result = geometryValidator.validate(
+      geometryJson,
+      geometryJsonSchema,
+      { throwFirst: false }
+    );
+    if (!result.valid) {
+      console.log(node.name);
+      console.log(result.errors);
+    }
+    // geometryValidator.validate()
     const url = staticMapRequest(node, [1920, 1920]);
     // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
     const arrBuffer = await fetch(url.toString()).then((response) =>
