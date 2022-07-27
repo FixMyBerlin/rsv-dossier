@@ -633,7 +633,7 @@
         "id": "3",
         "variant": "Weitere Alternative",
         "id_rsv": "RSV 1",
-        "state": "discarded",
+        "state": "agreement_process",
         "detail_level": "rough",
         "length": 13586.042239747565,
         "discarded": true,
