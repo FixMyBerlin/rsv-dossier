@@ -18,7 +18,8 @@
         "variant": "Alternativetrasse",
         "discarded": false,
         "description:planning_phase": null,
-        "stand": "20.04.2022"
+        "stand": "20.04.2022",
+        "length": 19110.172562797026
       },
       "bbox": [9.913549, 53.752163, 10.007241, 53.867453],
       "geometry": {
@@ -102,7 +103,8 @@
         "variant": "Vorzugstrasse",
         "discarded": false,
         "description:planning_phase": null,
-        "stand": "20.04.2022"
+        "stand": "20.04.2022",
+        "length": 47957.91886021844
       },
       "bbox": [9.87821264254353, 53.610574, 10.029679, 53.91675198712035],
       "geometry": {

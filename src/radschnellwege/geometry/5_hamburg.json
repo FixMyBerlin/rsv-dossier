@@ -18,7 +18,8 @@
         "variant": null,
         "discarded": false,
         "description:planning_phase": null,
-        "stand": "20.04.2022"
+        "stand": "20.04.2022",
+        "length": 49205.252522492476
       },
       "bbox": [9.988043, 53.268224, 10.404337, 53.534735],
       "geometry": {
