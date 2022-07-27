@@ -100,14 +100,30 @@
     }
   },
   "required": ["id", "general", "state", "cost", "finished"],
-  "if": {
-    "properties": {
-      "general": { "properties": { "source": { "const": null } } }
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "general": { "properties": { "source": { "const": null } } }
+        }
+      },
+      "then": {
+        "properties": {
+          "general": { "properties": { "description": { "const": null } } }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "state": { "const": "done" }
+        }
+      },
+      "then": {
+        "properties": {
+          "planning_phase": { "const": null }
+        }
+      }
     }
-  },
-  "then": {
-    "properties": {
-      "general": { "properties": { "description": { "const": null } } }
-    }
-  }
+  ]
 }
