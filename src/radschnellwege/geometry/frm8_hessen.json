@@ -17,8 +17,9 @@
         "detail_level": "corridor",
         "variant": "Vorzugstrasse",
         "length": 17745.868959088657,
-        "discarded": "false",
-        "description:planning_phase": null
+        "discarded": false,
+        "description:planning_phase": null,
+        "stand": "07.06.2022"
       },
       "bbox": [8.682608, 50.103706, 8.923727, 50.123149],
       "geometry": {

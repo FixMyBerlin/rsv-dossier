@@ -16,7 +16,7 @@
         "detail_level": "approximated",
         "variant": "Vorzugstrasse",
         "length": 48601.444,
-        "discarded": "false",
+        "discarded": false,
         "stand": "01.01.2022",
         "planning_phase": "preliminary"
       },

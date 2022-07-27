@@ -17,8 +17,9 @@
         "detail_level": "approximated",
         "variant": "Vorzugstrasse",
         "length": 14867.54284366143,
-        "discarded": "false",
-        "description:planning_phase": ""
+        "discarded": false,
+        "description:planning_phase": "",
+        "stand": "07.06.2022"
       },
       "bbox": [8.6560976, 49.985483899999984, 8.691262, 50.103305043494636],
       "geometry": {
@@ -48,8 +49,9 @@
         "detail_level": "approximated",
         "variant": "Vorzugstrasse",
         "length": 455.335272472249,
-        "discarded": "false",
-        "description:planning_phase": null
+        "discarded": false,
+        "description:planning_phase": null,
+        "stand": "07.06.2022"
       },
       "bbox": [
         8.647536500086076, 49.927212505579405, 8.64820229804773,
@@ -76,8 +78,9 @@
         "detail_level": "exact",
         "variant": "Vorzugstrasse",
         "length": 6694.190226483386,
-        "discarded": "false",
-        "description:planning_phase": null
+        "discarded": false,
+        "description:planning_phase": null,
+        "stand": "07.06.2022"
       },
       "bbox": [8.6481994, 49.93128359999998, 8.6586542, 49.985483899999984],
       "geometry": {
@@ -402,8 +405,9 @@
         "detail_level": "approximated",
         "variant": "Vorzugstrasse",
         "length": 790.1495400305577,
-        "discarded": "false",
-        "description:planning_phase": null
+        "discarded": false,
+        "description:planning_phase": null,
+        "stand": "07.06.2022"
       },
       "bbox": [
         8.646358630330262, 49.92014943652898, 8.647536500086076,
@@ -431,8 +435,9 @@
         "detail_level": "approximated",
         "variant": "Vorzugstrasse",
         "length": 5676.820359278567,
-        "discarded": "false",
-        "description:planning_phase": null
+        "discarded": false,
+        "description:planning_phase": null,
+        "stand": "07.06.2022"
       },
       "bbox": [8.624659, 49.872312, 8.646358630330262, 49.92014943652898],
       "geometry": {

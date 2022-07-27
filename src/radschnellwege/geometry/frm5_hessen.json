@@ -19,8 +19,9 @@
         "detail_level": "approximated",
         "variant": "Alternativetrasse",
         "length": 14705.076693358289,
-        "discarded": "false",
-        "description:planning_phase": null
+        "discarded": false,
+        "description:planning_phase": null,
+        "stand": "07.06.2022"
       },
       "bbox": [
         8.57681468955736, 50.13334634152771, 8.647060332226701,
@@ -128,8 +129,9 @@
         "detail_level": "approximated",
         "variant": "Vorzugstrasse",
         "length": 40270.90395316763,
-        "discarded": "false",
-        "description:planning_phase": null
+        "discarded": false,
+        "description:planning_phase": null,
+        "stand": "07.06.2022"
       },
       "bbox": [
         8.578443892536091, 50.103305043494615, 8.67677074838274,

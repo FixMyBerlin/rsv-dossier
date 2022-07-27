@@ -636,7 +636,7 @@
         "state": "discarded",
         "detail_level": "rough",
         "length": 13586.042239747565,
-        "discarded": "true",
+        "discarded": true,
         "stand": "26.05.2022",
         "planning_phase": null,
         "description:planning_phase": null

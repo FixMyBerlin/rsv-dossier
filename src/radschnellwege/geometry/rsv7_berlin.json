@@ -17,7 +17,7 @@
         "id_rsv": "RSV 7",
         "state": "discarded",
         "detail_level": "corridor",
-        "discarded": "true",
+        "discarded": true,
         "stand": "26.05.2022",
         "planning_phase": null,
         "description:planning_phase": null,

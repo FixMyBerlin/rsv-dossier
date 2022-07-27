@@ -107,7 +107,7 @@
         "planning_phase": null,
         "variant": "Trasse 2 Vorzugstrasse",
         "discarded": false,
-        "stand": null,
+        "stand": "07.06.2022",
         "length": 12805.556,
         "description:planning_phase": null
       },
@@ -292,7 +292,7 @@
         "planning_phase": null,
         "variant": "Trasse 2 Alternativen",
         "discarded": false,
-        "stand": null,
+        "stand": "07.06.2022",
         "length": 7145.425,
         "description:planning_phase": null
       },
@@ -377,7 +377,7 @@
         "planning_phase": null,
         "variant": "Trasse 1 Varianten",
         "discarded": false,
-        "stand": null,
+        "stand": "07.06.2022",
         "length": 10857.85,
         "description:planning_phase": null
       },
