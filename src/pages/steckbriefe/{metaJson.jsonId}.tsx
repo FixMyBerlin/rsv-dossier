@@ -65,7 +65,6 @@ export const query = graphql`
       references {
         website
       }
-      finished
       cost
       state
       staticMap {
