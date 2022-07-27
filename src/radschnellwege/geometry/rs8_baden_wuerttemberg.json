@@ -286,7 +286,7 @@
       "type": "Feature",
       "properties": {
         "id": "2",
-        "detail_level": null,
+        "detail_level": "",
         "state": "planning",
         "id_rsv": "RS8",
         "planning_phase": null,
@@ -371,7 +371,7 @@
       "type": "Feature",
       "properties": {
         "id": "5",
-        "detail_level": null,
+        "detail_level": "",
         "state": "planning",
         "id_rsv": "RS8",
         "planning_phase": null,
