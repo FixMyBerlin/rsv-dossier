@@ -85,7 +85,7 @@
               "discarded": {
                 "type": "boolean"
               },
-              "stand": { "type": "string" },
+              "stand": { "type": "string", "format": "date" },
               "length": { "type": "number" },
               "description:planning_phase": {
                 "type": ["string", "null"]
