@@ -38,14 +38,7 @@
             "enum": ["Feature"]
           },
           "id": {
-            "oneOf": [
-              {
-                "type": "number"
-              },
-              {
-                "type": "string"
-              }
-            ]
+            "type": ["number", "string"]
           },
           "properties": {
             "type": "object",
@@ -83,11 +76,11 @@
                       "building"
                     ]
                   },
-                  { "type": "null" } // maybe only conditional nullable
+                  { "type": "null" }
                 ]
               },
               "variant": {
-                "oneOf": [{ "type": "string" }, { "type": "null" }]
+                "type": ["string", "null"]
               },
               "discarded": {
                 "type": "boolean"
@@ -95,7 +88,7 @@
               "stand": { "type": "string" },
               "length": { "type": "number" },
               "description:planning_phase": {
-                "oneOf": [{ "type": "string" }, { "type": "null" }]
+                "type": ["string", "null"]
               }
             }
           },

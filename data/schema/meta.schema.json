@@ -99,5 +99,5 @@
       }
     }
   },
-  "required": ["id", "general", "state"]
+  "required": ["id", "general", "state", "cost", "finished"]
 }
