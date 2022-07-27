@@ -1179,7 +1179,7 @@
     "id": "rsv7-berlin",
     "cost": null,
     "finished": null,
-    "state": "discarded",
+    "state": "planning",
     "general": {
       "ref": "RSV 7",
       "name": "Spandauer Damm \u2013 Freiheit",
@@ -1659,7 +1659,7 @@
     "id": "1-mecklenburg-vorpommern",
     "cost": null,
     "finished": null,
-    "state": "",
+    "state": "planning",
     "general": {
       "ref": "1",
       "name": "Radschnellweg Schwerin-Wismar",
