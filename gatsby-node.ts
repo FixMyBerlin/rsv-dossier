@@ -25,6 +25,15 @@ exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
   `);
 };
 
+exports.onPostBootstrap = ({ getNodesByType }) => {
+  if (
+    getNodesByType('GeometryJson').length !== getNodesByType('MetaJson').length
+  ) {
+    console.error('Number of geometries does no match the length of meta.json');
+    // TODO: throw some error
+  }
+};
+
 exports.onCreateNode = async ({
   node,
   actions: { createNode },
@@ -40,9 +49,8 @@ exports.onCreateNode = async ({
   };
   const nodeType = node.internal.type;
   if (nodeType === 'MetaJson' || nodeType === 'GeometryJson') {
-    const { id, jsonId, parent, children, internal, ...json } = node;
-
     // validate meta data against JSON schema
+    const { id, jsonId, parent, children, internal, ...json } = node;
     try {
       jsonValidator.validate({ id: jsonId, ...json }, jsonSchema[nodeType], {
         throwError: true,
