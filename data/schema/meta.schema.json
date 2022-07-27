@@ -16,14 +16,7 @@
         "from": { "type": "string" },
         "to": { "type": "string" },
         "description": {
-          "oneOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
+          "type": ["string", "null"]
         },
         "source": {
           "oneOf": [
@@ -83,11 +76,18 @@
     },
     "detail_level": { "enum": ["exact", "approximated", "corridor"] },
     "finished": {
-      "type": "string",
-      // "format": "date",
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Year or date when building of all segments have been done."
     },
-    "cost": { "type": ["string", "number"] },
+    "cost": { "type": ["string", "number", "null"] },
     "references": {
       "type": "object",
       "properties": {
