@@ -2,7 +2,7 @@
   {
     "id": "rs2-baden-wuerttemberg",
     "cost": "zw\u00f6lf Millionen Euro (Erste grobe Kostensch\u00e4tzungen)",
-    "finished": "",
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS2",
@@ -25,8 +25,8 @@
   },
   {
     "id": "rs3-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS3",
@@ -50,7 +50,7 @@
   {
     "id": "rs4-baden-wuerttemberg",
     "cost": "60 Mio. \u20ac",
-    "finished": "",
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS4",
@@ -73,8 +73,8 @@
   },
   {
     "id": "rs5-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "agreement_process",
     "general": {
       "ref": "RS5",
@@ -97,8 +97,8 @@
   },
   {
     "id": "rs6-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS6",
@@ -121,8 +121,8 @@
   },
   {
     "id": "rs7-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS7",
@@ -146,7 +146,7 @@
   {
     "id": "rs8-baden-wuerttemberg",
     "cost": "31 Mio. \u20ac",
-    "finished": "",
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS8",
@@ -169,8 +169,8 @@
   },
   {
     "id": "rs9-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS9",
@@ -194,7 +194,7 @@
   {
     "id": "rs11-baden-wuerttemberg",
     "cost": "24 Mio. \u20ac",
-    "finished": "",
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS11",
@@ -218,7 +218,7 @@
   {
     "id": "rs14-baden-wuerttemberg",
     "cost": "35 Mio. \u20ac",
-    "finished": "",
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS14",
@@ -241,8 +241,8 @@
   },
   {
     "id": "rs15-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS15",
@@ -265,8 +265,8 @@
   },
   {
     "id": "rs17-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "RS17",
@@ -289,8 +289,8 @@
   },
   {
     "id": "rs19-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS19",
@@ -313,8 +313,8 @@
   },
   {
     "id": "1-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "1",
@@ -337,8 +337,8 @@
   },
   {
     "id": "2-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "2",
@@ -361,8 +361,8 @@
   },
   {
     "id": "3-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "3",
@@ -385,8 +385,8 @@
   },
   {
     "id": "4-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "4",
@@ -409,8 +409,8 @@
   },
   {
     "id": "6-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "6",
@@ -433,8 +433,8 @@
   },
   {
     "id": "rs10-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS10",
@@ -457,8 +457,8 @@
   },
   {
     "id": "7-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "7",
@@ -481,8 +481,8 @@
   },
   {
     "id": "8-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "8",
@@ -505,8 +505,8 @@
   },
   {
     "id": "9-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "agreement_process",
     "general": {
       "ref": "9",
@@ -529,8 +529,8 @@
   },
   {
     "id": "10-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "10",
@@ -553,8 +553,8 @@
   },
   {
     "id": "11-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "11",
@@ -577,8 +577,8 @@
   },
   {
     "id": "14-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "14",
@@ -601,8 +601,8 @@
   },
   {
     "id": "15-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "15",
@@ -625,8 +625,8 @@
   },
   {
     "id": "16-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "16",
@@ -649,8 +649,8 @@
   },
   {
     "id": "17-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "17",
@@ -673,8 +673,8 @@
   },
   {
     "id": "18-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "18",
@@ -697,8 +697,8 @@
   },
   {
     "id": "19-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "in_progress",
     "general": {
       "ref": "19",
@@ -721,8 +721,8 @@
   },
   {
     "id": "20-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "20",
@@ -745,8 +745,8 @@
   },
   {
     "id": "21-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "21",
@@ -769,8 +769,8 @@
   },
   {
     "id": "22-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "22",
@@ -793,8 +793,8 @@
   },
   {
     "id": "23-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "23",
@@ -817,8 +817,8 @@
   },
   {
     "id": "24-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "agreement_process",
     "general": {
       "ref": "24",
@@ -841,8 +841,8 @@
   },
   {
     "id": "25-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "25",
@@ -865,8 +865,8 @@
   },
   {
     "id": "26-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "26",
@@ -889,8 +889,8 @@
   },
   {
     "id": "27-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "27",
@@ -913,8 +913,8 @@
   },
   {
     "id": "28-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "28",
@@ -937,8 +937,8 @@
   },
   {
     "id": "29-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "29",
@@ -961,8 +961,8 @@
   },
   {
     "id": "30-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "30",
@@ -985,8 +985,8 @@
   },
   {
     "id": "31-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "31",
@@ -1009,8 +1009,8 @@
   },
   {
     "id": "32-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "32",
@@ -1033,8 +1033,8 @@
   },
   {
     "id": "rsv1-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 1",
@@ -1057,8 +1057,8 @@
   },
   {
     "id": "rsv2-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 2",
@@ -1081,8 +1081,8 @@
   },
   {
     "id": "rsv3-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 3",
@@ -1105,8 +1105,8 @@
   },
   {
     "id": "rsv4-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 4",
@@ -1129,8 +1129,8 @@
   },
   {
     "id": "rsv5-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 5",
@@ -1153,8 +1153,8 @@
   },
   {
     "id": "rsv6-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 6",
@@ -1177,8 +1177,8 @@
   },
   {
     "id": "rsv7-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "discarded",
     "general": {
       "ref": "RSV 7",
@@ -1201,8 +1201,8 @@
   },
   {
     "id": "rsv8-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 8",
@@ -1225,8 +1225,8 @@
   },
   {
     "id": "rsv9-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 9",
@@ -1249,8 +1249,8 @@
   },
   {
     "id": "rsv10-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 10",
@@ -1273,8 +1273,8 @@
   },
   {
     "id": "1-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "1",
@@ -1297,8 +1297,8 @@
   },
   {
     "id": "2-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "2",
@@ -1321,8 +1321,8 @@
   },
   {
     "id": "3-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "3",
@@ -1345,8 +1345,8 @@
   },
   {
     "id": "4-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "4",
@@ -1369,8 +1369,8 @@
   },
   {
     "id": "5-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "5",
@@ -1393,8 +1393,8 @@
   },
   {
     "id": "6-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "6",
@@ -1417,8 +1417,8 @@
   },
   {
     "id": "7-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "7",
@@ -1441,8 +1441,8 @@
   },
   {
     "id": "frm1-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "in_progress",
     "general": {
       "ref": "FRM 1",
@@ -1465,8 +1465,8 @@
   },
   {
     "id": "frm2-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 2",
@@ -1489,8 +1489,8 @@
   },
   {
     "id": "frm3-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 3",
@@ -1513,8 +1513,8 @@
   },
   {
     "id": "frm4-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 4",
@@ -1537,8 +1537,8 @@
   },
   {
     "id": "frm5-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 5",
@@ -1561,8 +1561,8 @@
   },
   {
     "id": "frm6-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "FRM 6",
@@ -1585,8 +1585,8 @@
   },
   {
     "id": "frm7-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 7",
@@ -1609,8 +1609,8 @@
   },
   {
     "id": "frm8-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 8",
@@ -1633,8 +1633,8 @@
   },
   {
     "id": "frm9-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 9",
@@ -1657,8 +1657,8 @@
   },
   {
     "id": "1-mecklenburg-vorpommern",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "",
     "general": {
       "ref": "1",
@@ -1681,8 +1681,8 @@
   },
   {
     "id": "rs1-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "in_progress",
     "general": {
       "ref": "RS1",
@@ -1705,8 +1705,8 @@
   },
   {
     "id": "rs7-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS7",
@@ -1729,8 +1729,8 @@
   },
   {
     "id": "rs6-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS6",
@@ -1753,8 +1753,8 @@
   },
   {
     "id": "rs3-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS3",
@@ -1777,8 +1777,8 @@
   },
   {
     "id": "rs5-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS5",
@@ -1801,8 +1801,8 @@
   },
   {
     "id": "rs2-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS2",
@@ -1825,8 +1825,8 @@
   },
   {
     "id": "rs4-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS4",
@@ -1849,8 +1849,8 @@
   },
   {
     "id": "9-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "in_progress",
     "general": {
       "ref": "9",
@@ -1873,8 +1873,8 @@
   },
   {
     "id": "1-schleswig-holstein",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "1",
