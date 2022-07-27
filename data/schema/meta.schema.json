@@ -28,9 +28,10 @@
               "type": "null"
             }
           ]
-        }
+        },
+        "length": { "type": "number" }
       },
-      "required": ["from", "to"]
+      "required": ["from", "to", "length"]
     },
     "stakeholders": {
       "type": "array",
