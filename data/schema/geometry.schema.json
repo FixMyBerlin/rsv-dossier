@@ -93,7 +93,7 @@
                 "type": "boolean"
               },
               "stand": { "type": "string" },
-              "length": { "type": "string" },
+              "length": { "type": "number" },
               "description:planning_phase": {
                 "oneOf": [{ "type": "string" }, { "type": "null" }]
               }
