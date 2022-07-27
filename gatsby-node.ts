@@ -49,7 +49,8 @@ exports.onCreateNode = async ({
       });
     } catch (e) {
       if (e instanceof ValidationError) {
-        console.error(e);
+        console.error(`${jsonId}:`);
+        console.log(e);
       } else throw e;
     }
   }
