@@ -1,6 +1,6 @@
 {
+  "id": "rs8-baden-wuerttemberg",
   "type": "FeatureCollection",
-  "name": "rs8-baden-wuerttemberg",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }

@@ -5,7 +5,7 @@
   "required": ["type", "features", "bbox", "crs"],
   "additionalProperties": false,
   "properties": {
-    "name": {
+    "id": {
       "type": "string"
     },
     "crs": {

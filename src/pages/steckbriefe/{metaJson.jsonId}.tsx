@@ -30,10 +30,10 @@ export default Radschnellweg;
 
 export const query = graphql`
   query ($jsonId: String!) {
-    geometry: geometryJson(name: { eq: $jsonId }) {
+    geometry: geometryJson(jsonId: { eq: $jsonId }) {
       type
       bbox
-      name
+      id: jsonId
       features {
         type
         bbox
