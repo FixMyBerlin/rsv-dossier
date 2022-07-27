@@ -99,5 +99,15 @@
       }
     }
   },
-  "required": ["id", "general", "state", "cost", "finished"]
+  "required": ["id", "general", "state", "cost", "finished"],
+  "if": {
+    "properties": {
+      "general": { "properties": { "source": { "const": null } } }
+    }
+  },
+  "then": {
+    "properties": {
+      "general": { "properties": { "description": { "const": null } } }
+    }
+  }
 }
