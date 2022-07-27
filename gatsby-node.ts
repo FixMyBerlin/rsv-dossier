@@ -41,17 +41,25 @@ exports.onCreateNode = async ({
   cache,
   store,
 }) => {
-  const geometryValidator = new Validator();
-  // geometryValidator.addSchema(geometryJsonSchema, '/geometry');
-  if (node.internal.type === 'GeometryJson') {
-    const { id, jsonId, parent, children, internal, ...geometryJson } = node;
-    const result = geometryValidator.validate(
-      geometryJson,
-      geometryJsonSchema,
-      { throwFirst: false }
+  const jsonValidator = new Validator();
+
+  if (node.internal.type === 'MetaJson') {
+    const { id, jsonId, parent, children, internal, ...metaJson } = node;
+    const result = jsonValidator.validate(
+      { id: jsonId, ...metaJson },
+      metaJsonSchema
     );
     if (!result.valid) {
-      console.log(node.name);
+      console.log(`errors in ${jsonId}:`);
+      console.log(result.errors);
+    }
+  }
+
+  if (node.internal.type === 'GeometryJson') {
+    const { id, jsonId, parent, children, internal, ...geometryJson } = node;
+    const result = jsonValidator.validate(geometryJson, geometryJsonSchema);
+    if (!result.valid) {
+      console.log(`errors in ${node.name}:`);
       console.log(result.errors);
     }
     // geometryValidator.validate()
