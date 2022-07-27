@@ -946,8 +946,8 @@
       "from": "Weil am Rhein",
       "to": "Schliengen",
       "length": "28",
-      "description": "",
-      "source": ""
+      "description": null,
+      "source": null
     },
     "stakeholders": [
       {
@@ -956,7 +956,7 @@
       }
     ],
     "references": {
-      "website": ""
+      "website": null
     }
   },
   {
@@ -970,8 +970,8 @@
       "from": "Grenzach-Wyhlen",
       "to": "Schw\u00f6rstadt",
       "length": "28",
-      "description": "",
-      "source": ""
+      "description": null,
+      "source": null
     },
     "stakeholders": [
       {
@@ -980,7 +980,7 @@
       }
     ],
     "references": {
-      "website": ""
+      "website": null
     }
   },
   {
@@ -1018,8 +1018,8 @@
       "from": "T\u00fcbingen",
       "to": "Hechingen",
       "length": "24",
-      "description": "",
-      "source": ""
+      "description": null,
+      "source": null
     },
     "stakeholders": [
       {
@@ -1028,7 +1028,7 @@
       }
     ],
     "references": {
-      "website": ""
+      "website": null
     }
   },
   {
