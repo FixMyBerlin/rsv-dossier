@@ -16,7 +16,7 @@
         "planning_phase": null,
         "detail_level": "corridor",
         "variant": "Vorzugstrasse",
-        "length": "17745.868959088657",
+        "length": 17745.868959088657,
         "discarded": "false",
         "description:planning_phase": null
       },

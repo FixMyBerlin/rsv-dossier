@@ -18,7 +18,7 @@
         "variant": "Vorzugstrasse",
         "discarded": false,
         "stand": "07.06.2022",
-        "length": "26779.776",
+        "length": 26779.776,
         "description:planning_phase": null
       },
       "bbox": [7.611663, 47.812961, 7.83515, 47.997862],
