@@ -46,11 +46,13 @@ def csv_to_json(csvFilePath, jsonFilePath):
                 rsv_properties = {
                     "id": f"{ref}-{country}",
                     "cost": row["Kosten"],
-                    "finished": row["Fertigstellung"],
                     "state": row["Projektstand"],
                     # planning_phase: ""
                     # detail_level: ""
                 }
+                rsv_properties["finished"] = (
+                    None if row["Fertigstellung"] == "" else row["Fertigstellung"]
+                )
                 rsv_properties["general"] = {
                     "ref": row["Abkürzung"],
                     "name": row["Titel"],
@@ -69,7 +71,9 @@ def csv_to_json(csvFilePath, jsonFilePath):
                     }
                 ]
                 rsv_properties["references"] = {
-                    "website": row["Projektwebsite"],
+                    "website": None
+                    if row["Projektwebsite"] == ""
+                    else row["Projektwebsite"],
                     # "osm_relation": ""
                 }
 
