@@ -20,6 +20,8 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
       <div className="mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-12">
         <div className="mx-auto max-w-2xl lg:mr-0 lg:w-1/2 lg:max-w-none lg:pl-14">
           <h1 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            {Number.isNaN(parseFloat(meta.general.ref)) &&
+              `${meta.general.ref}: `}
             {meta.general.name}
           </h1>
           <div className="mt-6">

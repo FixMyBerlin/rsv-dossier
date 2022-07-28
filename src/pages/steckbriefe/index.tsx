@@ -46,7 +46,8 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
               Trassenverläufe bzw. -korridore. Enthalten sind RSV aus Hessen,
               Baden-Württemberg, Berlin, Niedersachsen, Schleswig-Holstein,
               Mecklenburg-Vorpommern, Nordrhein-Westfalen, Rheinland-Pfalz und
-              Hamburg. Die Liste wird fortlaufend erweitert.
+              Hamburg. Aktuell umfasst die Liste {radschnellwege.nodes.length}{' '}
+              Radschnellverbindungen und wird fortlaufend erweitert.{' '}
               <p>
                 Mail an{' '}
                 <MailToButtonLink
@@ -86,6 +87,8 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
                   </div>
                   <div className="relative flex-1 px-6 pt-12 pb-8 md:px-8">
                     <h3 className="text-xl font-medium text-slate-900">
+                      {Number.isNaN(parseFloat(radschnellweg.general.ref)) &&
+                        `${radschnellweg.general.ref}: `}
                       {radschnellweg.general.name}
                     </h3>
                     <p className="mt-4 text-base text-slate-500 line-clamp-3 md:line-clamp-5">
@@ -115,6 +118,7 @@ export const query = graphql`
       nodes {
         state
         general {
+          ref
           to
           from
           name

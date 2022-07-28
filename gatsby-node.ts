@@ -3,11 +3,12 @@ import fetch from 'node-fetch';
 import { Validator, ValidationError } from 'jsonschema';
 import { Buffer } from 'buffer';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
+import simplify from '@turf/simplify';
 import { staticMapRequest } from './src/utils';
 import metaJsonSchema from './data/schema/meta.schema.json' assert { type: 'json' };
 import geometryJsonSchema from './data/schema/geometry.schema.json' assert { type: 'json' };
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+export const onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       plugins: [new TsconfigPathsPlugin()],
@@ -16,7 +17,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 };
 
 // create a static map image for every RSV
-exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
+export const createSchemaCustomization = ({ actions: { createTypes } }) => {
   createTypes(`
     type MetaJson implements Node {
       geoJson: GeometryJson! @link(from: "jsonId", by: "jsonId")
@@ -25,7 +26,7 @@ exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
   `);
 };
 
-exports.onPostBootstrap = ({ getNodesByType }) => {
+export const onPostBootstrap = ({ getNodesByType }) => {
   const nGeometries = getNodesByType('GeometryJson').length;
   const nMeta = getNodesByType('MetaJson').length;
   if (nGeometries !== nMeta) {
@@ -35,12 +36,11 @@ exports.onPostBootstrap = ({ getNodesByType }) => {
   }
 };
 
-exports.onCreateNode = async ({
+export const onCreateNode = async ({
   node,
   actions: { createNode },
   createNodeId,
   cache,
-  store,
 }) => {
   const jsonValidator = new Validator();
 
@@ -68,10 +68,19 @@ exports.onCreateNode = async ({
     // generate static map from geometry
     const url = staticMapRequest(node, [1920, 1920]);
     // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
-    const arrBuffer = await fetch(url.toString()).then((response) =>
-      response.arrayBuffer()
-    );
+    let response = await fetch(url.toString());
 
+    // if the URL is too long we'll get an `414` from MapTiler
+    let tolerance = 0.000001;
+    while (response.status === 414) {
+      const simplified = simplify(node, { tolerance, highQuality: true });
+      const simplifiedUrl = staticMapRequest(simplified, [1920, 1920]);
+      // eslint-disable-next-line no-await-in-loop
+      response = await fetch(simplifiedUrl.toString());
+      tolerance *= 2;
+    }
+
+    const arrBuffer = await response.arrayBuffer();
     createFileNodeFromBuffer({
       buffer: Buffer.from(arrBuffer),
       name: node.jsonId,
@@ -79,7 +88,6 @@ exports.onCreateNode = async ({
       createNode,
       createNodeId,
       cache,
-      store,
     });
   }
 };
