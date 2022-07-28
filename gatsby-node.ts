@@ -26,11 +26,12 @@ exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
 };
 
 exports.onPostBootstrap = ({ getNodesByType }) => {
-  if (
-    getNodesByType('GeometryJson').length !== getNodesByType('MetaJson').length
-  ) {
-    console.error('Number of geometries does no match the length of meta.json');
-    // TODO: throw some error
+  const nGeometries = getNodesByType('GeometryJson').length;
+  const nMeta = getNodesByType('MetaJson').length;
+  if (nGeometries !== nMeta) {
+    throw new Error(
+      `The provided number of geometries (${nGeometries}) does no match the number of meta information (${nMeta})`
+    );
   }
 };
 
