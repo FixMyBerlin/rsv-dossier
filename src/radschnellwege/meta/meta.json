@@ -2,7 +2,7 @@
   {
     "id": "rs1-baden-wuerttemberg",
     "cost": "drei Millionen Euro",
-    "finished": "",
+    "finished": null,
     "state": "in_progress",
     "general": {
       "ref": "RS1",
@@ -207,7 +207,7 @@
   {
     "id": "rs12-baden-w\u00fcrttemberg",
     "cost": "2 Mio. \u20ac",
-    "finished": "",
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS12",
