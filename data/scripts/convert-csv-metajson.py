@@ -13,7 +13,7 @@ parser.add_argument(
     "-r",
     "--region",
     help="Output only highways containing the string which is contained in the ref or Bundesland (case-insensitive)",
-    default="",
+    default="all",
 )
 parser.add_argument(
     "-o",
@@ -36,10 +36,10 @@ def csv_to_json(csvFilePath, jsonFilePath):
         csvReader = csv.DictReader(csvf)
 
         # convert each csv row into python dict
-        for row in list(csvReader)[1:]:
+        for row in list(csvReader):
             country = row["Bundesland"].lower()
             if row["GeoJSON"] == "ja" and (
-                selected_regions == "" or (country in selected_regions)
+                selected_regions == ["all"] or (country in selected_regions)
             ):
                 ref = row["Abk\u00fcrzung"].lower().replace(" ", "")
 
@@ -56,7 +56,7 @@ def csv_to_json(csvFilePath, jsonFilePath):
                     "name": row["Titel"],
                     "from": row["von"],
                     "to": row["bis"],
-                    "length": row["Länge"],
+                    "length": float(row["Länge"]),
                     "description": row["(Kurzbeschreibung)"],
                     "source": row["Quellen"],
                     # "slug": ""
