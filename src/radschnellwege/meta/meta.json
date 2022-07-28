@@ -10,7 +10,7 @@
       "from": "B\u00f6blingen",
       "to": "Stuttgart",
       "length": 20,
-      "description": "Anbindung der St\u00e4dte B\u00f6blingen und Sindelfingen f\u00fcr Radpendler an das Oberzentrum Stuttgart. In einem Bauabschnitt von acht Kilometern L\u00e4nge wurde die gepflasterte R\u00f6merstra\u00dfe auf vier Meter Breite asphaltiert und mit einer Beleuchtung versehen. Der Ausbau kostete drei Millionen Euro und wurde im Fr\u00fchjahr 2019 fertiggestellt. Der Sindelfinger Zweig f\u00fchrt von der Mahdentalstra\u00dfe \u00fcber den M\u00f6nchsbrunnen und das Musberger Str\u00e4\u00dfle bis zur R\u00f6merstra\u00dfe. Auf 80 Meter Strecke bleibt aus Gr\u00fcnden des Denkmalschutzes das historische Pflaster sichtbar. In Planung: eine bessere \u00dcberquerung der K1057 bei der Panzerkaserne B\u00f6blingen wahrscheinlich mit einer Br\u00fccke.",
+      "description": "Anbindung der St\u00e4dte B\u00f6blingen und Sindelfingen f\u00fcr Radpendler an das Oberzentrum Stuttgart. In einem Bauabschnitt von acht Kilometern L\u00e4nge wurde die gepflasterte R\u00f6merstra\u00dfe auf vier Meter Breite asphaltiert und mit einer Beleuchtung versehen. Der Ausbau kostete drei Millionen Euro und wurde im Fr\u00fchjahr 2019 fertiggestellt. Der Sindelfinger Zweig f\u00fchrt von der Mahdentalstra\u00dfe \u00fcber den M\u00f6nchsbrunnen und das Musberger Str\u00e4\u00dfle bis zur R\u00f6merstra\u00dfe. Auf 80 Meter Strecke bleibt aus Gr\u00fcnden des Denkmalschutzes das historische Pflaster sichtbar. In Planung: eine bessere \u00dcberquerung der K1057 bei der Panzerkaserne B\u00f6blingen, wahrscheinlich mit einer Br\u00fccke.",
       "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg"
     },
     "stakeholders": [
@@ -202,6 +202,30 @@
     "stakeholders": [{ "name": "Landkreis Tübingen", "roles": ["authority"] }],
     "references": {
       "website": "https://rp.baden-wuerttemberg.de/rpt/abt4/radwegeplanung/rs-l-tuebingen-rottenburg/"
+    }
+  },
+  {
+    "id": "rs12-baden-w\u00fcrttemberg",
+    "cost": "2 Mio. \u20ac",
+    "finished": "",
+    "state": "planning",
+    "general": {
+      "ref": "RS12",
+      "name": "Radschnellweg Offenburg \u2013 Gengenbach",
+      "from": "Offenburg",
+      "to": "Gengenbach",
+      "length": 12,
+      "description": "Die Vorschl\u00e4ge zum Trassenverlauf verbinden die St\u00e4dte Offenburg und Gegenbach und bieten direkte Anschl\u00fcsse sowohl f\u00fcr die Wohnorte wie auch die Gewerbe- und Industriegebiete. Die zwei Standorte der Hochschule Offenburg werden ebenfalls ber\u00fccksichtigt. Mit den Finanzmitteln des Bundes kann jetzt die Planung beginnen. Der voraussichtliche Baubeginn ist f\u00fcr 2026 geplant.",
+      "source": "https://vm.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/radschnellwege-im-land-erhalten-bundesfoerderung/"
+    },
+    "stakeholders": [
+      {
+        "name": "",
+        "roles": ["authority"]
+      }
+    ],
+    "references": {
+      "website": ""
     }
   },
   {
