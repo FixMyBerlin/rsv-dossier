@@ -43,31 +43,32 @@ exports.onCreateNode = async ({
 exports.createSchemaCustomization = ({
   actions: { createTypes, createFieldExtension },
 }) => {
-  createFieldExtension({
-    name: 'defaultMap',
-    extend() {
-      return {
-        type: 'File',
-        resolve(source, args, context) {
-          return context.nodeModel.findOne({
-            type: 'File',
-          });
-        },
-      };
-    },
-  });
-  if (process.env['CONTEXT'] !== 'production') {
+  if (process.env.FAST_BUILD !== '1') {
+    createFieldExtension({
+      name: 'defaultMap',
+      extend() {
+        return {
+          type: 'File',
+          resolve(source, args, context) {
+            return context.nodeModel.findOne({
+              query: { filter: { name: { eq: 'default_map' } } },
+              type: 'File',
+            });
+          },
+        };
+      },
+    });
     createTypes(`
     type MetaJson implements Node {
-      geoJson: GeometryJson @link(from: "jsonId", by: "name")
-      staticMap: File @defaultMap
+      geoJson: GeometryJson! @link(from: "jsonId", by: "name")
+      staticMap: File! @defaultMap
     }
   `);
   } else {
     createTypes(`
     type MetaJson implements Node {
-      geoJson: GeometryJson @link(from: "jsonId", by: "name")
-      staticMap: File @link(from: "jsonId", by: "name")
+      geoJson: GeometryJson! @link(from: "jsonId", by: "name")
+      staticMap: File! @link(from: "jsonId", by: "name")
     }
   `);
   }
