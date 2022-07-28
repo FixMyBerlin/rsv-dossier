@@ -12,7 +12,7 @@
       "properties": {
         "id": "1",
         "detail_level": "rough",
-        "state": "agreed",
+        "state": "agreement_process",
         "id_rsv": "RS17",
         "planning_phase": "preliminary",
         "variant": "Vorzugstrasse",

@@ -16,7 +16,11 @@
         "from": { "type": "string" },
         "to": { "type": "string" },
         "description": { "type": "string" },
-        "slug": { "type": "string", "description": "Defines an URL slug", "format": "uri-reference" }
+        "slug": {
+          "type": "string",
+          "description": "Defines an URL slug",
+          "format": "uri-reference"
+        }
       },
       "required": ["from", "to", "slug"]
     },
@@ -46,7 +50,14 @@
       ]
     },
     "status": {
-      "enum": ["idea", "agreed", "planning", "in_progress", "done", "discarded"]
+      "enum": [
+        "idea",
+        "agreement_process",
+        "planning",
+        "in_progress",
+        "done",
+        "discarded"
+      ]
     },
     "planning_phase": {
       "enum": [
