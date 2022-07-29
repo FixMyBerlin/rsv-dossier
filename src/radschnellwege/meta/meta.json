@@ -52,7 +52,7 @@
       "name": "Radschnellweg Heilbronn - Bad Wimpfen",
       "from": "Bad Wimpfen",
       "to": "Heilbronn",
-      "length": 9,
+      "length": 9.5,
       "description": "Als wichtigen Beitrag zur Stärkung des Wirtschaftsraums \nHeilbronn-Neckarsulm streben Land, Landkreis sowie die Städte Heilbronn \nund Neckarsulm die Umsetzung einer Radschnellverbindung in \nNord-Süd-Richtung von Bad Wimpfen über Neckarsulm nach Heilbronn an.\nDie Radschnellverbindung Bad \nWimpfen - Neckarsulm - Heilbronn ist eine von drei Leuchtturmprojekten \ndes Landes, für die das Land die Baulastträgerschaft übernommen hat. Das\n Land dokumentiert damit die Bedeutung der Radschnellverbindungen für \neine neue Radkultur in Baden-Württemberg.",
       "source": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/seiten/radschnellweg/"
     },
@@ -94,7 +94,7 @@
       "name": "Radschnellweg Schorndorf - Fellbach",
       "from": "Schorndorf",
       "to": "Fellbach",
-      "length": 21,
+      "length": 21.7,
       "description": "2019 wurde die Machbarkeitsstudie des Rems-Murr-Kreises für eine Radschnellverbindung (RSV) zwischen Schorndorf und Fellbach fertig gestellt. Ergebnis war eine präferierte Trasse („Vorzugstrasse“) mit einer Gesamtlänge von 21,7 km, die zu 85% die Qualitätsstandards für eine Radschnellverbindung erfüllt. Ein deutlich positiver Kosten-Nutzen-Faktor von 2,5 wurde mit der Studie nachgewiesen.",
       "source": "https://www.fellbach.de/de/Leben-in-Fellbach/Mobilitaet/Radschnellweg"
     },
@@ -316,7 +316,7 @@
       "name": "Wörth am Rhein – Karlsruhe",
       "from": "Wörth am Rhein",
       "to": "Karlsruhe",
-      "length": 6,
+      "length": 6.2,
       "description": "Im Frühjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
       "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg#Regierungsbezirk_Karlsruhe"
     },
@@ -337,7 +337,7 @@
       "name": "Eggenstein-Leopoldshafen – Karlsruhe",
       "from": "Leopoldshafen",
       "to": "Karlsruhe",
-      "length": 6,
+      "length": 6.2,
       "description": "Im Frühjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
       "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg#Regierungsbezirk_Karlsruhe"
     },
@@ -358,7 +358,7 @@
       "name": "Bruchsal – Karlsruhe",
       "from": "Bruchsal",
       "to": "Karlsruhe",
-      "length": 19,
+      "length": 19.7,
       "description": "Im Frühjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
       "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg#Regierungsbezirk_Karlsruhe"
     },
@@ -400,7 +400,7 @@
       "name": "Bühl / Baden-Baden – Karlsruhe",
       "from": "Bühl",
       "to": "Karlsruhe",
-      "length": 45,
+      "length": 45.5,
       "description": "Im Frühjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
       "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg#Regierungsbezirk_Karlsruhe"
     },
@@ -550,7 +550,7 @@
       "name": "Obersulm – Obereisesheim",
       "from": "Obersulm",
       "to": "Obereisesheim",
-      "length": 12,
+      "length": 12.5,
       "description": "Die Stadt Heilbronn, die Stadt Neckarsulm und der Landkreis Heilbronn stellen aktuell eine Machbarkeitsstudie für Radschnellverbindungen im Raum Heilbronn / Neckarsulm zusammen. Die Trassen sollen die geplante Nord-Süd-Radschnellverbindung („Pilotprojekt des Landes Baden-Württemberg“) ergänzen und als Zubringer dienen.",
       "source": "https://radschnellweg-hn.de/?p=online-umfrage"
     },
@@ -747,7 +747,7 @@
       "name": "Radschnellweg Offenburg – Strasbourg",
       "from": "Offenburg",
       "to": "Strasbourg",
-      "length": 17,
+      "length": 17.5,
       "description": "Die Radschnellverbindung wurde 2018/2019 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gefördert. Hinsichtlich der Potenziale erfolgte 2020 eine Ergänzende Untersuchung zur Machbarkeitsstudie. In Folge hat das Land aufgrund der sehr hohen Potenziale die Baulastträgerschaft für den Abschnitt Offenburg – Strasbourg übernommen und wird zeitnah in die Planung einsteigen",
       "source": "https://www.region-suedlicher-oberrhein.de/de/projekte/radschnellwege/index.php"
     },
@@ -795,7 +795,7 @@
       "name": "Radschnellweg Freiburg - Umkirch/March - Breisach",
       "from": "Freiburg",
       "to": "Breisach",
-      "length": 23,
+      "length": 23.5,
       "description": "Der Abschnitt der Radschnellverbindung von Freiburg nach Umkirch/March wurde 2017/2018 im Rahmen einer  Machbarkeitsstudie  des Regionalverbands erfolgreich untersucht. Der weiterführende Abschnitt von Umkirch/March nach Breisach wurde 2021/2022 im Rahmen einer weiteren Machbarkeitsstudie mit ebenfalls positiven Ergebnissen untersucht. Die Studien wurden mit 80 Prozent der Kosten vom Land gefördert. Nach Fertigstellung beider Studien entscheidet nun das Ministerium für Verkehr Baden-Württemberg über die Baulastträgerschaft und damit die konkreten Umsetzungsmodalitäten für die Verbindung von Freiburg nach Breisach.",
       "source": "https://www.region-suedlicher-oberrhein.de/de/projekte/radschnellwege/index.php"
     },
@@ -819,7 +819,7 @@
       "name": "Radschnellweg Freiburg - Kirchzarten",
       "from": "Freiburg",
       "to": "Kircharten",
-      "length": 9,
+      "length": 9.7,
       "description": "Die Radschnellverbindung wurde 2021 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gefördert. Nach Fertigstellung der Studie entscheidet nun das Ministerium für Verkehr Baden-Württemberg über die Baulastträgerschaft und damit die konkreten Umsetzungsmodalitäten für die Verbindung",
       "source": "https://www.region-suedlicher-oberrhein.de/de/projekte/radschnellwege/index.php"
     },
@@ -843,7 +843,7 @@
       "name": "Radschnellweg Freiburg – Bad Krozingen – Heitersheim – Müllheim",
       "from": "Freiburg",
       "to": "Müllheim",
-      "length": 26,
+      "length": 26.5,
       "description": "Die Radschnellverbindung wurde 2021 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gefördert. Nach Fertigstellung der Studie entscheidet nun das Ministerium für Verkehr Baden-Württemberg über die Baulastträgerschaft und damit die konkreten Umsetzungsmodalitäten für die Verbindung",
       "source": "https://www.region-suedlicher-oberrhein.de/de/projekte/radschnellwege/index.php"
     },
@@ -937,7 +937,7 @@
       "name": "Y-Trasse",
       "from": "Kreuzberg",
       "to": "Adlershof",
-      "length": 20,
+      "length": 20.2,
       "description": "Der Trassenkorridor für die \"Y-Trasse\" verläuft im Südosten Berlins \nzunächst parallel zur Autobahn BAB 113 und dem südlichen Teltowkanal. Am\n Britzer Hafen teilt sich die Trasse in zwei Streckenarme auf. Die \nwestliche Abzweigung führt quer durch Neukölln entlang des Tempelhofer \nFeldes über die Hasenheide bis zum Zielpunkt Südstern in Kreuzberg. Die \nzweite Abzweigung der Radschnellverbindung verläuft östlich davon \nentlang der Autobahn BAB 100 auf dem Mauerweg bis zum Görlitzer Park in \nKreuzberg.",
       "source": "https://www.infravelo.de/projekt/y-trasse/"
     },
@@ -954,7 +954,7 @@
       "name": "Mitte – Tegel – Spandau",
       "from": "Berlin Mitte",
       "to": "Spandau",
-      "length": 14,
+      "length": 14.4,
       "description": "Die Radschnellverbindung \"Mitte – Tegel – Spandau\" soll den Bezirk Spandau mit dem Berliner Hauptbahnhof verbinden. Der Trassenkorridor verläuft überwiegend parallel zum Berlin-Spandauer Schifffahrtskanal. Er kreuzt den nördlichen S-Bahn-Ring sowie die Stadtautobahn A 111. Gute Verknüpfungen zum Bereich Flughafen Tegel, der Europacity sowie dem Radfernweg Berlin-Kopenhagen können entstehen.",
       "source": "https://www.infravelo.de/projekt/mitte-tegel-spandau/"
     },
@@ -973,7 +973,7 @@
       "name": "Königsweg – Kronprinzessinnenweg",
       "from": "Berlin Wannsee",
       "to": "S-Bahnstation Halensee",
-      "length": 12,
+      "length": 12.2,
       "description": "Die Radschnellverbindung soll vom Wannsee aus über den \nKronprinzessinnenweg und den Königsweg quer durch den Grunewald bis zur \nMesse Berlin und dem westlichen Ende des Kurfürstendamms führen. Auf den\n ersten Kilometern führt diese Trasse durch ein Wohngebiet. Der zweite \nAbschnitt verläuft parallel zur Avus auf einem Waldstück bis zum \nS-Bahnhof Grunewald und geht von dort in den dritten Abschnitt über – \neine Einfamilienhaussiedlung. Voraussichtlicher Endpunkt wird die \nS-Bahnstation Halensee am Kurfürstendamm sein.",
       "source": "https://www.infravelo.de/projekt/koenigsweg-kronprinzessinnenweg/"
     },
@@ -992,7 +992,7 @@
       "name": "Panke-Trail",
       "from": "S-Bahnhof Karow",
       "to": "Torstraße",
-      "length": 18,
+      "length": 18.4,
       "description": "Der Trassenkorridor für den \"Panke-Trail\" verläuft ab dem S-Bahnhof Karow im Bezirk Pankow zunächst parallel zur S-Bahn-Trasse in Richtung Zentrum. Im Bereich des S- und U-Bahnhofs Pankow teilt sich die Trasse in zwei Arme: eine Abzweigung führt in Richtung Südwesten über Gesundbrunnen bis zum Nordbahnhof, die zweite in Richtung Süden über Prenzlauer Berg bis zur Torstraße in Berlin Mitte.",
       "source": "https://www.infravelo.de/projekt/panke-trail/"
     },
@@ -1009,7 +1009,7 @@
       "name": "West-Route",
       "from": "Spandau",
       "to": "S-Bahnhof Tiergarten",
-      "length": 15,
+      "length": 15.3,
       "description": "Der Trassenkorridor der \"West-Route\" beginnt in Berlin-Spandau an der Landesgrenze zu Dallgow in Brandenburg und endet am S-Bahnhof Tiergarten in Charlottenburg-Wilmersdorf. Die Trasse führt entlang der Heerstraße und den U-Bahnhöfen Theodor-Heuss-Platz, Kaiserdamm, Bismarckstraße und Ernst-Reuter-Platz sowie der Straße des 17. Juni bis zum S-Bahnhof Tiergarten. Dabei werden zahlreiche Wohnquartiere mit dem Olympiastadion, der Einkaufsmeile entlang der Wilmersdorfer Straße, der Technischen Universität sowie weiteren Schul- und Ausbildungszentren im und am S-Bahn-Ring verbunden. Ab dem S-Bahnhof Tiergarten verläuft die Trasse weiter als \"Ost-Route\" bis an die östliche Berliner Stadtgrenze zu Brandenburg.",
       "source": "https://www.infravelo.de/projekt/west-route/"
     },
@@ -1026,7 +1026,7 @@
       "name": "Teltowkanalroute",
       "from": "Lichterfelde",
       "to": "Bahnhof Südkreuz",
-      "length": 8,
+      "length": 8.8,
       "description": "Der Trassenkorridor der \"Teltowkanalroute\" beginnt an der nordöstlichen \nGrenze der brandenburgischen Stadt Teltow zum Land Berlin. Er verläuft \nüberwiegend entlang des Teltowkanals durch die Stadtteile Lichterfelde, \nLankwitz und Steglitz (Bezirk Steglitz-Zehlendorf). Im östlichen Bereich\n von Steglitz verlässt der Korridor den Verlauf des Kanals und \ndurchschreitet in nördliche Richtung Wohngebiete in Richtung des Bezirks\n Tempelhof-Schöneberg. Im Stadtteil Schöneberg verläuft der Korridor \nparallel und westlich zur Bahntrasse bis zur Bundesautobahn \n100/Südkreuz. ",
       "source": "https://www.infravelo.de/projekt/teltowkanalroute/"
     },
@@ -1045,7 +1045,7 @@
       "name": "Spandauer Damm – Freiheit",
       "from": "S-Bahnhof Westend",
       "to": "Altstadt Spandau",
-      "length": 3,
+      "length": 3.4,
       "description": "Der Trassenkorridor der Radschnellverbindung \"Spandauer Damm – Freiheit\" verläuft südlich der Spree, vom S-Bahnhof Westend bis in die Spandauer Altstadt. Durch die Route sollen zahlreiche Wohnquartiere mit dem S-Bahn-Ring und dem Gewerbegebiet Ruhleben verbunden sowie Anschlussmöglichkeiten an die beiden Radfernwege Havel-Radweg und Spree-Rad- und Wanderweg geschaffen werden.",
       "source": "https://www.infravelo.de/projekt/spandauer-damm-freiheit/"
     },
@@ -1064,7 +1064,7 @@
       "name": "Nonnendammallee – Falkenseer Chaussee",
       "from": "Jakob-Kaiser-Platz, Charlottenburg",
       "to": "Altstadt Spandau",
-      "length": 11,
+      "length": 11.9,
       "description": "Der Trassenkorridor für die Radschnellverbindung \"Nonnendammallee – Falkenseer Chaussee\" führt durch die Bezirke Charlottenburg-Wilmersdorf und Spandau. Die Trasse beginnt am Jakob-Kaiser-Platz, im Norden von Charlottenburg. Von hier verläuft sie nördlich des Spreeufers in Richtung Zitadelle Spandau und verknüpft dabei zahlreiche Wohnquartiere sowie die Siemensstadt mit der Spandauer Altstadt. Nach Querung der Havel über die Juliusturmbrücke geht es weiter über den Falkenseer Damm bis zum Falkenhagener Feld an der Stadtgrenze. Ab hier schließt sich der \"Radweg der Sympathie\" an, der bis nach Falkensee führt.",
       "source": "https://www.infravelo.de/projekt/nonnendammallee-falkenseer-chaussee/"
     },
@@ -1100,7 +1100,7 @@
       "name": "Reinickendorf-Route",
       "from": "Reinickendorf",
       "to": "Mitte",
-      "length": 10,
+      "length": 10.86,
       "description": "Der Trassenkorridor \"Reinickendorf-Route\" verbindet die Stadtteile Reinickendorf und Wedding mit dem künftigen Schumacher-Quartier sowie der Urban Tech Republic (UTR) auf dem Gelände des ehemaligen Flughafen Tegel. Ziel ist es, die Reinickendorf-Route mit der geplanten Radschnellverbindung \"Mitte - Tegel - Spandau\" zu verknüpfen.",
       "source": "https://www.infravelo.de/projekt/reinickendorf-route-1/"
     },
@@ -1502,7 +1502,7 @@
       "name": "Radschnellweg Köln – Frechen",
       "from": "Köln",
       "to": "Frechen",
-      "length": 8,
+      "length": 8.4,
       "description": "Mit der Strecke Köln – Frechen wird der erste Teil eines größeren \nRadschnellwegenetzes in der Region Rheinland umgesetzt. Die 8,4 km lange\n Strecke verbindet die Innenstadt von Köln mit Frechen und erschließt \ndabei wichtige Alltags- und Freizeitziele. Das größte Ziel im Verlauf \ndes Radschnellweges ist die Kölner Universität, aber auch mehrere \nGewerbegebiete sowie der Innere und äußere Grüngürtel und das \nRheinenergie-Stadion liegen im Verlauf.",
       "source": "https://www.radschnellwege.nrw/radschnellweg-koeln-frechen/"
     },
@@ -1622,7 +1622,7 @@
       "name": "Radschnellweg Monheim",
       "from": "Düsseldorf",
       "to": "Leverkusen",
-      "length": 5,
+      "length": 5.4,
       "description": "Zwischen Düsseldorf und Leverkusen entsteht auf Monheimer Stadtgebiet ein 5,4 km langer Radschnellweg. Er schließt im Norden direkt an den RS5 Neuss-Düsseldorf-Langenfeld an und stellt damit eine optimale Radverkehrsverbindung zu wichtigen Pendlerzielen im Großraum Düsseldorf her.",
       "source": "https://www.radschnellwege.nrw/radschnellweg-monheim/"
     },
