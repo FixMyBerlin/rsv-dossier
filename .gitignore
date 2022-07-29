@@ -34,3 +34,5 @@ data/data/*.json
 *.schema.html
 schema_doc.css
 schema_doc.min.js
+
+src/gatsby-types.d.ts

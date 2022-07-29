@@ -3,15 +3,12 @@ import { ButtonLink } from '~/components/Links';
 import { RSVMap } from '~/components/Map';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { RsvProgressBar } from '~/components/Steckbrief';
-import { MetaJson, StaticMap } from '~/types/index';
 import { Heading2 } from '~/components/Text';
 
-type Props = {
-  meta: MetaJson & StaticMap;
-  geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString>;
-};
-
-export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
+export const RSVDetails: React.FC<Queries.SteckbriefQuery> = ({
+  meta,
+  geometry,
+}) => {
   return (
     <div className="relative min-h-[860px] bg-white">
       <div className="mx-auto flex aspect-square max-h-[860px] max-w-full overflow-hidden md:max-w-[860px] lg:absolute lg:left-0 lg:w-1/2 lg:shadow-xl">
