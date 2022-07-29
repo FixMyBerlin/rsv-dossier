@@ -26,24 +26,24 @@ export const createSchemaCustomization = ({ actions: { createTypes } }) => {
   `);
 };
 
-export const onPostBootstrap = ({ getNodesByType }) => {
+export const onPostBootstrap = ({ getNodesByType, reporter }) => {
   const nGeometries = getNodesByType('GeometryJson').length;
   const nMeta = getNodesByType('MetaJson').length;
   if (nGeometries !== nMeta) {
-    throw new Error(
+    reporter.error(
       `The provided number of geometries (${nGeometries}) does no match the number of meta information (${nMeta})`
     );
   }
 };
 
 export const onCreateNode = async ({
+  reporter,
   node,
   actions: { createNode },
   createNodeId,
   cache,
 }) => {
   const jsonValidator = new Validator();
-
   const jsonSchema = {
     MetaJson: metaJsonSchema,
     GeometryJson: geometryJsonSchema,
@@ -51,6 +51,7 @@ export const onCreateNode = async ({
   const nodeType = node.internal.type;
   if (nodeType === 'MetaJson' || nodeType === 'GeometryJson') {
     // validate meta data against JSON schema
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { id, jsonId, parent, children, internal, ...json } = node;
     try {
       jsonValidator.validate({ id: jsonId, ...json }, jsonSchema[nodeType], {
@@ -58,8 +59,7 @@ export const onCreateNode = async ({
       });
     } catch (e) {
       if (e instanceof ValidationError) {
-        console.error(`${jsonId}:`);
-        console.log(e);
+        reporter.error(`${jsonId}:\n\n`, e);
       } else throw e;
     }
   }
