@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "GeoJSON FeatureCollection RSV",
   "type": "object",
-  "required": ["type", "features", "bbox", "crs"],
+  "required": ["type", "features", "bbox", "crs", "id"],
   "additionalProperties": false,
   "properties": {
     "id": {
