@@ -2,15 +2,15 @@
   {
     "id": "rs1-baden-wuerttemberg",
     "cost": "drei Millionen Euro",
-    "finished": "",
+    "finished": null,
     "state": "in_progress",
     "general": {
       "ref": "RS1",
       "name": "Radschnellweg B\u00f6blingen/Sindelfingen  \u2013 Stuttgart",
       "from": "B\u00f6blingen",
       "to": "Stuttgart",
-      "length": "20",
-      "description": "Anbindung der St\u00e4dte B\u00f6blingen und Sindelfingen f\u00fcr Radpendler an das Oberzentrum Stuttgart. In einem Bauabschnitt von acht Kilometern L\u00e4nge wurde die gepflasterte R\u00f6merstra\u00dfe auf vier Meter Breite asphaltiert und mit einer Beleuchtung versehen. Der Ausbau kostete drei Millionen Euro und wurde im Fr\u00fchjahr 2019 fertiggestellt. Der Sindelfinger Zweig f\u00fchrt von der Mahdentalstra\u00dfe \u00fcber den M\u00f6nchsbrunnen und das Musberger Str\u00e4\u00dfle bis zur R\u00f6merstra\u00dfe. Auf 80 Meter Strecke bleibt aus Gr\u00fcnden des Denkmalschutzes das historische Pflaster sichtbar. In Planung: eine bessere \u00dcberquerung der K1057 bei der Panzerkaserne B\u00f6blingen wahrscheinlich mit einer Br\u00fccke.",
+      "length": 20,
+      "description": "Anbindung der St\u00e4dte B\u00f6blingen und Sindelfingen f\u00fcr Radpendler an das Oberzentrum Stuttgart. In einem Bauabschnitt von acht Kilometern L\u00e4nge wurde die gepflasterte R\u00f6merstra\u00dfe auf vier Meter Breite asphaltiert und mit einer Beleuchtung versehen. Der Ausbau kostete drei Millionen Euro und wurde im Fr\u00fchjahr 2019 fertiggestellt. Der Sindelfinger Zweig f\u00fchrt von der Mahdentalstra\u00dfe \u00fcber den M\u00f6nchsbrunnen und das Musberger Str\u00e4\u00dfle bis zur R\u00f6merstra\u00dfe. Auf 80 Meter Strecke bleibt aus Gr\u00fcnden des Denkmalschutzes das historische Pflaster sichtbar. In Planung: eine bessere \u00dcberquerung der K1057 bei der Panzerkaserne B\u00f6blingen, wahrscheinlich mit einer Br\u00fccke.",
       "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg"
     },
     "stakeholders": [
@@ -20,52 +20,44 @@
       }
     ],
     "references": {
-      "website": ""
+      "website": null
     }
   },
   {
     "id": "rs2-baden-wuerttemberg",
-    "cost": "zw\u00f6lf Millionen Euro (Erste grobe Kostensch\u00e4tzungen)",
-    "finished": "",
+    "cost": "zwölf Millionen Euro (Erste grobe Kostenschätzungen)",
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS2",
       "name": "Radschnellweg Heidelberg - Mannheim",
       "from": "Mannheim",
       "to": "Heidelberg",
-      "length": "22",
-      "description": "Radschnellwege bieten Radfahrerinnen und Radfahrern eine attraktive M\u00f6glichkeit, l\u00e4ngere Strecken z\u00fcgig und sicher zur\u00fcckzulegen. Daher f\u00f6rdert das Land Baden-W\u00fcrttemberg lokale Machbarkeitsstudien f\u00fcr Radschnellwege und plant drei Pilotstrecken. Eine dieser Pilotstrecken ist der Radschnellweg Heidelberg-Mannheim.",
+      "length": 22,
+      "description": "Radschnellwege bieten Radfahrerinnen und Radfahrern eine attraktive Möglichkeit, längere Strecken zügig und sicher zurückzulegen. Daher fördert das Land Baden-Württemberg lokale Machbarkeitsstudien für Radschnellwege und plant drei Pilotstrecken. Eine dieser Pilotstrecken ist der Radschnellweg Heidelberg-Mannheim.",
       "source": "https://www.radschnellweg-hd-ma.de/radschnellverbindung"
     },
     "stakeholders": [
-      {
-        "name": "Verband Region Rhein-Neckar",
-        "roles": ["authority"]
-      }
+      { "name": "Verband Region Rhein-Neckar", "roles": ["authority"] }
     ],
-    "references": {
-      "website": "https://www.radschnellweg-hd-ma.de/"
-    }
+    "references": { "website": "https://www.radschnellweg-hd-ma.de/" }
   },
   {
     "id": "rs3-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS3",
       "name": "Radschnellweg Heilbronn - Bad Wimpfen",
       "from": "Bad Wimpfen",
       "to": "Heilbronn",
-      "length": "9,5",
-      "description": "Als wichtigen Beitrag zur St\u00e4rkung des Wirtschaftsraums \nHeilbronn-Neckarsulm streben Land, Landkreis sowie die St\u00e4dte Heilbronn \nund Neckarsulm die Umsetzung einer Radschnellverbindung in \nNord-S\u00fcd-Richtung von Bad Wimpfen \u00fcber Neckarsulm nach Heilbronn an.\nDie Radschnellverbindung Bad \nWimpfen - Neckarsulm - Heilbronn ist eine von drei Leuchtturmprojekten \ndes Landes, f\u00fcr die das Land die Baulasttr\u00e4gerschaft \u00fcbernommen hat. Das\n Land dokumentiert damit die Bedeutung der Radschnellverbindungen f\u00fcr \neine neue Radkultur in Baden-W\u00fcrttemberg.",
+      "length": 9.5,
+      "description": "Als wichtigen Beitrag zur Stärkung des Wirtschaftsraums \nHeilbronn-Neckarsulm streben Land, Landkreis sowie die Städte Heilbronn \nund Neckarsulm die Umsetzung einer Radschnellverbindung in \nNord-Süd-Richtung von Bad Wimpfen über Neckarsulm nach Heilbronn an.\nDie Radschnellverbindung Bad \nWimpfen - Neckarsulm - Heilbronn ist eine von drei Leuchtturmprojekten \ndes Landes, für die das Land die Baulastträgerschaft übernommen hat. Das\n Land dokumentiert damit die Bedeutung der Radschnellverbindungen für \neine neue Radkultur in Baden-Württemberg.",
       "source": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/seiten/radschnellweg/"
     },
     "stakeholders": [
-      {
-        "name": "Regierungspr\u00e4sidium Stuttgart",
-        "roles": ["authority"]
-      }
+      { "name": "Regierungspräsidium Stuttgart", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/seiten/radschnellweg/"
@@ -73,23 +65,20 @@
   },
   {
     "id": "rs4-baden-wuerttemberg",
-    "cost": "60 Mio. \u20ac",
-    "finished": "",
+    "cost": "60 Mio. €",
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS4",
       "name": "Radschnellweg Esslingen - Reichenbach",
       "from": "Esslingen",
       "to": "Reichenbach",
-      "length": "18",
-      "description": "Als wichtiger Beitrag zur St\u00e4rkung des Wirtschaftsraums Mittlerer Neckar\n streben das Land Baden-W\u00fcrttemberg und der Landkreis Esslingen die \nUmsetzung einer Radschnellverbindung in Ost-West-Richtung von \nReichenbach kommend \u00fcber Plochingen und Esslingen nach Stuttgart an. \nDie Radschnellverbindung Esslingen \u2013 Plochingen - Reichenbach a. d. Fils ist eine von drei Leuchtturmprojekten des Landes, f\u00fcr die das Land die Baulasttr\u00e4gerschaft \u00fcbernommen hat. Das Land dokumentiert damit die Bedeutung der Radschnellverbindungen f\u00fcr eine neue Radkultur in Baden-W\u00fcrttemberg.",
+      "length": 18,
+      "description": "Als wichtiger Beitrag zur Stärkung des Wirtschaftsraums Mittlerer Neckar\n streben das Land Baden-Württemberg und der Landkreis Esslingen die \nUmsetzung einer Radschnellverbindung in Ost-West-Richtung von \nReichenbach kommend über Plochingen und Esslingen nach Stuttgart an. \nDie Radschnellverbindung Esslingen – Plochingen - Reichenbach a. d. Fils ist eine von drei Leuchtturmprojekten des Landes, für die das Land die Baulastträgerschaft übernommen hat. Das Land dokumentiert damit die Bedeutung der Radschnellverbindungen für eine neue Radkultur in Baden-Württemberg.",
       "source": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/radschnellweg-esslingen-reichenbach/"
     },
     "stakeholders": [
-      {
-        "name": "Landeshauptstadt Stuttgart",
-        "roles": ["authority"]
-      }
+      { "name": "Landeshauptstadt Stuttgart", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/radschnellweg-esslingen-reichenbach/"
@@ -97,23 +86,20 @@
   },
   {
     "id": "rs5-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "agreement_process",
     "general": {
       "ref": "RS5",
       "name": "Radschnellweg Schorndorf - Fellbach",
       "from": "Schorndorf",
       "to": "Fellbach",
-      "length": "21,7",
-      "description": "2019 wurde die Machbarkeitsstudie des Rems-Murr-Kreises f\u00fcr eine Radschnellverbindung (RSV) zwischen Schorndorf und Fellbach fertig gestellt. Ergebnis war eine pr\u00e4ferierte Trasse (\u201eVorzugstrasse\u201c) mit einer Gesamtl\u00e4nge von 21,7 km, die zu 85% die Qualit\u00e4tsstandards f\u00fcr eine Radschnellverbindung erf\u00fcllt. Ein deutlich positiver Kosten-Nutzen-Faktor von 2,5 wurde mit der Studie nachgewiesen.",
+      "length": 21.7,
+      "description": "2019 wurde die Machbarkeitsstudie des Rems-Murr-Kreises für eine Radschnellverbindung (RSV) zwischen Schorndorf und Fellbach fertig gestellt. Ergebnis war eine präferierte Trasse („Vorzugstrasse“) mit einer Gesamtlänge von 21,7 km, die zu 85% die Qualitätsstandards für eine Radschnellverbindung erfüllt. Ein deutlich positiver Kosten-Nutzen-Faktor von 2,5 wurde mit der Studie nachgewiesen.",
       "source": "https://www.fellbach.de/de/Leben-in-Fellbach/Mobilitaet/Radschnellweg"
     },
     "stakeholders": [
-      {
-        "name": "Landeshauptstadt Stuttgart",
-        "roles": ["authority"]
-      }
+      { "name": "Landeshauptstadt Stuttgart", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.fellbach.de/de/Leben-in-Fellbach/Mobilitaet/Radschnellweg"
@@ -121,88 +107,74 @@
   },
   {
     "id": "rs6-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS6",
       "name": "Radschnellweg Freiburg - Waldkirch/Emmendingen",
       "from": "Freiburg",
       "to": "Emmendigen",
-      "length": "20",
-      "description": "Der Korridor des RS 6 wird in Form einer Y-Trasse dargestellt. Die Relationen beziehen sich auf die zwei Achsen Freiburg \u2013 Emmendingen sowie Freiburg \u2013 Waldkirch. Von der Kernstadt Freiburgs in Richtung Norden bis zur Gemeinde Gundelfingen bzw. Denzlingen (je nach Verzweigung der Trassen) verlaufen sie auf einem gemeinsamen Stamm, bevor sie sich einmal in Richtung Nordwesten nach Emmendingen und einmal in Richtung Nordosten nach Waldkirch aufteilen.",
+      "length": 20,
+      "description": "Der Korridor des RS 6 wird in Form einer Y-Trasse dargestellt. Die Relationen beziehen sich auf die zwei Achsen Freiburg – Emmendingen sowie Freiburg – Waldkirch. Von der Kernstadt Freiburgs in Richtung Norden bis zur Gemeinde Gundelfingen bzw. Denzlingen (je nach Verzweigung der Trassen) verlaufen sie auf einem gemeinsamen Stamm, bevor sie sich einmal in Richtung Nordwesten nach Emmendingen und einmal in Richtung Nordosten nach Waldkirch aufteilen.",
       "source": "https://www.breisgau-y.de/radschnellweg"
     },
     "stakeholders": [
       {
-        "name": "Regionalverband S\u00fcdlicher Oberrheim (RVSO)",
+        "name": "Regionalverband Südlicher Oberrheim (RVSO)",
         "roles": ["authority"]
       }
     ],
-    "references": {
-      "website": "https://www.breisgau-y.de/radschnellweg"
-    }
+    "references": { "website": "https://www.breisgau-y.de/radschnellweg" }
   },
   {
     "id": "rs7-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS7",
       "name": "Radschnellweg Wiesental",
       "from": "Schopfheim",
-      "to": "L\u00f6rrach",
-      "length": "18",
-      "description": "Der Radschnellweg im Wiesental (RS7) ist die neue Verbindung zwischen Schopfheim und Basel f\u00fcr den Radverkehr. Zuk\u00fcnftig sollen Alltags- und Freizeitradelnde hier auf einer komfortablen Strecke sicher, schnell und st\u00f6rungsarm vorankommen. Dabei werden neben den jeweiligen Ortszentren auch Naherholungsgebiete, das neue Zentralklinikum L\u00f6rrach sowie weitere Lern- und Arbeitsst\u00e4tten miteinander verbunden.",
+      "to": "Lörrach",
+      "length": 18,
+      "description": "Der Radschnellweg im Wiesental (RS7) ist die neue Verbindung zwischen Schopfheim und Basel für den Radverkehr. Zukünftig sollen Alltags- und Freizeitradelnde hier auf einer komfortablen Strecke sicher, schnell und störungsarm vorankommen. Dabei werden neben den jeweiligen Ortszentren auch Naherholungsgebiete, das neue Zentralklinikum Lörrach sowie weitere Lern- und Arbeitsstätten miteinander verbunden.",
       "source": "https://www.radschnellweg-wiesental.de/radschnellweg"
     },
-    "stakeholders": [
-      {
-        "name": "Landkreis L\u00f6rrach",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": "https://www.radschnellweg-wiesental.de/"
-    }
+    "stakeholders": [{ "name": "Landkreis Lörrach", "roles": ["authority"] }],
+    "references": { "website": "https://www.radschnellweg-wiesental.de/" }
   },
   {
     "id": "rs8-baden-wuerttemberg",
-    "cost": "31 Mio. \u20ac",
-    "finished": "",
+    "cost": "31 Mio. €",
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS8",
-      "name": "Radschnellweg Ludwigsburg \u2013 Waiblingen",
+      "name": "Radschnellweg Ludwigsburg – Waiblingen",
       "from": "Ludwigsburg",
       "to": "Waiblingen",
-      "length": "15",
-      "description": "Der Radschnellweg RS 8 befindet sich bereits in der Planung.\nGemeinschaftsprojekt des Rems-Murr-Kreises (Federf\u00fchrung) mit dem Landkreis Ludwigsburg und den St\u00e4dten Ludwigsburg, Waiblingen und Remseck am Neckar",
+      "length": 15,
+      "description": "Der Radschnellweg RS 8 befindet sich bereits in der Planung.\nGemeinschaftsprojekt des Rems-Murr-Kreises (Federführung) mit dem Landkreis Ludwigsburg und den Städten Ludwigsburg, Waiblingen und Remseck am Neckar",
       "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     },
-    "stakeholders": [
-      {
-        "name": "Rems-Murr-Kreis",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "Rems-Murr-Kreis", "roles": ["authority"] }],
     "references": {
       "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     }
   },
   {
     "id": "rs9-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS9",
       "name": "Radschnellweg Friedrichshafen - Baindt",
       "from": "Friedrichshafen",
       "to": "Baindt",
-      "length": "29",
-      "description": "In einem Gemeinschaftsprojekt planen die St\u00e4dte Friedrichshafen, Ravensburg und Weingarten, die Gemeinden Meckenbeuren, Baienfurt und Baindt, der Bodenseekreis und der Landkreis Ravensburg die Umsetzung einer Radschnellverbindung. Koordiniert wird das gemeinsame Vorhaben durch den Regionalverband Bodensee-Oberschwaben. Der Bund und das Land Baden-W\u00fcrttemberg unterst\u00fctzen die Umsetzung der Radschnellverbindung finanziell.",
+      "length": 29,
+      "description": "In einem Gemeinschaftsprojekt planen die Städte Friedrichshafen, Ravensburg und Weingarten, die Gemeinden Meckenbeuren, Baienfurt und Baindt, der Bodenseekreis und der Landkreis Ravensburg die Umsetzung einer Radschnellverbindung. Koordiniert wird das gemeinsame Vorhaben durch den Regionalverband Bodensee-Oberschwaben. Der Bund und das Land Baden-Württemberg unterstützen die Umsetzung der Radschnellverbindung finanziell.",
       "source": "https://www.rs9.info/"
     },
     "stakeholders": [
@@ -211,47 +183,40 @@
         "roles": ["authority"]
       }
     ],
-    "references": {
-      "website": "https://www.rs9.info/"
-    }
+    "references": { "website": "https://www.rs9.info/" }
   },
   {
     "id": "rs11-baden-wuerttemberg",
-    "cost": "24 Mio. \u20ac",
-    "finished": "",
+    "cost": "24 Mio. €",
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS11",
-      "name": "Radschnellweg Rottenburg -T\u00fcbingen",
+      "name": "Radschnellweg Rottenburg -Tübingen",
       "from": "Rottenburg am Neckar",
-      "to": "T\u00fcbingen",
-      "length": "12",
-      "description": "Zwischen den St\u00e4dten T\u00fcbingen und Rottenburg a. N. soll ein Radschnellweg entstehen.\nDie Ma\u00dfnahme befindet sich in der Vorplanung. Derzeit wird im Rahmen einer ergebnisoffenen Pr\u00fcfung unter Ber\u00fccksichtigung aller relevanten Belange eine Vorzugsvariante herausgearbeitet.",
+      "to": "Tübingen",
+      "length": 12,
+      "description": "Zwischen den Städten Tübingen und Rottenburg a. N. soll ein Radschnellweg entstehen.\nDie Maßnahme befindet sich in der Vorplanung. Derzeit wird im Rahmen einer ergebnisoffenen Prüfung unter Berücksichtigung aller relevanten Belange eine Vorzugsvariante herausgearbeitet.",
       "source": "https://rp.baden-wuerttemberg.de/rpt/abt4/radwegeplanung/rs-l-tuebingen-rottenburg/"
     },
-    "stakeholders": [
-      {
-        "name": "Landkreis T\u00fcbingen",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "Landkreis Tübingen", "roles": ["authority"] }],
     "references": {
       "website": "https://rp.baden-wuerttemberg.de/rpt/abt4/radwegeplanung/rs-l-tuebingen-rottenburg/"
     }
   },
   {
-    "id": "rs14-baden-wuerttemberg",
-    "cost": "35 Mio. \u20ac",
-    "finished": "",
+    "id": "rs12-baden-wuerttemberg",
+    "cost": "2 Mio. \u20ac",
+    "finished": null,
     "state": "planning",
     "general": {
-      "ref": "RS14",
-      "name": "Radschnellverbindung im Filstal",
-      "from": "Ebersbach a.d. Fils",
-      "to": "S\u00fc\u00dfen",
-      "length": "23",
-      "description": "Im Sommer 2018 stellte der Landkreis G\u00f6ppingen seine Machbarkeitsstudie zu einer Radschnellverbindung im Filstal fertig: Im Rahmen einer umfassenden Variantenbewertung wurden in vier Untersuchungsabschnitten insgesamt 11 m\u00f6gliche Trassenf\u00fchrungen untersucht und bewertet. Die Vorzugstrasse wurde im Sommer 2019 auf Basis der Variantenbewertung und in Abstimmung mit allen Beteiligten definiert",
-      "source": "https://www.landkreis-goeppingen.de/start/Landratsamt/radschnellverbindung+filstal.html"
+      "ref": "RS12",
+      "name": "Radschnellweg Offenburg \u2013 Gengenbach",
+      "from": "Offenburg",
+      "to": "Gengenbach",
+      "length": 12,
+      "description": "Die Vorschl\u00e4ge zum Trassenverlauf verbinden die St\u00e4dte Offenburg und Gegenbach und bieten direkte Anschl\u00fcsse sowohl f\u00fcr die Wohnorte wie auch die Gewerbe- und Industriegebiete. Die zwei Standorte der Hochschule Offenburg werden ebenfalls ber\u00fccksichtigt. Mit den Finanzmitteln des Bundes kann jetzt die Planung beginnen. Der voraussichtliche Baubeginn ist f\u00fcr 2026 geplant.",
+      "source": "https://vm.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/radschnellwege-im-land-erhalten-bundesfoerderung/"
     },
     "stakeholders": [
       {
@@ -260,28 +225,44 @@
       }
     ],
     "references": {
+      "website": null
+    }
+  },
+  {
+    "id": "rs14-baden-wuerttemberg",
+    "cost": "35 Mio. €",
+    "finished": null,
+    "state": "planning",
+    "general": {
+      "ref": "RS14",
+      "name": "Radschnellverbindung im Filstal",
+      "from": "Ebersbach a.d. Fils",
+      "to": "Süßen",
+      "length": 23,
+      "description": "Im Sommer 2018 stellte der Landkreis Göppingen seine Machbarkeitsstudie zu einer Radschnellverbindung im Filstal fertig: Im Rahmen einer umfassenden Variantenbewertung wurden in vier Untersuchungsabschnitten insgesamt 11 mögliche Trassenführungen untersucht und bewertet. Die Vorzugstrasse wurde im Sommer 2019 auf Basis der Variantenbewertung und in Abstimmung mit allen Beteiligten definiert",
+      "source": "https://www.landkreis-goeppingen.de/start/Landratsamt/radschnellverbindung+filstal.html"
+    },
+    "stakeholders": [{ "name": "", "roles": ["authority"] }],
+    "references": {
       "website": "https://www.landkreis-goeppingen.de/start/Landratsamt/radschnellverbindung+filstal.html"
     }
   },
   {
     "id": "rs15-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS15",
       "name": "Radschnellverbindung Darmstadt - Rhein-Neckar ",
       "from": "Darmstadt",
       "to": "Heidelberg / Mannheim",
-      "length": "20",
-      "description": "Eine weitere Machbarkeitsstudie f\u00fcr einen rund 70 Kilometer langen \nFahrradschnellweg von Mannheim/Heidelberg in Richtung Darmstadt wird vom\n VRRN vorgelegt. Die Ergebnisse k\u00f6nnten Basis sein f\u00fcr den Anschlu\u00df an \ndie im Bau befindliche Radschnellverbindung zwischen Frankfurt und \nDarmstadt.\n\nDer Abschnitt Mannheim - Viernheim - Weinheim wird aktuell von den \ndrei St\u00e4dten gemeinschaftlich geplant. Erste sichtbare Entwicklungen \nsind bereits im Areal der Mannheimer Bundesgartenschau zu beobachten, \ndie 2023 den ersten Bauabschnitt er\u00f6ffnen wird. Das Regierungspr\u00e4sidium \nKarlsruhe legt derzeit im Rahmen des Planfeststellungsverfahrens die Planunterlagen \u00f6ffentlich aus.",
+      "length": 20,
+      "description": "Eine weitere Machbarkeitsstudie für einen rund 70 Kilometer langen \nFahrradschnellweg von Mannheim/Heidelberg in Richtung Darmstadt wird vom\n VRRN vorgelegt. Die Ergebnisse könnten Basis sein für den Anschluß an \ndie im Bau befindliche Radschnellverbindung zwischen Frankfurt und \nDarmstadt.\n\nDer Abschnitt Mannheim - Viernheim - Weinheim wird aktuell von den \ndrei Städten gemeinschaftlich geplant. Erste sichtbare Entwicklungen \nsind bereits im Areal der Mannheimer Bundesgartenschau zu beobachten, \ndie 2023 den ersten Bauabschnitt eröffnen wird. Das Regierungspräsidium \nKarlsruhe legt derzeit im Rahmen des Planfeststellungsverfahrens die Planunterlagen öffentlich aus.",
       "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     },
     "stakeholders": [
-      {
-        "name": "Verband Region Rhein-Neckar",
-        "roles": ["authority"]
-      }
+      { "name": "Verband Region Rhein-Neckar", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
@@ -289,71 +270,58 @@
   },
   {
     "id": "rs17-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "RS17",
-      "name": "Korntal-M\u00fcnchingen - Weil der Stadt",
-      "from": "Korntal-M\u00fcnchingen",
+      "name": "Korntal-Münchingen - Weil der Stadt",
+      "from": "Korntal-Münchingen",
       "to": "Weil der Stadt",
-      "length": "24",
-      "description": "Machbarkeitsstudie unter Federf\u00fchrung des Landkreises B\u00f6blingen 2019 abgeschlossen; Vorplanung l\u00e4uft.\nDer sp\u00e4tere RS17 wird teils Landes-, teils Kreisradschnellweg (RS17 K/L)",
+      "length": 24,
+      "description": "Machbarkeitsstudie unter Federführung des Landkreises Böblingen 2019 abgeschlossen; Vorplanung läuft.\nDer spätere RS17 wird teils Landes-, teils Kreisradschnellweg (RS17 K/L)",
       "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     },
-    "stakeholders": [
-      {
-        "name": "Landkreis B\u00f6blingen",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "Landkreis Böblingen", "roles": ["authority"] }],
     "references": {
       "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     }
   },
   {
     "id": "rs19-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS19",
-      "name": "Radschnellweg T\u00fcbingen - Reutlingen",
-      "from": "T\u00fcbingen",
+      "name": "Radschnellweg Tübingen - Reutlingen",
+      "from": "Tübingen",
       "to": "Reutlingen",
-      "length": "15",
-      "description": "Zwischen den St\u00e4dten T\u00fcbingen und Reutlingen soll ein Radschnellweg entstehen. Derzeit wird im Rahmen einer ergebnisoffenen Pr\u00fcfung unter Ber\u00fccksichtigung aller relevanten Belange eine Vorzugsvariante herausgearbeitet.",
+      "length": 15,
+      "description": "Zwischen den Städten Tübingen und Reutlingen soll ein Radschnellweg entstehen. Derzeit wird im Rahmen einer ergebnisoffenen Prüfung unter Berücksichtigung aller relevanten Belange eine Vorzugsvariante herausgearbeitet.",
       "source": "https://rp.baden-wuerttemberg.de/rpt/abt4/radwegeplanung/rs-l-tuebingen-reutlingen/"
     },
-    "stakeholders": [
-      {
-        "name": "Landkreis T\u00fcbingen",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "Landkreis Tübingen", "roles": ["authority"] }],
     "references": {
       "website": "https://rp.baden-wuerttemberg.de/rpt/abt4/radwegeplanung/rs-l-tuebingen-reutlingen/"
     }
   },
   {
     "id": "1-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "1",
-      "name": "W\u00f6rth am Rhein \u2013 Karlsruhe",
-      "from": "W\u00f6rth am Rhein",
+      "name": "Wörth am Rhein – Karlsruhe",
+      "from": "Wörth am Rhein",
       "to": "Karlsruhe",
-      "length": "6,2",
-      "description": "Im Fr\u00fchjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
+      "length": 6.2,
+      "description": "Im Frühjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
       "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg#Regierungsbezirk_Karlsruhe"
     },
     "stakeholders": [
-      {
-        "name": "Regionalverband Mittlerer Oberrhein",
-        "roles": ["authority"]
-      }
+      { "name": "Regionalverband Mittlerer Oberrhein", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.region-karlsruhe.de/projekte/regionale-projekte/radschnellverbindungen/"
@@ -361,23 +329,20 @@
   },
   {
     "id": "2-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "2",
-      "name": "Eggenstein-Leopoldshafen \u2013 Karlsruhe",
+      "name": "Eggenstein-Leopoldshafen – Karlsruhe",
       "from": "Leopoldshafen",
       "to": "Karlsruhe",
-      "length": "6,2",
-      "description": "Im Fr\u00fchjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
+      "length": 6.2,
+      "description": "Im Frühjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
       "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg#Regierungsbezirk_Karlsruhe"
     },
     "stakeholders": [
-      {
-        "name": "Regionalverband Mittlerer Oberrhein",
-        "roles": ["authority"]
-      }
+      { "name": "Regionalverband Mittlerer Oberrhein", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.region-karlsruhe.de/projekte/regionale-projekte/radschnellverbindungen/"
@@ -385,23 +350,20 @@
   },
   {
     "id": "3-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "3",
-      "name": "Bruchsal \u2013 Karlsruhe",
+      "name": "Bruchsal – Karlsruhe",
       "from": "Bruchsal",
       "to": "Karlsruhe",
-      "length": "19,7",
-      "description": "Im Fr\u00fchjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
+      "length": 19.7,
+      "description": "Im Frühjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
       "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg#Regierungsbezirk_Karlsruhe"
     },
     "stakeholders": [
-      {
-        "name": "Regionalverband Mittlerer Oberrhein",
-        "roles": ["authority"]
-      }
+      { "name": "Regionalverband Mittlerer Oberrhein", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.region-karlsruhe.de/projekte/regionale-projekte/radschnellverbindungen/"
@@ -409,23 +371,20 @@
   },
   {
     "id": "4-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "4",
-      "name": "Pfinztal \u2013 Karlsruhe",
+      "name": "Pfinztal – Karlsruhe",
       "from": "Pfinztal",
       "to": "Karlsruhe",
-      "length": "11",
-      "description": "Im Fr\u00fchjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
+      "length": 11,
+      "description": "Im Frühjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
       "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg#Regierungsbezirk_Karlsruhe"
     },
     "stakeholders": [
-      {
-        "name": "Regionalverband Mittlerer Oberrhein",
-        "roles": ["authority"]
-      }
+      { "name": "Regionalverband Mittlerer Oberrhein", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.region-karlsruhe.de/projekte/regionale-projekte/radschnellverbindungen/"
@@ -433,23 +392,20 @@
   },
   {
     "id": "6-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "6",
-      "name": "B\u00fchl / Baden-Baden \u2013 Karlsruhe",
-      "from": "B\u00fchl",
+      "name": "Bühl / Baden-Baden – Karlsruhe",
+      "from": "Bühl",
       "to": "Karlsruhe",
-      "length": "45,5",
-      "description": "Im Fr\u00fchjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
+      "length": 45.5,
+      "description": "Im Frühjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
       "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg#Regierungsbezirk_Karlsruhe"
     },
     "stakeholders": [
-      {
-        "name": "Regionalverband Mittlerer Oberrhein",
-        "roles": ["authority"]
-      }
+      { "name": "Regionalverband Mittlerer Oberrhein", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.region-karlsruhe.de/projekte/regionale-projekte/radschnellverbindungen/"
@@ -457,23 +413,20 @@
   },
   {
     "id": "rs10-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS10",
       "name": "Karlsruhe- Ettlingen",
       "from": "Karlsruhe",
       "to": "Ettlingen",
-      "length": "5",
-      "description": "Im Fr\u00fchjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
-      "source": "https://www.bmvi.de/SharedDocs/DE/Artikel/StV/Radverkehr/radschnellwege.html\nhttps://www.region-karlsruhe.de/fileadmin/user_upload/4_Projekte/Radschnellverbindungen/Machbarkeitsstudie_RSV/2019_02_08_RVMO_Bericht.pdf"
+      "length": 5,
+      "description": "Im Frühjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
+      "source": "https://www.region-karlsruhe.de/fileadmin/user_upload/4_Projekte/Radschnellverbindungen/Machbarkeitsstudie_RSV/2019_02_08_RVMO_Bericht.pdf"
     },
     "stakeholders": [
-      {
-        "name": "Regionalverband Mittlerer Oberrhein",
-        "roles": ["authority"]
-      }
+      { "name": "Regionalverband Mittlerer Oberrhein", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.region-karlsruhe.de/projekte/regionale-projekte/radschnellverbindungen/"
@@ -481,21 +434,21 @@
   },
   {
     "id": "7-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "7",
       "name": "Ringroute Karlsruhe",
       "from": "Karlsruhe",
       "to": "Karlsruhe",
-      "length": "26",
-      "description": "Im Fr\u00fchjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
+      "length": 26,
+      "description": "Im Frühjahr 2019 wurde eine Machbarkeitsstudie vorgestellt, in der 120 km Radrouten auf Eignung als Radschnellverbindungen hin untersucht wurden. Das Netz besteht aus einer Rundrunde im Bereich Karlsruhe und 6 radialen Anschlussrouten an diesen Radring:",
       "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg#Regierungsbezirk_Karlsruhe"
     },
     "stakeholders": [
       {
-        "name": "Ministerium f\u00fcr Verkehr Baden-W\u00fcrttemberg",
+        "name": "Ministerium für Verkehr Baden-Württemberg",
         "roles": ["authority"]
       }
     ],
@@ -505,23 +458,20 @@
   },
   {
     "id": "8-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "8",
-      "name": "Radschnellverbindung Bietigheim-Bissingen \u2013 Stuttgart",
+      "name": "Radschnellverbindung Bietigheim-Bissingen – Stuttgart",
       "from": "Bietigheim-Bissingen",
       "to": "Stuttgart",
-      "length": "15",
-      "description": "Gemeinschaftsprojekt des Rems-Murr-Kreises (Federf\u00fchrung) mit dem Landkreis Ludwigsburg und den St\u00e4dten Ludwigsburg, Waiblingen und Remseck am Neckar",
+      "length": 15,
+      "description": "Gemeinschaftsprojekt des Rems-Murr-Kreises (Federführung) mit dem Landkreis Ludwigsburg und den Städten Ludwigsburg, Waiblingen und Remseck am Neckar",
       "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     },
     "stakeholders": [
-      {
-        "name": "Landkreis Ludwigsburg",
-        "roles": ["authority"]
-      }
+      { "name": "Landkreis Ludwigsburg", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
@@ -529,23 +479,20 @@
   },
   {
     "id": "9-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "agreement_process",
     "general": {
       "ref": "9",
       "name": "Radschnellverbindung Vaihingen/Enz - Stuttgart",
       "from": "Vaihingen/Enz",
       "to": "Stuttgart",
-      "length": "20",
-      "description": "Machbarkeitsstudie unter Federf\u00fchrung des Landkreises Ludwigsburg abgeschlossen; aktuell laufen Vorplanungen in Zust\u00e4ndigkeit des Landkreises",
+      "length": 20,
+      "description": "Machbarkeitsstudie unter Federführung des Landkreises Ludwigsburg abgeschlossen; aktuell laufen Vorplanungen in Zuständigkeit des Landkreises",
       "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     },
     "stakeholders": [
-      {
-        "name": "Landkreis Ludwigsburg ",
-        "roles": ["authority"]
-      }
+      { "name": "Landkreis Ludwigsburg ", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
@@ -553,23 +500,20 @@
   },
   {
     "id": "10-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "10",
       "name": "Radschnellverbindung Leonberg - Stuttgart",
       "from": "Leonberg",
       "to": "Stuttgart",
-      "length": "16",
-      "description": "Machbarkeitsstudien des Landkreises B\u00f6blingen und der Stadt Stuttgart abgeschlossen. Abstimmungsprozesse laufen.",
+      "length": 16,
+      "description": "Machbarkeitsstudien des Landkreises Böblingen und der Stadt Stuttgart abgeschlossen. Abstimmungsprozesse laufen.",
       "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     },
     "stakeholders": [
-      {
-        "name": "Landeshauptstadt Stuttgart",
-        "roles": ["authority"]
-      }
+      { "name": "Landeshauptstadt Stuttgart", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
@@ -577,23 +521,20 @@
   },
   {
     "id": "11-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "11",
       "name": "Radschnellverbindung Ditzingen - Stuttgart",
       "from": "Ditzingen",
       "to": "Stuttgart",
-      "length": "16",
+      "length": 16,
       "description": "Machbarkeitsstudie der Stadt Stuttgart abgeschlossen.",
       "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     },
     "stakeholders": [
-      {
-        "name": "Landeshauptstadt Stuttgart",
-        "roles": ["authority"]
-      }
+      { "name": "Landeshauptstadt Stuttgart", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
@@ -601,136 +542,101 @@
   },
   {
     "id": "14-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "14",
-      "name": "Obersulm \u2013 Obereisesheim",
+      "name": "Obersulm – Obereisesheim",
       "from": "Obersulm",
       "to": "Obereisesheim",
-      "length": "12,5",
-      "description": "Die Stadt Heilbronn, die Stadt Neckarsulm und der Landkreis Heilbronn stellen aktuell eine Machbarkeitsstudie f\u00fcr Radschnellverbindungen im Raum Heilbronn / Neckarsulm zusammen. Die Trassen sollen die geplante Nord-S\u00fcd-Radschnellverbindung (\u201ePilotprojekt des Landes Baden-W\u00fcrttemberg\u201c) erg\u00e4nzen und als Zubringer dienen.",
+      "length": 12.5,
+      "description": "Die Stadt Heilbronn, die Stadt Neckarsulm und der Landkreis Heilbronn stellen aktuell eine Machbarkeitsstudie für Radschnellverbindungen im Raum Heilbronn / Neckarsulm zusammen. Die Trassen sollen die geplante Nord-Süd-Radschnellverbindung („Pilotprojekt des Landes Baden-Württemberg“) ergänzen und als Zubringer dienen.",
       "source": "https://radschnellweg-hn.de/?p=online-umfrage"
     },
-    "stakeholders": [
-      {
-        "name": "Landkreis Heilbronn",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": "https://radschnellweg-hn.de/?p=online-umfrage"
-    }
+    "stakeholders": [{ "name": "Landkreis Heilbronn", "roles": ["authority"] }],
+    "references": { "website": "https://radschnellweg-hn.de/?p=online-umfrage" }
   },
   {
     "id": "15-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "15",
-      "name": "Obersulm \u2013 Weinsberg \u2013 Heilbronn",
+      "name": "Obersulm – Weinsberg – Heilbronn",
       "from": "Obersulm",
       "to": "Heilbronn",
-      "length": "11",
-      "description": "Die Stadt Heilbronn, die Stadt Neckarsulm und der Landkreis Heilbronn stellen aktuell eine Machbarkeitsstudie f\u00fcr Radschnellverbindungen im Raum Heilbronn / Neckarsulm zusammen. Die Trassen sollen die geplante Nord-S\u00fcd-Radschnellverbindung (\u201ePilotprojekt des Landes Baden-W\u00fcrttemberg\u201c) erg\u00e4nzen und als Zubringer dienen.",
+      "length": 11,
+      "description": "Die Stadt Heilbronn, die Stadt Neckarsulm und der Landkreis Heilbronn stellen aktuell eine Machbarkeitsstudie für Radschnellverbindungen im Raum Heilbronn / Neckarsulm zusammen. Die Trassen sollen die geplante Nord-Süd-Radschnellverbindung („Pilotprojekt des Landes Baden-Württemberg“) ergänzen und als Zubringer dienen.",
       "source": "https://radschnellweg-hn.de/?p=online-umfrage"
     },
-    "stakeholders": [
-      {
-        "name": "Landkreis Heilbronn",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": "https://radschnellweg-hn.de/?p=online-umfrage"
-    }
+    "stakeholders": [{ "name": "Landkreis Heilbronn", "roles": ["authority"] }],
+    "references": { "website": "https://radschnellweg-hn.de/?p=online-umfrage" }
   },
   {
     "id": "16-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "16",
-      "name": "Heilbronn \u2013 Leingarten \u2013 Schwaigern",
+      "name": "Heilbronn – Leingarten – Schwaigern",
       "from": "Heilbronn",
       "to": "Schwaigern",
-      "length": "22",
-      "description": "Die Stadt Heilbronn, die Stadt Neckarsulm und der Landkreis Heilbronn stellen aktuell eine Machbarkeitsstudie f\u00fcr Radschnellverbindungen im Raum Heilbronn / Neckarsulm zusammen. Die Trassen sollen die geplante Nord-S\u00fcd-Radschnellverbindung (\u201ePilotprojekt des Landes Baden-W\u00fcrttemberg\u201c) erg\u00e4nzen und als Zubringer dienen.",
+      "length": 22,
+      "description": "Die Stadt Heilbronn, die Stadt Neckarsulm und der Landkreis Heilbronn stellen aktuell eine Machbarkeitsstudie für Radschnellverbindungen im Raum Heilbronn / Neckarsulm zusammen. Die Trassen sollen die geplante Nord-Süd-Radschnellverbindung („Pilotprojekt des Landes Baden-Württemberg“) ergänzen und als Zubringer dienen.",
       "source": "https://radschnellweg-hn.de/?p=online-umfrage"
     },
-    "stakeholders": [
-      {
-        "name": "Landkreis Heilbronn",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": "https://radschnellweg-hn.de/?p=online-umfrage"
-    }
+    "stakeholders": [{ "name": "Landkreis Heilbronn", "roles": ["authority"] }],
+    "references": { "website": "https://radschnellweg-hn.de/?p=online-umfrage" }
   },
   {
     "id": "17-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "17",
-      "name": "Bad Wimpfen \u2013 Offenau \u2013 Gundelsheim",
+      "name": "Bad Wimpfen – Offenau – Gundelsheim",
       "from": "Bad Wimpfen",
       "to": "Gundelsheim",
-      "length": "6",
-      "description": "Die Stadt Heilbronn, die Stadt Neckarsulm und der Landkreis Heilbronn stellen aktuell eine Machbarkeitsstudie f\u00fcr Radschnellverbindungen im Raum Heilbronn / Neckarsulm zusammen. Die Trassen sollen die geplante Nord-S\u00fcd-Radschnellverbindung (\u201ePilotprojekt des Landes Baden-W\u00fcrttemberg\u201c) erg\u00e4nzen und als Zubringer dienen.",
+      "length": 6,
+      "description": "Die Stadt Heilbronn, die Stadt Neckarsulm und der Landkreis Heilbronn stellen aktuell eine Machbarkeitsstudie für Radschnellverbindungen im Raum Heilbronn / Neckarsulm zusammen. Die Trassen sollen die geplante Nord-Süd-Radschnellverbindung („Pilotprojekt des Landes Baden-Württemberg“) ergänzen und als Zubringer dienen.",
       "source": "https://radschnellweg-hn.de/?p=online-umfrage"
     },
-    "stakeholders": [
-      {
-        "name": "Landkreis Heilbronn",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": "https://radschnellweg-hn.de/?p=online-umfrage"
-    }
+    "stakeholders": [{ "name": "Landkreis Heilbronn", "roles": ["authority"] }],
+    "references": { "website": "https://radschnellweg-hn.de/?p=online-umfrage" }
   },
   {
     "id": "18-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "18",
-      "name": "Klingenberg / Horkheim \u2013 Lauffen am Neckar",
+      "name": "Klingenberg / Horkheim – Lauffen am Neckar",
       "from": "Klingenberg",
       "to": "Lauffen am Neckar",
-      "length": "7",
-      "description": "Die Stadt Heilbronn, die Stadt Neckarsulm und der Landkreis Heilbronn stellen aktuell eine Machbarkeitsstudie f\u00fcr Radschnellverbindungen im Raum Heilbronn / Neckarsulm zusammen. Die Trassen sollen die geplante Nord-S\u00fcd-Radschnellverbindung (\u201ePilotprojekt des Landes Baden-W\u00fcrttemberg\u201c) erg\u00e4nzen und als Zubringer dienen.",
+      "length": 7,
+      "description": "Die Stadt Heilbronn, die Stadt Neckarsulm und der Landkreis Heilbronn stellen aktuell eine Machbarkeitsstudie für Radschnellverbindungen im Raum Heilbronn / Neckarsulm zusammen. Die Trassen sollen die geplante Nord-Süd-Radschnellverbindung („Pilotprojekt des Landes Baden-Württemberg“) ergänzen und als Zubringer dienen.",
       "source": "https://radschnellweg-hn.de/?p=online-umfrage"
     },
-    "stakeholders": [
-      {
-        "name": "Landkreis Heilbronn",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": "https://radschnellweg-hn.de/?p=online-umfrage"
-    }
+    "stakeholders": [{ "name": "Landkreis Heilbronn", "roles": ["authority"] }],
+    "references": { "website": "https://radschnellweg-hn.de/?p=online-umfrage" }
   },
   {
     "id": "19-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "in_progress",
     "general": {
       "ref": "19",
       "name": "Veloring Friedrichshafen",
       "from": "Jugendherberge-Friedrichshafen",
       "to": "Manzell-Friedrichshafen",
-      "length": "7",
-      "description": "Mit guten Radschnellverbindungen und attraktiven Radwegen soll der Radverkehr in Friedrichshafen gef\u00f6rdert und der Radverkehrsanteil gesteigert werden. Der Gemeinderat der Stadt hat Ende 2015 den Startschuss f\u00fcr den sogenannten Veloring gegeben, 2017 folgte der Spatenstich f\u00fcr das erste Teilst\u00fcck.\n\nDer sieben Kilometer lange Veloring soll als attraktive Radschnellverbindung einen Halbkreis um die Innenstadt spannen.",
+      "length": 7,
+      "description": "Mit guten Radschnellverbindungen und attraktiven Radwegen soll der Radverkehr in Friedrichshafen gefördert und der Radverkehrsanteil gesteigert werden. Der Gemeinderat der Stadt hat Ende 2015 den Startschuss für den sogenannten Veloring gegeben, 2017 folgte der Spatenstich für das erste Teilstück.\n\nDer sieben Kilometer lange Veloring soll als attraktive Radschnellverbindung einen Halbkreis um die Innenstadt spannen.",
       "source": "https://www.friedrichshafen.de/wirtschaft-mobilitaet/verkehr/radverkehr/veloring/"
     },
     "stakeholders": [
@@ -745,23 +651,20 @@
   },
   {
     "id": "20-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "20",
       "name": "Radschnellweg Heidelberg / Bruchsal",
       "from": "Bruchsal",
       "to": "Heidelberg",
-      "length": "37",
-      "description": "In s\u00fcdlicher Fortsetzung werden aktuell wichtige Pendlerverbindungen entlang eines Korridors mit hohen Wohn- und Arbeitsplatzdichten gepr\u00fcft. Die Kooperation des VRRN mit dem Regionalverband Mittlerer Oberrhein kann die Schaffung einer wichtigen \u00fcberregionalen Verbindung entlang des Oberrheins erleichtern.",
+      "length": 37,
+      "description": "In südlicher Fortsetzung werden aktuell wichtige Pendlerverbindungen entlang eines Korridors mit hohen Wohn- und Arbeitsplatzdichten geprüft. Die Kooperation des VRRN mit dem Regionalverband Mittlerer Oberrhein kann die Schaffung einer wichtigen überregionalen Verbindung entlang des Oberrheins erleichtern.",
       "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     },
     "stakeholders": [
-      {
-        "name": "Verband Region Rhein-Neck",
-        "roles": ["authority"]
-      }
+      { "name": "Verband Region Rhein-Neck", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
@@ -769,45 +672,40 @@
   },
   {
     "id": "21-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "21",
       "name": "Heidelberg - Schwetzingen",
       "from": "Heidelberg",
       "to": "Schwetzingen",
-      "length": "10",
-      "description": "Die Radschnellverbindung (RSV) Heidelberg-Schwetzingen erreicht in der Potenzialanalyse des baden-w\u00fcrttembergischen Verkehrsministeriums mit potenziellen 2.900 Radfahrenden/Tag landesweit den 7. Platz mit der Einstufung als vordringlicher Bedarf. Die St\u00e4dte Heidelberg, Schwetzingen, Eppelheim, Plankstadt und Oftersheim vereinbaren daraufhin auf Basis der Machbarkeitsstudie die Planung dieser Radschnellverbindung bis zur Genehmigungsplanung zu \u00fcbernehmen. Damit kann eine fr\u00fche Realisierung der RSV erreicht werden, die eigentlich in der Tr\u00e4gerschaft des Landes Baden-W\u00fcrttemberg liegt.",
+      "length": 10,
+      "description": "Die Radschnellverbindung (RSV) Heidelberg-Schwetzingen erreicht in der Potenzialanalyse des baden-württembergischen Verkehrsministeriums mit potenziellen 2.900 Radfahrenden/Tag landesweit den 7. Platz mit der Einstufung als vordringlicher Bedarf. Die Städte Heidelberg, Schwetzingen, Eppelheim, Plankstadt und Oftersheim vereinbaren daraufhin auf Basis der Machbarkeitsstudie die Planung dieser Radschnellverbindung bis zur Genehmigungsplanung zu übernehmen. Damit kann eine frühe Realisierung der RSV erreicht werden, die eigentlich in der Trägerschaft des Landes Baden-Württemberg liegt.",
       "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     },
-    "stakeholders": [
-      {
-        "name": "Stadt Heidelberg",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "Stadt Heidelberg", "roles": ["authority"] }],
     "references": {
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     }
   },
   {
     "id": "22-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "22",
-      "name": "Radschnellweg Appenweier \u2013 Gambsheim",
+      "name": "Radschnellweg Appenweier – Gambsheim",
       "from": "Appenweier",
       "to": "Gambsheim",
-      "length": "27",
-      "description": "Die Radschnellverbindung wurde 2021 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie  erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gef\u00f6rdert. Nach Fertigstellung der Studie entscheidet nun das Ministerium f\u00fcr Verkehr Baden-W\u00fcrttemberg \u00fcber die Baulast- tr\u00e4gerschaft und damit die kon- kreten Umsetzungsmodalit\u00e4ten f\u00fcr die Verbindung.",
+      "length": 27,
+      "description": "Die Radschnellverbindung wurde 2021 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie  erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gefördert. Nach Fertigstellung der Studie entscheidet nun das Ministerium für Verkehr Baden-Württemberg über die Baulast- trägerschaft und damit die kon- kreten Umsetzungsmodalitäten für die Verbindung.",
       "source": "https://www.region-suedlicher-oberrhein.de/de/projekte/radschnellwege/index.php"
     },
     "stakeholders": [
       {
-        "name": "Regionalverband S\u00fcdlicher Oberrheim (RVSO)",
+        "name": "Regionalverband Südlicher Oberrheim (RVSO)",
         "roles": ["authority"]
       }
     ],
@@ -817,21 +715,21 @@
   },
   {
     "id": "23-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "23",
       "name": "Radschnellweg Offenburg - Friesenheim - Lahr",
       "from": "Offenburg",
       "to": "Lahr",
-      "length": "15",
-      "description": "Die Radschnellverbindung wurde 2017/2018 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gef\u00f6rdert. Das Land hat die Strecke nicht in seine Baulasttr\u00e4gerschaft \u00fcbernommen und die tangierten Gemeinden Friesenheim und Hohberg haben bisher keinen Bedarf f\u00fcr den Radschnellweg gesehen. Der Regionalverband beh\u00e4lt die untersuchte Verbindung im Blick und bleibt mit allen St\u00e4dten und Gemeinden dieses Korridors im Gespr\u00e4ch.",
+      "length": 15,
+      "description": "Die Radschnellverbindung wurde 2017/2018 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gefördert. Das Land hat die Strecke nicht in seine Baulastträgerschaft übernommen und die tangierten Gemeinden Friesenheim und Hohberg haben bisher keinen Bedarf für den Radschnellweg gesehen. Der Regionalverband behält die untersuchte Verbindung im Blick und bleibt mit allen Städten und Gemeinden dieses Korridors im Gespräch.",
       "source": "https://www.region-suedlicher-oberrhein.de/de/projekte/radschnellwege/index.php"
     },
     "stakeholders": [
       {
-        "name": "Regionalverband S\u00fcdlicher Oberrheim (RVSO)",
+        "name": "Regionalverband Südlicher Oberrheim (RVSO)",
         "roles": ["authority"]
       }
     ],
@@ -841,21 +739,21 @@
   },
   {
     "id": "24-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "agreement_process",
     "general": {
       "ref": "24",
-      "name": "Radschnellweg Offenburg \u2013 Strasbourg",
+      "name": "Radschnellweg Offenburg – Strasbourg",
       "from": "Offenburg",
       "to": "Strasbourg",
-      "length": "17,5",
-      "description": "Die Radschnellverbindung wurde 2018/2019 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gef\u00f6rdert. Hinsichtlich der Potenziale erfolgte 2020 eine Erg\u00e4nzende Untersuchung zur Machbarkeitsstudie. In Folge hat das Land aufgrund der sehr hohen Potenziale die Baulasttr\u00e4gerschaft f\u00fcr den Abschnitt Offenburg \u2013 Strasbourg \u00fcbernommen und wird zeitnah in die Planung einsteigen",
+      "length": 17.5,
+      "description": "Die Radschnellverbindung wurde 2018/2019 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gefördert. Hinsichtlich der Potenziale erfolgte 2020 eine Ergänzende Untersuchung zur Machbarkeitsstudie. In Folge hat das Land aufgrund der sehr hohen Potenziale die Baulastträgerschaft für den Abschnitt Offenburg – Strasbourg übernommen und wird zeitnah in die Planung einsteigen",
       "source": "https://www.region-suedlicher-oberrhein.de/de/projekte/radschnellwege/index.php"
     },
     "stakeholders": [
       {
-        "name": "Regionalverband S\u00fcdlicher Oberrheim (RVSO)",
+        "name": "Regionalverband Südlicher Oberrheim (RVSO)",
         "roles": ["authority"]
       }
     ],
@@ -865,21 +763,21 @@
   },
   {
     "id": "25-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "25",
-      "name": "Radschnellweg Lahr \u2013 Emmendingen",
+      "name": "Radschnellweg Lahr – Emmendingen",
       "from": "Emmendingen",
       "to": "Lahr",
-      "length": "29",
-      "description": "Die Radschnellverbindung wurde 2021 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gef\u00f6rdert. Nach Fertigstellung der Studie entscheidet nun das Ministerium f\u00fcr Verkehr Baden-W\u00fcrttemberg \u00fcber die Baulasttr\u00e4gerschaft und damit die konkreten Umsetzungsmodalit\u00e4ten f\u00fcr die Verbindung",
+      "length": 29,
+      "description": "Die Radschnellverbindung wurde 2021 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gefördert. Nach Fertigstellung der Studie entscheidet nun das Ministerium für Verkehr Baden-Württemberg über die Baulastträgerschaft und damit die konkreten Umsetzungsmodalitäten für die Verbindung",
       "source": "https://www.region-suedlicher-oberrhein.de/de/projekte/radschnellwege/index.php"
     },
     "stakeholders": [
       {
-        "name": "Regionalverband S\u00fcdlicher Oberrheim (RVSO)",
+        "name": "Regionalverband Südlicher Oberrheim (RVSO)",
         "roles": ["authority"]
       }
     ],
@@ -889,21 +787,21 @@
   },
   {
     "id": "26-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "26",
       "name": "Radschnellweg Freiburg - Umkirch/March - Breisach",
       "from": "Freiburg",
       "to": "Breisach",
-      "length": "23,5",
-      "description": "Der Abschnitt der Radschnellverbindung von Freiburg nach Umkirch/March wurde 2017/2018 im Rahmen einer  Machbarkeitsstudie  des Regionalverbands erfolgreich untersucht. Der weiterf\u00fchrende Abschnitt von Umkirch/March nach Breisach wurde 2021/2022 im Rahmen einer weiteren Machbarkeitsstudie mit ebenfalls positiven Ergebnissen untersucht. Die Studien wurden mit 80 Prozent der Kosten vom Land gef\u00f6rdert. Nach Fertigstellung beider Studien entscheidet nun das Ministerium f\u00fcr Verkehr Baden-W\u00fcrttemberg \u00fcber die Baulasttr\u00e4gerschaft und damit die konkreten Umsetzungsmodalit\u00e4ten f\u00fcr die Verbindung von Freiburg nach Breisach.",
+      "length": 23.5,
+      "description": "Der Abschnitt der Radschnellverbindung von Freiburg nach Umkirch/March wurde 2017/2018 im Rahmen einer  Machbarkeitsstudie  des Regionalverbands erfolgreich untersucht. Der weiterführende Abschnitt von Umkirch/March nach Breisach wurde 2021/2022 im Rahmen einer weiteren Machbarkeitsstudie mit ebenfalls positiven Ergebnissen untersucht. Die Studien wurden mit 80 Prozent der Kosten vom Land gefördert. Nach Fertigstellung beider Studien entscheidet nun das Ministerium für Verkehr Baden-Württemberg über die Baulastträgerschaft und damit die konkreten Umsetzungsmodalitäten für die Verbindung von Freiburg nach Breisach.",
       "source": "https://www.region-suedlicher-oberrhein.de/de/projekte/radschnellwege/index.php"
     },
     "stakeholders": [
       {
-        "name": "Regionalverband S\u00fcdlicher Oberrheim (RVSO)",
+        "name": "Regionalverband Südlicher Oberrheim (RVSO)",
         "roles": ["authority"]
       }
     ],
@@ -913,21 +811,21 @@
   },
   {
     "id": "27-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "27",
       "name": "Radschnellweg Freiburg - Kirchzarten",
       "from": "Freiburg",
       "to": "Kircharten",
-      "length": "9,7",
-      "description": "Die Radschnellverbindung wurde 2021 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gef\u00f6rdert. Nach Fertigstellung der Studie entscheidet nun das Ministerium f\u00fcr Verkehr Baden-W\u00fcrttemberg \u00fcber die Baulasttr\u00e4gerschaft und damit die konkreten Umsetzungsmodalit\u00e4ten f\u00fcr die Verbindung",
+      "length": 9.7,
+      "description": "Die Radschnellverbindung wurde 2021 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gefördert. Nach Fertigstellung der Studie entscheidet nun das Ministerium für Verkehr Baden-Württemberg über die Baulastträgerschaft und damit die konkreten Umsetzungsmodalitäten für die Verbindung",
       "source": "https://www.region-suedlicher-oberrhein.de/de/projekte/radschnellwege/index.php"
     },
     "stakeholders": [
       {
-        "name": "Regionalverband S\u00fcdlicher Oberrheim (RVSO)",
+        "name": "Regionalverband Südlicher Oberrheim (RVSO)",
         "roles": ["authority"]
       }
     ],
@@ -937,21 +835,21 @@
   },
   {
     "id": "28-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "28",
-      "name": "Radschnellweg Freiburg \u2013 Bad Krozingen \u2013 Heitersheim \u2013 M\u00fcllheim",
+      "name": "Radschnellweg Freiburg – Bad Krozingen – Heitersheim – Müllheim",
       "from": "Freiburg",
-      "to": "M\u00fcllheim",
-      "length": "26,5",
-      "description": "Die Radschnellverbindung wurde 2021 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gef\u00f6rdert. Nach Fertigstellung der Studie entscheidet nun das Ministerium f\u00fcr Verkehr Baden-W\u00fcrttemberg \u00fcber die Baulasttr\u00e4gerschaft und damit die konkreten Umsetzungsmodalit\u00e4ten f\u00fcr die Verbindung",
+      "to": "Müllheim",
+      "length": 26.5,
+      "description": "Die Radschnellverbindung wurde 2021 im Rahmen einer vom Regionalverband beauftragten Machbarkeitsstudie erfolgreich untersucht. Die Studie wurde mit 80 Prozent der Kosten vom Land gefördert. Nach Fertigstellung der Studie entscheidet nun das Ministerium für Verkehr Baden-Württemberg über die Baulastträgerschaft und damit die konkreten Umsetzungsmodalitäten für die Verbindung",
       "source": "https://www.region-suedlicher-oberrhein.de/de/projekte/radschnellwege/index.php"
     },
     "stakeholders": [
       {
-        "name": "Regionalverband S\u00fcdlicher Oberrheim (RVSO)",
+        "name": "Regionalverband Südlicher Oberrheim (RVSO)",
         "roles": ["authority"]
       }
     ],
@@ -961,359 +859,272 @@
   },
   {
     "id": "29-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "29",
       "name": "Weil am Rhein - Eimeldingen - Efringen-Kirchen - Bad Bellingen - Schliengen",
       "from": "Weil am Rhein",
       "to": "Schliengen",
-      "length": "28",
-      "description": "",
-      "source": ""
+      "length": 28,
+      "description": null,
+      "source": null
     },
-    "stakeholders": [
-      {
-        "name": "Landkreis L\u00f6rrach",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": ""
-    }
+    "stakeholders": [{ "name": "Landkreis Lörrach", "roles": ["authority"] }],
+    "references": { "website": null }
   },
   {
     "id": "30-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "30",
-      "name": "Grenzach-Wyhlen - Rheinfelden - Schw\u00f6rstadt",
+      "name": "Grenzach-Wyhlen - Rheinfelden - Schwörstadt",
       "from": "Grenzach-Wyhlen",
-      "to": "Schw\u00f6rstadt",
-      "length": "28",
-      "description": "",
-      "source": ""
+      "to": "Schwörstadt",
+      "length": 28,
+      "description": null,
+      "source": null
     },
-    "stakeholders": [
-      {
-        "name": "Landkreis L\u00f6rrach",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": ""
-    }
+    "stakeholders": [{ "name": "Landkreis Lörrach", "roles": ["authority"] }],
+    "references": { "website": null }
   },
   {
     "id": "31-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "31",
       "name": "Radschnellverbindung  Konstanz - Singen",
       "from": "Konstanz",
       "to": "Singen",
-      "length": "28",
-      "description": "Fahrradfahren ist praktisch, gesund und gut f\u00fcr die Umwelt. Aus diesem Grund wird die Nutzung des Fahrrads nicht nur in der Freizeit, sondern auch auf allt\u00e4glichen Wegen immer beliebter.\nUm diesen Trend zu st\u00fctzen, lie\u00df der Landkreis Konstanz ein kreisweites Radverkehrskonzept erarbeiten. Im Fr\u00fchjahr 2019 beauftragte das Landratsamt die Planungsb\u00fcros VIA eG und brenner Bernard GmbH mit der Durchf\u00fchrung einer Machbarkeitsstudie f\u00fcr eine Radschnellverbindung zwischen Konstanz, Radolfzell und Singen. Die Studie wird durch das Land Baden-W\u00fcrttemberg gef\u00f6rdert.",
+      "length": 28,
+      "description": "Fahrradfahren ist praktisch, gesund und gut für die Umwelt. Aus diesem Grund wird die Nutzung des Fahrrads nicht nur in der Freizeit, sondern auch auf alltäglichen Wegen immer beliebter.\nUm diesen Trend zu stützen, ließ der Landkreis Konstanz ein kreisweites Radverkehrskonzept erarbeiten. Im Frühjahr 2019 beauftragte das Landratsamt die Planungsbüros VIA eG und brenner Bernard GmbH mit der Durchführung einer Machbarkeitsstudie für eine Radschnellverbindung zwischen Konstanz, Radolfzell und Singen. Die Studie wird durch das Land Baden-Württemberg gefördert.",
       "source": "https://www.lrakn.de/service-und-verwaltung/aemter/strassenbauamt/machbarkeitsstudie+radschnellverbindung+zwischen+konstanz+und+singen"
     },
-    "stakeholders": [
-      {
-        "name": "Landkreis Konstan",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "Landkreis Konstan", "roles": ["authority"] }],
     "references": {
       "website": "https://www.lrakn.de/service-und-verwaltung/aemter/strassenbauamt/machbarkeitsstudie+radschnellverbindung+zwischen+konstanz+und+singen"
     }
   },
   {
     "id": "32-baden-wuerttemberg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "32",
-      "name": "T\u00fcbingen - Hechingen",
-      "from": "T\u00fcbingen",
+      "name": "Tübingen - Hechingen",
+      "from": "Tübingen",
       "to": "Hechingen",
-      "length": "24",
-      "description": "",
-      "source": ""
+      "length": 24,
+      "description": null,
+      "source": null
     },
-    "stakeholders": [
-      {
-        "name": "Landkreis T\u00fcbingen",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": ""
-    }
+    "stakeholders": [{ "name": "Landkreis Tübingen", "roles": ["authority"] }],
+    "references": { "website": null }
   },
   {
     "id": "rsv1-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 1",
       "name": "Y-Trasse",
       "from": "Kreuzberg",
       "to": "Adlershof",
-      "length": "20,2",
-      "description": "Der Trassenkorridor f\u00fcr die \"Y-Trasse\" verl\u00e4uft im S\u00fcdosten Berlins \nzun\u00e4chst parallel zur Autobahn BAB 113 und dem s\u00fcdlichen Teltowkanal. Am\n Britzer Hafen teilt sich die Trasse in zwei Streckenarme auf. Die \nwestliche Abzweigung f\u00fchrt quer durch Neuk\u00f6lln entlang des Tempelhofer \nFeldes \u00fcber die Hasenheide bis zum Zielpunkt S\u00fcdstern in Kreuzberg. Die \nzweite Abzweigung der Radschnellverbindung verl\u00e4uft \u00f6stlich davon \nentlang der Autobahn BAB 100 auf dem Mauerweg bis zum G\u00f6rlitzer Park in \nKreuzberg.",
+      "length": 20.2,
+      "description": "Der Trassenkorridor für die \"Y-Trasse\" verläuft im Südosten Berlins \nzunächst parallel zur Autobahn BAB 113 und dem südlichen Teltowkanal. Am\n Britzer Hafen teilt sich die Trasse in zwei Streckenarme auf. Die \nwestliche Abzweigung führt quer durch Neukölln entlang des Tempelhofer \nFeldes über die Hasenheide bis zum Zielpunkt Südstern in Kreuzberg. Die \nzweite Abzweigung der Radschnellverbindung verläuft östlich davon \nentlang der Autobahn BAB 100 auf dem Mauerweg bis zum Görlitzer Park in \nKreuzberg.",
       "source": "https://www.infravelo.de/projekt/y-trasse/"
     },
-    "stakeholders": [
-      {
-        "name": "infraVelo",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": "https://www.infravelo.de/projekt/y-trasse/"
-    }
+    "stakeholders": [{ "name": "infraVelo", "roles": ["authority"] }],
+    "references": { "website": "https://www.infravelo.de/projekt/y-trasse/" }
   },
   {
     "id": "rsv2-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 2",
-      "name": "Mitte \u2013 Tegel \u2013 Spandau",
+      "name": "Mitte – Tegel – Spandau",
       "from": "Berlin Mitte",
       "to": "Spandau",
-      "length": "14,4",
-      "description": "Die Radschnellverbindung \"Mitte \u2013 Tegel \u2013 Spandau\" soll den Bezirk Spandau mit dem Berliner Hauptbahnhof verbinden. Der Trassenkorridor verl\u00e4uft \u00fcberwiegend parallel zum Berlin-Spandauer Schifffahrtskanal. Er kreuzt den n\u00f6rdlichen S-Bahn-Ring sowie die Stadtautobahn A 111. Gute Verkn\u00fcpfungen zum Bereich Flughafen Tegel, der Europacity sowie dem Radfernweg Berlin-Kopenhagen k\u00f6nnen entstehen.",
+      "length": 14.4,
+      "description": "Die Radschnellverbindung \"Mitte – Tegel – Spandau\" soll den Bezirk Spandau mit dem Berliner Hauptbahnhof verbinden. Der Trassenkorridor verläuft überwiegend parallel zum Berlin-Spandauer Schifffahrtskanal. Er kreuzt den nördlichen S-Bahn-Ring sowie die Stadtautobahn A 111. Gute Verknüpfungen zum Bereich Flughafen Tegel, der Europacity sowie dem Radfernweg Berlin-Kopenhagen können entstehen.",
       "source": "https://www.infravelo.de/projekt/mitte-tegel-spandau/"
     },
-    "stakeholders": [
-      {
-        "name": "infraVelo",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "infraVelo", "roles": ["authority"] }],
     "references": {
       "website": "https://www.infravelo.de/projekt/mitte-tegel-spandau/"
     }
   },
   {
     "id": "rsv3-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 3",
-      "name": "K\u00f6nigsweg \u2013 Kronprinzessinnenweg",
+      "name": "Königsweg – Kronprinzessinnenweg",
       "from": "Berlin Wannsee",
       "to": "S-Bahnstation Halensee",
-      "length": "12,2",
-      "description": "Die Radschnellverbindung soll vom Wannsee aus \u00fcber den \nKronprinzessinnenweg und den K\u00f6nigsweg quer durch den Grunewald bis zur \nMesse Berlin und dem westlichen Ende des Kurf\u00fcrstendamms f\u00fchren. Auf den\n ersten Kilometern f\u00fchrt diese Trasse durch ein Wohngebiet. Der zweite \nAbschnitt verl\u00e4uft parallel zur Avus auf einem Waldst\u00fcck bis zum \nS-Bahnhof Grunewald und geht von dort in den dritten Abschnitt \u00fcber \u2013 \neine Einfamilienhaussiedlung. Voraussichtlicher Endpunkt wird die \nS-Bahnstation Halensee am Kurf\u00fcrstendamm sein.",
+      "length": 12.2,
+      "description": "Die Radschnellverbindung soll vom Wannsee aus über den \nKronprinzessinnenweg und den Königsweg quer durch den Grunewald bis zur \nMesse Berlin und dem westlichen Ende des Kurfürstendamms führen. Auf den\n ersten Kilometern führt diese Trasse durch ein Wohngebiet. Der zweite \nAbschnitt verläuft parallel zur Avus auf einem Waldstück bis zum \nS-Bahnhof Grunewald und geht von dort in den dritten Abschnitt über – \neine Einfamilienhaussiedlung. Voraussichtlicher Endpunkt wird die \nS-Bahnstation Halensee am Kurfürstendamm sein.",
       "source": "https://www.infravelo.de/projekt/koenigsweg-kronprinzessinnenweg/"
     },
-    "stakeholders": [
-      {
-        "name": "infraVelo",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "infraVelo", "roles": ["authority"] }],
     "references": {
       "website": "https://www.infravelo.de/projekt/koenigsweg-kronprinzessinnenweg/"
     }
   },
   {
     "id": "rsv4-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 4",
       "name": "Panke-Trail",
       "from": "S-Bahnhof Karow",
-      "to": "Torstra\u00dfe",
-      "length": "18,4",
-      "description": "Der Trassenkorridor f\u00fcr den \"Panke-Trail\" verl\u00e4uft ab dem S-Bahnhof Karow im Bezirk Pankow zun\u00e4chst parallel zur S-Bahn-Trasse in Richtung Zentrum. Im Bereich des S- und U-Bahnhofs Pankow teilt sich die Trasse in zwei Arme: eine Abzweigung f\u00fchrt in Richtung S\u00fcdwesten \u00fcber Gesundbrunnen bis zum Nordbahnhof, die zweite in Richtung S\u00fcden \u00fcber Prenzlauer Berg bis zur Torstra\u00dfe in Berlin Mitte.",
+      "to": "Torstraße",
+      "length": 18.4,
+      "description": "Der Trassenkorridor für den \"Panke-Trail\" verläuft ab dem S-Bahnhof Karow im Bezirk Pankow zunächst parallel zur S-Bahn-Trasse in Richtung Zentrum. Im Bereich des S- und U-Bahnhofs Pankow teilt sich die Trasse in zwei Arme: eine Abzweigung führt in Richtung Südwesten über Gesundbrunnen bis zum Nordbahnhof, die zweite in Richtung Süden über Prenzlauer Berg bis zur Torstraße in Berlin Mitte.",
       "source": "https://www.infravelo.de/projekt/panke-trail/"
     },
-    "stakeholders": [
-      {
-        "name": "infraVelo",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": "https://www.infravelo.de/projekt/panke-trail/"
-    }
+    "stakeholders": [{ "name": "infraVelo", "roles": ["authority"] }],
+    "references": { "website": "https://www.infravelo.de/projekt/panke-trail/" }
   },
   {
     "id": "rsv5-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 5",
       "name": "West-Route",
       "from": "Spandau",
       "to": "S-Bahnhof Tiergarten",
-      "length": "15,3",
-      "description": "Der Trassenkorridor der \"West-Route\" beginnt in Berlin-Spandau an der Landesgrenze zu Dallgow in Brandenburg und endet am S-Bahnhof Tiergarten in Charlottenburg-Wilmersdorf. Die Trasse f\u00fchrt entlang der Heerstra\u00dfe und den U-Bahnh\u00f6fen Theodor-Heuss-Platz, Kaiserdamm, Bismarckstra\u00dfe und Ernst-Reuter-Platz sowie der Stra\u00dfe des 17. Juni bis zum S-Bahnhof Tiergarten. Dabei werden zahlreiche Wohnquartiere mit dem Olympiastadion, der Einkaufsmeile entlang der Wilmersdorfer Stra\u00dfe, der Technischen Universit\u00e4t sowie weiteren Schul- und Ausbildungszentren im und am S-Bahn-Ring verbunden. Ab dem S-Bahnhof Tiergarten verl\u00e4uft die Trasse weiter als \"Ost-Route\" bis an die \u00f6stliche Berliner Stadtgrenze zu Brandenburg.",
+      "length": 15.3,
+      "description": "Der Trassenkorridor der \"West-Route\" beginnt in Berlin-Spandau an der Landesgrenze zu Dallgow in Brandenburg und endet am S-Bahnhof Tiergarten in Charlottenburg-Wilmersdorf. Die Trasse führt entlang der Heerstraße und den U-Bahnhöfen Theodor-Heuss-Platz, Kaiserdamm, Bismarckstraße und Ernst-Reuter-Platz sowie der Straße des 17. Juni bis zum S-Bahnhof Tiergarten. Dabei werden zahlreiche Wohnquartiere mit dem Olympiastadion, der Einkaufsmeile entlang der Wilmersdorfer Straße, der Technischen Universität sowie weiteren Schul- und Ausbildungszentren im und am S-Bahn-Ring verbunden. Ab dem S-Bahnhof Tiergarten verläuft die Trasse weiter als \"Ost-Route\" bis an die östliche Berliner Stadtgrenze zu Brandenburg.",
       "source": "https://www.infravelo.de/projekt/west-route/"
     },
-    "stakeholders": [
-      {
-        "name": "infraVelo",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": "https://www.infravelo.de/projekt/west-route/"
-    }
+    "stakeholders": [{ "name": "infraVelo", "roles": ["authority"] }],
+    "references": { "website": "https://www.infravelo.de/projekt/west-route/" }
   },
   {
     "id": "rsv6-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 6",
       "name": "Teltowkanalroute",
       "from": "Lichterfelde",
-      "to": "Bahnhof S\u00fcdkreuz",
-      "length": "8,8",
-      "description": "Der Trassenkorridor der \"Teltowkanalroute\" beginnt an der nord\u00f6stlichen \nGrenze der brandenburgischen Stadt Teltow zum Land Berlin. Er verl\u00e4uft \n\u00fcberwiegend entlang des Teltowkanals durch die Stadtteile Lichterfelde, \nLankwitz und Steglitz (Bezirk Steglitz-Zehlendorf). Im \u00f6stlichen Bereich\n von Steglitz verl\u00e4sst der Korridor den Verlauf des Kanals und \ndurchschreitet in n\u00f6rdliche Richtung Wohngebiete in Richtung des Bezirks\n Tempelhof-Sch\u00f6neberg. Im Stadtteil Sch\u00f6neberg verl\u00e4uft der Korridor \nparallel und westlich zur Bahntrasse bis zur Bundesautobahn \n100/S\u00fcdkreuz. ",
+      "to": "Bahnhof Südkreuz",
+      "length": 8.8,
+      "description": "Der Trassenkorridor der \"Teltowkanalroute\" beginnt an der nordöstlichen \nGrenze der brandenburgischen Stadt Teltow zum Land Berlin. Er verläuft \nüberwiegend entlang des Teltowkanals durch die Stadtteile Lichterfelde, \nLankwitz und Steglitz (Bezirk Steglitz-Zehlendorf). Im östlichen Bereich\n von Steglitz verlässt der Korridor den Verlauf des Kanals und \ndurchschreitet in nördliche Richtung Wohngebiete in Richtung des Bezirks\n Tempelhof-Schöneberg. Im Stadtteil Schöneberg verläuft der Korridor \nparallel und westlich zur Bahntrasse bis zur Bundesautobahn \n100/Südkreuz. ",
       "source": "https://www.infravelo.de/projekt/teltowkanalroute/"
     },
-    "stakeholders": [
-      {
-        "name": "infraVelo",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "infraVelo", "roles": ["authority"] }],
     "references": {
       "website": "https://www.infravelo.de/projekt/teltowkanalroute/"
     }
   },
   {
     "id": "rsv7-berlin",
-    "cost": "",
-    "finished": "",
-    "state": "discarted",
+    "cost": null,
+    "finished": null,
+    "state": "planning",
     "general": {
       "ref": "RSV 7",
-      "name": "Spandauer Damm \u2013 Freiheit",
+      "name": "Spandauer Damm – Freiheit",
       "from": "S-Bahnhof Westend",
       "to": "Altstadt Spandau",
-      "length": "3,4",
-      "description": "Der Trassenkorridor der Radschnellverbindung \"Spandauer Damm \u2013 Freiheit\" verl\u00e4uft s\u00fcdlich der Spree, vom S-Bahnhof Westend bis in die Spandauer Altstadt. Durch die Route sollen zahlreiche Wohnquartiere mit dem S-Bahn-Ring und dem Gewerbegebiet Ruhleben verbunden sowie Anschlussm\u00f6glichkeiten an die beiden Radfernwege Havel-Radweg und Spree-Rad- und Wanderweg geschaffen werden.",
+      "length": 3.4,
+      "description": "Der Trassenkorridor der Radschnellverbindung \"Spandauer Damm – Freiheit\" verläuft südlich der Spree, vom S-Bahnhof Westend bis in die Spandauer Altstadt. Durch die Route sollen zahlreiche Wohnquartiere mit dem S-Bahn-Ring und dem Gewerbegebiet Ruhleben verbunden sowie Anschlussmöglichkeiten an die beiden Radfernwege Havel-Radweg und Spree-Rad- und Wanderweg geschaffen werden.",
       "source": "https://www.infravelo.de/projekt/spandauer-damm-freiheit/"
     },
-    "stakeholders": [
-      {
-        "name": "infraVelo",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "infraVelo", "roles": ["authority"] }],
     "references": {
       "website": "https://www.infravelo.de/projekt/spandauer-damm-freiheit/"
     }
   },
   {
     "id": "rsv8-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 8",
-      "name": "Nonnendammallee \u2013 Falkenseer Chaussee",
+      "name": "Nonnendammallee – Falkenseer Chaussee",
       "from": "Jakob-Kaiser-Platz, Charlottenburg",
       "to": "Altstadt Spandau",
-      "length": "11,9",
-      "description": "Der Trassenkorridor f\u00fcr die Radschnellverbindung \"Nonnendammallee \u2013 Falkenseer Chaussee\" f\u00fchrt durch die Bezirke Charlottenburg-Wilmersdorf und Spandau. Die Trasse beginnt am Jakob-Kaiser-Platz, im Norden von Charlottenburg. Von hier verl\u00e4uft sie n\u00f6rdlich des Spreeufers in Richtung Zitadelle Spandau und verkn\u00fcpft dabei zahlreiche Wohnquartiere sowie die Siemensstadt mit der Spandauer Altstadt. Nach Querung der Havel \u00fcber die Juliusturmbr\u00fccke geht es weiter \u00fcber den Falkenseer Damm bis zum Falkenhagener Feld an der Stadtgrenze. Ab hier schlie\u00dft sich der \"Radweg der Sympathie\" an, der bis nach Falkensee f\u00fchrt.",
+      "length": 11.9,
+      "description": "Der Trassenkorridor für die Radschnellverbindung \"Nonnendammallee – Falkenseer Chaussee\" führt durch die Bezirke Charlottenburg-Wilmersdorf und Spandau. Die Trasse beginnt am Jakob-Kaiser-Platz, im Norden von Charlottenburg. Von hier verläuft sie nördlich des Spreeufers in Richtung Zitadelle Spandau und verknüpft dabei zahlreiche Wohnquartiere sowie die Siemensstadt mit der Spandauer Altstadt. Nach Querung der Havel über die Juliusturmbrücke geht es weiter über den Falkenseer Damm bis zum Falkenhagener Feld an der Stadtgrenze. Ab hier schließt sich der \"Radweg der Sympathie\" an, der bis nach Falkensee führt.",
       "source": "https://www.infravelo.de/projekt/nonnendammallee-falkenseer-chaussee/"
     },
-    "stakeholders": [
-      {
-        "name": "infraVelo",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "infraVelo", "roles": ["authority"] }],
     "references": {
       "website": "https://www.infravelo.de/projekt/nonnendammallee-falkenseer-chaussee/"
     }
   },
   {
     "id": "rsv9-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 9",
       "name": "Ost-Route",
       "from": "Marzahn-Hellersdorf",
       "to": "S-Bahn Tiergarten",
-      "length": "23",
-      "description": "Die \"Ost-Route\" soll die \u00e4u\u00dferen Bezirke Marzahn-Hellersdorf und Lichtenberg mit Mitte verbinden. Der untersuchte Trassenkorridor verl\u00e4uft von Marzahn-Hellersdorf \u00fcber die Karl-Marx-Allee und den Alexanderplatz bis zum S-Bahnhof Tiergarten. Es sollen vor allem Wohn- und Arbeitsquartiere angebunden werden. Die \"West-Route\" ist die Verl\u00e4ngerung der \"Ost-Route\", die von Spandau bis nach Charlottenburg-Wilmersdorf f\u00fchrt. Die Gesamtstrecke der Ost- und West-Route umfasst knapp 38 Kilometer.",
+      "length": 23,
+      "description": "Die \"Ost-Route\" soll die äußeren Bezirke Marzahn-Hellersdorf und Lichtenberg mit Mitte verbinden. Der untersuchte Trassenkorridor verläuft von Marzahn-Hellersdorf über die Karl-Marx-Allee und den Alexanderplatz bis zum S-Bahnhof Tiergarten. Es sollen vor allem Wohn- und Arbeitsquartiere angebunden werden. Die \"West-Route\" ist die Verlängerung der \"Ost-Route\", die von Spandau bis nach Charlottenburg-Wilmersdorf führt. Die Gesamtstrecke der Ost- und West-Route umfasst knapp 38 Kilometer.",
       "source": "https://www.infravelo.de/projekt/ost-route/"
     },
-    "stakeholders": [
-      {
-        "name": "infraVelo",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": "https://www.infravelo.de/projekt/ost-route/"
-    }
+    "stakeholders": [{ "name": "infraVelo", "roles": ["authority"] }],
+    "references": { "website": "https://www.infravelo.de/projekt/ost-route/" }
   },
   {
     "id": "rsv10-berlin",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RSV 10",
       "name": "Reinickendorf-Route",
       "from": "Reinickendorf",
       "to": "Mitte",
-      "length": "10,86",
-      "description": "Der Trassenkorridor \"Reinickendorf-Route\" verbindet die Stadtteile Reinickendorf und Wedding mit dem k\u00fcnftigen Schumacher-Quartier sowie der Urban Tech Republic (UTR) auf dem Gel\u00e4nde des ehemaligen Flughafen Tegel. Ziel ist es, die Reinickendorf-Route mit der geplanten Radschnellverbindung \"Mitte - Tegel - Spandau\" zu verkn\u00fcpfen.",
+      "length": 10.86,
+      "description": "Der Trassenkorridor \"Reinickendorf-Route\" verbindet die Stadtteile Reinickendorf und Wedding mit dem künftigen Schumacher-Quartier sowie der Urban Tech Republic (UTR) auf dem Gelände des ehemaligen Flughafen Tegel. Ziel ist es, die Reinickendorf-Route mit der geplanten Radschnellverbindung \"Mitte - Tegel - Spandau\" zu verknüpfen.",
       "source": "https://www.infravelo.de/projekt/reinickendorf-route-1/"
     },
-    "stakeholders": [
-      {
-        "name": "infraVelo",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "infraVelo", "roles": ["authority"] }],
     "references": {
       "website": "https://www.infravelo.de/projekt/reinickendorf-route-1/"
     }
   },
   {
     "id": "1-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "1",
-      "name": "Elmshorn \u2013 Hamburg",
+      "name": "Elmshorn – Hamburg",
       "from": "Elmshorn",
       "to": "Hamburg",
-      "length": "25",
-      "description": "Der Radschnellweg soll von Elmshorn parallel zur Bahn \u00fcber Tornesch, \nPinneberg und Halstenbek nach Hamburg f\u00fchren. Dort soll er in den \nBezirken Altona und Eimsb\u00fcttel unter anderem an die Velorouten 2 und 14 \nanschlie\u00dfen. So verbindet er gr\u00f6\u00dfere St\u00e4dte und Gemeinden, zwischen \ndenen schon heute starke Pendelbeziehungen bestehen.",
+      "length": 25,
+      "description": "Der Radschnellweg soll von Elmshorn parallel zur Bahn über Tornesch, \nPinneberg und Halstenbek nach Hamburg führen. Dort soll er in den \nBezirken Altona und Eimsbüttel unter anderem an die Velorouten 2 und 14 \nanschließen. So verbindet er größere Städte und Gemeinden, zwischen \ndenen schon heute starke Pendelbeziehungen bestehen.",
       "source": "https://metropolregion.hamburg.de/radschnellwege/15310038/radschnellweg-elmshorn-hamburg/"
     },
     "stakeholders": [
-      {
-        "name": "Metropolregion Hamburg",
-        "roles": ["authority"]
-      }
+      { "name": "Metropolregion Hamburg", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15310038/radschnellweg-elmshorn-hamburg/"
@@ -1321,23 +1132,20 @@
   },
   {
     "id": "2-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "2",
-      "name": "Bad Bramstedt \u2013 Hamburg",
+      "name": "Bad Bramstedt – Hamburg",
       "from": "Bad Bramstedt",
       "to": "Hamburg",
-      "length": "40",
-      "description": "Der Radschnellweg soll Bad Bramstedt, Kaltenkirchen, Henstedt-Ulzburg \nund Norderstedt\u00a0mit Hamburg verbinden und in der H\u00f6he von \nHamburg-Alsterdorf und Winterhude an\u00a0die\u00a0Velorouten 4 und 5a \nanschlie\u00dfen. Die Route ist eine der l\u00e4ngsten im Gesamtprojekt.",
+      "length": 40,
+      "description": "Der Radschnellweg soll Bad Bramstedt, Kaltenkirchen, Henstedt-Ulzburg \nund Norderstedt mit Hamburg verbinden und in der Höhe von \nHamburg-Alsterdorf und Winterhude an die Velorouten 4 und 5a \nanschließen. Die Route ist eine der längsten im Gesamtprojekt.",
       "source": "https://metropolregion.hamburg.de/radschnellwege/15303660/radschnellweg-bad-bramstedt-hamburg/"
     },
     "stakeholders": [
-      {
-        "name": "Metropolregion Hamburg",
-        "roles": ["authority"]
-      }
+      { "name": "Metropolregion Hamburg", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15303660/radschnellweg-bad-bramstedt-hamburg/"
@@ -1345,23 +1153,20 @@
   },
   {
     "id": "3-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "3",
-      "name": "Ahrensburg \u2013 Hamburg",
+      "name": "Ahrensburg – Hamburg",
       "from": "Ahrensburg",
       "to": "Hamburg",
-      "length": "15",
-      "description": "Die Route soll Ahrensburg mit Hamburg-Wandsbek verbinden, wo sie in \nVolksdorf an die Veloroute 6 anschlie\u00dfen soll. Sie ist die k\u00fcrzeste der \nuntersuchten Verbindungen, hat aber aufgrund der starken \nPendlerbeziehungen zwischen Ahrensburg und Volksdorf Potenzial.",
+      "length": 15,
+      "description": "Die Route soll Ahrensburg mit Hamburg-Wandsbek verbinden, wo sie in \nVolksdorf an die Veloroute 6 anschließen soll. Sie ist die kürzeste der \nuntersuchten Verbindungen, hat aber aufgrund der starken \nPendlerbeziehungen zwischen Ahrensburg und Volksdorf Potenzial.",
       "source": "https://metropolregion.hamburg.de/radschnellwege/15307136/radschnellweg-ahrensburg-hamburg/"
     },
     "stakeholders": [
-      {
-        "name": "Metropolregion Hamburg",
-        "roles": ["authority"]
-      }
+      { "name": "Metropolregion Hamburg", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15307136/radschnellweg-ahrensburg-hamburg/"
@@ -1369,23 +1174,20 @@
   },
   {
     "id": "4-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "4",
-      "name": "Geesthacht \u2013 Hamburg",
+      "name": "Geesthacht – Hamburg",
       "from": "Geesthacht",
       "to": "Hamburg",
-      "length": "20",
-      "description": "Obwohl starke Pendlerbeziehungen nach Hamburg bestehen, gibt es keine \nSchienenverbindung nach Geesthacht und der \u00f6ffentliche Nahverkehr ist \nauf Busse angewiesen. Deshalb kann der Radschnellweg von Geesthacht nach\n Hamburg eine besondere Bedeutung entfalten",
+      "length": 20,
+      "description": "Obwohl starke Pendlerbeziehungen nach Hamburg bestehen, gibt es keine \nSchienenverbindung nach Geesthacht und der öffentliche Nahverkehr ist \nauf Busse angewiesen. Deshalb kann der Radschnellweg von Geesthacht nach\n Hamburg eine besondere Bedeutung entfalten",
       "source": "https://metropolregion.hamburg.de/radschnellwege/15310118/radschnellweg-geesthacht-hamburg/"
     },
     "stakeholders": [
-      {
-        "name": "Metropolregion Hamburg",
-        "roles": ["authority"]
-      }
+      { "name": "Metropolregion Hamburg", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15310118/radschnellweg-geesthacht-hamburg/"
@@ -1393,23 +1195,20 @@
   },
   {
     "id": "5-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "5",
-      "name": "L\u00fcneburg \u2013 Hamburg",
-      "from": "L\u00fcneburg",
+      "name": "Lüneburg – Hamburg",
+      "from": "Lüneburg",
       "to": "Hamburg",
-      "length": "45",
-      "description": "Dieser Radschnellweg soll von L\u00fcneburg \u00fcber Bardowick, Winsen (Luhe), \nStelle und Seevetal nach Harburg f\u00fchren. Von dort aus geht es \u00fcber die \nElbinsel Wilhelmsburg weiter in die Hamburger Innenstadt. Er soll an die\n Velorouten 10 und 11 anschlie\u00dfen.",
+      "length": 45,
+      "description": "Dieser Radschnellweg soll von Lüneburg über Bardowick, Winsen (Luhe), \nStelle und Seevetal nach Harburg führen. Von dort aus geht es über die \nElbinsel Wilhelmsburg weiter in die Hamburger Innenstadt. Er soll an die\n Velorouten 10 und 11 anschließen.",
       "source": "https://metropolregion.hamburg.de/radschnellwege/15310310/radschnellweg-lueneburg-hamburg/"
     },
     "stakeholders": [
-      {
-        "name": "Metropolregion Hamburg",
-        "roles": ["authority"]
-      }
+      { "name": "Metropolregion Hamburg", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15310310/radschnellweg-lueneburg-hamburg/"
@@ -1417,23 +1216,20 @@
   },
   {
     "id": "6-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "6",
-      "name": "Stade \u2013 Hamburg",
+      "name": "Stade – Hamburg",
       "from": "Stade",
       "to": "Hamburg",
-      "length": "40",
-      "description": "Der Radschnellweg von Stade \u00fcber Neu Wulmstorf nach Hamburg soll den \nwestlichen und s\u00fcdwestlichen Bereich der Metropolregion Hamburg zwischen\n Stade, Harburg und Finkenwerder erschlie\u00dfen. Von Neugraben aus soll er \n\u00fcber die Veloroute 10 in das Zentrum von Harburg f\u00fchren. Dort wird er an\n den Radschnellweg aus Richtung L\u00fcneburg anschlie\u00dfen und weiter in \nRichtung Elbinsel und Hamburger Innenstadt f\u00fchren.",
+      "length": 40,
+      "description": "Der Radschnellweg von Stade über Neu Wulmstorf nach Hamburg soll den \nwestlichen und südwestlichen Bereich der Metropolregion Hamburg zwischen\n Stade, Harburg und Finkenwerder erschließen. Von Neugraben aus soll er \nüber die Veloroute 10 in das Zentrum von Harburg führen. Dort wird er an\n den Radschnellweg aus Richtung Lüneburg anschließen und weiter in \nRichtung Elbinsel und Hamburger Innenstadt führen.",
       "source": "https://metropolregion.hamburg.de/radschnellwege/15307278/radschnellweg-stade-hamburg/"
     },
     "stakeholders": [
-      {
-        "name": "Metropolregion Hamburg",
-        "roles": ["authority"]
-      }
+      { "name": "Metropolregion Hamburg", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15307278/radschnellweg-stade-hamburg/"
@@ -1441,23 +1237,20 @@
   },
   {
     "id": "7-hamburg",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "7",
-      "name": "Tostedt \u2013 Hamburg",
+      "name": "Tostedt – Hamburg",
       "from": "Toestedt",
       "to": "Hamburg",
-      "length": "",
-      "description": "Der Radschnellweg von Tostedt soll \u00fcber Buchholz und Harburg nach Hamburg f\u00fchren. Auf einer L\u00e4nge von rund 32 km f\u00fchrt er im s\u00fcdlichen Abschnitt durch ein eher l\u00e4ndlich gepr\u00e4gtes Gebiet. Aber schon in Buchholz und in den Gemeinden Rosengarten und Seevetal gibt es starke Pendlerbeziehungen nach Hamburg.",
+      "length": 27,
+      "description": "Der Radschnellweg von Tostedt soll über Buchholz und Harburg nach Hamburg führen. Auf einer Länge von rund 32 km führt er im südlichen Abschnitt durch ein eher ländlich geprägtes Gebiet. Aber schon in Buchholz und in den Gemeinden Rosengarten und Seevetal gibt es starke Pendlerbeziehungen nach Hamburg.",
       "source": "https://metropolregion.hamburg.de/radschnellwege/15307158/radschnellweg-tostedt-hamburg/"
     },
     "stakeholders": [
-      {
-        "name": "Metropolregion Hamburg",
-        "roles": ["authority"]
-      }
+      { "name": "Metropolregion Hamburg", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15307158/radschnellweg-tostedt-hamburg/"
@@ -1465,239 +1258,187 @@
   },
   {
     "id": "frm1-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "in_progress",
     "general": {
       "ref": "FRM 1",
-      "name": "Radschnellweg Frankfurt \u2013 Darmstadt",
+      "name": "Radschnellweg Frankfurt – Darmstadt",
       "from": "Frankfurt am Main",
       "to": "Darmstadt",
-      "length": "30",
-      "description": "Im Herbst 2015 hatte der Regionalverband eine \nMachbarkeitsstudie f\u00fcr eine Radschnellverbindung vom Holbeinsteg in \nFrankfurt am Main \u00fcber Neu-Isenburg, Dreieich, Langen, Egelsbach und \nErzhausen bis nach Darmstadt vorgelegt. Mit dem Regionalpark RheinMain \nS\u00fcdwest gGmbH gibt es einen engagieren K\u00fcmmerer, der die Umsetzung der \nMachbarkeitsstudie verfolgt. So konnte er bereits erste Bauabschnitte \nfertigstellen. Der Regionalverband ist in einer beratenden und \nunterst\u00fctzenden Rolle beteiligt. Das Vorhaben erh\u00e4lt eine F\u00f6rderung vom \nHessischen Ministerium f\u00fcr Wirtschaft, Energie, Verkehr und Wohnen.\nAm 6. Juni 2019 wurde das erste Teilst\u00fcck mit einer L\u00e4nge von 3,6 \nKilometern zwischen Egelsbach und dem Darmst\u00e4dter Stadtteil Wixhausen \noffiziell eingeweiht. Der zweite Bauabschnitt zwischen Egelsbach und \nLangen ist in der Umsetzung, der 3. Bauabschnitt im Bereich Dreieich ist\n aktuell in der Vorplanung. Die Abschnitte 4 und 5 folgen bis Ende 2023.",
+      "length": 30,
+      "description": "Im Herbst 2015 hatte der Regionalverband eine \nMachbarkeitsstudie für eine Radschnellverbindung vom Holbeinsteg in \nFrankfurt am Main über Neu-Isenburg, Dreieich, Langen, Egelsbach und \nErzhausen bis nach Darmstadt vorgelegt. Mit dem Regionalpark RheinMain \nSüdwest gGmbH gibt es einen engagieren Kümmerer, der die Umsetzung der \nMachbarkeitsstudie verfolgt. So konnte er bereits erste Bauabschnitte \nfertigstellen. Der Regionalverband ist in einer beratenden und \nunterstützenden Rolle beteiligt. Das Vorhaben erhält eine Förderung vom \nHessischen Ministerium für Wirtschaft, Energie, Verkehr und Wohnen.\nAm 6. Juni 2019 wurde das erste Teilstück mit einer Länge von 3,6 \nKilometern zwischen Egelsbach und dem Darmstädter Stadtteil Wixhausen \noffiziell eingeweiht. Der zweite Bauabschnitt zwischen Egelsbach und \nLangen ist in der Umsetzung, der 3. Bauabschnitt im Bereich Dreieich ist\n aktuell in der Vorplanung. Die Abschnitte 4 und 5 folgen bis Ende 2023.",
       "source": "http://radschnellverbindung-ffm-da.de/kontakt"
     },
-    "stakeholders": [
-      {
-        "name": "Nahmobil Hessen",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": "http://radschnellverbindung-ffm-da.de/"
-    }
+    "stakeholders": [{ "name": "Nahmobil Hessen", "roles": ["authority"] }],
+    "references": { "website": "http://radschnellverbindung-ffm-da.de/" }
   },
   {
     "id": "frm2-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 2",
-      "name": "Radschnellweg Gro\u00df-Gerau \u2013 Frankfurt",
-      "from": "Gro\u00df-Gerau",
+      "name": "Radschnellweg Groß-Gerau – Frankfurt",
+      "from": "Groß-Gerau",
       "to": "Frankfurt am Main",
-      "length": "30",
-      "description": "2020 hat der Kreis Gro\u00df-Gerau eine Machbarkeitsstudie f\u00fcr die Pr\u00fcfung \nder drei Radschnellverbindungen Gro\u00df-Gerau \u2013 Frankfurt Flughafen, \nDarmstadt \u2013 R\u00fcsselsheim und Mainz \u2013 Kelsterbach beauftragt. Im September\n 2020 fand die erste B\u00fcrgerbeteiligung statt, die es B\u00fcrgerinnern und \nB\u00fcrgern erm\u00f6glichte, Wunschstrecken und wichtige Ziele zu benennen. Im \nMai 2021 fand die zweite Beteiligungsrunde statt, bei der die bisherige \nPlanung diskutiert und bewertet wurde. Die Ergebnisse der drei \nMachbarkeitsstudien wurden im Dezember 2021 ver\u00f6ffentlicht.",
+      "length": 30,
+      "description": "2020 hat der Kreis Groß-Gerau eine Machbarkeitsstudie für die Prüfung \nder drei Radschnellverbindungen Groß-Gerau – Frankfurt Flughafen, \nDarmstadt – Rüsselsheim und Mainz – Kelsterbach beauftragt. Im September\n 2020 fand die erste Bürgerbeteiligung statt, die es Bürgerinnern und \nBürgern ermöglichte, Wunschstrecken und wichtige Ziele zu benennen. Im \nMai 2021 fand die zweite Beteiligungsrunde statt, bei der die bisherige \nPlanung diskutiert und bewertet wurde. Die Ergebnisse der drei \nMachbarkeitsstudien wurden im Dezember 2021 veröffentlicht.",
       "source": "https://www.nahmobil-hessen.de/projektseite-radschnellverbindungen-in-hessen/"
     },
-    "stakeholders": [
-      {
-        "name": "Nahmobil Hessen",
-        "roles": ["authority"]
-      }
-    ],
-    "references": {
-      "website": "https://www.schneller-radfahren-kreisgg.de/"
-    }
+    "stakeholders": [{ "name": "Nahmobil Hessen", "roles": ["authority"] }],
+    "references": { "website": "https://www.schneller-radfahren-kreisgg.de/" }
   },
   {
     "id": "frm3-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 3",
-      "name": "Radschnellweg Wiesbaden \u2013 Frankfurt",
+      "name": "Radschnellweg Wiesbaden – Frankfurt",
       "from": "Wiesbaden",
       "to": "Frankfurt am Main",
-      "length": "40",
-      "description": "Die Radschnellverbindung soll von Wiesbaden \u00fcber Hattersheim am Main,\n Kriftel und Hofheim am Taunus bis nach Frankfurt verlaufen.\n\nDas Land Hessen unterst\u00fctzt den Regionalverband FrankfurtRheinMain \nmit 49.000 Euro bei der Durchf\u00fchrung einer Machbarkeitsstudie zwischen \nder Landeshauptstadt und Frankfurt. Die Gesamtausgaben belaufen sich auf\n 100.000 Euro.",
+      "length": 40,
+      "description": "Die Radschnellverbindung soll von Wiesbaden über Hattersheim am Main,\n Kriftel und Hofheim am Taunus bis nach Frankfurt verlaufen.\n\nDas Land Hessen unterstützt den Regionalverband FrankfurtRheinMain \nmit 49.000 Euro bei der Durchführung einer Machbarkeitsstudie zwischen \nder Landeshauptstadt und Frankfurt. Die Gesamtausgaben belaufen sich auf\n 100.000 Euro.",
       "source": "https://www.nahmobil-hessen.de/projektseite-radschnellverbindungen-in-hessen/"
     },
-    "stakeholders": [
-      {
-        "name": "Nahmobil Hessen",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "Nahmobil Hessen", "roles": ["authority"] }],
     "references": {
       "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/-Rennen-der-Radschnellwege/"
     }
   },
   {
     "id": "frm4-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 4",
-      "name": "Radschnellweg Bad Soden \u2013 Eschborn",
-      "from": "Gro\u00df-Gerau",
+      "name": "Radschnellweg Bad Soden – Eschborn",
+      "from": "Groß-Gerau",
       "to": "Frankfurt am Main",
-      "length": "10",
-      "description": "Diese potenzielle Radschnellverbindung ist - wenn sie umgesetzt ist - \ndie k\u00fcrzeste von allen FRM-Strecken sein. Denn der FRM4 wird in Eschborn\n an die Radschnellverbindung FRM5 anschlie\u00dfen. So soll im Westen \nFrankfurts ein Radschnellwege-Netz entstehen. Startschuss f\u00fcr das \nProjekt war die Unterzeichnung des Kooperationsvertrags am 9. Juli 2020 \ndurch die Kommunen Bad Soden am Taunus, Eschborn, Schwalbach am Taunus, \nSulzbach (Taunus) und der Main-Taunus-Kreis.\n\nIIm M\u00e4rz 2021 ging \nals erster Schritt eine Machbarkeitsstudie in Auftrag. Ihr Ziel ist es, \neine geeignete Trasse zu identifizieren. Um fr\u00fchzeitig die Hinweise und \ndas Wissen der Menschen vor Ort in die Machbarkeitsstudie einflie\u00dfen zu \nlassen, fand von Anfang Oktober bis Mitte November 2021 eine \nOnline-Umfrage statt, an der sich zahlreiche B\u00fcrgerinnen und B\u00fcrger \nbeteiligten. Wir bedanken uns bei allen Teilnehmenden, die so einen \nwichtigen Beitrag f\u00fcr die weitere Planung geleistet haben\".                                                 ",
+      "length": 10,
+      "description": "Diese potenzielle Radschnellverbindung ist - wenn sie umgesetzt ist - \ndie kürzeste von allen FRM-Strecken sein. Denn der FRM4 wird in Eschborn\n an die Radschnellverbindung FRM5 anschließen. So soll im Westen \nFrankfurts ein Radschnellwege-Netz entstehen. Startschuss für das \nProjekt war die Unterzeichnung des Kooperationsvertrags am 9. Juli 2020 \ndurch die Kommunen Bad Soden am Taunus, Eschborn, Schwalbach am Taunus, \nSulzbach (Taunus) und der Main-Taunus-Kreis.\n\nIIm März 2021 ging \nals erster Schritt eine Machbarkeitsstudie in Auftrag. Ihr Ziel ist es, \neine geeignete Trasse zu identifizieren. Um frühzeitig die Hinweise und \ndas Wissen der Menschen vor Ort in die Machbarkeitsstudie einfließen zu \nlassen, fand von Anfang Oktober bis Mitte November 2021 eine \nOnline-Umfrage statt, an der sich zahlreiche Bürgerinnen und Bürger \nbeteiligten. Wir bedanken uns bei allen Teilnehmenden, die so einen \nwichtigen Beitrag für die weitere Planung geleistet haben\".                                                 ",
       "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
     },
-    "stakeholders": [
-      {
-        "name": "Nahmobil Hessen",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "Nahmobil Hessen", "roles": ["authority"] }],
     "references": {
       "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
     }
   },
   {
     "id": "frm5-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 5",
       "name": "Radschnellweg Frankfurt - Vordertaunus",
       "from": "Frankfurt am Main",
       "to": "Friedrichsdorf",
-      "length": "30",
-      "description": "Zwischen den St\u00e4dten und Gemeinden Friedrichsdorf, Bad Homburg vor der \nH\u00f6he, Oberursel (Taunus), Steinbach (Taunus), Eschborn und Frankfurt am \nMain sind t\u00e4glich rund 45.000 Pendlerinnen und Pendler unterwegs. Ziel \ndes FRM5 ist es, mehr Menschen als bisher zum Umstieg aufs Rad zu \nmotivieren. Aus diesem Grund hatten sich die Kommunen \nzusammengeschlossen, um eine Machbarkeitsstudie in Auftrag zu geben. In \ndiesem Erstellungsprozess flossen die Anmerkungen und Erg\u00e4nzungen der \n\u00d6ffentlichkeit, Fachverb\u00e4nde und -institutionen mit ein. Im Dezember \n2020 wurde die Machbarkeitsstudie ver\u00f6ffentlicht. Die weitere Planung \nund den Bau des Radschnellwegs verantwortet federf\u00fchrend der \nRegionalverband.",
+      "length": 30,
+      "description": "Zwischen den Städten und Gemeinden Friedrichsdorf, Bad Homburg vor der \nHöhe, Oberursel (Taunus), Steinbach (Taunus), Eschborn und Frankfurt am \nMain sind täglich rund 45.000 Pendlerinnen und Pendler unterwegs. Ziel \ndes FRM5 ist es, mehr Menschen als bisher zum Umstieg aufs Rad zu \nmotivieren. Aus diesem Grund hatten sich die Kommunen \nzusammengeschlossen, um eine Machbarkeitsstudie in Auftrag zu geben. In \ndiesem Erstellungsprozess flossen die Anmerkungen und Ergänzungen der \nÖffentlichkeit, Fachverbände und -institutionen mit ein. Im Dezember \n2020 wurde die Machbarkeitsstudie veröffentlicht. Die weitere Planung \nund den Bau des Radschnellwegs verantwortet federführend der \nRegionalverband.",
       "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
     },
-    "stakeholders": [
-      {
-        "name": "Nahmobil Hessen",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "Nahmobil Hessen", "roles": ["authority"] }],
     "references": {
       "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
     }
   },
   {
     "id": "frm6-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "idea",
     "general": {
       "ref": "FRM 6",
-      "name": "Radschnellweg Wetterau \u2013 Frankfurt",
-      "from": "Gie\u00dfen",
+      "name": "Radschnellweg Wetterau – Frankfurt",
+      "from": "Gießen",
       "to": "Frankfurt am Main",
-      "length": "70",
-      "description": "Dieser Radschnellweg in die Wetterau soll zuk\u00fcnftig acht Kommunen \nmiteinander verbinden. Das ist ein absoluter Rekord unter den \nFRM-Radschnellwegen. Hierf\u00fcr haben Bad Nauheim, Butzbach, Bad Vilbel, \nFrankfurt, Friedberg, Karben, W\u00f6llstadt und der Wetteraukreis am 15. \nJuni 2020 einen Kooperationsvertrag unterzeichnet.\nIm M\u00e4rz 2021 ging als erster Schritt eine Machbarkeitsstudie in Auftrag.\n Ihr Ziel ist es, eine geeignete Trasse zu identifizieren. Um fr\u00fchzeitig\n die Hinweise und das Wissen der Menschen vor Ort in die \nMachbarkeitsstudie einflie\u00dfen zu lassen, fand von Anfang Oktober bis \nMitte November 2021 eine Online-Umfrage statt, an der sich zahlreiche \nB\u00fcrgerinnen und B\u00fcrger beteiligten. Wir bedanken uns bei allen \nTeilnehmenden, die so einen wichtigen Beitrag f\u00fcr die weitere Planung \ngeleistet haben.",
+      "length": 70,
+      "description": "Dieser Radschnellweg in die Wetterau soll zukünftig acht Kommunen \nmiteinander verbinden. Das ist ein absoluter Rekord unter den \nFRM-Radschnellwegen. Hierfür haben Bad Nauheim, Butzbach, Bad Vilbel, \nFrankfurt, Friedberg, Karben, Wöllstadt und der Wetteraukreis am 15. \nJuni 2020 einen Kooperationsvertrag unterzeichnet.\nIm März 2021 ging als erster Schritt eine Machbarkeitsstudie in Auftrag.\n Ihr Ziel ist es, eine geeignete Trasse zu identifizieren. Um frühzeitig\n die Hinweise und das Wissen der Menschen vor Ort in die \nMachbarkeitsstudie einfließen zu lassen, fand von Anfang Oktober bis \nMitte November 2021 eine Online-Umfrage statt, an der sich zahlreiche \nBürgerinnen und Bürger beteiligten. Wir bedanken uns bei allen \nTeilnehmenden, die so einen wichtigen Beitrag für die weitere Planung \ngeleistet haben.",
       "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
     },
-    "stakeholders": [
-      {
-        "name": "Nahmobil Hessen",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "Nahmobil Hessen", "roles": ["authority"] }],
     "references": {
       "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
     }
   },
   {
     "id": "frm7-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 7",
-      "name": "Radschnellweg Frankfurt \u2013 Hanau nordmainlisch",
+      "name": "Radschnellweg Frankfurt – Hanau nordmainlisch",
       "from": "Frankfurt am Main",
       "to": "Hanau",
-      "length": "20",
-      "description": "Auf einer L\u00e4nge von 15 bis 20 Kilometern soll diese Radschnellverbindung\n die St\u00e4dte Frankfurt am Main, Maintal und Hanau auf nordmainischer \nSeite miteinander verbinden. Zu diesem Zweck hat die interkommunale \nArbeitsgruppe, bestehend aus dem Regionalverband und den drei Kommunen, \nim Februar 2016 eine Absichtserkl\u00e4rung unterschrieben, um eine \nMachbarkeitsstudie zu erstellen. Diese Studie wurde am 20. September \n2019 ver\u00f6ffentlicht. Anschlie\u00dfend \u00fcbernimmt der Regionalverband die \nAufgabe, das Vorhaben umzusetzen.",
+      "length": 20,
+      "description": "Auf einer Länge von 15 bis 20 Kilometern soll diese Radschnellverbindung\n die Städte Frankfurt am Main, Maintal und Hanau auf nordmainischer \nSeite miteinander verbinden. Zu diesem Zweck hat die interkommunale \nArbeitsgruppe, bestehend aus dem Regionalverband und den drei Kommunen, \nim Februar 2016 eine Absichtserklärung unterschrieben, um eine \nMachbarkeitsstudie zu erstellen. Diese Studie wurde am 20. September \n2019 veröffentlicht. Anschließend übernimmt der Regionalverband die \nAufgabe, das Vorhaben umzusetzen.",
       "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
     },
-    "stakeholders": [
-      {
-        "name": "Nahmobil Hessen",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "Nahmobil Hessen", "roles": ["authority"] }],
     "references": {
       "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
     }
   },
   {
     "id": "frm8-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 8",
-      "name": "Radschnellweg Hanau \u2013 Frankfurt s\u00fcdmainlisch",
+      "name": "Radschnellweg Hanau – Frankfurt südmainlisch",
       "from": "Frankfurt am Main",
       "to": "Hanau",
-      "length": "20",
-      "description": "Am 3. M\u00e4rz 2020 haben die St\u00e4dte Frankfurt am Main, Hanau, M\u00fchlheim \nam Main und Offenbach am Main, der Kreis Offenbach und der \nRegionalverband eine Absichtserkl\u00e4rung f\u00fcr die Realisierung einer \nRadschnellverbindung unterzeichnet. F\u00fcr diese s\u00fcdmainische Verbindung \nzwischen Hanau und Frankfurt wurde das h\u00f6chste Radfahrpotenzial in ganz \nHessen ermittelt.\nIm Dezember 2020 gab der Regionalverband als ersten Schritt eine \nMachbarkeitsstudie in Auftrag. Deren Ziel ist es, eine geeignete Trasse \nzu ermitteln. Um fr\u00fchzeitig die Hinweise und das Wissen der Menschen vor\n Ort abzufragen und in die Erarbeitung der Machbarkeitsstudie zu \nintegrieren,\u00a0 fand von Ende M\u00e4rz bis zum 9. Mai 2021 eine Online-Umfrage\n statt, an der sich zahlreiche B\u00fcrgerinnen und B\u00fcrger beteiligten\". [...]\n\"Bei der Machbarkeitsstudie ist ein weiterer Meilenstein erreicht: Eine \nEntscheidung fiel f\u00fcr die Vorzugstrasse. F\u00fcr diese Trasse werden nun \naktuell geeignete Ma\u00dfnahmen entwickelt und mit den Tr\u00e4gern anderer \n\u00f6ffentlicher Planungen abgestimmt. Ziel ist es, den Ausbaustandard einer\n Radschnellverbindung zu erreichen.",
+      "length": 20,
+      "description": "Am 3. März 2020 haben die Städte Frankfurt am Main, Hanau, Mühlheim \nam Main und Offenbach am Main, der Kreis Offenbach und der \nRegionalverband eine Absichtserklärung für die Realisierung einer \nRadschnellverbindung unterzeichnet. Für diese südmainische Verbindung \nzwischen Hanau und Frankfurt wurde das höchste Radfahrpotenzial in ganz \nHessen ermittelt.\nIm Dezember 2020 gab der Regionalverband als ersten Schritt eine \nMachbarkeitsstudie in Auftrag. Deren Ziel ist es, eine geeignete Trasse \nzu ermitteln. Um frühzeitig die Hinweise und das Wissen der Menschen vor\n Ort abzufragen und in die Erarbeitung der Machbarkeitsstudie zu \nintegrieren,  fand von Ende März bis zum 9. Mai 2021 eine Online-Umfrage\n statt, an der sich zahlreiche Bürgerinnen und Bürger beteiligten\". [...]\n\"Bei der Machbarkeitsstudie ist ein weiterer Meilenstein erreicht: Eine \nEntscheidung fiel für die Vorzugstrasse. Für diese Trasse werden nun \naktuell geeignete Maßnahmen entwickelt und mit den Trägern anderer \nöffentlicher Planungen abgestimmt. Ziel ist es, den Ausbaustandard einer\n Radschnellverbindung zu erreichen.",
       "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
     },
-    "stakeholders": [
-      {
-        "name": "Nahmobil Hessen",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "Nahmobil Hessen", "roles": ["authority"] }],
     "references": {
       "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
     }
   },
   {
     "id": "frm9-hessen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "FRM 9",
       "name": "Radschnellweg Seligenstadt -Frankfurter Flughafen",
       "from": "Flughafen Frankfurt",
       "to": "Seligenstadt",
-      "length": "25",
-      "description": "Die Anbindung des Kreises Offenbach an den Frankfurter Flughafen ist \neines der zentralen Ziele dieser potenziellen Radschnellverbindung, die \nvon Seligenstadt \u00fcber Rodgau, Dietzenbach, Dreieich und Neu-Isenburg bis\n zum Flughafen verlaufen soll. Hierzu haben die genannten Kommunen, der \nKreis Offenbach und der Regionalverband am 20. Februar 2020 eine \nAbsichtserkl\u00e4rung unterzeichnet.\nIm Dezember 2020 gab der Regionalverband als ersten Schritt eine \nMachbarkeitsstudie in Auftrag. Deren Ziel ist es, eine geeignete Trasse \nzu ermitteln. Um fr\u00fchzeitig die Hinweise und das Wissen der Menschen \nVorort abzufragen und in die Erarbeitung der Machbarkeitsstudie zu \nintegrieren, fand von Ende M\u00e4rz bis zum 9. Mai 2021 eine Online-Umfrage \nstatt, an der sich zahlreiche B\u00fcrgerinnen und B\u00fcrger beteiligten. Wir \nbedanken uns bei allen Teilnehmenden, die so einen wichtigen Beitrag f\u00fcr\n die weitere Planung geleistet haben.\nAm 30. M\u00e4rz 2021 fand zudem eine Online-Informationsveranstaltung \nstatt. Hier wurden der Zweck, die Ziele und das Vorgehen der \nMachbarkeitsstudie erl\u00e4utert und Fragen der Teilnehmenden gekl\u00e4rt.",
+      "length": 25,
+      "description": "Die Anbindung des Kreises Offenbach an den Frankfurter Flughafen ist \neines der zentralen Ziele dieser potenziellen Radschnellverbindung, die \nvon Seligenstadt über Rodgau, Dietzenbach, Dreieich und Neu-Isenburg bis\n zum Flughafen verlaufen soll. Hierzu haben die genannten Kommunen, der \nKreis Offenbach und der Regionalverband am 20. Februar 2020 eine \nAbsichtserklärung unterzeichnet.\nIm Dezember 2020 gab der Regionalverband als ersten Schritt eine \nMachbarkeitsstudie in Auftrag. Deren Ziel ist es, eine geeignete Trasse \nzu ermitteln. Um frühzeitig die Hinweise und das Wissen der Menschen \nVorort abzufragen und in die Erarbeitung der Machbarkeitsstudie zu \nintegrieren, fand von Ende März bis zum 9. Mai 2021 eine Online-Umfrage \nstatt, an der sich zahlreiche Bürgerinnen und Bürger beteiligten. Wir \nbedanken uns bei allen Teilnehmenden, die so einen wichtigen Beitrag für\n die weitere Planung geleistet haben.\nAm 30. März 2021 fand zudem eine Online-Informationsveranstaltung \nstatt. Hier wurden der Zweck, die Ziele und das Vorgehen der \nMachbarkeitsstudie erläutert und Fragen der Teilnehmenden geklärt.",
       "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
     },
-    "stakeholders": [
-      {
-        "name": "Nahmobil Hessen",
-        "roles": ["authority"]
-      }
-    ],
+    "stakeholders": [{ "name": "Nahmobil Hessen", "roles": ["authority"] }],
     "references": {
       "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
     }
   },
   {
     "id": "1-mecklenburg-vorpommern",
-    "cost": "",
-    "finished": "",
-    "state": "",
+    "cost": null,
+    "finished": null,
+    "state": "planning",
     "general": {
       "ref": "1",
       "name": "Radschnellweg Schwerin-Wismar",
       "from": "Schwerin",
       "to": "Wismar",
-      "length": "36",
-      "description": "Die Region um Schwerin und Wismar unterscheidet sich deutlich von den anderen untersuchten Regionen. Hier wurde die einzige Verbindung in einem \u00fcberwiegend d\u00fcnn besiedelten l\u00e4ndlichen Raum gesucht. Damit konnte modellhaft gezeigt werden, wie ein Radschnellweg gebaut werden kann, der nur St\u00e4dte und Gemeinden verbindet, in denen weniger als 100.000 Menschen wohnen. Die Ergebnisse lassen sich auf zahlreiche \u00e4hnlich strukturierte R\u00e4ume in der Metropolregion Hamburg \u00fcbertragen.",
+      "length": 36,
+      "description": "Die Region um Schwerin und Wismar unterscheidet sich deutlich von den anderen untersuchten Regionen. Hier wurde die einzige Verbindung in einem überwiegend dünn besiedelten ländlichen Raum gesucht. Damit konnte modellhaft gezeigt werden, wie ein Radschnellweg gebaut werden kann, der nur Städte und Gemeinden verbindet, in denen weniger als 100.000 Menschen wohnen. Die Ergebnisse lassen sich auf zahlreiche ähnlich strukturierte Räume in der Metropolregion Hamburg übertragen.",
       "source": "https://metropolregion.hamburg.de/radschnellwege/15307182/radschnellweg-schwerin-wismar/"
     },
     "stakeholders": [
-      {
-        "name": "Metropolregion Hamburg",
-        "roles": ["authority"]
-      }
+      { "name": "Metropolregion Hamburg", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15307182/radschnellweg-schwerin-wismar/"
@@ -1705,21 +1446,21 @@
   },
   {
     "id": "rs1-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "in_progress",
     "general": {
       "ref": "RS1",
       "name": "Radschnellweg Ruhr",
       "from": "Duisburg",
       "to": "Hamm",
-      "length": "101",
-      "description": "Zwischen M\u00fclheim an der Ruhr und Essen ist das Radschnellweg-Feeling \nschon zu sp\u00fcren. Als Herzst\u00fcck des neuen Radschnellweges RS1 von \nDuisburg nach Hamm hat der Regionalverband Ruhr (RVR) bereits sechs \nKilometer als Modellstrecke er\u00f6ffnet. Und das ist erst der Anfang \u2013 der \nLandesbetrieb Stra\u00dfen.NRW wird als \u201eBaulasttr\u00e4ger\u201c die Bauarbeiten auf \nden restlichen 95 Kilometern vorantreiben.",
+      "length": 101,
+      "description": "Zwischen Mülheim an der Ruhr und Essen ist das Radschnellweg-Feeling \nschon zu spüren. Als Herzstück des neuen Radschnellweges RS1 von \nDuisburg nach Hamm hat der Regionalverband Ruhr (RVR) bereits sechs \nKilometer als Modellstrecke eröffnet. Und das ist erst der Anfang – der \nLandesbetrieb Straßen.NRW wird als „Baulastträger“ die Bauarbeiten auf \nden restlichen 95 Kilometern vorantreiben.",
       "source": "https://www.radschnellwege.nrw/rs1-radschnellweg-ruhr"
     },
     "stakeholders": [
       {
-        "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
+        "name": "Ministerium für Verkehr des Landes Nordrhein-Westfalen",
         "roles": ["authority"]
       }
     ],
@@ -1729,21 +1470,21 @@
   },
   {
     "id": "rs7-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS7",
       "name": "Radschnellweg Mittleres Ruhrgebiet",
       "from": "Bottrop",
       "to": "Essen",
-      "length": "13",
-      "description": "Der Radschnellweg Mittleres Ruhrgebiet kann zuk\u00fcnftig die St\u00e4dte Essen, \nBottrop und Gladbeck miteinander verbinden. Die rund 13 Kilometer lange \nStrecke soll eine schnellere und bessere Erreichbarkeit zwischen Nord \nund S\u00fcd im mittleren Ruhrgebiet per Rad schaffen, den Alltagsradverkehr \nim Revier weiter voranbringen und einen Beitrag zur Verbesserung der \nVerkehrssituation rund um die stark frequentierte B 224 leisten.",
+      "length": 13,
+      "description": "Der Radschnellweg Mittleres Ruhrgebiet kann zukünftig die Städte Essen, \nBottrop und Gladbeck miteinander verbinden. Die rund 13 Kilometer lange \nStrecke soll eine schnellere und bessere Erreichbarkeit zwischen Nord \nund Süd im mittleren Ruhrgebiet per Rad schaffen, den Alltagsradverkehr \nim Revier weiter voranbringen und einen Beitrag zur Verbesserung der \nVerkehrssituation rund um die stark frequentierte B 224 leisten.",
       "source": "https://www.radschnellwege.nrw/radschnellweg-mittleres-ruhrgebiet/"
     },
     "stakeholders": [
       {
-        "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
+        "name": "Ministerium für Verkehr des Landes Nordrhein-Westfalen",
         "roles": ["authority"]
       }
     ],
@@ -1753,21 +1494,21 @@
   },
   {
     "id": "rs6-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS6",
-      "name": "Radschnellweg K\u00f6ln \u2013 Frechen",
-      "from": "K\u00f6ln",
+      "name": "Radschnellweg Köln – Frechen",
+      "from": "Köln",
       "to": "Frechen",
-      "length": "8,4",
-      "description": "Mit der Strecke K\u00f6ln \u2013 Frechen wird der erste Teil eines gr\u00f6\u00dferen \nRadschnellwegenetzes in der Region Rheinland umgesetzt. Die 8,4 km lange\n Strecke verbindet die Innenstadt von K\u00f6ln mit Frechen und erschlie\u00dft \ndabei wichtige Alltags- und Freizeitziele. Das gr\u00f6\u00dfte Ziel im Verlauf \ndes Radschnellweges ist die K\u00f6lner Universit\u00e4t, aber auch mehrere \nGewerbegebiete sowie der Innere und \u00e4u\u00dfere Gr\u00fcng\u00fcrtel und das \nRheinenergie-Stadion liegen im Verlauf.",
+      "length": 8.4,
+      "description": "Mit der Strecke Köln – Frechen wird der erste Teil eines größeren \nRadschnellwegenetzes in der Region Rheinland umgesetzt. Die 8,4 km lange\n Strecke verbindet die Innenstadt von Köln mit Frechen und erschließt \ndabei wichtige Alltags- und Freizeitziele. Das größte Ziel im Verlauf \ndes Radschnellweges ist die Kölner Universität, aber auch mehrere \nGewerbegebiete sowie der Innere und äußere Grüngürtel und das \nRheinenergie-Stadion liegen im Verlauf.",
       "source": "https://www.radschnellwege.nrw/radschnellweg-koeln-frechen/"
     },
     "stakeholders": [
       {
-        "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
+        "name": "Ministerium für Verkehr des Landes Nordrhein-Westfalen",
         "roles": ["authority"]
       }
     ],
@@ -1777,21 +1518,21 @@
   },
   {
     "id": "rs3-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS3",
       "name": "Radschnellweg OWL",
       "from": "Herford",
       "to": "Minden",
-      "length": "36",
-      "description": "Rund 50 Kilometer non-stop von Herford nach Minden. Ohne Hindernisse, \nohne Absteigen, Schieben oder langes Warten vor der Ampel. Der RS3 \nRadschnellweg OWL verbindet die St\u00e4dte Herford, L\u00f6hne, Bad Oeynhausen, \nPorta Westfalica und Minden mit zusammen 276.000 Einwohnern. Die \nSt\u00e4dtekette zwischen Minden und Herford mit ihren vielen \nSiedlungsschwerpunkten und engen Pendlerbeziehungen bietet ausreichend \nPotenzial (1.500 bis 2.000 Radfahrten t\u00e4glich) f\u00fcr einen breiten \nRadschnellweg.",
+      "length": 36,
+      "description": "Rund 50 Kilometer non-stop von Herford nach Minden. Ohne Hindernisse, \nohne Absteigen, Schieben oder langes Warten vor der Ampel. Der RS3 \nRadschnellweg OWL verbindet die Städte Herford, Löhne, Bad Oeynhausen, \nPorta Westfalica und Minden mit zusammen 276.000 Einwohnern. Die \nStädtekette zwischen Minden und Herford mit ihren vielen \nSiedlungsschwerpunkten und engen Pendlerbeziehungen bietet ausreichend \nPotenzial (1.500 bis 2.000 Radfahrten täglich) für einen breiten \nRadschnellweg.",
       "source": "https://www.radschnellwege.nrw/rs3-radschnellweg-owl/"
     },
     "stakeholders": [
       {
-        "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
+        "name": "Ministerium für Verkehr des Landes Nordrhein-Westfalen",
         "roles": ["authority"]
       }
     ],
@@ -1801,21 +1542,21 @@
   },
   {
     "id": "rs5-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS5",
-      "name": "Radschnellweg Neuss, D\u00fcsseldorf Langenfeld/Monheim",
+      "name": "Radschnellweg Neuss, Düsseldorf Langenfeld/Monheim",
       "from": "Neuss",
       "to": "Monheim",
-      "length": "30",
-      "description": "Die Strecke von Neuss \u00fcber D\u00fcsseldorf bis nach Langenfeld und Monheim \nist der s\u00fcdliche Teil des Radschnellwegekonzeptes f\u00fcr die Region \nD\u00fcsseldorf. Der knapp 30 Kilometer lange Radschnellweg verbindet die \nZentren der St\u00e4dte miteinander und erschlie\u00dft dabei eine Vielzahl von \nwichtigen Alltags- und Freizeitzielen.",
+      "length": 30,
+      "description": "Die Strecke von Neuss über Düsseldorf bis nach Langenfeld und Monheim \nist der südliche Teil des Radschnellwegekonzeptes für die Region \nDüsseldorf. Der knapp 30 Kilometer lange Radschnellweg verbindet die \nZentren der Städte miteinander und erschließt dabei eine Vielzahl von \nwichtigen Alltags- und Freizeitzielen.",
       "source": "https://www.radschnellwege.nrw/radschnellweg-neuss-duesseldorf-langenfeldmonheim/"
     },
     "stakeholders": [
       {
-        "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
+        "name": "Ministerium für Verkehr des Landes Nordrhein-Westfalen",
         "roles": ["authority"]
       }
     ],
@@ -1825,21 +1566,21 @@
   },
   {
     "id": "rs2-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS2",
-      "name": "Radschnellweg Westm\u00fcnsterland",
+      "name": "Radschnellweg Westmünsterland",
       "from": "Isselburg",
       "to": "Coesfeld",
-      "length": "60",
-      "description": "Im Rahmen der Regionale 2016 \"Zukunftsland\" verfolgen die St\u00e4dte \nIsselburg, Bocholt, Rhede, Borken, Velen, Gescher und Coesfeld sowie die\n Kreise Borken und Coesfeld das Projekt \u201eRadschnellweg Westliches \nM\u00fcnsterland REGIO.VELO\u201c. Mit dem Radschnellweg REGIO.VELO soll eine \noptimale Infrastruktur f\u00fcr schnellen Radverkehr entstehen, die die Orte \nan der Strecke weitgehend kreuzungsfrei miteinander verbindet.",
+      "length": 60,
+      "description": "Im Rahmen der Regionale 2016 \"Zukunftsland\" verfolgen die Städte \nIsselburg, Bocholt, Rhede, Borken, Velen, Gescher und Coesfeld sowie die\n Kreise Borken und Coesfeld das Projekt „Radschnellweg Westliches \nMünsterland REGIO.VELO“. Mit dem Radschnellweg REGIO.VELO soll eine \noptimale Infrastruktur für schnellen Radverkehr entstehen, die die Orte \nan der Strecke weitgehend kreuzungsfrei miteinander verbindet.",
       "source": "https://www.radschnellwege.nrw/rs2-radschnellweg-westmuensterland/"
     },
     "stakeholders": [
       {
-        "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
+        "name": "Ministerium für Verkehr des Landes Nordrhein-Westfalen",
         "roles": ["authority"]
       }
     ],
@@ -1849,21 +1590,21 @@
   },
   {
     "id": "rs4-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "RS4",
       "name": "Radschnellweg Euregio",
       "from": "Herzogenrath",
       "to": "Aachen",
-      "length": "30",
-      "description": "Der Radschnellweg Euregio zeichnet sich dadurch aus, dass erstmalig von \nniederl\u00e4ndischen und deutschen Kommunen gemeinsam ein Radverkehrsprojekt\n entwickelt und umgesetzt werden soll. Die Trasse soll mit 19 Kilometern\n L\u00e4nge die Stadt Aachen als Oberzentrum mit den Mittelzentren \nHerzogenrath auf deutscher und Kerkrade auf niederl\u00e4ndischer Seite \nverbinden.",
+      "length": 30,
+      "description": "Der Radschnellweg Euregio zeichnet sich dadurch aus, dass erstmalig von \nniederländischen und deutschen Kommunen gemeinsam ein Radverkehrsprojekt\n entwickelt und umgesetzt werden soll. Die Trasse soll mit 19 Kilometern\n Länge die Stadt Aachen als Oberzentrum mit den Mittelzentren \nHerzogenrath auf deutscher und Kerkrade auf niederländischer Seite \nverbinden.",
       "source": "https://www.radschnellwege.nrw/rs4-radschnellweg-euregio/"
     },
     "stakeholders": [
       {
-        "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
+        "name": "Ministerium für Verkehr des Landes Nordrhein-Westfalen",
         "roles": ["authority"]
       }
     ],
@@ -1873,21 +1614,21 @@
   },
   {
     "id": "9-nordrhein-westfalen",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "in_progress",
     "general": {
       "ref": "9",
       "name": "Radschnellweg Monheim",
-      "from": "D\u00fcsseldorf",
+      "from": "Düsseldorf",
       "to": "Leverkusen",
-      "length": "5,4",
-      "description": "Zwischen D\u00fcsseldorf und Leverkusen entsteht auf Monheimer Stadtgebiet ein 5,4 km langer Radschnellweg. Er schlie\u00dft im Norden direkt an den RS5 Neuss-D\u00fcsseldorf-Langenfeld an und stellt damit eine optimale Radverkehrsverbindung zu wichtigen Pendlerzielen im Gro\u00dfraum D\u00fcsseldorf her.",
+      "length": 5.4,
+      "description": "Zwischen Düsseldorf und Leverkusen entsteht auf Monheimer Stadtgebiet ein 5,4 km langer Radschnellweg. Er schließt im Norden direkt an den RS5 Neuss-Düsseldorf-Langenfeld an und stellt damit eine optimale Radverkehrsverbindung zu wichtigen Pendlerzielen im Großraum Düsseldorf her.",
       "source": "https://www.radschnellwege.nrw/radschnellweg-monheim/"
     },
     "stakeholders": [
       {
-        "name": "Ministerium f\u00fcr Verkehr des Landes Nordrhein-Westfalen",
+        "name": "Ministerium für Verkehr des Landes Nordrhein-Westfalen",
         "roles": ["authority"]
       }
     ],
@@ -1897,23 +1638,20 @@
   },
   {
     "id": "1-schleswig-holstein",
-    "cost": "",
-    "finished": "",
+    "cost": null,
+    "finished": null,
     "state": "planning",
     "general": {
       "ref": "1",
-      "name": "Radschnellweg Bad Schwartau  \u2013 L\u00fcbeck-Mitte  \u2013 Universit\u00e4t",
+      "name": "Radschnellweg Bad Schwartau  – Lübeck-Mitte  – Universität",
       "from": "Bad Schwartau",
-      "to": "Universit\u00e4t L\u00fcbeck",
-      "length": "10",
-      "description": "In der Hansestadt L\u00fcbeck und ihrem Umland kann ein Radschnellweg gro\u00dfe Wirkung entfalten. Zum einen ist das Gebiet dicht besiedelt, zum anderen liegen hier bedeutsame Ziele wie die L\u00fcbecker Altstadt, der Hauptbahnhof, das Universit\u00e4tsklinikum Schleswig-Holstein (UKSH) und das Hochschulviertel.",
+      "to": "Universität Lübeck",
+      "length": 10,
+      "description": "In der Hansestadt Lübeck und ihrem Umland kann ein Radschnellweg große Wirkung entfalten. Zum einen ist das Gebiet dicht besiedelt, zum anderen liegen hier bedeutsame Ziele wie die Lübecker Altstadt, der Hauptbahnhof, das Universitätsklinikum Schleswig-Holstein (UKSH) und das Hochschulviertel.",
       "source": "https://metropolregion.hamburg.de/radschnellwege/15307314/radschnellweg-luebeck/"
     },
     "stakeholders": [
-      {
-        "name": "Metropolregion Hamburg",
-        "roles": ["authority"]
-      }
+      { "name": "Metropolregion Hamburg", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15307314/radschnellweg-luebeck/"

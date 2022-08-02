@@ -15,14 +15,23 @@
         "name": { "type": "string" },
         "from": { "type": "string" },
         "to": { "type": "string" },
-        "description": { "type": "string" },
-        "slug": {
-          "type": "string",
-          "description": "Defines an URL slug",
-          "format": "uri-reference"
-        }
+        "description": {
+          "type": ["string", "null"]
+        },
+        "source": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "length": { "type": "number" }
       },
-      "required": ["from", "to", "slug"]
+      "required": ["from", "to", "length"]
     },
     "stakeholders": {
       "type": "array",
@@ -37,6 +46,7 @@
               "type": "array",
               "items": [
                 {
+                  "type": "string",
                   "enum": ["communication", "authority", "construction_company"]
                 }
               ]
@@ -49,17 +59,13 @@
         }
       ]
     },
-    "status": {
-      "enum": [
-        "idea",
-        "agreement_process",
-        "planning",
-        "in_progress",
-        "done",
-        "discarded"
-      ]
+    "state": {
+      "type": "string",
+      "enum": ["idea", "agreement_process", "planning", "in_progress", "done"]
     },
+    "discarded": { "type": "boolean" },
     "planning_phase": {
+      "type": "string",
       "enum": [
         "pilot",
         "preliminiary",
@@ -71,19 +77,54 @@
     },
     "detail_level": { "enum": ["exact", "approximated", "corridor"] },
     "finished": {
-      "type": "string",
-      "format": "date",
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Year or date when building of all segments have been done."
     },
-    "cost": { "type": ["string", "number"] },
+    "cost": { "type": ["string", "number", "null"] },
     "references": {
       "type": "object",
       "properties": {
         "osm_relation": { "type": "number" },
-        "website": { "type": "string", "format": "uri" },
-        "copyright:geometry": { "type": "string" }
+        "website": {
+          "oneOf": [{ "type": "string", "format": "uri" }, { "type": "null" }]
+        },
+        "copyright_geometry": { "type": "string" }
       }
     }
   },
-  "required": ["id", "general", "status"]
+  "required": ["id", "general", "state", "cost", "finished"],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "general": { "properties": { "source": { "const": null } } }
+        }
+      },
+      "then": {
+        "properties": {
+          "general": { "properties": { "description": { "const": null } } }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "state": { "const": "done" }
+        }
+      },
+      "then": {
+        "properties": {
+          "planning_phase": { "const": null }
+        }
+      }
+    }
+  ]
 }

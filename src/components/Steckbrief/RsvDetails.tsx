@@ -28,7 +28,7 @@ export const RSVDetails: React.FC<Props> = ({ meta, geometry }) => {
             <RsvProgressBar current="planning" />
           </div>
           <Heading2>Kurzfassung</Heading2>
-          {meta.general.description !== '' && (
+          {meta.general.description && (
             <p className="text-lg text-gray-500">
               {meta.general.description}
               <br />

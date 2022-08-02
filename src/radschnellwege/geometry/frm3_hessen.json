@@ -1,6 +1,6 @@
 {
+  "id": "frm3-hessen",
   "type": "FeatureCollection",
-  "name": "frm3-hessen",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
@@ -13,21 +13,22 @@
         "id": "1",
         "id_rsv": "frm3-hessen",
         "state": "agreement_process",
-        "planning_phase": "",
+        "planning_phase": null,
         "detail_level": "corridor",
         "variant": "Vorzugstrasse",
-        "length": "32760.628821208917",
-        "discarted": "false",
-        "description:planning_phase": null
+        "length": 32760.628821208917,
+        "discarded": false,
+        "description:planning_phase": null,
+        "stand": "07.06.2022"
       },
       "bbox": [8.2416556, 50.07217872995718, 8.6820917, 50.110644399999984],
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
           [
-            [8.2416556, 50.082038399999988],
+            [8.2416556, 50.08203839999999],
             [8.445932836298397, 50.088468100079275],
-            [8.468512964665159, 50.082691689416947],
+            [8.468512964665159, 50.08269168941695],
             [8.485927704189848, 50.07217872995718],
             [8.6820917, 50.110644399999984]
           ]

@@ -1,18 +1,15 @@
 {
+  "id": "rsv9-berlin",
   "type": "FeatureCollection",
-  "name": "rsv9-berlin",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
   },
   "bbox": [13.3363873998, 52.5134918987, 13.6351901998, 52.5397208992],
-
   "features": [
     {
       "type": "Feature",
-      "bbox": [
-        13.3363873998, 52.513491898700003, 13.6351901998, 52.539720899199999
-      ],
+      "bbox": [13.3363873998, 52.5134918987, 13.6351901998, 52.5397208992],
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
@@ -550,8 +547,8 @@
         "id_rsv": "RSV 9",
         "state": "agreement_process",
         "detail_level": "rough",
-        "length": "41207.61832415459",
-        "discarted": null,
+        "length": 41207.61832415459,
+        "discarded": false,
         "stand": "26.05.2022",
         "planning_phase": "preliminary",
         "description:planning_phase": null

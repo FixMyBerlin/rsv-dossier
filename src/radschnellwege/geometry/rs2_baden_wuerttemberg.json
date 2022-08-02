@@ -1,6 +1,6 @@
 {
+  "id": "rs2-baden-wuerttemberg",
   "type": "FeatureCollection",
-  "name": "rs2-baden-wuerttemberg",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
@@ -16,9 +16,9 @@
         "id_rsv": "RS2",
         "planning_phase": "design",
         "variant": "Vorzugstrasse",
-        "discarted": null,
+        "discarded": false,
         "stand": "02.06.2022",
-        "length": "24188.626",
+        "length": 24188.626,
         "description:planning_phase": null
       },
       "bbox": [8.46543, 49.40886, 8.6919, 49.49362],

@@ -1,6 +1,6 @@
 {
+  "id": "1-hamburg",
   "type": "FeatureCollection",
-  "name": "1-hamburg",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
@@ -16,9 +16,10 @@
         "planning_phase": "preliminary",
         "detail_level": "corridor",
         "variant": null,
-        "discarted": null,
+        "discarded": false,
         "description:planning_phase": null,
-        "stand": "20.04.2022"
+        "stand": "20.04.2022",
+        "length": 31045.396630506355
       },
       "bbox": [9.665391, 53.567347, 9.932947, 53.740198],
       "geometry": {

@@ -1,6 +1,6 @@
 {
+  "id": "rsv1-berlin",
   "type": "FeatureCollection",
-  "name": "rsv1-berlin",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
@@ -13,7 +13,7 @@
       "type": "Feature",
       "bbox": [
         13.418063977012293, 52.452558478105765, 13.470287323472432,
-        52.499378462186357
+        52.49937846218636
       ],
       "geometry": {
         "type": "MultiLineString",
@@ -165,8 +165,8 @@
         "id_rsv": "RSV 1",
         "state": "agreement_process",
         "detail_level": "rough",
-        "length": null,
-        "discarted": null,
+        "length": 12218.626582135648,
+        "discarded": false,
         "stand": "26.05.2022",
         "planning_phase": null,
         "description:planning_phase": null
@@ -175,8 +175,8 @@
     {
       "type": "Feature",
       "bbox": [
-        13.406150381486658, 52.426379787920993, 13.526693069703185,
-        52.499172761338187
+        13.406150381486658, 52.42637978792099, 13.526693069703185,
+        52.49917276133819
       ],
       "geometry": {
         "type": "MultiLineString",
@@ -420,8 +420,8 @@
         "id_rsv": "RSV 1",
         "state": "agreement_process",
         "detail_level": "rough",
-        "length": "20206.61087631298",
-        "discarted": null,
+        "length": 20206.61087631298,
+        "discarded": false,
         "stand": "26.05.2022",
         "planning_phase": "preliminary",
         "description:planning_phase": null
@@ -430,8 +430,8 @@
     {
       "type": "Feature",
       "bbox": [
-        13.407752499362497, 52.428292872133191, 13.519621719724759,
-        52.495981572683249
+        13.407752499362497, 52.42829287213319, 13.519621719724759,
+        52.49598157268325
       ],
       "geometry": {
         "type": "MultiLineString",
@@ -633,10 +633,10 @@
         "id": "3",
         "variant": "Weitere Alternative",
         "id_rsv": "RSV 1",
-        "state": "discarted",
+        "state": "agreement_process",
         "detail_level": "rough",
-        "length": null,
-        "discarted": "true",
+        "length": 13586.042239747565,
+        "discarded": true,
         "stand": "26.05.2022",
         "planning_phase": null,
         "description:planning_phase": null
@@ -645,8 +645,8 @@
     {
       "type": "Feature",
       "bbox": [
-        13.441603151760285, 52.453092455963933, 13.47821242866649,
-        52.484096705811353
+        13.441603151760285, 52.45309245596393, 13.47821242866649,
+        52.48409670581135
       ],
       "geometry": {
         "type": "MultiLineString",
@@ -743,8 +743,8 @@
         "id_rsv": "RSV 1",
         "state": "agreement_process",
         "detail_level": "rough",
-        "length": null,
-        "discarted": null,
+        "length": 6348.973136758911,
+        "discarded": false,
         "stand": "26.05.2022",
         "planning_phase": "preliminary",
         "description:planning_phase": null

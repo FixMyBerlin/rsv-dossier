@@ -1,6 +1,6 @@
 {
+  "id": "7-hamburg",
   "type": "FeatureCollection",
-  "name": "7-hamburg",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
@@ -18,20 +18,21 @@
         "planning_phase": null,
         "detail_level": "corridor",
         "variant": null,
-        "discarted": null,
+        "discarded": false,
         "description:planning_phase": null,
-        "stand": "20.04.2022"
+        "stand": "20.04.2022",
+        "length": 27463.691575129324
       },
       "bbox": [
-        9.712322312109285, 53.281060022071173, 10.017898170830223,
+        9.712322312109285, 53.28106002207117, 10.017898170830223,
         53.43700709682448
       ],
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
           [
-            [9.712322312109285, 53.281060022071173],
-            [9.881338510358978, 53.329237648373919],
+            [9.712322312109285, 53.28106002207117],
+            [9.881338510358978, 53.32923764837392],
             [10.017898170830223, 53.43700709682448]
           ]
         ]

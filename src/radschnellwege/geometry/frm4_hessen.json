@@ -1,6 +1,6 @@
 {
+  "id": "frm4-hessen",
   "type": "FeatureCollection",
-  "name": "frm4-hessen",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
@@ -15,24 +15,25 @@
         "id": "1",
         "id_rsv": "frm4-hessen",
         "state": "agreement_process",
-        "planning_phase": "",
+        "planning_phase": null,
         "detail_level": "corridor",
         "variant": "Vorzugstrasse",
-        "length": "6466.783618830881",
-        "discarted": "false",
-        "description:planning_phase": null
+        "length": 6466.783618830881,
+        "discarded": false,
+        "description:planning_phase": null,
+        "stand": "07.06.2022"
       },
       "bbox": [
-        8.501800435010692, 50.133590038794523, 8.569823398960676,
-        50.149332768807348
+        8.501800435010692, 50.13359003879452, 8.569823398960676,
+        50.14933276880735
       ],
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
           [
-            [8.501800435010692, 50.143795501932111],
-            [8.528318974852382, 50.133590038794523],
-            [8.537789087922816, 50.149332768807348],
+            [8.501800435010692, 50.14379550193211],
+            [8.528318974852382, 50.13359003879452],
+            [8.537789087922816, 50.14933276880735],
             [8.569823398960676, 50.14350543487916]
           ]
         ]
