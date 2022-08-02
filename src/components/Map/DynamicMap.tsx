@@ -24,9 +24,9 @@ function assertFeatureCollection(
   geojsonType(geojson, 'FeatureCollection', 'DynamicMap');
 }
 
-export const DynamicMap: React.FC<Omit<Queries.SteckbriefQuery, 'meta'>> = ({
-  geometry,
-}) => {
+export const DynamicMap: React.FC<
+  Pick<Queries.SteckbriefQuery, 'geometry'>
+> = ({ geometry }) => {
   assertFeatureCollection(geometry);
   const bboxView = bbox(transformScale(bboxPolygon(square(geometry.bbox)), 6));
   const [info] = useState({
