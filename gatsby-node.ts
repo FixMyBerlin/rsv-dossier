@@ -1,5 +1,4 @@
 import { createFileNodeFromBuffer } from 'gatsby-source-filesystem';
-import fetch from 'node-fetch';
 import { Validator, ValidationError } from 'jsonschema';
 import { Buffer } from 'buffer';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
