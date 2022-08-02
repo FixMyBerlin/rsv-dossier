@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { getOptInCookie, OptIn } from '~/components/CookieConsent/';
 import { DynamicMap, Attribution } from '.';
@@ -10,7 +10,6 @@ export const RSVMap: React.FC<Queries.SteckbriefQuery> = ({
 }) => {
   const [consent, setConsent] = useState<boolean | null>(true);
   useEffect(() => setConsent(getOptInCookie()));
-
   return (
     <div className="relative max-h-full max-w-full">
       {consent === null && (
@@ -23,7 +22,7 @@ export const RSVMap: React.FC<Queries.SteckbriefQuery> = ({
       </div>
       {consent && <DynamicMap geometry={geometry} />}
       <GatsbyImage
-        image={getImage(meta.staticMap.childImageSharp.gatsbyImageData)}
+        image={meta.staticMap.childImageSharp.gatsbyImageData}
         alt="Statische Karte"
       />
     </div>
