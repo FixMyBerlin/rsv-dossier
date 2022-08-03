@@ -8,45 +8,39 @@ flowchart LR
     backend["RSV Backend\n(Strapi)"]
 	S3[(AWS S3 File Storage)]
 	MySql[(MySQL/PostgreSQL\nDatenbank - Content)]
-	ToolIntern[Internes\nAbstimmungstool]
-	ToolExtern[Öffentliches\nBeteiligungsportal]
+	Tool[Internes\nAbstimmungstool &\nÖffentliches Beteiligungstool]
 	Auth["Authentifizierung & Rollen\n(Strapi)"]
 	MapTiler[MapTiler Hintergrundkarten]
 	Geodaten[Geodaten]
-	ProjectWebsite[[RSV Projekt Websites]]
 	subgraph FixMyCity
 		subgraph Backend
 		backend <--> MySql
 		backend <--> Auth
 		end
 		subgraph Frontend
-		ToolIntern --> backend
-		ToolExtern --> backend
+		Tool --> backend
 		end
-		ToolIntern -.- Geodaten
-		ToolExtern -.- Geodaten
+		Tool -.- Geodaten
 		Geodaten -.- backend
 	end
 	subgraph Extern
 	backend <--> S3
-	ToolIntern --> MapTiler
-	ToolExtern --> MapTiler
+	Tool --> MapTiler
 	end
-	ProjectWebsite -- "Anmerkungen & Co."--- backend
 ```
 
 
 ## Class diagram
 
-The planned classes are as the following:
-
 ```mermaid
 classDiagram
 	Highway "1" --> "1..*" Milestone
 	Highway "1" --> "1..*" Variant
+  Highway "1" --> "1..*" Section
 	Highway "1" --> "0..*" Appointment
 	Variant "1" --> "0..*" Annotation
 	Annotation "0..*" --> "1"  User
+  Annotation "0..*" <-- "1"  Section
 	Contact "1" --> "?" Stakeholder
 	File "1" --> "0..*" Milestone
 	Highway "1" --> "0..*" Survey
@@ -67,11 +61,18 @@ classDiagram
 	class AnnotationVariant {
 
 	}
+	class Section {
+		GeoJSON geodata
+    String description
+
+	}
 	class Variant {
 		GeoJSON geodata
 		File[] files
 		Annotation[] annotations
 		GeoType type
+    Boolean discarded
+    Integer version
 	}
 	class BuildingMeasure {
 		File[] pdfs
@@ -87,6 +88,7 @@ classDiagram
 	class Appointment {
 		Date date
 		String name
+    Contact[] attendants
 	}
 	class Milestone {
 		String name
