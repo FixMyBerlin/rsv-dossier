@@ -14,10 +14,13 @@ type Props = {
 };
 
 const Radschnellweg: React.FC<Props> = ({ data: { meta, geometry } }) => {
+  const name = Number.isNaN(parseFloat(meta.general.ref))
+    ? `${meta.general.ref}: ${meta.general.name}`
+    : meta.general.name;
   return (
     <Layout>
       <HelmetSeo
-        title={meta.general.name}
+        title={name}
         description={meta.general.description}
         image={`${domain()}${meta.staticMap.publicURL}`}
       />
@@ -30,10 +33,10 @@ export default Radschnellweg;
 
 export const query = graphql`
   query ($jsonId: String!) {
-    geometry: geometryJson(name: { eq: $jsonId }) {
+    geometry: geometryJson(jsonId: { eq: $jsonId }) {
       type
       bbox
-      name
+      id: jsonId
       features {
         type
         bbox
@@ -65,7 +68,6 @@ export const query = graphql`
       references {
         website
       }
-      finished
       cost
       state
       staticMap {

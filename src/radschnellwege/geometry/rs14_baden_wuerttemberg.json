@@ -1,6 +1,6 @@
 {
+  "id": "rs14-baden-wuerttemberg",
   "type": "FeatureCollection",
-  "name": "rs14-baden-wuerttemberg",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
@@ -16,9 +16,9 @@
         "id_rsv": "RS14",
         "planning_phase": null,
         "variant": null,
-        "discarted": null,
-        "stand": null,
-        "length": "19906.352",
+        "discarded": false,
+        "stand": "07.06.2022",
+        "length": 19906.352,
         "description:planning_phase": null
       },
       "bbox": [9.50542, 48.683083, 9.76081, 48.716094],

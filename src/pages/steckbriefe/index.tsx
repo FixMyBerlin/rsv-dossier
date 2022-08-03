@@ -14,10 +14,11 @@ type Props = {
   data: { radschnellwege: { nodes: Array<GraphQLMeta> } };
 };
 const SteckbriefeIndex: React.FC<PageProps & Props> = ({
+  location,
   data: { radschnellwege },
 }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <HelmetSeo
         title="Steckbriefe"
         description="Die einzelnen Radschnellverbindungen in den verschiedenen Bundesländern in Deutschland."
@@ -40,12 +41,13 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
             <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
               Übersicht über RSV-Planungen
             </h1>
-            <p className="mt-6 max-w-3xl text-xl text-slate-300">
+            <div className="mt-6 max-w-3xl text-xl text-slate-300">
               Übersicht der aktuell geplanten Radschnellverbindungen sowie deren
               Trassenverläufe bzw. -korridore. Enthalten sind RSV aus Hessen,
               Baden-Württemberg, Berlin, Niedersachsen, Schleswig-Holstein,
               Mecklenburg-Vorpommern, Nordrhein-Westfalen, Rheinland-Pfalz und
-              Hamburg. Die Liste wird fortlaufend erweitert.
+              Hamburg. Aktuell umfasst die Liste {radschnellwege.nodes.length}{' '}
+              Radschnellverbindungen und wird fortlaufend erweitert.
               <p>
                 Mail an{' '}
                 <MailToButtonLink
@@ -57,7 +59,7 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
                 </MailToButtonLink>{' '}
                 schreiben
               </p>
-            </p>
+            </div>
           </div>
         </div>
 
@@ -84,9 +86,13 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
                     </Link>
                   </div>
                   <div className="relative flex-1 px-6 pt-12 pb-8 md:px-8">
-                    <h3 className="text-xl font-medium text-slate-900">
-                      {radschnellweg.general.name}
-                    </h3>
+                    <TextLink to={`./${radschnellweg.jsonId}`}>
+                      <h3 className="text-xl font-medium text-slate-900">
+                        {Number.isNaN(parseFloat(radschnellweg.general.ref)) &&
+                          `${radschnellweg.general.ref}: `}
+                        {radschnellweg.general.name}
+                      </h3>
+                    </TextLink>
                     <p className="mt-4 text-base text-slate-500 line-clamp-3 md:line-clamp-5">
                       {radschnellweg.general.description}
                     </p>
@@ -114,6 +120,7 @@ export const query = graphql`
       nodes {
         state
         general {
+          ref
           to
           from
           name

@@ -1,6 +1,6 @@
 {
+  "id": "4-hamburg",
   "type": "FeatureCollection",
-  "name": "4-hamburg",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
@@ -16,9 +16,10 @@
         "planning_phase": "preliminary",
         "detail_level": "rough",
         "variant": null,
-        "discarted": null,
+        "discarded": false,
         "description:planning_phase": null,
-        "stand": "20.04.2022"
+        "stand": "20.04.2022",
+        "length": 24096.160329932864
       },
       "bbox": [10.067693, 53.432761, 10.366522, 53.529212],
       "geometry": {
