@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { getOptInCookie, OptIn } from '~/components/CookieConsent/';
 import { DynamicMap, Attribution } from '.';
@@ -22,7 +22,9 @@ export const RSVMap: React.FC<Queries.SteckbriefQuery> = ({
       </div>
       {consent && <DynamicMap geometry={geometry} />}
       <GatsbyImage
-        image={meta.staticMap.childImageSharp.gatsbyImageData}
+        image={getImage(
+          meta.staticMap as ImageDataLike & { publicURL: string }
+        )}
         alt="Statische Karte"
       />
     </div>

@@ -2,7 +2,12 @@ import { PageProps, graphql, Link } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
-import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
+import {
+  StaticImage,
+  GatsbyImage,
+  getImage,
+  ImageDataLike,
+} from 'gatsby-plugin-image';
 import { MailToButtonLink, TextLink } from '~/components/Links';
 
 const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
@@ -71,9 +76,7 @@ const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
                 <div className="flex max-h-fit overflow-hidden">
                   <Link to={`./${radschnellweg.jsonId}`}>
                     <GatsbyImage
-                      image={
-                        radschnellweg.staticMap.childImageSharp.gatsbyImageData
-                      }
+                      image={getImage(radschnellweg.staticMap as ImageDataLike)}
                       alt={radschnellweg.general.name}
                     />
                   </Link>
