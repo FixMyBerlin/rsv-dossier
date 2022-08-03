@@ -111,11 +111,8 @@ export const query = graphql`
   query SteckbriefeIndex {
     radschnellwege: allMetaJson {
       nodes {
-        state
         general {
           ref
-          to
-          from
           name
           description
         }
