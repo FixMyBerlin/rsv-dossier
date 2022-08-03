@@ -8,10 +8,13 @@ import { domain } from '~/utils';
 const Radschnellweg: React.FC<PageProps<Queries.SteckbriefQuery>> = ({
   data: { meta, geometry },
 }) => {
+  const name = Number.isNaN(parseFloat(meta.general.ref))
+    ? `${meta.general.ref}: ${meta.general.name}`
+    : meta.general.name;
   return (
     <Layout>
       <HelmetSeo
-        title={meta.general.name}
+        title={name}
         description={meta.general.description}
         image={`${domain()}${meta.staticMap.publicURL}`}
       />
