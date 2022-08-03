@@ -41,13 +41,13 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
             <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
               Übersicht über RSV-Planungen
             </h1>
-            <p className="mt-6 max-w-3xl text-xl text-slate-300">
+            <div className="mt-6 max-w-3xl text-xl text-slate-300">
               Übersicht der aktuell geplanten Radschnellverbindungen sowie deren
               Trassenverläufe bzw. -korridore. Enthalten sind RSV aus Hessen,
               Baden-Württemberg, Berlin, Niedersachsen, Schleswig-Holstein,
               Mecklenburg-Vorpommern, Nordrhein-Westfalen, Rheinland-Pfalz und
               Hamburg. Aktuell umfasst die Liste {radschnellwege.nodes.length}{' '}
-              Radschnellverbindungen und wird fortlaufend erweitert.{' '}
+              Radschnellverbindungen und wird fortlaufend erweitert.
               <p>
                 Mail an{' '}
                 <MailToButtonLink
@@ -59,7 +59,7 @@ const SteckbriefeIndex: React.FC<PageProps & Props> = ({
                 </MailToButtonLink>{' '}
                 schreiben
               </p>
-            </p>
+            </div>
           </div>
         </div>
 
