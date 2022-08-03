@@ -95,22 +95,6 @@ const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
                     Mehr erfahren
                   </TextLink>
                 </div>
-                <div className="relative flex-1 px-6 pt-12 pb-8 md:px-8">
-                  <h3 className="text-xl font-medium text-slate-900">
-                    {Number.isNaN(parseFloat(radschnellweg.general.ref)) &&
-                      `${radschnellweg.general.ref}: `}
-                    {radschnellweg.general.name}
-                  </h3>
-                  <p className="mt-4 text-base text-slate-500 line-clamp-3 md:line-clamp-5">
-                    {radschnellweg.general.description}
-                  </p>
-                </div>
-                ,
-                <div className="p-6 md:px-8">
-                  <TextLink to={`./${radschnellweg.jsonId}`}>
-                    Mehr erfahren
-                  </TextLink>
-                </div>
               </div>
             ))}
             ;
