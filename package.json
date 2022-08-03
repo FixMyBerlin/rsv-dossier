@@ -1,7 +1,7 @@
 {
   "name": "radschnellverbindungen.info",
   "description": "The website for https://radschnellverbindungen.info.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "FixMyCity <hello@fixmycity.de>",
   "license": "AGPL-3.0",
   "browserslist": [
