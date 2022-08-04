@@ -19,7 +19,7 @@ export const calcMissingLength = (fc: GeoType<{ length?: any }>) => {
 };
 
 // rename `name` to `id`
-export const name2id2 = (fc: { name } & object) => {
+export const name2id = (fc: { name } & object) => {
   const { name, ...copy } = fc;
   return { id: name, ...copy };
 };
@@ -40,16 +40,22 @@ export const applyNested = (
 };
 
 // apply `f` to all geometries
-export const processGeometries = (f: (fc: GeoType) => GeoType) => {
-  readdirSync('src/radschnellwege/geometry/').forEach((filePath) => {
+export const processGeometries = (
+  f: (fc: GeoType) => GeoType,
+  path = 'src/radschnellwege/geometry/'
+) => {
+  readdirSync(path).forEach((fileName) => {
+    const filePath = `${path}${fileName}`;
     const data: GeoType = JSON.parse(readFileSync(filePath).toString());
     writeFileSync(filePath, JSON.stringify(f(data)));
   });
 };
 
 // apply `f` to all meta data
-export const processMeta = (f) => {
-  const filePath = 'src/radschnellwege/meta/meta.json';
+export const processMeta = (
+  f: (x: object) => object,
+  filePath = 'src/radschnellwege/meta/meta.json'
+) => {
   const data = JSON.parse(readFileSync(filePath).toString());
   writeFileSync(filePath, JSON.stringify(data.map(f)));
 };
