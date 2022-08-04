@@ -9,7 +9,7 @@ const stateColor = {
   planning: '#10B981',
   in_progress: '#047857',
   done: '#064E3B',
-  discarted: '#000000',
+  discarded: '#000000',
 };
 
 const buildPaths = ({

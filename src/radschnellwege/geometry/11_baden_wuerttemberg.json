@@ -1,6 +1,6 @@
 {
+  "id": "11-baden-wuerttemberg",
   "type": "FeatureCollection",
-  "name": "11-baden-wuerttemberg",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
@@ -16,9 +16,9 @@
         "id_rsv": "11-baden-wuerttemberg",
         "planning_phase": "pilot",
         "variant": "Vorzugstrasse",
-        "discarted": null,
+        "discarded": false,
         "stand": "07.06.2022",
-        "length": "11272.96",
+        "length": 11272.96,
         "description:planning_phase": null
       },
       "bbox": [9.073373, 48.789825, 9.195096, 48.826272],

@@ -45,10 +45,10 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Radschnellverbindungen, um interne und externe Akteure konstruktiv
             einzubinden.
           </p>
+          <Heading2>
+            Kartengestützte Formate für interne und externe Kommunikation
+          </Heading2>
           <p>
-            <Heading2>
-              Kartengestützte Formate für interne und externe Kommunikation
-            </Heading2>
             Durch eine anschauliche und verständliche Kommunikation mittels
             kartengestützter Formate sollen RSV-Planungsprojekten effizienter
             durchgeführt und ihre Akzeptanz erhöht werden. Das System soll die
@@ -59,10 +59,10 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             zu Radschnellverbindungen übersichtlich aufbereitet und
             Beteiligungsinstrumente daran anbindet.
           </p>
+          <Heading2>
+            Steckbriefe aller deutschen Radschnellverbindungen
+          </Heading2>
           <p>
-            <Heading2>
-              Steckbriefe aller deutschen Radschnellverbindungen
-            </Heading2>
             In unseren Steckbriefen aller Radschnellverbindungen finden Sie eine
             systematische Übersicht aller aktuell geplanten
             Radschnellverbindungen sowie deren Trassenverläufe bzw. -korridore.
@@ -77,16 +77,16 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
               Hier geht es zu den Steckbriefen &rarr;
             </TextLink>
           </p>
+          <Heading2>Hintergründe und Grundlagen</Heading2>
           <p>
-            <Heading2>Hintergründe und Grundlagen</Heading2>
             Radschnellverbindungen entwickeln sich mit dem verstärkten Aufkommen
             der Elektromobilität und dem akuten Handlungsbedarf zur Erreichung
             von Klimaschutzzielen rasant zu einem politischen und planerischen
             Instrument mit hohem Potential. Zu Hintergründen und Grundlagen bald
             mehr auf dieser Website.
           </p>
+          <Heading2>Kontakt</Heading2>
           <p>
-            <Heading2>Kontakt</Heading2>
             Wenn Sie sich mehr Informationen zum Forschungsprojekt RSV-Baukasten
             wünschen oder stärker involviert sein wollen, kontaktieren Sie uns.
             Die Laufzeit des Projektes ist von 2021 bis Ende 2023 angesetzt.

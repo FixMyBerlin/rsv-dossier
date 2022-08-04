@@ -3,6 +3,7 @@ require('dotenv').config({
 });
 
 module.exports = {
+  graphqlTypegen: true,
   siteMetadata: {
     title: 'Radschnellverbindungen',
     siteUrl: 'https://radschnellverbindungen.info',
