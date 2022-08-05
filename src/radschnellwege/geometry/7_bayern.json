@@ -11,7 +11,7 @@
       "type": "Feature",
       "properties": {
         "id": "1",
-        "accuracy": "rough",
+        "detail_level": "rough",
         "id_rsv": "7-bayern",
         "state": "agreed",
         "planning_phase": null,

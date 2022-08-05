@@ -13,7 +13,7 @@
       "type": "Feature",
       "properties": {
         "id": "1",
-        "accuracy": "corridor",
+        "detail_level": "corridor",
         "id_rsv": "2-bayern",
         "state": "planning",
         "planning_phase": "premilinary",
