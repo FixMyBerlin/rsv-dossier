@@ -5,7 +5,7 @@ import { length } from '@turf/turf';
 type GeoType<T = GeoJSON.GeoJsonProperties> = GeoJSON.FeatureCollection<
   GeoJSON.MultiLineString,
   T
->;
+> & { id: any };
 
 // calculate the length (m) for all geometries with unknown length
 export const calcMissingLength = (fc: GeoType<{ length?: any }>) => {
@@ -18,10 +18,20 @@ export const calcMissingLength = (fc: GeoType<{ length?: any }>) => {
   return fc;
 };
 
-// rename `name` to `id`
-export const name2id = (fc: { name } & object) => {
-  const { name, ...copy } = fc;
-  return { id: name, ...copy };
+export const renameAttribute = (
+  x: { id: any } & object,
+  key: string,
+  newKey: string
+) => {
+  const { ...copy } = x;
+  if (!(newKey in copy)) {
+    if (!copy[key]) {
+      throw new Error(`key ${key} not found on ${x.id}`);
+    }
+    copy[newKey] = copy[key];
+    delete copy[key];
+  }
+  return copy;
 };
 
 // apply `f` on nested property defined through `path`
@@ -42,12 +52,15 @@ export const applyNested = (
 // apply `f` to all geometries
 export const processGeometries = (
   f: (fc: GeoType) => GeoType,
-  path = 'src/radschnellwege/geometry/'
+  path = 'src/radschnellwege/geometry/',
+  filter: (x: string) => boolean = () => true
 ) => {
   readdirSync(path).forEach((fileName) => {
     const filePath = `${path}${fileName}`;
-    const data: GeoType = JSON.parse(readFileSync(filePath).toString());
-    writeFileSync(filePath, JSON.stringify(f(data)));
+    if (filter(fileName)) {
+      const data: GeoType = JSON.parse(readFileSync(filePath).toString());
+      writeFileSync(filePath, JSON.stringify(f(data)));
+    }
   });
 };
 
