@@ -11,7 +11,7 @@
       "type": "Feature",
       "properties": {
         "id": "1",
-        "length": "17294.00883403358",
+        "length": 17294.00883403358,
         "detail_level": "rough",
         "id_rsv": "1-niedersachsen",
         "state": "planning",

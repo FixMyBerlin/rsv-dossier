@@ -11,7 +11,7 @@
       "type": "Feature",
       "properties": {
         "id": "1",
-        "length": "5308.257655540513",
+        "length": 5308.257655540513,
         "detail_level": "exact",
         "id_rsv": "3-niedersachsen",
         "state": "done",

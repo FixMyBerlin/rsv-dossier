@@ -11,7 +11,7 @@
       "type": "Feature",
       "properties": {
         "id": "1",
-        "length": "6.278394295984432",
+        "length": 6.278394295984432,
         "detail_level": "rough",
         "id_rsv": "5-niedersachsen",
         "state": "planning",
@@ -37,7 +37,7 @@
       "type": "Feature",
       "properties": {
         "id": "2",
-        "length": "1180.2878662098435",
+        "length": 1180.2878662098435,
         "detail_level": "exact",
         "id_rsv": "5-niedersachsen",
         "state": "done",
@@ -100,7 +100,7 @@
       "type": "Feature",
       "properties": {
         "id": "3",
-        "length": "5063.459993575909",
+        "length": 5063.459993575909,
         "detail_level": "rough",
         "id_rsv": "5-niedersachsen",
         "state": "planning",

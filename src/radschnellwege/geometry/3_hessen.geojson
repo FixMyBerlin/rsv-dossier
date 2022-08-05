@@ -13,7 +13,7 @@
       "type": "Feature",
       "properties": {
         "id": "1",
-        "length": "28515.8910302595",
+        "length": 28515.8910302595,
         "detail_level": "corridor",
         "id_rsv": "3-hessen",
         "state": "agreed",

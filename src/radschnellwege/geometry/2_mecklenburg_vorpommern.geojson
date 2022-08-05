@@ -11,7 +11,7 @@
       "type": "Feature",
       "properties": {
         "id": "1",
-        "length": "22774.355396935873",
+        "length": 22774.355396935873,
         "detail_level": "rough",
         "id_rsv": "2-mecklenburg-vorpommern",
         "state": "planning",
@@ -59,7 +59,7 @@
       "type": "Feature",
       "properties": {
         "id": "2",
-        "length": "2280.208543247672",
+        "length": 2280.208543247672,
         "detail_level": "rough",
         "id_rsv": "2-mecklenburg-vorpommern",
         "state": "done",

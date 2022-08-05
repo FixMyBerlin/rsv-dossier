@@ -11,7 +11,7 @@
       "type": "Feature",
       "properties": {
         "id": "1",
-        "length": "34467.79458069712",
+        "length": 34467.79458069712,
         "detail_level": "corridor",
         "id_rsv": "1-sachsen-anhalt",
         "state": "idea",

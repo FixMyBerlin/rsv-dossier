@@ -13,7 +13,7 @@
       "type": "Feature",
       "properties": {
         "id": "1",
-        "length": "30379.038467787977",
+        "length": 30379.038467787977,
         "detail_level": "corridor",
         "id_rsv": "2-sachsen",
         "state": "idea",

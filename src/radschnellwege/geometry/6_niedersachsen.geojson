@@ -11,7 +11,7 @@
       "type": "Feature",
       "properties": {
         "id": "1",
-        "length": "10475.409825882709",
+        "length": 10475.409825882709,
         "detail_level": "corridor",
         "id_rsv": "6-niedersachsen",
         "state": "agreed",
