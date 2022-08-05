@@ -19,7 +19,8 @@
         "variant": "Vorzugstrasse",
         "discarted": null,
         "description:planning_phase": null,
-        "stand": "27.06.2022"
+        "stand": "27.06.2022",
+        "discarded": false
       },
       "bbox": [8.960834, 53.004467, 9.100749, 53.034609],
       "geometry": {
