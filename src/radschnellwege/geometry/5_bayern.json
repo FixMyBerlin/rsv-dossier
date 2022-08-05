@@ -15,7 +15,7 @@
         "id": "1",
         "detail_level": "corridor",
         "id_rsv": "5-bayern",
-        "state": "agreed",
+        "state": "agreement_process",
         "planning_phase": null,
         "variant": "Vorzugstrasse",
         "length": 13952.34,
