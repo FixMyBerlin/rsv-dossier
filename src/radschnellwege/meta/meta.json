@@ -312,6 +312,30 @@
     }
   },
   {
+    "id": "rs17-baden-wuerttemberg",
+    "cost": "",
+    "state": "idea",
+    "finished": null,
+    "general": {
+      "ref": "RS17",
+      "name": " Korntal-M\u00fcnchingen  -  Weil  der  Stadt ",
+      "from": "Korntal-M\u00fcnchingen",
+      "to": " Weil  der  Stadt ",
+      "length": 24.0,
+      "description": " Machbarkeitsstudie  unter  Federf\u00fchrung  des  Landkreises  B\u00f6blingen  2019  abgeschlossen.  Vorplanung  l\u00e4uft.  Der  sp\u00e4tere  RS17  wird  teils  Landes-,  teils  Kreisradschnellweg  (RS17  K/L) ",
+      "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
+    },
+    "stakeholders": [
+      {
+        "name": " Landkreis  B\u00f6blingen ",
+        "roles": ["authority"]
+      }
+    ],
+    "references": {
+      "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
+    }
+  },
+  {
     "id": "rs19-baden-wuerttemberg",
     "cost": "",
     "state": "planning",
@@ -467,7 +491,7 @@
       "to": "Ettlingen",
       "length": 5.0,
       "description": " Im  Fr\u00fchjahr  2019  wurde  eine  Machbarkeitsstudie  vorgestellt,  in  der  120  km  Radrouten  auf  Eignung  als  Radschnellverbindungen  hin  untersucht  wurden.  Das  Netz  besteht  aus  einer  Rundrunde  im  Bereich  Karlsruhe  und  6  radialen  Anschlussrouten  an  diesen  Radring: ",
-      "source": "https://www.region-karlsruhe.de/fileadmin/user_upload/4_Projekte/Radschnellverbindungen/Machbarkeitsstudie_RSV/2019_02_08_RVMO_Bericht.pdf"
+      "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg#Regierungsbezirk_Karlsruhe"
     },
     "stakeholders": [
       {
@@ -520,6 +544,30 @@
     "stakeholders": [
       {
         "name": " Landkreis  Ludwigsburg ",
+        "roles": ["authority"]
+      }
+    ],
+    "references": {
+      "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
+    }
+  },
+  {
+    "id": "9-baden-wuerttemberg",
+    "cost": "",
+    "state": "agreement_process",
+    "finished": null,
+    "general": {
+      "ref": "9",
+      "name": " Radschnellverbindung  Vaihingen/Enz  -  Stuttgart ",
+      "from": "Vaihingen/Enz",
+      "to": "Stuttgart",
+      "length": 20.0,
+      "description": " Machbarkeitsstudie  unter  Federf\u00fchrung  des  Landkreises  Ludwigsburg  abgeschlossen. Aktuell  laufen  Vorplanungen  in  Zust\u00e4ndigkeit  des  Landkreises ",
+      "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
+    },
+    "stakeholders": [
+      {
+        "name": " Landkreis  Ludwigsburg   ",
         "roles": ["authority"]
       }
     ],
