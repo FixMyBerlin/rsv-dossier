@@ -66,8 +66,14 @@ def csv_to_json(csvFilePath, jsonFilePath):
                 rsv_properties["general"] = {
                     "ref": rowDict["Abkürzung"],
                     "name": rowDict["Titel"],
-                    "from": rowDict["von"],
-                    "to": rowDict["bis"],
+                    "from": {
+                        "city": rowDict["von"],
+                        "federal_state": rowDict["von(Bundesland)"],
+                    },
+                    "to": {
+                        "city": rowDict["bis"],
+                        "federal_state": rowDict["bis(bundesland)"],
+                    },
                     "length": float(rowDict["Länge"]),
                     "description": None
                     if rowDict["(Kurzbeschreibung)"] == ""

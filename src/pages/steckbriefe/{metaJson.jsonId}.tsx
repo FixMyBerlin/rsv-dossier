@@ -52,10 +52,16 @@ export const query = graphql`
     meta: metaJson(jsonId: { eq: $jsonId }) {
       general {
         description
-        from
         name
         ref
-        to
+        from {
+          city
+          federal_state
+        }
+        to {
+          city
+          federal_state
+        }
         source
         length
       }

@@ -102,4 +102,5 @@ export const onCreateNode = async ({
       cache,
     });
   }
+  console.log('finished');
 };
