@@ -58,7 +58,7 @@ export const onCreateNode = async ({
       });
     } catch (e) {
       if (e instanceof ValidationError) {
-        reporter.error(`${jsonId}:\n\n`, e);
+        reporter.error(`$In ${nodeType} instance ${jsonId}:\n\n`, e);
       } else throw e;
     }
   }
