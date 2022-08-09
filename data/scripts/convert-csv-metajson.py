@@ -21,6 +21,13 @@ parser.add_argument(
     help="Define filename of meta json output",
     default="rsv_meta.json",
 )
+parser.add_argument(
+    "-d",
+    "--delimiter",
+    help="Define delimiter of csv input",
+    default="rsv_meta.json",
+)
+
 parser.add_argument("-i", "--input", help="Define path of csv input", default="rsv.csv")
 args = parser.parse_args()
 
@@ -29,51 +36,56 @@ def csv_to_json(csvFilePath, jsonFilePath):
     jsonArray = []
     selected_regions = args.region.lower()
     selected_regions = selected_regions.split(" ")
-
     # read csv file
     with open(csvFilePath, encoding="utf-8") as csvf:
         # load csv file data using csv library's dictionary reader
-        csvReader = csv.DictReader(csvf)
+        csvReader = list(csv.reader(csvf, delimiter=args.delimiter))
+        csvKeys = csvReader[0]
 
+        keyIndexMap = {csvKeys[i]: i for i in range(len(csvKeys))}
         # convert each csv row into python dict
         for row in list(csvReader):
-            country = row["Bundesland"].lower()
-            if row["GeoJSON"] == "ja" and (
+            rowDict = {key: row[keyIndexMap[key]] for key in keyIndexMap}
+            country = rowDict["Bundesland"].lower()
+            if rowDict["GeoJSON"] == "ja" and (
                 selected_regions == ["all"] or (country in selected_regions)
             ):
-                ref = row["Abk\u00fcrzung"].lower().replace(" ", "")
-
+                ref = rowDict["Abk\u00fcrzung"].lower().replace(" ", "")
                 rsv_properties = {
                     "id": f"{ref}-{country}",
-                    "cost": row["Kosten"],
-                    "state": row["Projektstand"],
+                    "cost": rowDict["Kosten"],
+                    "state": rowDict["Projektstand"],
                     # planning_phase: ""
                     # detail_level: ""
                 }
                 rsv_properties["finished"] = (
-                    None if row["Fertigstellung"] == "" else row["Fertigstellung"]
+                    None
+                    if rowDict["Fertigstellung"] == ""
+                    else rowDict["Fertigstellung"]
                 )
                 rsv_properties["general"] = {
-                    "ref": row["Abkürzung"],
-                    "name": row["Titel"],
-                    "from": row["von"],
-                    "to": row["bis"],
-                    "length": float(row["Länge"]),
-                    "description": row["(Kurzbeschreibung)"],
-                    "source": row["Quellen"],
+                    "ref": rowDict["Abkürzung"],
+                    "name": rowDict["Titel"],
+                    "from": rowDict["von"],
+                    "to": rowDict["bis"],
+                    "length": float(rowDict["Länge"]),
+                    "description": None
+                    if rowDict["(Kurzbeschreibung)"] == ""
+                    else rowDict["(Kurzbeschreibung)"],
+                    "source": None if rowDict["Quellen"] == "" else rowDict["Quellen"],
                     # "slug": ""
                 }
                 rsv_properties["stakeholders"] = [
                     {
-                        "name": row["Auftraggeber"],
+                        "name": rowDict["Auftraggeber"],
                         "roles": ["authority"],
                         # "description": ""
                     }
                 ]
                 rsv_properties["references"] = {
                     "website": None
-                    if row["Projektwebsite"] == ""
-                    else row["Projektwebsite"],
+                    if rowDict["Projektwebsite"] == ""
+                    else rowDict["Projektwebsite"],
                     # "osm_relation": ""
                 }
 
