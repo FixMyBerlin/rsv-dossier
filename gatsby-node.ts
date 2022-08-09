@@ -33,6 +33,7 @@ export const onPostBootstrap = ({ getNodesByType, reporter }) => {
   const nGeometries = geometries.length;
   const nMeta = meta.length;
   if (nGeometries !== nMeta) {
+    // build symmetric difference to display unmatching data (list might be longer than |nGeometries - nMeta|)
     const geometrySet = new Set(geometries);
     const metaSet = new Set(meta);
     const difference = new Set([
