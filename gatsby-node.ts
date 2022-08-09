@@ -30,19 +30,22 @@ export const onPostBootstrap = ({ getNodesByType, reporter }) => {
     (x) => x.jsonId
   );
   const meta: string[] = getNodesByType('MetaJson').map((x) => x.jsonId);
-  const nGeometries = geometries.length;
-  const nMeta = meta.length;
-  if (nGeometries !== nMeta) {
+  const geometrySet = new Set(geometries);
+  const missingGeometries = [...meta].filter((x) => !geometrySet.has(x));
+  if (missingGeometries.length !== 0) {
     // build symmetric difference to display unmatching data (list might be longer than |nGeometries - nMeta|)
-    const geometrySet = new Set(geometries);
-    const metaSet = new Set(meta);
-    const difference = new Set([
-      ...[...geometries].filter((x) => !metaSet.has(x)),
-      ...[...meta].filter((x) => !geometrySet.has(x)),
-    ]);
     reporter.error(
-      `The provided number of geometries (${nGeometries}) does no match the number of meta information (${nMeta}). The following instances are incomplete ${JSON.stringify(
-        Array.from(difference)
+      `Provided data is incomplete. The following instances have no geometry files:\n${JSON.stringify(
+        missingGeometries
+      )}`
+    );
+  }
+  const metaSet = new Set(meta);
+  const missingMeta = [...geometries].filter((x) => !metaSet.has(x));
+  if (missingMeta.length !== 0) {
+    reporter.error(
+      `Provided data is incomplete. The following instances have no meta information:\n${JSON.stringify(
+        missingMeta
       )}`
     );
   }
