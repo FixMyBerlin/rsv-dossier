@@ -38,10 +38,12 @@ export const staticMapRequest = (
 
   url.searchParams.append('key', GATSBY_MAPTILER_KEY);
   url.searchParams.append('attribution', 'false');
-  features.forEach((feature) => {
-    buildPaths(feature).forEach((path) => {
-      url.searchParams.append('path', path);
+  features
+    .filter((feature) => !feature.properties.discarded)
+    .forEach((feature) => {
+      buildPaths(feature).forEach((path) => {
+        url.searchParams.append('path', path);
+      });
     });
-  });
   return url;
 };

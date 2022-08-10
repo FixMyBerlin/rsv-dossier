@@ -68,15 +68,18 @@ export const DynamicMap: React.FC<
       // onMouseEnter={() => setCursorStyle('pointer')}
       // onMouseLeave={() => setCursorStyle('grab')}
     >
-      {geometry.features.map(
-        (feature: GeoJSON.Feature<GeoJSON.MultiLineString>) => (
+      {geometry.features
+        .filter(
+          (feature: GeoJSON.Feature<GeoJSON.MultiLineString>) =>
+            !feature.properties.discarded
+        )
+        .map((feature: GeoJSON.Feature<GeoJSON.MultiLineString>) => (
           <RSVSegment
             key={feature.properties.id}
             feature={feature}
             selected={selected}
           />
-        )
-      )}
+        ))}
       <RSVPopup info={info} selected={selected} setSelected={setSelected} />
     </Map>
   );

@@ -46,6 +46,7 @@ export const query = graphql`
           id_rsv
           id
           detail_level
+          discarded
         }
       }
     }
