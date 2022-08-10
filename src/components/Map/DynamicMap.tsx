@@ -28,7 +28,11 @@ export const DynamicMap: React.FC<
   Pick<Queries.SteckbriefQuery, 'geometry'>
 > = ({ geometry }) => {
   assertFeatureCollection(geometry);
-  const bboxView = bbox(transformScale(bboxPolygon(square(geometry.bbox)), 6));
+  // the factor by which the bbox is scaled to the viewport
+  const scaleFactor = 6;
+  const bboxView = bbox(
+    transformScale(bboxPolygon(square(geometry.bbox)), scaleFactor)
+  );
   const [info] = useState({
     lng: 0,
     lat: 0,
