@@ -1,86 +1,110 @@
 # This script is originally coming from https://milovantomasevic.com/blog/stackoverflow/2021-04-21-convert-csv-to-json-file-in-python/ and was adapted
 
-import csv 
+import csv
 import json
 import time
 import argparse
 
-parser = argparse.ArgumentParser(description='Convert a CSV containing cycle highways into a Meta JSON file. Specification for the Meta JSON can be found at https://github.com/FixMyBerlin/radschnellverbindungen')
+parser = argparse.ArgumentParser(
+    description="Convert a CSV containing cycle highways into a Meta JSON file. Specification for the Meta JSON can be found at https://github.com/FixMyBerlin/radschnellverbindungen"
+)
 
-parser.add_argument("-r", "--region", help="Output only highways containing the string which is contained in the ref or Bundesland (case-insensitive)", default="All regions")
-parser.add_argument("-o", "--output", help="Define filename of meta json output", default="rsv_meta.json")
+parser.add_argument(
+    "-r",
+    "--region",
+    help="Output only highways containing the string which is contained in the ref or Bundesland (case-insensitive)",
+    default="all",
+)
+parser.add_argument(
+    "-o",
+    "--output",
+    help="Define filename of meta json output",
+    default="rsv_meta.json",
+)
+parser.add_argument(
+    "-d",
+    "--delimiter",
+    help="Define delimiter of csv input",
+    default="rsv_meta.json",
+)
 
+parser.add_argument("-i", "--input", help="Define path of csv input", default="rsv.csv")
 args = parser.parse_args()
+
 
 def csv_to_json(csvFilePath, jsonFilePath):
     jsonArray = []
-    selected_region = args.region.lower()
-      
-    #read csv file
-    with open(csvFilePath, encoding='utf-8') as csvf: 
-        #load csv file data using csv library's dictionary reader
-        csvReader = csv.DictReader(csvf) 
+    selected_regions = args.region.lower()
+    selected_regions = selected_regions.split(" ")
+    # read csv file
+    with open(csvFilePath, encoding="utf-8") as csvf:
+        # load csv file data using csv library's dictionary reader
+        csvReader = list(csv.reader(csvf, delimiter=args.delimiter))
+        csvKeys = csvReader[0]
 
-        # Count RSV per state
-        states = {}
+        keyIndexMap = {csvKeys[i]: i for i in range(len(csvKeys))}
+        # convert each csv row into python dict
         for row in list(csvReader):
-            if row["Bundesland"] not in states:
-                states[row["Bundesland"]] = 1
-                # For counting when building rsv id
-                states[row["Bundesland"]+"_count"] = 1
-            else:
-                states[row["Bundesland"]] += 1
+            rowDict = {key: row[keyIndexMap[key]] for key in keyIndexMap}
+            country = rowDict["Bundesland"].lower()
+            if rowDict["GeoJSON"] == "ja" and (
+                selected_regions == ["all"] or (country in selected_regions)
+            ):
+                ref = rowDict["Abk\u00fcrzung"].lower().replace(" ", "")
+                rsv_properties = {
+                    "id": f"{ref}-{country}",
+                    "cost": rowDict["Kosten"],
+                    "state": rowDict["Projektstand"],
+                    # planning_phase: ""
+                    # detail_level: ""
+                }
+                rsv_properties["finished"] = (
+                    None
+                    if rowDict["Fertigstellung"] == ""
+                    else rowDict["Fertigstellung"]
+                )
+                rsv_properties["general"] = {
+                    "ref": rowDict["Abkürzung"],
+                    "name": rowDict["Titel"],
+                    "from": {
+                        "city": rowDict["von"],
+                        "federal_state": rowDict["von(Bundesland)"],
+                    },
+                    "to": {
+                        "city": rowDict["bis"],
+                        "federal_state": rowDict["bis(bundesland)"],
+                    },
+                    "length": float(rowDict["Länge"]),
+                    "description": None
+                    if rowDict["(Kurzbeschreibung)"] == ""
+                    else rowDict["(Kurzbeschreibung)"],
+                    "source": None if rowDict["Quellen"] == "" else rowDict["Quellen"],
+                    # "slug": ""
+                }
+                rsv_properties["stakeholders"] = [
+                    {
+                        "name": rowDict["Auftraggeber"],
+                        "roles": ["authority"],
+                        # "description": ""
+                    }
+                ]
+                rsv_properties["references"] = {
+                    "website": None
+                    if rowDict["Projektwebsite"] == ""
+                    else rowDict["Projektwebsite"],
+                    # "osm_relation": ""
+                }
 
-        csvf.seek(0)
-        #convert each csv row into python dict
-        for row in list(csvReader)[1:]:
-            rowCopy = {}
-            if selected_region == "all regions" or (selected_region in row["Abk\u00fcrzung"].lower()) or (selected_region == row["Bundesland"].lower()):
-                ref = row["Abk\u00fcrzung"].lower().replace(" ", "")
-                if row["Abk\u00fcrzung"] and row["Bundesland"]:
-                    rowCopy["id"] = row["Bundesland"].lower() + "_" + ref
-                elif not row["Abk\u00fcrzung"] and row["Bundesland"]:
-                    rowCopy["id"] = row["Bundesland"].lower() + "_" + str(states[row["Bundesland"]+"_count"]) 
-                    states[row["Bundesland"]+"_count"] += 1
-                else:
-                    rowCopy["id"] = row["ID"]
-                rowCopy["cost"] = row["Kosten"]
-                rowCopy["finished"] = row["Fertigstellung"]
-                rowCopy["state"] = row["Projektstand"]
-                rowCopy["planning_phase"] = ""
-                rowCopy["detail_level"] = ""
-                rowCopy["general"] = {
-                    "ref": row["Abkürzung"],
-                    "name": row["Titel"],
-                    "from": row["von"],
-                    "to": row["bis"],
-                    "description": row["(Kurzbeschreibung)"],
-                    "slug": ""
-                }
-                rowCopy["stakeholders"] = [{
-                    "name": row["Auftraggeber"],
-                    "roles": ["authority"],
-                    "description": ""
-                }]
-                rowCopy["references"] = {
-                    "website": "",
-                    "osm_relation": ""
-                }
-                
-                jsonArray.append(rowCopy)
-  
-    #convert python jsonArray to JSON String and write to file
-    with open(jsonFilePath, 'w', encoding='utf-8') as jsonf: 
+                jsonArray.append(rsv_properties)
+
+    # convert python jsonArray to JSON String and write to file
+    with open(jsonFilePath, "w", encoding="utf-8") as jsonf:
         jsonString = json.dumps(jsonArray, indent=4)
         jsonf.write(jsonString)
-          
-output_filename = args.output
 
-csvFilePath = r'../data/list_rsv.csv'
-jsonFilePath = r'../data/' + output_filename
 
 start = time.perf_counter()
-csv_to_json(csvFilePath, jsonFilePath)
+csv_to_json(args.input, args.output)
 finish = time.perf_counter()
 
 print(f"Conversion completed in {finish - start:0.4f} seconds")

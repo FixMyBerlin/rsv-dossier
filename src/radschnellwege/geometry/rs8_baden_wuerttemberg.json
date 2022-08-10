@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "name": "rs8-baden-wuerttemberg",
+  "id": "rs8-baden-wuerttemberg",
   "crs": {
     "type": "name",
     "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
@@ -16,9 +16,9 @@
         "id_rsv": "RS8",
         "planning_phase": "preliminary",
         "variant": "Vorzugstrasse",
-        "discarted": null,
+        "discarded": false,
         "stand": "02.06.2022",
-        "length": "15072.94",
+        "length": 15072.94,
         "description:planning_phase": null
       },
       "bbox": [9.185939, 48.82657, 9.306798959590543, 48.893338],
@@ -106,9 +106,9 @@
         "id_rsv": "RS8",
         "planning_phase": null,
         "variant": "Trasse 2 Vorzugstrasse",
-        "discarted": null,
-        "stand": null,
-        "length": "12805.556",
+        "discarded": true,
+        "stand": "02.06.2022",
+        "length": 12805.556,
         "description:planning_phase": null
       },
       "bbox": [
@@ -187,9 +187,9 @@
         "id_rsv": "RS8",
         "planning_phase": null,
         "variant": "Trasse 3",
-        "discarted": null,
+        "discarded": true,
         "stand": "08.06.2022",
-        "length": "15468.893",
+        "length": 15468.893,
         "description:planning_phase": null
       },
       "bbox": [
@@ -286,14 +286,14 @@
       "type": "Feature",
       "properties": {
         "id": "2",
-        "detail_level": null,
+        "detail_level": "rough",
         "state": "planning",
         "id_rsv": "RS8",
         "planning_phase": null,
         "variant": "Trasse 2 Alternativen",
-        "discarted": null,
-        "stand": null,
-        "length": "7145.425",
+        "discarded": true,
+        "stand": "02.06.2022",
+        "length": 7145.425,
         "description:planning_phase": null
       },
       "bbox": [
@@ -314,12 +314,6 @@
             [9.251043432649906, 48.865061766146056],
             [9.251248895579661, 48.86539446813363]
           ],
-          [[9.251043432649906, 48.865061766146056]],
-          [[9.251043432649906, 48.865061766146056]],
-          [[9.251043432649906, 48.865061766146056]],
-          [[9.251043432649906, 48.865061766146056]],
-          [[9.251043432649906, 48.865061766146056]],
-          [[9.244847935077608, 48.865061766146056]],
           [
             [9.247277929342253, 48.865061766146056],
             [9.247356953545983, 48.864500326526368],
@@ -335,7 +329,6 @@
             [9.257092735445323, 48.858989566337328],
             [9.259340974041445, 48.857679371812509]
           ],
-          [[9.241181212024619, 48.866558907671617]],
           [
             [9.242192721832339, 48.865976691289568],
             [9.241343211642237, 48.865108552496686],
@@ -378,14 +371,14 @@
       "type": "Feature",
       "properties": {
         "id": "5",
-        "detail_level": null,
+        "detail_level": "rough",
         "state": "planning",
         "id_rsv": "RS8",
         "planning_phase": null,
         "variant": "Trasse 1 Varianten",
-        "discarted": null,
-        "stand": null,
-        "length": "10857.85",
+        "discarded": false,
+        "stand": "02.06.2022",
+        "length": 10857.85,
         "description:planning_phase": null
       },
       "bbox": [
