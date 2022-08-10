@@ -1,9 +1,44 @@
 {
-"type": "FeatureCollection",
-"name": "2_nordrhein_westfalen",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"bbox": [ 6.95960216568961, 50.8952658074901, 7.18330600547763, 50.9382521373113 ],                                                
-"features": [
-{ "type": "Feature", "properties": { "id": "1", "length": "16619.78260286733", "detail_level": "corridor", "id_rsv": "2-nordrhein-westfalen", "state": "agreed", "planning_phase": null, "variant": "Vorzugstrasse", "discarted": null, "stand": "27.06.2022", "description:planning_phase": null }, "bbox": [ 6.959602165689605, 50.895265807490055, 7.183306005477625, 50.938252137311288 ], "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 6.959602165689605, 50.938252137311288 ], [ 7.002759641630442, 50.937769365402872 ], [ 7.054088947335226, 50.927469037299062 ], [ 7.090862181272985, 50.92167410022676 ], [ 7.183306005477625, 50.895265807490055 ] ] ] } }
-]
+  "type": "FeatureCollection",
+  "id": "2-nordrhein-westfalen",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "bbox": [
+    6.95960216568961, 50.8952658074901, 7.18330600547763, 50.9382521373113
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1",
+        "length": 16619.78260286733,
+        "detail_level": "corridor",
+        "id_rsv": "2-nordrhein-westfalen",
+        "state": "agreement_process",
+        "planning_phase": null,
+        "variant": "Vorzugstrasse",
+        "discarded": null,
+        "stand": "27.06.2022",
+        "description:planning_phase": null
+      },
+      "bbox": [
+        6.959602165689605, 50.895265807490055, 7.183306005477625,
+        50.938252137311288
+      ],
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [6.959602165689605, 50.938252137311288],
+            [7.002759641630442, 50.937769365402872],
+            [7.054088947335226, 50.927469037299062],
+            [7.090862181272985, 50.92167410022676],
+            [7.183306005477625, 50.895265807490055]
+          ]
+        ]
+      }
+    }
+  ]
 }
