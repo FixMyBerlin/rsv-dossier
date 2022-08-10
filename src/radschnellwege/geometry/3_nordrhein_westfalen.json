@@ -19,7 +19,7 @@
         "state": "agreement_process",
         "planning_phase": null,
         "variant": "Vorzugstrasse",
-        "discarded": null,
+        "discarded": false,
         "stand": "27.06.2022",
         "description:planning_phase": null
       },
