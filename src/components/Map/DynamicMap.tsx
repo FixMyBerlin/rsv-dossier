@@ -28,7 +28,11 @@ export const DynamicMap: React.FC<
   Pick<Queries.SteckbriefQuery, 'geometry'>
 > = ({ geometry }) => {
   assertFeatureCollection(geometry);
-  const bboxView = bbox(transformScale(bboxPolygon(square(geometry.bbox)), 6));
+  // the factor by which the bbox is scaled to the viewport
+  const scaleFactor = 6;
+  const bboxView = bbox(
+    transformScale(bboxPolygon(square(geometry.bbox)), scaleFactor)
+  );
   const [info] = useState({
     lng: 0,
     lat: 0,
@@ -64,15 +68,18 @@ export const DynamicMap: React.FC<
       // onMouseEnter={() => setCursorStyle('pointer')}
       // onMouseLeave={() => setCursorStyle('grab')}
     >
-      {geometry.features.map(
-        (feature: GeoJSON.Feature<GeoJSON.MultiLineString>) => (
+      {geometry.features
+        .filter(
+          (feature: GeoJSON.Feature<GeoJSON.MultiLineString>) =>
+            !feature.properties.discarded
+        )
+        .map((feature: GeoJSON.Feature<GeoJSON.MultiLineString>) => (
           <RSVSegment
             key={feature.properties.id}
             feature={feature}
             selected={selected}
           />
-        )
-      )}
+        ))}
       <RSVPopup info={info} selected={selected} setSelected={setSelected} />
     </Map>
   );
