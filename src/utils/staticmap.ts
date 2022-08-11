@@ -1,9 +1,6 @@
 import { encode } from '@googlemaps/polyline-codec';
 
-// somehow can't use object destructuring here
-/* eslint-disable prefer-destructuring */
-const GATSBY_MAPTILER_BASEURL = process.env.GATSBY_MAPTILER_BASEURL;
-const GATSBY_MAPTILER_KEY = process.env.GATSBY_MAPTILER_KEY;
+const { GATSBY_MAPTILER_BASEURL, GATSBY_MAPTILER_KEY } = process.env;
 
 // TODO: source from .const to stay consistent with ~/components/Map/DynamicMap.tsx
 const stateColor = {
