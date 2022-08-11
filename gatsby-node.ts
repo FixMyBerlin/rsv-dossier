@@ -84,8 +84,7 @@ export const onCreateNode = async ({
     const url = staticMapRequest(node, [1920, 1920]);
     // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
     let response = await fetch(url.toString());
-
-    // if the URL is too long we'll get an `414` from MapTiler
+    // if the URL is too long we'll get an `414` from MapTiler. In this case we'll try to simplify the geometry until the URL is short enough
     let tolerance = 0.000001;
     while (response.status === 414) {
       const simplified = simplify(node, { tolerance, highQuality: true });
