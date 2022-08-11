@@ -4,6 +4,7 @@ import { RSVMap } from '~/components/Map';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { RsvProgressBar } from '~/components/Steckbrief';
 import { Heading2 } from '~/components/Text';
+import { staticMapRequest } from '~/utils/index';
 
 export const RSVDetails: React.FC<Queries.SteckbriefQuery> = ({
   meta,
@@ -52,6 +53,12 @@ export const RSVDetails: React.FC<Queries.SteckbriefQuery> = ({
           <p className="text-lg text-gray-500 sm:text-xl">
             ca. {meta.general.length}&thinsp;km
           </p>
+          <ButtonLink
+            newWindow
+            to={staticMapRequest(geometry as any, [1920, 1920]).toString()}
+          >
+            StaticMap
+          </ButtonLink>
         </div>
       </div>
     </div>
