@@ -37,7 +37,7 @@ export const staticMapRequest = (
   );
 
   url.searchParams.append('key', GATSBY_MAPTILER_KEY);
-  url.searchParams.append('attribution', 'false');
+  url.searchParams.append('attribution', '0');
   features
     .filter((feature) => !feature.properties.discarded)
     .forEach((feature) => {
