@@ -50,7 +50,7 @@ export const RSVDetails: React.FC<Queries.SteckbriefQuery> = ({
           </p>
           <Heading2>Länge</Heading2>
           <p className="text-lg text-gray-500 sm:text-xl">
-            ca. {meta.general.length}&thinsp;km
+            ca. {meta.general.length.toLocaleString('de-DE')}&thinsp;km
           </p>
         </div>
       </div>
