@@ -26,11 +26,27 @@ export const createSchemaCustomization = ({ actions: { createTypes } }) => {
 };
 
 export const onPostBootstrap = ({ getNodesByType, reporter }) => {
-  const nGeometries = getNodesByType('GeometryJson').length;
-  const nMeta = getNodesByType('MetaJson').length;
-  if (nGeometries !== nMeta) {
+  const geometries: string[] = getNodesByType('GeometryJson').map(
+    (x) => x.jsonId
+  );
+  const meta: string[] = getNodesByType('MetaJson').map((x) => x.jsonId);
+  const geometrySet = new Set(geometries);
+  const missingGeometries = [...meta].filter((x) => !geometrySet.has(x));
+  if (missingGeometries.length !== 0) {
+    // build symmetric difference to display unmatching data (list might be longer than |nGeometries - nMeta|)
     reporter.error(
-      `The provided number of geometries (${nGeometries}) does no match the number of meta information (${nMeta})`
+      `Provided data is incomplete. The following instances have no geometry files:\n${JSON.stringify(
+        missingGeometries
+      )}`
+    );
+  }
+  const metaSet = new Set(meta);
+  const missingMeta = [...geometries].filter((x) => !metaSet.has(x));
+  if (missingMeta.length !== 0) {
+    reporter.error(
+      `Provided data is incomplete. The following instances have no meta information:\n${JSON.stringify(
+        missingMeta
+      )}`
     );
   }
 };
@@ -58,7 +74,7 @@ export const onCreateNode = async ({
       });
     } catch (e) {
       if (e instanceof ValidationError) {
-        reporter.error(`${jsonId}:\n\n`, e);
+        reporter.error(`$In ${nodeType} instance ${jsonId}:\n\n`, e);
       } else throw e;
     }
   }
@@ -68,8 +84,7 @@ export const onCreateNode = async ({
     const url = staticMapRequest(node, [1920, 1920]);
     // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
     let response = await fetch(url.toString());
-
-    // if the URL is too long we'll get an `414` from MapTiler
+    // if the URL is too long we'll get an `414` from MapTiler. In this case we'll try to simplify the geometry until the URL is short enough
     let tolerance = 0.000001;
     while (response.status === 414) {
       const simplified = simplify(node, { tolerance, highQuality: true });

@@ -128,7 +128,7 @@
       "type": "Feature",
       "properties": {
         "id": "2",
-        "detail_level": "",
+        "detail_level": "corridor",
         "state": "agreement_process",
         "id_rsv": "RS9",
         "planning_phase": null,
