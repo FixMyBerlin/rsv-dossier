@@ -3292,5 +3292,28 @@
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     }
   },
+  {
+    "id": "2-rheinland-pfalz",
+    "cost": null,
+    "finished": null,
+    "state": "planning",
+    "general": {
+      "ref": null,
+      "name": "Radschnellweg Worms - Ludwigshafen",
+      "from": "Ludwigshafen",
+      "to": "Worms",
+      "length": 25,
+      "description": "Seit Mai 2021 liegen die Voruntersuchungen eines 25 km langen geplanten Radschnellwegs zwischen Worms und Ludwigshafen vor. Radfahrer:innen könnten zwischen ihren Wohn- und Arbeitsorten wichtige Ziele direkt, sicher und komfortabel mit dem Fahrrad erreichen. Die empfohlene Vorzugstrasse verbindet BASF-Standorte, den KTL Kombi-Terminal Ludwigshafen GmbH, den Landeshafen Nord mit Siedlungsschwerpunkten der Region Rhein-Neckar. Insbesondere die innerstädtischen Verbindungen in Worms, Frankenthal (Pfalz) und Ludwigshafen am Rhein könnten deutlich aufgewertet werden.",
+      "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    },
+    "stakeholders": [
+      { "name": "", 
+      "roles": ["authority"] 
+    }
+    ],
+    "references": {
+      "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    }
+  }
 
 ]
