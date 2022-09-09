@@ -3268,5 +3268,29 @@
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15307314/radschnellweg-luebeck/"
     }
-  }
+  },
+  {
+    "id": "1-rheinland-pfalz",
+    "cost": null,
+    "finished": null,
+    "state": "planning",
+    "general": {
+      "ref": null,
+      "name": "Radschnellweg Rhein-Neckar / Teilabschnitt Ludwigshafen – Schifferstadt",
+      "from": "Ludwigshafen",
+      "to": "Schifferstadt",
+      "length": 12,
+      "description": "Eine erste Referenzstrecke eines Radschnellweges im südlichen Rheinland-Pfalz soll nicht vor 2025 entstehen. Das Wirtschaftsministerium Rheinland-Pfalz (MWVLW) könnte dieses Vorhaben in enger Abstimmung der beteiligten Stadt Ludwigshafen (Rhein) und dem Rhein-Pfalz-Kreis unterstützen. Die Machbarkeitsstudie für diesen Teilabschnitt im Kernraum des Ballungsraumes wurde vom Verband Region Rhein-Neckar im Januar 2018 der Öffentlichkeit vorgestellt.",
+      "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    },
+    "stakeholders": [
+      { "name": "Stadt Ludwigshafen (Rhein)", 
+      "roles": ["authority"] 
+    }
+    ],
+    "references": {
+      "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    }
+  },
+
 ]
