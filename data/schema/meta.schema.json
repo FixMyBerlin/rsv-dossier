@@ -13,8 +13,20 @@
       "properties": {
         "ref": { "type": "string" },
         "name": { "type": "string" },
-        "from": { "type": "string" },
-        "to": { "type": "string" },
+        "from": {
+          "type": "object",
+          "properties": {
+            "city": { "type": "string" },
+            "federal_state": { "type": "string" }
+          }
+        },
+        "to": {
+          "type": "object",
+          "properties": {
+            "city": { "type": "string" },
+            "federal_state": { "type": "string" }
+          }
+        },
         "description": {
           "type": ["string", "null"]
         },

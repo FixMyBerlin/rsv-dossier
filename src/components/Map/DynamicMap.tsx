@@ -29,7 +29,7 @@ export const DynamicMap: React.FC<
 > = ({ geometry }) => {
   assertFeatureCollection(geometry);
   // the factor by which the bbox is scaled to the viewport
-  const scaleFactor = 6;
+  const scaleFactor = 4;
   const bboxView = bbox(
     transformScale(bboxPolygon(square(geometry.bbox)), scaleFactor)
   );

@@ -725,12 +725,14 @@ type FileFieldsEnum =
   | 'childMetaJson.cost'
   | 'childMetaJson.gatsbyPath'
   | 'childMetaJson.general.description'
-  | 'childMetaJson.general.from'
+  | 'childMetaJson.general.from.city'
+  | 'childMetaJson.general.from.federal_state'
   | 'childMetaJson.general.length'
   | 'childMetaJson.general.name'
   | 'childMetaJson.general.ref'
   | 'childMetaJson.general.source'
-  | 'childMetaJson.general.to'
+  | 'childMetaJson.general.to.city'
+  | 'childMetaJson.general.to.federal_state'
   | 'childMetaJson.geoJson.bbox'
   | 'childMetaJson.geoJson.children'
   | 'childMetaJson.geoJson.children.children'
@@ -1015,12 +1017,14 @@ type FileFieldsEnum =
   | 'childrenMetaJson.cost'
   | 'childrenMetaJson.gatsbyPath'
   | 'childrenMetaJson.general.description'
-  | 'childrenMetaJson.general.from'
+  | 'childrenMetaJson.general.from.city'
+  | 'childrenMetaJson.general.from.federal_state'
   | 'childrenMetaJson.general.length'
   | 'childrenMetaJson.general.name'
   | 'childrenMetaJson.general.ref'
   | 'childrenMetaJson.general.source'
-  | 'childrenMetaJson.general.to'
+  | 'childrenMetaJson.general.to.city'
+  | 'childrenMetaJson.general.to.federal_state'
   | 'childrenMetaJson.geoJson.bbox'
   | 'childrenMetaJson.geoJson.children'
   | 'childrenMetaJson.geoJson.children.children'
@@ -2308,12 +2312,14 @@ type MetaJsonFieldsEnum =
   | 'cost'
   | 'gatsbyPath'
   | 'general.description'
-  | 'general.from'
+  | 'general.from.city'
+  | 'general.from.federal_state'
   | 'general.length'
   | 'general.name'
   | 'general.ref'
   | 'general.source'
-  | 'general.to'
+  | 'general.to.city'
+  | 'general.to.federal_state'
   | 'geoJson.bbox'
   | 'geoJson.children'
   | 'geoJson.children.children'
@@ -2509,12 +2515,10 @@ type MetaJsonFieldsEnum =
   | 'staticMap.childMetaJson.cost'
   | 'staticMap.childMetaJson.gatsbyPath'
   | 'staticMap.childMetaJson.general.description'
-  | 'staticMap.childMetaJson.general.from'
   | 'staticMap.childMetaJson.general.length'
   | 'staticMap.childMetaJson.general.name'
   | 'staticMap.childMetaJson.general.ref'
   | 'staticMap.childMetaJson.general.source'
-  | 'staticMap.childMetaJson.general.to'
   | 'staticMap.childMetaJson.geoJson.bbox'
   | 'staticMap.childMetaJson.geoJson.children'
   | 'staticMap.childMetaJson.geoJson.features'
@@ -2655,12 +2659,10 @@ type MetaJsonFieldsEnum =
   | 'staticMap.childrenMetaJson.cost'
   | 'staticMap.childrenMetaJson.gatsbyPath'
   | 'staticMap.childrenMetaJson.general.description'
-  | 'staticMap.childrenMetaJson.general.from'
   | 'staticMap.childrenMetaJson.general.length'
   | 'staticMap.childrenMetaJson.general.name'
   | 'staticMap.childrenMetaJson.general.ref'
   | 'staticMap.childrenMetaJson.general.source'
-  | 'staticMap.childrenMetaJson.general.to'
   | 'staticMap.childrenMetaJson.geoJson.bbox'
   | 'staticMap.childrenMetaJson.geoJson.children'
   | 'staticMap.childrenMetaJson.geoJson.features'
@@ -2808,22 +2810,42 @@ type MetaJsonFilterListInput = {
 
 type MetaJsonGeneral = {
   readonly description: Maybe<Scalars['String']>;
-  readonly from: Maybe<Scalars['String']>;
+  readonly from: Maybe<MetaJsonGeneralFrom>;
   readonly length: Maybe<Scalars['Float']>;
   readonly name: Maybe<Scalars['String']>;
   readonly ref: Maybe<Scalars['String']>;
   readonly source: Maybe<Scalars['String']>;
-  readonly to: Maybe<Scalars['String']>;
+  readonly to: Maybe<MetaJsonGeneralTo>;
 };
 
 type MetaJsonGeneralFilterInput = {
   readonly description: InputMaybe<StringQueryOperatorInput>;
-  readonly from: InputMaybe<StringQueryOperatorInput>;
+  readonly from: InputMaybe<MetaJsonGeneralFromFilterInput>;
   readonly length: InputMaybe<FloatQueryOperatorInput>;
   readonly name: InputMaybe<StringQueryOperatorInput>;
   readonly ref: InputMaybe<StringQueryOperatorInput>;
   readonly source: InputMaybe<StringQueryOperatorInput>;
-  readonly to: InputMaybe<StringQueryOperatorInput>;
+  readonly to: InputMaybe<MetaJsonGeneralToFilterInput>;
+};
+
+type MetaJsonGeneralFrom = {
+  readonly city: Maybe<Scalars['String']>;
+  readonly federal_state: Maybe<Scalars['String']>;
+};
+
+type MetaJsonGeneralFromFilterInput = {
+  readonly city: InputMaybe<StringQueryOperatorInput>;
+  readonly federal_state: InputMaybe<StringQueryOperatorInput>;
+};
+
+type MetaJsonGeneralTo = {
+  readonly city: Maybe<Scalars['String']>;
+  readonly federal_state: Maybe<Scalars['String']>;
+};
+
+type MetaJsonGeneralToFilterInput = {
+  readonly city: InputMaybe<StringQueryOperatorInput>;
+  readonly federal_state: InputMaybe<StringQueryOperatorInput>;
 };
 
 type MetaJsonGroupConnection = {
@@ -4460,7 +4482,7 @@ type SteckbriefQueryVariables = Exact<{
 }>;
 
 
-type SteckbriefQuery = { readonly geometry: { readonly type: string | null, readonly bbox: ReadonlyArray<number | null> | null, readonly id: string | null, readonly features: ReadonlyArray<{ readonly type: string | null, readonly bbox: ReadonlyArray<number | null> | null, readonly geometry: { readonly coordinates: ReadonlyArray<ReadonlyArray<ReadonlyArray<number | null> | null> | null> | null, readonly type: string | null } | null, readonly properties: { readonly variant: string | null, readonly state: string | null, readonly planning_phase: string | null, readonly length: number | null, readonly id_rsv: string | null, readonly id: string | null, readonly detail_level: string | null, readonly discarded: boolean | null } | null } | null> | null } | null, readonly meta: { readonly cost: string | null, readonly state: string | null, readonly general: { readonly description: string | null, readonly from: string | null, readonly name: string | null, readonly ref: string | null, readonly to: string | null, readonly source: string | null, readonly length: number | null } | null, readonly references: { readonly website: string | null } | null, readonly staticMap: { readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } } | null };
+type SteckbriefQuery = { readonly geometry: { readonly type: string | null, readonly bbox: ReadonlyArray<number | null> | null, readonly id: string | null, readonly features: ReadonlyArray<{ readonly type: string | null, readonly bbox: ReadonlyArray<number | null> | null, readonly geometry: { readonly coordinates: ReadonlyArray<ReadonlyArray<ReadonlyArray<number | null> | null> | null> | null, readonly type: string | null } | null, readonly properties: { readonly variant: string | null, readonly state: string | null, readonly planning_phase: string | null, readonly length: number | null, readonly id_rsv: string | null, readonly id: string | null, readonly detail_level: string | null, readonly discarded: boolean | null } | null } | null> | null } | null, readonly meta: { readonly cost: string | null, readonly state: string | null, readonly general: { readonly description: string | null, readonly name: string | null, readonly ref: string | null, readonly source: string | null, readonly length: number | null, readonly from: { readonly city: string | null, readonly federal_state: string | null } | null, readonly to: { readonly city: string | null, readonly federal_state: string | null } | null } | null, readonly references: { readonly website: string | null } | null, readonly staticMap: { readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } } | null };
 
 type SteckbriefeIndexQueryVariables = Exact<{ [key: string]: never; }>;
 
