@@ -3337,6 +3337,29 @@
     "references": {
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     }
+  },
+  {
+    "id": "4-rheinland-pfalz",
+    "cost": null,
+    "finished": null,
+    "state": "planning",
+    "general": {
+      "ref": null,
+      "name": "Radschnellweg Neustadt an der Weinstraße - Landau in der Pfalz",
+      "from": "Landau in der Pfalz",
+      "to": "Neustadt an der Weinstraße",
+      "length": 20,
+      "description": "Anfang 2020 wurden die Arbeiten an der Machbarkeitsstudie für die Verbindung Schifferstadt – Wörth abgeschlossen. Für den Alltagsradverkehr ist die Nord-Süd gerichtete Achse innerhalb der Stadt Speyer und die Anfahrt zur Rheinquerung in Richtung Karlsruhe von besonderem Interesse.",
+      "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    },
+    "stakeholders": [
+      { "name": "", 
+      "roles": ["authority"] 
+    }
+    ],
+    "references": {
+      "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    }
   }
 
 ]
