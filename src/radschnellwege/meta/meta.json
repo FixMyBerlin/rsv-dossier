@@ -991,12 +991,12 @@
   },
   {
     "id": "21-baden-wuerttemberg",
-    "cost": "",
+    "cost": "11,2 Mio. €",
     "state": "idea",
     "finished": null,
     "general": {
-      "ref": "21",
-      "name": "Heidelberg  -  Schwetzingen",
+      "ref": "RS16",
+      "name": "RS16 Radschnellweg Heidelberg - Schwetzingen",
       "from": {
         "city": "Heidelberg",
         "federal_state": "Baden-W\u00fcrttemberg"
@@ -1005,18 +1005,18 @@
         "city": "Schwetzingen",
         "federal_state": "Baden-W\u00fcrttemberg"
       },
-      "length": 10.0,
+      "length": 7.0,
       "description": "Die  Radschnellverbindung  (RSV)  Heidelberg-Schwetzingen  erreicht  in  der  Potenzialanalyse  des  baden-w\u00fcrttembergischen  Verkehrsministeriums  mit  potenziellen  2.900  Radfahrenden/Tag  landesweit  den  7.  Platz  mit  der  Einstufung  als  vordringlicher  Bedarf.  Die  St\u00e4dte  Heidelberg,  Schwetzingen,  Eppelheim,  Plankstadt  und  Oftersheim  vereinbaren  daraufhin  auf  Basis  der  Machbarkeitsstudie  die  Planung  dieser  Radschnellverbindung  bis  zur  Genehmigungsplanung  zu  \u00fcbernehmen.  Damit  kann  eine  fr\u00fche  Realisierung  der  RSV  erreicht  werden,  die  eigentlich  in  der  Tr\u00e4gerschaft  des  Landes  Baden-W\u00fcrttemberg  liegt.",
       "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     },
     "stakeholders": [
       {
-        "name": "Stadt  Heidelberg",
+        "name": "Stadt Schwetzingen & Land Baden-Württemberg",
         "roles": ["authority"]
       }
     ],
     "references": {
-      "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+      "website": "https://rp.baden-wuerttemberg.de/rpk/abt4/seiten/strassenplanungen/rs16-radschnellweg-heidelberg-schwetzingen/"
     }
   },
   {
