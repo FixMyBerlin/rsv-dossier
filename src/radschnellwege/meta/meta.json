@@ -3314,6 +3314,29 @@
     "references": {
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     }
+  },
+  {
+    "id": "3-rheinland-pfalz",
+    "cost": null,
+    "finished": null,
+    "state": "planning",
+    "general": {
+      "ref": null,
+      "name": "Pendler-Radroute Schifferstadt / Wörth",
+      "from": "Schifferstadt",
+      "to": "Wörth",
+      "length": 60,
+      "description": "Anfang 2020 wurden die Arbeiten an der Machbarkeitsstudie für die Verbindung Schifferstadt – Wörth abgeschlossen. Für den Alltagsradverkehr ist die Nord-Süd gerichtete Achse innerhalb der Stadt Speyer und die Anfahrt zur Rheinquerung in Richtung Karlsruhe von besonderem Interesse.",
+      "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    },
+    "stakeholders": [
+      { "name": "", 
+      "roles": ["authority"] 
+    }
+    ],
+    "references": {
+      "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    }
   }
 
 ]
