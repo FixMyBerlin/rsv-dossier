@@ -3360,6 +3360,29 @@
     "references": {
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     }
+  },
+  {
+    "id": "rs13-baden-wuerttemberg",
+    "cost": "ca. 21 Mio. €",
+    "finished": null,
+    "state": "planning",
+    "general": {
+      "ref": "RS13",
+      "name": "RS13: Radschnellweg Karlsruhe – Rastatt",
+      "from": "Karlsruhe",
+      "to": "Rastatt",
+      "length": 21.5,
+      "description": "Der Regionalverband Mittlerer Oberrhein (RVMO) hat verschiedene Korridore im Hinblick auf die Realisierung von Radschnellwegen untersucht. Nun wird auf dem Korridor Leopoldshafen – Karlsruhe – Rastatt – Baden-Baden – Bühl der Radschnellweg auf dem Teilabschnitt Karlsruhe bis Rastatt geplant.",
+      "source": "https://rp.baden-wuerttemberg.de/rpk/abt4/seiten/strassenplanungen/radschnellweg-karlsruhe-rastatt/"
+    },
+    "stakeholders": [
+      { "name": "Land Baden-Württemberg", 
+      "roles": ["authority"] 
+    }
+    ],
+    "references": {
+      "website": "https://rp.baden-wuerttemberg.de/rpk/abt4/seiten/strassenplanungen/radschnellweg-karlsruhe-rastatt/"
+    }
   }
 
 ]
