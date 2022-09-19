@@ -991,12 +991,12 @@
   },
   {
     "id": "21-baden-wuerttemberg",
-    "cost": "",
+    "cost": "11,2 Mio. €",
     "state": "idea",
     "finished": null,
     "general": {
-      "ref": "21",
-      "name": "Heidelberg  -  Schwetzingen",
+      "ref": "RS16",
+      "name": "RS16 Radschnellweg Heidelberg - Schwetzingen",
       "from": {
         "city": "Heidelberg",
         "federal_state": "Baden-W\u00fcrttemberg"
@@ -1005,18 +1005,18 @@
         "city": "Schwetzingen",
         "federal_state": "Baden-W\u00fcrttemberg"
       },
-      "length": 10.0,
+      "length": 7.0,
       "description": "Die  Radschnellverbindung  (RSV)  Heidelberg-Schwetzingen  erreicht  in  der  Potenzialanalyse  des  baden-w\u00fcrttembergischen  Verkehrsministeriums  mit  potenziellen  2.900  Radfahrenden/Tag  landesweit  den  7.  Platz  mit  der  Einstufung  als  vordringlicher  Bedarf.  Die  St\u00e4dte  Heidelberg,  Schwetzingen,  Eppelheim,  Plankstadt  und  Oftersheim  vereinbaren  daraufhin  auf  Basis  der  Machbarkeitsstudie  die  Planung  dieser  Radschnellverbindung  bis  zur  Genehmigungsplanung  zu  \u00fcbernehmen.  Damit  kann  eine  fr\u00fche  Realisierung  der  RSV  erreicht  werden,  die  eigentlich  in  der  Tr\u00e4gerschaft  des  Landes  Baden-W\u00fcrttemberg  liegt.",
       "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     },
     "stakeholders": [
       {
-        "name": "Stadt  Heidelberg",
+        "name": "Stadt Schwetzingen & Land Baden-Württemberg",
         "roles": ["authority"]
       }
     ],
     "references": {
-      "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+      "website": "https://rp.baden-wuerttemberg.de/rpk/abt4/seiten/strassenplanungen/rs16-radschnellweg-heidelberg-schwetzingen/"
     }
   },
   {
@@ -3268,5 +3268,121 @@
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15307314/radschnellweg-luebeck/"
     }
+  },
+  {
+    "id": "1-rheinland-pfalz",
+    "cost": null,
+    "finished": null,
+    "state": "planning",
+    "general": {
+      "ref": null,
+      "name": "Radschnellweg Rhein-Neckar / Teilabschnitt Ludwigshafen – Schifferstadt",
+      "from": "Ludwigshafen",
+      "to": "Schifferstadt",
+      "length": 12,
+      "description": "Eine erste Referenzstrecke eines Radschnellweges im südlichen Rheinland-Pfalz soll nicht vor 2025 entstehen. Das Wirtschaftsministerium Rheinland-Pfalz (MWVLW) könnte dieses Vorhaben in enger Abstimmung der beteiligten Stadt Ludwigshafen (Rhein) und dem Rhein-Pfalz-Kreis unterstützen. Die Machbarkeitsstudie für diesen Teilabschnitt im Kernraum des Ballungsraumes wurde vom Verband Region Rhein-Neckar im Januar 2018 der Öffentlichkeit vorgestellt.",
+      "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    },
+    "stakeholders": [
+      { "name": "Stadt Ludwigshafen (Rhein)", 
+      "roles": ["authority"] 
+    }
+    ],
+    "references": {
+      "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    }
+  },
+  {
+    "id": "2-rheinland-pfalz",
+    "cost": null,
+    "finished": null,
+    "state": "planning",
+    "general": {
+      "ref": null,
+      "name": "Radschnellweg Worms - Ludwigshafen",
+      "from": "Ludwigshafen",
+      "to": "Worms",
+      "length": 25,
+      "description": "Seit Mai 2021 liegen die Voruntersuchungen eines 25 km langen geplanten Radschnellwegs zwischen Worms und Ludwigshafen vor. Radfahrer:innen könnten zwischen ihren Wohn- und Arbeitsorten wichtige Ziele direkt, sicher und komfortabel mit dem Fahrrad erreichen. Die empfohlene Vorzugstrasse verbindet BASF-Standorte, den KTL Kombi-Terminal Ludwigshafen GmbH, den Landeshafen Nord mit Siedlungsschwerpunkten der Region Rhein-Neckar. Insbesondere die innerstädtischen Verbindungen in Worms, Frankenthal (Pfalz) und Ludwigshafen am Rhein könnten deutlich aufgewertet werden.",
+      "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    },
+    "stakeholders": [
+      { "name": "", 
+      "roles": ["authority"] 
+    }
+    ],
+    "references": {
+      "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    }
+  },
+  {
+    "id": "3-rheinland-pfalz",
+    "cost": null,
+    "finished": null,
+    "state": "planning",
+    "general": {
+      "ref": null,
+      "name": "Pendler-Radroute Schifferstadt / Wörth",
+      "from": "Schifferstadt",
+      "to": "Wörth",
+      "length": 60,
+      "description": "Anfang 2020 wurden die Arbeiten an der Machbarkeitsstudie für die Verbindung Schifferstadt – Wörth abgeschlossen. Für den Alltagsradverkehr ist die Nord-Süd gerichtete Achse innerhalb der Stadt Speyer und die Anfahrt zur Rheinquerung in Richtung Karlsruhe von besonderem Interesse.",
+      "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    },
+    "stakeholders": [
+      { "name": "", 
+      "roles": ["authority"] 
+    }
+    ],
+    "references": {
+      "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    }
+  },
+  {
+    "id": "4-rheinland-pfalz",
+    "cost": null,
+    "finished": null,
+    "state": "planning",
+    "general": {
+      "ref": null,
+      "name": "Radschnellweg Neustadt an der Weinstraße - Landau in der Pfalz",
+      "from": "Landau in der Pfalz",
+      "to": "Neustadt an der Weinstraße",
+      "length": 20,
+      "description": "Anfang 2020 wurden die Arbeiten an der Machbarkeitsstudie für die Verbindung Schifferstadt – Wörth abgeschlossen. Für den Alltagsradverkehr ist die Nord-Süd gerichtete Achse innerhalb der Stadt Speyer und die Anfahrt zur Rheinquerung in Richtung Karlsruhe von besonderem Interesse.",
+      "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    },
+    "stakeholders": [
+      { "name": "", 
+      "roles": ["authority"] 
+    }
+    ],
+    "references": {
+      "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
+    }
+  },
+  {
+    "id": "rs13-baden-wuerttemberg",
+    "cost": "ca. 21 Mio. €",
+    "finished": null,
+    "state": "planning",
+    "general": {
+      "ref": "RS13",
+      "name": "RS13: Radschnellweg Karlsruhe – Rastatt",
+      "from": "Karlsruhe",
+      "to": "Rastatt",
+      "length": 21.5,
+      "description": "Der Regionalverband Mittlerer Oberrhein (RVMO) hat verschiedene Korridore im Hinblick auf die Realisierung von Radschnellwegen untersucht. Nun wird auf dem Korridor Leopoldshafen – Karlsruhe – Rastatt – Baden-Baden – Bühl der Radschnellweg auf dem Teilabschnitt Karlsruhe bis Rastatt geplant.",
+      "source": "https://rp.baden-wuerttemberg.de/rpk/abt4/seiten/strassenplanungen/radschnellweg-karlsruhe-rastatt/"
+    },
+    "stakeholders": [
+      { "name": "Land Baden-Württemberg", 
+      "roles": ["authority"] 
+    }
+    ],
+    "references": {
+      "website": "https://rp.baden-wuerttemberg.de/rpk/abt4/seiten/strassenplanungen/radschnellweg-karlsruhe-rastatt/"
+    }
   }
+
 ]
