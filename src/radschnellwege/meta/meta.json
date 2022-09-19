@@ -3275,18 +3275,22 @@
     "finished": null,
     "state": "planning",
     "general": {
-      "ref": null,
+      "ref": "1",
       "name": "Radschnellweg Rhein-Neckar / Teilabschnitt Ludwigshafen – Schifferstadt",
-      "from": "Ludwigshafen",
-      "to": "Schifferstadt",
+      "from": {
+        "city": "Ludwigshafen am Rhein",
+        "federal_state": "Rheinland-Pfalz"
+      },
+      "to": {
+        "city": "Schifferstadt",
+        "federal_state": "Rheinland-Pfalz"
+      },
       "length": 12,
       "description": "Eine erste Referenzstrecke eines Radschnellweges im südlichen Rheinland-Pfalz soll nicht vor 2025 entstehen. Das Wirtschaftsministerium Rheinland-Pfalz (MWVLW) könnte dieses Vorhaben in enger Abstimmung der beteiligten Stadt Ludwigshafen (Rhein) und dem Rhein-Pfalz-Kreis unterstützen. Die Machbarkeitsstudie für diesen Teilabschnitt im Kernraum des Ballungsraumes wurde vom Verband Region Rhein-Neckar im Januar 2018 der Öffentlichkeit vorgestellt.",
       "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     },
     "stakeholders": [
-      { "name": "Stadt Ludwigshafen (Rhein)", 
-      "roles": ["authority"] 
-    }
+      { "name": "Stadt Ludwigshafen (Rhein)", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
@@ -3298,19 +3302,21 @@
     "finished": null,
     "state": "planning",
     "general": {
-      "ref": null,
+      "ref": "2",
       "name": "Radschnellweg Worms - Ludwigshafen",
-      "from": "Ludwigshafen",
-      "to": "Worms",
+      "from": {
+        "city": "Ludwigshafen am Rhein",
+        "federal_state": "Rheinland-Pfalz"
+      },
+      "to": {
+        "city": "Worms",
+        "federal_state": "Rheinland-Pfalz"
+      },
       "length": 25,
       "description": "Seit Mai 2021 liegen die Voruntersuchungen eines 25 km langen geplanten Radschnellwegs zwischen Worms und Ludwigshafen vor. Radfahrer:innen könnten zwischen ihren Wohn- und Arbeitsorten wichtige Ziele direkt, sicher und komfortabel mit dem Fahrrad erreichen. Die empfohlene Vorzugstrasse verbindet BASF-Standorte, den KTL Kombi-Terminal Ludwigshafen GmbH, den Landeshafen Nord mit Siedlungsschwerpunkten der Region Rhein-Neckar. Insbesondere die innerstädtischen Verbindungen in Worms, Frankenthal (Pfalz) und Ludwigshafen am Rhein könnten deutlich aufgewertet werden.",
       "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     },
-    "stakeholders": [
-      { "name": "", 
-      "roles": ["authority"] 
-    }
-    ],
+    "stakeholders": [{ "name": "", "roles": ["authority"] }],
     "references": {
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     }
@@ -3321,19 +3327,21 @@
     "finished": null,
     "state": "planning",
     "general": {
-      "ref": null,
+      "ref": "3",
       "name": "Pendler-Radroute Schifferstadt / Wörth",
-      "from": "Schifferstadt",
-      "to": "Wörth",
+      "from": {
+        "city": "Schifferstadt",
+        "federal_state": "Rheinland-Pfalz"
+      },
+      "to": {
+        "city": "Wörth",
+        "federal_state": "Rheinland-Pfalz"
+      },
       "length": 60,
       "description": "Anfang 2020 wurden die Arbeiten an der Machbarkeitsstudie für die Verbindung Schifferstadt – Wörth abgeschlossen. Für den Alltagsradverkehr ist die Nord-Süd gerichtete Achse innerhalb der Stadt Speyer und die Anfahrt zur Rheinquerung in Richtung Karlsruhe von besonderem Interesse.",
       "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     },
-    "stakeholders": [
-      { "name": "", 
-      "roles": ["authority"] 
-    }
-    ],
+    "stakeholders": [{ "name": "", "roles": ["authority"] }],
     "references": {
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     }
@@ -3344,19 +3352,21 @@
     "finished": null,
     "state": "planning",
     "general": {
-      "ref": null,
+      "ref": "4",
       "name": "Radschnellweg Neustadt an der Weinstraße - Landau in der Pfalz",
-      "from": "Landau in der Pfalz",
-      "to": "Neustadt an der Weinstraße",
+      "from": {
+        "city": "Landau in der Pfalz",
+        "federal_state": "Rheinland-Pfalz"
+      },
+      "to": {
+        "city": "Neustadt an der Weinstraße",
+        "federal_state": "Rheinland-Pfalz"
+      },
       "length": 20,
       "description": "Anfang 2020 wurden die Arbeiten an der Machbarkeitsstudie für die Verbindung Schifferstadt – Wörth abgeschlossen. Für den Alltagsradverkehr ist die Nord-Süd gerichtete Achse innerhalb der Stadt Speyer und die Anfahrt zur Rheinquerung in Richtung Karlsruhe von besonderem Interesse.",
       "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     },
-    "stakeholders": [
-      { "name": "", 
-      "roles": ["authority"] 
-    }
-    ],
+    "stakeholders": [{ "name": "", "roles": ["authority"] }],
     "references": {
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     }
@@ -3368,21 +3378,24 @@
     "state": "planning",
     "general": {
       "ref": "RS13",
-      "name": "RS13: Radschnellweg Karlsruhe – Rastatt",
-      "from": "Karlsruhe",
-      "to": "Rastatt",
+      "name": "Radschnellweg Karlsruhe – Rastatt",
+      "from": {
+        "city": "Karlsruhe",
+        "federal_state": "Baden-W\u00fcrttemberg"
+      },
+      "to": {
+        "city": "Rastatt",
+        "federal_state": "Baden-W\u00fcrttemberg"
+      },
       "length": 21.5,
       "description": "Der Regionalverband Mittlerer Oberrhein (RVMO) hat verschiedene Korridore im Hinblick auf die Realisierung von Radschnellwegen untersucht. Nun wird auf dem Korridor Leopoldshafen – Karlsruhe – Rastatt – Baden-Baden – Bühl der Radschnellweg auf dem Teilabschnitt Karlsruhe bis Rastatt geplant.",
       "source": "https://rp.baden-wuerttemberg.de/rpk/abt4/seiten/strassenplanungen/radschnellweg-karlsruhe-rastatt/"
     },
     "stakeholders": [
-      { "name": "Land Baden-Württemberg", 
-      "roles": ["authority"] 
-    }
+      { "name": "Land Baden-Württemberg", "roles": ["authority"] }
     ],
     "references": {
       "website": "https://rp.baden-wuerttemberg.de/rpk/abt4/seiten/strassenplanungen/radschnellweg-karlsruhe-rastatt/"
     }
   }
-
 ]
