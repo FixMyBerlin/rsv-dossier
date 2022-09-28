@@ -1,4 +1,3 @@
-
 <div align="center">
     <img src="media/radschnellweg-stvo-sign.svg" width="150">
     <h1>Radschnellwege Deutschland</h1>
@@ -25,19 +24,22 @@ Every cycle highway has it's own meta information, independent from the individu
 You can use the [json-schema-to-typescript](https://www.npmjs.com/package/json-schema-to-typescript) to generate TypeScript types out of the JSON Schema. For that, install the package : `npm install -g json-schema-to-typescript`
 
 Then run:
+
 ```sh
 npx json2ts -i schema/meta.schema.json -o ../types/meta.d.ts
 ```
 
 For a human readable documentation, you can generate a HTML file using [json-schema-for-humans](https://pypi.org/project/json-schema-for-humans/).
 
-Install first: ```pip install json-schema-for-humans```
+Install first: `pip install json-schema-for-humans`
 Then run
+
 ```sh
 generate-schema-doc schema/meta.schema.json schema/
 ```
 
 ### State
+
 A cycle highway MUST have one of the following states, segments CAN have one of the following state:
 
 1. `idea` - Politically discussed and not agreed, planning has not started
@@ -45,13 +47,15 @@ A cycle highway MUST have one of the following states, segments CAN have one of 
 3. `planning` - the highway is in one of the planning phases, except `pilot_study`
 4. `in_progress` - The segments have different planning phases, but as a whole it marches on
 5. `done` - The cycle highway part is built, finished and ready for usage
-* `discarded` - While planning it does not meet the requirements or it is not desired anymore
+
+- `discarded` - While planning it does not meet the requirements or it is not desired anymore
 
 ### Stakeholders & Roles
 
-Every organization / institution CAN be part of the `stakeholders` attribute. Every stakeholder MUST have an role. Since `stakeholders` and `roles` are an array there can be multiple stakeholder holding the same role. Stakeholders are also available in *Detail segments*.
+Every organization / institution CAN be part of the `stakeholders` attribute. Every stakeholder MUST have an role. Since `stakeholders` and `roles` are an array there can be multiple stakeholder holding the same role. Stakeholders are also available in _Detail segments_.
 
 **Example:**
+
 ```jsonc
 "stakeholders": [
     {
@@ -107,10 +111,11 @@ The data model is the following [`JSON Schema`](), with allowed/example values.
 The **`detail_level`** describes in which accuracy the geometry is available in the GeoJSON. It MUST be one of the values: `exact`, `approximated`, `corridor`. The `rough` value is an alias of `approximated`.
 
 ## Geometry Data
-Corresponding to the Meta JSON file, the *GeoJSON* file contains the geometry of the cycle highways. There are two types of cycle highway geometry types:
 
-* Variants (usually between `pilot` and `design` phases)
-* Segments (usually starting from `design` phase)
+Corresponding to the Meta JSON file, the _GeoJSON_ file contains the geometry of the cycle highways. There are two types of cycle highway geometry types:
+
+- Variants (usually between `pilot` and `design` phases)
+- Segments (usually starting from `design` phase)
 
 **Variants** are possible relations between places (cities and villages), which exact pathway has not been defined and planned (yet). They occur mostly in the `preliminary` phase.
 
@@ -125,21 +130,22 @@ A segment is a part of a planned cycle highway. It has attributes describing the
 #### Segment attributes
 
 An example for **segment attributes**:
+
 ```jsonc
 {
-    "id": "rs1_seg598",
-    "status": "planning",
-    "planning_phase": "design",
-    "description:planning_phase": "",
-    "detail_level": "exact",
-    "stakeholders": [
-        {
-            "name": "Stadt Duisburg",
-            "roles": ["authority"],
-            "description": "Baulastträger",
-        }
-    ],
-    "length": 12100 // implicit, MUST be calculated from geometry
+  "id": "rs1_seg598",
+  "status": "planning",
+  "planning_phase": "design",
+  "description:planning_phase": "",
+  "detail_level": "exact",
+  "stakeholders": [
+    {
+      "name": "Stadt Duisburg",
+      "roles": ["authority"],
+      "description": "Baulastträger"
+    }
+  ],
+  "length": 12100 // implicit, MUST be calculated from geometry
 }
 ```
 
@@ -150,6 +156,7 @@ The **filename** MUST correspond to the `general.id` in the MetaJSON. Therefore 
 ### Planning Phases
 
 Since this repository should represent build phases of the cycle highways, these are the planning phases used exclusively in this order:
+
 1. Pilot study [`pilot`]
 2. Preliminary planning [`preliminary`]
 3. Design planning [`design`]
@@ -157,14 +164,14 @@ Since this repository should represent build phases of the cycle highways, these
 5. Execution planning [`execution`]
 6. Building [`building`]
 
-Planning phases are assigned through attribute `planning_phase`. The attribute is empty, when the cycle highway is finished. For example a cycle highway in *approval procedure* SHOULD be assigned in the segments like this:
+Planning phases are assigned through attribute `planning_phase`. The attribute is empty, when the cycle highway is finished. For example a cycle highway in _approval procedure_ SHOULD be assigned in the segments like this:
 
 ```jsonc
 {
-    // ..
-    "state": "planning",
-    "planning_phase": "approval",
-    "description:planning_phase": ""
+  // ..
+  "state": "planning",
+  "planning_phase": "approval",
+  "description:planning_phase": ""
 }
 ```
 
@@ -173,12 +180,13 @@ If needed, the planning phase can be further described with the attribute `descr
 When the whole cycle highway get's discarded, the planning phase it stuck and SHOULD still be part of the cycle highway.
 
 ### Variants
+
 Usually in the early planning phases there are multiple possible variants of the cycle highway. Every variant includes the complete route from start to end. It additionally has the following `variant` attribute.
 
 ```json
 {
-    "variant": "Trassenvariante 2",
-    "discarded": false
+  "variant": "Alternative",
+  "discarded": false
 }
 ```
 

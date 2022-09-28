@@ -78,7 +78,8 @@
                 ]
               },
               "variant": {
-                "type": ["string", "null"]
+                "type": "string",
+                "enum": ["Vorzugstrasse", "Alternative"]
               },
               "discarded": {
                 "type": "boolean"

@@ -88,7 +88,7 @@
         "state": "agreement_process",
         "planning_phase": null,
         "detail_level": "approximated",
-        "variant": "Alternativetrasse",
+        "variant": "Alternative",
         "length": 7678.76101147117,
         "discarded": false,
         "description:planning_phase": null,
