@@ -15,7 +15,7 @@
         "state": "planning",
         "id_rsv": "RS14",
         "planning_phase": null,
-        "variant": null,
+        "variant": "Vorzugstrasse",
         "discarded": false,
         "stand": "07.06.2022",
         "length": 19906.352,
