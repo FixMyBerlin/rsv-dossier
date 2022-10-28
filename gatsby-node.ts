@@ -81,19 +81,17 @@ export const onCreateNode = async ({
 
   if (nodeType === 'GeometryJson') {
     // generate static map from geometry
-    const url = staticMapRequest(node, [1920, 1920]);
-    // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
-    let response = await fetch(url.toString());
-    // if the URL is too long we'll get an `414` from MapTiler. In this case we'll try to simplify the geometry until the URL is short enough
+    let url = staticMapRequest(node, [1920, 1920]).toString();
     let tolerance = 0.000001;
-    while (response.status === 414) {
+    // respect the MapTiler URL limit
+    while (url.length > 8192) {
       const simplified = simplify(node, { tolerance, highQuality: true });
-      const simplifiedUrl = staticMapRequest(simplified, [1920, 1920]);
-      // eslint-disable-next-line no-await-in-loop
-      response = await fetch(simplifiedUrl.toString());
+      url = staticMapRequest(simplified, [1920, 1920]).toString();
       tolerance *= 2;
     }
+    const response = await fetch(url);
 
+    // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
     const arrBuffer = await response.arrayBuffer();
     createFileNodeFromBuffer({
       buffer: Buffer.from(arrBuffer),
