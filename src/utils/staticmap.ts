@@ -1,22 +1,15 @@
 import { encode } from '@googlemaps/polyline-codec';
+import { segmentColor } from './colors';
 
 const { GATSBY_MAPTILER_BASEURL, GATSBY_MAPTILER_KEY } = process.env;
 
 // TODO: source from .const to stay consistent with ~/components/Map/DynamicMap.tsx
-const stateColor = {
-  idea: '#A7F3D0',
-  agreement_process: '#6EE7B7',
-  planning: '#10B981',
-  in_progress: '#047857',
-  done: '#064E3B',
-  discarded: '#000000',
-};
 
 const buildPaths = ({
-  properties: { state },
+  properties: { discarded },
   geometry: { coordinates },
 }: GeoJSON.Feature<GeoJSON.MultiLineString>) => {
-  const paint = { width: 7, stroke: stateColor[state] };
+  const paint = { width: 5, stroke: segmentColor(discarded) };
   const paintArr = Object.keys(paint).map((key) => `${key}:${paint[key]}`);
 
   // flip the coordinate order for encoding
@@ -38,12 +31,10 @@ export const staticMapRequest = (
 
   url.searchParams.append('key', GATSBY_MAPTILER_KEY);
   url.searchParams.append('attribution', '0');
-  features
-    .filter((feature) => !feature.properties.discarded)
-    .forEach((feature) => {
-      buildPaths(feature).forEach((path) => {
-        url.searchParams.append('path', path);
-      });
+  features.forEach((feature) => {
+    buildPaths(feature).forEach((path) => {
+      url.searchParams.append('path', path);
     });
+  });
   return url;
 };
