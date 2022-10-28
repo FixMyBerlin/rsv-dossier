@@ -1,10 +1,55 @@
 {
-"type": "FeatureCollection",
-"id": "1-hamburg",
-"name": "1_hamburg",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"bbox": [ 9.665391, 53.567347, 9.932947, 53.740198 ],                                                                              
-"features": [
-{ "type": "Feature", "properties": { "id": "1", "state": "planning", "id_rsv": "1-hamburg", "planning_phase": "preliminary", "detail_level": "corridor", "variant": "Vorzugstrasse", "discarded": false, "description:planning_phase": null, "stand": "20.04.2022", "length": 31045.396630506355 }, "bbox": [ 9.665391, 53.567347, 9.932947, 53.740198 ], "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 9.932578, 53.585994 ], [ 9.869679, 53.611774 ], [ 9.807124, 53.647153 ], [ 9.776557, 53.671037 ], [ 9.751145, 53.676776 ], [ 9.743331, 53.686806 ], [ 9.713555, 53.701138 ], [ 9.705173, 53.718733 ], [ 9.682521, 53.726609 ], [ 9.678787, 53.7332 ], [ 9.665391, 53.740198 ] ], [ [ 9.932947, 53.567347 ], [ 9.900513, 53.578769 ], [ 9.903101, 53.58366 ], [ 9.895738, 53.584727 ], [ 9.897407, 53.589369 ], [ 9.892577, 53.590905 ], [ 9.890162, 53.602167 ] ] ] } }
-]
+  "type": "FeatureCollection",
+  "id": "1-hamburg",
+  "name": "1_hamburg",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "bbox": [9.665391, 53.567347, 9.932947, 53.740198],
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1",
+        "state": "planning",
+        "id_rsv": "1-hamburg",
+        "planning_phase": "preliminary",
+        "detail_level": "corridor",
+        "variant": "Vorzugstrasse",
+        "discarded": false,
+        "description:planning_phase": null,
+        "stand": "20.04.2022",
+        "length": 31045.396630506355
+      },
+      "bbox": [9.665391, 53.567347, 9.932947, 53.740198],
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [9.932578, 53.585994],
+            [9.869679, 53.611774],
+            [9.807124, 53.647153],
+            [9.776557, 53.671037],
+            [9.751145, 53.676776],
+            [9.743331, 53.686806],
+            [9.713555, 53.701138],
+            [9.705173, 53.718733],
+            [9.682521, 53.726609],
+            [9.678787, 53.7332],
+            [9.665391, 53.740198]
+          ],
+          [
+            [9.932947, 53.567347],
+            [9.900513, 53.578769],
+            [9.903101, 53.58366],
+            [9.895738, 53.584727],
+            [9.897407, 53.589369],
+            [9.892577, 53.590905],
+            [9.890162, 53.602167]
+          ]
+        ]
+      }
+    }
+  ]
 }

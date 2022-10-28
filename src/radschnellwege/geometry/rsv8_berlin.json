@@ -11,7 +11,7 @@
       "type": "Feature",
       "properties": {
         "id": "1",
-        "variant":"Vorzugstrasse",
+        "variant": "Vorzugstrasse",
         "id_rsv": "RSV 8",
         "state": "agreement_process",
         "detail_level": "rough",
