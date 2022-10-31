@@ -10,6 +10,7 @@ import {
 } from 'gatsby-plugin-image';
 import { MailToButtonLink, TextLink } from '~/components/Links';
 import { BadgeSelect } from '~/components/Steckbrief';
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline';
 
 const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
   location,
@@ -42,7 +43,7 @@ const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
       />
       <div className="bg-white">
         {/* Header */}
-        <div className="relative bg-gray-800 pb-32">
+        <div className="relative bg-gray-800 pb-12">
           <div className="absolute inset-0">
             <StaticImage
               className="h-full w-full object-cover"
@@ -78,8 +79,12 @@ const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
               </p>
             </div>
             <div className="mx-auto mt-8 max-w-7xl text-xl text-slate-300">
-              <button type="button" onClick={() => setShowFilter(!showFilter)}>
-                Filter
+              <button
+                type="button"
+                className="ml-auto mr-0 h-4 w-4"
+                onClick={() => setShowFilter(!showFilter)}
+              >
+                {showFilter ? <ChevronUpIcon /> : <ChevronDownIcon />}
               </button>
               {showFilter && (
                 <div className="mt-4">
