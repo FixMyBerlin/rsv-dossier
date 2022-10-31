@@ -1,5 +1,5 @@
 import { PageProps, graphql, Link } from 'gatsby';
-import React from 'react';
+import React, { useState } from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import {
@@ -9,11 +9,31 @@ import {
   ImageDataLike,
 } from 'gatsby-plugin-image';
 import { MailToButtonLink, TextLink } from '~/components/Links';
+import { BadgeSelect } from '~/components/Steckbrief';
 
 const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
   location,
   data: { radschnellwege },
 }) => {
+  const stateCount = {};
+  const addState = (state) => {
+    if (stateCount[state]) {
+      stateCount[state] += 1;
+    } else {
+      stateCount[state] = 1;
+    }
+  };
+  radschnellwege.nodes.forEach(({ general: { from, to } }) => {
+    addState(from.federalState);
+    if (stateCount[from.federalState] !== stateCount[to.federalState]) {
+      addState(to.federalState);
+    }
+  });
+  Object.keys(stateCount).forEach((state) => {
+    stateCount[state] = `${state} (${stateCount[state]})`;
+  });
+  const [selected, setSelected] = useState<string[]>([]);
+  const [showFilter, setShowFilter] = useState<boolean>(false);
   return (
     <Layout location={location}>
       <HelmetSeo
@@ -57,6 +77,20 @@ const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
                 schreiben
               </p>
             </div>
+            <div className="mx-auto mt-8 max-w-7xl text-xl text-slate-300">
+              <button type="button" onClick={() => setShowFilter(!showFilter)}>
+                Filter
+              </button>
+              {showFilter && (
+                <div className="mt-4">
+                  <BadgeSelect
+                    options={stateCount}
+                    selected={selected}
+                    setSelected={setSelected}
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
@@ -67,39 +101,49 @@ const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
           <h2 className="sr-only" id="contact-heading">
             Alle Radschnellverbindungen
           </h2>
+
           <div className="grid grid-cols-1 gap-y-20  md:grid-cols-2 md:gap-y-8 md:gap-x-8 lg:grid-cols-3">
-            {radschnellwege.nodes.map((radschnellweg) => (
-              <div
-                key={radschnellweg.general.name}
-                className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-xl"
-              >
-                <div className="flex max-h-fit overflow-hidden">
-                  <Link to={`./${radschnellweg.jsonId}`}>
-                    <GatsbyImage
-                      image={getImage(radschnellweg.staticMap as ImageDataLike)}
-                      alt={radschnellweg.general.name}
-                    />
-                  </Link>
+            {radschnellwege.nodes
+              .filter(
+                (x) =>
+                  selected.length === 0 ||
+                  selected.includes(x.general.from.federalState) ||
+                  selected.includes(x.general.to.federalState)
+              )
+              .map((radschnellweg) => (
+                <div
+                  key={radschnellweg.general.name}
+                  className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-xl"
+                >
+                  <div className="flex max-h-fit overflow-hidden">
+                    <Link to={`./${radschnellweg.jsonId}`}>
+                      <GatsbyImage
+                        image={getImage(
+                          radschnellweg.staticMap as ImageDataLike
+                        )}
+                        alt={radschnellweg.general.name}
+                      />
+                    </Link>
+                  </div>
+                  <div className="relative flex-1 px-6 pt-12 pb-8 md:px-8">
+                    <TextLink to={`./${radschnellweg.jsonId}`}>
+                      <h3 className="text-xl font-medium text-slate-900">
+                        {Number.isNaN(parseFloat(radschnellweg.general.ref)) &&
+                          `${radschnellweg.general.ref}: `}
+                        {radschnellweg.general.name}
+                      </h3>
+                    </TextLink>
+                    <p className="mt-4 text-base text-slate-500 line-clamp-3 md:line-clamp-5">
+                      {radschnellweg.general.description}
+                    </p>
+                  </div>
+                  <div className="p-6 md:px-8">
+                    <TextLink to={`./${radschnellweg.jsonId}`}>
+                      Mehr erfahren
+                    </TextLink>
+                  </div>
                 </div>
-                <div className="relative flex-1 px-6 pt-12 pb-8 md:px-8">
-                  <TextLink to={`./${radschnellweg.jsonId}`}>
-                    <h3 className="text-xl font-medium text-slate-900">
-                      {Number.isNaN(parseFloat(radschnellweg.general.ref)) &&
-                        `${radschnellweg.general.ref}: `}
-                      {radschnellweg.general.name}
-                    </h3>
-                  </TextLink>
-                  <p className="mt-4 text-base text-slate-500 line-clamp-3 md:line-clamp-5">
-                    {radschnellweg.general.description}
-                  </p>
-                </div>
-                <div className="p-6 md:px-8">
-                  <TextLink to={`./${radschnellweg.jsonId}`}>
-                    Mehr erfahren
-                  </TextLink>
-                </div>
-              </div>
-            ))}
+              ))}
             ;
           </div>
         </section>
@@ -118,6 +162,12 @@ export const query = graphql`
           ref
           name
           description
+          from {
+            federalState
+          }
+          to {
+            federalState
+          }
         }
         jsonId
         staticMap {
