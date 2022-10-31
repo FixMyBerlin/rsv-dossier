@@ -57,11 +57,11 @@ export const query = graphql`
         ref
         from {
           city
-          federal_state
+          federalState
         }
         to {
           city
-          federal_state
+          federalState
         }
         source
         length
