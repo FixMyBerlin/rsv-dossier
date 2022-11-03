@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import { TextLink } from '~/components/Links';
 
-type Props = { pathPrefix: string } & Pick<
+type Props = { pathPrefix?: string } & Pick<
   Queries.SteckbriefeIndexQuery,
   'radschnellwege'
 >;
