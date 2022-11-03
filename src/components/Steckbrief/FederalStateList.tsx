@@ -43,7 +43,7 @@ export const FederalStateList = () => {
       <Listbox
         value={null}
         onChange={(selected) => {
-          window.location.href = `${selected.toLowerCase()}`;
+          window.location.href = encodeURI(`${selected.toLowerCase()}`);
         }}
       >
         {({ open }) => (
