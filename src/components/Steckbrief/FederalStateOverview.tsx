@@ -80,7 +80,10 @@ export const FederalStateOverview: React.FC<Props> = ({
           <h2 className="sr-only" id="contact-heading">
             Alle Radschnellverbindungen
           </h2>
-          <RsvTeaserGrid radschnellwege={radschnellwege as any} />
+          <RsvTeaserGrid
+            pathPrefix="../"
+            radschnellwege={radschnellwege as any}
+          />
         </section>
       </div>
     </Layout>
