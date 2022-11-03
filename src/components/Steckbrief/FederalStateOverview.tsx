@@ -18,11 +18,8 @@ export const FederalStateOverview: React.FC<Props> = ({
   to,
 }) => {
   // manualy join data because graphQL has no OR operator
-  const join = {};
-  from.nodes.forEach((x) => {
-    join[x.jsonId] = x;
-  });
-  to.nodes.forEach((x) => {
+  const join: { [key: string]: typeof from['nodes'][number] } = {};
+  [...from.nodes, ...to.nodes].forEach((x) => {
     join[x.jsonId] = x;
   });
   const radschnellwege = {
@@ -80,10 +77,7 @@ export const FederalStateOverview: React.FC<Props> = ({
           <h2 className="sr-only" id="contact-heading">
             Alle Radschnellverbindungen
           </h2>
-          <RsvTeaserGrid
-            pathPrefix="../"
-            radschnellwege={radschnellwege as any}
-          />
+          <RsvTeaserGrid pathPrefix="../" radschnellwege={radschnellwege} />
         </section>
       </div>
     </Layout>
