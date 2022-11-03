@@ -9,7 +9,7 @@ import { WindowLocation } from '@reach/router';
 type Props = {
   location: WindowLocation<unknown>;
   state: string;
-} & Queries.FederalStateIndexQuery;
+} & (Queries.FederalStateFromIndexQuery | Queries.FederalStateToIndexQuery);
 
 export const FederalStateOverview: React.FC<Props> = ({
   location,
