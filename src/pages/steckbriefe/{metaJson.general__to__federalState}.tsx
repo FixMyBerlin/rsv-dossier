@@ -3,12 +3,12 @@ import { PageProps, graphql } from 'gatsby';
 import React from 'react';
 import { FederalStateOverview } from '~/components/Steckbrief';
 
-const FederalStateFromIndex: React.FC<
-  PageProps<Queries.FederalStateFromIndexQuery>
+const FederalStateToIndex: React.FC<
+  PageProps<Queries.FederalStateToIndexQuery>
 > = ({
   location,
   data: { from, to },
-  params: { general__from__federalState },
+  params: { general__to__federalState },
 }) => {
   // manualy join data because graphQL has no OR operator
   return (
@@ -16,20 +16,18 @@ const FederalStateFromIndex: React.FC<
       to={to}
       from={from}
       location={location}
-      state={general__from__federalState}
+      state={general__to__federalState}
     />
   );
 };
 
-export default FederalStateFromIndex;
+export default FederalStateToIndex;
 
 export const query = graphql`
-  query FederalStateFromIndex($general__from__federalState: String!) {
+  query FederalStateToIndex($general__to__federalState: String!) {
     from: allMetaJson(
       filter: {
-        general: {
-          from: { federalState: { eq: $general__from__federalState } }
-        }
+        general: { from: { federalState: { eq: $general__to__federalState } } }
       }
     ) {
       nodes {
@@ -48,7 +46,7 @@ export const query = graphql`
     }
     to: allMetaJson(
       filter: {
-        general: { to: { federalState: { eq: $general__from__federalState } } }
+        general: { to: { federalState: { eq: $general__to__federalState } } }
       }
     ) {
       nodes {

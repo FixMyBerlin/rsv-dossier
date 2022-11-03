@@ -1,15 +1,33 @@
-import { PageProps, graphql } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
-import { MailToButtonLink } from '~/components/Links';
-import { RsvGrid, FederalStateList } from '~/components/Steckbrief';
+import { MailToButtonLink, TextLink } from '~/components/Links';
+import { RsvGrid } from '~/components/Steckbrief';
+import { WindowLocation } from '@reach/router';
 
-const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
+type Props = {
+  location: WindowLocation<unknown>;
+  state: string;
+} & Queries.FederalStateIndexQuery;
+
+export const FederalStateOverview: React.FC<Props> = ({
   location,
-  data: { radschnellwege },
+  state,
+  from,
+  to,
 }) => {
+  // manualy join data because graphQL has no OR operator
+  const join = {};
+  from.nodes.forEach((x) => {
+    join[x.jsonId] = x;
+  });
+  to.nodes.forEach((x) => {
+    join[x.jsonId] = x;
+  });
+  const radschnellwege = {
+    nodes: Object.values(join),
+  };
   return (
     <Layout location={location}>
       <HelmetSeo
@@ -35,12 +53,11 @@ const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
               Übersicht über RSV-Planungen
             </h1>
             <div className="mt-6 max-w-3xl text-xl text-slate-300">
-              Übersicht der aktuell geplanten Radschnellverbindungen sowie deren
-              Trassenverläufe bzw. -korridore. Enthalten sind RSV aus Hessen,
-              Baden-Württemberg, Berlin, Niedersachsen, Schleswig-Holstein,
-              Mecklenburg-Vorpommern, Nordrhein-Westfalen, Rheinland-Pfalz und
-              Hamburg. Aktuell umfasst die Liste {radschnellwege.nodes.length}{' '}
-              Radschnellverbindungen und wird fortlaufend erweitert.
+              Übersicht der aktuell {radschnellwege.nodes.length} geplanten
+              Radschnellverbindungen in {state}. Die Liste wird fortlaufend
+              aktualisiert und ergänzt. Um alle Radschnelllverbindungen im
+              Bundesgebiet zu sehen,{' '}
+              <TextLink to="..">klicken Sie hier</TextLink>.
               <p>
                 Mail an{' '}
                 <MailToButtonLink
@@ -53,7 +70,6 @@ const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
                 schreiben
               </p>
             </div>
-            <FederalStateList />
           </div>
         </div>
 
@@ -64,31 +80,9 @@ const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
           <h2 className="sr-only" id="contact-heading">
             Alle Radschnellverbindungen
           </h2>
-          <RsvGrid radschnellwege={radschnellwege} />
+          <RsvGrid radschnellwege={radschnellwege as any} />
         </section>
       </div>
     </Layout>
   );
 };
-
-export default SteckbriefeIndex;
-
-export const query = graphql`
-  query SteckbriefeIndex {
-    radschnellwege: allMetaJson {
-      nodes {
-        general {
-          ref
-          name
-          description
-        }
-        jsonId
-        staticMap {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-      }
-    }
-  }
-`;

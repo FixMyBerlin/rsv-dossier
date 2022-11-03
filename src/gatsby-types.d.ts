@@ -4451,17 +4451,24 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
-type FederalStateIndexQueryVariables = Exact<{
+type FederalStateFromIndexQueryVariables = Exact<{
   general__from__federalState: Scalars['String'];
 }>;
 
 
-type FederalStateIndexQuery = { readonly from: { readonly nodes: ReadonlyArray<{ readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> }, readonly to: { readonly nodes: ReadonlyArray<{ readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> } };
+type FederalStateFromIndexQuery = { readonly from: { readonly nodes: ReadonlyArray<{ readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> }, readonly to: { readonly nodes: ReadonlyArray<{ readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> } };
 
 type FederalStatesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type FederalStatesQuery = { readonly radschnellwege: { readonly nodes: ReadonlyArray<{ readonly general: { readonly from: { readonly federalState: string | null } | null, readonly to: { readonly federalState: string | null } | null } | null }> } };
+
+type FederalStateToIndexQueryVariables = Exact<{
+  general__to__federalState: Scalars['String'];
+}>;
+
+
+type FederalStateToIndexQuery = { readonly from: { readonly nodes: ReadonlyArray<{ readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> }, readonly to: { readonly nodes: ReadonlyArray<{ readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> } };
 
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 
