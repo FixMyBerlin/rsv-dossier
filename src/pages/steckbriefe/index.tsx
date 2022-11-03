@@ -4,7 +4,7 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 import { MailToButtonLink } from '~/components/Links';
-import { RsvGrid, FederalStateList } from '~/components/Steckbrief';
+import { RsvTeaserGrid, FederalStateList } from '~/components/Steckbrief';
 
 const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
   location,
@@ -69,7 +69,7 @@ const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
           <h2 className="sr-only" id="contact-heading">
             Alle Radschnellverbindungen
           </h2>
-          <RsvGrid radschnellwege={radschnellwege} />
+          <RsvTeaserGrid radschnellwege={radschnellwege} />
         </section>
       </div>
     </Layout>

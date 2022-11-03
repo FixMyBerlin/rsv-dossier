@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import { TextLink } from '~/components/Links';
 
-export const RsvGrid: React.FC<
+export const RsvTeaserGrid: React.FC<
   Pick<Queries.SteckbriefeIndexQuery, 'radschnellwege'>
 > = ({ radschnellwege }) => {
   return (

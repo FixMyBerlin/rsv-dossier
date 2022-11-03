@@ -3,7 +3,7 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 import { MailToButtonLink, TextLink } from '~/components/Links';
-import { RsvGrid } from '~/components/Steckbrief';
+import { RsvTeaserGrid } from '~/components/Steckbrief';
 import { WindowLocation } from '@reach/router';
 
 type Props = {
@@ -80,7 +80,7 @@ export const FederalStateOverview: React.FC<Props> = ({
           <h2 className="sr-only" id="contact-heading">
             Alle Radschnellverbindungen
           </h2>
-          <RsvGrid radschnellwege={radschnellwege as any} />
+          <RsvTeaserGrid radschnellwege={radschnellwege as any} />
         </section>
       </div>
     </Layout>
