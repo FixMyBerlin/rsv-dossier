@@ -7,10 +7,12 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { MailToButtonLink, TextLink } from '~/components/Links';
 import { RsvGrid } from '~/components/Steckbrief';
 
-const FederalStateIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
+const FederalStateIndex: React.FC<
+  PageProps<Queries.FederalStateIndexQuery>
+> = ({
   location,
   data: { from, to },
-  pageContext: { general__from__federalState },
+  params: { general__from__federalState },
 }) => {
   // manualy join data because graphQL has no OR operator
   const join = {};
