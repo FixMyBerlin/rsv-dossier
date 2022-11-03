@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import classNames from 'classnames';
+import { Listbox, Transition } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/solid';
 
 export const query = graphql`
   query FederalStates {
@@ -35,31 +38,65 @@ export const FederalStateList = () => {
       addState(to.federalState);
     }
   });
-  Object.keys(stateCount).forEach((state) => {
-    stateCount[state] = `${state} (${stateCount[state]})`;
-  });
   return (
-    <div className="w-52">
-      <select
-        id="location"
-        name="location"
-        className="mt-1 block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-        defaultValue="Canada"
+    <div className="w-72">
+      <Listbox
+        value={null}
+        onChange={(selected) => {
+          window.location.href = `${selected.toLowerCase()}`;
+        }}
       >
-        <option>Alle anzeigen</option>
-        {Object.keys(stateCount)
-          .sort()
-          .map((state) => (
-            <option
-              key={state}
-              onClick={() => {
-                window.location.href = `${state.toLowerCase()}`;
-              }}
-            >
-              {stateCount[state]}
-            </option>
-          ))}
-      </select>
+        {({ open }) => (
+          <>
+            <Listbox.Label className="block text-sm font-medium text-white">
+              Fitern nach Bundesland
+            </Listbox.Label>
+            <div className="relative mt-1">
+              <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+                <span className="block truncate">Alle anzeigen</span>
+                <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                  <ChevronDownIcon
+                    className="h-5 w-5 text-gray-400"
+                    aria-hidden="true"
+                  />
+                </span>
+              </Listbox.Button>
+
+              <Transition
+                show={open}
+                as={Fragment}
+                leave="transition ease-in duration-100"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                  {' '}
+                  {Object.keys(stateCount)
+                    .sort()
+                    .map((state) => (
+                      <Listbox.Option
+                        key={state}
+                        className={({ active }) =>
+                          classNames(
+                            active
+                              ? 'bg-indigo-600 text-white'
+                              : 'text-gray-900',
+                            'relative cursor-default select-none py-2 pl-3 pr-9'
+                          )
+                        }
+                        value={state}
+                      >
+                        <span className="block truncate font-normal">
+                          {`${state} (${stateCount[state]})`}
+                        </span>
+                      </Listbox.Option>
+                    ))}
+                </Listbox.Options>
+              </Transition>
+            </div>
+          </>
+        )}
+      </Listbox>
     </div>
   );
 };
