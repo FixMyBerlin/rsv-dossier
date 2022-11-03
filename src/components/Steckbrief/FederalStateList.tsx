@@ -53,7 +53,7 @@ export const FederalStateList = () => {
             <option
               key={state}
               onClick={() => {
-                window.location.href = `steckbriefe/${state.toLowerCase()}`;
+                window.location.href = `${state.toLowerCase()}`;
               }}
             >
               {stateCount[state]}
