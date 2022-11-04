@@ -5,17 +5,16 @@ import { FederalStateOverview } from '~/components/Steckbrief';
 
 const FederalStateToIndex: React.FC<
   PageProps<Queries.FederalStateToIndexQuery>
-> = ({
-  location,
-  data: { from, to },
-  pageContext: { general__to__federalState },
-}) => {
+> = ({ location, data: { from, to }, pageContext }) => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const state = pageContext.general__to__federalState;
   return (
     <FederalStateOverview
       to={to}
       from={from}
       location={location}
-      state={general__to__federalState}
+      state={state}
     />
   );
 };
