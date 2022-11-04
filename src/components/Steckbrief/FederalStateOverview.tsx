@@ -3,7 +3,7 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 import { MailToButtonLink, TextLink } from '~/components/Links';
-import { RsvTeaserGrid } from '~/components/Steckbrief';
+import { RsvTeaserGrid, FederalStateList } from '~/components/Steckbrief';
 import { WindowLocation } from '@reach/router';
 
 type Props = {
@@ -33,7 +33,7 @@ export const FederalStateOverview: React.FC<Props> = ({
       />
       <div className="bg-white">
         {/* Header */}
-        <div className="relative bg-gray-800 pb-12">
+        <div className="relative bg-gray-800 pb-32">
           <div className="absolute inset-0">
             <StaticImage
               className="h-full w-full object-cover"
@@ -49,23 +49,28 @@ export const FederalStateOverview: React.FC<Props> = ({
             <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
               Übersicht über RSV-Planungen
             </h1>
-            <div className="mt-6 max-w-3xl text-xl text-slate-300">
-              Übersicht der aktuell {radschnellwege.nodes.length} geplanten
-              Radschnellverbindungen in {state}. Die Liste wird fortlaufend
-              aktualisiert und ergänzt. Um alle Radschnelllverbindungen im
-              Bundesgebiet zu sehen,{' '}
-              <TextLink to="..">klicken Sie hier</TextLink>.
-              <p>
-                Mail an{' '}
-                <MailToButtonLink
-                  mailto="hello@fixmycity.de"
-                  subject="Anliegen zum RSV-Baukasten"
-                  className="btn-brand-outline mt-5"
-                >
-                  hello@fixmycity.de
-                </MailToButtonLink>{' '}
-                schreiben
-              </p>
+            <div className="relative">
+              <div className="absolute bottom-0 right-0 z-20">
+                <FederalStateList location={state} />
+              </div>
+              <div className="mt-6 max-w-3xl text-xl text-slate-300">
+                Übersicht der aktuell {radschnellwege.nodes.length} geplanten
+                Radschnellverbindungen in {state}. Die Liste wird fortlaufend
+                aktualisiert und ergänzt. Um alle Radschnelllverbindungen im
+                Bundesgebiet zu sehen,{' '}
+                <TextLink to="..">klicken Sie hier</TextLink>.
+                <p>
+                  Mail an{' '}
+                  <MailToButtonLink
+                    mailto="hello@fixmycity.de"
+                    subject="Anliegen zum RSV-Baukasten"
+                    className="btn-brand-outline mt-5"
+                  >
+                    hello@fixmycity.de
+                  </MailToButtonLink>{' '}
+                  schreiben
+                </p>
+              </div>
             </div>
           </div>
         </div>

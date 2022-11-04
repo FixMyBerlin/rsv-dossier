@@ -36,7 +36,7 @@ const SteckbriefeIndex: React.FC<PageProps<Queries.SteckbriefeIndexQuery>> = ({
             </h1>
             <div className="relative">
               <div className="absolute bottom-0 right-0 z-20">
-                <FederalStateList />
+                <FederalStateList location="Alle anzeigen" />
               </div>
               <div className="mt-6 max-w-3xl text-xl text-slate-300">
                 Übersicht der aktuell geplanten Radschnellverbindungen sowie
