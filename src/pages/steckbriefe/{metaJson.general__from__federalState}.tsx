@@ -8,7 +8,7 @@ const FederalStateFromIndex: React.FC<
 > = ({ location, data: { from, to }, pageContext }) => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  const state = pageContext.general__to__federalState;
+  const state = pageContext.general__from__federalState;
   return (
     <FederalStateOverview
       to={to}
