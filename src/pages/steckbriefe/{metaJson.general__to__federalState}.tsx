@@ -8,9 +8,8 @@ const FederalStateToIndex: React.FC<
 > = ({
   location,
   data: { from, to },
-  params: { general__to__federalState },
+  pageContext: { general__to__federalState },
 }) => {
-  // manualy join data because graphQL has no OR operator
   return (
     <FederalStateOverview
       to={to}
