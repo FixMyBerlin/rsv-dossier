@@ -5,18 +5,16 @@ import { FederalStateOverview } from '~/components/Steckbrief';
 
 const FederalStateFromIndex: React.FC<
   PageProps<Queries.FederalStateFromIndexQuery>
-> = ({
-  location,
-  data: { from, to },
-  params: { general__from__federalState },
-}) => {
-  // manualy join data because graphQL has no OR operator
+> = ({ location, data: { from, to }, pageContext }) => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const state = pageContext.general__to__federalState;
   return (
     <FederalStateOverview
       to={to}
       from={from}
       location={location}
-      state={general__from__federalState}
+      state={state}
     />
   );
 };

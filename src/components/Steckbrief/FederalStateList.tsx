@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import classNames from 'classnames';
 import { Listbox, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
@@ -16,6 +16,12 @@ export const query = graphql`
             federalState
           }
         }
+        fromPath: gatsbyPath(
+          filePath: "/steckbriefe/{metaJson.general__from__federalState}"
+        )
+        toPath: gatsbyPath(
+          filePath: "/steckbriefe/{metaJson.general__to__federalState}"
+        )
       }
     }
   }
@@ -27,6 +33,7 @@ type Props = {
 // returns a list of all federal states including the number of RSVs
 export const FederalStateList: React.FC<Props> = ({ location }) => {
   const stateCount = {};
+  const statePaths = {};
   const addState = (state) => {
     if (stateCount[state]) {
       stateCount[state] += 1;
@@ -35,21 +42,19 @@ export const FederalStateList: React.FC<Props> = ({ location }) => {
     }
   };
   const { radschnellwege }: Queries.FederalStatesQuery = useStaticQuery(query);
-  radschnellwege.nodes.forEach(({ general: { from, to } }) => {
-    addState(from.federalState);
-    if (stateCount[from.federalState] !== stateCount[to.federalState]) {
-      addState(to.federalState);
+  radschnellwege.nodes.forEach(
+    ({ general: { from, to }, fromPath, toPath }) => {
+      addState(from.federalState);
+      statePaths[from.federalState] = fromPath;
+      if (stateCount[from.federalState] !== stateCount[to.federalState]) {
+        addState(to.federalState);
+        statePaths[to.federalState] = toPath;
+      }
     }
-  });
+  );
   return (
     <div className="w-72">
-      <Listbox
-        value={null}
-        onChange={(selected) => {
-          window.location.href =
-            `/steckbriefe/${selected.toLowerCase()}`.replace(/\u00fc/g, 'ue');
-        }}
-      >
+      <Listbox value={null} onChange={(setOpen) => setOpen(false)}>
         {({ open }) => (
           <>
             <Listbox.Label className="block text-sm font-medium text-white">
@@ -89,9 +94,11 @@ export const FederalStateList: React.FC<Props> = ({ location }) => {
                         }
                         value={state}
                       >
-                        <span className="block truncate font-normal">
-                          {`${state} (${stateCount[state]})`}
-                        </span>
+                        <Link to={statePaths[state]}>
+                          <span className="block truncate font-normal">
+                            {`${state} (${stateCount[state]})`}
+                          </span>
+                        </Link>
                       </Listbox.Option>
                     ))}
                 </Listbox.Options>

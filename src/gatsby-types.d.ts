@@ -4461,7 +4461,7 @@ type FederalStateFromIndexQuery = { readonly from: { readonly nodes: ReadonlyArr
 type FederalStatesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type FederalStatesQuery = { readonly radschnellwege: { readonly nodes: ReadonlyArray<{ readonly general: { readonly from: { readonly federalState: string | null } | null, readonly to: { readonly federalState: string | null } | null } | null }> } };
+type FederalStatesQuery = { readonly radschnellwege: { readonly nodes: ReadonlyArray<{ readonly fromPath: string | null, readonly toPath: string | null, readonly general: { readonly from: { readonly federalState: string | null } | null, readonly to: { readonly federalState: string | null } | null } | null }> } };
 
 type FederalStateToIndexQueryVariables = Exact<{
   general__to__federalState: Scalars['String'];
