@@ -52,9 +52,12 @@ export const FederalStateList: React.FC<Props> = ({ location }) => {
       }
     }
   );
+  const all = 'Alle anzeigen';
+  statePaths[all] = '/steckbriefe';
+  stateCount[all] = radschnellwege.nodes.length;
   return (
     <div className="w-72">
-      <Listbox value={null} onChange={(setOpen) => setOpen(false)}>
+      <Listbox value={location} onChange={() => null}>
         {({ open }) => (
           <>
             <Listbox.Label className="block text-sm font-medium text-white">
@@ -94,11 +97,17 @@ export const FederalStateList: React.FC<Props> = ({ location }) => {
                         }
                         value={state}
                       >
-                        <Link to={statePaths[state]}>
-                          <span className="block truncate font-normal">
-                            {`${state} (${stateCount[state]})`}
-                          </span>
-                        </Link>
+                        {({ selected }) => (
+                          <Link
+                            to={statePaths[state]}
+                            className={classNames(
+                              selected ? 'font-semibold' : 'font-normal',
+                              'block truncate'
+                            )}
+                          >
+                            {state} ({stateCount[state]})
+                          </Link>
+                        )}
                       </Listbox.Option>
                     ))}
                 </Listbox.Options>

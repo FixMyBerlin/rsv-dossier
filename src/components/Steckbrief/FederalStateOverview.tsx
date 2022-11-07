@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
-import { MailToButtonLink, TextLink } from '~/components/Links';
+import { MailToButtonLink } from '~/components/Links';
 import { RsvTeaserGrid, FederalStateList } from '~/components/Steckbrief';
 import { WindowLocation } from '@reach/router';
 
@@ -28,8 +29,8 @@ export const FederalStateOverview: React.FC<Props> = ({
   return (
     <Layout location={location}>
       <HelmetSeo
-        title="Steckbriefe"
-        description="Die einzelnen Radschnellverbindungen in den verschiedenen Bundesländern in Deutschland."
+        title={`Steckbriefe für ${state}`}
+        description={`Eine Übersicht der ${radschnellwege.nodes.length} Radschnellverbindungen in ${state}`}
       />
       <div className="bg-white">
         {/* Header */}
@@ -47,7 +48,8 @@ export const FederalStateOverview: React.FC<Props> = ({
           </div>
           <div className="relative mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-              Übersicht über RSV-Planungen
+              {radschnellwege.nodes.length} geplanten Radschnellverbindungen
+              (RSV) in {state}
             </h1>
             <div className="relative">
               <div className="absolute bottom-0 right-0 z-20">
@@ -57,8 +59,10 @@ export const FederalStateOverview: React.FC<Props> = ({
                 Übersicht der aktuell {radschnellwege.nodes.length} geplanten
                 Radschnellverbindungen in {state}. Die Liste wird fortlaufend
                 aktualisiert und ergänzt. Um alle Radschnelllverbindungen im
-                Bundesgebiet zu sehen,{' '}
-                <TextLink to="..">klicken Sie hier</TextLink>.
+                Bundesgebiet zu sehen, <br />
+                <Link to=".." className="text-white hover:underline">
+                  Alle Radschnelllverbindungen im Bundesgebiet
+                </Link>
                 <p>
                   Mail an{' '}
                   <MailToButtonLink
