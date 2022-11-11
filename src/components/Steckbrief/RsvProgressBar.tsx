@@ -27,7 +27,8 @@ const stateTitleAndIcons = {
 };
 
 export const RsvProgressBar: React.FC<Props> = ({ currentState }) => {
-  const selectedStyle = 'bg-yellow-500 text-white text-gray-600 pl-0.5';
+  const selectedStyle =
+    'bg-yellow-500 border-yellow-500 text-white text-gray-600 pl-0.5';
   const unselectedStyle = 'text-gray-600 ml-0.5';
   return (
     <div className="flex flex-row text-black">
