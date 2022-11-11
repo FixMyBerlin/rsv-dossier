@@ -51,7 +51,7 @@ export const RsvProgressBar: React.FC<Props> = ({ currentState }) => {
             src={stateTitleAndIcons[state].icon}
             alt={`${stateTitleAndIcons[state].title} icon`}
           />
-          <div className="absolute translate-y-10 text-xs">
+          <div className="invisible absolute translate-y-10 text-xs sm:visible lg:visible xl:visible  ">
             {stateTitleAndIcons[state].title}
           </div>
         </div>
