@@ -1,10 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import IdeaIcon from './assets/IdeaIcon.svg';
-import AgreementIcon from './assets/AgreementIcon.svg';
-import PlanningIcon from './assets/PlanningIcon.svg';
-import ProgressIcon from './assets/ProgressIcon.svg';
-import DoneIcon from './assets/DoneIcon.svg';
+import { StateIcons } from '.';
 
 type Props = {
   currentState: typeof progressStates[number];
@@ -18,18 +14,10 @@ const progressStates = [
   'done',
 ];
 
-const stateTitleAndIcons = {
-  idea: { title: 'Idee', icon: IdeaIcon },
-  agreement_process: { title: 'Prüfung', icon: AgreementIcon },
-  planning: { title: 'Planung', icon: PlanningIcon },
-  in_progress: { title: 'Umsetzung', icon: ProgressIcon },
-  done: { title: 'Gebaut', icon: DoneIcon },
-};
-
 export const RsvProgressBar: React.FC<Props> = ({ currentState }) => {
   const selectedStyle =
-    'bg-yellow-500 border-yellow-500 text-white text-gray-600 pl-0.5';
-  const unselectedStyle = 'text-gray-600 ml-0.5';
+    'bg-yellow-500 border-yellow-500 text-white text-gray-600';
+  const unselectedStyle = 'text-gray-600';
   return (
     <div className="flex flex-row pb-4 text-black">
       {progressStates.map((state) => (
@@ -38,7 +26,7 @@ export const RsvProgressBar: React.FC<Props> = ({ currentState }) => {
           className={classNames(
             'inline-flex items-center justify-center border-y-2 font-bold hover:cursor-default',
             'first:rounded-l-full first:border-l-2 last:rounded-r-full last:border-r-2',
-            'px-10 py-0.5',
+            'px-8 py-0.5',
             progressStates.indexOf(state) <=
               progressStates.indexOf(currentState)
               ? selectedStyle
@@ -46,11 +34,11 @@ export const RsvProgressBar: React.FC<Props> = ({ currentState }) => {
           )}
         >
           <img
-            src={stateTitleAndIcons[state].icon}
-            alt={`${stateTitleAndIcons[state].title} icon`}
+            src={StateIcons[state].icon}
+            alt={`${StateIcons[state].title} icon`}
           />
           <div className="invisible absolute translate-y-10 text-xs sm:visible lg:visible xl:visible  ">
-            {stateTitleAndIcons[state].title}
+            {StateIcons[state].title}
           </div>
         </div>
       ))}
