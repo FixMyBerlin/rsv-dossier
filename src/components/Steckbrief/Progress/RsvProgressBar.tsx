@@ -24,7 +24,7 @@ export const RsvProgressBar: React.FC<Props> = ({ currentState }) => {
         <div
           key={state}
           className={classNames(
-            'inline-flex items-center justify-center border-y-2 font-bold hover:cursor-default',
+            'relative inline-flex items-center justify-center border-y-2 font-bold hover:cursor-default',
             'first:rounded-l-full first:border-l-2 last:rounded-r-full last:border-r-2',
             'px-8 py-0.5',
             progressStates.indexOf(state) <=
@@ -36,8 +36,9 @@ export const RsvProgressBar: React.FC<Props> = ({ currentState }) => {
           <img
             src={StateIcons[state].icon}
             alt={`${StateIcons[state].title} icon`}
+            className="m-2 h-5 w-5"
           />
-          <div className="invisible absolute translate-y-10 text-xs sm:visible lg:visible xl:visible  ">
+          <div className="invisible absolute -bottom-6 text-xs sm:visible lg:visible xl:visible">
             {StateIcons[state].title}
           </div>
         </div>
