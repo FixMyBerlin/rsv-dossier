@@ -20,5 +20,5 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["./src/**/*", "./__helpers__/*"]
+  "include": ["./src/**/*", "./__helpers__/*", "./gatsby-node.ts","./data/scripts/dataHelpers.ts"]
 }

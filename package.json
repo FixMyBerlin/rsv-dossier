@@ -1,7 +1,7 @@
 {
   "name": "radschnellverbindungen.info",
   "description": "The website for https://radschnellverbindungen.info.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "FixMyCity <hello@fixmycity.de>",
   "license": "AGPL-3.0",
   "browserslist": [
@@ -28,6 +28,7 @@
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/line-clamp": "^0.3.0",
     "@tailwindcss/typography": "^0.5.0",
+    "@turf/simplify": "6.5.0",
     "@turf/turf": "^6.5.0",
     "classnames": "^2.3.1",
     "dotenv": "^16.0.0",
@@ -42,6 +43,7 @@
     "gatsby-source-filesystem": "^4.14.0",
     "gatsby-transformer-json": "^4.14.0",
     "gatsby-transformer-sharp": "^4.14.0",
+    "jsonschema": "^1.4.1",
     "mapbox-gl": "npm:empty-npm-package@1.0.0",
     "maplibre-gl": "^2.1.9",
     "react": "^17.0.2",
@@ -58,7 +60,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
     "@types/jest": "^27.0.3",
-    "@types/node": "18.0.0",
+    "@types/node": "^18.0.0",
     "@types/react": "~17.0.37",
     "@types/react-dom": "~17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.5.0",

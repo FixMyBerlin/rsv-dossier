@@ -3,6 +3,7 @@ require('dotenv').config({
 });
 
 module.exports = {
+  graphqlTypegen: true,
   siteMetadata: {
     title: 'Radschnellverbindungen',
     siteUrl: 'https://radschnellverbindungen.info',
@@ -32,21 +33,21 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/data/images`,
+        path: `${__dirname}/src/fast_build`,
         name: 'images',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/data/radschnellwege/meta`,
+        path: `${__dirname}/src/radschnellwege/meta`,
         name: 'rsv_meta',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/data/radschnellwege/geometry`,
+        path: `${__dirname}/src/radschnellwege/geometry`,
         name: 'rsv_geo',
       },
     },

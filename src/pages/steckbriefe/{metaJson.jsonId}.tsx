@@ -1,23 +1,20 @@
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { RSVDetails } from '~/components/Steckbrief/';
-import { MetaJson, StaticMap } from '~/types/index';
 import { domain } from '~/utils';
 
-type Props = {
-  data: {
-    meta: MetaJson & StaticMap;
-    geometry: GeoJSON.FeatureCollection<GeoJSON.MultiLineString>;
-  };
-};
-
-const Radschnellweg: React.FC<Props> = ({ data: { meta, geometry } }) => {
+const Radschnellweg: React.FC<PageProps<Queries.SteckbriefQuery>> = ({
+  data: { meta, geometry },
+}) => {
+  const name = Number.isNaN(parseFloat(meta.general.ref))
+    ? `${meta.general.ref}: ${meta.general.name}`
+    : meta.general.name;
   return (
     <Layout>
       <HelmetSeo
-        title={meta.general.name}
+        title={name}
         description={meta.general.description}
         image={`${domain()}${meta.staticMap.publicURL}`}
       />
@@ -29,11 +26,11 @@ const Radschnellweg: React.FC<Props> = ({ data: { meta, geometry } }) => {
 export default Radschnellweg;
 
 export const query = graphql`
-  query ($jsonId: String!) {
-    geometry: geometryJson(name: { eq: $jsonId }) {
+  query Steckbrief($jsonId: String!) {
+    geometry: geometryJson(jsonId: { eq: $jsonId }) {
       type
       bbox
-      name
+      id: jsonId
       features {
         type
         bbox
@@ -49,23 +46,29 @@ export const query = graphql`
           id_rsv
           id
           detail_level
+          discarded
         }
       }
     }
     meta: metaJson(jsonId: { eq: $jsonId }) {
       general {
         description
-        from
         name
         ref
-        to
+        from {
+          city
+          federal_state
+        }
+        to {
+          city
+          federal_state
+        }
         source
         length
       }
       references {
         website
       }
-      finished
       cost
       state
       staticMap {

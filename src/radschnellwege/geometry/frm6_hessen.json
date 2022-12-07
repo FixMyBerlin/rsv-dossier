@@ -1,0 +1,46 @@
+{
+  "id": "frm6-hessen",
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "bbox": [
+    8.67212347707556, 50.1108799721448, 8.77310325408052, 50.4335371428843
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1",
+        "id_rsv": "frm6-hessen",
+        "state": "agreement_process",
+        "planning_phase": null,
+        "detail_level": "corridor",
+        "variant": "Vorzugstrasse",
+        "length": 39012.329526586764,
+        "discarded": false,
+        "description:planning_phase": null,
+        "stand": "07.06.2022"
+      },
+      "bbox": [
+        8.672123477075557, 50.1108799721448, 8.773103254080523,
+        50.43353714288435
+      ],
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [8.68243275359701, 50.1108799721448],
+            [8.741148627386586, 50.1808778477495],
+            [8.773103254080523, 50.23010207952742],
+            [8.770729725053359, 50.27914277878308],
+            [8.754091273687985, 50.33775979194285],
+            [8.734961730154463, 50.36337870019319],
+            [8.672123477075557, 50.43353714288435]
+          ]
+        ]
+      }
+    }
+  ]
+}
