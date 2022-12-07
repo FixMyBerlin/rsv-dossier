@@ -43,7 +43,7 @@ exports.onCreateNode = async ({
 exports.createSchemaCustomization = ({
   actions: { createTypes, createFieldExtension },
 }) => {
-  if (process.env.FAST_BUILD !== '1') {
+  if (process.env.FAST_BUILD === '1') {
     createFieldExtension({
       name: 'defaultMap',
       extend() {
