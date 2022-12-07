@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
-import classNames from 'classnames';
 import { Listbox, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
+import classNames from 'classnames';
+import { graphql, Link, useStaticQuery } from 'gatsby';
+import React, { Fragment } from 'react';
 
 export const query = graphql`
   query FederalStates {
@@ -27,21 +27,21 @@ export const query = graphql`
   }
 `;
 type Props = {
-  location: string;
+  currentFilter: string;
 };
 
-// returns a list of all federal states including the number of RSVs
-export const FederalStateList: React.FC<Props> = ({ location }) => {
+/** @desc A list of all federal states including the number of RSVs */
+export const SteckbriefePageFilter: React.FC<Props> = ({ currentFilter }) => {
+  const { radschnellwege }: Queries.FederalStatesQuery = useStaticQuery(query);
+
   const stateCount = {};
   const statePaths = {};
-  const addState = (state) => {
-    if (stateCount[state]) {
-      stateCount[state] += 1;
-    } else {
-      stateCount[state] = 1;
-    }
+
+  const addState = (state: string) => {
+    stateCount[state] ||= 0;
+    stateCount[state] += 1;
   };
-  const { radschnellwege }: Queries.FederalStatesQuery = useStaticQuery(query);
+
   radschnellwege.nodes.forEach(
     ({ general: { from, to }, fromPath, toPath }) => {
       addState(from.federalState);
@@ -52,12 +52,19 @@ export const FederalStateList: React.FC<Props> = ({ location }) => {
       }
     }
   );
+
   const all = 'Alle anzeigen';
   statePaths[all] = '/steckbriefe';
   stateCount[all] = radschnellwege.nodes.length;
+
+  const currentName =
+    Object.entries(statePaths).find(
+      ([_name, path]) => path === currentFilter
+    )?.[0] || all;
+
   return (
     <div className="w-72">
-      <Listbox value={location} onChange={() => null}>
+      <Listbox value={currentFilter} onChange={() => null}>
         {({ open }) => (
           <>
             <Listbox.Label className="block text-sm font-medium text-white">
@@ -65,7 +72,7 @@ export const FederalStateList: React.FC<Props> = ({ location }) => {
             </Listbox.Label>
             <div className="relative mt-1">
               <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
-                <span className="block truncate">{location}</span>
+                <span className="block truncate">{currentName}</span>
                 <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                   <ChevronDownIcon
                     className="h-5 w-5 text-gray-400"

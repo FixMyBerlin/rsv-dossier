@@ -2,10 +2,10 @@ import React from 'react';
 import { ButtonLink } from '~/components/Links';
 import { RSVMap } from '~/components/Map';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { RsvProgressBar } from '~/components/Steckbrief';
+import { SteckbriefPageProgressBar } from '~/components/SteckbriefPage';
 import { Heading2 } from '~/components/Text';
 
-export const RSVDetails: React.FC<Queries.SteckbriefQuery> = ({
+export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
   meta,
   geometry,
 }) => {
@@ -22,7 +22,7 @@ export const RSVDetails: React.FC<Queries.SteckbriefQuery> = ({
             {meta.general.name}
           </h1>
           <div className="mt-6">
-            <RsvProgressBar current="planning" />
+            <SteckbriefPageProgressBar current="planning" />
           </div>
           <Heading2>Kurzfassung</Heading2>
           {meta.general.description && (

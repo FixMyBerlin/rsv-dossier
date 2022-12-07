@@ -13,7 +13,7 @@ const states = {
   done: 'Gebaut',
 };
 
-export const RsvProgressBar: React.FC<Props> = ({ current }) => {
+export const SteckbriefPageProgressBar: React.FC<Props> = ({ current }) => {
   const selectedStyle = 'bg-slate-900 text-white';
   const unselectedStyle = 'bg-gray-300 text-gray-600';
   return (
