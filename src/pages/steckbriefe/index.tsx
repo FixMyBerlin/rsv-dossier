@@ -14,6 +14,17 @@ const SteckbriefeIndex: React.FC<Props> = ({
     radschnellwege: { nodes: _radschnellwege },
   },
 }) => {
+  const headerTitle = <>Übersicht über RSV-Planungen</>;
+  const headerDescription = (
+    <>
+      Übersicht der aktuell geplanten Radschnellverbindungen sowie deren
+      Trassenverläufe bzw. -korridore. Enthalten sind RSV aus Hessen,
+      Baden-Württemberg, Berlin, Niedersachsen, Schleswig-Holstein,
+      Mecklenburg-Vorpommern, Nordrhein-Westfalen, Rheinland-Pfalz und Hamburg.
+      Aktuell umfasst die Liste {_radschnellwege.length} Radschnellverbindungen
+      und wird fortlaufend erweitert.
+    </>
+  );
   return (
     <Layout location={location}>
       <HelmetSeo
@@ -21,6 +32,8 @@ const SteckbriefeIndex: React.FC<Props> = ({
         description="Die einzelnen Radschnellverbindungen in den verschiedenen Bundesländern in Deutschland."
       />
       <SteckbriefePage
+        headerTitle={headerTitle}
+        headerDescription={headerDescription}
         radschnellwege={_radschnellwege}
         currentFilter="Alle anzeigen"
       />

@@ -4,30 +4,16 @@ import { MailLink } from '../Links';
 import { SteckbriefePageFilter } from './SteckbriefePageFilter';
 
 type Props = {
-  headerTitle?: React.ReactNode;
-  headerDescription?: React.ReactNode;
-  totalCount: number;
+  headerTitle: React.ReactNode;
+  headerDescription: React.ReactNode;
   currentFilter: string;
 };
 
 export const SteckbriefePageHeader: React.FC<Props> = ({
   headerTitle,
   headerDescription,
-  totalCount,
   currentFilter,
 }) => {
-  const title = headerTitle || <>Übersicht über RSV-Planungen</>;
-  const description = headerDescription || (
-    <>
-      Übersicht der aktuell geplanten Radschnellverbindungen sowie deren
-      Trassenverläufe bzw. -korridore. Enthalten sind RSV aus Hessen,
-      Baden-Württemberg, Berlin, Niedersachsen, Schleswig-Holstein,
-      Mecklenburg-Vorpommern, Nordrhein-Westfalen, Rheinland-Pfalz und Hamburg.
-      Aktuell umfasst die Liste {totalCount} Radschnellverbindungen und wird
-      fortlaufend erweitert.
-    </>
-  );
-
   return (
     <div className="relative bg-gray-800 pb-48 pt-24">
       <div className="absolute inset-0">
@@ -43,14 +29,14 @@ export const SteckbriefePageHeader: React.FC<Props> = ({
       </div>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-          {title}
+          {headerTitle}
         </h1>
         <div className="relative">
           <div className="absolute bottom-0 right-0 z-20">
             <SteckbriefePageFilter currentFilter={currentFilter} />
           </div>
           <div className="mt-6 max-w-3xl text-xl text-slate-300">
-            {description}
+            {headerDescription}
             <p className="mt-3">
               Mail an{' '}
               <MailLink
