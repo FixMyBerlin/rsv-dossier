@@ -6,7 +6,7 @@ import { SteckbriefePageTeasers } from './SteckbriefePageTeasers';
 type Props = {
   headerTitle?: React.ReactNode;
   headerDescription?: React.ReactNode;
-  radschnellwege: Queries.SteckbriefeIndexQuery['radschnellwege']['nodes'];
+  radschnellwege: Queries.SteckbriefeIndexQuery['allMetaJson']['radschnellwege'];
   currentFilter: string;
 };
 

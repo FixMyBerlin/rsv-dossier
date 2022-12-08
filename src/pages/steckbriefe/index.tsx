@@ -11,7 +11,7 @@ type Props = {
 const SteckbriefeIndex: React.FC<Props> = ({
   location,
   data: {
-    radschnellwege: { nodes: _radschnellwege },
+    allMetaJson: { radschnellwege },
   },
 }) => {
   const headerTitle = <>Übersicht über RSV-Planungen</>;
@@ -21,7 +21,7 @@ const SteckbriefeIndex: React.FC<Props> = ({
       Trassenverläufe bzw. -korridore. Enthalten sind RSV aus Hessen,
       Baden-Württemberg, Berlin, Niedersachsen, Schleswig-Holstein,
       Mecklenburg-Vorpommern, Nordrhein-Westfalen, Rheinland-Pfalz und Hamburg.
-      Aktuell umfasst die Liste {_radschnellwege.length} Radschnellverbindungen
+      Aktuell umfasst die Liste {radschnellwege.length} Radschnellverbindungen
       und wird fortlaufend erweitert.
     </>
   );
@@ -34,7 +34,7 @@ const SteckbriefeIndex: React.FC<Props> = ({
       <SteckbriefePage
         headerTitle={headerTitle}
         headerDescription={headerDescription}
-        radschnellwege={_radschnellwege}
+        radschnellwege={radschnellwege}
         currentFilter="Alle anzeigen"
       />
     </Layout>
@@ -45,8 +45,8 @@ export default SteckbriefeIndex;
 
 export const query = graphql`
   query SteckbriefeIndex {
-    radschnellwege: allMetaJson {
-      nodes {
+    allMetaJson {
+      radschnellwege: nodes {
         general {
           ref
           name

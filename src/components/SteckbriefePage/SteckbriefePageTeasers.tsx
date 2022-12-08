@@ -5,7 +5,7 @@ import React from 'react';
 import { textLinkClasses } from '../Links/TextLink';
 
 type Props = {
-  radschnellwege: Queries.SteckbriefeIndexQuery['radschnellwege']['nodes'];
+  radschnellwege: Queries.SteckbriefeIndexQuery['allMetaJson']['radschnellwege'];
 };
 
 export const SteckbriefePageTeasers: React.FC<Props> = ({ radschnellwege }) => {
