@@ -18,7 +18,7 @@ const FederalStateToIndex: React.FC<Props> = ({
   // @ts-ignore Recheck if types are available in Gatsby5
   const state = pageContext.general__to__federalState as string;
 
-  // Manualy join data because graphQL has no OR operator
+  // We have to join the data manualy because graphQL has no OR operator
   type GraphQlJoin = { [key: string]: typeof from['nodes'][number] };
   const graphQlJoin: GraphQlJoin = {};
   [...from.nodes, ...to.nodes].forEach((node) => {
@@ -55,7 +55,7 @@ const FederalStateToIndex: React.FC<Props> = ({
         headerTitle={HeaderTitle}
         headerDescription={HeaderDescription}
         radschnellwege={radschnellwege}
-        currentFilter={location.pathname}
+        currentFilter={state}
       />
     </Layout>
   );

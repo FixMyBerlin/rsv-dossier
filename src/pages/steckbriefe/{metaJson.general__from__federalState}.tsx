@@ -56,7 +56,7 @@ const FederalStateFromIndex: React.FC<Props> = ({
         headerTitle={HeaderTitle}
         headerDescription={HeaderDescription}
         radschnellwege={radschnellwege}
-        currentFilter={location.pathname}
+        currentFilter={state}
       />
     </Layout>
   );

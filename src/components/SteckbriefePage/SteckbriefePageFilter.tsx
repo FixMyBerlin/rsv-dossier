@@ -57,11 +57,6 @@ export const SteckbriefePageFilter: React.FC<Props> = ({ currentFilter }) => {
   statePaths[all] = '/steckbriefe';
   stateCount[all] = radschnellwege.nodes.length;
 
-  const currentName =
-    Object.entries(statePaths).find(
-      ([_name, path]) => path === currentFilter
-    )?.[0] || all;
-
   return (
     <div className="w-72">
       <Listbox value={currentFilter} onChange={() => null}>
@@ -72,7 +67,7 @@ export const SteckbriefePageFilter: React.FC<Props> = ({ currentFilter }) => {
             </Listbox.Label>
             <div className="relative mt-1">
               <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
-                <span className="block truncate">{currentName}</span>
+                <span className="block truncate">{currentFilter}</span>
                 <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                   <ChevronDownIcon
                     className="h-5 w-5 text-gray-400"
