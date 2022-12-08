@@ -1,7 +1,7 @@
 import { Listbox, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import classNames from 'classnames';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, navigate, useStaticQuery } from 'gatsby';
 import React, { Fragment } from 'react';
 
 export const query = graphql`
@@ -54,12 +54,15 @@ export const SteckbriefePageFilter: React.FC<Props> = ({ currentFilter }) => {
   );
 
   const all = 'Alle anzeigen';
-  statePaths[all] = '/steckbriefe';
+  statePaths[all] = '/steckbriefe/';
   stateCount[all] = radschnellwege.nodes.length;
 
   return (
     <div className="w-72">
-      <Listbox value={currentFilter} onChange={() => null}>
+      <Listbox
+        value={currentFilter}
+        onChange={(selected) => navigate(statePaths[selected])}
+      >
         {({ open }) => (
           <>
             <Listbox.Label className="block text-sm font-medium text-white">
@@ -100,15 +103,14 @@ export const SteckbriefePageFilter: React.FC<Props> = ({ currentFilter }) => {
                         value={state}
                       >
                         {({ selected }) => (
-                          <Link
-                            to={statePaths[state]}
+                          <div
                             className={classNames(
                               selected ? 'font-semibold' : 'font-normal',
                               'block truncate'
                             )}
                           >
                             {state} ({stateCount[state]})
-                          </Link>
+                          </div>
                         )}
                       </Listbox.Option>
                     ))}
