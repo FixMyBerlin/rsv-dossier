@@ -16,18 +16,19 @@ export const SteckbriefePage: React.FC<Props> = ({
   radschnellwege,
   currentFilter,
 }) => {
+  const rsvCount =
+    radschnellwege.length > 1 ? ` ${radschnellwege.length} ` : ' ';
   const title = headerTitle || (
     <>
-      Übersicht der aktuell{' '}
-      {radschnellwege.length > 1 && `${radschnellwege.length} `}
+      Übersicht der aktuell {rsvCount}
       geplanten Radschnellverbindungen in {currentFilter}
     </>
   );
   const description = headerDescription || (
     <>
-      Übersicht der aktuell {radschnellwege.length} geplanten
-      Radschnellverbindungen in {currentFilter}. Die Liste wird fortlaufend
-      aktualisiert und ergänzt. Um alle Radschnellverbindungen zu sehen, <br />
+      Übersicht der aktuell {rsvCount} geplanten Radschnellverbindungen in{' '}
+      {currentFilter}. Die Liste wird fortlaufend aktualisiert und ergänzt. Um
+      alle Radschnellverbindungen zu sehen, <br />
       <Link to="/steckbriefe" className="text-gray-50 hover:underline">
         Alle Radschnellverbindungen im Bundesgebiet
       </Link>
