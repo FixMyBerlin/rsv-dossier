@@ -26,7 +26,7 @@ export const SteckbriefePage: React.FC<Props> = ({
     <>
       Übersicht der aktuell {radschnellwege.length} geplanten
       Radschnellverbindungen in {currentFilter}. Die Liste wird fortlaufend
-      aktualisiert und ergänzt. Um alle Radschnelllverbindungen im Bundesgebiet
+      aktualisiert und ergänzt. Um alle Radschnellverbindungen im Bundesgebiet
       zu sehen, <br />
       <Link to="/steckbriefe" className="text-gray-50 hover:underline">
         Alle Radschnellverbindungen im Bundesgebiet
