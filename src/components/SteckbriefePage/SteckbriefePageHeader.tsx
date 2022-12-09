@@ -1,6 +1,6 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
-import { MailLink } from '../Links';
+import { MailToButtonLink } from '../Links';
 import { SteckbriefePageFilter } from './SteckbriefePageFilter';
 
 type Props = {
@@ -39,13 +39,13 @@ export const SteckbriefePageHeader: React.FC<Props> = ({
             {headerDescription}
             <p className="mt-3">
               Mail an{' '}
-              <MailLink
+              <MailToButtonLink
                 mailto="hello@fixmycity.de"
                 subject="Anliegen zum RSV-Baukasten"
                 className="text-gray-100 underline-offset-4 hover:text-white hover:underline"
               >
                 hello@fixmycity.de
-              </MailLink>{' '}
+              </MailToButtonLink>{' '}
               schreiben
             </p>
           </div>
