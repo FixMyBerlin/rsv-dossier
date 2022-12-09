@@ -39,17 +39,9 @@ export const Hero: React.FC<Props> = ({
                 {children}
               </div>
             )}
-            <div className="relative z-0 -mt-[15%] sm:-mt-[20%]">
-              <img
-                src={HeroGraphic}
-                alt="Hero Grafik"
-                className="hidden sm:block"
-              />
-              <img
-                src={HeroGraphicMobile}
-                alt="Hero Grafik"
-                className="sm:hidden"
-              />
+            <div className="relative z-0 -mt-[15%] min-w-full sm:-mt-[20%]">
+              <HeroGraphic alt="Hero Grafik" className="hidden sm:block" />
+              <HeroGraphicMobile alt="Hero Grafik" className="sm:hidden" />
             </div>
           </div>
         </main>
