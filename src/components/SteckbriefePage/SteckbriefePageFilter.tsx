@@ -95,7 +95,7 @@ export const SteckbriefePageFilter: React.FC<Props> = ({ currentFilter }) => {
                         className={({ active }) =>
                           classNames(
                             active
-                              ? 'bg-indigo-600 text-white'
+                              ? 'bg-slate-700 text-white'
                               : 'text-gray-900',
                             'relative cursor-default select-none py-2 pl-3 pr-9'
                           )
