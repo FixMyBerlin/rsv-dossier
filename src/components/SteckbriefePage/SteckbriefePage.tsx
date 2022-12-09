@@ -18,8 +18,9 @@ export const SteckbriefePage: React.FC<Props> = ({
 }) => {
   const title = headerTitle || (
     <>
-      Übersicht der aktuell {radschnellwege.length} geplanten
-      Radschnellverbindungen (RSV) in {currentFilter}
+      Übersicht der aktuell{' '}
+      {radschnellwege.length > 1 && `${radschnellwege.length} `}
+      geplanten Radschnellverbindungen in {currentFilter}
     </>
   );
   const description = headerDescription || (
