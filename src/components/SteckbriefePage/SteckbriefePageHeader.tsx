@@ -42,7 +42,6 @@ export const SteckbriefePageHeader: React.FC<Props> = ({
               <MailToButtonLink
                 mailto="hello@fixmycity.de"
                 subject="Anliegen zum RSV-Baukasten"
-                className="text-gray-100 underline-offset-4 hover:text-white hover:underline"
               >
                 hello@fixmycity.de
               </MailToButtonLink>{' '}
