@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { StateIcons } from '.';
+import { StateIcons } from '~/components/StateIcons';
 
 type Props = {
   currentState: typeof progressStates[number];
@@ -14,7 +14,9 @@ const progressStates = [
   'done',
 ];
 
-export const RsvProgressBar: React.FC<Props> = ({ currentState }) => {
+export const SteckbriefPageProgressBar: React.FC<Props> = ({
+  currentState,
+}) => {
   return (
     <div className="flex h-14 min-w-full flex-row place-content-stretch pb-4 md:pr-6">
       {progressStates.map((state) => {
@@ -30,14 +32,8 @@ export const RsvProgressBar: React.FC<Props> = ({ currentState }) => {
               selected && 'border-slate-800 bg-slate-800'
             )}
           >
-            {/* <img
-            src={StateIcons[state].icon}
-            alt={`${StateIcons[state].title} icon`}
-            className="m-2 h-5 w-5 fill-white"
-          /> */}
-
             <div className={classNames('h-4 w-4', selected && 'text-white')}>
-              {StateIcons[state].icon}{' '}
+              {StateIcons[state].icon}
             </div>
             <div className="absolute -bottom-6 text-[0.5rem] sm:text-xs">
               {StateIcons[state].title}

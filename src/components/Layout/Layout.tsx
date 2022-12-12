@@ -1,11 +1,12 @@
 import classNames from 'classnames';
 import React from 'react';
+import { WindowLocation } from '@reach/router';
 import { Footer } from './Footer';
 import { Navigation } from './Navigation';
 
 type Props = {
   className?: string;
-  location?: any; // TODO: define type
+  location?: WindowLocation<unknown>; // TODO: define type
   navigation?: boolean;
 };
 
