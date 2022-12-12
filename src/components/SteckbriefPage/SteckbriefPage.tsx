@@ -2,8 +2,8 @@ import React from 'react';
 import { ButtonLink } from '~/components/Links';
 import { RSVMap } from '~/components/Map';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import { SteckbriefPageProgressBar } from '~/components/SteckbriefPage';
 import { Heading2 } from '~/components/Text';
-import { SteckbriefPageProgressBar } from '.';
 
 export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
   meta,
