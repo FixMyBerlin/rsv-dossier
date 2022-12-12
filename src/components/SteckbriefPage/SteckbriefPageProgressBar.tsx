@@ -41,7 +41,6 @@ export const SteckbriefPageProgressBar: React.FC<Props> = ({
           </div>
         );
       })}
-
     </div>
   );
 };
