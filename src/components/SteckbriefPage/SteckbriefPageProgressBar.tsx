@@ -29,7 +29,8 @@ export const SteckbriefPageProgressBar: React.FC<Props> = ({
               'relative inline-flex items-center justify-center border-y-2 font-bold hover:cursor-default',
               'first:rounded-l-full first:border-l-2 last:rounded-r-full last:border-r-2',
               'grow py-0.5',
-              selected && 'border-slate-800 bg-slate-800'
+              selected && 'border-slate-800 bg-slate-800',
+              !selected && 'ml-0.5 '
             )}
           >
             <div className={classNames('h-4 w-4', selected && 'text-white')}>
