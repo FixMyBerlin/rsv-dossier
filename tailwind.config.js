@@ -4,6 +4,9 @@ module.exports = {
   content: ['src/pages/**/*.tsx', 'src/components/**/*.tsx'],
   theme: {
     extend: {
+      colors: {
+        'pastel-gray': '#7B8D84',
+      },
       typography: ({ theme }) => ({
         pink: {
           css: {
