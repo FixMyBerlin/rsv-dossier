@@ -4506,7 +4506,7 @@ type SteckbriefQuery = { readonly geometry: { readonly type: string | null, read
 type SteckbriefeIndexQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type SteckbriefeIndexQuery = { readonly allMetaJson: { readonly radschnellwege: ReadonlyArray<{ readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> } };
+type SteckbriefeIndexQuery = { readonly allMetaJson: { readonly radschnellwege: ReadonlyArray<{ readonly state: string | null, readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> } };
 
 
 }
