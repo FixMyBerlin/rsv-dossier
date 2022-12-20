@@ -33,7 +33,12 @@ export const SteckbriefPageProgressBar: React.FC<Props> = ({
               !selected && 'ml-0.5'
             )}
           >
-            <div className={classNames('h-4 w-4', selected && 'text-white')}>
+            <div
+              className={classNames(
+                'h-4 w-4',
+                selected ? 'text-white' : 'text-gray-400'
+              )}
+            >
               {StateIcons[state].icon}
             </div>
             <div className="absolute -bottom-6 text-[0.5rem] sm:text-xs">

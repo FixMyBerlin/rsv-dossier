@@ -42,7 +42,7 @@ export const SteckbriefePageTeasers: React.FC<Props> = ({ radschnellwege }) => {
             >
               Mehr erfahren
             </div>
-            <div className="h-6 w-6 text-pastel-gray">
+            <div className="h-6 w-6 text-gray-400">
               {StateIcons[radschnellweg.state].icon}
             </div>
           </div>
