@@ -35,7 +35,7 @@ export const SteckbriefPageProgressBar: React.FC<Props> = ({
           >
             <div
               className={classNames(
-                'h-4 w-4',
+                'h-5 w-5',
                 selected ? 'text-white' : 'text-gray-400'
               )}
             >
