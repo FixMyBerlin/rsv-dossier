@@ -1,15 +1,15 @@
 import { encode } from '@googlemaps/polyline-codec';
-import { segmentColor } from './colors';
+import { segmentColor } from '.';
 
 const { GATSBY_MAPTILER_BASEURL, GATSBY_MAPTILER_KEY } = process.env;
 
 // TODO: source from .const to stay consistent with ~/components/Map/DynamicMap.tsx
 
 const buildPaths = ({
-  properties: { discarded },
+  properties,
   geometry: { coordinates },
 }: GeoJSON.Feature<GeoJSON.MultiLineString>) => {
-  const paint = { width: 5, stroke: segmentColor(discarded) };
+  const paint = { width: 5, stroke: segmentColor(properties as any) };
   const paintArr = Object.keys(paint).map((key) => `${key}:${paint[key]}`);
 
   // flip the coordinate order for encoding
