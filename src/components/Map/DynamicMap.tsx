@@ -8,7 +8,7 @@ import {
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import React, { useState } from 'react';
-import Map from 'react-map-gl';
+import Map, { FullscreenControl } from 'react-map-gl';
 import { maptilerBaseUrl, maptilerKey } from '~/utils';
 import { RSVPopup, RSVSegment } from '.';
 
@@ -64,6 +64,7 @@ export const DynamicMap: React.FC<
       // onMouseEnter={() => setCursorStyle('pointer')}
       // onMouseLeave={() => setCursorStyle('grab')}
     >
+      <FullscreenControl style={{ background: '#D9D9D9' }} />
       {geometry.features
         .filter(
           (feature: GeoJSON.Feature<GeoJSON.MultiLineString>) =>

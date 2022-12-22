@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import React from 'react';
 import { textLinkClasses } from '../Links/TextLink';
+import { StateIcons } from '../StateIcons';
 
 type Props = {
   radschnellwege: Queries.SteckbriefeIndexQuery['allMetaJson']['radschnellwege'];
@@ -19,7 +20,7 @@ export const SteckbriefePageTeasers: React.FC<Props> = ({ radschnellwege }) => {
           key={radschnellweg.general.name}
           className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-xl"
         >
-          <div className="flex max-h-fit overflow-hidden">
+          <div className="flex h-72 overflow-hidden">
             <GatsbyImage
               image={getImage(radschnellweg.staticMap as ImageDataLike)}
               alt=""
@@ -35,13 +36,15 @@ export const SteckbriefePageTeasers: React.FC<Props> = ({ radschnellwege }) => {
               {radschnellweg.general.description}
             </p>
           </div>
-          <div
-            className={classNames(
-              'p-6 group-hover:underline md:px-8',
-              textLinkClasses
-            )}
-          >
-            Mehr erfahren
+          <div className="flex flex-row place-content-between p-6 md:px-8">
+            <div
+              className={classNames('group-hover:underline ', textLinkClasses)}
+            >
+              Mehr erfahren
+            </div>
+            <div className="h-6 w-6 text-gray-400">
+              {StateIcons[radschnellweg.state].icon}
+            </div>
           </div>
         </Link>
       ))}

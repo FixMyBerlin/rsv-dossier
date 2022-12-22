@@ -22,7 +22,7 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
             {meta.general.name}
           </h1>
           <div className="mt-6">
-            <SteckbriefPageProgressBar current="planning" />
+            <SteckbriefPageProgressBar currentState={meta.state} />
           </div>
           <Heading2>Kurzfassung</Heading2>
           {meta.general.description && (

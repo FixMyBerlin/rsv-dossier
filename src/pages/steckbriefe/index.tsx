@@ -52,6 +52,7 @@ export const query = graphql`
           name
           description
         }
+        state
         jsonId
         staticMap {
           childImageSharp {
