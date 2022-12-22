@@ -15,7 +15,7 @@
         "state": "planning",
         "id_rsv": "RS5",
         "planning_phase": null,
-        "variant": null,
+        "variant": "Vorzugstrasse",
         "discarded": false,
         "stand": "07.06.2022",
         "length": 21661.549,

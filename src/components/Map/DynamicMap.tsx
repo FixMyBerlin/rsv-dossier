@@ -58,6 +58,7 @@ export const DynamicMap: React.FC<
       interactiveLayerIds={geometry.features.map(
         ({ properties }) => properties.id
       )}
+
       // disabled until popup has real content
       // onClick={updateInfo}
       // cursor={cursorStyle}
@@ -65,18 +66,15 @@ export const DynamicMap: React.FC<
       // onMouseLeave={() => setCursorStyle('grab')}
     >
       <FullscreenControl style={{ background: '#D9D9D9' }} />
-      {geometry.features
-        .filter(
-          (feature: GeoJSON.Feature<GeoJSON.MultiLineString>) =>
-            !feature.properties.discarded
-        )
-        .map((feature: GeoJSON.Feature<GeoJSON.MultiLineString>) => (
+      {geometry.features.map(
+        (feature: Queries.SteckbriefQuery['geometry']['features'][number]) => (
           <RSVSegment
             key={feature.properties.id}
             feature={feature}
             selected={selected}
           />
-        ))}
+        )
+      )}
       <RSVPopup info={info} selected={selected} setSelected={setSelected} />
     </Map>
   );
