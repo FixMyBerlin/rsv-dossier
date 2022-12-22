@@ -1,22 +1,18 @@
-import React, { useState } from 'react';
-import Map from 'react-map-gl';
-import maplibregl from 'maplibre-gl';
 import {
-  transformScale,
-  bboxPolygon,
   bbox,
-  square,
+  bboxPolygon,
   geojsonType,
+  square,
+  transformScale,
 } from '@turf/turf';
+import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { RSVSegment, RSVPopup } from '.';
+import React, { useState } from 'react';
+import Map, { FullscreenControl } from 'react-map-gl';
+import { maptilerBaseUrl, maptilerKey } from '~/utils';
+import { RSVPopup, RSVSegment } from '.';
 
 type BBox2d = [number, number, number, number];
-
-// somehow can't use object destructuring here
-/* eslint-disable prefer-destructuring */
-const GATSBY_MAPTILER_BASEURL = process.env.GATSBY_MAPTILER_BASEURL;
-const GATSBY_MAPTILER_KEY = process.env.GATSBY_MAPTILER_KEY;
 
 function assertFeatureCollection(
   geojson: any
@@ -56,7 +52,7 @@ export const DynamicMap: React.FC<
         },
       }}
       mapLib={maplibregl}
-      mapStyle={`${GATSBY_MAPTILER_BASEURL}/style.json?key=${GATSBY_MAPTILER_KEY}`}
+      mapStyle={`${maptilerBaseUrl}/style.json?key=${maptilerKey}`}
       maxBounds={bboxView as BBox2d}
       attributionControl={false}
       interactiveLayerIds={geometry.features.map(
@@ -69,13 +65,16 @@ export const DynamicMap: React.FC<
       // onMouseEnter={() => setCursorStyle('pointer')}
       // onMouseLeave={() => setCursorStyle('grab')}
     >
-      {geometry.features.map((feature) => (
-        <RSVSegment
-          key={feature.properties.id}
-          feature={feature}
-          selected={selected}
-        />
-      ))}
+      <FullscreenControl style={{ background: '#D9D9D9' }} />
+      {geometry.features.map(
+        (feature: Queries.SteckbriefQuery['geometry']['features'][number]) => (
+          <RSVSegment
+            key={feature.properties.id}
+            feature={feature}
+            selected={selected}
+          />
+        )
+      )}
       <RSVPopup info={info} selected={selected} setSelected={setSelected} />
     </Map>
   );

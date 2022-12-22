@@ -1,4 +1,5 @@
-export * from './isHome';
-export * from './staticmap';
 export * from './domain';
 export * from './mapColors';
+export * from './isHome';
+export * from './mapTiler.const';
+export * from './staticmap';

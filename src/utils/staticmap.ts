@@ -1,7 +1,6 @@
 import { encode } from '@googlemaps/polyline-codec';
 import { segmentColor } from '.';
-
-const { GATSBY_MAPTILER_BASEURL, GATSBY_MAPTILER_KEY } = process.env;
+import { maptilerBaseUrl, maptilerKey } from './mapTiler.const';
 
 // TODO: source from .const to stay consistent with ~/components/Map/DynamicMap.tsx
 
@@ -25,11 +24,10 @@ export const staticMapRequest = (
   [width, height]: number[]
 ) => {
   const dims = `${width / 2}x${height / 2}@2x.png`;
-  const url = new URL(
-    `${GATSBY_MAPTILER_BASEURL}/static/${bbox.toString()}/${dims}`
-  );
 
-  url.searchParams.append('key', GATSBY_MAPTILER_KEY);
+  // URL and Keys: https://cloud.maptiler.com/maps/a4824657-3edd-4fbd-925e-1af40ab06e9c/static
+  const url = new URL(`${maptilerBaseUrl}/static/${bbox.toString()}/${dims}`);
+  url.searchParams.append('key', maptilerKey);
   url.searchParams.append('attribution', '0');
   features.forEach((feature) => {
     buildPaths(feature).forEach((path) => {

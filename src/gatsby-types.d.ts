@@ -726,13 +726,13 @@ type FileFieldsEnum =
   | 'childMetaJson.gatsbyPath'
   | 'childMetaJson.general.description'
   | 'childMetaJson.general.from.city'
-  | 'childMetaJson.general.from.federal_state'
+  | 'childMetaJson.general.from.federalState'
   | 'childMetaJson.general.length'
   | 'childMetaJson.general.name'
   | 'childMetaJson.general.ref'
   | 'childMetaJson.general.source'
   | 'childMetaJson.general.to.city'
-  | 'childMetaJson.general.to.federal_state'
+  | 'childMetaJson.general.to.federalState'
   | 'childMetaJson.geoJson.bbox'
   | 'childMetaJson.geoJson.children'
   | 'childMetaJson.geoJson.children.children'
@@ -1018,13 +1018,13 @@ type FileFieldsEnum =
   | 'childrenMetaJson.gatsbyPath'
   | 'childrenMetaJson.general.description'
   | 'childrenMetaJson.general.from.city'
-  | 'childrenMetaJson.general.from.federal_state'
+  | 'childrenMetaJson.general.from.federalState'
   | 'childrenMetaJson.general.length'
   | 'childrenMetaJson.general.name'
   | 'childrenMetaJson.general.ref'
   | 'childrenMetaJson.general.source'
   | 'childrenMetaJson.general.to.city'
-  | 'childrenMetaJson.general.to.federal_state'
+  | 'childrenMetaJson.general.to.federalState'
   | 'childrenMetaJson.geoJson.bbox'
   | 'childrenMetaJson.geoJson.children'
   | 'childrenMetaJson.geoJson.children.children'
@@ -2313,13 +2313,13 @@ type MetaJsonFieldsEnum =
   | 'gatsbyPath'
   | 'general.description'
   | 'general.from.city'
-  | 'general.from.federal_state'
+  | 'general.from.federalState'
   | 'general.length'
   | 'general.name'
   | 'general.ref'
   | 'general.source'
   | 'general.to.city'
-  | 'general.to.federal_state'
+  | 'general.to.federalState'
   | 'geoJson.bbox'
   | 'geoJson.children'
   | 'geoJson.children.children'
@@ -2830,22 +2830,22 @@ type MetaJsonGeneralFilterInput = {
 
 type MetaJsonGeneralFrom = {
   readonly city: Maybe<Scalars['String']>;
-  readonly federal_state: Maybe<Scalars['String']>;
+  readonly federalState: Maybe<Scalars['String']>;
 };
 
 type MetaJsonGeneralFromFilterInput = {
   readonly city: InputMaybe<StringQueryOperatorInput>;
-  readonly federal_state: InputMaybe<StringQueryOperatorInput>;
+  readonly federalState: InputMaybe<StringQueryOperatorInput>;
 };
 
 type MetaJsonGeneralTo = {
   readonly city: Maybe<Scalars['String']>;
-  readonly federal_state: Maybe<Scalars['String']>;
+  readonly federalState: Maybe<Scalars['String']>;
 };
 
 type MetaJsonGeneralToFilterInput = {
   readonly city: InputMaybe<StringQueryOperatorInput>;
-  readonly federal_state: InputMaybe<StringQueryOperatorInput>;
+  readonly federalState: InputMaybe<StringQueryOperatorInput>;
 };
 
 type MetaJsonGroupConnection = {
@@ -4451,6 +4451,25 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
+type FederalStateFromIndexQueryVariables = Exact<{
+  general__from__federalState: Scalars['String'];
+}>;
+
+
+type FederalStateFromIndexQuery = { readonly from: { readonly nodes: ReadonlyArray<{ readonly state: string | null, readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> }, readonly to: { readonly nodes: ReadonlyArray<{ readonly state: string | null, readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> } };
+
+type FederalStatesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type FederalStatesQuery = { readonly radschnellwege: { readonly nodes: ReadonlyArray<{ readonly fromPath: string | null, readonly toPath: string | null, readonly general: { readonly from: { readonly federalState: string | null } | null, readonly to: { readonly federalState: string | null } | null } | null }> } };
+
+type FederalStateToIndexQueryVariables = Exact<{
+  general__to__federalState: Scalars['String'];
+}>;
+
+
+type FederalStateToIndexQuery = { readonly from: { readonly nodes: ReadonlyArray<{ readonly state: string | null, readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> }, readonly to: { readonly nodes: ReadonlyArray<{ readonly state: string | null, readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> } };
+
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 
 type GatsbyImageSharpFixed_noBase64Fragment = { readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
@@ -4482,12 +4501,12 @@ type SteckbriefQueryVariables = Exact<{
 }>;
 
 
-type SteckbriefQuery = { readonly geometry: { readonly type: string | null, readonly bbox: ReadonlyArray<number | null> | null, readonly id: string | null, readonly features: ReadonlyArray<{ readonly type: string | null, readonly bbox: ReadonlyArray<number | null> | null, readonly geometry: { readonly coordinates: ReadonlyArray<ReadonlyArray<ReadonlyArray<number | null> | null> | null> | null, readonly type: string | null } | null, readonly properties: { readonly variant: string | null, readonly state: string | null, readonly planning_phase: string | null, readonly length: number | null, readonly id_rsv: string | null, readonly id: string | null, readonly detail_level: string | null, readonly discarded: boolean | null } | null } | null> | null } | null, readonly meta: { readonly cost: string | null, readonly state: string | null, readonly general: { readonly description: string | null, readonly name: string | null, readonly ref: string | null, readonly source: string | null, readonly length: number | null, readonly from: { readonly city: string | null, readonly federal_state: string | null } | null, readonly to: { readonly city: string | null, readonly federal_state: string | null } | null } | null, readonly references: { readonly website: string | null } | null, readonly staticMap: { readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } } | null };
+type SteckbriefQuery = { readonly geometry: { readonly type: string | null, readonly bbox: ReadonlyArray<number | null> | null, readonly id: string | null, readonly features: ReadonlyArray<{ readonly type: string | null, readonly bbox: ReadonlyArray<number | null> | null, readonly geometry: { readonly coordinates: ReadonlyArray<ReadonlyArray<ReadonlyArray<number | null> | null> | null> | null, readonly type: string | null } | null, readonly properties: { readonly variant: string | null, readonly state: string | null, readonly planning_phase: string | null, readonly length: number | null, readonly id_rsv: string | null, readonly id: string | null, readonly detail_level: string | null, readonly discarded: boolean | null } | null } | null> | null } | null, readonly meta: { readonly cost: string | null, readonly state: string | null, readonly general: { readonly description: string | null, readonly name: string | null, readonly ref: string | null, readonly source: string | null, readonly length: number | null, readonly from: { readonly city: string | null, readonly federalState: string | null } | null, readonly to: { readonly city: string | null, readonly federalState: string | null } | null } | null, readonly references: { readonly website: string | null } | null, readonly staticMap: { readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } } | null };
 
 type SteckbriefeIndexQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type SteckbriefeIndexQuery = { readonly radschnellwege: { readonly nodes: ReadonlyArray<{ readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> } };
+type SteckbriefeIndexQuery = { readonly allMetaJson: { readonly radschnellwege: ReadonlyArray<{ readonly state: string | null, readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> } };
 
 
 }

@@ -12,7 +12,7 @@ import {
   MapIcon,
   ClipboardCheckIcon,
 } from '@heroicons/react/outline';
-import BmdvLogo from '~/static/bmdv-logo.svg';
+import BmdvLogo from './bmdv-logo.svg';
 
 const stats: Stats[][] = [
   [
