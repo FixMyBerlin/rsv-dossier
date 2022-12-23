@@ -2,7 +2,7 @@ import { graphql, PageProps } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
-import { RSVDetails } from '~/components/Steckbrief/';
+import { SteckbriefPage } from '~/components/SteckbriefPage';
 import { domain } from '~/utils';
 
 const Radschnellweg: React.FC<PageProps<Queries.SteckbriefQuery>> = ({
@@ -11,6 +11,7 @@ const Radschnellweg: React.FC<PageProps<Queries.SteckbriefQuery>> = ({
   const name = Number.isNaN(parseFloat(meta.general.ref))
     ? `${meta.general.ref}: ${meta.general.name}`
     : meta.general.name;
+
   return (
     <Layout>
       <HelmetSeo
@@ -18,7 +19,7 @@ const Radschnellweg: React.FC<PageProps<Queries.SteckbriefQuery>> = ({
         description={meta.general.description}
         image={`${domain()}${meta.staticMap.publicURL}`}
       />
-      <RSVDetails meta={meta} geometry={geometry} />
+      <SteckbriefPage meta={meta} geometry={geometry} />
     </Layout>
   );
 };
@@ -57,11 +58,11 @@ export const query = graphql`
         ref
         from {
           city
-          federal_state
+          federalState
         }
         to {
           city
-          federal_state
+          federalState
         }
         source
         length

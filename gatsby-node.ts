@@ -15,16 +15,6 @@ export const onCreateWebpackConfig = ({ actions }) => {
   });
 };
 
-// create a static map image for every RSV
-export const createSchemaCustomization = ({ actions: { createTypes } }) => {
-  createTypes(`
-    type MetaJson implements Node {
-      geoJson: GeometryJson! @link(from: "jsonId", by: "jsonId")
-      staticMap: File! @link(from: "jsonId", by: "name")
-    }
-  `);
-};
-
 export const onPostBootstrap = ({ getNodesByType, reporter }) => {
   const geometries: string[] = getNodesByType('GeometryJson').map(
     (x) => x.jsonId
@@ -81,19 +71,17 @@ export const onCreateNode = async ({
 
   if (nodeType === 'GeometryJson') {
     // generate static map from geometry
-    const url = staticMapRequest(node, [1920, 1920]);
-    // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
-    let response = await fetch(url.toString());
-    // if the URL is too long we'll get an `414` from MapTiler. In this case we'll try to simplify the geometry until the URL is short enough
+    let url = staticMapRequest(node, [1920, 1920]).toString();
     let tolerance = 0.000001;
-    while (response.status === 414) {
+    // respect the MapTiler URL limit
+    while (url.length > 8192) {
       const simplified = simplify(node, { tolerance, highQuality: true });
-      const simplifiedUrl = staticMapRequest(simplified, [1920, 1920]);
-      // eslint-disable-next-line no-await-in-loop
-      response = await fetch(simplifiedUrl.toString());
+      url = staticMapRequest(simplified, [1920, 1920]).toString();
       tolerance *= 2;
     }
+    const response = await fetch(url);
 
+    // have to use createFileNodeFromBuffer due to url length limits in createRemoteFileNode :/
     const arrBuffer = await response.arrayBuffer();
     createFileNodeFromBuffer({
       buffer: Buffer.from(arrBuffer),
@@ -103,5 +91,40 @@ export const onCreateNode = async ({
       createNodeId,
       cache,
     });
+  }
+};
+
+// link geometry and staticMap to metaJson nodes
+export const createSchemaCustomization = ({
+  actions: { createTypes, createFieldExtension },
+}) => {
+  if (process.env.FAST_BUILD === '1') {
+    createFieldExtension({
+      name: 'defaultMap',
+      extend() {
+        return {
+          type: 'File',
+          resolve(source, args, context) {
+            return context.nodeModel.findOne({
+              query: { filter: { name: { eq: 'default_map' } } },
+              type: 'File',
+            });
+          },
+        };
+      },
+    });
+    createTypes(`
+    type MetaJson implements Node {
+      geoJson: GeometryJson! @link(from: "jsonId", by: "name")
+      staticMap: File! @defaultMap
+    }
+  `);
+  } else {
+    createTypes(`
+    type MetaJson implements Node {
+      geoJson: GeometryJson! @link(from: "jsonId", by: "name")
+      staticMap: File! @link(from: "jsonId", by: "name")
+    }
+  `);
   }
 };

@@ -218,6 +218,7 @@ type DirectoryFieldsEnum =
   | 'children.children.id'
   | 'children.children.internal.content'
   | 'children.children.internal.contentDigest'
+  | 'children.children.internal.contentFilePath'
   | 'children.children.internal.description'
   | 'children.children.internal.fieldOwners'
   | 'children.children.internal.ignoreType'
@@ -229,6 +230,7 @@ type DirectoryFieldsEnum =
   | 'children.id'
   | 'children.internal.content'
   | 'children.internal.contentDigest'
+  | 'children.internal.contentFilePath'
   | 'children.internal.description'
   | 'children.internal.fieldOwners'
   | 'children.internal.ignoreType'
@@ -241,6 +243,7 @@ type DirectoryFieldsEnum =
   | 'children.parent.id'
   | 'children.parent.internal.content'
   | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.contentFilePath'
   | 'children.parent.internal.description'
   | 'children.parent.internal.fieldOwners'
   | 'children.parent.internal.ignoreType'
@@ -260,6 +263,7 @@ type DirectoryFieldsEnum =
   | 'ino'
   | 'internal.content'
   | 'internal.contentDigest'
+  | 'internal.contentFilePath'
   | 'internal.description'
   | 'internal.fieldOwners'
   | 'internal.ignoreType'
@@ -279,6 +283,7 @@ type DirectoryFieldsEnum =
   | 'parent.children.id'
   | 'parent.children.internal.content'
   | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.contentFilePath'
   | 'parent.children.internal.description'
   | 'parent.children.internal.fieldOwners'
   | 'parent.children.internal.ignoreType'
@@ -290,6 +295,7 @@ type DirectoryFieldsEnum =
   | 'parent.id'
   | 'parent.internal.content'
   | 'parent.internal.contentDigest'
+  | 'parent.internal.contentFilePath'
   | 'parent.internal.description'
   | 'parent.internal.fieldOwners'
   | 'parent.internal.ignoreType'
@@ -302,6 +308,7 @@ type DirectoryFieldsEnum =
   | 'parent.parent.id'
   | 'parent.parent.internal.content'
   | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.contentFilePath'
   | 'parent.parent.internal.description'
   | 'parent.parent.internal.fieldOwners'
   | 'parent.parent.internal.ignoreType'
@@ -587,6 +594,7 @@ type FileFieldsEnum =
   | 'childGeometryJson.children.id'
   | 'childGeometryJson.children.internal.content'
   | 'childGeometryJson.children.internal.contentDigest'
+  | 'childGeometryJson.children.internal.contentFilePath'
   | 'childGeometryJson.children.internal.description'
   | 'childGeometryJson.children.internal.fieldOwners'
   | 'childGeometryJson.children.internal.ignoreType'
@@ -615,6 +623,7 @@ type FileFieldsEnum =
   | 'childGeometryJson.id'
   | 'childGeometryJson.internal.content'
   | 'childGeometryJson.internal.contentDigest'
+  | 'childGeometryJson.internal.contentFilePath'
   | 'childGeometryJson.internal.description'
   | 'childGeometryJson.internal.fieldOwners'
   | 'childGeometryJson.internal.ignoreType'
@@ -628,6 +637,7 @@ type FileFieldsEnum =
   | 'childGeometryJson.parent.id'
   | 'childGeometryJson.parent.internal.content'
   | 'childGeometryJson.parent.internal.contentDigest'
+  | 'childGeometryJson.parent.internal.contentFilePath'
   | 'childGeometryJson.parent.internal.description'
   | 'childGeometryJson.parent.internal.fieldOwners'
   | 'childGeometryJson.parent.internal.ignoreType'
@@ -644,6 +654,7 @@ type FileFieldsEnum =
   | 'childImageSharp.children.id'
   | 'childImageSharp.children.internal.content'
   | 'childImageSharp.children.internal.contentDigest'
+  | 'childImageSharp.children.internal.contentFilePath'
   | 'childImageSharp.children.internal.description'
   | 'childImageSharp.children.internal.fieldOwners'
   | 'childImageSharp.children.internal.ignoreType'
@@ -678,6 +689,7 @@ type FileFieldsEnum =
   | 'childImageSharp.id'
   | 'childImageSharp.internal.content'
   | 'childImageSharp.internal.contentDigest'
+  | 'childImageSharp.internal.contentFilePath'
   | 'childImageSharp.internal.description'
   | 'childImageSharp.internal.fieldOwners'
   | 'childImageSharp.internal.ignoreType'
@@ -693,6 +705,7 @@ type FileFieldsEnum =
   | 'childImageSharp.parent.id'
   | 'childImageSharp.parent.internal.content'
   | 'childImageSharp.parent.internal.contentDigest'
+  | 'childImageSharp.parent.internal.contentFilePath'
   | 'childImageSharp.parent.internal.description'
   | 'childImageSharp.parent.internal.fieldOwners'
   | 'childImageSharp.parent.internal.ignoreType'
@@ -714,6 +727,7 @@ type FileFieldsEnum =
   | 'childMetaJson.children.id'
   | 'childMetaJson.children.internal.content'
   | 'childMetaJson.children.internal.contentDigest'
+  | 'childMetaJson.children.internal.contentFilePath'
   | 'childMetaJson.children.internal.description'
   | 'childMetaJson.children.internal.fieldOwners'
   | 'childMetaJson.children.internal.ignoreType'
@@ -726,13 +740,14 @@ type FileFieldsEnum =
   | 'childMetaJson.gatsbyPath'
   | 'childMetaJson.general.description'
   | 'childMetaJson.general.from.city'
+  | 'childMetaJson.general.from.federalState'
   | 'childMetaJson.general.from.federal_state'
   | 'childMetaJson.general.length'
   | 'childMetaJson.general.name'
   | 'childMetaJson.general.ref'
   | 'childMetaJson.general.source'
   | 'childMetaJson.general.to.city'
-  | 'childMetaJson.general.to.federal_state'
+  | 'childMetaJson.general.to.federalState'
   | 'childMetaJson.geoJson.bbox'
   | 'childMetaJson.geoJson.children'
   | 'childMetaJson.geoJson.children.children'
@@ -744,6 +759,7 @@ type FileFieldsEnum =
   | 'childMetaJson.geoJson.id'
   | 'childMetaJson.geoJson.internal.content'
   | 'childMetaJson.geoJson.internal.contentDigest'
+  | 'childMetaJson.geoJson.internal.contentFilePath'
   | 'childMetaJson.geoJson.internal.description'
   | 'childMetaJson.geoJson.internal.fieldOwners'
   | 'childMetaJson.geoJson.internal.ignoreType'
@@ -757,6 +773,7 @@ type FileFieldsEnum =
   | 'childMetaJson.id'
   | 'childMetaJson.internal.content'
   | 'childMetaJson.internal.contentDigest'
+  | 'childMetaJson.internal.contentFilePath'
   | 'childMetaJson.internal.description'
   | 'childMetaJson.internal.fieldOwners'
   | 'childMetaJson.internal.ignoreType'
@@ -770,6 +787,7 @@ type FileFieldsEnum =
   | 'childMetaJson.parent.id'
   | 'childMetaJson.parent.internal.content'
   | 'childMetaJson.parent.internal.contentDigest'
+  | 'childMetaJson.parent.internal.contentFilePath'
   | 'childMetaJson.parent.internal.description'
   | 'childMetaJson.parent.internal.fieldOwners'
   | 'childMetaJson.parent.internal.ignoreType'
@@ -844,6 +862,7 @@ type FileFieldsEnum =
   | 'childMetaJson.staticMap.ino'
   | 'childMetaJson.staticMap.internal.content'
   | 'childMetaJson.staticMap.internal.contentDigest'
+  | 'childMetaJson.staticMap.internal.contentFilePath'
   | 'childMetaJson.staticMap.internal.description'
   | 'childMetaJson.staticMap.internal.fieldOwners'
   | 'childMetaJson.staticMap.internal.ignoreType'
@@ -877,6 +896,7 @@ type FileFieldsEnum =
   | 'childrenGeometryJson.children.id'
   | 'childrenGeometryJson.children.internal.content'
   | 'childrenGeometryJson.children.internal.contentDigest'
+  | 'childrenGeometryJson.children.internal.contentFilePath'
   | 'childrenGeometryJson.children.internal.description'
   | 'childrenGeometryJson.children.internal.fieldOwners'
   | 'childrenGeometryJson.children.internal.ignoreType'
@@ -905,6 +925,7 @@ type FileFieldsEnum =
   | 'childrenGeometryJson.id'
   | 'childrenGeometryJson.internal.content'
   | 'childrenGeometryJson.internal.contentDigest'
+  | 'childrenGeometryJson.internal.contentFilePath'
   | 'childrenGeometryJson.internal.description'
   | 'childrenGeometryJson.internal.fieldOwners'
   | 'childrenGeometryJson.internal.ignoreType'
@@ -918,6 +939,7 @@ type FileFieldsEnum =
   | 'childrenGeometryJson.parent.id'
   | 'childrenGeometryJson.parent.internal.content'
   | 'childrenGeometryJson.parent.internal.contentDigest'
+  | 'childrenGeometryJson.parent.internal.contentFilePath'
   | 'childrenGeometryJson.parent.internal.description'
   | 'childrenGeometryJson.parent.internal.fieldOwners'
   | 'childrenGeometryJson.parent.internal.ignoreType'
@@ -935,6 +957,7 @@ type FileFieldsEnum =
   | 'childrenImageSharp.children.id'
   | 'childrenImageSharp.children.internal.content'
   | 'childrenImageSharp.children.internal.contentDigest'
+  | 'childrenImageSharp.children.internal.contentFilePath'
   | 'childrenImageSharp.children.internal.description'
   | 'childrenImageSharp.children.internal.fieldOwners'
   | 'childrenImageSharp.children.internal.ignoreType'
@@ -969,6 +992,7 @@ type FileFieldsEnum =
   | 'childrenImageSharp.id'
   | 'childrenImageSharp.internal.content'
   | 'childrenImageSharp.internal.contentDigest'
+  | 'childrenImageSharp.internal.contentFilePath'
   | 'childrenImageSharp.internal.description'
   | 'childrenImageSharp.internal.fieldOwners'
   | 'childrenImageSharp.internal.ignoreType'
@@ -984,6 +1008,7 @@ type FileFieldsEnum =
   | 'childrenImageSharp.parent.id'
   | 'childrenImageSharp.parent.internal.content'
   | 'childrenImageSharp.parent.internal.contentDigest'
+  | 'childrenImageSharp.parent.internal.contentFilePath'
   | 'childrenImageSharp.parent.internal.description'
   | 'childrenImageSharp.parent.internal.fieldOwners'
   | 'childrenImageSharp.parent.internal.ignoreType'
@@ -1006,6 +1031,7 @@ type FileFieldsEnum =
   | 'childrenMetaJson.children.id'
   | 'childrenMetaJson.children.internal.content'
   | 'childrenMetaJson.children.internal.contentDigest'
+  | 'childrenMetaJson.children.internal.contentFilePath'
   | 'childrenMetaJson.children.internal.description'
   | 'childrenMetaJson.children.internal.fieldOwners'
   | 'childrenMetaJson.children.internal.ignoreType'
@@ -1018,13 +1044,14 @@ type FileFieldsEnum =
   | 'childrenMetaJson.gatsbyPath'
   | 'childrenMetaJson.general.description'
   | 'childrenMetaJson.general.from.city'
+  | 'childrenMetaJson.general.from.federalState'
   | 'childrenMetaJson.general.from.federal_state'
   | 'childrenMetaJson.general.length'
   | 'childrenMetaJson.general.name'
   | 'childrenMetaJson.general.ref'
   | 'childrenMetaJson.general.source'
   | 'childrenMetaJson.general.to.city'
-  | 'childrenMetaJson.general.to.federal_state'
+  | 'childrenMetaJson.general.to.federalState'
   | 'childrenMetaJson.geoJson.bbox'
   | 'childrenMetaJson.geoJson.children'
   | 'childrenMetaJson.geoJson.children.children'
@@ -1036,6 +1063,7 @@ type FileFieldsEnum =
   | 'childrenMetaJson.geoJson.id'
   | 'childrenMetaJson.geoJson.internal.content'
   | 'childrenMetaJson.geoJson.internal.contentDigest'
+  | 'childrenMetaJson.geoJson.internal.contentFilePath'
   | 'childrenMetaJson.geoJson.internal.description'
   | 'childrenMetaJson.geoJson.internal.fieldOwners'
   | 'childrenMetaJson.geoJson.internal.ignoreType'
@@ -1049,6 +1077,7 @@ type FileFieldsEnum =
   | 'childrenMetaJson.id'
   | 'childrenMetaJson.internal.content'
   | 'childrenMetaJson.internal.contentDigest'
+  | 'childrenMetaJson.internal.contentFilePath'
   | 'childrenMetaJson.internal.description'
   | 'childrenMetaJson.internal.fieldOwners'
   | 'childrenMetaJson.internal.ignoreType'
@@ -1062,6 +1091,7 @@ type FileFieldsEnum =
   | 'childrenMetaJson.parent.id'
   | 'childrenMetaJson.parent.internal.content'
   | 'childrenMetaJson.parent.internal.contentDigest'
+  | 'childrenMetaJson.parent.internal.contentFilePath'
   | 'childrenMetaJson.parent.internal.description'
   | 'childrenMetaJson.parent.internal.fieldOwners'
   | 'childrenMetaJson.parent.internal.ignoreType'
@@ -1136,6 +1166,7 @@ type FileFieldsEnum =
   | 'childrenMetaJson.staticMap.ino'
   | 'childrenMetaJson.staticMap.internal.content'
   | 'childrenMetaJson.staticMap.internal.contentDigest'
+  | 'childrenMetaJson.staticMap.internal.contentFilePath'
   | 'childrenMetaJson.staticMap.internal.description'
   | 'childrenMetaJson.staticMap.internal.fieldOwners'
   | 'childrenMetaJson.staticMap.internal.ignoreType'
@@ -1166,6 +1197,7 @@ type FileFieldsEnum =
   | 'children.children.id'
   | 'children.children.internal.content'
   | 'children.children.internal.contentDigest'
+  | 'children.children.internal.contentFilePath'
   | 'children.children.internal.description'
   | 'children.children.internal.fieldOwners'
   | 'children.children.internal.ignoreType'
@@ -1177,6 +1209,7 @@ type FileFieldsEnum =
   | 'children.id'
   | 'children.internal.content'
   | 'children.internal.contentDigest'
+  | 'children.internal.contentFilePath'
   | 'children.internal.description'
   | 'children.internal.fieldOwners'
   | 'children.internal.ignoreType'
@@ -1189,6 +1222,7 @@ type FileFieldsEnum =
   | 'children.parent.id'
   | 'children.parent.internal.content'
   | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.contentFilePath'
   | 'children.parent.internal.description'
   | 'children.parent.internal.fieldOwners'
   | 'children.parent.internal.ignoreType'
@@ -1209,6 +1243,7 @@ type FileFieldsEnum =
   | 'ino'
   | 'internal.content'
   | 'internal.contentDigest'
+  | 'internal.contentFilePath'
   | 'internal.description'
   | 'internal.fieldOwners'
   | 'internal.ignoreType'
@@ -1228,6 +1263,7 @@ type FileFieldsEnum =
   | 'parent.children.id'
   | 'parent.children.internal.content'
   | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.contentFilePath'
   | 'parent.children.internal.description'
   | 'parent.children.internal.fieldOwners'
   | 'parent.children.internal.ignoreType'
@@ -1239,6 +1275,7 @@ type FileFieldsEnum =
   | 'parent.id'
   | 'parent.internal.content'
   | 'parent.internal.contentDigest'
+  | 'parent.internal.contentFilePath'
   | 'parent.internal.description'
   | 'parent.internal.fieldOwners'
   | 'parent.internal.ignoreType'
@@ -1251,6 +1288,7 @@ type FileFieldsEnum =
   | 'parent.parent.id'
   | 'parent.parent.internal.content'
   | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.contentFilePath'
   | 'parent.parent.internal.description'
   | 'parent.parent.internal.fieldOwners'
   | 'parent.parent.internal.ignoreType'
@@ -1539,6 +1577,7 @@ type GeometryJsonFieldsEnum =
   | 'children.children.id'
   | 'children.children.internal.content'
   | 'children.children.internal.contentDigest'
+  | 'children.children.internal.contentFilePath'
   | 'children.children.internal.description'
   | 'children.children.internal.fieldOwners'
   | 'children.children.internal.ignoreType'
@@ -1550,6 +1589,7 @@ type GeometryJsonFieldsEnum =
   | 'children.id'
   | 'children.internal.content'
   | 'children.internal.contentDigest'
+  | 'children.internal.contentFilePath'
   | 'children.internal.description'
   | 'children.internal.fieldOwners'
   | 'children.internal.ignoreType'
@@ -1562,6 +1602,7 @@ type GeometryJsonFieldsEnum =
   | 'children.parent.id'
   | 'children.parent.internal.content'
   | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.contentFilePath'
   | 'children.parent.internal.description'
   | 'children.parent.internal.fieldOwners'
   | 'children.parent.internal.ignoreType'
@@ -1590,6 +1631,7 @@ type GeometryJsonFieldsEnum =
   | 'id'
   | 'internal.content'
   | 'internal.contentDigest'
+  | 'internal.contentFilePath'
   | 'internal.description'
   | 'internal.fieldOwners'
   | 'internal.ignoreType'
@@ -1604,6 +1646,7 @@ type GeometryJsonFieldsEnum =
   | 'parent.children.id'
   | 'parent.children.internal.content'
   | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.contentFilePath'
   | 'parent.children.internal.description'
   | 'parent.children.internal.fieldOwners'
   | 'parent.children.internal.ignoreType'
@@ -1615,6 +1658,7 @@ type GeometryJsonFieldsEnum =
   | 'parent.id'
   | 'parent.internal.content'
   | 'parent.internal.contentDigest'
+  | 'parent.internal.contentFilePath'
   | 'parent.internal.description'
   | 'parent.internal.fieldOwners'
   | 'parent.internal.ignoreType'
@@ -1627,6 +1671,7 @@ type GeometryJsonFieldsEnum =
   | 'parent.parent.id'
   | 'parent.parent.internal.content'
   | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.contentFilePath'
   | 'parent.parent.internal.description'
   | 'parent.parent.internal.fieldOwners'
   | 'parent.parent.internal.ignoreType'
@@ -1897,6 +1942,7 @@ type ImageSharpFieldsEnum =
   | 'children.children.id'
   | 'children.children.internal.content'
   | 'children.children.internal.contentDigest'
+  | 'children.children.internal.contentFilePath'
   | 'children.children.internal.description'
   | 'children.children.internal.fieldOwners'
   | 'children.children.internal.ignoreType'
@@ -1908,6 +1954,7 @@ type ImageSharpFieldsEnum =
   | 'children.id'
   | 'children.internal.content'
   | 'children.internal.contentDigest'
+  | 'children.internal.contentFilePath'
   | 'children.internal.description'
   | 'children.internal.fieldOwners'
   | 'children.internal.ignoreType'
@@ -1920,6 +1967,7 @@ type ImageSharpFieldsEnum =
   | 'children.parent.id'
   | 'children.parent.internal.content'
   | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.contentFilePath'
   | 'children.parent.internal.description'
   | 'children.parent.internal.fieldOwners'
   | 'children.parent.internal.ignoreType'
@@ -1954,6 +2002,7 @@ type ImageSharpFieldsEnum =
   | 'id'
   | 'internal.content'
   | 'internal.contentDigest'
+  | 'internal.contentFilePath'
   | 'internal.description'
   | 'internal.fieldOwners'
   | 'internal.ignoreType'
@@ -1970,6 +2019,7 @@ type ImageSharpFieldsEnum =
   | 'parent.children.id'
   | 'parent.children.internal.content'
   | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.contentFilePath'
   | 'parent.children.internal.description'
   | 'parent.children.internal.fieldOwners'
   | 'parent.children.internal.ignoreType'
@@ -1981,6 +2031,7 @@ type ImageSharpFieldsEnum =
   | 'parent.id'
   | 'parent.internal.content'
   | 'parent.internal.contentDigest'
+  | 'parent.internal.contentFilePath'
   | 'parent.internal.description'
   | 'parent.internal.fieldOwners'
   | 'parent.internal.ignoreType'
@@ -1993,6 +2044,7 @@ type ImageSharpFieldsEnum =
   | 'parent.parent.id'
   | 'parent.parent.internal.content'
   | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.contentFilePath'
   | 'parent.parent.internal.description'
   | 'parent.parent.internal.fieldOwners'
   | 'parent.parent.internal.ignoreType'
@@ -2170,6 +2222,7 @@ type IntQueryOperatorInput = {
 type Internal = {
   readonly content: Maybe<Scalars['String']>;
   readonly contentDigest: Scalars['String'];
+  readonly contentFilePath: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
   readonly fieldOwners: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly ignoreType: Maybe<Scalars['Boolean']>;
@@ -2181,6 +2234,7 @@ type Internal = {
 type InternalFilterInput = {
   readonly content: InputMaybe<StringQueryOperatorInput>;
   readonly contentDigest: InputMaybe<StringQueryOperatorInput>;
+  readonly contentFilePath: InputMaybe<StringQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
   readonly fieldOwners: InputMaybe<StringQueryOperatorInput>;
   readonly ignoreType: InputMaybe<BooleanQueryOperatorInput>;
@@ -2278,6 +2332,7 @@ type MetaJsonFieldsEnum =
   | 'children.children.id'
   | 'children.children.internal.content'
   | 'children.children.internal.contentDigest'
+  | 'children.children.internal.contentFilePath'
   | 'children.children.internal.description'
   | 'children.children.internal.fieldOwners'
   | 'children.children.internal.ignoreType'
@@ -2289,6 +2344,7 @@ type MetaJsonFieldsEnum =
   | 'children.id'
   | 'children.internal.content'
   | 'children.internal.contentDigest'
+  | 'children.internal.contentFilePath'
   | 'children.internal.description'
   | 'children.internal.fieldOwners'
   | 'children.internal.ignoreType'
@@ -2301,6 +2357,7 @@ type MetaJsonFieldsEnum =
   | 'children.parent.id'
   | 'children.parent.internal.content'
   | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.contentFilePath'
   | 'children.parent.internal.description'
   | 'children.parent.internal.fieldOwners'
   | 'children.parent.internal.ignoreType'
@@ -2313,13 +2370,14 @@ type MetaJsonFieldsEnum =
   | 'gatsbyPath'
   | 'general.description'
   | 'general.from.city'
+  | 'general.from.federalState'
   | 'general.from.federal_state'
   | 'general.length'
   | 'general.name'
   | 'general.ref'
   | 'general.source'
   | 'general.to.city'
-  | 'general.to.federal_state'
+  | 'general.to.federalState'
   | 'geoJson.bbox'
   | 'geoJson.children'
   | 'geoJson.children.children'
@@ -2328,6 +2386,7 @@ type MetaJsonFieldsEnum =
   | 'geoJson.children.id'
   | 'geoJson.children.internal.content'
   | 'geoJson.children.internal.contentDigest'
+  | 'geoJson.children.internal.contentFilePath'
   | 'geoJson.children.internal.description'
   | 'geoJson.children.internal.fieldOwners'
   | 'geoJson.children.internal.ignoreType'
@@ -2356,6 +2415,7 @@ type MetaJsonFieldsEnum =
   | 'geoJson.id'
   | 'geoJson.internal.content'
   | 'geoJson.internal.contentDigest'
+  | 'geoJson.internal.contentFilePath'
   | 'geoJson.internal.description'
   | 'geoJson.internal.fieldOwners'
   | 'geoJson.internal.ignoreType'
@@ -2369,6 +2429,7 @@ type MetaJsonFieldsEnum =
   | 'geoJson.parent.id'
   | 'geoJson.parent.internal.content'
   | 'geoJson.parent.internal.contentDigest'
+  | 'geoJson.parent.internal.contentFilePath'
   | 'geoJson.parent.internal.description'
   | 'geoJson.parent.internal.fieldOwners'
   | 'geoJson.parent.internal.ignoreType'
@@ -2381,6 +2442,7 @@ type MetaJsonFieldsEnum =
   | 'id'
   | 'internal.content'
   | 'internal.contentDigest'
+  | 'internal.contentFilePath'
   | 'internal.description'
   | 'internal.fieldOwners'
   | 'internal.ignoreType'
@@ -2395,6 +2457,7 @@ type MetaJsonFieldsEnum =
   | 'parent.children.id'
   | 'parent.children.internal.content'
   | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.contentFilePath'
   | 'parent.children.internal.description'
   | 'parent.children.internal.fieldOwners'
   | 'parent.children.internal.ignoreType'
@@ -2406,6 +2469,7 @@ type MetaJsonFieldsEnum =
   | 'parent.id'
   | 'parent.internal.content'
   | 'parent.internal.contentDigest'
+  | 'parent.internal.contentFilePath'
   | 'parent.internal.description'
   | 'parent.internal.fieldOwners'
   | 'parent.internal.ignoreType'
@@ -2418,6 +2482,7 @@ type MetaJsonFieldsEnum =
   | 'parent.parent.id'
   | 'parent.parent.internal.content'
   | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.contentFilePath'
   | 'parent.parent.internal.description'
   | 'parent.parent.internal.fieldOwners'
   | 'parent.parent.internal.ignoreType'
@@ -2453,6 +2518,7 @@ type MetaJsonFieldsEnum =
   | 'staticMap.childGeometryJson.id'
   | 'staticMap.childGeometryJson.internal.content'
   | 'staticMap.childGeometryJson.internal.contentDigest'
+  | 'staticMap.childGeometryJson.internal.contentFilePath'
   | 'staticMap.childGeometryJson.internal.description'
   | 'staticMap.childGeometryJson.internal.fieldOwners'
   | 'staticMap.childGeometryJson.internal.ignoreType'
@@ -2492,6 +2558,7 @@ type MetaJsonFieldsEnum =
   | 'staticMap.childImageSharp.id'
   | 'staticMap.childImageSharp.internal.content'
   | 'staticMap.childImageSharp.internal.contentDigest'
+  | 'staticMap.childImageSharp.internal.contentFilePath'
   | 'staticMap.childImageSharp.internal.description'
   | 'staticMap.childImageSharp.internal.fieldOwners'
   | 'staticMap.childImageSharp.internal.ignoreType'
@@ -2528,6 +2595,7 @@ type MetaJsonFieldsEnum =
   | 'staticMap.childMetaJson.id'
   | 'staticMap.childMetaJson.internal.content'
   | 'staticMap.childMetaJson.internal.contentDigest'
+  | 'staticMap.childMetaJson.internal.contentFilePath'
   | 'staticMap.childMetaJson.internal.description'
   | 'staticMap.childMetaJson.internal.fieldOwners'
   | 'staticMap.childMetaJson.internal.ignoreType'
@@ -2595,6 +2663,7 @@ type MetaJsonFieldsEnum =
   | 'staticMap.childrenGeometryJson.id'
   | 'staticMap.childrenGeometryJson.internal.content'
   | 'staticMap.childrenGeometryJson.internal.contentDigest'
+  | 'staticMap.childrenGeometryJson.internal.contentFilePath'
   | 'staticMap.childrenGeometryJson.internal.description'
   | 'staticMap.childrenGeometryJson.internal.fieldOwners'
   | 'staticMap.childrenGeometryJson.internal.ignoreType'
@@ -2635,6 +2704,7 @@ type MetaJsonFieldsEnum =
   | 'staticMap.childrenImageSharp.id'
   | 'staticMap.childrenImageSharp.internal.content'
   | 'staticMap.childrenImageSharp.internal.contentDigest'
+  | 'staticMap.childrenImageSharp.internal.contentFilePath'
   | 'staticMap.childrenImageSharp.internal.description'
   | 'staticMap.childrenImageSharp.internal.fieldOwners'
   | 'staticMap.childrenImageSharp.internal.ignoreType'
@@ -2672,6 +2742,7 @@ type MetaJsonFieldsEnum =
   | 'staticMap.childrenMetaJson.id'
   | 'staticMap.childrenMetaJson.internal.content'
   | 'staticMap.childrenMetaJson.internal.contentDigest'
+  | 'staticMap.childrenMetaJson.internal.contentFilePath'
   | 'staticMap.childrenMetaJson.internal.description'
   | 'staticMap.childrenMetaJson.internal.fieldOwners'
   | 'staticMap.childrenMetaJson.internal.ignoreType'
@@ -2732,6 +2803,7 @@ type MetaJsonFieldsEnum =
   | 'staticMap.children.id'
   | 'staticMap.children.internal.content'
   | 'staticMap.children.internal.contentDigest'
+  | 'staticMap.children.internal.contentFilePath'
   | 'staticMap.children.internal.description'
   | 'staticMap.children.internal.fieldOwners'
   | 'staticMap.children.internal.ignoreType'
@@ -2752,6 +2824,7 @@ type MetaJsonFieldsEnum =
   | 'staticMap.ino'
   | 'staticMap.internal.content'
   | 'staticMap.internal.contentDigest'
+  | 'staticMap.internal.contentFilePath'
   | 'staticMap.internal.description'
   | 'staticMap.internal.fieldOwners'
   | 'staticMap.internal.ignoreType'
@@ -2770,6 +2843,7 @@ type MetaJsonFieldsEnum =
   | 'staticMap.parent.id'
   | 'staticMap.parent.internal.content'
   | 'staticMap.parent.internal.contentDigest'
+  | 'staticMap.parent.internal.contentFilePath'
   | 'staticMap.parent.internal.description'
   | 'staticMap.parent.internal.fieldOwners'
   | 'staticMap.parent.internal.ignoreType'
@@ -2830,22 +2904,24 @@ type MetaJsonGeneralFilterInput = {
 
 type MetaJsonGeneralFrom = {
   readonly city: Maybe<Scalars['String']>;
+  readonly federalState: Maybe<Scalars['String']>;
   readonly federal_state: Maybe<Scalars['String']>;
 };
 
 type MetaJsonGeneralFromFilterInput = {
   readonly city: InputMaybe<StringQueryOperatorInput>;
+  readonly federalState: InputMaybe<StringQueryOperatorInput>;
   readonly federal_state: InputMaybe<StringQueryOperatorInput>;
 };
 
 type MetaJsonGeneralTo = {
   readonly city: Maybe<Scalars['String']>;
-  readonly federal_state: Maybe<Scalars['String']>;
+  readonly federalState: Maybe<Scalars['String']>;
 };
 
 type MetaJsonGeneralToFilterInput = {
   readonly city: InputMaybe<StringQueryOperatorInput>;
-  readonly federal_state: InputMaybe<StringQueryOperatorInput>;
+  readonly federalState: InputMaybe<StringQueryOperatorInput>;
 };
 
 type MetaJsonGroupConnection = {
@@ -3372,6 +3448,7 @@ type SiteBuildMetadataFieldsEnum =
   | 'children.children.id'
   | 'children.children.internal.content'
   | 'children.children.internal.contentDigest'
+  | 'children.children.internal.contentFilePath'
   | 'children.children.internal.description'
   | 'children.children.internal.fieldOwners'
   | 'children.children.internal.ignoreType'
@@ -3383,6 +3460,7 @@ type SiteBuildMetadataFieldsEnum =
   | 'children.id'
   | 'children.internal.content'
   | 'children.internal.contentDigest'
+  | 'children.internal.contentFilePath'
   | 'children.internal.description'
   | 'children.internal.fieldOwners'
   | 'children.internal.ignoreType'
@@ -3395,6 +3473,7 @@ type SiteBuildMetadataFieldsEnum =
   | 'children.parent.id'
   | 'children.parent.internal.content'
   | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.contentFilePath'
   | 'children.parent.internal.description'
   | 'children.parent.internal.fieldOwners'
   | 'children.parent.internal.ignoreType'
@@ -3406,6 +3485,7 @@ type SiteBuildMetadataFieldsEnum =
   | 'id'
   | 'internal.content'
   | 'internal.contentDigest'
+  | 'internal.contentFilePath'
   | 'internal.description'
   | 'internal.fieldOwners'
   | 'internal.ignoreType'
@@ -3419,6 +3499,7 @@ type SiteBuildMetadataFieldsEnum =
   | 'parent.children.id'
   | 'parent.children.internal.content'
   | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.contentFilePath'
   | 'parent.children.internal.description'
   | 'parent.children.internal.fieldOwners'
   | 'parent.children.internal.ignoreType'
@@ -3430,6 +3511,7 @@ type SiteBuildMetadataFieldsEnum =
   | 'parent.id'
   | 'parent.internal.content'
   | 'parent.internal.contentDigest'
+  | 'parent.internal.contentFilePath'
   | 'parent.internal.description'
   | 'parent.internal.fieldOwners'
   | 'parent.internal.ignoreType'
@@ -3442,6 +3524,7 @@ type SiteBuildMetadataFieldsEnum =
   | 'parent.parent.id'
   | 'parent.parent.internal.content'
   | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.contentFilePath'
   | 'parent.parent.internal.description'
   | 'parent.parent.internal.fieldOwners'
   | 'parent.parent.internal.ignoreType'
@@ -3560,6 +3643,7 @@ type SiteFieldsEnum =
   | 'children.children.id'
   | 'children.children.internal.content'
   | 'children.children.internal.contentDigest'
+  | 'children.children.internal.contentFilePath'
   | 'children.children.internal.description'
   | 'children.children.internal.fieldOwners'
   | 'children.children.internal.ignoreType'
@@ -3571,6 +3655,7 @@ type SiteFieldsEnum =
   | 'children.id'
   | 'children.internal.content'
   | 'children.internal.contentDigest'
+  | 'children.internal.contentFilePath'
   | 'children.internal.description'
   | 'children.internal.fieldOwners'
   | 'children.internal.ignoreType'
@@ -3583,6 +3668,7 @@ type SiteFieldsEnum =
   | 'children.parent.id'
   | 'children.parent.internal.content'
   | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.contentFilePath'
   | 'children.parent.internal.description'
   | 'children.parent.internal.fieldOwners'
   | 'children.parent.internal.ignoreType'
@@ -3591,11 +3677,13 @@ type SiteFieldsEnum =
   | 'children.parent.internal.type'
   | 'children.parent.parent.children'
   | 'children.parent.parent.id'
+  | 'graphqlTypegen.generateOnBuild'
   | 'graphqlTypegen.typesOutputPath'
   | 'host'
   | 'id'
   | 'internal.content'
   | 'internal.contentDigest'
+  | 'internal.contentFilePath'
   | 'internal.description'
   | 'internal.fieldOwners'
   | 'internal.ignoreType'
@@ -3610,6 +3698,7 @@ type SiteFieldsEnum =
   | 'parent.children.id'
   | 'parent.children.internal.content'
   | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.contentFilePath'
   | 'parent.children.internal.description'
   | 'parent.children.internal.fieldOwners'
   | 'parent.children.internal.ignoreType'
@@ -3621,6 +3710,7 @@ type SiteFieldsEnum =
   | 'parent.id'
   | 'parent.internal.content'
   | 'parent.internal.contentDigest'
+  | 'parent.internal.contentFilePath'
   | 'parent.internal.description'
   | 'parent.internal.fieldOwners'
   | 'parent.internal.ignoreType'
@@ -3633,6 +3723,7 @@ type SiteFieldsEnum =
   | 'parent.parent.id'
   | 'parent.parent.internal.content'
   | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.contentFilePath'
   | 'parent.parent.internal.description'
   | 'parent.parent.internal.fieldOwners'
   | 'parent.parent.internal.ignoreType'
@@ -3734,6 +3825,7 @@ type SiteFunctionFieldsEnum =
   | 'children.children.id'
   | 'children.children.internal.content'
   | 'children.children.internal.contentDigest'
+  | 'children.children.internal.contentFilePath'
   | 'children.children.internal.description'
   | 'children.children.internal.fieldOwners'
   | 'children.children.internal.ignoreType'
@@ -3745,6 +3837,7 @@ type SiteFunctionFieldsEnum =
   | 'children.id'
   | 'children.internal.content'
   | 'children.internal.contentDigest'
+  | 'children.internal.contentFilePath'
   | 'children.internal.description'
   | 'children.internal.fieldOwners'
   | 'children.internal.ignoreType'
@@ -3757,6 +3850,7 @@ type SiteFunctionFieldsEnum =
   | 'children.parent.id'
   | 'children.parent.internal.content'
   | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.contentFilePath'
   | 'children.parent.internal.description'
   | 'children.parent.internal.fieldOwners'
   | 'children.parent.internal.ignoreType'
@@ -3769,6 +3863,7 @@ type SiteFunctionFieldsEnum =
   | 'id'
   | 'internal.content'
   | 'internal.contentDigest'
+  | 'internal.contentFilePath'
   | 'internal.description'
   | 'internal.fieldOwners'
   | 'internal.ignoreType'
@@ -3785,6 +3880,7 @@ type SiteFunctionFieldsEnum =
   | 'parent.children.id'
   | 'parent.children.internal.content'
   | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.contentFilePath'
   | 'parent.children.internal.description'
   | 'parent.children.internal.fieldOwners'
   | 'parent.children.internal.ignoreType'
@@ -3796,6 +3892,7 @@ type SiteFunctionFieldsEnum =
   | 'parent.id'
   | 'parent.internal.content'
   | 'parent.internal.contentDigest'
+  | 'parent.internal.contentFilePath'
   | 'parent.internal.description'
   | 'parent.internal.fieldOwners'
   | 'parent.internal.ignoreType'
@@ -3808,6 +3905,7 @@ type SiteFunctionFieldsEnum =
   | 'parent.parent.id'
   | 'parent.parent.internal.content'
   | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.contentFilePath'
   | 'parent.parent.internal.description'
   | 'parent.parent.internal.fieldOwners'
   | 'parent.parent.internal.ignoreType'
@@ -3880,10 +3978,12 @@ type SiteFunctionSortInput = {
 };
 
 type SiteGraphqlTypegen = {
+  readonly generateOnBuild: Maybe<Scalars['Boolean']>;
   readonly typesOutputPath: Maybe<Scalars['String']>;
 };
 
 type SiteGraphqlTypegenFilterInput = {
+  readonly generateOnBuild: InputMaybe<BooleanQueryOperatorInput>;
   readonly typesOutputPath: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -3996,6 +4096,7 @@ type SitePageFieldsEnum =
   | 'children.children.id'
   | 'children.children.internal.content'
   | 'children.children.internal.contentDigest'
+  | 'children.children.internal.contentFilePath'
   | 'children.children.internal.description'
   | 'children.children.internal.fieldOwners'
   | 'children.children.internal.ignoreType'
@@ -4007,6 +4108,7 @@ type SitePageFieldsEnum =
   | 'children.id'
   | 'children.internal.content'
   | 'children.internal.contentDigest'
+  | 'children.internal.contentFilePath'
   | 'children.internal.description'
   | 'children.internal.fieldOwners'
   | 'children.internal.ignoreType'
@@ -4019,6 +4121,7 @@ type SitePageFieldsEnum =
   | 'children.parent.id'
   | 'children.parent.internal.content'
   | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.contentFilePath'
   | 'children.parent.internal.description'
   | 'children.parent.internal.fieldOwners'
   | 'children.parent.internal.ignoreType'
@@ -4033,6 +4136,7 @@ type SitePageFieldsEnum =
   | 'internalComponentName'
   | 'internal.content'
   | 'internal.contentDigest'
+  | 'internal.contentFilePath'
   | 'internal.description'
   | 'internal.fieldOwners'
   | 'internal.ignoreType'
@@ -4048,6 +4152,7 @@ type SitePageFieldsEnum =
   | 'parent.children.id'
   | 'parent.children.internal.content'
   | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.contentFilePath'
   | 'parent.children.internal.description'
   | 'parent.children.internal.fieldOwners'
   | 'parent.children.internal.ignoreType'
@@ -4059,6 +4164,7 @@ type SitePageFieldsEnum =
   | 'parent.id'
   | 'parent.internal.content'
   | 'parent.internal.contentDigest'
+  | 'parent.internal.contentFilePath'
   | 'parent.internal.description'
   | 'parent.internal.fieldOwners'
   | 'parent.internal.ignoreType'
@@ -4071,6 +4177,7 @@ type SitePageFieldsEnum =
   | 'parent.parent.id'
   | 'parent.parent.internal.content'
   | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.contentFilePath'
   | 'parent.parent.internal.description'
   | 'parent.parent.internal.fieldOwners'
   | 'parent.parent.internal.ignoreType'
@@ -4088,6 +4195,7 @@ type SitePageFieldsEnum =
   | 'pluginCreator.children.id'
   | 'pluginCreator.children.internal.content'
   | 'pluginCreator.children.internal.contentDigest'
+  | 'pluginCreator.children.internal.contentFilePath'
   | 'pluginCreator.children.internal.description'
   | 'pluginCreator.children.internal.fieldOwners'
   | 'pluginCreator.children.internal.ignoreType'
@@ -4099,6 +4207,7 @@ type SitePageFieldsEnum =
   | 'pluginCreator.id'
   | 'pluginCreator.internal.content'
   | 'pluginCreator.internal.contentDigest'
+  | 'pluginCreator.internal.contentFilePath'
   | 'pluginCreator.internal.description'
   | 'pluginCreator.internal.fieldOwners'
   | 'pluginCreator.internal.ignoreType'
@@ -4114,6 +4223,7 @@ type SitePageFieldsEnum =
   | 'pluginCreator.parent.id'
   | 'pluginCreator.parent.internal.content'
   | 'pluginCreator.parent.internal.contentDigest'
+  | 'pluginCreator.parent.internal.contentFilePath'
   | 'pluginCreator.parent.internal.description'
   | 'pluginCreator.parent.internal.fieldOwners'
   | 'pluginCreator.parent.internal.ignoreType'
@@ -4259,6 +4369,7 @@ type SitePluginFieldsEnum =
   | 'children.children.id'
   | 'children.children.internal.content'
   | 'children.children.internal.contentDigest'
+  | 'children.children.internal.contentFilePath'
   | 'children.children.internal.description'
   | 'children.children.internal.fieldOwners'
   | 'children.children.internal.ignoreType'
@@ -4270,6 +4381,7 @@ type SitePluginFieldsEnum =
   | 'children.id'
   | 'children.internal.content'
   | 'children.internal.contentDigest'
+  | 'children.internal.contentFilePath'
   | 'children.internal.description'
   | 'children.internal.fieldOwners'
   | 'children.internal.ignoreType'
@@ -4282,6 +4394,7 @@ type SitePluginFieldsEnum =
   | 'children.parent.id'
   | 'children.parent.internal.content'
   | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.contentFilePath'
   | 'children.parent.internal.description'
   | 'children.parent.internal.fieldOwners'
   | 'children.parent.internal.ignoreType'
@@ -4293,6 +4406,7 @@ type SitePluginFieldsEnum =
   | 'id'
   | 'internal.content'
   | 'internal.contentDigest'
+  | 'internal.contentFilePath'
   | 'internal.description'
   | 'internal.fieldOwners'
   | 'internal.ignoreType'
@@ -4309,6 +4423,7 @@ type SitePluginFieldsEnum =
   | 'parent.children.id'
   | 'parent.children.internal.content'
   | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.contentFilePath'
   | 'parent.children.internal.description'
   | 'parent.children.internal.fieldOwners'
   | 'parent.children.internal.ignoreType'
@@ -4320,6 +4435,7 @@ type SitePluginFieldsEnum =
   | 'parent.id'
   | 'parent.internal.content'
   | 'parent.internal.contentDigest'
+  | 'parent.internal.contentFilePath'
   | 'parent.internal.description'
   | 'parent.internal.fieldOwners'
   | 'parent.internal.ignoreType'
@@ -4332,6 +4448,7 @@ type SitePluginFieldsEnum =
   | 'parent.parent.id'
   | 'parent.parent.internal.content'
   | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.contentFilePath'
   | 'parent.parent.internal.description'
   | 'parent.parent.internal.fieldOwners'
   | 'parent.parent.internal.ignoreType'
@@ -4451,6 +4568,25 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
+type FederalStateFromIndexQueryVariables = Exact<{
+  general__from__federalState: Scalars['String'];
+}>;
+
+
+type FederalStateFromIndexQuery = { readonly from: { readonly nodes: ReadonlyArray<{ readonly state: string | null, readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> }, readonly to: { readonly nodes: ReadonlyArray<{ readonly state: string | null, readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> } };
+
+type FederalStatesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type FederalStatesQuery = { readonly radschnellwege: { readonly nodes: ReadonlyArray<{ readonly fromPath: string | null, readonly toPath: string | null, readonly general: { readonly from: { readonly federalState: string | null } | null, readonly to: { readonly federalState: string | null } | null } | null }> } };
+
+type FederalStateToIndexQueryVariables = Exact<{
+  general__to__federalState: Scalars['String'];
+}>;
+
+
+type FederalStateToIndexQuery = { readonly from: { readonly nodes: ReadonlyArray<{ readonly state: string | null, readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> }, readonly to: { readonly nodes: ReadonlyArray<{ readonly state: string | null, readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> } };
+
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 
 type GatsbyImageSharpFixed_noBase64Fragment = { readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
@@ -4482,12 +4618,12 @@ type SteckbriefQueryVariables = Exact<{
 }>;
 
 
-type SteckbriefQuery = { readonly geometry: { readonly type: string | null, readonly bbox: ReadonlyArray<number | null> | null, readonly id: string | null, readonly features: ReadonlyArray<{ readonly type: string | null, readonly bbox: ReadonlyArray<number | null> | null, readonly geometry: { readonly coordinates: ReadonlyArray<ReadonlyArray<ReadonlyArray<number | null> | null> | null> | null, readonly type: string | null } | null, readonly properties: { readonly variant: string | null, readonly state: string | null, readonly planning_phase: string | null, readonly length: number | null, readonly id_rsv: string | null, readonly id: string | null, readonly detail_level: string | null, readonly discarded: boolean | null } | null } | null> | null } | null, readonly meta: { readonly cost: string | null, readonly state: string | null, readonly general: { readonly description: string | null, readonly name: string | null, readonly ref: string | null, readonly source: string | null, readonly length: number | null, readonly from: { readonly city: string | null, readonly federal_state: string | null } | null, readonly to: { readonly city: string | null, readonly federal_state: string | null } | null } | null, readonly references: { readonly website: string | null } | null, readonly staticMap: { readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } } | null };
+type SteckbriefQuery = { readonly geometry: { readonly type: string | null, readonly bbox: ReadonlyArray<number | null> | null, readonly id: string | null, readonly features: ReadonlyArray<{ readonly type: string | null, readonly bbox: ReadonlyArray<number | null> | null, readonly geometry: { readonly coordinates: ReadonlyArray<ReadonlyArray<ReadonlyArray<number | null> | null> | null> | null, readonly type: string | null } | null, readonly properties: { readonly variant: string | null, readonly state: string | null, readonly planning_phase: string | null, readonly length: number | null, readonly id_rsv: string | null, readonly id: string | null, readonly detail_level: string | null, readonly discarded: boolean | null } | null } | null> | null } | null, readonly meta: { readonly cost: string | null, readonly state: string | null, readonly general: { readonly description: string | null, readonly name: string | null, readonly ref: string | null, readonly source: string | null, readonly length: number | null, readonly from: { readonly city: string | null, readonly federalState: string | null } | null, readonly to: { readonly city: string | null, readonly federalState: string | null } | null } | null, readonly references: { readonly website: string | null } | null, readonly staticMap: { readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } } | null };
 
 type SteckbriefeIndexQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type SteckbriefeIndexQuery = { readonly radschnellwege: { readonly nodes: ReadonlyArray<{ readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> } };
+type SteckbriefeIndexQuery = { readonly allMetaJson: { readonly radschnellwege: ReadonlyArray<{ readonly state: string | null, readonly jsonId: string | null, readonly general: { readonly ref: string | null, readonly name: string | null, readonly description: string | null } | null, readonly staticMap: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } }> } };
 
 
 }

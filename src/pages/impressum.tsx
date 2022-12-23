@@ -6,7 +6,7 @@ import {
   ExternalImageLink,
   MailToLink,
 } from '~/components/Links';
-import BmdvFundingImage from '~/static/BMDV-Foerderung.svg';
+import BmdvFundingImage from '~/images/BMDV-Foerderung.svg';
 
 const ImprintPage = () => {
   return (
@@ -85,7 +85,7 @@ const ImprintPage = () => {
         Diese Website wird im Rahmen des NRVP-Projektes
         &ldquo;Baukasten-RSV&rdquo; vom Bundesministerium für Digitales und
         Verkehr (BMDV) gefördert (Förderkennzeichen VB2025,{' '}
-        <ExternalLink href="https://nationaler-radverkehrsplan.de/de/praxis/modulares-system-fuer-radschnellverbindungen">
+        <ExternalLink href="https://www.mobilitaetsforum.bund.de/DE/Themen/Wissenspool/Projekte/Projektbeispiele/Projekte/22936_modulares_system_fuer_radschnellverbindu.html">
           <strong>Projektsteckbrief</strong>)
         </ExternalLink>
       </p>

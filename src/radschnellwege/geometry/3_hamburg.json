@@ -15,7 +15,7 @@
         "id_rsv": "3-hamburg",
         "planning_phase": "preliminary",
         "detail_level": "rough",
-        "variant": null,
+        "variant": "Vorzugstrasse",
         "discarded": false,
         "description:planning_phase": null,
         "stand": "20.04.2022",
