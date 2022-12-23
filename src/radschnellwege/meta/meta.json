@@ -399,7 +399,7 @@
       "name": "Ditzingen  -  Weil  der  Stadt",
       "from": {
         "city": "Ditzingen",
-        "federal_state": "Baden-W\u00fcrttemberg"
+        "federalState": "Baden-W\u00fcrttemberg"
       },
       "to": {
         "city": "Weil  der  Stadt",
