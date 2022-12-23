@@ -346,7 +346,7 @@
         "federalState": "Baden-W\u00fcrttemberg"
       },
       "length": 23.0,
-      "description": "Im  Sommer  2018  stellte  der  Landkreis  G\u00f6ppingen  seine  Machbarkeitsstudie  zu  einer  Radschnellverbindung  im  Filstal  fertig:  Im  Rahmen  einer  umfassenden  Variantenbewertung  wurden  in  vier  Untersuchungsabschnitten  insgesamt  11  m\u00f6gliche  Trassenf\u00fchrungen  untersucht  und  bewertet.  Die  Vorzugstrasse  wurde  im  Sommer  2019  auf  Basis  der  Variantenbewertung  und  in  Abstimmung  mit  allen  Beteiligten  definiert",
+      "description": "Im  Sommer  2018  stellte  der  Landkreis  G\u00f6ppingen  seine  Machbarkeitsstudie  zu  einer  Radschnellverbindung  im  Filstal  fertig:  Im  Rahmen  einer  umfassenden  Variantenbewertung  wurden  in  vier  Untersuchungsabschnitten  insgesamt  11  m\u00f6gliche  Trassenf\u00fchrungen  untersucht  und  bewertet.  Die  Vorzugstrasse  wurde  im  Sommer  2019  auf  Basis  der  Variantenbewertung  und  in  Abstimmung  mit  allen  Beteiligten  definiert. Die Online-Bürgerbeteiligung fand bis September 2022 statt.",
       "source": "https://www.landkreis-goeppingen.de/start/Landratsamt/radschnellverbindung+filstal.html"
     },
     "stakeholders": [
@@ -396,9 +396,9 @@
     "finished": null,
     "general": {
       "ref": "RS17",
-      "name": "Korntal-M\u00fcnchingen  -  Weil  der  Stadt",
+      "name": "Ditzingen  -  Weil  der  Stadt",
       "from": {
-        "city": "Korntal-M\u00fcnchingen",
+        "city": "Ditzingen",
         "federalState": "Baden-W\u00fcrttemberg"
       },
       "to": {
@@ -660,12 +660,12 @@
     }
   },
   {
-    "id": "8-baden-wuerttemberg",
+    "id": "rs21-baden-wuerttemberg",
     "cost": "",
     "state": "idea",
     "finished": null,
     "general": {
-      "ref": "8",
+      "ref": "RS21",
       "name": "Radschnellverbindung  Bietigheim-Bissingen  \u2013  Stuttgart",
       "from": {
         "city": "Bietigheim-Bissingen",
@@ -676,7 +676,7 @@
         "federalState": "Baden-W\u00fcrttemberg"
       },
       "length": 15.0,
-      "description": "Gemeinschaftsprojekt  des  Rems-Murr-Kreises  (Federf\u00fchrung)  mit  dem  Landkreis  Ludwigsburg  und  den  St\u00e4dten  Ludwigsburg,  Waiblingen  und  Remseck  am  Neckar",
+      "description": "Umsetzung durch das Regierungspräsidium Stuttgart. Förderung durch das Bundesministerium für Digitales und Verkehr mit einem Fördersatz von 75%.",
       "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     },
     "stakeholders": [
@@ -706,7 +706,7 @@
         "federalState": "Baden-W\u00fcrttemberg"
       },
       "length": 20.0,
-      "description": "Machbarkeitsstudie  unter  Federf\u00fchrung  des  Landkreises  Ludwigsburg  abgeschlossen. Aktuell  laufen  Vorplanungen  in  Zust\u00e4ndigkeit  des  Landkreises",
+      "description": "Wird voraussichtlich als Radvorrangroute realisiert. Machbarkeitsstudie  unter  Federf\u00fchrung  des  Landkreises  Ludwigsburg  abgeschlossen. Aktuell  laufen  Vorplanungen  in  Zust\u00e4ndigkeit  des  Landkreises",
       "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     },
     "stakeholders": [
