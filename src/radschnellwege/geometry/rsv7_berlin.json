@@ -13,7 +13,7 @@
       "type": "Feature",
       "properties": {
         "id": "1",
-        "variant": "Vorzugsvariante",
+        "variant": "Vorzugstrasse",
         "id_rsv": "RSV 7",
         "state": "idea",
         "detail_level": "corridor",

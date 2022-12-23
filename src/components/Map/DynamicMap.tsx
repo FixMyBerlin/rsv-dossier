@@ -8,7 +8,7 @@ import {
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import React, { useState } from 'react';
-import Map from 'react-map-gl';
+import Map, { FullscreenControl } from 'react-map-gl';
 import { maptilerBaseUrl, maptilerKey } from '~/utils';
 import { RSVPopup, RSVSegment } from '.';
 
@@ -58,24 +58,23 @@ export const DynamicMap: React.FC<
       interactiveLayerIds={geometry.features.map(
         ({ properties }) => properties.id
       )}
+
       // disabled until popup has real content
       // onClick={updateInfo}
       // cursor={cursorStyle}
       // onMouseEnter={() => setCursorStyle('pointer')}
       // onMouseLeave={() => setCursorStyle('grab')}
     >
-      {geometry.features
-        .filter(
-          (feature: GeoJSON.Feature<GeoJSON.MultiLineString>) =>
-            !feature.properties.discarded
-        )
-        .map((feature: GeoJSON.Feature<GeoJSON.MultiLineString>) => (
+      <FullscreenControl style={{ background: '#D9D9D9' }} />
+      {geometry.features.map(
+        (feature: Queries.SteckbriefQuery['geometry']['features'][number]) => (
           <RSVSegment
             key={feature.properties.id}
             feature={feature}
             selected={selected}
           />
-        ))}
+        )
+      )}
       <RSVPopup info={info} selected={selected} setSelected={setSelected} />
     </Map>
   );

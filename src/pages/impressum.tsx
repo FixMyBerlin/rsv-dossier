@@ -6,7 +6,7 @@ import {
   ExternalImageLink,
   MailToLink,
 } from '~/components/Links';
-import BmdvFundingImage from '~/static/BMDV-Foerderung.svg';
+import BmdvFundingImage from '~/images/BMDV-Foerderung.svg';
 
 const ImprintPage = () => {
   return (

@@ -416,7 +416,7 @@
       },
       "properties": {
         "id": "2",
-        "variant": "Derzeitige Vorzugsvariante (Ausbaustufe 2)",
+        "variant": "Vorzugstrasse",
         "id_rsv": "RSV 1",
         "state": "agreement_process",
         "detail_level": "rough",
@@ -631,7 +631,7 @@
       },
       "properties": {
         "id": "3",
-        "variant": "Weitere Alternative",
+        "variant": "Alternative",
         "id_rsv": "RSV 1",
         "state": "idea",
         "detail_level": "rough",
@@ -739,7 +739,7 @@
       },
       "properties": {
         "id": "4",
-        "variant": "Derzeitige Vorzugsvariante (Ausbaustufe 1)",
+        "variant": "Vorzugstrasse",
         "id_rsv": "RSV 1",
         "state": "agreement_process",
         "detail_level": "rough",

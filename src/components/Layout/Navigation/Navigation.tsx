@@ -7,7 +7,8 @@ import {
   NavigationMenuItemMobile,
   NavigationMobileMenuButton,
 } from '.';
-import { Logo } from '../Logo';
+
+import Logo from './assets/RSVLogo.svg';
 import { navigationLinks } from './navigationLinks.const';
 // import { StaticImage } from 'gatsby-plugin-image';
 
@@ -23,13 +24,14 @@ export const Navigation = ({ location }) => {
           <div className="px-12">
             <div className="flex h-24 justify-between py-2">
               <nav className="flex w-full items-center justify-between">
-                <div className="flex flex-shrink-0 items-center">
-                  {!isHome(location) && (
+                <div className="w-48">
+                  {!isHome(location) ? (
                     <Link to="/">
                       <Logo />
                     </Link>
+                  ) : (
+                    isHome(location) && <Logo />
                   )}
-                  {isHome(location) && <Logo />}
                 </div>
                 <div className="hidden md:flex md:space-x-10">
                   {navigationLinks.map((link) => (
