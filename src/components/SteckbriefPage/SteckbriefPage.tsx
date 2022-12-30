@@ -4,13 +4,14 @@ import { RSVMap } from '~/components/Map';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { SteckbriefPageProgressBar } from '~/components/SteckbriefPage';
 import { Heading2 } from '~/components/Text';
+import { Footer } from '../Layout';
 
 export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
   meta,
   geometry,
 }) => {
   return (
-    <div className="relative min-h-[860px] bg-white">
+    <div className="relative min-h-[860px] bg-white lg:grid lg:grid-cols-2">
       <div className="mx-auto flex aspect-square max-h-[860px] max-w-full overflow-hidden md:max-w-[860px] lg:absolute lg:left-0 lg:w-1/2 lg:shadow-xl">
         <RSVMap meta={meta} geometry={geometry} />
       </div>
@@ -53,6 +54,7 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
             ca. {meta.general.length.toLocaleString('de-DE')}&thinsp;km
           </p>
         </div>
+        <Footer />
       </div>
     </div>
   );
