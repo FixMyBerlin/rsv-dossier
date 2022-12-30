@@ -13,7 +13,7 @@ const Radschnellweg: React.FC<PageProps<Queries.SteckbriefQuery>> = ({
     : meta.general.name;
 
   return (
-    <Layout>
+    <Layout footer={false}>
       <HelmetSeo
         title={name}
         description={meta.general.description}
