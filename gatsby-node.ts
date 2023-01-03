@@ -99,6 +99,10 @@ export const createSchemaCustomization = ({
   actions: { createTypes, createFieldExtension },
 }) => {
   if (process.env.FAST_BUILD === '1') {
+    // eslint-disable-next-line no-console
+    console.info(
+      'createSchemaCustomization() will run with process.env.FAST_BUILD=1'
+    );
     createFieldExtension({
       name: 'defaultMap',
       extend() {
@@ -120,6 +124,10 @@ export const createSchemaCustomization = ({
     }
   `);
   } else {
+    // eslint-disable-next-line no-console
+    console.info(
+      'createSchemaCustomization() will run with process.env.FAST_BUILD=0/null and not generate staticMaps'
+    );
     createTypes(`
     type MetaJson implements Node {
       geoJson: GeometryJson! @link(from: "jsonId", by: "name")
