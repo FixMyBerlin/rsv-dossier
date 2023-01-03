@@ -10,10 +10,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import React, { useEffect, useState } from 'react';
 import Map, { FullscreenControl } from 'react-map-gl';
 import { maptilerBaseUrl, maptilerKey } from '~/utils';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import resolveConfig from 'tailwindcss/resolveConfig';
 import { RSVPopup, RSVSegment } from '.';
-import tailwindConfig from '../../../tailwind.config';
 
 type BBox2d = [number, number, number, number];
 
@@ -47,18 +44,11 @@ export const DynamicMap: React.FC<
   // };
   // const [cursorStyle, setCursorStyle] = useState('grab');
 
-  // eslint-disable-next-line prefer-const
-  let [isScreenHorizontal, setIsScreenHorizontal] = useState(false);
+  const [isScreenHorizontal, setIsScreenHorizontal] = useState(false);
 
   useEffect(() => {
-    // https://tailwindcss.com/docs/configuration: Note that this will transitively pull in a lot of our build-time dependencies, resulting in bigger client-side bundle size. To avoid this, we recommend using a tool like babel-plugin-preval to generate a static version of your configuration at build-time.
-    // eslint-disable-next-line prefer-const
-    let lgMediaQuery = window.matchMedia(
-      `(min-width: ${resolveConfig(tailwindConfig).theme.screens.lg})`
-    );
-    // fullConfig.theme.screens.lg;
-    // => '1024px'
-
+    // reminder: hard coded breakpoint lg tailwind css - has to be changed if tailwind.config.ts is changed
+    const lgMediaQuery = window.matchMedia('(min-width: 1024px)');
     function onMediaQueryChange({ matches }) {
       setIsScreenHorizontal(matches);
     }
@@ -70,6 +60,7 @@ export const DynamicMap: React.FC<
       lgMediaQuery.removeEventListener('change', onMediaQueryChange);
     };
   }, []);
+
   return (
     <Map
       initialViewState={{
