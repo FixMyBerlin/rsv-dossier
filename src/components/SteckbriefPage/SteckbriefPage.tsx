@@ -1,9 +1,9 @@
+import 'maplibre-gl/dist/maplibre-gl.css';
 import React from 'react';
 import { ButtonLink } from '~/components/Links';
 import { RSVMap } from '~/components/Map';
-import 'maplibre-gl/dist/maplibre-gl.css';
 import { SteckbriefPageProgressBar } from '~/components/SteckbriefPage';
-import { Heading2 } from '~/components/Text';
+import { Heading2, Heading3 } from '~/components/Text';
 
 export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
   meta,
@@ -24,7 +24,7 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
           <div className="mt-6">
             <SteckbriefPageProgressBar currentState={meta.state} />
           </div>
-          <Heading2>Kurzfassung</Heading2>
+          <Heading3>Kurzfassung</Heading3>
           {meta.general.description && (
             <p className="text-lg text-gray-500">
               {meta.general.description}
@@ -44,14 +44,19 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
               Projektwebsite
             </ButtonLink>
           )}
-          <Heading2>Trassenführung</Heading2>
+          <Heading2>Projektdetails</Heading2>
+          <Heading3>Trassenführung (von X nach Y)</Heading3>
           <p className="text-lg text-gray-500 sm:text-xl">
             {`${meta.general.from.city} - ${meta.general.to.city}`}
           </p>
-          <Heading2>Länge</Heading2>
+          <Heading3>Länge</Heading3>
           <p className="text-lg text-gray-500 sm:text-xl">
             ca. {meta.general.length.toLocaleString('de-DE')}&thinsp;km
           </p>
+          {/* <Heading3>Zuständigkeit</Heading3>
+          <p className="text-lg text-gray-500 sm:text-xl">todo</p>
+          <Heading3>Stand</Heading3>
+          <p className="text-lg text-gray-500 sm:text-xl">todo</p> */}
         </div>
       </div>
     </div>
