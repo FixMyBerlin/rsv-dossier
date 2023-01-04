@@ -19,7 +19,7 @@ export const Layout: React.FC<Props> = ({
 }) => {
   return (
     <div className="flex h-full flex-col">
-      {navigation && <Navigation location={location} />}
+      {navigation && <Navigation fixed={false} location={location} />}
       {navigation && (
         <main className={classNames(className, 'z-0 flex-grow bg-white')}>
           {children}

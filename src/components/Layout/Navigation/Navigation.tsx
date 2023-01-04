@@ -2,6 +2,7 @@ import { Disclosure } from '@headlessui/react';
 import { Link } from 'gatsby';
 import React from 'react';
 import { isHome } from '~/utils';
+
 import {
   NavigationMenuItemDesktop,
   NavigationMenuItemMobile,
@@ -10,14 +11,17 @@ import {
 
 import Logo from './assets/RSVLogo.svg';
 import { navigationLinks } from './navigationLinks.const';
+
 // import { StaticImage } from 'gatsby-plugin-image';
 
-export const Navigation = ({ location }) => {
+export const Navigation = ({ location, fixed }) => {
   return (
     // https://tailwindui.com/components/application-ui/navigation/navbars
     <Disclosure
       as="nav"
-      className="z-20 bg-gray-50 shadow-md shadow-gray-400/5"
+      className={`${
+        fixed ? 'fixed top-0 right-0 left-0' : ''
+      } z-20 bg-gray-50 shadow-md shadow-gray-400/5`}
     >
       {({ open }) => (
         <>

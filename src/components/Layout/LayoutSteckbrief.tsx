@@ -16,7 +16,7 @@ export const LayoutSteckbrief: React.FC<Props> = ({
 }) => {
   return (
     <div className="flex h-full flex-col">
-      <Navigation location={location} />
+      <Navigation location={location} fixed />
       <main className={classNames(className, 'z-0 flex-grow bg-white')}>
         {children}
       </main>
