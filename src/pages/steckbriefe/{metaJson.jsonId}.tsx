@@ -1,7 +1,7 @@
 import { graphql, PageProps } from 'gatsby';
 import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
-import { Layout } from '~/components/Layout';
+import { LayoutSteckbrief } from '~/components/Layout/LayoutSteckbrief';
 import { SteckbriefPage } from '~/components/SteckbriefPage';
 import { domain } from '~/utils';
 
@@ -13,14 +13,14 @@ const Radschnellweg: React.FC<PageProps<Queries.SteckbriefQuery>> = ({
     : meta.general.name;
 
   return (
-    <Layout>
+    <LayoutSteckbrief>
       <HelmetSeo
         title={name}
         description={meta.general.description}
         image={`${domain()}${meta.staticMap.publicURL}`}
       />
       <SteckbriefPage meta={meta} geometry={geometry} />
-    </Layout>
+    </LayoutSteckbrief>
   );
 };
 
