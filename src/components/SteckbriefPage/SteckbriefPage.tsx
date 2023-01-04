@@ -12,7 +12,7 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
   return (
     <div className="relative min-h-[860px] bg-white">
       <div className="mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-12">
-        <div className="mx-auto max-w-2xl lg:mr-0 lg:w-1/2 lg:max-w-none lg:pl-14">
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:ml-[48vw] lg:max-w-4xl lg:px-0 lg:py-0 lg:pl-14">
           <h1 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
             {Number.isNaN(parseFloat(meta.general.ref)) &&
               `${meta.general.ref}: `}
@@ -56,7 +56,7 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
         <p className="text-lg text-gray-500 sm:text-xl">todo</p> */}
         </div>
       </div>
-      <div className="mx-auto flex aspect-square max-h-[860px] max-w-full overflow-hidden md:max-w-[860px] lg:absolute lg:left-0 lg:w-1/2 lg:shadow-xl">
+      <div className="mx-auto flex aspect-square max-h-[860px] overflow-hidden overscroll-none md:max-w-[860px] lg:fixed lg:left-0 lg:top-[97.8px] lg:bottom-0 lg:z-10 lg:mx-0 lg:h-full lg:max-h-full lg:w-[48vw] lg:max-w-[48vw] lg:items-stretch">
         <RSVMap meta={meta} geometry={geometry} />
       </div>
     </div>
