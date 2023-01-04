@@ -21,7 +21,7 @@ export const Navigation = ({ location, fixed }) => {
       as="nav"
       className={`${
         fixed ? 'fixed top-0 right-0 left-0' : ''
-      } z-20 bg-gray-50 shadow-md shadow-gray-400/5`}
+      } z-20 bg-gray-50 shadow-md shadow-gray-400`}
     >
       {({ open }) => (
         <>
