@@ -71,6 +71,10 @@ export const query = graphql`
         website
       }
       cost
+      stakeholders {
+        name
+        roles
+      }
       state
       staticMap {
         publicURL

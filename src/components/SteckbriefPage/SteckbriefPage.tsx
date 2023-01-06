@@ -50,10 +50,19 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
           <p className="text-lg text-gray-500 sm:text-xl">
             ca. {meta.general.length.toLocaleString('de-DE')}&thinsp;km
           </p>
-          {/* <Heading3>Zuständigkeit</Heading3>
-          <p className="text-lg text-gray-500 sm:text-xl">todo</p>
+          {Boolean(meta.stakeholders[0].name) && (
+            <>
+              <Heading3>Zuständigkeit</Heading3>
+              {meta.stakeholders.map((stakeholder) => (
+                <p className="text-lg text-gray-500 sm:text-xl">
+                  {stakeholder.name}
+                </p>
+              ))}
+            </>
+          )}
+
           <Heading3>Stand</Heading3>
-        <p className="text-lg text-gray-500 sm:text-xl">todo</p> */}
+          <p className="text-lg text-gray-500 sm:text-xl">todo</p>
         </div>
       </div>
       <div className="mx-auto flex aspect-square max-h-[860px] overflow-hidden overscroll-none md:max-w-[860px] lg:fixed lg:left-0 lg:top-[97.8px] lg:bottom-0 lg:z-10 lg:mx-0 lg:h-full lg:max-h-full lg:w-[48vw] lg:max-w-[48vw] lg:items-stretch">
