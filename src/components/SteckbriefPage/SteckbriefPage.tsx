@@ -62,15 +62,18 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
               <>
                 <Heading3>Zuständigkeit</Heading3>
                 {meta.stakeholders.map((stakeholder) => (
-                  <p className="text-lg text-gray-500 sm:text-xl">
+                  <p
+                    key={stakeholder.name}
+                    className="text-lg text-gray-500 sm:text-xl"
+                  >
                     {stakeholder.name}
                   </p>
                 ))}
               </>
             )}
 
-            <Heading3>Stand</Heading3>
-            <p className="text-lg text-gray-500 sm:text-xl">todo</p>
+            {/* <Heading3>Stand</Heading3>
+            <p className="text-lg text-gray-500 sm:text-xl">todo</p> */}
           </div>
         </div>
       </div>
