@@ -9,7 +9,7 @@ type Props = {
 
 export const OptIn: React.FC<Props> = ({ setConsent }) => {
   return (
-    <div className="h-fit rounded-t-2xl bg-white shadow">
+    <div className="mb-6 h-fit rounded-2xl bg-white shadow">
       <div className="px-4 py-5 sm:p-6">
         <div className="mt-2 text-sm text-gray-500">
           <p>

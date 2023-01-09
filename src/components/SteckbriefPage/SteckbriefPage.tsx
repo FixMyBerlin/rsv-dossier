@@ -77,7 +77,7 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
           </div>
         </div>
       </div>
-      <div className="mx-auto flex aspect-square max-h-[860px] overflow-hidden overscroll-none md:max-w-[860px] lg:fixed lg:left-0 lg:top-[97.8px] lg:bottom-0 lg:z-10 lg:mx-0 lg:h-full lg:max-h-full lg:w-[48vw] lg:max-w-[48vw] lg:items-stretch">
+      <div className="mx-auto flex aspect-square max-h-[860px] translate-x-1 overflow-hidden overscroll-none md:max-w-[860px] lg:fixed lg:left-0 lg:bottom-0 lg:z-10 lg:mx-0 lg:h-full lg:max-h-full lg:w-[48vw] lg:max-w-[48vw] lg:items-stretch">
         <RSVMap meta={meta} geometry={geometry} />
       </div>
     </div>
