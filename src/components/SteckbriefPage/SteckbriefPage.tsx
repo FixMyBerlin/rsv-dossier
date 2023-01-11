@@ -50,7 +50,7 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
           )}
           <div className="mt-8">
             <Heading2>Projektdetails</Heading2>
-            <Heading3>Trassenführung (von X nach Y)</Heading3>
+            <Heading3>Trassenführung</Heading3>
             <p className="text-lg text-gray-500 sm:text-xl">
               {`${meta.general.from.city} - ${meta.general.to.city}`}
             </p>
