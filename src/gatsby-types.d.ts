@@ -4530,6 +4530,7 @@ declare namespace Queries {
       readonly cost: string | null;
       readonly state: string | null;
       readonly general: {
+        stand: string | number | Date;
         readonly description: string | null;
         readonly name: string | null;
         readonly ref: string | null;

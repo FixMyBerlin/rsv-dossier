@@ -72,8 +72,13 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
               </>
             )}
 
-            {/* <Heading3>Stand</Heading3>
-            <p className="text-lg text-gray-500 sm:text-xl">todo</p> */}
+            <Heading3>Stand</Heading3>
+            <p className="text-lg text-gray-500 sm:text-xl">
+              {new Date(meta.general.stand).toLocaleDateString('de-DE', {
+                year: 'numeric',
+                month: 'long',
+              })}
+            </p>
           </div>
         </div>
       </div>

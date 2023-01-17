@@ -53,6 +53,7 @@ export const query = graphql`
     }
     meta: metaJson(jsonId: { eq: $jsonId }) {
       general {
+        stand
         description
         name
         ref
