@@ -167,7 +167,6 @@
         "detail_level": "rough",
         "length": 12218.626582135648,
         "discarded": false,
-        "stand": "26.05.2022",
         "planning_phase": null,
         "description:planning_phase": null
       }
@@ -422,7 +421,6 @@
         "detail_level": "rough",
         "length": 20206.61087631298,
         "discarded": false,
-        "stand": "26.05.2022",
         "planning_phase": "preliminary",
         "description:planning_phase": null
       }
@@ -637,7 +635,6 @@
         "detail_level": "rough",
         "length": 13586.042239747565,
         "discarded": true,
-        "stand": "26.05.2022",
         "planning_phase": null,
         "description:planning_phase": null
       }
@@ -745,7 +742,6 @@
         "detail_level": "rough",
         "length": 6348.973136758911,
         "discarded": false,
-        "stand": "26.05.2022",
         "planning_phase": "preliminary",
         "description:planning_phase": null
       }

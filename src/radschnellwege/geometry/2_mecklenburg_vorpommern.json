@@ -17,7 +17,6 @@
         "state": "planning",
         "planning_phase": "design",
         "variant": "Vorzugstrasse",
-        "stand": "27.06.2022",
         "description:planning_phase": null,
         "discarded": false
       },
@@ -65,7 +64,6 @@
         "state": "done",
         "planning_phase": null,
         "variant": "Vorzugstrasse",
-        "stand": "27.06.2022",
         "description:planning_phase": null,
         "discarded": false
       },

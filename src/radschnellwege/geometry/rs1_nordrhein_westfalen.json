@@ -19,7 +19,6 @@
         "variant": "Vorzugstrasse",
         "length": 15413.179,
         "discarded": false,
-        "stand": "01.01.2022",
         "planning_phase": null
       },
       "bbox": [
@@ -285,7 +284,6 @@
         "variant": "Vorzugstrasse",
         "length": 96441.611,
         "discarded": false,
-        "stand": "01.01.2022",
         "planning_phase": "approval"
       },
       "bbox": [
@@ -1277,7 +1275,6 @@
         "variant": "Vorzugstrasse",
         "length": 1402.679,
         "discarded": false,
-        "stand": "01.01.2022",
         "planning_phase": "execution"
       },
       "bbox": [
