@@ -80,18 +80,6 @@
       "type": "string",
       "enum": ["idea", "agreement_process", "planning", "in_progress", "done"]
     },
-    "discarded": { "type": "boolean" },
-    "planning_phase": {
-      "type": "string",
-      "enum": [
-        "pilot",
-        "preliminiary",
-        "design",
-        "approval",
-        "execution",
-        "building"
-      ]
-    },
     "detail_level": { "enum": ["exact", "approximated", "corridor"] },
     "finished": {
       "oneOf": [
@@ -128,18 +116,6 @@
       "then": {
         "properties": {
           "general": { "properties": { "description": { "const": null } } }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "state": { "const": "done" }
-        }
-      },
-      "then": {
-        "properties": {
-          "planning_phase": { "const": null }
         }
       }
     }
