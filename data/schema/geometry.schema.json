@@ -53,7 +53,8 @@
             "properties": {
               "id": { "type": "string" },
               "detail_level": {
-                "type": "string"
+                "type": "string",
+                "enum": ["exact", "rough", "corridor", "approximated"]
               },
               "state": {
                 "type": "string",
