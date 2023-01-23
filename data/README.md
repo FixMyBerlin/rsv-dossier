@@ -5,7 +5,7 @@
 
 > This project is in progress. Accuracy of ways are getting improved as time flows and the Radschnellwege have finished planning.
 
-> There are still Radschnellwege and attributes of them missing. Open a pull-request, an issue or contact me when you want to improve something.
+> There are still Radschnellwege and attributes of them missing. Open a pull-request, an issue or contact us when you want to improve something.
 
 A list, map, database (call it how you like) of planned, currently build and finished cycle highways (Radschnellwege) in Germany. All handmade and updated manually.
 
@@ -26,8 +26,6 @@ A cycle highway MUST have one of the following states, segments CAN have one of 
 3. `planning` - the highway is in one of the planning phases, except `pilot_study`
 4. `in_progress` - The segments have different planning phases, but as a whole it marches on
 5. `done` - The cycle highway part is built, finished and ready for usage
-
-- `discarded` - While planning it does not meet the requirements or it is not desired anymore
 
 ### Stakeholders & Roles
 
@@ -122,13 +120,7 @@ When the whole cycle highway get's discarded, the planning phase it stuck and SH
 
 ### Variants
 
-Usually in the early planning phases there are multiple possible variants of the cycle highway. The `variant` attribute is an enum and describes wether the geometry is part of the currently prefered variant ("Vorzugstrasse") or an alternative ("Alternative").
-
-```json
-{
-  "variant": "Alternative" | "Vorzugstrasse",
-}
-```
+Usually in the early planning phases there are multiple possible variants of the cycle highway. The `variant` attribute is an enum and describes wether the geometry is part of the currently prefered variant `"Vorzugstrasse"` or an alternative `"Alternative"`.
 
 The **`discarded`** property describes that a variant was a considered variant previously, but is discarded now. The geometry therefore stays in the GeoJSON. In constrast to the `discarded` key in the MetaJSON, this value only represents the state of one individual variant. Usually from time to time more and more variants get discarded till one preferred is found.
 
