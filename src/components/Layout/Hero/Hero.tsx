@@ -21,7 +21,7 @@ export const Hero: React.FC<Props> = ({
   return (
     <div className="relative overflow-hidden bg-gray-50">
       <div className="relative">
-        <Navigation location={location} />
+        <Navigation fixed={false} location={location} />
         <main className="bg-emerald-400 px-4">
           <div className="mx-auto max-w-7xl pt-16 text-center sm:pt-24">
             <h1 className="relative z-10 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">

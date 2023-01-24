@@ -17,7 +17,6 @@
         "planning_phase": null,
         "variant": "Vorzugstrasse",
         "discarded": false,
-        "stand": "07.06.2022",
         "length": 24578.366,
         "description:planning_phase": null
       },
@@ -95,7 +94,6 @@
         "planning_phase": null,
         "variant": "Vorzugstrasse",
         "discarded": false,
-        "stand": "09.06.2022",
         "length": 2956.522,
         "description:planning_phase": null
       },
@@ -303,7 +301,6 @@
         "planning_phase": null,
         "variant": "Vorzugstrasse",
         "discarded": false,
-        "stand": "08.06.2022",
         "length": 2779.624,
         "description:planning_phase": null
       },
@@ -467,7 +464,6 @@
         "planning_phase": null,
         "variant": "Vorzugstrasse",
         "discarded": false,
-        "stand": "08.06.2022",
         "length": 5725.877,
         "description:planning_phase": null
       },
@@ -649,7 +645,6 @@
         "planning_phase": null,
         "variant": "Vorzugstrasse",
         "discarded": false,
-        "stand": "08.06.2022",
         "length": 3776.041,
         "description:planning_phase": null
       },

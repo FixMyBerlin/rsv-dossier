@@ -16,10 +16,9 @@
         "planning_phase": "pilot",
         "state": "planning",
         "variant": "Vorzugstrasse",
-        "stand": "12.09.2022",
         "discarded": false,
         "description:planning_phase": null,
-        "length": 28982.0
+        "length": 28982
       },
       "bbox": [8.190125, 48.790625, 8.362924, 49.003139],
       "geometry": {

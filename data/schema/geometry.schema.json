@@ -48,17 +48,23 @@
               "planning_phase",
               "variant",
               "discarded",
-              "length",
-              "stand"
+              "length"
             ],
             "properties": {
               "id": { "type": "string" },
               "detail_level": {
-                "type": "string"
+                "type": "string",
+                "enum": ["exact", "rough", "corridor", "approximated"]
               },
               "state": {
                 "type": "string",
-                "enum": ["idea", "agreement_process", "planning", "done"]
+                "enum": [
+                  "idea",
+                  "agreement_process",
+                  "planning",
+                  "in_progress",
+                  "done"
+                ]
               },
               "id_rsv": { "type": "string" },
               "planning_phase": {
@@ -70,8 +76,7 @@
                       "preliminary",
                       "design",
                       "approval",
-                      "execution",
-                      "building"
+                      "execution"
                     ]
                   },
                   { "type": "null" }
@@ -83,10 +88,6 @@
               },
               "discarded": {
                 "type": "boolean"
-              },
-              "stand": {
-                "type": "string",
-                "pattern": "^[0-9]{2}.[0-9]{2}.[0-9]{4}$"
               },
               "length": { "type": "number" },
               "description:planning_phase": {

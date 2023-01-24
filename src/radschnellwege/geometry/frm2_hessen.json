@@ -20,8 +20,7 @@
         "variant": "Vorzugstrasse",
         "length": 14269.568252915209,
         "discarded": false,
-        "description:planning_phase": "Politische Beschlüsse",
-        "stand": "07.06.2022"
+        "description:planning_phase": "Politische Beschlüsse"
       },
       "bbox": [
         8.48432601166193, 49.9249538847202, 8.593803265920556, 50.01876940842946
@@ -69,8 +68,7 @@
         "variant": "Alternative",
         "length": 10455.501545657264,
         "discarded": false,
-        "description:planning_phase": "Politische Beschlüsse",
-        "stand": "07.06.2022"
+        "description:planning_phase": "Politische Beschlüsse"
       },
       "bbox": [
         8.538207154585635, 49.96539250435681, 8.592133782120653,

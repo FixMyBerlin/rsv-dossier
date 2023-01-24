@@ -4,6 +4,7 @@ module.exports = {
   content: ['src/pages/**/*.tsx', 'src/components/**/*.tsx'],
   theme: {
     extend: {
+      // reminder: if breakpoints change: update DynamicMap
       colors: {
         'pastel-gray': '#7B8D84',
       },

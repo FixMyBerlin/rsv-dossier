@@ -5,7 +5,7 @@
 
 > This project is in progress. Accuracy of ways are getting improved as time flows and the Radschnellwege have finished planning.
 
-> There are still Radschnellwege and attributes of them missing. Open a pull-request, an issue or contact me when you want to improve something.
+> There are still Radschnellwege and attributes of them missing. Open a pull-request, an issue or contact us when you want to improve something.
 
 A list, map, database (call it how you like) of planned, currently build and finished cycle highways (Radschnellwege) in Germany. All handmade and updated manually.
 
@@ -17,27 +17,6 @@ Contains map data from OpenStreetMap, which has the attribute `copyright="OpenSt
 
 Every cycle highway has it's own meta information, independent from the individuals geometry segments and variants. These information apply to the cycle highway as a whole. The `meta.json` file is an array of multiple cycle highways.
 
-> You can use the [JSON Schema for MetaJSON](schema/meta.schema.json) for validation and generation of TypeScript types.
-
-### Types generation
-
-You can use the [json-schema-to-typescript](https://www.npmjs.com/package/json-schema-to-typescript) to generate TypeScript types out of the JSON Schema. For that, install the package : `npm install -g json-schema-to-typescript`
-
-Then run:
-
-```sh
-npx json2ts -i schema/meta.schema.json -o ../types/meta.d.ts
-```
-
-For a human readable documentation, you can generate a HTML file using [json-schema-for-humans](https://pypi.org/project/json-schema-for-humans/).
-
-Install first: `pip install json-schema-for-humans`
-Then run
-
-```sh
-generate-schema-doc schema/meta.schema.json schema/
-```
-
 ### State
 
 A cycle highway MUST have one of the following states, segments CAN have one of the following state:
@@ -47,8 +26,6 @@ A cycle highway MUST have one of the following states, segments CAN have one of 
 3. `planning` - the highway is in one of the planning phases, except `pilot_study`
 4. `in_progress` - The segments have different planning phases, but as a whole it marches on
 5. `done` - The cycle highway part is built, finished and ready for usage
-
-- `discarded` - While planning it does not meet the requirements or it is not desired anymore
 
 ### Stakeholders & Roles
 
@@ -112,46 +89,9 @@ The **`detail_level`** describes in which accuracy the geometry is available in 
 
 ## Geometry Data
 
-Corresponding to the Meta JSON file, the _GeoJSON_ file contains the geometry of the cycle highways. There are two types of cycle highway geometry types:
+Corresponding to the Meta JSON file, the _GeoJSON_ file contains the geometry of the cycle highways.
 
-- Variants (usually between `pilot` and `design` phases)
-- Segments (usually starting from `design` phase)
-
-**Variants** are possible relations between places (cities and villages), which exact pathway has not been defined and planned (yet). They occur mostly in the `preliminary` phase.
-
-**Segments** are parts of the planned pathway of a complete cycle highway. Sometimes there alternative ways beside the primary pathway. This version of the pathway mostly occurs in the `design` phase. Segments are about to be build, are being built or already done.
-
-The both geometry types reside both in the same GeoJSON file. If the planned cycle highway is available through the sections, the variants SHOULD NOT be removed. A frontend can than decide if which data should be displayed. Segments and Variants don't share any geometry.
-
-### Segment
-
-A segment is a part of a planned cycle highway. It has attributes describing the condition and information about the cycleway segment. Multiple segments are the planned cycle highway. Every segment has a planning phase. Variants **do not** have planning phases.
-
-#### Segment attributes
-
-An example for **segment attributes**:
-
-```jsonc
-{
-  "id": "rs1_seg598",
-  "status": "planning",
-  "planning_phase": "design",
-  "description:planning_phase": "",
-  "detail_level": "exact",
-  "stakeholders": [
-    {
-      "name": "Stadt Duisburg",
-      "roles": ["authority"],
-      "description": "Baulastträger"
-    }
-  ],
-  "length": 12100 // implicit, MUST be calculated from geometry
-}
-```
-
-The attribute `segment` would be the properties of the segment in a GeoJSON.
-
-The **filename** MUST correspond to the `general.id` in the MetaJSON. Therefore a direct relation between geometry and meta information is possible. It could be like `frm1_hessen.geojson`.
+The **filename** of the geometries MUST be different from the `id` field, otherwise there are id collisions with `gatsby-source-filesystem` pluigin.
 
 ### Planning Phases
 
@@ -162,7 +102,6 @@ Since this repository should represent build phases of the cycle highways, these
 3. Design planning [`design`]
 4. Approval procedure [`approval`]
 5. Execution planning [`execution`]
-6. Building [`building`]
 
 Planning phases are assigned through attribute `planning_phase`. The attribute is empty, when the cycle highway is finished. For example a cycle highway in _approval procedure_ SHOULD be assigned in the segments like this:
 
@@ -181,20 +120,22 @@ When the whole cycle highway get's discarded, the planning phase it stuck and SH
 
 ### Variants
 
-Usually in the early planning phases there are multiple possible variants of the cycle highway. Every variant includes the complete route from start to end. It additionally has the following `variant` attribute.
-
-```json
-{
-  "variant": "Alternative",
-  "discarded": false
-}
-```
-
-The **`variant`** describes the official name. The preferred variant is usually called "Vorzugstrasse".
-
-The **filename** MUST correspond to the `general.id` in the MetaJSON. Therefore a direct relation between geometry and meta information is possible. It could be like `frm1_hessen.geojson`.
+Usually in the early planning phases there are multiple possible variants of the cycle highway. The `variant` attribute is an enum and describes wether the geometry is part of the currently prefered variant `"Vorzugstrasse"` or an alternative `"Alternative"`.
 
 The **`discarded`** property describes that a variant was a considered variant previously, but is discarded now. The geometry therefore stays in the GeoJSON. In constrast to the `discarded` key in the MetaJSON, this value only represents the state of one individual variant. Usually from time to time more and more variants get discarded till one preferred is found.
+
+### JSON Schema
+
+> You can use the [JSON Schema for MetaJSON](schema/meta.schema.json) for validation.
+
+For a human readable documentation, you can generate a HTML file using [json-schema-for-humans](https://pypi.org/project/json-schema-for-humans/).
+
+Install first: `pip install json-schema-for-humans`
+Then run
+
+```sh
+generate-schema-doc schema/meta.schema.json schema/
+```
 
 ## See more
 

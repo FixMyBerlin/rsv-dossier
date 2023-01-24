@@ -19,7 +19,6 @@
         "planning_phase": "pilot",
         "variant": "Vorzugstrasse",
         "discarded": false,
-        "stand": "07.06.2022",
         "length": 28829.249,
         "description:planning_phase": null
       },
@@ -134,7 +133,6 @@
         "planning_phase": null,
         "variant": "Alternative",
         "discarded": false,
-        "stand": "07.06.2022",
         "length": 3535.903,
         "description:planning_phase": null
       },

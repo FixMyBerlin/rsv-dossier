@@ -7,7 +7,7 @@ import {
 } from '@turf/turf';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Map, { FullscreenControl } from 'react-map-gl';
 import { maptilerBaseUrl, maptilerKey } from '~/utils';
 import { RSVPopup, RSVSegment } from '.';
@@ -43,6 +43,24 @@ export const DynamicMap: React.FC<
   //   setSelected(properties.id);
   // };
   // const [cursorStyle, setCursorStyle] = useState('grab');
+
+  const [isScreenHorizontal, setIsScreenHorizontal] = useState(false);
+
+  useEffect(() => {
+    // reminder: hard coded breakpoint lg tailwind css - has to be changed if tailwind.config.ts is changed
+    const lgMediaQuery = window.matchMedia('(min-width: 1024px)');
+    function onMediaQueryChange({ matches }) {
+      setIsScreenHorizontal(matches);
+    }
+
+    onMediaQueryChange(lgMediaQuery);
+    lgMediaQuery.addEventListener('change', onMediaQueryChange);
+
+    return () => {
+      lgMediaQuery.removeEventListener('change', onMediaQueryChange);
+    };
+  }, []);
+
   return (
     <Map
       initialViewState={{
@@ -55,6 +73,7 @@ export const DynamicMap: React.FC<
       mapStyle={`${maptilerBaseUrl}/style.json?key=${maptilerKey}`}
       maxBounds={bboxView as BBox2d}
       attributionControl={false}
+      scrollZoom={isScreenHorizontal}
       interactiveLayerIds={geometry.features.map(
         ({ properties }) => properties.id
       )}

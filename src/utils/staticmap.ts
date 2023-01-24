@@ -25,7 +25,7 @@ export const staticMapRequest = (
 ) => {
   const dims = `${width / 2}x${height / 2}@2x.png`;
 
-  // URL and Keys: https://cloud.maptiler.com/maps/a4824657-3edd-4fbd-925e-1af40ab06e9c/static
+  // URL and Keys: ~/utils/mapTiler.const.ts
   const url = new URL(`${maptilerBaseUrl}/static/${bbox.toString()}/${dims}`);
   url.searchParams.append('key', maptilerKey);
   url.searchParams.append('attribution', '0');
