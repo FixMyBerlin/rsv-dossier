@@ -4,10 +4,16 @@ import { ButtonLink } from '~/components/Links';
 import { RSVMap } from '~/components/Map';
 import { SteckbriefPageProgressBar } from '~/components/SteckbriefPage';
 import { Heading2, Heading3 } from '~/components/Text';
+import InfoIcon from './assets/InfoIcon.svg';
 
-export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
+type props = {
+  setOverlay: (boolean) => void;
+};
+
+export const SteckbriefPage: React.FC<Queries.SteckbriefQuery & props> = ({
   meta,
   geometry,
+  setOverlay,
 }) => {
   return (
     <div className="relative min-h-[860px] bg-white">
@@ -71,14 +77,26 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
                 ))}
               </>
             )}
-
-            <Heading3>Stand</Heading3>
-            <p className="text-lg text-gray-500 sm:text-xl">
-              {new Date(meta.general.stand).toLocaleDateString('de-DE', {
-                year: 'numeric',
-                month: 'long',
-              })}
-            </p>
+            <div className="flex min-w-max">
+              <div>
+                <Heading3>Stand</Heading3>
+                <p className="text-lg text-gray-500 sm:text-xl">
+                  {new Date(meta.general.stand).toLocaleDateString('de-DE', {
+                    year: 'numeric',
+                    month: 'long',
+                  })}
+                </p>
+              </div>
+              <div className="flex-grow">
+                <button
+                  type="button"
+                  className="float-right mt-5"
+                  onClick={() => setOverlay(true)}
+                >
+                  <InfoIcon />
+                </button>
+              </div>
+            </div>
           </div>
           <div className="mt-12">
             <a href="/datenschutz/">Datenschutz</a>
