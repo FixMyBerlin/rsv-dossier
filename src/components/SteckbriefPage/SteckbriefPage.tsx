@@ -64,8 +64,8 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery & props> = ({
             <p className="text-lg text-gray-500 sm:text-xl">
               ca. {meta.general.length.toLocaleString('de-DE')}&thinsp;km
             </p>
-            {Boolean(meta.stakeholders[0].name) && (
-              <>
+            <div className="flex min-w-max">
+              <div>
                 <Heading3>Zuständigkeit</Heading3>
                 {meta.stakeholders.map((stakeholder) => (
                   <p
@@ -75,17 +75,6 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery & props> = ({
                     {stakeholder.name}
                   </p>
                 ))}
-              </>
-            )}
-            <div className="flex min-w-max">
-              <div>
-                <Heading3>Stand</Heading3>
-                <p className="text-lg text-gray-500 sm:text-xl">
-                  {new Date(meta.general.stand).toLocaleDateString('de-DE', {
-                    year: 'numeric',
-                    month: 'long',
-                  })}
-                </p>
               </div>
               <div className="flex-grow">
                 <button
@@ -97,6 +86,13 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery & props> = ({
                 </button>
               </div>
             </div>
+            <Heading3>Stand</Heading3>
+            <p className="text-lg text-gray-500 sm:text-xl">
+              {new Date(meta.general.stand).toLocaleDateString('de-DE', {
+                year: 'numeric',
+                month: 'long',
+              })}
+            </p>
           </div>
           <div className="mt-12">
             <a href="/datenschutz/">Datenschutz</a>

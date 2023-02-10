@@ -12,6 +12,7 @@ import { domain } from '~/utils';
 const Radschnellweg: React.FC<PageProps<Queries.SteckbriefQuery>> = ({
   data: { meta, geometry },
 }) => {
+  // if the ref is official (not an arbitrary number picked by us) display it in the name
   const name = Number.isNaN(parseFloat(meta.general.ref))
     ? `${meta.general.ref}: ${meta.general.name}`
     : meta.general.name;
@@ -40,7 +41,7 @@ const Radschnellweg: React.FC<PageProps<Queries.SteckbriefQuery>> = ({
           />
         </LayoutSteckbrief>
       </div>
-      {overlay && <SteckbriefUpdateInfo setOverlay={setOverlay} />}
+      {overlay && <SteckbriefUpdateInfo setOverlay={setOverlay} name={name} />}
     </div>
   );
 };

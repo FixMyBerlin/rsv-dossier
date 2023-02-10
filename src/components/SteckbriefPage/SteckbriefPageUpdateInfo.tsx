@@ -1,12 +1,14 @@
 import React from 'react';
 import { Heading3 } from '~/components/Text';
 import CloseIcon from './assets/CloseIcon.svg';
+import { MailToLink } from '../Links';
 
 type props = {
   setOverlay: (boolean) => void;
+  name: string;
 };
 
-export const SteckbriefUpdateInfo: React.FC<props> = ({ setOverlay }) => {
+export const SteckbriefUpdateInfo: React.FC<props> = ({ setOverlay, name }) => {
   return (
     <div className="fixed bottom-20 right-6 left-auto top-auto z-50 h-36 w-96 rounded-lg bg-white px-6">
       <div className="flex">
@@ -23,7 +25,14 @@ export const SteckbriefUpdateInfo: React.FC<props> = ({ setOverlay }) => {
       </div>
       <p className="mt-3 text-sm font-normal text-gray-500">
         Wir versuchen stets alle Informationen aktuell zu halten. Falls neue
-        Informationen vorliegen schreiben Sie uns einfach.
+        Informationen vorliegen{' '}
+        <MailToLink
+          mailto="hello@fixmycity.de"
+          subject={`Anliegen zum ${name}`}
+        >
+          schreiben Sie uns
+        </MailToLink>{' '}
+        einfach.
       </p>
     </div>
   );
