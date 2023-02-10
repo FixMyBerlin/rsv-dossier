@@ -18,9 +18,18 @@ const Radschnellweg: React.FC<PageProps<Queries.SteckbriefQuery>> = ({
     : meta.general.name;
 
   const [overlay, setOverlay] = useState<boolean>(false);
+  const closeIfOpen = () => {
+    if (overlay) {
+      setOverlay(false);
+    }
+  };
   return (
     <div>
       <div
+        aria-haspopup="dialog"
+        aria-hidden="true"
+        onKeyDown={closeIfOpen}
+        onClick={closeIfOpen}
         className={classNames(
           overlay && 'fixed top-0 right-0 left-0 bottom-0  blur-[2px]'
         )}
