@@ -27,6 +27,7 @@ export const SteckbriefUpdateInfo: React.FC<props> = ({ setOverlay, name }) => {
         Wir versuchen stets alle Informationen aktuell zu halten. Falls neue
         Informationen vorliegen{' '}
         <MailToLink
+          className="text-gray-700"
           mailto="hello@fixmycity.de"
           subject={`Anliegen zum ${name}`}
         >
