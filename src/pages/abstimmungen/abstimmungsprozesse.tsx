@@ -15,14 +15,14 @@ const ResearchWorkPage: React.FC<PageProps> = ({ location }) => {
       />
       <TextWithImage
         imageCredits=""
-        title="Studienarbeit – Verbesserung von internen Abstimmungsprozessen bei
+        title="Verbesserung von internen Abstimmungsprozessen bei
             RSV-Planungen"
-        caption="Forschungsprojekt"
+        caption="Studienarbeit"
         image={
           <StaticImage
-            src="./index/map4.png"
+            src="./../index/fahrrad.jpg"
             alt="Zeigt eine Karte mit einer Planung"
-            className="h-96"
+            className="h-96 object-contain lg:h-full"
           />
         }
       >
