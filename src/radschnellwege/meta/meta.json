@@ -752,7 +752,7 @@
     "finished": null,
     "general": {
       "ref": "RS16",
-      "name": "RS16 Radschnellweg Heidelberg - Schwetzingen",
+      "name": "Radschnellweg Heidelberg - Schwetzingen",
       "from": { "city": "Heidelberg", "federalState": "Baden-Württemberg" },
       "to": { "city": "Schwetzingen", "federalState": "Baden-Württemberg" },
       "length": 7,
