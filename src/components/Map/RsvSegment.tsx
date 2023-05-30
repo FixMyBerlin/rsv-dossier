@@ -48,7 +48,7 @@ export const RSVSegment: React.FC<Props> = ({ feature }) => {
   };
   return (
     <Source id={id} type="geojson" data={feature}>
-      <Layer {...layerStyle} beforeId="place_hamlet" />
+      <Layer {...layerStyle} beforeId="park-label" />
     </Source>
   );
 };
