@@ -101,7 +101,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Mail an{' '}
             <MailToButtonLink
               mailto="hello@fixmycity.de"
-              subject="Anliegen zum RSV-Baukasten"
+              subject="Feedback Radschnellverbindungen"
               className="btn-brand-outline mt-5"
             >
               hello@fixmycity.de
