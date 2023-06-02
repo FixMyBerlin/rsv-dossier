@@ -4,7 +4,7 @@ import React from 'react';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { TextWithImage } from '~/components/Layout/ContentSection';
-import { ExternalLink } from '~/components/Links';
+import { ButtonLink } from '~/components/Links/ButtonLink';
 
 const ResearchWorkPage: React.FC<PageProps> = ({ location }) => {
   return (
@@ -32,7 +32,7 @@ const ResearchWorkPage: React.FC<PageProps> = ({ location }) => {
           </p>
           <br />
           <p>
-            Communication is key – doch im Gegensatz zum Thema der
+            <i>Communication is key</i> – doch im Gegensatz zum Thema der
             zivilgesellschaftlichen Kommunikation stehen interne
             Kommunikationsprozesse zwischen den verschiedenen
             Planungsakteur:innen bisher selten und oftmals nur oberflächlich im
@@ -76,7 +76,9 @@ const ResearchWorkPage: React.FC<PageProps> = ({ location }) => {
             ähnlicher Vorhaben.
           </p>
           <br />
-          <ExternalLink href="/todo">Download</ExternalLink>
+          <ButtonLink to="../Abstimmung_Radschnellverbindungen_Schwerpunktarbeit_Kuss_Wening.pdf">
+            Download
+          </ButtonLink>
         </>
       </TextWithImage>
     </Layout>
