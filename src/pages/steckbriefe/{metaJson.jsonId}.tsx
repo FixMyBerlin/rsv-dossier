@@ -85,6 +85,7 @@ export const query = graphql`
     meta: metaJson(jsonId: { eq: $jsonId }) {
       general {
         stand
+        stand
         description
         name
         ref
@@ -103,6 +104,10 @@ export const query = graphql`
         website
       }
       cost
+      stakeholders {
+        name
+        roles
+      }
       stakeholders {
         name
         roles

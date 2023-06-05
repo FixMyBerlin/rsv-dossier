@@ -1,4 +1,5 @@
 import 'maplibre-gl/dist/maplibre-gl.css';
+import 'maplibre-gl/dist/maplibre-gl.css';
 import React from 'react';
 import { ButtonLink } from '~/components/Links';
 import { RSVMap } from '~/components/Map';
