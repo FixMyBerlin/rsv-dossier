@@ -85,6 +85,12 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Instrument mit hohem Potential. Zu Hintergründen und Grundlagen bald
             mehr auf dieser Website.
           </p>
+          <br />
+          <TextLink to="abstimmungen/abstimmungsprozesse">
+            {' '}
+            Hier geht es zur Studienarbeit – Verbesserung von internen
+            Abstimmungsprozessen bei RSV-Planungen &rarr;
+          </TextLink>
           <Heading2>Kontakt</Heading2>
           <p>
             Wenn Sie sich mehr Informationen zum Forschungsprojekt RSV-Baukasten
@@ -95,7 +101,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Mail an{' '}
             <MailToButtonLink
               mailto="hello@fixmycity.de"
-              subject="Anliegen zum RSV-Baukasten"
+              subject="Feedback Radschnellverbindungen"
               className="btn-brand-outline mt-5"
             >
               hello@fixmycity.de
