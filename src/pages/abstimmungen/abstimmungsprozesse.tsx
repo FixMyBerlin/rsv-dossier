@@ -5,6 +5,7 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { TextWithImage } from '~/components/Layout/ContentSection';
 import { ButtonLink } from '~/components/Links/ButtonLink';
+import pdfAbstimmung from './Abstimmung_Radschnellverbindungen_Schwerpunktarbeit_Kuss_Wening.pdf';
 
 const ResearchWorkPage: React.FC<PageProps> = ({ location }) => {
   return (
@@ -30,9 +31,8 @@ const ResearchWorkPage: React.FC<PageProps> = ({ location }) => {
           <p>
             <strong>Autorinnen: Kuß, Noemi und Wening, Clara</strong>
           </p>
-          <br />
           <p>
-            <i>Communication is key</i> – doch im Gegensatz zum Thema der
+            <em>Communication is key</em> – doch im Gegensatz zum Thema der
             zivilgesellschaftlichen Kommunikation stehen interne
             Kommunikationsprozesse zwischen den verschiedenen
             Planungsakteur:innen bisher selten und oftmals nur oberflächlich im
@@ -76,9 +76,7 @@ const ResearchWorkPage: React.FC<PageProps> = ({ location }) => {
             ähnlicher Vorhaben.
           </p>
           <br />
-          <ButtonLink to="../Abstimmung_Radschnellverbindungen_Schwerpunktarbeit_Kuss_Wening.pdf">
-            Download
-          </ButtonLink>
+          <ButtonLink to={pdfAbstimmung}>Download</ButtonLink>
         </>
       </TextWithImage>
     </Layout>
