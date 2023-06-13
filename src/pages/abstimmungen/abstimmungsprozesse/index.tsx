@@ -5,6 +5,7 @@ import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { Layout } from '~/components/Layout';
 import { TextWithImage } from '~/components/Layout/ContentSection';
 import { ButtonLink } from '~/components/Links/ButtonLink';
+import pdfAbstimmung from './Abstimmung_Radschnellverbindungen_Schwerpunktarbeit_Kuss_Wening.pdf';
 
 const ResearchWorkPage: React.FC<PageProps> = ({ location }) => {
   return (
@@ -27,12 +28,11 @@ const ResearchWorkPage: React.FC<PageProps> = ({ location }) => {
         }
       >
         <>
-          <p>
+          <p className="mb-3">
             <strong>Autorinnen: Kuß, Noemi und Wening, Clara</strong>
           </p>
-          <br />
-          <p>
-            <i>Communication is key</i> – doch im Gegensatz zum Thema der
+          <p className="mb-3">
+            <em>Communication is key</em> – doch im Gegensatz zum Thema der
             zivilgesellschaftlichen Kommunikation stehen interne
             Kommunikationsprozesse zwischen den verschiedenen
             Planungsakteur:innen bisher selten und oftmals nur oberflächlich im
@@ -41,21 +41,25 @@ const ResearchWorkPage: React.FC<PageProps> = ({ location }) => {
             der Vielzahl und Diversität der involvierten Akteur:innen sowie
             wachsender Anforderungen an ihre interdisziplinäre und räumlich
             übergreifende Zusammenarbeit eine essentielle Voraussetzung der
-            Planung dar. Als wesentliches Instrumentarium des
-            Akteur:innenzusammenspiels werden im Rahmen der Arbeit
-            Abstimmungsprozesse identifiziert, die im Kontext des derzeit
-            bundesweit präsenten Vorhabens der Errichtung von
-            Radschnellverbindungen beleuchtet werden. Dieses ist aufgrund der
-            Neuartigkeit und Komplexität der Infrastruktur mit einem
+            Planung dar.
+          </p>
+          <p className="mb-3">
+            Als wesentliches Instrumentarium des Akteur:innenzusammenspiels
+            werden im Rahmen der Arbeit Abstimmungsprozesse identifiziert, die
+            im Kontext des derzeit bundesweit präsenten Vorhabens der Errichtung
+            von Radschnellverbindungen beleuchtet werden. Dieses ist aufgrund
+            der Neuartigkeit und Komplexität der Infrastruktur mit einem
             umfangreichen Planungsprozess verbunden, der besonders viele
             Akteur:innen involviert und folglich einen erheblichen
-            Kommunikations- und Abstimmungsaufwand erfordert. Mit Fokus auf die
-            Berliner RSV-Planungspraxis untersuchen die Autor:innen auf
-            Grundlage qualitativer Expert:inneninterviews das Zusammenwirken des
-            planungsinternen Akteur:innenspektrums im Rahmen einer
-            Akteur:innenanalyse, um schließlich Erkenntnisse zur Verbesserung
-            diesbezüglicher Abstimmungsprozesse abzuleiten. Dabei legt die
-            Analyse neben einer Betrachtung von Handlungsmustern und
+            Kommunikations- und Abstimmungsaufwand erfordert.{' '}
+          </p>
+          <p className="mb-3">
+            Mit Fokus auf die Berliner RSV-Planungspraxis untersuchen die
+            Autor:innen auf Grundlage qualitativer Expert:inneninterviews das
+            Zusammenwirken des planungsinternen Akteur:innenspektrums im Rahmen
+            einer Akteur:innenanalyse, um schließlich Erkenntnisse zur
+            Verbesserung diesbezüglicher Abstimmungsprozesse abzuleiten. Dabei
+            legt die Analyse neben einer Betrachtung von Handlungsmustern und
             Wirkungsfeldern auch spezifische Rahmenbedingungen, die das Handeln
             der Akteur:innen beeinflussen, dar. So werden zum Beispiel die
             Auswirkungen von planerischen, gesellschaftlichen oder politischen
@@ -75,10 +79,9 @@ const ResearchWorkPage: React.FC<PageProps> = ({ location }) => {
             und bietet somit Anknüpfungspunkte für die kommunikative Gestaltung
             ähnlicher Vorhaben.
           </p>
-          <br />
-          <ButtonLink to="../Abstimmung_Radschnellverbindungen_Schwerpunktarbeit_Kuss_Wening.pdf">
-            Download
-          </ButtonLink>
+          <p className="mb-3">
+            <ButtonLink to={pdfAbstimmung}>Download (PDF)</ButtonLink>
+          </p>
         </>
       </TextWithImage>
     </Layout>
