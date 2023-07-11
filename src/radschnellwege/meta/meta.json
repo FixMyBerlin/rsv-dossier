@@ -148,7 +148,7 @@
   },
   {
     "id": "rs8-baden-wuerttemberg",
-    "cost": "31  Mio.  €",
+    "cost": "31  Mio. €",
     "state": "planning",
     "finished": null,
     "general": {
@@ -163,7 +163,7 @@
     },
     "stakeholders": [{ "name": "Rems-Murr-Kreis", "roles": ["authority"] }],
     "references": {
-      "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
+      "website": "https://radschnellweg8-lb-wn.de/"
     }
   },
   {
