@@ -95,14 +95,14 @@
       "to": { "city": "Fellbach", "federalState": "Baden-Württemberg" },
       "length": 21.7,
       "description": "2019  wurde  die  Machbarkeitsstudie  des  Rems-Murr-Kreises  für  eine  Radschnellverbindung  (RSV)  zwischen  Schorndorf  und  Fellbach  fertig  gestellt.  Ergebnis  war  eine  präferierte  Trasse  („Vorzugstrasse“)  mit  einer  Gesamtlänge  von  21,7  km,  die  zu  85%  die  Qualitätsstandards  für  eine  Radschnellverbindung  erfüllt.  Ein  deutlich  positiver  Kosten-Nutzen-Faktor  von  2,5  wurde  mit  der  Studie  nachgewiesen.",
-      "source": "https://www.rems-murr-kreis.de/bauen-umwelt-und-verkehr/radwege/radschnellwege/rs5-schorndorf-fellbach",
+      "source": "https://www.fellbach.de/de/Leben-in-Fellbach/Mobilitaet/Radschnellweg",
       "stand": "2022-06-07"
     },
     "stakeholders": [
       { "name": "Landeshauptstadt  Stuttgart", "roles": ["authority"] }
     ],
     "references": {
-      "website": "https://www.fellbach.de/de/Leben-in-Fellbach/Mobilitaet/Radschnellweg"
+      "website": "https://www.rems-murr-kreis.de/bauen-umwelt-und-verkehr/radwege/radschnellwege/rs5-schorndorf-fellbach"
     }
   },
   {
