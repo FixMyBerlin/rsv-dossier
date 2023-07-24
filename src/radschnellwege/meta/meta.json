@@ -102,7 +102,7 @@
       { "name": "Landeshauptstadt  Stuttgart", "roles": ["authority"] }
     ],
     "references": {
-      "website": "https://www.fellbach.de/de/Leben-in-Fellbach/Mobilitaet/Radschnellweg"
+      "website": "https://www.rems-murr-kreis.de/bauen-umwelt-und-verkehr/radwege/radschnellwege/rs5-schorndorf-fellbach"
     }
   },
   {
@@ -148,7 +148,7 @@
   },
   {
     "id": "rs8-baden-wuerttemberg",
-    "cost": "31  Mio.  €",
+    "cost": "31  Mio. €",
     "state": "planning",
     "finished": null,
     "general": {
@@ -163,7 +163,7 @@
     },
     "stakeholders": [{ "name": "Rems-Murr-Kreis", "roles": ["authority"] }],
     "references": {
-      "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
+      "website": "https://radschnellweg8-lb-wn.de/"
     }
   },
   {
@@ -752,7 +752,7 @@
     "finished": null,
     "general": {
       "ref": "RS16",
-      "name": "RS16 Radschnellweg Heidelberg - Schwetzingen",
+      "name": "Radschnellweg Heidelberg - Schwetzingen",
       "from": { "city": "Heidelberg", "federalState": "Baden-Württemberg" },
       "to": { "city": "Schwetzingen", "federalState": "Baden-Württemberg" },
       "length": 7,

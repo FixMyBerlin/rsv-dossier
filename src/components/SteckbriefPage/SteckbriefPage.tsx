@@ -4,10 +4,16 @@ import { ButtonLink } from '~/components/Links';
 import { RSVMap } from '~/components/Map';
 import { SteckbriefPageProgressBar } from '~/components/SteckbriefPage';
 import { Heading2, Heading3 } from '~/components/Text';
+import InfoIcon from './assets/InfoIcon.svg';
 
-export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
+type props = {
+  setOverlay: (boolean) => void;
+};
+
+export const SteckbriefPage: React.FC<Queries.SteckbriefQuery & props> = ({
   meta,
   geometry,
+  setOverlay,
 }) => {
   return (
     <div className="relative min-h-[860px] bg-white">
@@ -58,8 +64,8 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
             <p className="text-lg text-gray-500 sm:text-xl">
               ca. {meta.general.length.toLocaleString('de-DE')}&thinsp;km
             </p>
-            {Boolean(meta.stakeholders[0].name) && (
-              <>
+            <div className="flex min-w-max">
+              <div>
                 <Heading3>Zuständigkeit</Heading3>
                 {meta.stakeholders.map((stakeholder) => (
                   <p
@@ -69,9 +75,17 @@ export const SteckbriefPage: React.FC<Queries.SteckbriefQuery> = ({
                     {stakeholder.name}
                   </p>
                 ))}
-              </>
-            )}
-
+              </div>
+              <div className="flex-grow">
+                <button
+                  type="button"
+                  className="float-right mt-5"
+                  onClick={() => setOverlay(true)}
+                >
+                  <InfoIcon />
+                </button>
+              </div>
+            </div>
             <Heading3>Stand</Heading3>
             <p className="text-lg text-gray-500 sm:text-xl">
               {new Date(meta.general.stand).toLocaleDateString('de-DE', {

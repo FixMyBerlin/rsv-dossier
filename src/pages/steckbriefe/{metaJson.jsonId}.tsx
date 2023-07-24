@@ -1,26 +1,57 @@
 import { graphql, PageProps } from 'gatsby';
-import React from 'react';
+import React, { useState } from 'react';
+import classNames from 'classnames';
 import { HelmetSeo } from '~/components/Helmet/HelmetSeo';
 import { LayoutSteckbrief } from '~/components/Layout/LayoutSteckbrief';
-import { SteckbriefPage } from '~/components/SteckbriefPage';
+import {
+  SteckbriefPage,
+  SteckbriefUpdateInfo,
+} from '~/components/SteckbriefPage';
 import { domain } from '~/utils';
 
 const Radschnellweg: React.FC<PageProps<Queries.SteckbriefQuery>> = ({
   data: { meta, geometry },
 }) => {
+  // if the ref is official (not an arbitrary number picked by us) display it in the name
   const name = Number.isNaN(parseFloat(meta.general.ref))
     ? `${meta.general.ref}: ${meta.general.name}`
     : meta.general.name;
 
+  const [overlay, setOverlay] = useState<boolean>(false);
+  const closeIfOpen = () => {
+    if (overlay) {
+      setOverlay(false);
+    }
+  };
   return (
-    <LayoutSteckbrief>
-      <HelmetSeo
-        title={name}
-        description={meta.general.description}
-        image={`${domain()}${meta.staticMap.publicURL}`}
-      />
-      <SteckbriefPage meta={meta} geometry={geometry} />
-    </LayoutSteckbrief>
+    <div>
+      <div
+        aria-haspopup="dialog"
+        aria-hidden="true"
+        onKeyDown={closeIfOpen}
+        onClick={closeIfOpen}
+        className={classNames(
+          overlay && 'fixed top-0 right-0 left-0 bottom-0  blur-[2px]'
+        )}
+      >
+        {overlay && (
+          <div className="fixed top-0 right-0 left-0 bottom-0 z-50 min-h-full min-w-full bg-gray-300/30" />
+        )}
+        <LayoutSteckbrief>
+          <HelmetSeo
+            title={name}
+            description={meta.general.description}
+            image={`${domain()}${meta.staticMap.publicURL}`}
+          />
+          <SteckbriefPage
+            meta={meta}
+            geometry={geometry}
+            setOverlay={setOverlay}
+          />
+        </LayoutSteckbrief>
+      </div>
+      {overlay && <SteckbriefUpdateInfo setOverlay={setOverlay} name={name} />}
+    </div>
   );
 };
 
@@ -54,6 +85,7 @@ export const query = graphql`
     meta: metaJson(jsonId: { eq: $jsonId }) {
       general {
         stand
+        stand
         description
         name
         ref
@@ -72,6 +104,10 @@ export const query = graphql`
         website
       }
       cost
+      stakeholders {
+        name
+        roles
+      }
       stakeholders {
         name
         roles
