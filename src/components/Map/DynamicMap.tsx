@@ -5,7 +5,6 @@ import {
   square,
   transformScale,
 } from '@turf/turf';
-import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import React, { useEffect, useState } from 'react';
 import Map, { FullscreenControl } from 'react-map-gl/maplibre';

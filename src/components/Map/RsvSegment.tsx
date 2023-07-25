@@ -1,7 +1,7 @@
 import React from 'react';
-import { LineLayer, LineLayout } from 'mapbox-gl';
 import { geojsonType } from '@turf/turf';
 import { Source, Layer } from 'react-map-gl/maplibre';
+import type { LineLayer } from 'react-map-gl/maplibre';
 import { segmentColor } from '~/utils';
 
 // const selectedColor = '#475569';
@@ -20,10 +20,6 @@ function assertFeature(
 
 export const RSVSegment: React.FC<Props> = ({ feature }) => {
   assertFeature(feature);
-  const layout: LineLayout = {
-    'line-cap': 'round',
-    'line-join': 'round',
-  };
   const { id } = feature.properties;
   const paint = {
     'line-color': segmentColor(feature.properties),
@@ -43,8 +39,12 @@ export const RSVSegment: React.FC<Props> = ({ feature }) => {
   const layerStyle: LineLayer = {
     id,
     type: 'line',
-    layout,
+    layout: {
+      'line-cap': 'round',
+      'line-join': 'round',
+    },
     paint,
+    source: id,
   };
   return (
     <Source id={id} type="geojson" data={feature}>
