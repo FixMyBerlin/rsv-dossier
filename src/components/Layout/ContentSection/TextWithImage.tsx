@@ -23,7 +23,7 @@ export const TextWithImage: React.FC<Props> = ({
 }) => {
   return (
     <div className="overflow-hidden bg-white">
-      <div className="relative mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none ">
           <div>
             {caption && (

@@ -21,8 +21,8 @@ export const RSVMap: React.FC<Queries.SteckbriefQuery> = ({
         </div>
       )}
 
-      <div className="absolute bottom-0 right-0 left-0 z-10 ">
-        <div className="mr-2 mb-2 translate-y-1 translate-x-1 text-xs">
+      <div className="absolute bottom-0 left-0 right-0 z-10 ">
+        <div className="mb-2 mr-2 translate-x-1 translate-y-1 text-xs">
           <Attribution />
         </div>
         <Legend />

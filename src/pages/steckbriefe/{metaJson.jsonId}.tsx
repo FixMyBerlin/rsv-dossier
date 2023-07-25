@@ -31,11 +31,11 @@ const Radschnellweg: React.FC<PageProps<Queries.SteckbriefQuery>> = ({
         onKeyDown={closeIfOpen}
         onClick={closeIfOpen}
         className={classNames(
-          overlay && 'fixed top-0 right-0 left-0 bottom-0  blur-[2px]'
+          overlay && 'fixed bottom-0 left-0 right-0 top-0  blur-[2px]'
         )}
       >
         {overlay && (
-          <div className="fixed top-0 right-0 left-0 bottom-0 z-50 min-h-full min-w-full bg-gray-300/30" />
+          <div className="fixed bottom-0 left-0 right-0 top-0 z-50 min-h-full min-w-full bg-gray-300/30" />
         )}
         <LayoutSteckbrief>
           <HelmetSeo

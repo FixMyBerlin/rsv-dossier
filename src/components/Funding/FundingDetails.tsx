@@ -32,8 +32,8 @@ export const FundingDetails: React.FC<Props> = ({
 }) => {
   return (
     <div className="flex flex-col bg-white pt-10 md:flex-row">
-      <div className="max-w-4xl bg-gray-50 px-4 py-8 sm:py-12 sm:px-6 md:rounded-r-xl lg:max-w-6xl lg:py-10">
-        <div className="mx-auto max-w-2xl lg:mr-0 lg:ml-auto lg:w-2/3 lg:max-w-none lg:pl-10">
+      <div className="max-w-4xl bg-gray-50 px-4 py-8 sm:px-6 sm:py-12 md:rounded-r-xl lg:max-w-6xl lg:py-10">
+        <div className="mx-auto max-w-2xl lg:ml-auto lg:mr-0 lg:w-2/3 lg:max-w-none lg:pl-10">
           <h2 className="mt-3 text-3xl font-extrabold text-gray-900 sm:text-4xl">
             {title}
           </h2>

@@ -17,8 +17,8 @@ export const SplitContent = (props) => {
       <div className="h-56 bg-emerald-300 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
         {image}
       </div>
-      <div className="relative mx-auto max-w-7xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
-        <div className="mx-auto max-w-2xl lg:mr-0 lg:ml-auto lg:w-1/2 lg:max-w-none lg:pl-10">
+      <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:py-16">
+        <div className="mx-auto max-w-2xl lg:ml-auto lg:mr-0 lg:w-1/2 lg:max-w-none lg:pl-10">
           <div>
             <div className="flex h-12 w-12 items-center justify-center rounded-md bg-emerald-500 text-white">
               <MapIcon className="h-6 w-6" aria-hidden="true" />
