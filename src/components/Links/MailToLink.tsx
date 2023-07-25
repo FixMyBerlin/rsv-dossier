@@ -6,6 +6,7 @@ type Props = {
   subject?: string;
   className?: string;
   title?: string;
+  children?: React.ReactNode;
 };
 
 export const MailToLink: React.FC<Props> = ({

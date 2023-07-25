@@ -6,6 +6,7 @@ type Props = {
   to: string;
   className?: string;
   newWindow?: boolean;
+  children?: React.ReactNode;
 };
 
 export const textLinkClasses =

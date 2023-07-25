@@ -9,6 +9,7 @@ type Props = {
   small?: boolean;
   large?: boolean;
   outline?: boolean;
+  children?: React.ReactNode;
 };
 
 const button =

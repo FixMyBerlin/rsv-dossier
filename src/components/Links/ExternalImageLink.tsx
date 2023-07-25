@@ -5,6 +5,7 @@ type Props = {
   className?: string;
   newWindow?: boolean;
   title?: string;
+  children?: React.ReactNode;
 };
 
 export const ExternalImageLink: React.FC<Props> = ({

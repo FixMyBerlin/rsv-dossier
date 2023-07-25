@@ -17,6 +17,7 @@ type Props = {
   imageUrl?: string;
   imageAlt?: string;
   svg?: JSX.Element;
+  children?: React.ReactNode;
 };
 
 // Image Display is either possible via SVG element OR image url
