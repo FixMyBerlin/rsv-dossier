@@ -8,7 +8,7 @@ import {
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import React, { useEffect, useState } from 'react';
-import Map, { FullscreenControl } from 'react-map-gl';
+import Map, { FullscreenControl } from 'react-map-gl/maplibre';
 import { maptilerBaseUrl, maptilerKey } from '~/utils';
 import { RSVPopup, RSVSegment } from '.';
 
@@ -69,7 +69,6 @@ export const DynamicMap: React.FC<
           padding: 20,
         },
       }}
-      mapLib={maplibregl}
       mapStyle={`${maptilerBaseUrl}/style.json?key=${maptilerKey}`}
       maxBounds={bboxView as BBox2d}
       attributionControl={false}

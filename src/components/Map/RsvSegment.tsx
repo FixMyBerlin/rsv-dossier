@@ -1,7 +1,7 @@
 import React from 'react';
 import { LineLayer, LineLayout } from 'mapbox-gl';
 import { geojsonType } from '@turf/turf';
-import { Source, Layer } from 'react-map-gl';
+import { Source, Layer } from 'react-map-gl/maplibre';
 import { segmentColor } from '~/utils';
 
 // const selectedColor = '#475569';

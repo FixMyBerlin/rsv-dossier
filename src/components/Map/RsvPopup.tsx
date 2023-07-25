@@ -1,5 +1,5 @@
 import React from 'react';
-import { Popup } from 'react-map-gl';
+import { Popup } from 'react-map-gl/maplibre';
 
 type Props = {
   info: {
