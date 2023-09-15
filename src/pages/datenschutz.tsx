@@ -49,9 +49,9 @@ const DatenschutzPage: React.FC<PageProps> = () => {
       <p>
         <strong>FixMyCity GmbH</strong>
         <br />
-        Karlsgartenstraße 12
+        Oberlandstraße 26-35
         <br />
-        12049 Berlin
+        12099 Berlin
         <br />
         E-Mail: <MailLink>hello@fixmycity.de</MailLink>
         <br />
