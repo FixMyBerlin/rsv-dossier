@@ -20,9 +20,9 @@ const ImprintPage = () => {
       <p>
         <strong>FixMyCity GmbH</strong>
         <br />
-        Karlsgartenstraße 12
+        Oberlandstraße 26-35
         <br />
-        12049 Berlin
+        12099 Berlin
         <br />
         E-Mail-Adresse:{' '}
         <MailToLink mailto="hello@fixmycity.de">hello@fixmycity.de</MailToLink>
