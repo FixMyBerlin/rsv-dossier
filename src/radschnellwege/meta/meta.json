@@ -1159,7 +1159,7 @@
     "stakeholders": [
       { "name": "Planungsverband  Nürnberg", "roles": ["authority"] }
     ],
-    "references": { "website": "https://www.radschnellverbindung.info" }
+    "references": { "website": null }
   },
   {
     "id": "8-bayern",
