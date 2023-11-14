@@ -8,6 +8,7 @@ type Props = {
   small?: boolean;
   large?: boolean;
   outline?: boolean;
+  children?: React.ReactNode;
 };
 
 // TODO: share style with ButtonLink

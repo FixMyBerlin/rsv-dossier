@@ -3,6 +3,7 @@ import { Layout } from '~/components/Layout/Layout';
 
 type Props = {
   location?: any; // TODO: define type
+  children?: React.ReactNode;
 };
 
 export const LayoutArticle: React.FC<Props> = ({ location, children }) => {

@@ -21,7 +21,7 @@ export const Navigation = ({ location, fixed }) => {
     <Disclosure
       as="nav"
       className={`${
-        fixed ? 'fixed top-0 right-0 left-0' : ''
+        fixed ? 'fixed left-0 right-0 top-0' : ''
       } z-20 bg-gray-50 shadow-md shadow-gray-400`}
     >
       {({ open }) => (
@@ -60,7 +60,7 @@ export const Navigation = ({ location, fixed }) => {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <nav className="space-y-1 pt-2 pb-3">
+            <nav className="space-y-1 pb-3 pt-2">
               {navigationLinks.map((link) => (
                 <NavigationMenuItemMobile
                   name={link.name}

@@ -21,7 +21,7 @@ const ResearchWorkPage: React.FC<PageProps> = ({ location }) => {
         caption="Studienarbeit"
         image={
           <StaticImage
-            src="./../index/fahrrad.jpg"
+            src="../../index/fahrrad.jpg"
             alt="Zeigt eine Karte mit einer Planung"
             className="h-96 object-contain lg:h-full"
           />

@@ -20,7 +20,7 @@ const FederalStateFromIndex: React.FC<Props> = ({
   const state = pageContext.general__from__federalState as string;
 
   // Manualy join data because graphQL has no OR operator
-  type GraphQlJoin = { [key: string]: typeof from['nodes'][number] };
+  type GraphQlJoin = { [key: string]: (typeof from)['nodes'][number] };
   const graphQlJoin: GraphQlJoin = {};
   [...from.nodes, ...to.nodes].forEach((node) => {
     graphQlJoin[node.jsonId] = node;

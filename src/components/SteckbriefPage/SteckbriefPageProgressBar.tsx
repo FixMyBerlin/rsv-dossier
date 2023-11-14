@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { StateIcons } from '~/components/StateIcons';
 
 type Props = {
-  currentState: typeof progressStates[number];
+  currentState: (typeof progressStates)[number];
 };
 
 const progressStates = [
