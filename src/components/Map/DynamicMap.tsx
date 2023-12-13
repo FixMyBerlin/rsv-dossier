@@ -77,6 +77,8 @@ export const DynamicMap: React.FC<
       interactiveLayerIds={geometry.features.map(
         ({ properties }) => properties.id
       )}
+      // See https://github.com/visgl/react-map-gl/issues/2310
+      RTLTextPlugin={null}
 
       // disabled until popup has real content
       // onClick={updateInfo}
