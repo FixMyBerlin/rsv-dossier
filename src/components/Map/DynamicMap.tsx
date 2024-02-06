@@ -8,7 +8,7 @@ import {
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import React, { useEffect, useState } from 'react';
-import Map, { FullscreenControl } from 'react-map-gl';
+import Map, { FullscreenControl, NavigationControl } from 'react-map-gl';
 import { maptilerBaseUrl, maptilerKey } from '~/utils';
 import { RSVPopup, RSVSegment } from '.';
 
@@ -97,6 +97,7 @@ export const DynamicMap: React.FC<
         )
       )}
       <RSVPopup info={info} selected={selected} setSelected={setSelected} />
+      <NavigationControl showCompass={false} />
     </Map>
   );
 };
