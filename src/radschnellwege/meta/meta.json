@@ -453,18 +453,18 @@
   },
   {
     "id": "rs10-baden-wuerttemberg",
-    "cost": "",
+    "cost": "voraussichtlich 11 Mio. €",
     "state": "planning",
     "finished": null,
     "general": {
       "ref": "RS10",
-      "name": "Karlsruhe-  Ettlingen",
+      "name": "Karlsruhe - Ettlingen",
       "from": { "city": "Karlsruhe", "federalState": "Baden-Württemberg" },
       "to": { "city": "Ettlingen", "federalState": "Baden-Württemberg" },
       "length": 5,
-      "description": "Im  Frühjahr  2019  wurde  eine  Machbarkeitsstudie  vorgestellt,  in  der  120  km  Radrouten  auf  Eignung  als  Radschnellverbindungen  hin  untersucht  wurden.  Das  Netz  besteht  aus  einer  Rundrunde  im  Bereich  Karlsruhe  und  6  radialen  Anschlussrouten  an  diesen  Radring:",
-      "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg#Regierungsbezirk_Karlsruhe",
-      "stand": "2022-06-02"
+      "description": "Der Regionalverband Mittlerer Oberrhein (RVMO) hat im Rahmen einer Machbarkeitsstudie die Radpotenziale entlang der Strecke Ettlingen – Karlsruhe – Stutensee (Bruchsal) ermitteln lassen und dabei den Teilabschnitt Karlsruhe – Ettlingen als denjenigen mit dem größten Radpotenzial in Baden-Württemberg ermittelt. Als Ergebnis wurden entlang des Abschnitts Karlsruhe bis Ettlingen über 8.300 Radfahrende pro Tag prognostiziert.",
+      "source": "https://rp.baden-wuerttemberg.de/rpk/abt4/ref44/radschnellwege/rs10-karlsruhe-ettlingen",
+      "stand": "2022-02-28"
     },
     "stakeholders": [
       {
@@ -473,7 +473,7 @@
       }
     ],
     "references": {
-      "website": "https://www.region-karlsruhe.de/projekte/regionale-projekte/radschnellverbindungen/"
+      "website": "https://rp.baden-wuerttemberg.de/rpk/abt4/ref44/radschnellwege/rs10-karlsruhe-ettlingen/"
     }
   },
   {
@@ -498,7 +498,7 @@
       }
     ],
     "references": {
-      "website": "https://www.region-karlsruhe.de/projekte/regionale-projekte/radschnellverbindungen/"
+      "website": "https://rp.baden-wuerttemberg.de/rpk/abt4/ref44/radschnellwege/rs10-karlsruhe-ettlingen/"
     }
   },
   {
