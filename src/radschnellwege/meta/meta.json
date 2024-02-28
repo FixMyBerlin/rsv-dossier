@@ -114,11 +114,14 @@
       "ref": "RS6",
       "name": "Radschnellweg  Freiburg  -  Waldkirch/Emmendingen",
       "from": { "city": "Freiburg", "federalState": "Baden-Württemberg" },
-      "to": { "city": "Emmendigen", "federalState": "Baden-Württemberg" },
-      "length": 20,
+      "to": {
+        "city": "Waldkirch/Emmendigen",
+        "federalState": "Baden-Württemberg"
+      },
+      "length": 25,
       "description": "Der  Korridor  des  RS  6  wird  in  Form  einer  Y-Trasse  dargestellt.  Die  Relationen  beziehen  sich  auf  die  zwei  Achsen  Freiburg  –  Emmendingen  sowie  Freiburg  –  Waldkirch.  Von  der  Kernstadt  Freiburgs  in  Richtung  Norden  bis  zur  Gemeinde  Gundelfingen  bzw.  Denzlingen  (je  nach  Verzweigung  der  Trassen)  verlaufen  sie  auf  einem  gemeinsamen  Stamm,  bevor  sie  sich  einmal  in  Richtung  Nordwesten  nach  Emmendingen  und  einmal  in  Richtung  Nordosten  nach  Waldkirch  aufteilen.",
       "source": "https://www.breisgau-y.de/radschnellweg",
-      "stand": "2022-06-02"
+      "stand": "2024-02-28"
     },
     "stakeholders": [
       {
