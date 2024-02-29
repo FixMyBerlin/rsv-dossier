@@ -1975,8 +1975,8 @@
   },
   {
     "id": "8-niedersachsen",
-    "cost": "",
-    "state": "planning",
+    "cost": "15 Mio. Euro",
+    "state": "in_progress",
     "finished": null,
     "general": {
       "ref": "8",
@@ -1986,7 +1986,7 @@
       "length": 10,
       "description": "Während  auf  Bremer  Gebiet  die  Premium  Radroute  D.15  (Bremen-Nord  bis  Hemelingen  bzw.  Mahndorf)  als  Radschnellwegverbindung  entwickelt  wird,  haben  in  Achim  die  vorbereitenden  Arbeiten  begonnen,  um  den  Achimer  Radschnellweg  (Rasch)  zu  realisieren.  An  der  Landesgrenze  (im  Bereich  Zum  Klümoor)  sollen  die  beiden  Routen  aufeinandertreffen,  sodass  eine  komfortable  Verbindung  entsteht,  die  den  kürzesten  Weg  von  A(chim)  nach  B(remen)  darstellt.",
       "source": "https://www.achim.de/portal/seiten/rasch-achimer-radschnellweg-902001536-20601.html",
-      "stand": "2022-06-27"
+      "stand": "2024-02-29"
     },
     "stakeholders": [{ "name": "", "roles": ["authority"] }],
     "references": {
