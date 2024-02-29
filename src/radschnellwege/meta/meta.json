@@ -2261,12 +2261,15 @@
     "general": {
       "ref": "RS4",
       "name": "Radschnellweg  Euregio",
-      "from": { "city": "Herzogenrath", "federalState": "Nordrhein-Westfalen" },
-      "to": { "city": "Aachen", "federalState": "Nordrhein-Westfalen" },
-      "length": 30,
-      "description": "Der  Radschnellweg  Euregio  zeichnet  sich  dadurch  aus,  dass  erstmalig  von    niederländischen  und  deutschen  Kommunen  gemeinsam  ein  Radverkehrsprojekt    entwickelt  und  umgesetzt  werden  soll.  Die  Trasse  soll  mit  19  Kilometern    Länge  die  Stadt  Aachen  als  Oberzentrum  mit  den  Mittelzentren    Herzogenrath  auf  deutscher  und  Kerkrade  auf  niederländischer  Seite    verbinden.",
-      "source": "https://www.radschnellwege.nrw/rs4-radschnellweg-euregio/",
-      "stand": "2022-01-01"
+      "from": { "city": "Aachen", "federalState": "Nordrhein-Westfalen" },
+      "to": {
+        "city": "Herzogenrath/Kerkrade",
+        "federalState": "Nordrhein-Westfalen"
+      },
+      "length": 15,
+      "description": "Der Radschnellweg Euregio (RS4) wird die Städte Aachen, Herzogenrath und das niederländische Kerkrade miteinander verbinden. Die 14 km lange Strecke führt parallel zur regelmäßig überlasteten L 232 (Roermonder Straße / Voccartstraße / Aachener Straße / Schütz-von-Rode-Straße) und zu den stark frequentierten ÖPNV-Angeboten mit Bussen und Bahnen. Der Radschnellweg soll hier vielen Menschen ein attraktives Alternativangebot anbieten. Bei der Planung arbeitet Straßen.NRW eng mit den Städten Aachen und Herzogenrath sowie der StädteRegion Aachen zusammen.",
+      "source": "https://www.strassen.nrw.de/de/rs4-radschnellweg-euregio-projektueberblick.html",
+      "stand": "2024-02-28"
     },
     "stakeholders": [
       {
@@ -2275,7 +2278,7 @@
       }
     ],
     "references": {
-      "website": "https://www.radschnellwege.nrw/rs4-radschnellweg-euregio/"
+      "website": "https://www.strassen.nrw.de/de/rs4-radschnellweg-euregio-projektueberblick.html"
     }
   },
   {
