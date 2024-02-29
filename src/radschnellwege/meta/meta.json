@@ -1694,22 +1694,22 @@
   },
   {
     "id": "frm7-hessen",
-    "cost": "",
+    "cost": "ca. 34,81 Mio. Euro",
     "state": "planning",
     "finished": null,
     "general": {
       "ref": "FRM  7",
-      "name": "Radschnellweg  Frankfurt  –  Hanau  nordmainlisch",
+      "name": "Radschnellweg  Frankfurt  –  Hanau  nordmainisch",
       "from": { "city": "Frankfurt  am  Main", "federalState": "Hessen" },
       "to": { "city": "Hanau", "federalState": "Hessen" },
-      "length": 20,
-      "description": "Auf  einer  Länge  von  15  bis  20  Kilometern  soll  diese  Radschnellverbindung    die  Städte  Frankfurt  am  Main,  Maintal  und  Hanau  auf  nordmainischer    Seite  miteinander  verbinden.  Zu  diesem  Zweck  hat  die  interkommunale    Arbeitsgruppe,  bestehend  aus  dem  Regionalverband  und  den  drei  Kommunen,    im  Februar  2016  eine  Absichtserklärung  unterschrieben,  um  eine    Machbarkeitsstudie  zu  erstellen.  Diese  Studie  wurde  am  20.  September    2019  veröffentlicht.  Anschließend  übernimmt  der  Regionalverband  die    Aufgabe,  das  Vorhaben  umzusetzen.",
-      "source": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/",
-      "stand": "2022-06-07"
+      "length": 17,
+      "description": "Breite Wege für sicheres Überholen, guter Belag und wenig Unterbrechungen – das ist das Ziel der attraktiven Radschnellwege wie dem geplanten Radschnellweg FRM7, der besonders, aber nicht nur Pendlerinnen und Pendler dazu ermutigen soll, auf umweltfreundliche Weise auf das Fahrrad umzusteigen. Auf einer Länge von gut 17 Kilometern soll dieser Radschnellweg die Städte Frankfurt am Main, Maintal und Hanau auf nordmainischer Seite miteinander verbinden.",
+      "source": "https://radschnellweg-frm7.de/",
+      "stand": "2024-02-29"
     },
     "stakeholders": [{ "name": "Nahmobil  Hessen", "roles": ["authority"] }],
     "references": {
-      "website": "https://www.region-frankfurt.de/Unsere-Themen-Leistungen/Mobilit%C3%A4t-in-der-Region/Mit-dem-Rad/Radschnellwege/"
+      "website": "https://radschnellweg-frm7.de/"
     }
   },
   {
