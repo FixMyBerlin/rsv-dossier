@@ -1,20 +1,20 @@
 <div align="center">
-  <img src="src/images/logo-rsv-info.svg" height="80" />
-  <h1 align="center">Radschnellverbindungen.info</h1>
+  <img src="src/images/logo-rsv-info-thin.svg" height="80" />
+  <h1 align="center"><a href="https://radschnellverbindungen.info/">Radschnellverbindungen.info</a></h1>
   <!-- Deployment status -->
-  <a href="https://app.netlify.com/sites/fixmyrsv/deploys"><img src="https://api.netlify.com/api/v1/badges/7ac0f9fe-a196-4ef9-b372-2e4bbe53c074/deploy-status" alt="Netlify deployment status" /></a>
+  <a href="https://app.netlify.com/sites/rsv-dossier/deploys"><img src="(https://api.netlify.com/api/v1/badges/7ac0f9fe-a196-4ef9-b372-2e4bbe53c074/deploy-status" alt="Netlify deployment status" /></a>
   <!--  -->
 </div>
 
 This site show's general information about Radschnellverbindungen (cycle highways) in Germany and specific about specific highways which are planned or build.
 
-## Developing
-
-If you found any bugs feel free to create an issue.
-
-## Data
+## 💾 Data
 
 You find the geometry and meta information about the highways under [`./src/radschnellwege/`](./src/radschnellwege/). There is one file for all highways in [`meta/`](./src/radschnellwege/meta) folder containing the meta information. In the [`geometry/`](./src/radschnellwege/geometry) folder, every cycle highway has one individual file. In [`./data/schema/`](./data/schema/)you'll find the schema for the json files. It enables the validation of the files via gatsby.
+
+## 🧑‍💻 Developing
+
+If you found any bugs feel free to create an issue.
 
 ### Getting Started
 
