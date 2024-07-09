@@ -10,6 +10,8 @@ This site show's general information about Radschnellverbindungen (cycle highway
 
 ## 💾 Data
 
+TLDR: See [README.md](./src/radschnellwege/README.md).
+
 You find the geometry and meta information about the highways under [`./src/radschnellwege/`](./src/radschnellwege/). There is one file for all highways in [`meta/`](./src/radschnellwege/meta) folder containing the meta information. In the [`geometry/`](./src/radschnellwege/geometry) folder, every cycle highway has one individual file. In [`./data/schema/`](./data/schema/)you'll find the schema for the json files. It enables the validation of the files via gatsby.
 
 ## 🧑‍💻 Developing
@@ -43,8 +45,10 @@ For production you will also need a `.env.production` file. Otherwise the module
 
 ## License
 
-This project is licensed under the AGPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for more information.
+This project has different licenses. The code is licensed under the AGPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for more information.
 It contains dependencies which have different Licenses, see [`package.json`](./package.json).
+
+For the license of the data, please see the specific [README.md](./src/radschnellwege/README.md) respectively [LICENSE](./src/radschnellwege/LICENSE) file.
 
 ## Thanks
 
