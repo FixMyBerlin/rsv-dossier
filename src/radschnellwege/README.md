@@ -7,7 +7,8 @@
 ## Attribution & License
 
 Please attribute the data like this:
-*© [FixMyCity](https://fixmycity.de)/[RSV-Dossier](https://github.com/FixMyBerlin/rsv-dossier) - [ODbL License](https://opendatacommons.org/licenses/odbl/summary/index.html)*
+
+> © [FixMyCity](https://fixmycity.de)/[RSV-Dossier](https://github.com/FixMyBerlin/rsv-dossier) - [ODbL License](https://opendatacommons.org/licenses/odbl/summary/index.html)
 
 The data, therefore `meta` and `geometry` folder, are both licensed under ODbL. See the [LICENSE](./LICENSE) for the full legal text.
 
