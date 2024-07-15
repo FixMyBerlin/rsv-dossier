@@ -4,15 +4,18 @@
 
 [![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)
 
-## License
+## Attribution & License
 
-The data, therefore `meta` and `geometry` folder, is all licensed under ODbL. See the [LICENSE](./LICENSE) for the full legal text.
+Please attribute the data like this:
+*© [FixMyCity](https://fixmycity.de)/[RSV-Dossier](https://github.com/FixMyBerlin/rsv-dossier) - [ODbL License](https://opendatacommons.org/licenses/odbl/summary/index.html)*
+
+The data, therefore `meta` and `geometry` folder, are both licensed under ODbL. See the [LICENSE](./LICENSE) for the full legal text.
 
 ## Data
 
 The [`meta/meta.json`](./meta/meta.json) is a combined file, for all cycle highways. It collects not-structured data and information.
 
-The individual `geojson` files in the `geometry` folder are individual. They containing solely the geodata for one cycle highway.
+The individual `geojson` files in the `geometry` folder are individual. They're containing solely the geodata for one cycle highway.
 
 The both datasets are matched through the filename of the `geojson` and the `id` in the meta file.
 
@@ -28,7 +31,7 @@ A cycle highway MUST have one of the following states, segments CAN have one of 
 
 ### Stakeholders & Roles
 
-Every organization / institution CAN be part of the `stakeholders` attribute. Every stakeholder MUST have an role. Since `stakeholders` and `roles` are an array there can be multiple stakeholder holding the same role. Stakeholders are also available in _Detail segments_.
+Every organization / institution CAN be part of the `stakeholders` attribute. Every stakeholder MUST have a role. Since `stakeholders` and `roles` are an array, there can be multiple stakeholder holding the same role. Stakeholders are also available in _Detail segments_.
 
 **Example:**
 
@@ -50,7 +53,7 @@ The **`detail_level`** describes in which accuracy the geometry is available in 
 
 Corresponding to the Meta JSON file, the _GeoJSON_ file contains the geometry of the cycle highways.
 
-The **filename** of the geometries MUST be different from the `id` field, otherwise there are id collisions with `gatsby-source-filesystem` pluigin.
+The **filename** of the geometries MUST be different from the `id` field, otherwise there are id collisions with `gatsby-source-filesystem` plugin.
 
 ### Planning Phases
 
@@ -70,15 +73,15 @@ When the whole cycle highway get's discarded, the planning phase it stuck and SH
 
 ### Variants
 
-Usually in the early planning phases there are multiple possible variants of the cycle highway. The `variant` attribute is an enum and describes wether the geometry is part of the currently prefered variant `"Vorzugstrasse"` or an alternative `"Alternative"`.
+Usually in the early planning phases there are multiple possible variants of the cycle highway. The `variant` attribute is an enum and describes whether the geometry is part of the currently preferred variant `"Vorzugstrasse"` or an alternative `"Alternative"`.
 
-The **`discarded`** property describes that a variant was a considered variant previously, but is discarded now. The geometry therefore stays in the GeoJSON. In constrast to the `discarded` key in the MetaJSON, this value only represents the state of one individual variant. Usually from time to time more and more variants get discarded till one preferred is found.
+The **`discarded`** property describes that a variant was a considered variant previously, but is discarded now. The geometry therefore stays in the GeoJSON. In contrast to the `discarded` key in the MetaJSON, this value only represents the state of one individual variant. Usually from time to time more and more variants get discarded till one preferred is found.
 
 ### JSON Schema
 
 > You can use the [JSON Schema for MetaJSON](schema/meta.schema.json) for validation.
 
-For a human readable documentation, you can generate a HTML file using [json-schema-for-humans](https://pypi.org/project/json-schema-for-humans/).
+For a human-readable documentation, you can generate an HTML file using [json-schema-for-humans](https://pypi.org/project/json-schema-for-humans/).
 
 Install first: `pip install json-schema-for-humans`
 Then run
