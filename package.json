@@ -3,25 +3,37 @@
   "version": "0.0.39",
   "license": "MIT",
   "dependencies": {
+    "@astrojs/check": "^0.8.2",
     "@astrojs/markdoc": "^0.11.3",
     "@astrojs/netlify": "^5.4.0",
     "@astrojs/react": "^3.6.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/ts-plugin": "^1.9.0",
     "@keystatic/astro": "^5.0.0",
     "@keystatic/core": "^0.5.27",
     "@types/react": "^18.2.8",
     "@types/react-dom": "^18.0.11",
     "astro": "^4.12.2",
+    "clsx": "^2.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.6"
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.3"
   },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "type-check": "astro check && tsc --skipLibCheck --noEmit",
+    "lint": "eslint",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|astro)\" --write",
+    "format:all": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|astro|mdx)\" --write",
+    "check": "npm run type-check && npm run format && npm run lint",
+    "updatePackages:major": "npx taze major --includeLocked --write && npm install",
+    "updatePackages:minor": "npx taze minor --includeLocked --write && npm install",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.13",
