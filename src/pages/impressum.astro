@@ -1,0 +1,84 @@
+---
+import Link from '@components/links/Link.astro'
+import { MailLink } from '@components/links/MailLink'
+import { Image } from 'astro:assets'
+import bmdvLogo from 'src/components/impressumPage/assets/BMDV-Foerderung.svg'
+import LayoutPage from 'src/layouts/LayoutPage.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Impressum">
+  <LayoutPage>
+    <h1>Impressum</h1>
+    <p>
+      <strong>FixMyCity GmbH</strong>
+      <br />
+      Oberlandstraße 26-35
+      <br />
+      12099 Berlin
+      <br />
+      E-Mail-Adresse:{' '}
+      <MailLink mailto="hello@fixmycity.de">hello@fixmycity.de</MailLink>
+      <br />
+      Telefon: 030 / 549 08 665
+      <br />
+    </p>
+    <p>Gesellschafter: Boris Hekele und Heiko Rintelen</p>
+    <p>
+      Registergericht: Amtsgericht Berlin-Charlottenburg
+      <br />
+      Registernummer: HRB 205031 B
+    </p>
+    <p>Umsatzsteuer-Identifikationsnummer gem. § 27a UStG: DE323489466</p>
+    <p>Verantwortlicher i.S.v. § 55 Rundfunkstaatsvertrag (RStV): Boris Hekele</p>
+    <h2>Feedback &amp; Kontakt</h2>
+    <p>
+      Wir freuen uns über Kommentare Anregungen und Unterstützung an{' '}
+      <MailLink mailto="feedback@fixmycity.de?subject=Feedback Radschnellverbindungen">
+        feedback@fixmycity.de
+      </MailLink>
+    </p>
+    <p>
+      Du findest uns auch auf{' '}
+      <Link external href="https://twitter.com/fixmyberlin"> twitter </Link>{' '}
+      |{' '}
+      <Link external href="https://www.instagram.com/fixmycity/"> instagram </Link>{' '}
+      und{' '}
+      <Link external href="https://www.linkedin.com/company/fixmycity"> linkedIn </Link>
+    </p>
+    <p>
+      Sofern du Bugs oder Verbesserungsvorschläge hast, gib uns gerne{' '}
+      <Link external href="https://github.com/FixMyBerlin/fixmy.rsv/issues/new/choose">
+        auf GitHub Feedback
+      </Link>
+      .
+    </p>
+    <h2>Urheberrechte Fotos</h2>
+    <p>
+      Wenn nicht anders angegeben stehen die auf dieser Website verwendeten Fotos unter{' '}
+      <Link
+        external
+        href="https://creativecommons.org/licenses/by-nc/4.0/deed.de"
+        title="Infos zu CC-Lizenz BY-NC 4.0"
+      >
+        Creative Commons-Lizenz BY-NC 4.0
+      </Link>
+      .
+    </p>
+    <h2>Förderung</h2>
+    <p>
+      Diese Website wird im Rahmen des NRVP-Projektes &ldquo;Baukasten-RSV&rdquo; vom
+      Bundesministerium für Digitales und Verkehr (BMDV) gefördert (Förderkennzeichen VB2025,{' '}
+      <Link
+        external
+        href="https://www.mobilitaetsforum.bund.de/DE/Themen/Wissenspool/Projekte/Projektbeispiele/Projekte/22936_modulares_system_fuer_radschnellverbindu.html"
+      >
+        <strong>Projektsteckbrief</strong>)
+      </Link>
+    </p>
+
+    <a href="https://bmdv.bund.de/" target="_blank">
+      <Image class="h-24 w-48" src={bmdvLogo} alt="Förderung durch BMDV" />
+    </a>
+  </LayoutPage>
+</Layout>
