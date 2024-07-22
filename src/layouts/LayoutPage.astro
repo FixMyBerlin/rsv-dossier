@@ -1,4 +1,5 @@
 ---
+import { Footer } from './footer/Footer'
 import Layout from './Layout.astro'
 
 type Props = { title?: string; noindex?: boolean }
@@ -13,6 +14,6 @@ const pathname = new URL(Astro.request.url).pathname
     <main class="z-0 mt-12 flex-grow">
       <slot />
     </main>
-    <!-- <Footer footerNavigation={footerNavigation} /> -->
+    <Footer />
   </div>
 </Layout>
