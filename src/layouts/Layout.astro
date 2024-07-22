@@ -1,24 +1,28 @@
 ---
-import '../styles.css'
+// import '@fontsource-variable/open-sans'
+// import '@fontsource/roboto-slab'
+import { ViewTransitions } from 'astro:transitions'
 
-export interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+type Props = { title?: string; noindex?: boolean }
+const { title = 'Radschnellverbindungen.info', noindex = false }: Props = Astro.props
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<!doctype html>
+<html lang="de" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    {noindex && <meta name="robots" content="noindex" />}
+
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body class="flex min-h-full w-full bg-[#eee] font-sans antialiased">
+    <div class="relative flex-auto">
+      <slot />
+    </div>
+  </body>
 </html>
