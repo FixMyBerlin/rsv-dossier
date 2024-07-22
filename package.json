@@ -9,6 +9,8 @@
     "@astrojs/react": "^3.6.0",
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/ts-plugin": "^1.9.0",
+    "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
     "@keystatic/astro": "^5.0.0",
     "@keystatic/core": "^0.5.27",
     "@types/react": "^18.2.8",
