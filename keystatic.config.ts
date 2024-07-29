@@ -1,8 +1,13 @@
-import { config, fields, collection } from '@keystatic/core';
+import { collection, config, fields } from '@keystatic/core'
 
 export default config({
   storage: {
     kind: 'local',
+    // kind: 'github',
+    // repo: {
+    //   owner: 'FixMyBerlin',
+    //   name: 'rsv-info',
+    // },
   },
   collections: {
     posts: collection({
@@ -24,4 +29,4 @@ export default config({
       },
     }),
   },
-});
+})
