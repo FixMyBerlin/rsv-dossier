@@ -1,0 +1,43 @@
+{
+  "id": "rs14-baden-wuerttemberg",
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "bbox": [9.50542, 48.683083, 9.76081, 48.716094],
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1",
+        "detail_level": "corridor",
+        "state": "planning",
+        "id_rsv": "RS14",
+        "planning_phase": null,
+        "variant": "Vorzugstrasse",
+        "discarded": false,
+        "length": 19906.352,
+        "description:planning_phase": null
+      },
+      "bbox": [9.50542, 48.683083, 9.76081, 48.716094],
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [9.76081, 48.683083],
+            [9.738372, 48.690416],
+            [9.708336, 48.698812],
+            [9.652475, 48.703543],
+            [9.62408, 48.71214],
+            [9.605049, 48.705859],
+            [9.586028, 48.704839],
+            [9.556086, 48.715068],
+            [9.525351, 48.716094],
+            [9.50542, 48.713018]
+          ]
+        ]
+      }
+    }
+  ]
+}
