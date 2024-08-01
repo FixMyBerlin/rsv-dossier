@@ -1,30 +1,43 @@
 ---
+import PageHeader from '@components/PageHeader.astro'
+import Section from '@components/Section.astro'
+import { TeaserCard } from '@components/Teaser/TeaserCard'
+import { TeasersContainer } from '@components/Teaser/TeasersContainer'
 import { getCollection } from 'astro:content'
-import Layout from '../layouts/Layout.astro'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
 
 const posts = await getCollection('posts')
+const filteredAndSortedPosts = posts
+  .filter((post) => post.data.showOnHome)
+  .sort((a, b) => {
+    return a.data.order - b.data.order
+  })
+  .slice(0, 3)
 ---
 
-<Layout title="Keystatic & Astro's Content Collections">
-  <LayoutPage>
-    <div class="mt-48">
-      <h1>Keystatic ⚡️ + Astro 🚀</h1>
-      <p>This homepage shows how to load data from Astro's content collections.</p>
-      <p>
-        <a href="/keystatic">Click here to visit the Admin UI</a>, or the link below to view a post
-        in the collection.
-      </p>
-      <h2>Posts</h2>
-      <ul>
-        {
-          posts.map((post) => (
-            <li>
-              <a href={`/posts/${post.slug}`}>{post.data.title}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-  </LayoutPage>
-</Layout>
+<LayoutPage>
+  <Section>
+    <PageHeader title="Radschnellverbindungen" subTitle="bla" />
+  </Section>
+  <Section>
+    <h1>Kommunikation</h1>
+    <TeasersContainer>
+      {
+        filteredAndSortedPosts.map((post) => {
+          const { title, type, teaserText, teaserImage, imageCopyright } = post.data
+          return (
+            <TeaserCard
+              href={`/kommunikation/${post.slug}`}
+              title={title}
+              description={teaserText}
+              tag={type}
+              image={teaserImage}
+              imageCopyright={imageCopyright}
+              linkText="Weiterlesen"
+            />
+          )
+        })
+      }
+    </TeasersContainer>
+  </Section>
+</LayoutPage>
