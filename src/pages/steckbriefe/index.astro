@@ -1,0 +1,25 @@
+---
+import { SteckbriefePage } from '@components/SteckbriefePage/SteckbriefePage'
+import { type RsvTeaser } from '@components/SteckbriefePage/SteckbriefePageTeasers'
+import LayoutPage from 'src/layouts/LayoutPage.astro'
+import { getRsvTeasersFromMeta } from 'src/radschnellwege/meta/getRsvTeasersFromMeta'
+
+const rsvTeasers: RsvTeaser[] = getRsvTeasersFromMeta()
+
+const headerTitle = 'Übersicht über RSV-Planungen'
+const headerDescription = `
+      Übersicht der aktuell geplanten Radschnellverbindungen sowie deren Trassenverläufe bzw.
+      -korridore. Enthalten sind RSV aus Hessen, Baden-Württemberg, Berlin, Niedersachsen,
+      Schleswig-Holstein, Mecklenburg-Vorpommern, Nordrhein-Westfalen, Rheinland-Pfalz und Hamburg.
+      Aktuell umfasst die Liste ${rsvTeasers.length} Radschnellverbindungen und wird fortlaufend
+      erweitert.`
+---
+
+<LayoutPage>
+  <SteckbriefePage
+    headerTitle={headerTitle}
+    headerDescription={headerDescription}
+    rsvTeasers={rsvTeasers}
+    currentFilter="Alle anzeigen"
+  />
+</LayoutPage>

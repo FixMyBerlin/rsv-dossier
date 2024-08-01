@@ -1,0 +1,52 @@
+---
+// todo
+// if the ref is official (not an arbitrary number picked by us) display it in the name const name =
+// Number.isNaN(parseFloat(meta.general.ref))
+//   ? `${meta.general.ref}: ${meta.general.name}`
+//   : meta.general.name
+
+import meta from 'src/radschnellwege/meta/meta.json'
+// todo
+// @ts-expect-error
+import fs from 'fs'
+import { Radschnellweg } from '@components/SteckbriefPage/Radschnellweg'
+import type { GeoJSONFeatureCollectionRSV } from 'data/types/geometry'
+import type { MetaSchemaRSV } from 'data/types/meta'
+// @ts-expect-error
+import path from 'path'
+import Layout from 'src/layouts/Layout.astro'
+
+export async function getStaticPaths() {
+  return meta.map((rsv) => {
+    const geometryDir = path.resolve('src/radschnellwege/geometry')
+    const files = fs.readdirSync(geometryDir)
+    // @ts-expect-error
+    const file = files.find((file) => {
+      const filePath = path.resolve(geometryDir, file)
+      const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+      return data.id === rsv.id
+    })
+
+    if (!file) {
+      throw new Error(`File with id ${rsv.id} not found`)
+    }
+
+    const filePath = path.resolve(geometryDir, file)
+    const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+
+    return {
+      params: { id: rsv.id },
+      props: { rsv, geometry: data },
+    }
+  })
+}
+
+const { rsv, geometry } = Astro.props as {
+  rsv: MetaSchemaRSV
+  geometry: GeoJSONFeatureCollectionRSV
+}
+---
+
+<Layout title={'Steckbrief ' + rsv.general.name}>
+  <Radschnellweg client:load meta={rsv} geometry={geometry} />
+</Layout>
