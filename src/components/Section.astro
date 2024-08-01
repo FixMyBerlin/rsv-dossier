@@ -1,0 +1,13 @@
+---
+type Props = {
+  className?: string
+  extraPadding?: boolean
+}
+const { className, extraPadding } = Astro.props
+---
+
+<section class:list={['my-10 px-4', extraPadding && 'py-8', className]}>
+  <div class="mx-auto max-w-[920px]">
+    <slot />
+  </div>
+</section>

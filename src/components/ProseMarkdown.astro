@@ -1,0 +1,13 @@
+---
+import { markdownProseClasses } from 'src/utils/proseClasses'
+
+type Props = {
+  className?: string
+}
+
+const { className } = Astro.props
+---
+
+<div class:list={[markdownProseClasses, className]}>
+  <slot />
+</div>
