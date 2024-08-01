@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content'
+import LayoutPage from 'src/layouts/LayoutPage.astro'
+import { TeasersContainer } from '@components/Teaser/TeasersContainer'
+import { TeaserCard } from '@components/Teaser/TeaserCard'
+import Section from '@components/Section.astro'
+
+const posts = await getCollection('posts')
+const sortedPosts = posts.sort((a, b) => {
+  return a.data.order - b.data.order
+})
+---
+
+<LayoutPage title="Kommunikation">
+  <Section>
+    <TeasersContainer>
+      {
+        sortedPosts.map((post) => {
+          const { title, type, teaserText, teaserImage, imageCopyright } = post.data
+          return (
+            <TeaserCard
+              href={post.slug}
+              title={title}
+              description={teaserText}
+              tag={type}
+              image={teaserImage}
+              imageCopyright={imageCopyright}
+              linkText="Weiterlesen"
+            />
+          )
+        })
+      }
+    </TeasersContainer>
+  </Section>
+</LayoutPage>

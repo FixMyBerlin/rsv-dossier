@@ -1,0 +1,42 @@
+---
+import ImageDouble from '@components/ImageComponents/ImageDouble.astro'
+import ImageSingleHorizontal from '@components/ImageComponents/ImageSingleHorizontal.astro'
+import ImageSingleSquare from '@components/ImageComponents/ImageSingleSquare.astro'
+import ImageSingleVertical from '@components/ImageComponents/ImageSingleVertical.astro'
+import PageHeader from '@components/PageHeader.astro'
+import ProseMarkdown from '@components/ProseMarkdown.astro'
+import Section from '@components/Section.astro'
+import { getCollection } from 'astro:content'
+import LayoutPage from 'src/layouts/LayoutPage.astro'
+
+export async function getStaticPaths() {
+  const projects = await getCollection('posts')
+  return projects.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { title, subTitle, type, date } = entry.data
+
+const { Content } = await entry.render()
+---
+
+<LayoutPage title="Kommunikation">
+  <Section>
+    <small>{type}</small>
+    <PageHeader title={title} subTitle={subTitle} />
+    <small>{new Date(date).toLocaleDateString()}</small>
+    <ProseMarkdown>
+      <Content
+        components={{
+          ImageSingleHorizontal,
+          ImageSingleSquare,
+          ImageSingleVertical,
+          ImageDouble,
+        }}
+      />
+    </ProseMarkdown>
+  </Section>
+</LayoutPage>
