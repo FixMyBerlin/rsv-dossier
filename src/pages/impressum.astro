@@ -1,14 +1,15 @@
 ---
 import Link from '@components/links/Link.astro'
 import { MailLink } from '@components/links/MailLink'
-import { Image } from 'astro:assets'
-import bmdvLogo from 'src/components/impressumPage/assets/BMDV-Foerderung.svg'
+import { BMDVFoerderung } from 'src/assets/tsx/BMDVFoerderung'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
-import Layout from '../layouts/Layout.astro'
+import Section from '@components/Section.astro'
+import PageHeader from '@components/PageHeader.astro'
 ---
 
-<Layout title="Impressum">
-  <LayoutPage>
+<LayoutPage title="Impressum" noindex>
+  <Section>
+    <PageHeader title="Impressum" />
     <h1>Impressum</h1>
     <p>
       <strong>FixMyCity GmbH</strong>
@@ -77,8 +78,8 @@ import Layout from '../layouts/Layout.astro'
       </Link>
     </p>
 
-    <a href="https://bmdv.bund.de/" target="_blank">
-      <Image class="h-24 w-48" src={bmdvLogo} alt="Förderung durch BMDV" />
+    <a href="https://bmdv.bund.de/" class="h-12 w-12" target="_blank">
+      <BMDVFoerderung />
     </a>
-  </LayoutPage>
-</Layout>
+  </Section>
+</LayoutPage>
