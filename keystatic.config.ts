@@ -89,7 +89,7 @@ export default config({
         }),
         imageCopyright: fields.text({
           label: 'Copyright Bild',
-          validation: { length: { max: 100 } },
+          validation: { length: { min: 1, max: 100 } },
         }),
         content: fields.mdx({
           label: 'Content',
