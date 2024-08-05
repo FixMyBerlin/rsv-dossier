@@ -8,6 +8,7 @@ import LayoutPage from 'src/layouts/LayoutPage.astro'
 
 const posts = await getCollection('posts')
 const filteredAndSortedPosts = posts
+  .filter((a) => !a.data.preview)
   .filter((post) => post.data.showOnHome)
   .sort((a, b) => {
     return a.data.order - b.data.order

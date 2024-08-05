@@ -1,14 +1,16 @@
 ---
+import Section from '@components/Section.astro'
+import { TeaserCard } from '@components/Teaser/TeaserCard'
+import { TeasersContainer } from '@components/Teaser/TeasersContainer'
 import { getCollection } from 'astro:content'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
-import { TeasersContainer } from '@components/Teaser/TeasersContainer'
-import { TeaserCard } from '@components/Teaser/TeaserCard'
-import Section from '@components/Section.astro'
 
 const posts = await getCollection('posts')
-const sortedPosts = posts.sort((a, b) => {
-  return a.data.order - b.data.order
-})
+const sortedPosts = posts
+  .filter((a) => !a.data.preview)
+  .sort((a, b) => {
+    return a.data.order - b.data.order
+  })
 ---
 
 <LayoutPage title="Kommunikation">

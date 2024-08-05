@@ -18,12 +18,12 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props
-const { title, subTitle, type, date } = entry.data
+const { title, subTitle, type, date, preview } = entry.data
 
 const { Content } = await entry.render()
 ---
 
-<LayoutPage title="Kommunikation">
+<LayoutPage title="Kommunikation" noindex={preview}>
   <Section>
     <small>{type}</small>
     <PageHeader title={title} subTitle={subTitle} />

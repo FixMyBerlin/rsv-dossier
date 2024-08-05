@@ -10,6 +10,7 @@ const postsCollection = defineCollection({
       type: z.string(),
       teaserText: z.string(),
       date: z.date(),
+      preview: z.boolean(),
       order: z.number(),
       teaserImage: image(),
       imageCopyright: z.string(),

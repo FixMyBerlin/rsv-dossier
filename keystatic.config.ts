@@ -47,6 +47,11 @@ export default config({
           label: 'Untertitel',
           validation: { length: { min: 1, max: 300 } },
         }),
+        preview: fields.checkbox({
+          label:
+            'Vorschau (diese Seite wird nicht veröffentlicht, sondern im Vorschaumodus gebaut)',
+          defaultValue: true,
+        }),
         category: fields.select({
           label: 'Bereich auf der Webseite auf dem der Blogeintrag erscheinen soll',
           options: [
