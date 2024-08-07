@@ -6,8 +6,16 @@ import { TeasersContainer } from '@components/Teaser/TeasersContainer'
 import { getCollection } from 'astro:content'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
 
-const posts = await getCollection('posts')
-const filteredAndSortedPosts = posts
+const planningposts = await getCollection('planningposts')
+const filteredAndSortedPlanningposts = planningposts
+  .filter((a) => !a.data.preview)
+  .filter((post) => post.data.showOnHome)
+  .sort((a, b) => {
+    return a.data.order - b.data.order
+  })
+  .slice(0, 3)
+const communicationposts = await getCollection('communicationposts')
+const filteredAndSortedCommunicationposts = communicationposts
   .filter((a) => !a.data.preview)
   .filter((post) => post.data.showOnHome)
   .sort((a, b) => {
@@ -24,7 +32,26 @@ const filteredAndSortedPosts = posts
     <h1>Kommunikation</h1>
     <TeasersContainer>
       {
-        filteredAndSortedPosts.map((post) => {
+        filteredAndSortedPlanningposts.map((post) => {
+          const { title, type, teaserText, teaserImage, imageCopyright } = post.data
+          return (
+            <TeaserCard
+              href={`/kommunikation/${post.slug}`}
+              title={title}
+              description={teaserText}
+              tag={type}
+              image={teaserImage}
+              imageCopyright={imageCopyright}
+              linkText="Weiterlesen"
+            />
+          )
+        })
+      }
+    </TeasersContainer>
+    <h1>Planungen</h1>
+    <TeasersContainer>
+      {
+        filteredAndSortedCommunicationposts.map((post) => {
           const { title, type, teaserText, teaserImage, imageCopyright } = post.data
           return (
             <TeaserCard

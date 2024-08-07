@@ -5,19 +5,19 @@ import { TeasersContainer } from '@components/Teaser/TeasersContainer'
 import { getCollection } from 'astro:content'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
 
-const communicationposts = await getCollection('communicationposts')
-const sortedcommunicationposts = communicationposts
+const planningposts = await getCollection('planningposts')
+const sortedplanningposts = planningposts
   .filter((a) => !a.data.preview)
   .sort((a, b) => {
     return a.data.order - b.data.order
   })
 ---
 
-<LayoutPage title="Kommunikation">
+<LayoutPage title="Planung">
   <Section>
     <TeasersContainer>
       {
-        sortedcommunicationposts.map((post) => {
+        sortedplanningposts.map((post) => {
           const { title, type, teaserText, teaserImage, imageCopyright } = post.data
           return (
             <TeaserCard

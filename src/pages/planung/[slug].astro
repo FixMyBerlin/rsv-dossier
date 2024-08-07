@@ -10,8 +10,8 @@ import { getCollection } from 'astro:content'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
 
 export async function getStaticPaths() {
-  const communicationposts = await getCollection('communicationposts')
-  return communicationposts.map((entry) => ({
+  const planningposts = await getCollection('planningposts')
+  return planningposts.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
   }))
@@ -24,7 +24,7 @@ const { Content } = await entry.render()
 ---
 
 <!-- to do title -->
-<LayoutPage title="Kommunikation" noindex={preview}>
+<LayoutPage title="Planung" noindex={preview}>
   <Section>
     <small>{type}</small>
     <PageHeader title={title} subTitle={subTitle} />

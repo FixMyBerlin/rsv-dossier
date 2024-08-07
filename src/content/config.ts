@@ -15,7 +15,6 @@ const postsCollection = defineCollection({
       teaserImage: image(),
       imageCopyright: z.string(),
       showOnHome: z.boolean().optional(),
-      category: z.string().optional(),
     }),
 })
 
@@ -56,7 +55,8 @@ const geometryCollection = defineCollection({
 })
 
 export const collections = {
-  posts: postsCollection,
+  planningposts: postsCollection,
+  communicationposts: postsCollection,
   geometries: geometryCollection,
 }
 
