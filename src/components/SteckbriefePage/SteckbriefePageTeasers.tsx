@@ -1,15 +1,16 @@
 import { TeaserCard } from '@components/Teaser/TeaserCard'
-import type { MetaSchemaRSV } from 'data/types/meta'
+
+import type { MetaSchema } from 'data/zod/metaSchema'
 import { TeasersContainer } from '../Teaser/TeasersContainer'
 
 export type RsvTeaser = {
-  jsonId: MetaSchemaRSV['id']
+  jsonId: MetaSchema['id']
   general: {
-    ref: MetaSchemaRSV['general']['ref']
-    name: MetaSchemaRSV['general']['name']
-    description: MetaSchemaRSV['general']['description']
+    ref: MetaSchema['general']['ref']
+    name: MetaSchema['general']['name']
+    description: MetaSchema['general']['description']
   }
-  state: MetaSchemaRSV['state']
+  state: MetaSchema['state']
   staticMap: string
 }
 

@@ -1,16 +1,15 @@
 import { Heading2, Heading3 } from '@components/Text'
 import { InformationCircleIcon } from '@heroicons/react/20/solid'
 
-import type { MetaSchemaRSV } from 'data/types/meta'
-
-import type { GeoJSONFeatureCollectionRSV } from 'data/types/geometry'
+import type { MetaSchema } from 'data/zod/metaSchema'
 import React from 'react'
+import type { GeometrySchema } from 'src/content/config'
 import { SteckbriefPageProgressBar } from './SteckbriefPageProgressBar'
 
 type Props = {
   setOverlay: (b: boolean) => void
-  meta: MetaSchemaRSV
-  geometry: GeoJSONFeatureCollectionRSV
+  meta: MetaSchema
+  geometry: GeometrySchema
 }
 
 export const SteckbriefPage: React.FC<Props> = ({ meta, geometry, setOverlay }) => {
@@ -63,11 +62,12 @@ export const SteckbriefPage: React.FC<Props> = ({ meta, geometry, setOverlay }) 
             <div className="flex min-w-max">
               <div>
                 <Heading3>Zuständigkeit</Heading3>
-                {meta.stakeholders.map((stakeholder) => (
-                  <p key={stakeholder.name} className="text-lg text-gray-500 sm:text-xl">
-                    {stakeholder.name}
-                  </p>
-                ))}
+                {Boolean(meta.stakeholders?.length) &&
+                  meta.stakeholders?.map((stakeholder) => (
+                    <p key={stakeholder.name} className="text-lg text-gray-500 sm:text-xl">
+                      {stakeholder.name}
+                    </p>
+                  ))}
               </div>
               <div className="flex-grow">
                 <button type="button" className="float-right mt-5" onClick={() => setOverlay(true)}>

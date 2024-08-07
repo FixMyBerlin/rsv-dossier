@@ -1,15 +1,15 @@
 import clsx from 'clsx'
-import type { MetaSchemaRSV } from 'data/types/meta'
 
-import type { GeoJSONFeatureCollectionRSV } from 'data/types/geometry'
+import type { MetaSchema } from 'data/zod/metaSchema'
 import React, { useState } from 'react'
+import type { GeometrySchema } from 'src/content/config'
 import { LayoutSteckbrief } from 'src/layouts/LayoutSteckbrief'
 import { SteckbriefPage } from './SteckbriefPage'
 import { SteckbriefUpdateInfo } from './SteckbriefPageUpdateInfo'
 
 type Props = {
-  meta: MetaSchemaRSV
-  geometry: GeoJSONFeatureCollectionRSV
+  meta: MetaSchema
+  geometry: GeometrySchema
 }
 
 export const Radschnellweg: React.FC<Props> = ({ meta, geometry }) => {

@@ -1,50 +1,25 @@
 ---
-// todo
-// if the ref is official (not an arbitrary number picked by us) display it in the name const name =
-// Number.isNaN(parseFloat(meta.general.ref))
-//   ? `${meta.general.ref}: ${meta.general.name}`
-//   : meta.general.name
-
-import meta from 'src/radschnellwege/meta/meta.json'
-// todo
-// @ts-expect-error
-import fs from 'fs'
 import { Radschnellweg } from '@components/SteckbriefPage/Radschnellweg'
-import type { GeoJSONFeatureCollectionRSV } from 'data/types/geometry'
-import type { MetaSchemaRSV } from 'data/types/meta'
-// @ts-expect-error
-import path from 'path'
+
+import { getCollection } from 'astro:content'
+import type { MetaSchema } from 'data/zod/metaSchema'
 import Layout from 'src/layouts/Layout.astro'
 
+import meta from 'src/radschnellwege/meta/meta.json'
+
 export async function getStaticPaths() {
-  return meta.map((rsv) => {
-    const geometryDir = path.resolve('src/radschnellwege/geometry')
-    const files = fs.readdirSync(geometryDir)
-    // @ts-expect-error
-    const file = files.find((file) => {
-      const filePath = path.resolve(geometryDir, file)
-      const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
-      return data.id === rsv.id
-    })
-
-    if (!file) {
-      throw new Error(`File with id ${rsv.id} not found`)
-    }
-
-    const filePath = path.resolve(geometryDir, file)
-    const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
-
+  const geometries = await getCollection('geometries')
+  return geometries.map((geometry) => {
+    const rsvMeta = meta.find((rsv) => rsv.id === geometry.data.id)
+    if (!rsvMeta) return
     return {
-      params: { id: rsv.id },
-      props: { rsv, geometry: data },
+      params: { id: rsvMeta.id },
+      props: { rsv: rsvMeta, geometry: geometry.data },
     }
   })
 }
 
-const { rsv, geometry } = Astro.props as {
-  rsv: MetaSchemaRSV
-  geometry: GeoJSONFeatureCollectionRSV
-}
+const { rsv, geometry } = Astro.props as { rsv: MetaSchema; geometry: any }
 ---
 
 <Layout title={'Steckbrief ' + rsv.general.name}>

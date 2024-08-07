@@ -1,19 +1,17 @@
-import type { MetaSchemaRSV } from 'data/types/meta'
+import type { MetaSchema } from 'data/zod/metaSchema'
 import meta from 'src/radschnellwege/meta/meta.json'
 
 export const getRsvTeasersFromMeta = () => {
   return meta.map((rsv) => {
     return {
-      jsonId: rsv.id as MetaSchemaRSV['id'],
+      jsonId: rsv.id as MetaSchema['id'],
       general: {
-        ref: rsv.general.ref as MetaSchemaRSV['general']['ref'],
-        name: rsv.general.name as MetaSchemaRSV['general']['name'],
-        description: rsv.general.description as MetaSchemaRSV['general']['description'],
+        ref: rsv.general.ref as MetaSchema['general']['ref'],
+        name: rsv.general.name as MetaSchema['general']['name'],
+        description: rsv.general.description as MetaSchema['general']['description'],
       },
-      state: rsv.state as MetaSchemaRSV['state'],
-      staticMap: '/src/radschnellwege/staticMapImages/images/1_baden_wuerttemberg.png',
-      // todo
-      // staticMap: `/src/radschnellwege/staticMapImages/images/${rsv.id.replace('-', '_')}.png`,
+      state: rsv.state as MetaSchema['state'],
+      staticMap: `/staticMapImages/${rsv.id}.png`,
     }
   })
 }
