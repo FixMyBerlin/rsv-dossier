@@ -10,8 +10,8 @@ import { getCollection } from 'astro:content'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
 
 export async function getStaticPaths() {
-  const projects = await getCollection('posts')
-  return projects.map((entry) => ({
+  const posts = await getCollection('posts')
+  return posts.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
   }))
