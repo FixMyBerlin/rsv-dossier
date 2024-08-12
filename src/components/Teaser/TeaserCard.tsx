@@ -31,9 +31,19 @@ export const TeaserCard: React.FC<Props> = ({
       <div className="flex h-72 overflow-hidden">
         <figure className="h-full w-full">
           {typeof image === 'string' ? (
-            <img className="h-full w-full overflow-hidden object-cover" src={image} alt="" />
+            <img
+              loading="lazy"
+              className="h-full w-full overflow-hidden object-cover"
+              src={image}
+              alt=""
+            />
           ) : (
-            <img className="h-full w-full overflow-hidden object-cover" src={image.src} alt="" />
+            <img
+              loading="lazy"
+              className="h-full w-full overflow-hidden object-cover"
+              src={image.src}
+              alt=""
+            />
           )}
           {imageCopyright && (
             <figcaption className="mr-6 mt-1 text-right text-xs text-gray-400 md:text-sm">
