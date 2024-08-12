@@ -2,13 +2,11 @@
 import { SteckbriefePage } from '@components/SteckbriefePage/SteckbriefePage'
 import type { RsvTeaser } from '@components/SteckbriefePage/SteckbriefePageTeasers'
 
-import { getCollection } from 'astro:content'
 import type { MetaSchema } from 'data/zod/metaSchema'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
 import { getRsvTeasersFromMeta } from 'src/radschnellwege/meta/getRsvTeasersFromMeta'
 
 import meta from 'src/radschnellwege/meta/meta.json'
-import type { __String } from 'typescript'
 
 export async function getStaticPaths() {
   const uniqueFederalStates = Array.from(
