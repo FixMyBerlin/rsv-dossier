@@ -1,7 +1,6 @@
 import type { MetaSchema } from 'data/zod/metaSchema'
-import meta from 'src/radschnellwege/meta/meta.json'
 
-export const getRsvTeasersFromMeta = () => {
+export const getRsvTeasersFromMeta = (meta: MetaSchema[]) => {
   return meta.map((rsv) => {
     return {
       jsonId: rsv.id as MetaSchema['id'],

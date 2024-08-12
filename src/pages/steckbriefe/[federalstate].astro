@@ -1,0 +1,43 @@
+---
+import { SteckbriefePage } from '@components/SteckbriefePage/SteckbriefePage'
+import type { RsvTeaser } from '@components/SteckbriefePage/SteckbriefePageTeasers'
+
+import { getCollection } from 'astro:content'
+import type { MetaSchema } from 'data/zod/metaSchema'
+import LayoutPage from 'src/layouts/LayoutPage.astro'
+import { getRsvTeasersFromMeta } from 'src/radschnellwege/meta/getRsvTeasersFromMeta'
+
+import meta from 'src/radschnellwege/meta/meta.json'
+import type { __String } from 'typescript'
+
+export async function getStaticPaths() {
+  const uniqueFederalStates = Array.from(
+    new Set(meta.flatMap((rsv) => [rsv.general.from.federalState, rsv.general.to.federalState]))
+  )
+  return uniqueFederalStates.map((state) => {
+    // @ts-expect-error todo
+    const filteredRsvs: MetaSchema[] = meta.filter(
+      (rsv) => rsv.general.from.federalState === state || rsv.general.to.federalState === state
+    )
+    if (!filteredRsvs) return
+    const rsvTeasers: RsvTeaser[] = getRsvTeasersFromMeta(filteredRsvs)
+    return {
+      params: {
+        federalstate: state
+          .toLocaleLowerCase()
+          .replace(/ä/g, 'ae')
+          .replace(/ö/g, 'oe')
+          .replace(/ü/g, 'ue')
+          .replace(/ß/g, 'ss'),
+      },
+      props: { rsvTeasers, state },
+    }
+  })
+}
+
+const { rsvTeasers, state } = Astro.props as { rsvTeasers: RsvTeaser[]; state: string }
+---
+
+<LayoutPage title={`Steckbriefe für ${state}`}>
+  <SteckbriefePage client:load rsvTeasers={rsvTeasers} currentFilter={state} />
+</LayoutPage>
