@@ -1,6 +1,8 @@
 import { Heading2, Heading3 } from '@components/Text'
 import { InformationCircleIcon } from '@heroicons/react/20/solid'
 
+import Link from '@components/links/Link'
+import { RSVMap } from '@components/Map/RsvMap'
 import type { MetaSchema } from 'data/zod/metaSchema'
 import React from 'react'
 import type { GeometrySchema } from 'src/content/config'
@@ -44,11 +46,11 @@ export const SteckbriefPage: React.FC<Props> = ({ meta, geometry, setOverlay }) 
               </p>
             )}
           </div>
-          {/* {meta.references.website && (
-            <ButtonLink outline newWindow to={meta.references.website} className="mt-6">
+          {meta.references?.website && (
+            <Link button blank href={meta.references.website} className="mt-6">
               Projektwebsite
-            </ButtonLink>
-          )} */}
+            </Link>
+          )}
           <div className="mt-8">
             <Heading2>Projektdetails</Heading2>
             <Heading3>Trassenführung</Heading3>
@@ -91,7 +93,7 @@ export const SteckbriefPage: React.FC<Props> = ({ meta, geometry, setOverlay }) 
         </div>
       </div>
       <div className="mx-auto flex aspect-square max-h-[860px] translate-x-1 overflow-hidden overscroll-none md:max-w-[860px] lg:fixed lg:bottom-0 lg:left-0 lg:z-10 lg:mx-0 lg:h-full lg:max-h-full lg:w-[48vw] lg:max-w-[48vw] lg:items-stretch">
-        {/* <RSVMap meta={meta} geometry={geometry} /> */}
+        <RSVMap meta={meta} geometry={geometry} />
       </div>
     </div>
   )
