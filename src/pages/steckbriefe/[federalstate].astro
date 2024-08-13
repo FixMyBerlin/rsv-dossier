@@ -34,8 +34,18 @@ export async function getStaticPaths() {
 }
 
 const { rsvTeasers, state } = Astro.props as { rsvTeasers: RsvTeaser[]; state: string }
+
+const rsvCount = rsvTeasers.length > 1 ? ` ${rsvTeasers.length} ` : ' '
+
+const title = `Übersicht der aktuell ${rsvCount} geplanten Radschnellverbindungen in ${state}`
+const description = `Übersicht der aktuell ${rsvCount} geplanten Radschnellverbindungen in ${state}. Die Liste wird fortlaufend aktualisiert und ergänzt.`
 ---
 
-<LayoutPage title={`Steckbriefe für ${state}`}>
-  <SteckbriefePage rsvTeasers={rsvTeasers} currentFilter={state} />
+<LayoutPage title={`Steckbriefe für ${state}`} description={description}>
+  <SteckbriefePage
+    rsvTeasers={rsvTeasers}
+    headerDescription={description}
+    headerTitle={title}
+    currentFilter={state}
+  />
 </LayoutPage>

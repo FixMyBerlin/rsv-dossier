@@ -24,6 +24,8 @@ const blogSchema = {
   }),
   preview: fields.checkbox({
     label: 'Vorschau (diese Seite wird nicht veröffentlicht, sondern im Vorschaumodus gebaut)',
+    description:
+      "Die Vorschau ist unter der erwarteten URL + '--preview' erreichbar. Z.B. /kommunikation/beteiligung-inklusiv-gestalten--preview",
     defaultValue: true,
   }),
   type: fields.select({

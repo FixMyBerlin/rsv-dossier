@@ -2,8 +2,22 @@
 import '@fontsource/overpass'
 import { ViewTransitions } from 'astro:transitions'
 
-type Props = { title?: string; noindex?: boolean }
-const { title = 'Radschnellverbindungen.info', noindex = false }: Props = Astro.props
+const seoDefaultValues = {
+  defaultTitle: 'Radschnellverbindungen.info',
+  defaultDescription: 'Informationen über Planungen von Radschnellverbindungen in Deutschland.',
+  defaultImage: '/social-sharing/default.png',
+}
+
+const { defaultTitle, defaultDescription, defaultImage } = seoDefaultValues
+
+type Props = { title?: string; image?: string; noindex?: boolean; description?: string | null }
+const { title, noindex = false, description, image }: Props = Astro.props
+
+const seo = {
+  title: (title && `${title} | ${defaultTitle}`) || defaultTitle,
+  description: description || defaultDescription,
+  image: `https://radschnellverbindungen.info${image || defaultImage}`,
+}
 ---
 
 <!doctype html>
@@ -12,11 +26,24 @@ const { title = 'Radschnellverbindungen.info', noindex = false }: Props = Astro.
     <meta charset="UTF-8" />
     {noindex && <meta name="robots" content="noindex" />}
 
-    <meta name="description" content="Astro description" />
+    <title>{seo.title}</title>
+    <meta property="og:title" content={seo.title} />
+    <meta name="twitter:title" content={seo.title} />
+
+    <meta name="description" content={seo.description} />
+    <meta property="og:description" content={seo.description} />
+    <meta name="twitter:description" content={seo.description} />
+
+    <meta name="image" content={seo.image} />
+    <meta property="og:image" content={seo.image} />
+    <meta name="twitter:image" content={seo.image} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+
     <ViewTransitions />
   </head>
   <body class="flex min-h-full w-full bg-[#eee] font-sans antialiased">

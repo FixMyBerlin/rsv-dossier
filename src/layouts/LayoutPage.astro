@@ -3,13 +3,13 @@ import { Footer } from './footer/Footer'
 import Layout from './Layout.astro'
 import { Navigation } from './navigation/Navigation'
 
-type Props = { title?: string; noindex?: boolean }
-const { title, noindex }: Props = Astro.props
+type Props = { title?: string; description?: string; noindex?: boolean }
+const { title, noindex, description }: Props = Astro.props
 
 const pathname = new URL(Astro.request.url).pathname
 ---
 
-<Layout title={title} noindex={noindex}>
+<Layout title={title} description={description} noindex={noindex}>
   <div class="mx-auto flex min-h-full max-w-[1440px] flex-col bg-white shadow-sm">
     <Navigation path={pathname} client:load />
     <main class="z-0 mt-12 flex-grow">

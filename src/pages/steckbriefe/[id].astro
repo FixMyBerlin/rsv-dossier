@@ -22,6 +22,10 @@ export async function getStaticPaths() {
 const { rsv, geometry } = Astro.props as { rsv: MetaSchema; geometry: any }
 ---
 
-<Layout title={'Steckbrief ' + rsv.general.name}>
+<Layout
+  title={'Steckbrief ' + rsv.general.name}
+  image={`/rsv-map-images/${rsv.id}.png`}
+  description={rsv.general.description}
+>
   <Radschnellweg client:load meta={rsv} geometry={geometry} />
 </Layout>
