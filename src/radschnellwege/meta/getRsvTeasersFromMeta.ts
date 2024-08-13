@@ -10,7 +10,7 @@ export const getRsvTeasersFromMeta = (meta: MetaSchema[]) => {
         description: rsv.general.description as MetaSchema['general']['description'],
       },
       state: rsv.state as MetaSchema['state'],
-      staticMap: `/staticMapImages/${rsv.id}.png`,
+      staticMap: `/rsv-map-images/${rsv.id}.png`,
     }
   })
 }

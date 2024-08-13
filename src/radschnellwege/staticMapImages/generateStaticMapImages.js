@@ -7,7 +7,7 @@ const { maptilerBaseUrl, maptilerKey } = require('./mapTiler.const.js')
 const { encode } = pkg
 const { simplify } = turf
 
-const outputDir = path.resolve('public/staticMapImages')
+const outputDir = path.resolve('public/rsv-map-images')
 const geometryDir = path.resolve('src/content/geometries')
 
 // from rsv-dossier/src/utils/staticmap.ts
