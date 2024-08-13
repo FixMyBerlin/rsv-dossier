@@ -11,10 +11,10 @@ import LayoutPage from 'src/layouts/LayoutPage.astro'
 
 export async function getStaticPaths() {
   const planningposts = await getCollection('planningposts')
-  return planningposts.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }))
+  return planningposts.map((entry) => {
+    const entrySlug = entry.data.preview ? entry.slug + '--preview' : entry.slug
+    return { params: { slug: entrySlug }, props: { entry } }
+  })
 }
 
 const { entry } = Astro.props
