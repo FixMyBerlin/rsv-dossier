@@ -1,0 +1,32 @@
+---
+import { SteckbriefePageHeader } from './SteckbriefePageHeader'
+import SteckbriefePageTeasers, { type RsvTeaser } from './SteckbriefePageTeasers.astro'
+
+type Props = {
+  headerTitle?: string
+  headerDescription?: string
+  rsvTeasers: RsvTeaser[]
+  currentFilter: string
+}
+
+const { headerTitle, headerDescription, rsvTeasers, currentFilter } = Astro.props
+
+const rsvCount = rsvTeasers.length > 1 ? ` ${rsvTeasers.length} ` : ' '
+---
+
+<div class="bg-white">
+  <SteckbriefePageHeader
+    client:load
+    headerTitle={headerTitle}
+    headerDescription={headerDescription}
+    currentFilter={currentFilter}
+  />
+
+  <section
+    class="relative z-10 mx-auto -mt-32 max-w-7xl px-4 pb-12 sm:px-6 lg:px-8"
+    aria-labelledby="contact-heading"
+  >
+    <h2 class="sr-only" id="contact-heading">Alle Radschnellverbindungen</h2>
+    <SteckbriefePageTeasers rsvTeasers={rsvTeasers} />
+  </section>
+</div>

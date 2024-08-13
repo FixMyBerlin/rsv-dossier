@@ -1,8 +1,7 @@
-import { Heading2, Heading3 } from '@components/Text'
-import { InformationCircleIcon } from '@heroicons/react/20/solid'
-
 import Link from '@components/links/Link'
 import { RSVMap } from '@components/Map/RsvMap'
+import { Heading2, Heading3 } from '@components/Text'
+import { InformationCircleIcon } from '@heroicons/react/20/solid'
 import type { MetaSchema } from 'data/zod/metaSchema'
 import React from 'react'
 import type { GeometrySchema } from 'src/content/config'

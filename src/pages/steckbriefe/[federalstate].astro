@@ -1,6 +1,6 @@
 ---
-import { SteckbriefePage } from '@components/SteckbriefePage/SteckbriefePage'
-import type { RsvTeaser } from '@components/SteckbriefePage/SteckbriefePageTeasers'
+import SteckbriefePage from '@components/SteckbriefePage/SteckbriefePage.astro'
+import type { RsvTeaser } from '@components/SteckbriefePage/SteckbriefePageTeasers.astro'
 
 import type { MetaSchema } from 'data/zod/metaSchema'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
@@ -37,5 +37,5 @@ const { rsvTeasers, state } = Astro.props as { rsvTeasers: RsvTeaser[]; state: s
 ---
 
 <LayoutPage title={`Steckbriefe für ${state}`}>
-  <SteckbriefePage client:load rsvTeasers={rsvTeasers} currentFilter={state} />
+  <SteckbriefePage rsvTeasers={rsvTeasers} currentFilter={state} />
 </LayoutPage>

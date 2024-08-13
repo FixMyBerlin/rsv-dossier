@@ -1,6 +1,6 @@
 ---
-import { SteckbriefePage } from '@components/SteckbriefePage/SteckbriefePage'
-import { type RsvTeaser } from '@components/SteckbriefePage/SteckbriefePageTeasers'
+import SteckbriefePage from '@components/SteckbriefePage/SteckbriefePage.astro'
+import { type RsvTeaser } from '@components/SteckbriefePage/SteckbriefePageTeasers.astro'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
 import { getRsvTeasersFromMeta } from 'src/radschnellwege/meta/getRsvTeasersFromMeta'
 import meta from 'src/radschnellwege/meta/meta.json'
@@ -19,7 +19,6 @@ const headerDescription = `
 
 <LayoutPage>
   <SteckbriefePage
-    client:load
     headerTitle={headerTitle}
     headerDescription={headerDescription}
     rsvTeasers={rsvTeasers}

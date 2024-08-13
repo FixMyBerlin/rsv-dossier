@@ -1,0 +1,66 @@
+---
+import clsx from 'clsx'
+import { Image } from 'astro:assets'
+
+type Props = {
+  href: string
+  title: string
+  description?: string
+  tag?: string
+  // for the rsv teasers we use images from the public folder which cannot be optimized
+  // for teaser images from the content folder /blog cms we use the Image component
+  image:
+    | string
+    | {
+        src: string
+        width: number
+        height: number
+        format: 'png' | 'jpg' | 'jpeg' | 'tiff' | 'webp' | 'gif' | 'svg' | 'avif'
+      }
+  imageCopyright?: string
+  linkText?: string
+}
+
+const { href, title, description, tag, image, imageCopyright, linkText } = Astro.props
+---
+
+<a href={href} class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-xl">
+  <div class="flex h-72 overflow-hidden">
+    <figure class="h-full w-full">
+      {
+        typeof image === 'string' ? (
+          <img
+            loading="lazy"
+            class="h-full w-full overflow-hidden object-cover"
+            src={image}
+            alt=""
+          />
+        ) : (
+          <Image
+            class="h-full w-full overflow-hidden object-cover"
+            src={image}
+            quality="mid"
+            alt=""
+            loading="lazy"
+          />
+        )
+      }
+      {
+        imageCopyright && (
+          <figcaption class="mr-6 mt-1 text-right text-xs text-gray-400 md:text-sm">
+            © {imageCopyright}
+          </figcaption>
+        )
+      }{' '}
+    </figure>
+  </div>
+  <div class="relative flex-1 px-6 pb-8 pt-6 md:px-8">
+    {tag && <div class="h-6 w-6 text-gray-400">{tag}</div>}
+    <h3 class="text-xl font-medium text-slate-900 group-hover:underline">{title}</h3>
+    <p class="mt-4 line-clamp-3 text-base text-slate-500 md:line-clamp-5">{description}</p>
+  </div>
+  <div class="flex flex-row place-content-between p-6 md:px-8">
+    {/* todo styles textlinkclasses */}
+    <div class={clsx('group-hover:underline')}>{linkText || 'Mehr erfahren'}</div>
+  </div>
+</a>
