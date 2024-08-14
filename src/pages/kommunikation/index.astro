@@ -1,4 +1,5 @@
 ---
+import Hero from '@components/Hero.astro'
 import Section from '@components/Section.astro'
 import TeaserCard from '@components/Teaser/TeaserCard.astro'
 
@@ -19,6 +20,11 @@ const sortedcommunicationposts = communicationposts
   title="Blog Kommunikation"
   description="Blog zur Kommunikation von Radschnellverbindungen in Deutschland."
 >
+  <Hero
+    title="Effiziente Kommunikation für RSV-Projekte"
+    subTitle="Unsere kartengestützten Kommunikationsformate unterstützen die transparente und anschauliche Kommunikation bei der Planung von Radschnellverbindungen. Diese Formate erleichtern den Austausch zwischen Behörden, Gemeinden und der Öffentlichkeit und tragen zur Akzeptanz der Projekte bei."
+    button
+  />
   <Section>
     <TeasersContainer>
       {

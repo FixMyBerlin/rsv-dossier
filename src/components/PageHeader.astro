@@ -1,5 +1,6 @@
 ---
 import ProseMarkdown from './ProseMarkdown.astro'
+import { H2 } from './Text'
 
 type Props = {
   title: string
@@ -9,12 +10,12 @@ type Props = {
 const { title, subTitle } = Astro.props
 ---
 
-<h1 transition:name="h1" class="text-3xl font-bold">
+<H2>
   {title}
-</h1>
+</H2>
 {
   subTitle && (
-    <p class="mb-10 text-base md:text-xl" transition:name="subtitle">
+    <p class="mb-10 mt-6 text-base md:text-xl" transition:name="subtitle">
       {subTitle}
     </p>
   )

@@ -53,7 +53,7 @@ export const SteckbriefePageFilter: React.FC<Props> = ({ currentFilter }) => {
   stateCount[all] = radschnellwege.length
 
   return (
-    <div className="w-72">
+    <div className="mb-10 w-72">
       <Listbox value={currentFilter} onChange={(selected) => navigate(statePaths[selected])}>
         {({ open }) => (
           <>

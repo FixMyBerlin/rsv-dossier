@@ -7,7 +7,7 @@ const { className, extraPadding } = Astro.props
 ---
 
 <section class:list={['my-10 px-4', extraPadding && 'py-8', className]}>
-  <div class="mx-auto max-w-[920px]">
+  <div class="mx-auto my-20 max-w-[1210px] md:my-32 md:px-10">
     <slot />
   </div>
 </section>

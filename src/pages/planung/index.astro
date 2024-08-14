@@ -1,4 +1,5 @@
 ---
+import Hero from '@components/Hero.astro'
 import Section from '@components/Section.astro'
 import TeaserCard from '@components/Teaser/TeaserCard.astro'
 
@@ -19,6 +20,11 @@ const sortedplanningposts = planningposts
   title="Blog Planung"
   description="Blog über die Planung von Radschnellverbindungen in Deutschland."
 >
+  <Hero
+    title="Planung für erfolgreiche RSV-Projekte"
+    button
+    subTitle="Unsere Tools und Methoden unterstützen die effektive Planung von Radschnellverbindungen. Durch eine strukturierte und koordinierte Vorgehensweise tragen wir zur Beschleunigung des Planungsprozesses und zur erfolgreichen Umsetzung der Projekte bei."
+  />
   <Section>
     <TeasersContainer>
       {

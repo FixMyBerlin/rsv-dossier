@@ -11,21 +11,23 @@ type Props = { path: string; fixed?: boolean }
 
 export const navHeightClasssName = 'h-24'
 export const Navigation: React.FC<Props> = ({ path, fixed }) => {
+  // Check if the current page is a steckbriefe page (not list view) to apply a different layout with a fixed navbar
+
   return (
     // https://tailwindui.com/components/application-ui/navigation/navbars
     <Disclosure
       as="nav"
       className={clsx(
         fixed && 'fixed left-0 right-0 top-0',
-        'z-20 bg-gray-50 shadow-md shadow-gray-400',
+        'z-20 mx-auto flex w-full flex-col bg-white shadow-md',
       )}
     >
       {({ open }) => (
         <>
-          <div className="px-12">
+          <div className="pl-7 pr-10">
             <div className={clsx(navHeightClasssName, 'flex justify-between py-2')}>
-              <nav className="flex w-full items-center justify-between">
-                <div className="w-48">
+              <div className="flex w-full items-center justify-between">
+                <div className="w-40">
                   {path === '/' ? (
                     <RSVLogo />
                   ) : (
@@ -44,8 +46,7 @@ export const Navigation: React.FC<Props> = ({ path, fixed }) => {
                     />
                   ))}
                 </div>
-              </nav>
-
+              </div>
               <NavigationMobileMenuButton open={open} />
             </div>
           </div>

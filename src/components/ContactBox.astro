@@ -1,15 +1,16 @@
 ---
 import { MailLink } from './links/MailLink'
+import { H2 } from './Text'
 ---
 
 <div
-  class="flex flex-col items-center justify-center rounded-2xl bg-green-600 px-10 py-20 text-center text-white"
+  class="flex flex-col items-center justify-center rounded-2xl bg-emerald-600 px-10 py-20 text-center text-white"
 >
-  <h3 transition:name="h1" class="mb-6 text-3xl font-bold">Kontaktieren Sie uns!</h3>
-  <p class="mb-10 max-w-xl text-green-100" transition:name="subtitle">
+  <H2>Kontaktieren Sie uns!</H2>
+  <p class="my-10 max-w-xl text-green-100">
     Wenn Sie sich mehr Informationen zum Forschungsprojekt RSV-Baukasten wünschen oder stärker
     involviert sein wollen, kontaktieren Sie uns. Die Laufzeit des Projektes ist von 2021 bis Ende
     2023 angesetzt.
   </p>
-  <MailLink button mailto="feedback@fixmycity.de">Email schreiben</MailLink>
+  <MailLink button="dark" mailto="feedback@fixmycity.de">Email schreiben</MailLink>
 </div>

@@ -1,15 +1,11 @@
-import React from 'react'
-
 import Link from '@components/links/Link'
-
 import { FooterLinkList } from './FooterLinks/FooterLinkList'
-
 import { footerLinks } from './FooterLinks/footerLinks.const'
 import { FooterSocialIcons } from './FooterSocialIcons/FooterSocialIcons'
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="z-0 bg-emerald-100" aria-labelledby="footer-heading">
+    <footer className="z-0 mt-32 bg-black" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -22,9 +18,9 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-emerald-400 pt-8 md:flex md:items-center md:justify-between">
+        <div className="mt-8 border-t border-white pt-8 md:flex md:items-center md:justify-between">
           <FooterSocialIcons />
-          <p className="mt-8 text-base text-slate-800 md:order-1 md:mt-0">
+          <p className="mt-8 text-base text-white md:order-1 md:mt-0">
             Gebaut mit{' '}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +48,7 @@ export const Footer: React.FC = () => {
               </g>
             </svg>{' '}
             von{' '}
-            <Link href="https://www.fixmycity.de" external>
+            <Link className="text-white underline" href="https://www.fixmycity.de" external>
               FixMyCity.de
             </Link>
           </p>

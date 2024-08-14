@@ -1,6 +1,6 @@
 import Link from '@components/links/Link'
 import { RSVMap } from '@components/Map/RsvMap'
-import { Heading2, Heading3 } from '@components/Text'
+import { H2, H3 } from '@components/Text'
 import { InformationCircleIcon } from '@heroicons/react/20/solid'
 import type { MetaSchema } from 'data/zod/metaSchema'
 import React from 'react'
@@ -27,7 +27,7 @@ export const SteckbriefPage: React.FC<Props> = ({ meta, geometry, setOverlay }) 
             <SteckbriefPageProgressBar currentState={meta.state} />
           </div>
           <div className="mt-8">
-            <Heading3>Kurzfassung</Heading3>
+            <H3>Kurzfassung</H3>
             {meta.general.description && (
               <p className="text-lg text-gray-500">
                 {meta.general.description}
@@ -46,23 +46,25 @@ export const SteckbriefPage: React.FC<Props> = ({ meta, geometry, setOverlay }) 
             )}
           </div>
           {meta.references?.website && (
-            <Link button blank href={meta.references.website} className="mt-6">
-              Projektwebsite
-            </Link>
+            <div className="mt-6">
+              <Link blank href={meta.references.website}>
+                Zur Projektwebsite
+              </Link>
+            </div>
           )}
           <div className="mt-8">
-            <Heading2>Projektdetails</Heading2>
-            <Heading3>Trassenführung</Heading3>
+            <H2>Projektdetails</H2>
+            <H3>Trassenführung</H3>
             <p className="text-lg text-gray-500 sm:text-xl">
               {`${meta.general.from.city} - ${meta.general.to.city}`}
             </p>
-            <Heading3>Länge</Heading3>
+            <H3>Länge</H3>
             <p className="text-lg text-gray-500 sm:text-xl">
               ca. {meta.general.length.toLocaleString('de-DE')}&thinsp;km
             </p>
             <div className="flex min-w-max">
               <div>
-                <Heading3>Zuständigkeit</Heading3>
+                <H3>Zuständigkeit</H3>
                 {Boolean(meta.stakeholders?.length) &&
                   meta.stakeholders?.map((stakeholder) => (
                     <p key={stakeholder.name} className="text-lg text-gray-500 sm:text-xl">
@@ -76,7 +78,7 @@ export const SteckbriefPage: React.FC<Props> = ({ meta, geometry, setOverlay }) 
                 </button>
               </div>
             </div>
-            <Heading3>Stand</Heading3>
+            <H3>Stand</H3>
             <p className="text-lg text-gray-500 sm:text-xl">
               {new Date(meta.general.stand).toLocaleDateString('de-DE', {
                 year: 'numeric',

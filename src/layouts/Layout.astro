@@ -1,6 +1,8 @@
 ---
 import '@fontsource/overpass'
 import { ViewTransitions } from 'astro:transitions'
+import { Navigation } from './navigation/Navigation'
+import clsx from 'clsx'
 
 const seoDefaultValues = {
   defaultTitle: 'Radschnellverbindungen.info',
@@ -10,14 +12,23 @@ const seoDefaultValues = {
 
 const { defaultTitle, defaultDescription, defaultImage } = seoDefaultValues
 
-type Props = { title?: string; image?: string; noindex?: boolean; description?: string | null }
-const { title, noindex = false, description, image }: Props = Astro.props
+type Props = {
+  pageLayout?: boolean
+  title?: string
+  image?: string
+  noindex?: boolean
+  description?: string | null
+}
+const { title, noindex = false, description, image, pageLayout }: Props = Astro.props
 
 const seo = {
   title: (title && `${title} | ${defaultTitle}`) || defaultTitle,
   description: description || defaultDescription,
   image: `https://radschnellverbindungen.info${image || defaultImage}`,
 }
+
+const pathname = new URL(Astro.request.url).pathname
+console.log(pathname)
 ---
 
 <!doctype html>
@@ -46,8 +57,14 @@ const seo = {
 
     <ViewTransitions />
   </head>
-  <body class="flex min-h-full w-full bg-[#eee] font-sans antialiased">
-    <div class="relative flex-auto">
+  <body class="flex min-h-full w-full bg-[#eee] font-sans text-slate-900 antialiased">
+    <div
+      class={clsx(
+        ['relative mx-auto flex min-h-full flex-auto flex-col bg-white'],
+        pageLayout && 'max-w-[1440px]'
+      )}
+    >
+      <Navigation fixed={!pageLayout} client:load path={pathname} />
       <slot />
     </div>
   </body>

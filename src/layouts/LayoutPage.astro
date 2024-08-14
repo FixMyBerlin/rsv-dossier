@@ -9,12 +9,9 @@ const { title, noindex, description }: Props = Astro.props
 const pathname = new URL(Astro.request.url).pathname
 ---
 
-<Layout title={title} description={description} noindex={noindex}>
-  <div class="mx-auto flex min-h-full max-w-[1440px] flex-col bg-white shadow-sm">
-    <Navigation path={pathname} client:load />
-    <main class="z-0 mt-12 flex-grow">
-      <slot />
-    </main>
-    <Footer />
-  </div>
+<Layout pageLayout title={title} description={description} noindex={noindex}>
+  <main class="z-0 flex-grow">
+    <slot />
+  </main>
+  <Footer />
 </Layout>

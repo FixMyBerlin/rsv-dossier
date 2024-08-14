@@ -1,4 +1,5 @@
 import Link from '@components/links/Link'
+import { buttonStylesForGreenLinkElement } from '@components/links/styles'
 import { setOptInCookie } from './storage'
 
 type Props = {
@@ -22,10 +23,10 @@ export const OptIn: React.FC<Props> = ({ setConsent }) => {
           Zur Darstellung unserer Karten benutzen wir MapTiler, wodurch wir eine Weitergabe von
           Nutzerinformationen an Dritte nicht vermeiden können.
         </div>
-        <div className="mt-5">
+        <div className="mt-5 flex justify-start gap-4">
           <button
+            className={buttonStylesForGreenLinkElement}
             type="submit"
-            // outline todo buttonstyles
             onClick={() => {
               setConsent(true)
               setOptInCookie(true)
@@ -34,9 +35,8 @@ export const OptIn: React.FC<Props> = ({ setConsent }) => {
             Ja, ich stimme zu
           </button>
           <button
+            className={buttonStylesForGreenLinkElement}
             type="button"
-            className="mx-4"
-            // outline todo buttonstyles
             onClick={() => {
               setConsent(false)
               setOptInCookie(false)

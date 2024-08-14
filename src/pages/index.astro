@@ -1,13 +1,23 @@
 ---
 import ContactBox from '@components/ContactBox.astro'
+import Divider from '@components/Divider.astro'
+import Hero from '@components/Hero.astro'
+import Link from '@components/links/Link'
 import PageHeader from '@components/PageHeader.astro'
 import Section from '@components/Section.astro'
+import type { RsvTeaser } from '@components/SteckbriefePage/SteckbriefePageTeasers.astro'
 import TeaserCard from '@components/Teaser/TeaserCard.astro'
-
 import TeasersContainer from '@components/Teaser/TeasersContainer.astro'
-
 import { getCollection } from 'astro:content'
+import type { MetaSchema } from 'data/zod/metaSchema'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
+import { getRsvTeasersFromMeta } from 'src/radschnellwege/meta/getRsvTeasersFromMeta'
+import meta from 'src/radschnellwege/meta/meta.json'
+
+// todo decide which posts to show on home
+// @ts-expect-error
+const filteredRsvs: MetaSchema[] = meta.slice(0, 3)
+const rsvTeasers: RsvTeaser[] = getRsvTeasersFromMeta(filteredRsvs)
 
 const planningposts = await getCollection('planningposts')
 const filteredAndSortedPlanningposts = planningposts
@@ -31,30 +41,44 @@ const filteredAndSortedCommunicationposts = communicationposts
   title="Radschnellverbindungen"
   description="Generelle Informationen sowie Informationen über einzelne Radschnellverbindungen in Deutschland."
 >
+  <Hero
+    title="Radschnellverbindungen schneller planen und bauen"
+    subTitle="Wir helfen Koordinator:innen durch frühzeitig ansetzende Partizipation bei Radschnellverbindungen und beschleunigen deren Umsetzung erheblich."
+    button
+  />
   <Section>
-    <PageHeader title="Radschnellverbindungen" subTitle="bla" />
-  </Section>
-  <Section>
-    <h1>Kommunikation</h1>
+    <PageHeader
+      title="Steckbriefe aller deutschen Radschnellverbindungen"
+      subTitle="In unseren Steckbriefen finden Sie eine umfassende Übersicht über alle derzeit geplanten Radschnellverbindungen in Deutschland. Erhalten Sie detaillierte Informationen zu Trassenverläufen und möglichen Korridoren, die Städte und Gemeinden verbinden sollen. Ziel ist es, ein nahtloses Radnetzwerk zu schaffen, das den Radverkehr revolutioniert."
+    />
+    <Link href="/steckbriefe" button="green">Steckbriefe entdecken →</Link>
+    <Divider />
     <TeasersContainer>
       {
-        filteredAndSortedPlanningposts.map((post) => {
-          const { title, type, teaserText, teaserImage, imageCopyright } = post.data
-          return (
-            <TeaserCard
-              href={`/kommunikation/${post.slug}`}
-              title={title}
-              description={teaserText}
-              tag={type}
-              image={teaserImage}
-              imageCopyright={imageCopyright}
-              linkText="Weiterlesen"
-            />
-          )
-        })
+        rsvTeasers.map((rsvTeaser) => (
+          <TeaserCard
+            title={
+              // @ts-expect-error
+              (Number.isNaN(parseFloat(rsvTeaser.general.ref))
+                ? `${rsvTeaser.general.ref}: `
+                : '') + (rsvTeaser.general.name || rsvTeaser.jsonId)
+            }
+            description={rsvTeaser.general.description || undefined}
+            tag={rsvTeaser.state}
+            href={`/steckbriefe/${rsvTeaser.jsonId}`}
+            image={rsvTeaser.staticMap}
+          />
+        ))
       }
     </TeasersContainer>
-    <h1>Planungen</h1>
+  </Section>
+  <Section>
+    <PageHeader
+      title="Effiziente Kommunikation für RSV-Projekte"
+      subTitle="Unsere kartengestützten Kommunikationsformate unterstützen die transparente und anschauliche Kommunikation bei der Planung von Radschnellverbindungen. Diese Formate erleichtern den Austausch zwischen Behörden, Gemeinden und der Öffentlichkeit und tragen zur Akzeptanz der Projekte bei."
+    />
+    <Link href="/kommunikation" button="green">Mehr erfahren →</Link>
+    <Divider />
     <TeasersContainer>
       {
         filteredAndSortedCommunicationposts.map((post) => {
@@ -74,6 +98,33 @@ const filteredAndSortedCommunicationposts = communicationposts
       }
     </TeasersContainer>
   </Section>
+  <Section>
+    <PageHeader
+      title="Planung für erfolgreiche RSV-Projekte"
+      subTitle="Unsere Tools und Methoden unterstützen die effektive Planung von Radschnellverbindungen. Durch eine strukturierte und koordinierte Vorgehensweise tragen wir zur Beschleunigung des Planungsprozesses und zur erfolgreichen Umsetzung der Projekte bei."
+    />
+    <Link href="/planung" button="green">Mehr erfahren →</Link>
+    <Divider />
+    <TeasersContainer>
+      {
+        filteredAndSortedPlanningposts.map((post) => {
+          const { title, type, teaserText, teaserImage, imageCopyright } = post.data
+          return (
+            <TeaserCard
+              href={`/planung/${post.slug}`}
+              title={title}
+              description={teaserText}
+              tag={type}
+              image={teaserImage}
+              imageCopyright={imageCopyright}
+              linkText="Weiterlesen"
+            />
+          )
+        })
+      }
+    </TeasersContainer>
+  </Section>
+
   <Section>
     <ContactBox />
   </Section>

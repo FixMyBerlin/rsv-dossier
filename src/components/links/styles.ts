@@ -1,34 +1,24 @@
 import clsx from 'clsx'
 import type { LinkProps } from './types'
 
-// LINK
-export const linkStyles = 'text-emerald-700 hover:text-emerald-800 hover:underline active:underline'
-export const menuLinkStylesDefault =
-  'no-underline hover:underline hover:decoration-beige-600 text-black'
-export const menuLinkActiveStyles = 'decoration-beige-600 decoration-2 text-black'
+export const linkStyles = 'text-emerald-400 hover:underline'
+export const menuLinkStyles = 'text-gray-500 hover:text-emerald-400 hover:no-underline'
+export const selectedMenuLinkStyles = 'underline text-emerald-400 underline-emerald-400'
 
 const buttonBase =
-  'inline-flex items-center justify-center rounded-full py-2 px-4 drop-shadow border-2 border-emerald-300 transition-colors font-bold text-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2'
-// const defaultButtonStyle = 'bg-emerald-300 hover:bg-slate-800 hover:text-emerald-300'
-// const outlineButtonStyle = 'bg-white hover:bg-emerald-300 hover:text-slate-600'
-export const buttonStylesForLinkElement = clsx(
-  buttonBase,
-  'hover:bg-beige-50 border-gray-600 bg-white px-4 py-2 text-gray-600',
-)
+  'inline-flex items-center justify-center rounded-full py-3 px-5 focus:ring-[3px] border-2 shadow-sm focus:ring-blue-400'
 
-export const selectedButtonStylesForLinkElement = clsx(
+export const buttonStylesForGreenLinkElement = clsx(
   buttonBase,
-  'border-beige-600 bg-beige-600 hover:bg-beige-50 px-4 py-2 text-white hover:text-gray-600',
+  'border-emerald-500 bg-emerald-500 text-white hover:border-emerald-600 hover:bg-emerald-600',
 )
-
-export const menuButtonStylesForLinkElement = clsx(
+export const buttonStylesForDarkLinkElement = clsx(
   buttonBase,
-  'border-white bg-white px-4 py-2 text-gray-900', // todo
+  'border-slate-800 bg-slate-800 text-white hover:border-slate-900 hover:bg-slate-900',
 )
-
-export const selectedMenuButtonStylesForLinkElement = clsx(
+export const buttonStylesForWhiteLinkElement = clsx(
   buttonBase,
-  'border-beige-600 bg-beige-600 px-4 py-2 text-white',
+  'border-emerald-500 bg-white text-slate-900 hover:bg-slate-100',
 )
 
 const hoverTranslateClassNames =
@@ -36,13 +26,19 @@ const hoverTranslateClassNames =
 
 export const cardStylesForLinkElements = clsx(
   hoverTranslateClassNames,
-  'active:ring-beige-600 active:ring-2', // activeStyleForLinkElement
+  'focus:ring-2 focus:ring-blue-400',
 )
 
 export const selectLinkStyle = (button?: LinkProps['button'], className?: string) => {
   switch (button) {
+    case 'green':
+      return clsx(buttonStylesForGreenLinkElement, className)
+    case 'dark':
+      return clsx(buttonStylesForDarkLinkElement, className)
+    case 'white':
+      return clsx(buttonStylesForWhiteLinkElement, className)
     case true:
-      return clsx(buttonStylesForLinkElement, className)
+      return clsx(buttonStylesForGreenLinkElement, className)
     default:
       return clsx(linkStyles, className)
   }

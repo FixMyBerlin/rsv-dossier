@@ -4,5 +4,5 @@ export type LinkProps = {
   className?: string
   classNameOverwrites?: string
   blank?: boolean
-  button?: true | 'white' | 'black' | 'card'
+  button?: true | 'white' | 'dark' | 'green'
 }

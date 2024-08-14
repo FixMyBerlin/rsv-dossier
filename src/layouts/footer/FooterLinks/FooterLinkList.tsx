@@ -17,7 +17,7 @@ export const FooterLinkList: React.FC<Props> = ({ title, linkList, className = '
       <ul className="mt-4 space-y-4">
         {linkList.map((item) => (
           <li key={item.name}>
-            <Link href={item.to} className="text-base text-slate-600 hover:text-slate-900">
+            <Link href={item.to} className="text-white">
               {item.name}
             </Link>
           </li>
