@@ -8,11 +8,12 @@ type Props = {
   title: string
   subTitle?: string
   button?: boolean
+  className?: string
 }
-const { title, subTitle, button } = Astro.props
+const { title, subTitle, button, className } = Astro.props
 ---
 
-<div class="relative mb-10 flex">
+<div class:list={['relative flex', className]}>
   <Image src={heroImage} alt="" class="absolute inset-0 z-0 h-full w-full object-cover" />
   <div
     class="inset-o z-10 flex w-full flex-col items-center justify-center px-10 py-10 pb-20 text-center sm:py-20"

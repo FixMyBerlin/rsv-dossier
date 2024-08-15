@@ -22,13 +22,27 @@ export const H1: React.FC<Props> = ({ children, className }) => {
 
 export const H2: React.FC<Props> = ({ children, className }) => {
   return (
-    <h2 className={clsx(['mt-6 text-2xl font-extrabold sm:text-4xl', className])}>{children}</h2>
+    <h2
+      className={clsx([
+        'mt-6 text-2xl font-extrabold leading-tight sm:text-4xl sm:leading-tight',
+        className,
+      ])}
+    >
+      {children}
+    </h2>
   )
 }
 
 export const H3: React.FC<Props> = ({ children, className }) => {
   return (
-    <h3 className={clsx(['mt-5 text-xl font-extrabold sm:text-3xl', className])}>{children}</h3>
+    <h3
+      className={clsx([
+        'text-x mt-5 font-extrabold leading-tight sm:text-3xl sm:leading-tight',
+        className,
+      ])}
+    >
+      {children}
+    </h3>
   )
 }
 export const H4: React.FC<Props> = ({ children, className }) => {
