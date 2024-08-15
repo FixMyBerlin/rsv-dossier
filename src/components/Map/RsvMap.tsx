@@ -9,12 +9,18 @@ import { navHeightClasssName } from 'src/layouts/navigation/Navigation'
 import { Attribution } from './Attribution'
 import { DynamicMap } from './DynamicMap'
 import { Legend } from './Legend'
+
 type Props = {
   meta: MetaSchema
   geometry: GeometrySchema
 }
 
 export const RSVMap: React.FC<Props> = ({ meta, geometry }) => {
+  // filter out discarded route variants
+  const filteredGeometry = {
+    ...geometry,
+    features: geometry.features.filter((feature) => !feature.properties.discarded),
+  }
   const [consent, setConsent] = useState<boolean | null>(true)
   useEffect(() => setConsent(getOptInCookie()))
   return (
@@ -33,7 +39,7 @@ export const RSVMap: React.FC<Props> = ({ meta, geometry }) => {
       </div>
 
       <div className={clsx(navHeightClasssName, 'hidden lg:block')} />
-      {consent && <DynamicMap geometry={geometry} />}
+      {consent && <DynamicMap geometry={filteredGeometry} />}
       <img src={`/rsv-map-images/${meta.id}.png`} alt="Statische Karte" />
     </div>
   )

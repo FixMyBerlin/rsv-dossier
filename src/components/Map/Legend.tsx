@@ -7,9 +7,6 @@ export const Legend = () => {
       <div className="flex flex-row items-center gap-2">
         <span className="h-1 w-10 bg-[#BDD334]" /> <p>Variante</p>
       </div>
-      <div className="flex flex-row items-center gap-2">
-        <span className="h-1 w-10 bg-[#5B5C5D]" /> <p>Verworfen</p>
-      </div>
     </div>
   )
 }
