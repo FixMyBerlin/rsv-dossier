@@ -41,15 +41,21 @@ const processFile = async (file, geometryDir, outputDir) => {
     const filePath = path.resolve(geometryDir, file)
     const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
 
+    // filter out discarded route variants
+    const filteredData = {
+      ...data,
+      features: data.features.filter((feature) => !feature.properties.discarded),
+    }
+
     // generate static map from geometry
-    let url = staticMapRequest(data, [1920, 1920]).toString()
+    let url = staticMapRequest(filteredData, [1920, 1920]).toString()
     let tolerance = 0.000001
 
     // console.log({ data })
 
     // respect the MapTiler URL limit
     while (url.length > 8192) {
-      const simplified = simplify(data, { tolerance, highQuality: true })
+      const simplified = simplify(filteredData, { tolerance, highQuality: true })
       url = staticMapRequest(simplified, [1920, 1920]).toString()
       tolerance *= 2
     }
@@ -62,7 +68,7 @@ const processFile = async (file, geometryDir, outputDir) => {
     const buffer = Buffer.from(arrayBuffer)
 
     // Write the buffer to a file
-    const outputFilePath = path.resolve(outputDir, `${data.id}.png`)
+    const outputFilePath = path.resolve(outputDir, `${filteredData.id}.png`)
     fs.writeFileSync(outputFilePath, buffer)
 
     console.log(`Image saved to ${outputFilePath}`)
