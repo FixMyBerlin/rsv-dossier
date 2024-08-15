@@ -5,16 +5,16 @@ import { FooterSocialIcons } from './FooterSocialIcons/FooterSocialIcons'
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="z-0 mt-32 bg-black" aria-labelledby="footer-heading">
+    <footer className="z-0 mt-12 bg-black" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div className="mx-auto max-w-7xl px-4 py-6">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="grid grid-cols-2 gap-8 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               {/* <FooterLinks title="Seiten" linkList={footerLinks.content} /> */}
-              <FooterLinkList linkList={footerLinks.formal} className="mt-12 md:mt-0" />
+              <FooterLinkList linkList={footerLinks.formal} className="md:mt-0" />
             </div>
           </div>
         </div>
