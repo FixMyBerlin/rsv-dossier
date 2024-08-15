@@ -1,4 +1,5 @@
 ---
+import Divider from '@components/Divider.astro'
 import ImageDouble from '@components/ImageComponents/ImageDouble.astro'
 import ImageSingleHorizontal from '@components/ImageComponents/ImageSingleHorizontal.astro'
 import ImageSingleSquare from '@components/ImageComponents/ImageSingleSquare.astro'
@@ -8,6 +9,7 @@ import ProseMarkdown from '@components/ProseMarkdown.astro'
 import Section from '@components/Section.astro'
 import { getCollection } from 'astro:content'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
+import { Image } from 'astro:assets'
 
 export async function getStaticPaths() {
   const communicationposts = await getCollection('communicationposts')
@@ -18,16 +20,41 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props
-const { title, subTitle, type, date, preview } = entry.data
+const { title, subTitle, type, date, preview, teaserImage, imageCopyright } = entry.data
 
 const { Content } = await entry.render()
 ---
 
 <LayoutPage title={`${type}: ${title}`} noindex={preview}>
   <Section>
-    <small>{type}</small>
+    <small class="text-slate-500"
+      >{
+        new Date(date).toLocaleDateString('de-DE', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })
+      }</small
+    >
     <PageHeader title={title} subTitle={subTitle} />
-    <small>{new Date(date).toLocaleDateString()}</small>
+    <Divider />
+    <figure class="mb-16 h-[566px] w-full">
+      <Image
+        class="h-full w-full overflow-hidden object-cover"
+        src={teaserImage}
+        quality="high"
+        alt=""
+        loading="lazy"
+      />
+      {
+        imageCopyright && (
+          <figcaption class="mr-6 mt-1 text-right text-xs text-gray-400 md:text-sm">
+            © {imageCopyright}
+          </figcaption>
+        )
+      }
+    </figure>
     <ProseMarkdown>
       <Content
         components={{

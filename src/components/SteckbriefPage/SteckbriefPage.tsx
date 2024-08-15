@@ -18,7 +18,7 @@ export const SteckbriefPage: React.FC<Props> = ({ meta, geometry, setOverlay }) 
     <div className="relative min-h-[860px] bg-white">
       <div className="mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:py-12">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:ml-[48vw] lg:max-w-4xl lg:px-0 lg:py-0 lg:pl-14">
-          <H1>
+          <H1 className="sm:mt-0">
             {/* @ts-expect-error undefined would also return NaN so nothing breaks */}
             {Number.isNaN(parseFloat(meta.general.ref)) && `${meta.general.ref}: `}
             {meta.general.name}

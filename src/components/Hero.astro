@@ -12,13 +12,13 @@ type Props = {
 const { title, subTitle, button } = Astro.props
 ---
 
-<div class="relative flex">
+<div class="relative mb-10 flex">
   <Image src={heroImage} alt="" class="absolute inset-0 z-0 h-full w-full object-cover" />
   <div
-    class="inset-o z-10 flex w-full flex-col items-center justify-center px-10 py-20 text-center"
+    class="inset-o z-10 flex w-full flex-col items-center justify-center px-10 py-10 pb-20 text-center sm:py-20"
   >
-    <H1 className="mb-10 max-w-3xl">{title}</H1>
-    {subTitle && <p class="mb-16 max-w-4xl text-base sm:text-2xl">{subTitle}</p>}
+    <H1 className="mb-6 max-w-3xl sm:mb-10">{title}</H1>
+    {subTitle && <p class="mb-8 max-w-4xl text-base sm:mb-16 sm:text-2xl">{subTitle}</p>}
     {
       button && (
         <MailLink button="dark" mailto="feedback@fixmycity.de">
