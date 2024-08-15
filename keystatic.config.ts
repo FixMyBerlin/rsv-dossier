@@ -61,12 +61,12 @@ const blogSchema = {
 
 export default config({
   storage: {
-    // kind: 'local',
-    kind: 'github',
-    repo: {
-      owner: 'FixMyBerlin',
-      name: 'rsv-info',
-    },
+    kind: 'local',
+    // kind: 'github',
+    // repo: {
+    //   owner: 'FixMyBerlin',
+    //   name: 'rsv-info',
+    // },
   },
   ui: {
     brand: {

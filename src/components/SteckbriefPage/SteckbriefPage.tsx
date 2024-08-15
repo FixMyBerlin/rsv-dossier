@@ -1,6 +1,6 @@
 import Link from '@components/links/Link'
 import { RSVMap } from '@components/Map/RsvMap'
-import { H2, H3 } from '@components/Text'
+import { H1, H4 } from '@components/Text'
 import { InformationCircleIcon } from '@heroicons/react/20/solid'
 import type { MetaSchema } from 'data/zod/metaSchema'
 import React from 'react'
@@ -18,18 +18,18 @@ export const SteckbriefPage: React.FC<Props> = ({ meta, geometry, setOverlay }) 
     <div className="relative min-h-[860px] bg-white">
       <div className="mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:py-12">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:ml-[48vw] lg:max-w-4xl lg:px-0 lg:py-0 lg:pl-14">
-          <h1 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <H1>
             {/* @ts-expect-error undefined would also return NaN so nothing breaks */}
             {Number.isNaN(parseFloat(meta.general.ref)) && `${meta.general.ref}: `}
             {meta.general.name}
-          </h1>
+          </H1>
           <div className="mt-8">
             <SteckbriefPageProgressBar currentState={meta.state} />
           </div>
           <div className="mt-8">
-            <H3>Kurzfassung</H3>
+            <H4 className="mb-4">Kurzfassung</H4>
             {meta.general.description && (
-              <p className="text-lg text-gray-500">
+              <p>
                 {meta.general.description}
                 <br />
                 (Quelle:&nbsp;
@@ -52,24 +52,22 @@ export const SteckbriefPage: React.FC<Props> = ({ meta, geometry, setOverlay }) 
               </Link>
             </div>
           )}
-          <div className="mt-8">
-            <H2>Projektdetails</H2>
-            <H3>Trassenführung</H3>
-            <p className="text-lg text-gray-500 sm:text-xl">
-              {`${meta.general.from.city} - ${meta.general.to.city}`}
-            </p>
-            <H3>Länge</H3>
-            <p className="text-lg text-gray-500 sm:text-xl">
-              ca. {meta.general.length.toLocaleString('de-DE')}&thinsp;km
-            </p>
+          <div className="mt-8 flex flex-col gap-3">
+            <H4 className="mb-4">Projektdetails</H4>
+            <div className="space-y-2">
+              <p className="font-bold">Trassenführung</p>
+              <p>{`${meta.general.from.city} - ${meta.general.to.city}`}</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-bold">Länge</p>
+              <p>ca. {meta.general.length.toLocaleString('de-DE')}&thinsp;km</p>
+            </div>
             <div className="flex min-w-max">
-              <div>
-                <H3>Zuständigkeit</H3>
+              <div className="space-y-2">
+                <p className="font-bold">Zuständigkeit</p>
                 {Boolean(meta.stakeholders?.length) &&
                   meta.stakeholders?.map((stakeholder) => (
-                    <p key={stakeholder.name} className="text-lg text-gray-500 sm:text-xl">
-                      {stakeholder.name}
-                    </p>
+                    <p key={stakeholder.name}>{stakeholder.name}</p>
                   ))}
               </div>
               <div className="flex-grow">
@@ -78,13 +76,15 @@ export const SteckbriefPage: React.FC<Props> = ({ meta, geometry, setOverlay }) 
                 </button>
               </div>
             </div>
-            <H3>Stand</H3>
-            <p className="text-lg text-gray-500 sm:text-xl">
-              {new Date(meta.general.stand).toLocaleDateString('de-DE', {
-                year: 'numeric',
-                month: 'long',
-              })}
-            </p>
+            <div className="space-y-2">
+              <p className="font-bold">Stand</p>
+              <p>
+                {new Date(meta.general.stand).toLocaleDateString('de-DE', {
+                  year: 'numeric',
+                  month: 'long',
+                })}
+              </p>
+            </div>
           </div>
           <div className="mt-12">
             <a href="/datenschutz/">Datenschutz</a>

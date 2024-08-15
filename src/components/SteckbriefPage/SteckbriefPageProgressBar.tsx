@@ -19,7 +19,7 @@ export const SteckbriefPageProgressBar: React.FC<Props> = ({ currentState }) => 
               'relative inline-flex items-center justify-center border-y-2 font-bold hover:cursor-default',
               'first:rounded-l-full first:border-l-2 last:rounded-r-full last:border-r-2',
               'grow py-0.5',
-              selected && 'border-[#7B8D84] bg-[#7B8D84]',
+              selected && 'border-[#7B8D84] bg-[#4A6F61]',
               selected && 'mr-0.5',
             )}
           >

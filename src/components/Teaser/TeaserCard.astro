@@ -32,7 +32,7 @@ const { href, title, description, tag, image, imageCopyright, linkText } = Astro
     cardStylesForLinkElements,
   ]}
 >
-  <div class="flex h-72 overflow-hidden">
+  <div class="flex h-56 overflow-hidden">
     <figure class="h-full w-full">
       {
         typeof image === 'string' ? (
@@ -64,7 +64,7 @@ const { href, title, description, tag, image, imageCopyright, linkText } = Astro
   <div class="relative flex-1 px-6 pb-2 pt-6 md:px-8">
     {tag && <div class="mb-3 h-6 w-6 text-sm text-purple-700">{tag}</div>}
     <h3 class="text-xl font-semibold">{title}</h3>
-    <p class="mt-4 line-clamp-5 text-base text-slate-600">{description}</p>
+    <p class="mt-4 line-clamp-3 text-base text-slate-600">{description}</p>
   </div>
   <div class="flex flex-row place-content-between p-6 md:px-8">
     <div class={clsx('group-hover:underline', linkStyles)}>{linkText || 'Mehr erfahren'}</div>

@@ -1,5 +1,5 @@
 import { MailLink } from '@components/links/MailLink'
-import { H3 } from '@components/Text'
+import { H4 } from '@components/Text'
 import { XMarkIcon } from '@heroicons/react/20/solid'
 
 type props = {
@@ -11,7 +11,7 @@ export const SteckbriefUpdateInfo: React.FC<props> = ({ setOverlay, name }) => {
   return (
     <div className="fixed bottom-20 left-auto right-6 top-auto z-50 h-36 w-96 rounded-lg bg-white px-6">
       <div className="flex">
-        <H3>Gibt es neue Informationen?</H3>
+        <H4>Gibt es neue Informationen?</H4>
         <div className="grow">
           <button className="float-right mt-6" type="button" onClick={() => setOverlay(false)}>
             <XMarkIcon className="h-6 w-6" />
