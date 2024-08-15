@@ -14,9 +14,11 @@ import LayoutPage from 'src/layouts/LayoutPage.astro'
 import { getRsvTeasersFromMeta } from 'src/radschnellwege/meta/getRsvTeasersFromMeta'
 import meta from 'src/radschnellwege/meta/meta.json'
 
-// todo decide which posts to show on home
 // @ts-expect-error
-const filteredRsvs: MetaSchema[] = meta.slice(0, 3)
+const filteredRsvs: MetaSchema[] = meta.filter(
+  (rsv) =>
+    rsv.id === 'frm7-hessen' || rsv.id === 'rs8-baden-wuerttemberg' || rsv.id === 'rsv2-berlin'
+)
 const rsvTeasers: RsvTeaser[] = getRsvTeasersFromMeta(filteredRsvs)
 
 const planningposts = await getCollection('planningposts')
