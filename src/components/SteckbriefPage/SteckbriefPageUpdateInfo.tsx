@@ -26,7 +26,7 @@ export const SteckbriefUpdateInfo: React.FC<props> = ({ setOverlay, name }) => {
           subject={`Anliegen zum ${name}`}
         >
           schreiben Sie uns
-        </MailLink>
+        </MailLink>{' '}
         einfach.
       </p>
     </div>
