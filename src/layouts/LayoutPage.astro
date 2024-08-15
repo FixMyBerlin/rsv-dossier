@@ -1,12 +1,9 @@
 ---
 import { Footer } from './footer/Footer'
 import Layout from './Layout.astro'
-import { Navigation } from './navigation/Navigation'
 
 type Props = { title?: string; description?: string; noindex?: boolean }
 const { title, noindex, description }: Props = Astro.props
-
-const pathname = new URL(Astro.request.url).pathname
 ---
 
 <Layout pageLayout title={title} description={description} noindex={noindex}>

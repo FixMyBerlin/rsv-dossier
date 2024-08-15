@@ -5,14 +5,9 @@ import { MailLink } from '@components/links/MailLink'
 type Props = {
   headerTitle: React.ReactNode
   headerDescription: React.ReactNode
-  currentFilter: string
 }
 
-export const SteckbriefePageHeader: React.FC<Props> = ({
-  headerTitle,
-  headerDescription,
-  currentFilter,
-}) => {
+export const SteckbriefePageHeader: React.FC<Props> = ({ headerTitle, headerDescription }) => {
   return (
     <div className="relative bg-gray-800 pb-48 pt-24">
       <div className="absolute inset-0">
