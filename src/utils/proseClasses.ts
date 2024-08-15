@@ -11,6 +11,6 @@ export const markdownProseClasses = clsx(
   'prose-h3:text-sm md:prose-h3:text-base', // h3 size
   'prose-h4:text-sm md:prose-h4:text-base', // h4 size
   'prose-li:m-0 prose-li:p-0',
-  'prose-a:decoration-beige-600 hover:prose-a:text-beige-600 prose-a:underline prose-a:decoration-[1.5px] prose-a:underline-offset-2 prose-a:active:decoration-2',
+  'prose-a:no-underline',
   'prose-headings:max-w-[690px] prose-p:max-w-[690px] prose-a:max-w-[690px] prose-blockquote:max-w-[690px] prose-code:max-w-[690px] prose-ol:max-w-[690px] prose-ul:max-w-[690px] prose-table:max-w-[690px] prose-hr:max-w-[690px]',
 )
