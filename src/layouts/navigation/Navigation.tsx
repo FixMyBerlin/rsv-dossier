@@ -9,7 +9,7 @@ import { NavigationMobileMenuButton } from './NavigationMobileMenuButton'
 
 type Props = { path: string; fixed?: boolean }
 
-export const navHeightClasssName = 'h-24'
+export const navHeightClasssName = 'h-20'
 export const Navigation: React.FC<Props> = ({ path, fixed }) => {
   // Check if the current page is a steckbriefe page (not list view) to apply a different layout with a fixed navbar
 
@@ -24,10 +24,10 @@ export const Navigation: React.FC<Props> = ({ path, fixed }) => {
     >
       {({ open }) => (
         <>
-          <div className="pl-7 pr-10">
+          <div className="px md:px-4">
             <div className={clsx(navHeightClasssName, 'flex justify-between py-2')}>
               <div className="flex w-full items-center justify-between">
-                <div className="w-40">
+                <div className="w-36">
                   {path === '/' ? (
                     <RSVLogo />
                   ) : (
