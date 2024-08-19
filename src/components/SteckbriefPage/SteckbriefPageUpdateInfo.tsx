@@ -9,7 +9,7 @@ type props = {
 
 export const SteckbriefUpdateInfo: React.FC<props> = ({ setOverlay, name }) => {
   return (
-    <div className="fixed bottom-20 left-auto right-6 top-auto z-50 h-36 w-96 rounded-lg bg-white px-6">
+    <div className="absolute z-50 h-36 w-96 rounded-lg bg-white px-6">
       <div className="flex">
         <H4>Gibt es neue Informationen?</H4>
         <div className="grow">

@@ -1,7 +1,6 @@
 import Link from '@components/links/Link'
 import { RSVMap } from '@components/Map/RsvMap'
 import { H1, H4 } from '@components/Text'
-import { InformationCircleIcon } from '@heroicons/react/20/solid'
 import type { MetaSchema } from 'data/schema/meta.schema'
 import type { GeometrySchema } from 'src/content/config'
 import { SteckbriefPageProgressBar } from './SteckbriefPageProgressBar'
@@ -68,11 +67,6 @@ export const SteckbriefPage: React.FC<Props> = ({ meta, geometry, setOverlay }) 
                   meta.stakeholders?.map((stakeholder) => (
                     <p key={stakeholder.name}>{stakeholder.name}</p>
                   ))}
-              </div>
-              <div className="flex-grow">
-                <button type="button" className="float-right mt-5" onClick={() => setOverlay(true)}>
-                  <InformationCircleIcon className="h-6 w-6" />
-                </button>
               </div>
             </div>
             <div className="space-y-2">

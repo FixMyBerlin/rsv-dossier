@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 
+import { InfoIcon } from '@assets/general/tsx/InfoIcon'
 import type { MetaSchema } from 'data/schema/meta.schema'
 import React, { useState } from 'react'
 import type { GeometrySchema } from 'src/content/config'
@@ -41,7 +42,16 @@ export const Radschnellweg: React.FC<Props> = ({ meta, geometry }) => {
           <SteckbriefPage meta={meta} geometry={geometry} setOverlay={setOverlay} />
         </LayoutSteckbrief>
       </div>
-      {overlay && <SteckbriefUpdateInfo setOverlay={setOverlay} name={name} />}
+      <div className="fixed bottom-4 right-4 h-36 w-96">
+        {overlay && <SteckbriefUpdateInfo setOverlay={setOverlay} name={name} />}
+        <button
+          type="button"
+          className="absolute bottom-3 right-3"
+          onClick={() => setOverlay(true)}
+        >
+          <InfoIcon />
+        </button>
+      </div>
     </div>
   )
 }
