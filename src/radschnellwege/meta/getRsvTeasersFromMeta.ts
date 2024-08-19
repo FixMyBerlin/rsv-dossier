@@ -1,4 +1,4 @@
-import type { MetaSchema } from 'data/zod/metaSchema'
+import type { MetaSchema } from 'data/schema/meta.schema'
 
 export const getRsvTeasersFromMeta = (meta: MetaSchema[]) => {
   return meta.map((rsv) => {

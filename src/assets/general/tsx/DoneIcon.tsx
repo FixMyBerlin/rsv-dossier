@@ -1,7 +1,6 @@
 export const DoneIcon = () => {
   return (
     <svg
-      style={{ enableBackground: 'new 0 0 40 40' }}
       fill="currentColor"
       viewBox="0 0 40 40"
       xmlns="http://www.w3.org/2000/svg"

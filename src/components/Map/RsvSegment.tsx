@@ -1,5 +1,6 @@
 import { geojsonType } from '@turf/turf'
-import type { GeometrySchema } from 'data/zod/geometrySchema'
+import type { GeometrySchema } from 'data/schema/geometry.schema'
+
 import type { LineLayerSpecification } from 'maplibre-gl'
 import React from 'react'
 import { Layer, Source } from 'react-map-gl'

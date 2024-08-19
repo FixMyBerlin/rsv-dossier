@@ -45,6 +45,9 @@
     "check": "npm run type-check && npm run format && npm run lint",
     "updatePackages:major": "npx taze major --includeLocked --write && npm install",
     "updatePackages:minor": "npx taze minor --includeLocked --write && npm install",
+    "updateGeometrySchema": "json-schema-to-zod -i data/schema/geometry.schema.json -o data/schema/geometry.schema.ts  -n geometrySchema -m esm --type GeometrySchema",
+    "updateMetaSchema": "json-schema-to-zod -i data/schema/meta.schema.json -o data/schema/meta.schema.ts  -n metaSchema -m esm --type MetaSchema",
+    "generateTsxFromSvg": "bun ./scripts/svgToTsx/svgToTsx.ts && npm run format",
     "prepare": "husky"
   },
   "devDependencies": {

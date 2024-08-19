@@ -1,7 +1,7 @@
 import { Disclosure, DisclosurePanel } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { RSVLogo } from '@assets/tsx/RSVLogo'
+import { RSVLogo } from '@assets/general/tsx/RSVLogo'
 import { navigationLinks } from './navigationLinks.const'
 import { NavigationMenuItemDesktop } from './NavigationMenuItemDesktop'
 import { NavigationMenuItemMobile } from './NavigationMenuItemMobile'

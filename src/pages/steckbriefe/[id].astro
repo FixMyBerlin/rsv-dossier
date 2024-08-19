@@ -1,10 +1,8 @@
 ---
 import { Radschnellweg } from '@components/SteckbriefPage/Radschnellweg'
-
 import { getCollection } from 'astro:content'
-import type { MetaSchema } from 'data/zod/metaSchema'
+import type { MetaSchema } from 'data/schema/meta.schema'
 import Layout from 'src/layouts/Layout.astro'
-
 import meta from 'src/radschnellwege/meta/meta.json'
 
 export async function getStaticPaths() {

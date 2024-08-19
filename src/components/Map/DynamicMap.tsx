@@ -1,10 +1,11 @@
 import { bbox, bboxPolygon, geojsonType, square, transformScale } from '@turf/turf'
-import type { GeometrySchema } from 'data/zod/geometrySchema'
+
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import React, { useEffect, useState } from 'react'
 import Map, { FullscreenControl, NavigationControl } from 'react-map-gl/maplibre'
 
+import type { GeometrySchema } from 'data/schema/geometry.schema'
 import { maptilerBaseUrl, maptilerKey } from 'src/utils/mapTiler.const'
 import { RSVSegment } from './RsvSegment'
 

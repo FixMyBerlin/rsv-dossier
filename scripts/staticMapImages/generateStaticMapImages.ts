@@ -1,3 +1,6 @@
+import type { GeometrySchema } from 'data/schema/geometry.schema'
+import type { Feature } from 'maplibre-gl'
+
 const pkg = require('@googlemaps/polyline-codec')
 const turf = require('@turf/turf')
 const fs = require('fs')
@@ -11,17 +14,31 @@ const outputDir = path.resolve('public/rsv-map-images')
 const geometryDir = path.resolve('src/content/geometries')
 
 // from rsv-dossier/src/utils/staticmap.ts
-const buildPaths = ({ properties, geometry: { coordinates } }) => {
+// @ts-expect-error
+const buildPaths = ({ properties, geometry: { coordinates } }: Feature) => {
   const paint = { width: 5, stroke: segmentColor(properties) }
+  // @ts-expect-error
   const paintArr = Object.keys(paint).map((key) => `${key}:${paint[key]}`)
 
   // flip the coordinate order for encoding
-  return coordinates
-    .map((linestring) => encode(linestring.map((position) => [...position].reverse())))
-    .map((polyline) => [...paintArr, `enc:${polyline}`].join('|'))
+  return (
+    coordinates
+      // @ts-expect-error
+      .map((linestring) => encode(linestring.map((position) => [...position].reverse())))
+      // @ts-expect-error
+      .map((polyline) => [...paintArr, `enc:${polyline}`].join('|'))
+  )
 }
 
-const staticMapRequest = ({ features, bbox }, [width, height]) => {
+type StaticMapRequestParams = {
+  features: GeometrySchema['features']
+  bbox: GeometrySchema['bbox']
+}
+
+const staticMapRequest = (
+  { features, bbox }: StaticMapRequestParams,
+  [width, height]: [number, number],
+) => {
   const dims = `${width / 2}x${height / 2}@2x.png`
 
   // URL and Keys: ~/utils/mapTiler.const.ts
@@ -29,14 +46,15 @@ const staticMapRequest = ({ features, bbox }, [width, height]) => {
   url.searchParams.append('key', maptilerKey)
   url.searchParams.append('attribution', '0')
   features.forEach((feature) => {
-    buildPaths(feature).forEach((path) => {
+    // @ts-expect-error
+    buildPaths(feature).forEach((path: string) => {
       url.searchParams.append('path', path)
     })
   })
   return url
 }
 
-const processFile = async (file, geometryDir, outputDir) => {
+const processFile = async (file: string, geometryDir: string, outputDir: string) => {
   try {
     const filePath = path.resolve(geometryDir, file)
     const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
@@ -44,7 +62,7 @@ const processFile = async (file, geometryDir, outputDir) => {
     // filter out discarded route variants
     const filteredData = {
       ...data,
-      features: data.features.filter((feature) => !feature.properties.discarded),
+      features: data.features.filter((feature: Feature) => !feature.properties.discarded),
     }
 
     // generate static map from geometry
@@ -83,7 +101,9 @@ const processFiles = async () => {
   const files = fs.readdirSync(geometryDir)
 
   // const results = await processFile(files[0], geometryDir, outputDir)
-  const results = await Promise.all(files.map((file) => processFile(file, geometryDir, outputDir)))
+  const results = await Promise.all(
+    files.map((file: string) => processFile(file, geometryDir, outputDir)),
+  )
   const count = results.length
   console.log(`${count} images (from ${files.length} geometry files) have been saved`)
 }

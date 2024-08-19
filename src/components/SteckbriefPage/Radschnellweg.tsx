@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-import type { MetaSchema } from 'data/zod/metaSchema'
+import type { MetaSchema } from 'data/schema/meta.schema'
 import React, { useState } from 'react'
 import type { GeometrySchema } from 'src/content/config'
 import { LayoutSteckbrief } from 'src/layouts/LayoutSteckbrief'

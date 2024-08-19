@@ -1,8 +1,8 @@
-import { AgreementIcon } from '@assets/tsx/AgreementIcon'
-import { DoneIcon } from '@assets/tsx/DoneIcon'
-import { IdeaIcon } from '@assets/tsx/IdeaIcon'
-import { PlanningIcon } from '@assets/tsx/PlanningIcon'
-import { ProgressIcon } from '@assets/tsx/ProgressIcon'
+import { AgreementIcon } from '@assets/general/tsx/AgreementIcon'
+import { DoneIcon } from '@assets/general/tsx/DoneIcon'
+import { IdeaIcon } from '@assets/general/tsx/IdeaIcon'
+import { PlanningIcon } from '@assets/general/tsx/PlanningIcon'
+import { ProgressIcon } from '@assets/general/tsx/ProgressIcon'
 
 export const StateIcons = {
   idea: { title: 'Idee', icon: <IdeaIcon /> },
