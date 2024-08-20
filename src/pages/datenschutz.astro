@@ -1,32 +1,18 @@
 ---
 import { MatomoIframe } from '@components/datenschutzPage/MatomoIframe'
-import { TableOfContents, type TocHashLink } from '@components/datenschutzPage/TableOfContents'
 
 import Link from '@components/links/Link.astro'
 import { MailLink } from '@components/links/MailLink'
 import { TelLink } from '@components/links/TelLink'
-import PageHeader from '@components/PageHeader.astro'
 import ProseMarkdown from '@components/ProseMarkdown.astro'
 import Section from '@components/Section.astro'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
-
-const tocItems: TocHashLink = [
-  ['#responsible', 'Verantwortlichkeit'],
-  ['#thirdparty', 'Drittdienste'],
-  ['#hosting', 'Bereitstellung'],
-  ['#analytics', 'Webanalyse'],
-  ['#contact', 'Kontaktmöglichkeit'],
-  ['#newsletter', 'Newsletter'],
-  ['#rights', 'Ihre Rechte'],
-  ['#updates', 'Aktualität und Änderungen'],
-]
 ---
 
 <LayoutPage title="Datenschutzerklärung" noindex>
   <Section>
     <ProseMarkdown>
       <h1>Datenschutzerklärung</h1>
-      <TableOfContents items={tocItems} />
       <h2 id="responsible">Einleitung</h2>
       <p>
         Mit den nachfolgenden Informationen wollen wir Ihnen einen Überblick über die Verarbeitung
@@ -421,6 +407,6 @@ const tocItems: TocHashLink = [
         behördliche Vorgaben ändern, kann es notwendig sein, diese Datenschutzhinweise zu ändern.
         Die jeweils aktuellen Datenschutzhinweise können Sie jederzeit hier abrufen.
       </p>
-    </ProseMarkdown></Section
-  >
+    </ProseMarkdown>
+  </Section>
 </LayoutPage>

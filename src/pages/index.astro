@@ -17,7 +17,7 @@ import meta from 'src/radschnellwege/meta/meta.json'
 // @ts-expect-error
 const filteredRsvs: MetaSchema[] = meta.filter(
   (rsv) =>
-    rsv.id === 'frm7-hessen' || rsv.id === 'rs8-baden-wuerttemberg' || rsv.id === 'rsv2-berlin',
+    rsv.id === 'frm7-hessen' || rsv.id === 'rs8-baden-wuerttemberg' || rsv.id === 'rsv2-berlin'
 )
 const rsvTeasers: RsvTeaser[] = getRsvTeasersFromMeta(filteredRsvs)
 
@@ -60,6 +60,7 @@ const filteredAndSortedCommunicationposts = communicationposts
         rsvTeasers.map((rsvTeaser) => (
           <TeaserCard
             title={
+              // @ts-expect-error
               (Number.isNaN(parseFloat(rsvTeaser.general.ref))
                 ? `${rsvTeaser.general.ref}: `
                 : '') + (rsvTeaser.general.name || rsvTeaser.jsonId)
