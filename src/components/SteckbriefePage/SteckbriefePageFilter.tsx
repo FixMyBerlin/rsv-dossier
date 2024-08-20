@@ -10,7 +10,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { navigate } from 'astro:transitions/client'
 import clsx from 'clsx'
 
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import meta from 'src/radschnellwege/meta/meta.json'
 
 type Props = {

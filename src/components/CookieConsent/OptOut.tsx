@@ -1,5 +1,5 @@
 import Link from '@components/links/Link'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getOptInCookie, setOptInCookie } from './storage'
 
 export const OptOut: React.FC = () => {

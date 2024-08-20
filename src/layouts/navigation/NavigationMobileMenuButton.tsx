@@ -1,6 +1,5 @@
 import { DisclosureButton } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
-import React from 'react'
 
 type Props = { open: boolean }
 

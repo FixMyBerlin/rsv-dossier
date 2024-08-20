@@ -1,4 +1,3 @@
-import React from 'react'
 import { selectLinkStyle } from './styles'
 import type { LinkProps } from './types'
 

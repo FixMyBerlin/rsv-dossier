@@ -2,7 +2,7 @@ import clsx from 'clsx'
 
 import { InfoIcon } from '@assets/general/tsx/InfoIcon'
 import type { MetaSchema } from 'data/schema/meta.schema'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import type { GeometrySchema } from 'src/content/config'
 import { LayoutSteckbrief } from 'src/layouts/LayoutSteckbrief'
 import { SteckbriefPage } from './SteckbriefPage'

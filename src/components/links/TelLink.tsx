@@ -1,4 +1,3 @@
-import React from 'react'
 import { selectLinkStyle } from './styles'
 
 type Props = {

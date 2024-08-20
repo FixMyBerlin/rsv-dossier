@@ -2,7 +2,7 @@ import { bbox, bboxPolygon, geojsonType, square, transformScale } from '@turf/tu
 
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Map, { FullscreenControl, NavigationControl } from 'react-map-gl/maplibre'
 
 import type { GeometrySchema } from 'data/schema/geometry.schema'

@@ -1,5 +1,4 @@
 import Link from '@components/links/Link'
-import React from 'react'
 import type { footerMenuItemProps } from './footerLinks.const'
 
 type Props = {
