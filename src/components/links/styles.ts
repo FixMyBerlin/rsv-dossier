@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import type { LinkProps } from './types'
 
 export const linkStyles = 'text-emerald-600 hover:underline'
-export const menuLinkStyles = 'text-gray-600 hover:text-emerald-600 hover:no-underline'
+export const menuLinkStyles = 'text-gray-500 hover:text-emerald-600 hover:no-underline'
 export const selectedMenuLinkStyles = 'underline text-emerald-600 underline-emerald-600'
 
 const buttonBase =
