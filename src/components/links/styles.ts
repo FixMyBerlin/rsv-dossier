@@ -1,16 +1,16 @@
 import clsx from 'clsx'
 import type { LinkProps } from './types'
 
-export const linkStyles = 'text-emerald-400 hover:underline'
-export const menuLinkStyles = 'text-gray-500 hover:text-emerald-400 hover:no-underline'
-export const selectedMenuLinkStyles = 'underline text-emerald-400 underline-emerald-400'
+export const linkStyles = 'text-emerald-600 hover:underline'
+export const menuLinkStyles = 'text-gray-600 hover:text-emerald-600 hover:no-underline'
+export const selectedMenuLinkStyles = 'underline text-emerald-600 underline-emerald-600'
 
 const buttonBase =
   'inline-flex items-center justify-center rounded-full py-3 px-5 focus:ring-[3px] border-2 shadow-sm focus:ring-blue-400'
 
 export const buttonStylesForGreenLinkElement = clsx(
   buttonBase,
-  'border-emerald-500 bg-emerald-500 text-white hover:border-emerald-600 hover:bg-emerald-600',
+  'border-emerald-600 bg-emerald-600 text-white hover:border-emerald-600 hover:bg-emerald-600',
 )
 export const buttonStylesForDarkLinkElement = clsx(
   buttonBase,
@@ -18,7 +18,7 @@ export const buttonStylesForDarkLinkElement = clsx(
 )
 export const buttonStylesForWhiteLinkElement = clsx(
   buttonBase,
-  'border-emerald-500 bg-white text-slate-900 hover:bg-slate-100',
+  'border-emerald-600 bg-white text-slate-900 hover:bg-slate-100',
 )
 
 const hoverTranslateClassNames =

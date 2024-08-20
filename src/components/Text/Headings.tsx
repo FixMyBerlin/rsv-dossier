@@ -10,7 +10,7 @@ export const H1: React.FC<Props> = ({ children, className }) => {
   return (
     <h1
       className={clsx([
-        'mt-7 text-3xl font-extrabold leading-tight text-gray-900 sm:text-5xl sm:leading-tight',
+        'mt-7 break-words text-3xl font-extrabold leading-tight text-gray-900 sm:text-5xl sm:leading-tight',
 
         className,
       ])}
