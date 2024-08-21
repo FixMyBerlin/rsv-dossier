@@ -5,6 +5,7 @@ import Hero from '@components/Hero.astro'
 import Link from '@components/links/Link'
 import PageHeader from '@components/PageHeader.astro'
 import Section from '@components/Section.astro'
+import { RsvStateLabel } from '@components/SteckbriefePage/RsvStateLabel'
 import type { RsvTeaser } from '@components/SteckbriefePage/SteckbriefePageTeasers.astro'
 import TeaserCard from '@components/Teaser/TeaserCard.astro'
 import TeasersContainer from '@components/Teaser/TeasersContainer.astro'
@@ -66,10 +67,11 @@ const filteredAndSortedCommunicationposts = communicationposts
                 : '') + (rsvTeaser.general.name || rsvTeaser.jsonId)
             }
             description={rsvTeaser.general.description || undefined}
-            tag={rsvTeaser.state}
             href={`/steckbriefe/${rsvTeaser.jsonId}`}
             image={rsvTeaser.staticMap}
-          />
+          >
+            <RsvStateLabel state={rsvTeaser.state} />
+          </TeaserCard>
         ))
       }
     </TeasersContainer>
