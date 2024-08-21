@@ -6,7 +6,7 @@ export const menuLinkStyles = 'text-gray-500 hover:text-emerald-600 hover:no-und
 export const selectedMenuLinkStyles = 'underline text-emerald-600 underline-emerald-600'
 
 const buttonBase =
-  'inline-flex items-center justify-center rounded-full py-3 px-5 focus:ring-[3px] border-2 shadow-sm focus:ring-blue-400'
+  'inline-flex items-center justify-center rounded-full pb-3 pt-3.5 px-5 focus:ring-[3px] border-2 shadow-sm focus:ring-blue-400'
 
 export const buttonStylesForGreenLinkElement = clsx(
   buttonBase,
