@@ -15,6 +15,7 @@ const postsCollection = defineCollection({
       teaserImage: image(),
       imageCopyright: z.string(),
       showOnHome: z.boolean().optional(),
+      uploads: z.array(z.any()).optional(),
     }),
 })
 

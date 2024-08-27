@@ -7,9 +7,11 @@ import ImageSingleVertical from '@components/ImageComponents/ImageSingleVertical
 import PageHeader from '@components/PageHeader.astro'
 import ProseMarkdown from '@components/ProseMarkdown.astro'
 import Section from '@components/Section.astro'
+import { H3 } from '@components/Text'
+import { linkStyles } from '@components/links/styles'
+import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import LayoutPage from 'src/layouts/LayoutPage.astro'
-import { Image } from 'astro:assets'
 
 export async function getStaticPaths() {
   const planningposts = await getCollection('planningposts')
@@ -20,7 +22,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props
-const { title, subTitle, type, date, preview, teaserImage, imageCopyright } = entry.data
+const { title, subTitle, type, date, preview, teaserImage, imageCopyright, uploads } = entry.data
 
 const { Content } = await entry.render()
 ---
@@ -65,5 +67,27 @@ const { Content } = await entry.render()
         }}
       />
     </ProseMarkdown>
+    {
+      !!uploads?.length && (
+        <div>
+          <H3 className="mb-4">Dateien</H3>
+          <ul>
+            {uploads.map((file) => (
+              <li>
+                <a
+                  href={file.file}
+                  class={linkStyles}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-2 block text-blue-600 hover:underline"
+                >
+                  {file.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
   </Section>
 </LayoutPage>

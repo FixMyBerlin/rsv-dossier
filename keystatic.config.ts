@@ -52,11 +52,25 @@ const blogSchema = {
     label: 'Datum des Blogeintrags',
     validation: { isRequired: true },
   }),
-
   imageCopyright: fields.text({
     label: 'Copyright Bild',
     validation: { length: { min: 1, max: 100 } },
   }),
+  uploads: fields.array(
+    fields.object({
+      name: fields.text({ label: 'Beschriftung', validation: { isRequired: true } }),
+      file: fields.file({
+        label: 'Datei',
+        directory: 'public',
+        publicPath: '/',
+        validation: { isRequired: true },
+      }),
+    }),
+    {
+      itemLabel: (props) => props.fields.name.value || 'Datei',
+      label: 'Dateien',
+    },
+  ),
 }
 
 export default config({
