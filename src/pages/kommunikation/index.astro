@@ -26,20 +26,27 @@ const sortedcommunicationposts = communicationposts
   <Section>
     <TeasersContainer>
       {
-        sortedcommunicationposts.map((post) => {
-          const { title, type, teaserText, teaserImage, imageCopyright } = post.data
-          return (
-            <TeaserCard
-              href={post.slug}
-              title={title}
-              description={teaserText}
-              tag={type}
-              image={teaserImage}
-              imageCopyright={imageCopyright}
-              linkText="Weiterlesen"
-            />
-          )
-        })
+        !!sortedcommunicationposts.length ? (
+          sortedcommunicationposts.map((post) => {
+            const { title, type, teaserText, teaserImage, imageCopyright } = post.data
+            return (
+              <TeaserCard
+                href={post.slug}
+                title={title}
+                description={teaserText}
+                tag={type}
+                image={teaserImage}
+                imageCopyright={imageCopyright}
+                linkText="Weiterlesen"
+              />
+            )
+          })
+        ) : (
+          <p>
+            Hier erscheint in Kürze eine Übersicht über unsere Blogbeiträge zur Planung von
+            Radschnellverbindungen in Deutschland.
+          </p>
+        )
       }
     </TeasersContainer>
   </Section>

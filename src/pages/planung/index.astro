@@ -28,20 +28,27 @@ const sortedplanningposts = planningposts
   <Section>
     <TeasersContainer>
       {
-        sortedplanningposts.map((post) => {
-          const { title, type, teaserText, teaserImage, imageCopyright } = post.data
-          return (
-            <TeaserCard
-              href={post.slug}
-              title={title}
-              description={teaserText}
-              tag={type}
-              image={teaserImage}
-              imageCopyright={imageCopyright}
-              linkText="Weiterlesen"
-            />
-          )
-        })
+        !!sortedplanningposts.length ? (
+          sortedplanningposts.map((post) => {
+            const { title, type, teaserText, teaserImage, imageCopyright } = post.data
+            return (
+              <TeaserCard
+                href={post.slug}
+                title={title}
+                description={teaserText}
+                tag={type}
+                image={teaserImage}
+                imageCopyright={imageCopyright}
+                linkText="Weiterlesen"
+              />
+            )
+          })
+        ) : (
+          <p>
+            Hier erscheint in Kürze eine Übersicht über unsere Blogbeiträge zur Planung von
+            Radschnellverbindungen in Deutschland.
+          </p>
+        )
       }
     </TeasersContainer>
   </Section>
