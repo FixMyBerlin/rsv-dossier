@@ -79,7 +79,7 @@ export default config({
     kind: 'github',
     repo: {
       owner: 'FixMyBerlin',
-      name: 'rsv-info',
+      name: 'rsv-dossier',
     },
   },
   ui: {
