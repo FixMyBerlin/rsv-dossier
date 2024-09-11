@@ -1,103 +1,74 @@
-import {
-  bbox,
-  bboxPolygon,
-  geojsonType,
-  square,
-  transformScale,
-} from '@turf/turf';
-import maplibregl from 'maplibre-gl';
-import 'maplibre-gl/dist/maplibre-gl.css';
-import React, { useEffect, useState } from 'react';
-import Map, { FullscreenControl, NavigationControl } from 'react-map-gl';
-import { maptilerBaseUrl, maptilerKey } from '~/utils';
-import { RSVPopup, RSVSegment } from '.';
+import { bbox, bboxPolygon, geojsonType, square, transformScale } from '@turf/turf'
 
-type BBox2d = [number, number, number, number];
+import maplibregl from 'maplibre-gl'
+import 'maplibre-gl/dist/maplibre-gl.css'
+import { useEffect, useState } from 'react'
+import Map, { FullscreenControl, NavigationControl } from 'react-map-gl/maplibre'
+
+import type { GeometrySchema } from 'data/schema/geometry.schema'
+import { maptilerBaseUrl, maptilerKey } from 'src/utils/mapTiler.const'
+import { RSVSegment } from './RsvSegment'
+
+type BBox2d = [number, number, number, number]
 
 function assertFeatureCollection(
-  geojson: any
+  geojson: any,
 ): asserts geojson is GeoJSON.FeatureCollection<GeoJSON.MultiLineString> {
-  geojsonType(geojson, 'FeatureCollection', 'DynamicMap');
+  geojsonType(geojson, 'FeatureCollection', 'DynamicMap')
+}
+type Props = {
+  geometry: GeometrySchema
 }
 
-export const DynamicMap: React.FC<
-  Pick<Queries.SteckbriefQuery, 'geometry'>
-> = ({ geometry }) => {
-  assertFeatureCollection(geometry);
+export const DynamicMap: React.FC<Props> = ({ geometry }) => {
+  assertFeatureCollection(geometry)
   // the factor by which the bbox is scaled to the viewport
-  const scaleFactor = 4;
-  const bboxView = bbox(
-    transformScale(bboxPolygon(square(geometry.bbox)), scaleFactor)
-  );
-  const [info] = useState({
-    lng: 0,
-    lat: 0,
-    properties: null,
-  });
-  const [selected, setSelected] = useState(undefined);
-  // disabled until popup has real content
-  // const updateInfo = (event) => {
-  //   const { lng, lat } = event.lngLat;
-  //   const [{ properties }] = event.features;
-  //   setInfo({ lng, lat, properties });
-  //   setSelected(properties.id);
-  // };
-  // const [cursorStyle, setCursorStyle] = useState('grab');
+  const scaleFactor = 4
+  const bboxView = geometry.bbox
+    ? bbox(transformScale(bboxPolygon(square(geometry.bbox)), scaleFactor))
+    : undefined
 
-  const [isScreenHorizontal, setIsScreenHorizontal] = useState(false);
+  const [selected] = useState(undefined)
+
+  const [isScreenHorizontal, setIsScreenHorizontal] = useState(false)
 
   useEffect(() => {
     // reminder: hard coded breakpoint lg tailwind css - has to be changed if tailwind.config.ts is changed
-    const lgMediaQuery = window.matchMedia('(min-width: 1024px)');
-    function onMediaQueryChange({ matches }) {
-      setIsScreenHorizontal(matches);
+    const lgMediaQuery = window.matchMedia('(min-width: 1024px)')
+    function onMediaQueryChange({ matches }: { matches: boolean }) {
+      setIsScreenHorizontal(matches)
     }
 
-    onMediaQueryChange(lgMediaQuery);
-    lgMediaQuery.addEventListener('change', onMediaQueryChange);
+    onMediaQueryChange(lgMediaQuery)
+    lgMediaQuery.addEventListener('change', onMediaQueryChange)
 
     return () => {
-      lgMediaQuery.removeEventListener('change', onMediaQueryChange);
-    };
-  }, []);
+      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
+    }
+  }, [])
 
   return (
-    <Map
-      initialViewState={{
-        bounds: geometry.bbox as BBox2d,
-        fitBoundsOptions: {
-          padding: 20,
-        },
-      }}
-      mapLib={maplibregl}
-      mapStyle={`${maptilerBaseUrl}/style.json?key=${maptilerKey}`}
-      maxBounds={bboxView as BBox2d}
-      attributionControl={false}
-      scrollZoom={isScreenHorizontal}
-      interactiveLayerIds={geometry.features.map(
-        ({ properties }) => properties.id
-      )}
-      // See https://github.com/visgl/react-map-gl/issues/2310
-      RTLTextPlugin={null}
-
-      // disabled until popup has real content
-      // onClick={updateInfo}
-      // cursor={cursorStyle}
-      // onMouseEnter={() => setCursorStyle('pointer')}
-      // onMouseLeave={() => setCursorStyle('grab')}
-    >
-      <FullscreenControl style={{ background: '#D9D9D9' }} />
-      {geometry.features.map(
-        (feature: Queries.SteckbriefQuery['geometry']['features'][number]) => (
-          <RSVSegment
-            key={feature.properties.id}
-            feature={feature}
-            selected={selected}
-          />
-        )
-      )}
-      <RSVPopup info={info} selected={selected} setSelected={setSelected} />
-      <NavigationControl showCompass={false} />
-    </Map>
-  );
-};
+    <div className="relative h-full w-full">
+      <Map
+        initialViewState={{
+          bounds: geometry.bbox as BBox2d,
+          fitBoundsOptions: {
+            padding: 20,
+          },
+        }}
+        mapLib={maplibregl}
+        mapStyle={`${maptilerBaseUrl}/style.json?key=${maptilerKey}`}
+        maxBounds={bboxView as BBox2d}
+        attributionControl={false}
+        scrollZoom={isScreenHorizontal}
+        interactiveLayerIds={geometry.features.map(({ properties }) => properties.id)}
+      >
+        <FullscreenControl style={{ background: '#D9D9D9' }} />
+        {geometry.features.map((feature: GeometrySchema['features'][number]) => (
+          <RSVSegment key={feature.properties.id} feature={feature} selected={selected} />
+        ))}
+        <NavigationControl showCompass={false} />
+      </Map>
+    </div>
+  )
+}

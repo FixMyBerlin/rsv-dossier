@@ -1,0 +1,58 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+
+type Props = {
+  src: string
+  srcSecond: string
+  alt: string
+  caption: string
+  captionSecond: string
+  imageConfig: {
+    discriminant: 'horizontal' | 'vertical' | 'square'
+    value: '3/2' | '4/3'
+  }
+}
+const { src, srcSecond, alt, caption, captionSecond, imageConfig } = Astro.props
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/**/*.{jpeg,jpg,png,gif,webp,JPG,JPEG,PNG,GIF}',
+)
+if (!images[src])
+  throw new Error(`"${src}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`)
+if (!images[srcSecond])
+  throw new Error(`"${src}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`)
+const orientation = imageConfig.discriminant
+const ratio = imageConfig.value
+const srcs = [
+  { src: src, caption: caption },
+  { src: srcSecond, caption: captionSecond },
+]
+---
+
+<div class:list={['not-prose my-8 grid w-full grid-cols-1 gap-5 md:grid-cols-2']}>
+  <!-- quality="high" -->
+  <!-- https://docs.astro.build/en/guides/images/#quality -->
+  {
+    srcs.map((s) => (
+      <figure class:list={[]}>
+        <div
+          class:list={[
+            orientation === 'square' && 'aspect-[1/1]',
+            orientation === 'horizontal' && ratio === '3/2' && 'aspect-[3/2]',
+            orientation === 'horizontal' && ratio === '4/3' && 'aspect-[4/3]',
+            orientation === 'vertical' && ratio === '3/2' && 'aspect-[3/4]',
+            orientation === 'vertical' && ratio === '4/3' && 'aspect-[2/3]',
+          ]}
+        >
+          <Image
+            class="h-full w-full overflow-hidden object-cover"
+            src={images[s.src]()}
+            alt={alt || ''}
+            loading="lazy"
+          />
+        </div>
+        <figcaption class="mt-2 text-xs md:text-sm">{s.caption}</figcaption>
+      </figure>
+    ))
+  }
+</div>

@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets'
+import heroImage from '../assets/general/rsv_hero.png'
+import { MailLink } from './links/MailLink'
+import { H1 } from './Text'
+
+type Props = {
+  title: string
+  subTitle?: string
+  button?: boolean
+  className?: string
+}
+const { title, subTitle, button, className } = Astro.props
+---
+
+<div class:list={['relative flex max-w-[100vw]', className]}>
+  <Image src={heroImage} alt="" class="absolute inset-0 z-0 h-full w-full object-cover" />
+  <div
+    class="inset-o z-10 flex w-full flex-col items-center justify-center px-10 py-10 pb-20 text-center sm:py-20"
+  >
+    <H1 className="mb-6 max-w-full sm:mb-10 sm:max-w-3xl">{title}</H1>
+    {subTitle && <p class="mb-8 max-w-4xl text-base sm:mb-16 sm:text-2xl">{subTitle}</p>}
+    {
+      button && (
+        <MailLink button="dark" mailto="feedback@fixmycity.de">
+          Email schreiben
+        </MailLink>
+      )
+    }
+  </div>
+</div>
