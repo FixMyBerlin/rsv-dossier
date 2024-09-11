@@ -1,61 +1,58 @@
-import React, { useEffect, useState } from 'react';
-import { ExternalLink } from '~/components/Links/';
-import { setOptInCookie, getOptInCookie } from '~/components/CookieConsent';
-import { Button } from '~/components/Buttons';
+import Link from '@components/links/Link'
+import { useEffect, useState } from 'react'
+import { getOptInCookie, setOptInCookie } from './storage'
 
 export const OptOut: React.FC = () => {
-  const [consent, setConsent] = useState(false);
-  useEffect(() => setConsent(getOptInCookie()));
+  const [consent, setConsent] = useState(false)
+  // @ts-expect-error todo
+  useEffect(() => setConsent(getOptInCookie()))
   if (!consent) {
     if (consent == null) {
       return (
         <div className="mt-5">
-          <p>
-            Sie haben der Datenverarbeitung durch MapTiler nicht zugestimmt.
-          </p>
+          <p>Sie haben der Datenverarbeitung durch MapTiler nicht zugestimmt.</p>
         </div>
-      );
+      )
     }
     return (
       <div className="mt-5">
         <p>
           Sie haben die{' '}
-          <ExternalLink href="https://www.maptiler.com/privacy-policy/">
+          <Link href="https://www.maptiler.com/privacy-policy/">
             Datenschutzbestimmungen von MapTiler
-          </ExternalLink>{' '}
+          </Link>
           und diese Datenschutzerklärung abgelehnt. Hier können Sie zustimmen.
         </p>
-        <Button
-          outline
+        <button
+          // outline todo buttonstyles
           onClick={() => {
-            setConsent(true);
-            setOptInCookie(true);
+            setConsent(true)
+            setOptInCookie(true)
           }}
         >
           Ja, ich stimme zu
-        </Button>
+        </button>
       </div>
-    );
+    )
   }
   return (
     <div className="mt-5">
       <p>
         Sie haben der{' '}
-        <ExternalLink href="https://www.maptiler.com/privacy-policy/">
+        <Link href="https://www.maptiler.com/privacy-policy/">
           Datenschutzbestimmungen von MapTiler
-        </ExternalLink>{' '}
-        und dieser Datenschutzerklärung zugestimmt. Hier können Sie Ihre
-        Einwilligung zurückziehen.
+        </Link>{' '}
+        und dieser Datenschutzerklärung zugestimmt. Hier können Sie Ihre Einwilligung zurückziehen.
       </p>
-      <Button
-        outline
+      <button
+        // outline todo buttonstyles
         onClick={() => {
-          setConsent(false);
-          setOptInCookie(false);
+          setConsent(false)
+          setOptInCookie(false)
         }}
       >
         Einwilligung Zurückziehen
-      </Button>
+      </button>
     </div>
-  );
-};
+  )
+}

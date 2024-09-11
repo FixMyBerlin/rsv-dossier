@@ -1,24 +1,19 @@
 {
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ],
+    "verbatimModuleSyntax": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"],
-      "~/static/*": ["./static/*"]
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"]
     }
   },
-  "exclude": ["node_modules"],
-  "include": ["./src/**/*", "./__helpers__/*", "./gatsby-node.ts","./data/scripts/dataHelpers.ts"]
+  "exclude": ["dist"]
 }

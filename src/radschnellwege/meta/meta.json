@@ -14,9 +14,7 @@
       "source": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg",
       "stand": "2022-06-09"
     },
-    "stakeholders": [
-      { "name": "Landeshauptstadt  Stuttgart", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Landeshauptstadt  Stuttgart", "roles": ["authority"] }],
     "references": { "website": null }
   },
   {
@@ -34,9 +32,7 @@
       "source": "https://www.radschnellweg-hd-ma.de/radschnellverbindung",
       "stand": "2022-06-02"
     },
-    "stakeholders": [
-      { "name": "Verband  Region  Rhein-Neckar", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Verband  Region  Rhein-Neckar", "roles": ["authority"] }],
     "references": { "website": "https://www.radschnellweg-hd-ma.de/" }
   },
   {
@@ -54,9 +50,7 @@
       "source": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/seiten/radschnellweg/",
       "stand": "2022-06-07"
     },
-    "stakeholders": [
-      { "name": "Regierungspräsidium  Stuttgart", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Regierungspräsidium  Stuttgart", "roles": ["authority"] }],
     "references": {
       "website": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/seiten/radschnellweg/"
     }
@@ -76,9 +70,7 @@
       "source": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/radschnellweg-esslingen-reichenbach/",
       "stand": "2022-06-02"
     },
-    "stakeholders": [
-      { "name": "Landeshauptstadt  Stuttgart", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Landeshauptstadt  Stuttgart", "roles": ["authority"] }],
     "references": {
       "website": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/radschnellweg-esslingen-reichenbach/"
     }
@@ -98,9 +90,7 @@
       "source": "https://www.fellbach.de/de/Leben-in-Fellbach/Mobilitaet/Radschnellweg",
       "stand": "2022-06-07"
     },
-    "stakeholders": [
-      { "name": "Landeshauptstadt  Stuttgart", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Landeshauptstadt  Stuttgart", "roles": ["authority"] }],
     "references": {
       "website": "https://www.rems-murr-kreis.de/bauen-umwelt-und-verkehr/radwege/radschnellwege/rs5-schorndorf-fellbach"
     }
@@ -277,9 +267,7 @@
       "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar",
       "stand": "2022-06-02"
     },
-    "stakeholders": [
-      { "name": "Verband  Region  Rhein-Neckar", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Verband  Region  Rhein-Neckar", "roles": ["authority"] }],
     "references": {
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     }
@@ -299,9 +287,7 @@
       "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/",
       "stand": "2022-06-07"
     },
-    "stakeholders": [
-      { "name": "Landkreis  Böblingen", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Landkreis  Böblingen", "roles": ["authority"] }],
     "references": {
       "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     }
@@ -519,9 +505,7 @@
       "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/",
       "stand": "2022-06-07"
     },
-    "stakeholders": [
-      { "name": "Landkreis  Ludwigsburg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Landkreis  Ludwigsburg", "roles": ["authority"] }],
     "references": {
       "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     }
@@ -541,9 +525,7 @@
       "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/",
       "stand": "2022-06-02"
     },
-    "stakeholders": [
-      { "name": "Landkreis  Ludwigsburg  ", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Landkreis  Ludwigsburg  ", "roles": ["authority"] }],
     "references": {
       "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     }
@@ -563,9 +545,7 @@
       "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/",
       "stand": "2022-06-07"
     },
-    "stakeholders": [
-      { "name": "Landeshauptstadt  Stuttgart", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Landeshauptstadt  Stuttgart", "roles": ["authority"] }],
     "references": {
       "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     }
@@ -585,9 +565,7 @@
       "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/",
       "stand": "2022-06-07"
     },
-    "stakeholders": [
-      { "name": "Landeshauptstadt  Stuttgart", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Landeshauptstadt  Stuttgart", "roles": ["authority"] }],
     "references": {
       "website": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/"
     }
@@ -607,9 +585,7 @@
       "source": "https://radschnellweg-hn.de/?p=online-umfrage",
       "stand": "2022-06-07"
     },
-    "stakeholders": [
-      { "name": "Landkreis  Heilbronn", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Landkreis  Heilbronn", "roles": ["authority"] }],
     "references": { "website": "https://radschnellweg-hn.de/?p=online-umfrage" }
   },
   {
@@ -627,9 +603,7 @@
       "source": "https://radschnellweg-hn.de/?p=online-umfrage",
       "stand": "2022-06-07"
     },
-    "stakeholders": [
-      { "name": "Landkreis  Heilbronn", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Landkreis  Heilbronn", "roles": ["authority"] }],
     "references": { "website": "https://radschnellweg-hn.de/?p=online-umfrage" }
   },
   {
@@ -647,9 +621,7 @@
       "source": "https://radschnellweg-hn.de/?p=online-umfrage",
       "stand": "2022-06-07"
     },
-    "stakeholders": [
-      { "name": "Landkreis  Heilbronn", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Landkreis  Heilbronn", "roles": ["authority"] }],
     "references": { "website": "https://radschnellweg-hn.de/?p=online-umfrage" }
   },
   {
@@ -667,9 +639,7 @@
       "source": "https://radschnellweg-hn.de/?p=online-umfrage",
       "stand": "2022-06-07"
     },
-    "stakeholders": [
-      { "name": "Landkreis  Heilbronn", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Landkreis  Heilbronn", "roles": ["authority"] }],
     "references": { "website": "https://radschnellweg-hn.de/?p=online-umfrage" }
   },
   {
@@ -690,9 +660,7 @@
       "source": "https://radschnellweg-hn.de/?p=online-umfrage",
       "stand": "2022-06-07"
     },
-    "stakeholders": [
-      { "name": "Landkreis  Heilbronn", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Landkreis  Heilbronn", "roles": ["authority"] }],
     "references": { "website": "https://radschnellweg-hn.de/?p=online-umfrage" }
   },
   {
@@ -741,9 +709,7 @@
       "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar",
       "stand": "2022-06-07"
     },
-    "stakeholders": [
-      { "name": "Verband  Region  Rhein-Neck", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Verband  Region  Rhein-Neck", "roles": ["authority"] }],
     "references": {
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     }
@@ -1159,9 +1125,7 @@
       "source": "https://www.nuernberg.de/internet/verkehrsplanung/radschnellverbindung_ne.html",
       "stand": "2022-06-27"
     },
-    "stakeholders": [
-      { "name": "Planungsverband  Nürnberg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Planungsverband  Nürnberg", "roles": ["authority"] }],
     "references": { "website": null }
   },
   {
@@ -1179,9 +1143,7 @@
       "source": "https://www.br.de/nachrichten/bayern/bund-foerdert-neuen-fahrrad-schnellweg-in-nuernberg,SsPeZdD",
       "stand": "2022-06-27"
     },
-    "stakeholders": [
-      { "name": "Planungsverband  Nürnberg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Planungsverband  Nürnberg", "roles": ["authority"] }],
     "references": { "website": null }
   },
   {
@@ -1199,9 +1161,7 @@
       "source": "https://www.nuernberg.de/internet/verkehrsplanung/radschnellverbindung_nsoz.html",
       "stand": "2022-06-27"
     },
-    "stakeholders": [
-      { "name": "Planungsverband  Nürnberg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Planungsverband  Nürnberg", "roles": ["authority"] }],
     "references": { "website": "https://www.radschnellverbindung.info" }
   },
   {
@@ -1219,9 +1179,7 @@
       "source": "https://nationaler-radverkehrsplan.de/de/aktuell/nachrichten/radschnellweg-zwischen-erlangen-und-herzogenaurach",
       "stand": "2022-06-27"
     },
-    "stakeholders": [
-      { "name": "Planungsverband  Nürnberg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Planungsverband  Nürnberg", "roles": ["authority"] }],
     "references": { "website": null }
   },
   {
@@ -1434,9 +1392,7 @@
       "source": "https://metropolregion.hamburg.de/radschnellwege/15310038/radschnellweg-elmshorn-hamburg/",
       "stand": "2022-04-20"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hamburg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hamburg", "roles": ["authority"] }],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15310038/radschnellweg-elmshorn-hamburg/"
     }
@@ -1459,9 +1415,7 @@
       "source": "https://metropolregion.hamburg.de/radschnellwege/15303660/radschnellweg-bad-bramstedt-hamburg/",
       "stand": "2022-04-20"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hamburg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hamburg", "roles": ["authority"] }],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15303660/radschnellweg-bad-bramstedt-hamburg/"
     }
@@ -1481,9 +1435,7 @@
       "source": "https://metropolregion.hamburg.de/radschnellwege/15307136/radschnellweg-ahrensburg-hamburg/",
       "stand": "2022-04-20"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hamburg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hamburg", "roles": ["authority"] }],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15307136/radschnellweg-ahrensburg-hamburg/"
     }
@@ -1503,9 +1455,7 @@
       "source": "https://metropolregion.hamburg.de/radschnellwege/15310118/radschnellweg-geesthacht-hamburg/",
       "stand": "2022-04-20"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hamburg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hamburg", "roles": ["authority"] }],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15310118/radschnellweg-geesthacht-hamburg/"
     }
@@ -1525,9 +1475,7 @@
       "source": "https://metropolregion.hamburg.de/radschnellwege/15310310/radschnellweg-lueneburg-hamburg/",
       "stand": "2022-04-20"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hamburg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hamburg", "roles": ["authority"] }],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15310310/radschnellweg-lueneburg-hamburg/"
     }
@@ -1547,9 +1495,7 @@
       "source": "https://metropolregion.hamburg.de/radschnellwege/15307278/radschnellweg-stade-hamburg/",
       "stand": "2022-04-20"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hamburg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hamburg", "roles": ["authority"] }],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15307278/radschnellweg-stade-hamburg/"
     }
@@ -1569,9 +1515,7 @@
       "source": "https://metropolregion.hamburg.de/radschnellwege/15307158/radschnellweg-tostedt-hamburg/",
       "stand": "2022-04-20"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hamburg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hamburg", "roles": ["authority"] }],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15307158/radschnellweg-tostedt-hamburg/"
     }
@@ -1808,9 +1752,7 @@
       "source": "https://metropolregion.hamburg.de/radschnellwege/15307182/radschnellweg-schwerin-wismar/",
       "stand": "2022-04-20"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hamburg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hamburg", "roles": ["authority"] }],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15307182/radschnellweg-schwerin-wismar/"
     }
@@ -1830,9 +1772,7 @@
       "source": "https://de.wikipedia.org/wiki/Liste_der_Radschnellverbindungen_in_Deutschland#Niedersachsen",
       "stand": "2022-06-27"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hannover", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hannover", "roles": ["authority"] }],
     "references": { "website": null }
   },
   {
@@ -1856,9 +1796,7 @@
       "source": "https://www.hannover.de/Leben-in-der-Region-Hannover/Mobilit%C3%A4t/Hannovers-sch%C3%B6nste-Radtouren/Velorouten/Radschnellverbindung-Hannover-Langenhagen",
       "stand": "2022-06-27"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hannover", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hannover", "roles": ["authority"] }],
     "references": {
       "website": "https://www.hannover.de/Leben-in-der-Region-Hannover/Mobilit%C3%A4t/Hannovers-sch%C3%B6nste-Radtouren/Velorouten/Radschnellverbindung-Hannover-Langenhagen"
     }
@@ -1884,9 +1822,7 @@
       "source": "https://www.radschnellweg-euregio.de/was-ist-ein-radschnellweg/eradschnellweg-goettingen-d",
       "stand": "2022-06-27"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hannover", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hannover", "roles": ["authority"] }],
     "references": {
       "website": "https://www.radschnellweg-euregio.de/was-ist-ein-radschnellweg/eradschnellweg-goettingen-d"
     }
@@ -1906,9 +1842,7 @@
       "source": "https://de.wikipedia.org/wiki/Liste_der_Radschnellverbindungen_in_Deutschland#Niedersachsen",
       "stand": "2022-06-27"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hannover", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hannover", "roles": ["authority"] }],
     "references": {
       "website": "https://www.kommunalverbund.de/portal/seiten/regionales-mobilitaetskonzept-radverkehr-rmk-r--901000348-3300.html"
     }
@@ -1928,9 +1862,7 @@
       "source": "https://www.osnabrueck.de/radfahren/radschnellweg",
       "stand": "2022-06-27"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hannover", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hannover", "roles": ["authority"] }],
     "references": {
       "website": "https://www.osnabrueck.de/start/aktuelles/news/radschnellweg-osnabrueck-belm-zweiter-bauabschnitt-gestartet"
     }
@@ -1950,9 +1882,7 @@
       "source": "https://adfc-wf.de/documents/Radschnellweg_Schaufenster_ZUM_.pdf",
       "stand": "2022-06-27"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hannover", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hannover", "roles": ["authority"] }],
     "references": { "website": null }
   },
   {
@@ -2396,9 +2326,7 @@
       "source": "https://radschnellweg.org/",
       "stand": "2022-06-27"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Mitteldeutschland", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Mitteldeutschland", "roles": ["authority"] }],
     "references": { "website": "https://radschnellweg.org/" }
   },
   {
@@ -2422,9 +2350,7 @@
       "source": "https://metropolregion.hamburg.de/radschnellwege/15307314/radschnellweg-luebeck/",
       "stand": "2022-04-20"
     },
-    "stakeholders": [
-      { "name": "Metropolregion  Hamburg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Metropolregion  Hamburg", "roles": ["authority"] }],
     "references": {
       "website": "https://metropolregion.hamburg.de/radschnellwege/15307314/radschnellweg-luebeck/"
     }
@@ -2447,9 +2373,7 @@
       "source": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar",
       "stand": "2022-09-08"
     },
-    "stakeholders": [
-      { "name": "Stadt Ludwigshafen (Rhein)", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Stadt Ludwigshafen (Rhein)", "roles": ["authority"] }],
     "references": {
       "website": "https://www.m-r-n.com/was-wir-tun/themen-und-projekte/projekte/radfahren-rhein-neckar"
     }
@@ -2538,9 +2462,7 @@
       "source": "https://rp.baden-wuerttemberg.de/rpk/abt4/ref44/radschnellwege/rs13-karlsruhe-rastatt/",
       "stand": "2024-02-28"
     },
-    "stakeholders": [
-      { "name": "Land Baden-Württemberg", "roles": ["authority"] }
-    ],
+    "stakeholders": [{ "name": "Land Baden-Württemberg", "roles": ["authority"] }],
     "references": {
       "website": "https://rp.baden-wuerttemberg.de/rpk/abt4/ref44/radschnellwege/rs13-karlsruhe-rastatt/"
     }

@@ -1,10 +1,8 @@
-import React from 'react';
-
-const mapAttribution = {
+const mapAttribution: Record<string, string> = {
   MapTiler: 'https://www.maptiler.com/copyright/',
   'OpenStreetMap contributors': 'https://www.openstreetmap.org/copyright',
   CARTO: 'https://carto.com/',
-};
+}
 
 export const Attribution = () => {
   return (
@@ -21,5 +19,5 @@ export const Attribution = () => {
         </a>
       ))}
     </>
-  );
-};
+  )
+}

@@ -10,13 +10,13 @@ Please attribute the data like this:
 
 > © [FixMyCity](https://fixmycity.de)/[RSV-Dossier](https://github.com/FixMyBerlin/rsv-dossier) - [ODbL License](https://opendatacommons.org/licenses/odbl/summary/index.html)
 
-The data, therefore `meta` and `geometry` folder, are both licensed under ODbL. See the [LICENSE](./LICENSE) for the full legal text.
+The data, therefore `meta` and `geometries` folder, are both licensed under ODbL. See the [LICENSE](./LICENSE) for the full legal text.
 
 ## Data
 
 The [`meta/meta.json`](./meta/meta.json) is a combined file, for all cycle highways. It collects not-structured data and information.
 
-The individual `geojson` files in the `geometry` folder are individual. They're containing solely the geodata for one cycle highway.
+The individual `geojson` files in the `src/content/geometries` folder are individual. They're containing solely the geodata for one cycle highway.
 
 The both datasets are matched through the filename of the `geojson` and the `id` in the meta file.
 
@@ -54,8 +54,6 @@ The **`detail_level`** describes in which accuracy the geometry is available in 
 
 Corresponding to the Meta JSON file, the _GeoJSON_ file contains the geometry of the cycle highways.
 
-The **filename** of the geometries MUST be different from the `id` field, otherwise there are id collisions with `gatsby-source-filesystem` plugin.
-
 ### Planning Phases
 
 Since this repository should represent build phases of the cycle highways, these are the planning phases used exclusively in this order:
@@ -77,6 +75,7 @@ When the whole cycle highway get's discarded, the planning phase it stuck and SH
 Usually in the early planning phases there are multiple possible variants of the cycle highway. The `variant` attribute is an enum and describes whether the geometry is part of the currently preferred variant `"Vorzugstrasse"` or an alternative `"Alternative"`.
 
 The **`discarded`** property describes that a variant was a considered variant previously, but is discarded now. The geometry therefore stays in the GeoJSON. In contrast to the `discarded` key in the MetaJSON, this value only represents the state of one individual variant. Usually from time to time more and more variants get discarded till one preferred is found.
+We do not show discarded variants in the maps.
 
 ### JSON Schema
 

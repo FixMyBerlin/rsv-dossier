@@ -1,0 +1,55 @@
+---
+import Hero from '@components/Hero.astro'
+import Section from '@components/Section.astro'
+import TeaserCard from '@components/Teaser/TeaserCard.astro'
+
+import TeasersContainer from '@components/Teaser/TeasersContainer.astro'
+
+import { getCollection } from 'astro:content'
+import LayoutPage from 'src/layouts/LayoutPage.astro'
+
+const planningposts = await getCollection('planningposts')
+const sortedplanningposts = planningposts
+  .filter((a) => !a.data.preview)
+  .sort((a, b) => {
+    return a.data.order - b.data.order
+  })
+---
+
+<LayoutPage
+  title="Blog Planung"
+  description="Blog über die Planung von Radschnellverbindungen in Deutschland."
+>
+  <Hero
+    className="mb-12"
+    title="Planung für erfolgreiche RSV-Projekte"
+    subTitle="Unsere Tools und Methoden unterstützen die effektive Planung von Radschnellverbindungen. Durch eine strukturierte und koordinierte Vorgehensweise tragen wir zur Beschleunigung des Planungsprozesses und zur erfolgreichen Umsetzung der Projekte bei."
+  />
+  <Section>
+    <TeasersContainer>
+      {
+        !!sortedplanningposts.length ? (
+          sortedplanningposts.map((post) => {
+            const { title, type, teaserText, teaserImage, imageCopyright } = post.data
+            return (
+              <TeaserCard
+                href={post.slug}
+                title={title}
+                description={teaserText}
+                tag={type}
+                image={teaserImage}
+                imageCopyright={imageCopyright}
+                linkText="Weiterlesen"
+              />
+            )
+          })
+        ) : (
+          <p>
+            Hier erscheint in Kürze eine Übersicht über unsere Blogbeiträge zur Planung von
+            Radschnellverbindungen in Deutschland.
+          </p>
+        )
+      }
+    </TeasersContainer>
+  </Section>
+</LayoutPage>

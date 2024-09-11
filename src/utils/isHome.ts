@@ -1,3 +1,3 @@
-export const isHome = (location: Location) => {
-  return location.pathname === '/';
-};
+export const isHome = (location: string) => {
+  return location === '/'
+}

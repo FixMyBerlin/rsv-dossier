@@ -1,21 +1,51 @@
-import React from 'react';
+import clsx from 'clsx'
 
-export const Heading1: React.FC = ({ children }) => {
+type Props = {
+  children: React.ReactNode
+  className?: string
+}
+
+export const H1: React.FC<Props> = ({ children, className }) => {
   return (
-    <h1 className="mt-7 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+    <h1
+      className={clsx([
+        'mt-7 break-words text-3xl font-extrabold leading-tight text-gray-900 sm:text-5xl sm:leading-tight',
+
+        className,
+      ])}
+    >
       {children}
     </h1>
-  );
-};
+  )
+}
 
-export const Heading2: React.FC = ({ children }) => {
+export const H2: React.FC<Props> = ({ children, className }) => {
   return (
-    <h2 className="mt-6 text-xl font-bold text-gray-700 sm:text-2xl">
+    <h2
+      className={clsx([
+        'mt-6 text-2xl font-extrabold leading-tight sm:text-4xl sm:leading-tight',
+        className,
+      ])}
+    >
       {children}
     </h2>
-  );
-};
+  )
+}
 
-export const Heading3: React.FC = ({ children }) => {
-  return <h3 className="mt-5 text-lg font-bold text-gray-700">{children}</h3>;
-};
+export const H3: React.FC<Props> = ({ children, className }) => {
+  return (
+    <h3
+      className={clsx([
+        'text-x mt-5 font-extrabold leading-tight sm:text-3xl sm:leading-tight',
+        className,
+      ])}
+    >
+      {children}
+    </h3>
+  )
+}
+export const H4: React.FC<Props> = ({ children, className }) => {
+  return (
+    <h4 className={clsx(['mt-5 text-lg font-extrabold sm:text-2xl', className])}>{children}</h4>
+  )
+}

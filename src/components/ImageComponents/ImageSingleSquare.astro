@@ -1,0 +1,46 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+
+type Props = {
+  src: string
+  alt: string
+  caption: string
+  imageConfig: {
+    discriminant: 'half' | 'full'
+    value: 'center' | 'right' | 'left'
+  }
+}
+const { src, alt, caption, imageConfig } = Astro.props
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/**/*.{jpeg,jpg,png,gif,webp,JPG,JPEG,PNG,GIF}',
+)
+if (!images[src])
+  throw new Error(`"${src}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`)
+
+const width = imageConfig.discriminant
+const position = imageConfig.value
+---
+
+<div
+  class:list={[
+    position === 'center' && 'justify-center',
+    position === 'right' && 'justify-end',
+    'my-8 flex w-full',
+    'not-prose',
+  ]}
+>
+  <figure class:list={[width === 'half' ? 'w-full md:w-1/2' : 'w-full']}>
+    <div class:list={['aspect-[1/1]']}>
+      <!-- quality="high" -->
+      <!-- https://docs.astro.build/en/guides/images/#quality -->
+      <Image
+        class="h-full w-full overflow-hidden object-cover"
+        src={images[src]()}
+        alt={alt || ''}
+        loading="lazy"
+      />
+    </div>
+    <figcaption class="mt-2 text-xs md:text-sm">{caption}</figcaption>
+  </figure>
+</div>

@@ -1,0 +1,14 @@
+---
+import { Footer } from './footer/Footer'
+import Layout from './Layout.astro'
+
+type Props = { title?: string; description?: string; noindex?: boolean }
+const { title, noindex, description }: Props = Astro.props
+---
+
+<Layout pageLayout title={title} description={description} noindex={noindex}>
+  <main class="z-0 flex-grow">
+    <slot />
+  </main>
+  <Footer />
+</Layout>

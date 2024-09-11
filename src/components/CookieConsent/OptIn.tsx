@@ -1,11 +1,10 @@
-import React from 'react';
-import { ExternalLink, TextLink } from '~/components/Links';
-import { setOptInCookie } from '~/components/CookieConsent';
-import { Button } from '~/components/Buttons';
+import Link from '@components/links/Link'
+import { buttonStylesForGreenLinkElement } from '@components/links/styles'
+import { setOptInCookie } from './storage'
 
 type Props = {
-  setConsent: (val: boolean | null) => void;
-};
+  setConsent: (val: boolean | null) => void
+}
 
 export const OptIn: React.FC<Props> = ({ setConsent }) => {
   return (
@@ -14,41 +13,39 @@ export const OptIn: React.FC<Props> = ({ setConsent }) => {
         <div className="mt-2 text-sm text-gray-500">
           <p>
             Zur Nutzung der Kartenfunktion stimme bitte den{' '}
-            <ExternalLink href="https://www.maptiler.com/privacy-policy/">
+            <Link href="https://www.maptiler.com/privacy-policy/">
               Datenschutzbestimmungen von MapTiler
-            </ExternalLink>{' '}
-            zu. MapTiler speichert nur kurzfristig notwendige Daten zu Deiner
-            IP- Adresse. Du kannst Deine Zustimmung auf unserer{' '}
-            <TextLink to="/datenschutz/">Datenschutz-Seite</TextLink>{' '}
+            </Link>{' '}
+            zu. MapTiler speichert nur kurzfristig notwendige Daten zu Deiner IP- Adresse. Du kannst
+            Deine Zustimmung auf unserer <Link href="/datenschutz/">Datenschutz-Seite</Link>{' '}
             zurückziehen.
           </p>
-          Zur Darstellung unserer Karten benutzen wir MapTiler, wodurch wir eine
-          Weitergabe von Nutzerinformationen an Dritte nicht vermeiden können.
+          Zur Darstellung unserer Karten benutzen wir MapTiler, wodurch wir eine Weitergabe von
+          Nutzerinformationen an Dritte nicht vermeiden können.
         </div>
-        <div className="mt-5">
-          <Button
+        <div className="mt-5 flex justify-start gap-4">
+          <button
+            className={buttonStylesForGreenLinkElement}
             type="submit"
-            outline
             onClick={() => {
-              setConsent(true);
-              setOptInCookie(true);
+              setConsent(true)
+              setOptInCookie(true)
             }}
           >
             Ja, ich stimme zu
-          </Button>
-          <Button
+          </button>
+          <button
+            className={buttonStylesForGreenLinkElement}
             type="button"
-            className="mx-4"
-            outline
             onClick={() => {
-              setConsent(false);
-              setOptInCookie(false);
+              setConsent(false)
+              setOptInCookie(false)
             }}
           >
             Ablehnen
-          </Button>
+          </button>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
