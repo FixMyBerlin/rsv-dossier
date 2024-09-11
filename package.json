@@ -54,7 +54,8 @@
     "updateGeometrySchema": "json-schema-to-zod -i data/schema/geometry.schema.json -o data/schema/geometry.schema.ts  -n geometrySchema -m esm --type GeometrySchema",
     "updateMetaSchema": "json-schema-to-zod -i data/schema/meta.schema.json -o data/schema/meta.schema.ts  -n metaSchema -m esm --type MetaSchema",
     "generateTsxFromSvg": "bun ./scripts/svgToTsx/svgToTsx.ts && npm run format",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release": "gh pr create --base main --head develop --title \"Release $(date '+%Y-%m-%d')\" --body \"\""
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.13",
