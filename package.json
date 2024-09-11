@@ -1,7 +1,13 @@
 {
-  "name": "@keystatic/templates-astro",
-  "version": "0.0.39",
-  "license": "MIT",
+  "name": "radschnellverbindungen.info",
+  "description": "The website for https://radschnellverbindungen.info.",
+  "version": "0.3.0",
+  "author": "FixMyCity <hello@fixmycity.de>",
+  "license": "AGPL-3.0",
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
   "dependencies": {
     "@astrojs/check": "^0.8.2",
     "@astrojs/markdoc": "^0.11.3",
