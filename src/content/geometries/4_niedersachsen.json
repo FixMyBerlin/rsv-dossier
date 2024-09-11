@@ -1,0 +1,45 @@
+{
+  "id": "4-niedersachsen",
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "bbox": [
+    8.2261936346736, 53.0549930962035, 8.80110137153824, 53.142315626702
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1",
+        "length": 41245.13268139771,
+        "detail_level": "corridor",
+        "id_rsv": "4-niedersachsen",
+        "state": "idea",
+        "planning_phase": null,
+        "variant": "Vorzugstrasse",
+        "description:planning_phase": null,
+        "discarded": false
+      },
+      "bbox": [
+        8.226193634673605, 53.05499309620354, 8.80110137153824,
+        53.14231562670203
+      ],
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [8.226193634673605, 53.14231562670203],
+            [8.337539401892442, 53.12322896728942],
+            [8.478425882863219, 53.109590447821745],
+            [8.55341384854122, 53.09867651699745],
+            [8.61022291344879, 53.06045594773536],
+            [8.71702395547503, 53.05499309620354],
+            [8.80110137153824, 53.07001427130146]
+          ]
+        ]
+      }
+    }
+  ]
+}

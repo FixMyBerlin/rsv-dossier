@@ -1,0 +1,25 @@
+---
+import ProseMarkdown from './ProseMarkdown.astro'
+import { H2 } from './Text'
+
+type Props = {
+  title: string
+  subTitle?: string
+}
+
+const { title, subTitle } = Astro.props
+---
+
+<H2>
+  {title}
+</H2>
+{
+  subTitle && (
+    <p class="mb-10 mt-4 text-base md:text-xl" transition:name="subTitle">
+      {subTitle}
+    </p>
+  )
+}
+<ProseMarkdown transition:name="body">
+  <slot />
+</ProseMarkdown>

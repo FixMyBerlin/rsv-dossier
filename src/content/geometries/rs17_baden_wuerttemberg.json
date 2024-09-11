@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "id": "rs17-baden-wuerttemberg",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "bbox": [
+    8.87076563869863, 48.7523899054795, 9.06586177808219, 48.8262738013699
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1",
+        "detail_level": "rough",
+        "state": "agreement_process",
+        "id_rsv": "RS17",
+        "planning_phase": "preliminary",
+        "variant": "Vorzugstrasse",
+        "discarded": false,
+        "length": 20703.207,
+        "description:planning_phase": null
+      },
+      "bbox": [
+        8.870765638698632, 48.752389905479475, 9.065861778082192,
+        48.82627380136985
+      ],
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [9.065861778082192, 48.82627380136985],
+            [9.057744320547945, 48.8223653958904],
+            [9.021311332702991, 48.808045792510654],
+            [9.016501018812473, 48.80210219321336],
+            [8.936842, 48.768591],
+            [8.876670525342469, 48.752389905479475],
+            [8.870765638698632, 48.75322138116441]
+          ]
+        ]
+      }
+    }
+  ]
+}

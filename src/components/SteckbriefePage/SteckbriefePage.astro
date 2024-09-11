@@ -1,0 +1,26 @@
+---
+import Hero from '@components/Hero.astro'
+import Section from '@components/Section.astro'
+import { SteckbriefePageFilter } from './SteckbriefePageFilter'
+import SteckbriefePageTeasers, { type RsvTeaser } from './SteckbriefePageTeasers.astro'
+
+type Props = {
+  headerTitle?: string
+  headerDescription?: string
+  rsvTeasers: RsvTeaser[]
+  currentFilter: string
+}
+
+const { headerTitle, headerDescription, rsvTeasers, currentFilter } = Astro.props
+
+const rsvCount = rsvTeasers.length > 1 ? ` ${rsvTeasers.length} ` : ' '
+---
+
+<Hero title={headerTitle || 'Übersicht über RSV-Planungen'} subTitle={headerDescription} button />
+<Section>
+  <p>Filtern nach Bundesland</p>
+  <SteckbriefePageFilter currentFilter={currentFilter} client:load />
+
+  <h2 class="sr-only" id="contact-heading">Alle Radschnellverbindungen</h2>
+  <SteckbriefePageTeasers rsvTeasers={rsvTeasers} />
+</Section>
