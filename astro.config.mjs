@@ -21,6 +21,10 @@ export default defineConfig({
       filter: (page) => !page.endsWith('--preview/'),
     }),
   ],
+  redirects: {
+    'abstimmungen/abstimmungsprozesse/':
+      '/kommunikation/radschnellwegeplanung-als-zusammenspiel-vieler-akteur-innen/',
+  },
   output: 'hybrid',
   adapter: netlify(),
 })
