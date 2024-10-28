@@ -29,7 +29,7 @@
       "to": { "city": "Heidelberg", "federalState": "Baden-Württemberg" },
       "length": 22,
       "description": "Radschnellwege  bieten  Radfahrerinnen  und  Radfahrern  eine  attraktive  Möglichkeit,  längere  Strecken  zügig  und  sicher  zurückzulegen.  Daher  fördert  das  Land  Baden-Württemberg  lokale  Machbarkeitsstudien  für  Radschnellwege  und  plant  drei  Pilotstrecken.  Eine  dieser  Pilotstrecken  ist  der  Radschnellweg  Heidelberg-Mannheim.",
-      "source": "https://www.radschnellweg-hd-ma.de/radschnellverbindung",
+      "source": "https://www.radschnellweg-hd-ma.de/",
       "stand": "2022-06-02"
     },
     "stakeholders": [{ "name": "Verband  Region  Rhein-Neckar", "roles": ["authority"] }],
@@ -38,21 +38,24 @@
   {
     "id": "rs3-baden-wuerttemberg",
     "cost": "",
-    "state": "planning",
+    "state": "in_progress",
     "finished": null,
     "general": {
       "ref": "RS3",
-      "name": "Radschnellweg  Heilbronn  -  Bad  Wimpfen",
+      "name": "Radschnellweg  Heilbronn  -  Neckarsulm - Bad  Wimpfen",
       "from": { "city": "Bad  Wimpfen", "federalState": "Baden-Württemberg" },
       "to": { "city": "Heilbronn", "federalState": "Baden-Württemberg" },
       "length": 9.5,
       "description": "Als  wichtigen  Beitrag  zur  Stärkung  des  Wirtschaftsraums    Heilbronn-Neckarsulm  streben  Land,  Landkreis  sowie  die  Städte  Heilbronn    und  Neckarsulm  die  Umsetzung  einer  Radschnellverbindung  in    Nord-Süd-Richtung  von  Bad  Wimpfen  über  Neckarsulm  nach  Heilbronn  an.  Die  Radschnellverbindung  Bad    Wimpfen  -  Neckarsulm  -  Heilbronn  ist  eine  von  drei  Leuchtturmprojekten    des  Landes,  für  die  das  Land  die  Baulastträgerschaft  übernommen  hat.  Das    Land  dokumentiert  damit  die  Bedeutung  der  Radschnellverbindungen  für    eine  neue  Radkultur  in  Baden-Württemberg.",
-      "source": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/seiten/radschnellweg/",
+      "source": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/rs-3-radschnellverbindung-bad-wimpfen-neckarsulm-heilbronn-1-bauabschnitt/",
       "stand": "2022-06-07"
     },
-    "stakeholders": [{ "name": "Regierungspräsidium  Stuttgart", "roles": ["authority"] }],
+    "stakeholders": [
+      { "name": "Regierungspräsidium  Stuttgart", "roles": ["authority"] },
+      { "name": "Stadt Heilbronn", "roles": ["authority"] }
+    ],
     "references": {
-      "website": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/seiten/radschnellweg/"
+      "website": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/rs-3-radschnellverbindung-bad-wimpfen-neckarsulm-heilbronn-1-bauabschnitt/"
     }
   },
   {
@@ -67,12 +70,12 @@
       "to": { "city": "Reichenbach", "federalState": "Baden-Württemberg" },
       "length": 18,
       "description": "Als  wichtiger  Beitrag  zur  Stärkung  des  Wirtschaftsraums  Mittlerer  Neckar    streben  das  Land  Baden-Württemberg  und  der  Landkreis  Esslingen  die    Umsetzung  einer  Radschnellverbindung  in  Ost-West-Richtung  von    Reichenbach  kommend  über  Plochingen  und  Esslingen  nach  Stuttgart  an.    Die  Radschnellverbindung  Esslingen  –  Plochingen  -  Reichenbach  a.  d.  Fils  ist  eine  von  drei  Leuchtturmprojekten  des  Landes,  für  die  das  Land  die  Baulastträgerschaft  übernommen  hat.  Das  Land  dokumentiert  damit  die  Bedeutung  der  Radschnellverbindungen  für  eine  neue  Radkultur  in  Baden-Württemberg.",
-      "source": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/radschnellweg-esslingen-reichenbach/",
+      "source": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/rs-4-radschnellverbindung-neckartal-esslingen-reichenbach/",
       "stand": "2022-06-02"
     },
     "stakeholders": [{ "name": "Landeshauptstadt  Stuttgart", "roles": ["authority"] }],
     "references": {
-      "website": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/radschnellweg-esslingen-reichenbach/"
+      "website": "https://rp.baden-wuerttemberg.de/rps/abt4/ref44/rs-4-radschnellverbindung-neckartal-esslingen-reichenbach/"
     }
   },
   {
@@ -200,12 +203,12 @@
       "to": { "city": "Tübingen", "federalState": "Baden-Württemberg" },
       "length": 12,
       "description": "Zwischen  den  Städten  Tübingen  und  Rottenburg  a.  N.  soll  ein  Radschnellweg  entstehen.  Die  Maßnahme  befindet  sich  in  der  Vorplanung.  Derzeit  wird  im  Rahmen  einer  ergebnisoffenen  Prüfung  unter  Berücksichtigung  aller  relevanten  Belange  eine  Vorzugsvariante  herausgearbeitet.",
-      "source": "https://rp.baden-wuerttemberg.de/rpt/abt4/radwegeplanung/rs-l-tuebingen-rottenburg/",
+      "source": "https://rp.baden-wuerttemberg.de/rpt/abt4/rs11-tuebingen-rottenburg/",
       "stand": "2022-06-07"
     },
     "stakeholders": [{ "name": "Landkreis  Tübingen", "roles": ["authority"] }],
     "references": {
-      "website": "https://rp.baden-wuerttemberg.de/rpt/abt4/radwegeplanung/rs-l-tuebingen-rottenburg/"
+      "website": "https://rp.baden-wuerttemberg.de/rpt/abt4/rs11-tuebingen-rottenburg/"
     }
   },
   {
@@ -240,13 +243,13 @@
       },
       "to": { "city": "Süßen", "federalState": "Baden-Württemberg" },
       "length": 23,
-      "description": "Im  Sommer  2018  stellte  der  Landkreis  Göppingen  seine  Machbarkeitsstudie  zu  einer  Radschnellverbindung  im  Filstal  fertig:  Im  Rahmen  einer  umfassenden  Variantenbewertung  wurden  in  vier  Untersuchungsabschnitten  insgesamt  11  mögliche  Trassenführungen  untersucht  und  bewertet.  Die  Vorzugstrasse  wurde  im  Sommer  2019  auf  Basis  der  Variantenbewertung  und  in  Abstimmung  mit  allen  Beteiligten  definiert. Die Online-Bürgerbeteiligung fand bis September 2022 statt.",
+      "description": "Der Radschnellweg im Landkreis Göppingen verläuft durch das dicht besiedelte Filstal. Entlang der Fils reihen sich nicht nur viele Wohn- und Arbeitsorte, sondern auch Einkaufsmöglichkeiten und Freizeiteinrichtungen wie an einer Perlenkette auf. Der Radschnellweg verläuft von Ebersbach über Uhingen, Göppingen, Eislingen und Salach bis Süßen und umfasst eine Gesamtlänge von 22 km. Im  Sommer  2018  stellte  der  Landkreis  Göppingen  seine  Machbarkeitsstudie  zu  einer  Radschnellverbindung  im  Filstal  fertig:  Im  Rahmen  einer  umfassenden  Variantenbewertung  wurden  in  vier  Untersuchungsabschnitten  insgesamt  11  mögliche  Trassenführungen  untersucht  und  bewertet.  Die  Vorzugstrasse  wurde  im  Sommer  2019  auf  Basis  der  Variantenbewertung  und  in  Abstimmung  mit  allen  Beteiligten  definiert. Die Online-Bürgerbeteiligung fand bis September 2022 statt.",
       "source": "https://www.landkreis-goeppingen.de/start/Landratsamt/radschnellverbindung+filstal.html",
-      "stand": "2022-06-07"
+      "stand": "2024-10-28"
     },
     "stakeholders": [{ "name": "", "roles": ["authority"] }],
     "references": {
-      "website": "https://www.landkreis-goeppingen.de/start/Landratsamt/radschnellverbindung+filstal.html"
+      "website": "https://www.radschnellweg-filstal.de/"
     }
   },
   {
@@ -303,13 +306,13 @@
       "from": { "city": "Tübingen", "federalState": "Baden-Württemberg" },
       "to": { "city": "Reutlingen", "federalState": "Baden-Württemberg" },
       "length": 15,
-      "description": "Zwischen  den  Städten  Tübingen  und  Reutlingen  soll  ein  Radschnellweg  entstehen.  Derzeit  wird  im  Rahmen  einer  ergebnisoffenen  Prüfung  unter  Berücksichtigung  aller  relevanten  Belange  eine  Vorzugsvariante  herausgearbeitet.",
-      "source": "https://rp.baden-wuerttemberg.de/rpt/abt4/radwegeplanung/rs-l-tuebingen-reutlingen/",
+      "description": "Zwischen den Städten Tübingen und Reutlingen soll ein Radschnellweg entstehen. Derzeit wird im Rahmen einer ergebnisoffenen Prüfung unter Berücksichtigung aller relevanten Belange eine Vorzugsvariante herausgearbeitet.",
+      "source": "https://rp.baden-wuerttemberg.de/rpt/abt4/rs19-tuebingen-reutlingen/",
       "stand": "2022-06-07"
     },
     "stakeholders": [{ "name": "Landkreis  Tübingen", "roles": ["authority"] }],
     "references": {
-      "website": "https://rp.baden-wuerttemberg.de/rpt/abt4/radwegeplanung/rs-l-tuebingen-reutlingen/"
+      "website": "https://rp.baden-wuerttemberg.de/rpt/abt4/rs19-tuebingen-reutlingen/"
     }
   },
   {
@@ -484,13 +487,13 @@
       }
     ],
     "references": {
-      "website": "https://rp.baden-wuerttemberg.de/rpk/abt4/ref44/radschnellwege/rs10-karlsruhe-ettlingen/"
+      "website": "https://de.wikipedia.org/wiki/Radschnellwege_in_Baden-W%C3%BCrttemberg#Regierungsbezirk_Karlsruhe"
     }
   },
   {
     "id": "rs21-baden-wuerttemberg",
     "cost": "",
-    "state": "idea",
+    "state": "planning",
     "finished": null,
     "general": {
       "ref": "RS21",
@@ -501,9 +504,9 @@
       },
       "to": { "city": "Stuttgart", "federalState": "Baden-Württemberg" },
       "length": 15,
-      "description": "Umsetzung durch das Regierungspräsidium Stuttgart. Förderung durch das Bundesministerium für Digitales und Verkehr mit einem Fördersatz von 75%.",
-      "source": "https://www.landkreis-ludwigsburg.de/de/verkehr-sicherheit-ordnung/radverkehr/radschnellwege/",
-      "stand": "2022-06-07"
+      "description": "Der RS 21 zwischen Stuttgart und Bietigheim-Bissingen wird nach Fertigstellung eine Länge von etwa 13 Kilometern aufweisen und möglichst kreuzungsfrei und durchgängig befahrbar sein, um schneller und sicherer ans Ziel zu kommen. Der Radverkehr soll nach Möglichkeit getrennt vom Auto- und Fußverkehr auf einer vier Meter breiten Fahrbahn geführt werden. Für die innerörtlichen Abschnitte ist auch die Einrichtung von Fahrradstraßen, straßenbegleitenden Radschnellwegen und Radfahrstreifen von drei Metern Breite im Einrichtungsverkehr möglich. Ziel ist es, durch ein attraktives Angebot möglichst viele Pendlerinnen und Pendler zum Umstieg aufs Fahrrad zu bewegen. Umsetzung durch das Regierungspräsidium Stuttgart. Förderung durch das Bundesministerium für Digitales und Verkehr mit einem Fördersatz von 75%.",
+      "source": "https://rp.baden-wuerttemberg.de/rps/presse/artikel/rs-21-stuttgart-bietigheim-bissingen-staedte-und-landkreis-wollen-projekt-gemeinsam-voranbringen/",
+      "stand": "2024-10-28"
     },
     "stakeholders": [{ "name": "Landkreis  Ludwigsburg", "roles": ["authority"] }],
     "references": {
@@ -591,19 +594,22 @@
   {
     "id": "15-baden-wuerttemberg",
     "cost": "",
-    "state": "idea",
+    "state": "planning",
     "finished": null,
     "general": {
-      "ref": "15",
+      "ref": "RS23",
       "name": "Obersulm  –  Weinsberg  –  Heilbronn",
       "from": { "city": "Obersulm", "federalState": "Baden-Württemberg" },
       "to": { "city": "Heilbronn", "federalState": "Baden-Württemberg" },
       "length": 11,
-      "description": "Die  Stadt  Heilbronn,  die  Stadt  Neckarsulm  und  der  Landkreis  Heilbronn  stellen  aktuell  eine  Machbarkeitsstudie  für  Radschnellverbindungen  im  Raum  Heilbronn  /  Neckarsulm  zusammen.  Die  Trassen  sollen  die  geplante  Nord-Süd-Radschnellverbindung  („Pilotprojekt  des  Landes  Baden-Württemberg“)  ergänzen  und  als  Zubringer  dienen.",
-      "source": "https://radschnellweg-hn.de/?p=online-umfrage",
-      "stand": "2022-06-07"
+      "description": "Der RS 23 führt von Obersulm über Weinsberg nach Neckarsulm, wo dieser zukünftig an den Radschnellweg RS 3 von Bad Wimpfen bis Heilbronn als Zubringer anschließt. Das Gesamtvorhaben des RS 23 ist ein Gemeinschaftsprojekt des Landes Baden-Württemberg sowie des Landkreises Heilbronn. Der Abschnitt zwischen Neckarsulm und Weinsberg befindet sich in der Baulast des Landes (RS 23 L), der Abschnitt zwischen Weinsberg und Obersulm in der Baulast des Kreises (RS 23 K).",
+      "source": "https://www.landkreis-heilbronn.de/bund-foerdert-radschnellweg-neckarsulm-weinsberg-obersulm-mit-33-000-fuer-den-ersten-abschnitt-in-obersulm-euro.121813.htm",
+      "stand": "2024-10-28"
     },
-    "stakeholders": [{ "name": "Landkreis  Heilbronn", "roles": ["authority"] }],
+    "stakeholders": [
+      { "name": "Landkreis  Heilbronn", "roles": ["authority"] },
+      { "name": "Land Baden-Württemberg", "roles": ["authority"] }
+    ],
     "references": { "website": "https://radschnellweg-hn.de/?p=online-umfrage" }
   },
   {
@@ -736,7 +742,7 @@
       }
     ],
     "references": {
-      "website": "https://rp.baden-wuerttemberg.de/rpk/abt4/seiten/strassenplanungen/rs16-radschnellweg-heidelberg-schwetzingen/"
+      "website": "https://rp.baden-wuerttemberg.de/rpk/abt4/ref44/radschnellwege/rs16-heidelberg-schwetzingen/"
     }
   },
   {
@@ -795,14 +801,14 @@
     "state": "agreement_process",
     "finished": null,
     "general": {
-      "ref": "24",
-      "name": "Radschnellweg  Offenburg  –  Strasbourg",
+      "ref": "RS20",
+      "name": "Radschnellweg  Offenburg  –  Kehl - Strasbourg",
       "from": { "city": "Offenburg", "federalState": "Baden-Württemberg" },
       "to": { "city": "Strasbourg", "federalState": "Baden-Württemberg" },
       "length": 17.5,
       "description": "Die  Radschnellverbindung  wurde  2018/2019  im  Rahmen  einer  vom  Regionalverband  beauftragten  Machbarkeitsstudie  erfolgreich  untersucht.  Die  Studie  wurde  mit  80  Prozent  der  Kosten  vom  Land  gefördert.  Hinsichtlich  der  Potenziale  erfolgte  2020  eine  Ergänzende  Untersuchung  zur  Machbarkeitsstudie.  In  Folge  hat  das  Land  aufgrund  der  sehr  hohen  Potenziale  die  Baulastträgerschaft  für  den  Abschnitt  Offenburg  –  Strasbourg  übernommen  und  wird  zeitnah  in  die  Planung  einsteigen",
-      "source": "https://www.region-suedlicher-oberrhein.de/de/projekte/radschnellwege/index.php",
-      "stand": "2022-06-07"
+      "source": "https://www.ortenaukreis.de/Kurzmen%C3%BC/Radschnellwege-kommen-weiter-voran-Ortenaukreis-stellt-Planungsstand-vor.php?object=tx,3406.5.1&ModID=7&FID=3406.16950.1&NavID=3406.7",
+      "stand": "2024-10-28"
     },
     "stakeholders": [
       {
@@ -2462,7 +2468,10 @@
       "source": "https://rp.baden-wuerttemberg.de/rpk/abt4/ref44/radschnellwege/rs13-karlsruhe-rastatt/",
       "stand": "2024-02-28"
     },
-    "stakeholders": [{ "name": "Land Baden-Württemberg", "roles": ["authority"] }],
+    "stakeholders": [
+      { "name": "Land Baden-Württemberg", "roles": ["authority"] },
+      { "name": "Stadt Karlsruhe", "roles": ["authority"] },
+      { "name": "Stadt Rastatt", "roles": ["authority"] }],
     "references": {
       "website": "https://rp.baden-wuerttemberg.de/rpk/abt4/ref44/radschnellwege/rs13-karlsruhe-rastatt/"
     }
