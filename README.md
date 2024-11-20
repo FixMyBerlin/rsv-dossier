@@ -1,3 +1,6 @@
+> [!NOTE]
+> This project moved to https://github.com/FixMyBerlin/rsv-info
+
 <div align="center">
   <img src="src/images/logo-rsv-info-thin.svg" height="80" />
   <h1 align="center"><a href="https://radschnellverbindungen.info/">Radschnellverbindungen.info</a></h1>
